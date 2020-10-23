@@ -1,1 +1,4 @@
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). Please see the page "Get Started" at https://bookdown.org/home/about/ for how to compile this example.
+This is my PhD proposal, finally being compiled. I am using R Studio, Git,
+and GitHub to make the process transparent and easier. It will be simple 
+to compile the various documents together, auto-format citations, etc. 
+
