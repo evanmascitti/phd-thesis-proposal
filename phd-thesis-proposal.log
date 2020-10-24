@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.21)  23 OCT 2020 17:57
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.21)  24 OCT 2020 13:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -934,21 +934,21 @@ LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
 LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
 (Font)              scaled to size 10.0pt on input line 1.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 7.08464pt on input line 3.
+(Font)              scaled to size 7.08464pt on input line 5.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 5.70706pt on input line 3.
+(Font)              scaled to size 5.70706pt on input line 5.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 9.8407pt on input line 3.
+(Font)              scaled to size 9.8407pt on input line 5.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 7.0853pt on input line 3.
+(Font)              scaled to size 7.0853pt on input line 5.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 5.7076pt on input line 3.
+(Font)              scaled to size 5.7076pt on input line 5.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 9.83871pt on input line 3.
+(Font)              scaled to size 9.83871pt on input line 5.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 7.08386pt on input line 3.
+(Font)              scaled to size 7.08386pt on input line 5.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 5.70645pt on input line 3.
+(Font)              scaled to size 5.70645pt on input line 5.
 )
 \tf@toc=\write4
 \openout4 = `phd-thesis-proposal.toc'.
@@ -965,64 +965,64 @@ LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
 
 ]
 Chapter 2.
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 103.
-LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 103.
 [7] [8
 
 ]
 Chapter 3.
+Missing character: There is no 𝜇 in font Arial/OT:script=latn;language=dflt;map
+ping=tex-text;!
+[9] [10
+
+]
+Chapter 4.
+LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
+(Font)              scaled to size 14.4pt on input line 165.
+LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
+(Font)              scaled to size 14.4pt on input line 165.
+LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 172.
+[11]
 File: figs/brosnan_survey_PSA.png Graphic file (type bmp)
 <figs/brosnan_survey_PSA.png>
 
-Overfull \hbox (197.04024pt too wide) in paragraph at lines 134--135
+Overfull \hbox (197.04024pt too wide) in paragraph at lines 183--184
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 16.14471pt on input line 139.
+LaTeX Warning: Float too large for page by 16.14471pt on input line 188.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 141.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 190.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 141.
+LaTeX Font Warning: Command \small invalid in math mode on input line 190.
 
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 141.
+(Font)              scaled to size 9.0pt on input line 190.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 7.2pt on input line 141.
-[9] [10]
-LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 156.
-
-Overfull \hbox (111.10817pt too wide) has occurred while \output is active
-\TU/Arial(0)/m/it/10 3.2.  LABORATORY METHODS FOR EVALUATING SOIL BEHAVIOR AND 
-PHYSICAL PROPERTIES \TU/Arial(0)/m/n/10 11
- []
-
-[11] [12
-
-]
-Chapter 4.
-[13] [14
-
-]
+(Font)              scaled to size 7.2pt on input line 190.
+[12] [13] [14]
 Chapter 5.
-(./phd-thesis-proposal.bbl [15] [16
+[15
 
-]) [17] (./phd-thesis-proposal.aux)
+] [16
+
+]
+Chapter 6.
+(./phd-thesis-proposal.bbl [17] [18
+
+]) [19] (./phd-thesis-proposal.aux)
 Package rerunfilecheck Info: File `phd-thesis-proposal.out' has not changed.
-(rerunfilecheck)             Checksum: A23E06A736899AE2B75DED2BB928A882;4324.
+(rerunfilecheck)             Checksum: 01E72BE5F5B20C39647E30E34277090B;4405.
  ) 
 Here is how much of TeX's memory you used:
- 16599 strings out of 479445
- 292521 string characters out of 5879689
- 748541 words of memory out of 5000000
- 35698 multiletter control sequences out of 15000+600000
+ 16601 strings out of 479445
+ 292538 string characters out of 5879689
+ 750541 words of memory out of 5000000
+ 35700 multiletter control sequences out of 15000+600000
  541709 words of font info for 96 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  94i,6n,121p,652b,345s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on phd-thesis-proposal.pdf (17 pages).
+Output written on phd-thesis-proposal.pdf (19 pages).
