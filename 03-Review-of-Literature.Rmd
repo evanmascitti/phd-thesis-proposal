@@ -17,6 +17,10 @@ library(tidyverse)
 library(measurements)
 library(latex2exp)
 library(hrbrthemes)
+library(scales)
+library(ImaginR)
+library(imager)
+library(here)
 theme_set(theme_ipsum_rc())
 ```
 
@@ -76,13 +80,23 @@ labor_man_hrs <- read_csv('data/lit-review-data/maintenance-man-hrs.csv') %>%
 
 A full-size baseball field occupies `r round(sum(pnc_areas$total_area_ha), 0)` ha. About `r round(turf_area_pct, digits= 0)`% of this total area is surfaced with natural turfgrass or synthetic turf. An additional ~ `r round(wt_area_pct, digits=0)`% is occupied by the warning track, which is designed to alert players that they are nearing the wall. Only about `r signif(skin_area_pct, 1)`% of the total playing surface is occupied by the infield skin. However, the majority of the game is played on this area, and at any given moment the all the offensive players, the four infielders, and the pitcher and catcher are standing on the infield skin. Because of its importance to athlete safety and performance, the infield skin consumes a majority of labor and material expenditures (see Figure \@ref(fig:labor-per-area) ).
 
-```{r labor-per-area, fig.cap="The infield skin consumes the majority of labor input despite comprising only ~8% of the playing surface."}
+```{r labor-per-area, fig.show="hold", out.width="40%", fig.height=5, fig.cap="A. Locations of players during a professional baseball game; note the paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows). B. The infield skin consumes the majority of labor input despite comprising only ~8% of the playing surface."}
 # make some properly formatted labels for plotting purposes
+knitr::include_graphics('images/player-locations.png')
 
-area_colors <- tibble(type = c("Home plate", "Game mound/bullpen",
-                                    "Infield skin", "Turf", "Warning track"),
-                      hex= c("#694832", "#694832", "#694832", "#2c5f2d", "#8B0000" ) )
+# compute colors from screen shots of the 3 soils 
 
+material_colors <-  paste('data/lit-review-data/soil-color-images', list.files('data/lit-review-data/soil-color-images'), sep="/" ) %>% 
+  map(load.image) %>% 
+  map(PictureResults) %>% 
+  map(~.[[2]]) %>% 
+  map(~.[["color"]]) %>% 
+  map_chr(~.[1])
+
+area_colors <- tibble(type=c("Turf", "Warning track", "Infield skin"),
+                      hex= material_colors)
+  
+  
 labor_per_area <- pnc_areas %>% 
   left_join(labor_man_hrs) %>% 
   mutate(total_area_m2 = conv_unit(total_area_ha, "hectare", "m2"),
@@ -100,16 +114,18 @@ labor_per_area_plot <- labor_per_area %>%
   labs(title= "Labor allocation on a typical MLB game day",
        caption= "Values computed by the author from personal experience.",
        y="Field component",
-       x= TeX("Labor intensity, worker-hr $\\m^{-2}$") )
-
-labor_per_area_plot +
+       x= TeX("Labor intensity, worker-hr $\\m^{-2}$") )+
   scale_fill_identity()+
   scale_x_continuous(limits= c(0, 1.5), n.breaks = 5)+
   theme(plot.title=element_text(hjust=0.5),
+        plot.background= element_rect(fill= "transparent"),
+        panel.background= element_rect(fill= "transparent"),
         panel.grid.major.y = element_blank(),
         panel.grid.minor.x = element_blank(),
         axis.text.y = element_text(hjust = 0),
         axis.title.y = element_blank()) 
+
+labor_per_area_plot 
         
 
 ```
