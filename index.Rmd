@@ -16,6 +16,10 @@ editor_options:
 
 ---
 
+```{r, include=FALSE}
+options(tinytex.verbose = TRUE)
+```
+
 # Overview {#overview}
 
 Baseball fields are built from soil. Therefore, soil behavior determines the safety and function of the field. The purpose of this dissertation is to study how soil behavior relates to baseball infields. 

@@ -138,8 +138,8 @@ labor_per_area_plot
 
 @Brosnan2008a surveyed the surface conditions of the infield skin on extant playing fields at three maintenance levels. Particle size analyses were performed on soil sampled from each infield skin. The USDA soil texture of those samples is plotted in \@ref(fig:brosnan-survey-usda). These soils were sampled from the upper 13 mm and contained large granules of calcined clay infield conditioner; therefore, the texture measured with this method is coarser than the "true" texture of the base soil. 
 
-```{r brosnan-survey-usda, echo=FALSE, fig.cap= 'Infield soils suyveyed by Brosnan (2008a)', dev='png', fig.width=5, fig.align='center'}
-knitr::include_graphics('figs/brosnan_survey_PSA.PNG')
+```{r brosnan-survey-usda, eval= FALSE, echo=FALSE, fig.cap= 'Infield soils suyveyed by Brosnan (2008a)', dev='png', fig.width=5, fig.align='center'}
+knitr::include_graphics('images/brosnan_survey_PSA.PNG')
 ```
 
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.21)  24 OCT 2020 13:27
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.21)  25 OCT 2020 15:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -969,8 +969,6 @@ Chapter 2.
 
 ]
 Chapter 3.
-Missing character: There is no 𝜇 in font Arial/OT:script=latn;language=dflt;map
-ping=tex-text;!
 [9] [10
 
 ]
@@ -982,47 +980,64 @@ LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
 LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 172.
 [11]
-File: figs/brosnan_survey_PSA.png Graphic file (type bmp)
-<figs/brosnan_survey_PSA.png>
+File: images/player-locations.png Graphic file (type bmp)
+<images/player-locations.png>
+File: phd-thesis-proposal_files/figure-latex/labor-per-area-2.pdf Graphic file 
+(type pdf)
+<use phd-thesis-proposal_files/figure-latex/labor-per-area-2.pdf>
 
-Overfull \hbox (197.04024pt too wide) in paragraph at lines 183--184
- [][] 
+LaTeX Warning: Reference `fig:brosnan-survey-usda' on page 12 undefined on inpu
+t line 185.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 187.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 187.
+
+LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 187.
+LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
+(Font)              scaled to size 7.2pt on input line 187.
+[12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[13] [14]
+Overfull \hbox (111.85036pt too wide) has occurred while \output is active
+\TU/Arial(0)/m/it/10 4.4.  LABORATORY METHODS FOR EVALUATING SOIL BEHAVIOR AND 
+PHYSICAL PROPERTIES \TU/Arial(0)/m/n/10 15
  []
 
+[15] [16]
+Overfull \hbox (111.85036pt too wide) has occurred while \output is active
+\TU/Arial(0)/m/it/10 4.4.  LABORATORY METHODS FOR EVALUATING SOIL BEHAVIOR AND 
+PHYSICAL PROPERTIES \TU/Arial(0)/m/n/10 17
+ []
 
-LaTeX Warning: Float too large for page by 16.14471pt on input line 188.
+[17] [18
 
-
-LaTeX Font Warning: Command \Large invalid in math mode on input line 190.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 190.
-
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 190.
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 7.2pt on input line 190.
-[12] [13] [14]
+]
 Chapter 5.
-[15
-
-] [16
+[19] [20
 
 ]
 Chapter 6.
-(./phd-thesis-proposal.bbl [17] [18
+(./phd-thesis-proposal.bbl [21] [22
 
-]) [19] (./phd-thesis-proposal.aux)
+] [23]) [24] (./phd-thesis-proposal.aux)
 Package rerunfilecheck Info: File `phd-thesis-proposal.out' has not changed.
 (rerunfilecheck)             Checksum: 01E72BE5F5B20C39647E30E34277090B;4405.
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 16601 strings out of 479445
- 292538 string characters out of 5879689
- 750541 words of memory out of 5000000
- 35700 multiletter control sequences out of 15000+600000
+ 16638 strings out of 479445
+ 293646 string characters out of 5879689
+ 755541 words of memory out of 5000000
+ 35737 multiletter control sequences out of 15000+600000
  541709 words of font info for 96 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 94i,6n,121p,652b,345s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 94i,6n,121p,1210b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on phd-thesis-proposal.pdf (19 pages).
+Output written on phd-thesis-proposal.pdf (24 pages).
