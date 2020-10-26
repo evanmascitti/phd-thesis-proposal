@@ -1,18 +1,10 @@
----
-output: html_document
-editor_options: 
-  chunk_output_type: inline
----
+
 # Review of literature {#lit-review}
 
-```{r setup, include=FALSE}
+```{r}
 knitr::opts_chunk$set(echo = FALSE,
                       warning = FALSE,
-                      message = FALSE,
-                      cache = TRUE)
-```
-
-```{r}
+                      message = FALSE)
 library(tidyverse)
 library(measurements)
 library(latex2exp)
@@ -21,7 +13,11 @@ library(scales)
 library(ImaginR)
 library(imager)
 library(here)
-theme_set(theme_ipsum_rc())
+library(cowplot)
+theme_set(theme_cowplot())
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
 ```
 
 
@@ -80,7 +76,7 @@ labor_man_hrs <- read_csv('data/lit-review-data/maintenance-man-hrs.csv') %>%
 
 A full-size baseball field occupies `r round(sum(pnc_areas$total_area_ha), 0)` ha. About `r round(turf_area_pct, digits= 0)`% of this total area is surfaced with natural turfgrass or synthetic turf. An additional ~ `r round(wt_area_pct, digits=0)`% is occupied by the warning track, which is designed to alert players that they are nearing the wall. Only about `r signif(skin_area_pct, 1)`% of the total playing surface is occupied by the infield skin. However, the majority of the game is played on this area, and at any given moment the all the offensive players, the four infielders, and the pitcher and catcher are standing on the infield skin. Because of its importance to athlete safety and performance, the infield skin consumes a majority of labor and material expenditures (see Figure \@ref(fig:labor-per-area) ).
 
-```{r labor-per-area, fig.show="hold", out.width="40%", fig.height=5, fig.cap="A. Locations of players during a professional baseball game; note the paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows). B. The infield skin consumes the majority of labor input despite comprising only ~8% of the playing surface."}
+```{r labor-per-area, fig.show="hold", out.width="45%", fig.cap="A. Locations of players during a professional baseball game; note the paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows). B. The infield skin consumes the majority of labor input despite comprising only ~8% of the playing surface."}
 # make some properly formatted labels for plotting purposes
 knitr::include_graphics('images/player-locations.png')
 
@@ -138,12 +134,14 @@ labor_per_area_plot
 
 @Brosnan2008a surveyed the surface conditions of the infield skin on extant playing fields at three maintenance levels. Particle size analyses were performed on soil sampled from each infield skin. The USDA soil texture of those samples is plotted in \@ref(fig:brosnan-survey-usda). These soils were sampled from the upper 13 mm and contained large granules of calcined clay infield conditioner; therefore, the texture measured with this method is coarser than the "true" texture of the base soil. 
 
-```{r brosnan-survey-usda, eval= FALSE, echo=FALSE, fig.cap= 'Infield soils suyveyed by Brosnan (2008a)', dev='png', fig.width=5, fig.align='center'}
+```{r brosnan-survey-usda, eval= FALSE, echo=FALSE, fig.cap= 'Infield soils suyveyed by Brosnan (2008a)', fig.align='center'}
+
 knitr::include_graphics('images/brosnan_survey_PSA.PNG')
+
 ```
 
 
-Additionally, Brosnan et al. published research on the infield skin's role in athlete-to-surface interactions [-@Brosnan2009] and ball-to-surface interactions [-@Brosnan2011]. Bulk density ($\Large{\rho}\small{_{bulk}}$) was shown to influence surface properties, although the range of bulk densities tested (1.2-1.8 Mg m^-3^) was beneath values typically encountered on infield skins (author's personal observation; data not shown).
+Additionally, Brosnan et al. published research on the infield skin's role in athlete-to-surface interactions [-@Brosnan2009] and ball-to-surface interactions [-@Brosnan2011]. Bulk density (&rho;~bulk~) was shown to influence surface properties, although the range of bulk densities tested (1.2-1.8 Mg m^-3^) was beneath values typically encountered on infield skins (author's personal observation; data not shown).
 
 However, the work of Brosnan et al. [-@Brosnan2009; -@Brosnan2011] was performed on a single soil material and focused on construction and maintenance practices rather than mix design.
 

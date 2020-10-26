@@ -1,4 +1,6 @@
 book_filename: "phd-thesis-proposal"
+rmd_files: ["index.Rmd", "01-Purpose-and-objectives.Rmd", "02-Definition-of-terms.Rmd", 
+            "03-Review-of-Literature.Rmd", "04-Proposed-experiments.Rmd" ]
 delete_merged_file: true
 # language:
 #   ui:

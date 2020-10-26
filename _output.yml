@@ -15,7 +15,14 @@ bookdown::pdf_book:
     in_header: preamble.tex
   latex_engine: xelatex
   citation_package: natbib
-  keep_tex: yes
+  keep_tex: false
 bookdown::epub_book: default
 bookdown::word_document2:
     toc: true
+bookdown::pdf_document2:
+  latex_engine: xelatex
+bookdown::html_document2:
+  css: style.css
+
+  
+

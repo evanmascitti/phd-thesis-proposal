@@ -4,20 +4,35 @@ author: "Evan C Mascitti"
 date: "last updated `r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
+classoption: 
+  - openany
+  - twocolumn
+geometry:
+  - margin=1in
+papersize: letter
 bibliography: [book.bib, packages.bib, library.bib]
 csl: soil-science-society-of-america-journal.csl
+biblio-title: "References"
 biblio-style: apalike
 link-citations: yes
 description: "This is my first attempt at compiling a large document with the **bookdown** package in R."
 mainfont: Arial
 mathfont: Fira Math Regular
+links-as-notes: true
+urlcolor: blue
+linkcolor: blue
+citecolor: blue
+toccolor: blue
 editor_options: 
   chunk_output_type: inline
 
 ---
 
-```{r, include=FALSE}
+```{r setup, include=FALSE}
 options(tinytex.verbose = TRUE)
+knitr::opts_chunk$set(message=FALSE,
+                      echo = FALSE,
+                      warning = FALSE)
 ```
 
 # Overview {#overview}
@@ -28,7 +43,7 @@ The production of artificial soils has received much study. However, there are
 no published scientific experiments on this topic as it pertains to baseball and
 softball fields.
 
-This proposal is organized into three sections:
+This proposal is organized into four sections:
 
 [**Purpose and objectives**](#purpose-objectives): A broad description of the scope and aims of the project
 
