@@ -1,9 +1,56 @@
+
 # Proposed experiments and papers {#proposed-experiments}
 
-## Chapter 1: A novel method for measuring the performance of baseball and softball infield skin soils
+This section details the planned research, much of which has already begun. Figure {#gantt-chart} outlines envisaged timelines for these experiments. Many of the tests will be performed on the same soil mixtures and the experiments, while separate, have substantial overlap. Therefore the testing program will be structured to minimize bottlenecks. In other words, multiple experiments will be in progress at a given time because some of the protocols involve wait times (i.e. for several hours or overnight) during which other lab tasks can be performed. 
+
+
+## Chapter 1: A novel method for measuring surface deformation of baseball and softball infield skin soils
+
+### Principal research questions
+1. Can differences among infield mixes be observed in a laboratory test without using human subjects?
+2. How can performance be quantified? 
+3. How can the method be made objective and repeatable?
+
+### Hypotheses
+1. The "cleat-in, cleat-out" phenomenon (described in Section \@ref(#coarkboard-effect)) can be duplicated using a machine and a laboratory-sized soil specimen. 
+2. The means by which the soil specimen is prepared will affect the test result. Therefore, a protcol must be developed which adequately emulates the real procedures used for construction and maintenance of infield skins. Furthermore, the method must simulate outdoor conditions to adjust the soil water content.  
+3. Subjectivity can be minimized by relying on 3D scanning technology to measure the response of the soil. 
+4. Morphpometrics may be classified by means of the property they depend on; each metric will be minimized at simlar water content but their sensitivity (i.e. _relative_ magnitudes) will differ in this order: surface-area > volume > curvature.  
+
+### Materials and Methods
+
+A mechanical apparatus has been developed to emulate a baseball or softball athlete's foot-to-surface interaction (Figure \@ref(fig:cleat-mark-device). The device was designed and fabricated between May 2019 and March 2020 with service from the Penn State Engineering Services Shop. 
+
+
+```{r eval=FALSE, cleat-mark-device, out.width="50%"}
+knitr::include_graphics(c('images/cleat-mark-device.png', 'images/nine-spike-pattern.png') )
+
+```
+
+
+The apparatus comprises a pneumatic cylinder which combines high travel speed and precise control of the peak load. 
+
+### Timeline 
+
+The device was designed and fabricated between May 2019 and March 2020. Calibration and tuning of the machine is ongoing. The first set of mixtures is scheduled to be tested in Nov 2020. The goal is to complete all tests with this device by the end of 2021.
 
 ## Chapter 2: Toughness of clay soil near the plastic limit using unconfined compression tests
 
 ## Chapter 3: A critical appraisal of particle size analysis as a proxy for soil behavior
 
 ## Chapter 4: A rational theory of mix design for blended soils used on baseball and softball infields
+
+The end game/envisaged process of mix design: 
+
+1. Decide what toughness value you want - this is determined by the level of play and maintenance capability. 
+
+2. Test the toughness of the pure "clay" (or estimate it from the empirical equation published by @Moreno-Maroto2018, or hopefully via an even better equation I will make with my compression test method for toughness)
+
+3. Use an empirical equation I will develop to interpolate along the dose-respone curve of toughness vs. sand content. It will probably be linear for coarse sand and non-linear for finer sand. Probably I would need to develop multiple equations based on the properties of the sand....either choose from two or three equations (i.e. sand too fine, sand ok, sand excellent), or what would be even better (but probably beyond the scope of my own project and therefore a great starter for one of my future grad students) is to represent the sand variable as something continuous, such as mean particle diameter, or better yet specific surface area (could derive this from PSA curve with a correctly-fitted model) and then you would have _two_ continuous variables with which to form the dose-response curve. Anyway, you interpolate on this curve to get the sand-clay ratio you want, then make the mixture from that ratio. In this way the properties of the resultant mixture are not only replicable, they are precisely controllable. You have your hand on the dial!
+
+Basically you end up with a line plotting toughness against % sand. The nature of the line is determined by :
+1. the intercept of the line is determined by the initial toughness (i.e. that of the "pure" clay soil component) which is in turn determined by the mineralogy and particle size of the clay soil component. 
+2. the slope is determined _both_ by the type of clay (i.e. the slope is a function of toughness; tougher clays will not be dilluted as easily; they will retain their toughness at higher sand contents; their slopes will be shallower) **and** the type of sand (i.e. the slope is a function of sand type, but only above ~20% sand)
+
+
+Generally speaking, the larger the athletes the higher the toughness you want. The maximum toughness that can be used as an infield mix is governed by the strength of dry clods because they have to be draggable. This is complicated by the use of conditioner because they will increase the friability of the soil when used on a real infield. So you can use a base soil which has slightly higher toughness than would really be acceptable if there were no conditioner around....but how much higher is a hard question to answer. To find out you would have to do a conditioner titration on the soils which bracket this transition. 

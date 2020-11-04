@@ -1,0 +1,24 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: inline
+---
+```{r labor-per-area-tab, eval= T}
+library(tidyverse)
+library(kableExtra)
+
+labor_man_hrs <- read_csv('data/lit-review-data/maintenance-man-hrs.csv') %>% 
+  mutate(type= as_factor(type),
+         type= fct_relevel(type, 'Game mound/bullpen', 'Home plate', 'Infield skin', 'Turf', 'Warning track')) %>% 
+  arrange(type) %>% 
+  rename(Task= name, `Field area`= type, `Prep time`=time, `Participants`=people,
+         `Approx. duration (minutes)`= time_min) %>% 
+  arrange(`Field area`) %>% 
+  group_by(`Field area`)
+
+labor_man_hrs %>% 
+  kbl(align = "lllcc", caption = 'Field preparation tasks for a typical MLB game day.') %>% 
+  kable_styling(full_width = T, bootstrap_options = 'striped')
+
+```
+
