@@ -12,18 +12,20 @@ This section details the planned research, much of which has already begun. Figu
 3. How can the method be made objective and repeatable?
 
 ### Hypotheses
-1. The "cleat-in, cleat-out" phenomenon (described in Section \@ref(#coarkboard-effect)) can be duplicated using a machine and a laboratory-sized soil specimen. 
-2. The means by which the soil specimen is prepared will affect the test result. Therefore, a protcol must be developed which adequately emulates the real procedures used for construction and maintenance of infield skins. Furthermore, the method must simulate outdoor conditions to adjust the soil water content.  
+1. The "cleat-in, cleat-out" phenomenon (described in Section \@ref(#corkboard-effect)) can be duplicated using a machine and a laboratory-sized soil specimen. 
+2. The means by which the soil specimen is prepared will affect the test result. Therefore, a protocol must be developed which adequately emulates the real procedures used for construction and maintenance of infield skins. Furthermore, the method must simulate outdoor conditions to adjust the soil water content.  
 3. Subjectivity can be minimized by relying on 3D scanning technology to measure the response of the soil. 
-4. Morphpometrics may be classified by means of the property they depend on; each metric will be minimized at simlar water content but their sensitivity (i.e. _relative_ magnitudes) will differ in this order: surface-area > volume > curvature.  
+4. Morphpometrics may be classified by means of the property they depend on; each metric will be minimized at similar water content but their sensitivity (i.e. _relative_ magnitudes) will differ in this order: surface-area > volume > curvature.  
 
 ### Materials and Methods
 
-A mechanical apparatus has been developed to emulate a baseball or softball athlete's foot-to-surface interaction (Figure \@ref(fig:cleat-mark-device). The device was designed and fabricated between May 2019 and March 2020 with service from the Penn State Engineering Services Shop. 
+A mechanical apparatus has been developed to emulate a baseball or softball athlete's foot-to-surface interaction (Figure \@ref(fig:cleat-mark-device)). The device was designed and fabricated between May 2019 and March 2020 with service from the Penn State Engineering Services Shop. 
 
 
-```{r eval=FALSE, cleat-mark-device, out.width="50%"}
-knitr::include_graphics(c('images/cleat-mark-device.png', 'images/nine-spike-pattern.png') )
+```{r cleat-mark-device, eval=TRUE, cache=T, fig.cap="Left: The pneumatic apparatus used to simulate foot-to-surface interaction. Right: A typical 9-spike baseball cleat pattern.", fig.show="hold", fig.height=3, out.width="50%"}
+
+knitr::include_graphics('images/cleatmark_device.png')
+knitr::include_graphics('images/nine-spike-pattern-compressed.png') 
 
 ```
 

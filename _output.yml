@@ -8,7 +8,7 @@ bookdown::pdf_book:
 bookdown::gitbook:
   split_by: chapter
   split_bib: yes
-  css: style.css
+  css: [proposal-style.css, proposal-fonts.css]
   config:
     toc:
       before: |
@@ -27,7 +27,7 @@ bookdown::pdf_document2:
   latex_engine: xelatex
 
 bookdown::html_document2:
-  css: style.css
+  css: [proposal-style.css, proposal-fonts.css]
 
   
 

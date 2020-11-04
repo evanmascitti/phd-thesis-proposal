@@ -3,6 +3,7 @@ output: html_document
 editor_options: 
   chunk_output_type: inline
 ---
+# Appendix {#appendix}
 ```{r labor-per-area-tab, eval= T}
 library(tidyverse)
 library(kableExtra)
@@ -17,8 +18,8 @@ labor_man_hrs <- read_csv('data/lit-review-data/maintenance-man-hrs.csv') %>%
   group_by(`Field area`)
 
 labor_man_hrs %>% 
-  kbl(align = "lllcc", caption = 'Field preparation tasks for a typical MLB game day.') %>% 
-  kable_styling(full_width = T, bootstrap_options = 'striped')
+  kbl(align = "lllcc", caption = 'Field preparation tasks for a typical MLB game day.', longtable = TRUE, booktabs = TRUE) %>% 
+  kable_styling(full_width = T, bootstrap_options = 'striped', latex_options = 'striped')
 
 ```
 

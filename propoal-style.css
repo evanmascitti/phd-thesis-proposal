@@ -1,0 +1,36 @@
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+/* code */
+pre {
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  box-shadow: 5px 5px 5px #eee;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #444;
+  background-color: #f6f6f6;
+  border-radius: 3px; }
+
+pre code { background: none; }

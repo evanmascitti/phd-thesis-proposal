@@ -7,11 +7,9 @@ editor_options:
 # Review of literature {#lit-review}
 
 ```{r load packages}
-knitr::opts_chunk$set(cache = T)
 library(tidyverse)
 library(measurements)
 library(latex2exp)
-library(hrbrthemes)
 library(scales)
 library(ImaginR)
 library(imager)
@@ -45,7 +43,7 @@ During play, forces are imposed to the infield skin by athletes feet and bodies,
 
 ### Qualitative description of the importance of the infield 
 
-```{r compute-field-areas}
+```{r compute-field-areas, cache=TRUE}
 pnc_areas <- read_csv('data/lit-review-data/pnc-google-earth-dims.csv') %>% 
   group_by(type) %>% 
   summarise(total_area_ft2= sum(ft2)) %>% 
@@ -70,7 +68,7 @@ wt_area_pct <- compute_area_pct(pnc_areas, "Warning track")
 
 ```
 
-```{r compute-man-hrs}
+```{r compute-man-hrs, cache=T}
 
 labor_man_hrs <- read_csv('data/lit-review-data/maintenance-man-hrs.csv') %>% 
   mutate(time_hr= time_min/60) %>% 
@@ -79,77 +77,20 @@ labor_man_hrs <- read_csv('data/lit-review-data/maintenance-man-hrs.csv') %>%
 
 ```
 
-A full-size baseball field occupies `r round(sum(pnc_areas$total_area_ha), 0)` ha. About `r round(turf_area_pct, digits= 0)`% of this total area is surfaced with natural turfgrass or synthetic turf. An additional ~ `r round(wt_area_pct, digits=0)`% is occupied by the warning track, which is designed to alert players that they are nearing the wall. Only about `r signif(skin_area_pct, 1)`% of the total playing surface is occupied by the infield skin, yet it plays a disproportionally large influence on the game.
+A full-size baseball field occupies `r round(sum(pnc_areas$total_area_ha), 0)` ha. About `r round(turf_area_pct, digits= 0)`% of this total area is surfaced with natural turfgrass or synthetic turf. An additional ~ `r round(wt_area_pct, digits=0)`% is occupied by the warning track, which is designed to alert players that they are nearing the wall. Only about `r signif(skin_area_pct, 1)`% of the total playing surface is occupied by the infield skin, yet it plays a disproportionately large influence on the game.
 
 Data from MLB contests demonstrate that the average ground ball produces 0.04 runs while causing 0.80 outs. In contrast, the average ball hit in the air created 0.23 runs and 0.62 outs. On a runs-per-outs basis, a fly ball is nearly 8 times s valuable to the offense as a ground ball [@Carruth2010]. It is in the defense's interest to encourage the offense to hit as many ground balls as possible, and this heightens the importance of the infield skin. 
 
-The majority of important plays occur on the infield skin. At a given moment, all the offensive players, all four infielders, and the pitcher and catcher are standing on the infield skin \@ref(fig:player-locations). A large majority of batted balls either land or are fielded here.  As a result, the effort and funds devoted to maintaining is disproportionately large (Figure (\@ref(fig:labor-per-area))^[Data used to compute these values is compiled in the Appendix, see Table \@ref(tab:labor-per-area-tab)].
+The majority of important plays occur on the infield skin. At a given moment, all the offensive players, all four infielders, and the pitcher and catcher are standing on the infield skin (Figure \@ref(fig:player-locations)). A large majority of batted balls either land or are fielded here (Figure \@ref(fig:batted-ball-density)).  As a result, the effort and funds devoted to maintaining is disproportionately large (Figure (\@ref(fig:labor-per-area))^[Data used to compute these values is compiled in the Appendix, see Table \@ref(tab:labor-per-area-tab)].
 
-```{r player-locations, eval=T, fig.cap="Locations of players during a professional baseball game, note the paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows).", fig.width=6.5, out.width="100%" }
+```{r player-locations, eval=T, fig.cap="Locations of players during a professional baseball game, note the paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows).", fig.height=2.5, cache=T}
 
 knitr::include_graphics('images/illustrations/player_locations/player_locations.png')
 
-```
-
-```{r produce batted ball density plot}
-
-# read the data file for all batted balls in 2020
-batted_balls_2020 <- read_csv('data/lit-review-data/complete-2020-savant-data.csv') %>%
-  filter(hc_x != 'null',
-         hc_y != 'null') %>% 
-  mutate(hc_x= as.double(hc_x),
-         hc_y= as.double(hc_y)) %>%
-  select(home_team, game_date, hc_x, hc_y) %>% 
-  drop_na()
-
-# set the number of total data points in a character vector object with length 1 
-n_value <- scales::comma(length(batted_balls_2020$hc_x))
-
-
-# make a kernel density plot of all the batted balls 
-batted_balls_2020_plot <- batted_balls_2020 %>%
-  ggspraychart_ecm(high_color =  "#940000")+
-  labs(title= 'Kernel density of MLB batted balls',
-       caption = paste0('- Coordinates indicate where ball was fielded by defender.\n\n- Data shown for 2020 season (n = ', n_value, '; source: MLB Statcast).'),
-       fill= 'Density')+
-  theme_ballfield()+
-  theme(plot.margin = margin(0,0,0,0, unit = "pt"),
-        plot.title= element_text(size = 13),
-        legend.title = element_text(size = 11),
-        plot.caption = element_text(size = 9))
-
-# Now for the second part, the field boundaries subset the data to just one
-# game, Aug 9 at PNC Park (no particular reason for choosing this game - just
-# need to pare down the size of the data set so the boundaries are not drawn
-# many times)
-
-pit_aug_2020_batted_balls <- batted_balls_2020 %>% 
-  filter(home_team== "PIT",
-         game_date== "2020-08-09")
-
-# plot the field boundaries
-field_boundaries <- pit_aug_2020_batted_balls %>%
-  ggspraychart_ecm_skeleton() +
-  labs(title= 'Kernel density of MLB batted balls',
-       caption = paste0('- Coordinates indicate where ball was fielded by defender.\n\n- Data shown for 2020 season (n = ', n_value, '; source: MLB Statcast).'),
-       fill= 'Density')+
-  scale_fill_gradient(low = 'transparent', high = 'transparent') +
-  geom_ballfield()+
-  theme_ballfield()+
-  theme(plot.title= element_text(size = 13),
-        legend.title = element_text(size = 11),
-        plot.caption = element_text(size = 9))
-
-# combine the actual data with the field boundaries "layer" using cowplot::draw_plot
-
-batted_balls_w_boundaries <- ggdraw() +
-  draw_plot(batted_balls_2020_plot)+ 
-  draw_plot(field_boundaries)
 
 ```
 
-
-```{r produce labor per area plot}
+```{r produce labor per area plot, cache=T}
 
 area_colors <- readr::read_csv('data/lit-review-data/useful_soil_colors_for_thesis.csv') %>% 
   dplyr::mutate(type= soil_description)
@@ -169,8 +110,8 @@ labor_per_area <- pnc_areas %>%
 labor_per_area_plot <- labor_per_area %>% 
   ggplot(aes(man_hr_per_100m2, type, fill= hex_color, label= label))+
   geom_col()+
-  labs(title= "Labor allocation on a typical MLB game day",
-       caption= "Values computed by the author from personal experience.",
+  labs(title= "Labor allocation on a typical MLB game day*",
+       caption= "* Values computed by the author from personal experience.",
        y="Field component",
        x= TeX("Labor intensity, worker-hr $\\m^{-2}$") )+
   ggtext::geom_richtext(aes(x= man_hr_per_100m2 +0.01), #, color= hex_color),
@@ -183,28 +124,84 @@ labor_per_area_plot <- labor_per_area %>%
   scale_color_identity()+
   scale_x_continuous(limits= c(0, 1.5), n.breaks = 5)+
   background_grid()+
-  theme_minimal_vgrid(font_family = "Arial")+
+  theme_minimal_vgrid()+
   theme(axis.title.y = element_blank(),
         axis.text.y = element_blank(),
         axis.ticks.y = element_blank(),
         axis.line.y = element_blank(),
         axis.line.x= element_line(size = 0.5),
-        plot.margin = margin(0,0,0,0, unit="pt")
+        plot.title = element_text(hjust = 0.5)
         )
 ```
 
-```{r labor-per-area, eval=T, dev= "pdf", fig.cap= "The infield skin consumes a majority of inputs despite comprising less than 10 percent of the playing surface area."}
+```{r labor-per-area, eval=T, fig.height=2.5, fig.cap= "The infield skin consumes a majority of inputs despite comprising less than 10 percent of the playing surface area."}
 labor_per_area_plot
 ```
 
+```{r produce batted ball density plot, cache=T}
 
-```{r eval=T, battedballs-maintenance, dev= "pdf", fig.cap= "A) Intensity of play on the infield skin. B) The infield skin consumes a majority of inputs despite comprising only ~8% of the playing surface."}
+# read the data file for all batted balls in 2020
+batted_balls_2020 <- read_csv('data/lit-review-data/complete-2020-savant-data.csv') %>%
+  filter(hc_x != 'null',
+         hc_y != 'null') %>% 
+  mutate(hc_x= as.double(hc_x),
+         hc_y= as.double(hc_y)) %>%
+  select(home_team, game_date, hc_x, hc_y) %>% 
+    filter(hc_x >25,
+       hc_x < 228,
+       hc_y < 220,
+       hc_y > 30
+       ) %>% 
+  mutate(game_date= lubridate::mdy(game_date))
 
+# set the number of total data points in a character vector object with length 1 
+n_value <- scales::comma(length(batted_balls_2020$hc_x))
 
-plot_grid(batted_balls_w_boundaries, labor_per_area_plot, labels = "AUTO", rel_widths = c(1, 1), rel_heights = c(1,1), ncol = 2)
+# make a kernel density plot of all the batted balls 
+batted_balls_2020_plot <- batted_balls_2020 %>%
+  ggspraychart_ecm(high_color =  "#940000")+
+  labs(title= 'Kernel density of MLB batted balls',
+       caption = paste0('- Coordinates indicate where ball was fielded by defender.\n\n- Data shown for 2020 season (n = ', n_value, '; source: MLB Statcast).'),
+       fill= 'Density')+
+  theme_ballfield()+
+  theme(plot.title= element_text(size = 13),
+        legend.title = element_text(size = 11),
+        plot.caption = element_text(size = 9))
 
+# Now for the second part, the field boundaries subset the data to just one
+# game, Aug 9 at PNC Park (no particular reason for choosing this game - just
+# need to pare down the size of the data set so the boundaries are not drawn
+# many times)
+
+pit_2020_08_09_batted_balls <- batted_balls_2020 %>% 
+  filter(home_team== "PIT",
+         game_date== "2020-08-09")
+
+# plot the field boundaries
+field_boundaries <- pit_2020_08_09_batted_balls %>%
+  ggspraychart_ecm_skeleton() +
+  labs(title= 'Kernel density of MLB batted balls',
+       caption = paste0('- Coordinates indicate where ball was fielded by defender.\n\n- Data shown for 2020 season (n = ', n_value, '; source: MLB Statcast).'),
+       fill= 'Density')+
+  scale_fill_gradient(low = 'transparent', high = 'transparent') +
+  geom_ballfield()+
+  theme_ballfield()+
+  theme(plot.title= element_text(size = 13),
+        legend.title = element_text(size = 11),
+        plot.caption = element_text(size = 9))
+
+# combine the actual data with the field boundaries "layer" using cowplot::draw_plot
+
+batted_balls_w_boundaries <- ggdraw() +
+  draw_plot(batted_balls_2020_plot)+ 
+  draw_plot(field_boundaries)
 ```
 
+```{r batted-ball-density, fig.asp=1, fig.width=4, fig.align='center', fig.cap="Data from MLB games validate the high level maintenance inputs toward the infield skin. Most of the game is played on this small area."}
+
+batted_balls_w_boundaries
+
+```
 
 The main properties of interest to the athlete (and therefore to the grounds manager) are footing and ball response. Each can be further subdivided. 
 

@@ -52,10 +52,13 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="proposal-style.css" type="text/css" />
+<link rel="stylesheet" href="proposal-fonts.css" type="text/css" />
 </head>
 
 <body>
@@ -106,6 +109,7 @@
 <li class="chapter" data-level="5.3" data-path="proposed-experiments.html"><a href="proposed-experiments.html#chapter-3-a-critical-appraisal-of-particle-size-analysis-as-a-proxy-for-soil-behavior"><i class="fa fa-check"></i><b>5.3</b> Chapter 3: A critical appraisal of particle size analysis as a proxy for soil behavior</a></li>
 <li class="chapter" data-level="5.4" data-path="proposed-experiments.html"><a href="proposed-experiments.html#chapter-4-a-rational-theory-of-mix-design-for-blended-soils-used-on-baseball-and-softball-infields"><i class="fa fa-check"></i><b>5.4</b> Chapter 4: A rational theory of mix design for blended soils used on baseball and softball infields</a></li>
 </ul></li>
+<li class="chapter" data-level="6" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>6</b> Appendix</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -140,25 +144,25 @@ O
 During play, forces are imposed to the infield skin by athletes feet and bodies, and by the ball. This section outlines the goals of a baseball grounds manager and prior scientific research (scant as it is) on this topic.</p>
 <div id="qualitative-description-of-the-importance-of-the-infield" class="section level3" number="4.1.1">
 <h3><span class="header-section-number">4.1.1</span> Qualitative description of the importance of the infield</h3>
-<p>A full-size baseball field occupies 1 ha. About 74% of this total area is surfaced with natural turfgrass or synthetic turf. An additional ~ 16% is occupied by the warning track, which is designed to alert players that they are nearing the wall. Only about 8% of the total playing surface is occupied by the infield skin, yet it plays a disproportionally large influence on the game.</p>
+<p>A full-size baseball field occupies 1 ha. About 74% of this total area is surfaced with natural turfgrass or synthetic turf. An additional ~ 16% is occupied by the warning track, which is designed to alert players that they are nearing the wall. Only about 8% of the total playing surface is occupied by the infield skin, yet it plays a disproportionately large influence on the game.</p>
 <p>Data from MLB contests demonstrate that the average ground ball produces 0.04 runs while causing 0.80 outs. In contrast, the average ball hit in the air created 0.23 runs and 0.62 outs. On a runs-per-outs basis, a fly ball is nearly 8 times s valuable to the offense as a ground ball <span class="citation">(<a href="#ref-Carruth2010" role="doc-biblioref"><strong>Carruth2010?</strong></a>)</span>. It is in the defense’s interest to encourage the offense to hit as many ground balls as possible, and this heightens the importance of the infield skin.</p>
-<p>The majority of important plays occur on the infield skin. At a given moment, all the offensive players, all four infielders, and the pitcher and catcher are standing on the infield skin <a href="lit-review.html#fig:player-locations">4.1</a>. A large majority of batted balls either land or are fielded here. As a result, the effort and funds devoted to maintaining is disproportionately large (Figure (<a href="lit-review.html#fig:labor-per-area">4.2</a>)<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
+<p>The majority of important plays occur on the infield skin. At a given moment, all the offensive players, all four infielders, and the pitcher and catcher are standing on the infield skin (Figure <a href="lit-review.html#fig:player-locations">4.1</a>). A large majority of batted balls either land or are fielded here (Figure <a href="lit-review.html#fig:batted-ball-density">4.3</a>). As a result, the effort and funds devoted to maintaining is disproportionately large (Figure (<a href="lit-review.html#fig:labor-per-area">4.2</a>)<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
 <div class="figure"><span id="fig:player-locations"></span>
-<img src="images/illustrations/player_locations/player_locations.png" alt="Locations of players during a professional baseball game, note the paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows)." width="100%" />
+<img src="images/illustrations/player_locations/player_locations.png" alt="Locations of players during a professional baseball game, note the paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows)." width="975" />
 <p class="caption">
 Figure 4.1: Locations of players during a professional baseball game, note the paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows).
 </p>
 </div>
 <div class="figure"><span id="fig:labor-per-area"></span>
-<img src="phd-thesis-proposal_files/figure-html/labor-per-area-1.png" alt="The infield skin consumes a majority of inputs despite comprising less than 10 percent of the playing surface area." width="100%" />
+<img src="phd-thesis-proposal_files/figure-html/labor-per-area-1.png" alt="The infield skin consumes a majority of inputs despite comprising less than 10 percent of the playing surface area." width="672" />
 <p class="caption">
 Figure 4.2: The infield skin consumes a majority of inputs despite comprising less than 10 percent of the playing surface area.
 </p>
 </div>
-<div class="figure"><span id="fig:battedballs-maintenance"></span>
-<img src="phd-thesis-proposal_files/figure-html/battedballs-maintenance-1.png" alt="A) Intensity of play on the infield skin. B) The infield skin consumes a majority of inputs despite comprising only ~8% of the playing surface." width="100%" />
+<div class="figure" style="text-align: center"><span id="fig:batted-ball-density"></span>
+<img src="phd-thesis-proposal_files/figure-html/batted-ball-density-1.png" alt="Data from MLB games validate the high level maintenance inputs toward the infield skin. Most of the game is played on this small area." width="384" />
 <p class="caption">
-Figure 4.3: A) Intensity of play on the infield skin. B) The infield skin consumes a majority of inputs despite comprising only ~8% of the playing surface.
+Figure 4.3: Data from MLB games validate the high level maintenance inputs toward the infield skin. Most of the game is played on this small area.
 </p>
 </div>
 <p>The main properties of interest to the athlete (and therefore to the grounds manager) are footing and ball response. Each can be further subdivided.</p>
@@ -286,11 +290,11 @@ Barnes, G.E. 2013. <span class="nocase">The Plastic Limit and Workability of Soi
 <div id="ref-Bobrowski1992" class="csl-entry">
 Bobrowski, L.J., and D.M. Griekspoor. 1992. <span class="nocase">Determination of the plastic limit of a soil by means of a rolling device</span>. Geotechnical Testing Journal 15(3): 284–287.
 </div>
-<div id="ref-Brosnan2011" class="csl-entry">
-Brosnan, J.T., A.S. McNitt, and T.J. Serensits. 2011. <span class="nocase">Effects of surface conditions on baseball playing surface pace</span>. Journal of Testing and Evaluation 39(3). doi: <a href="https://doi.org/10.1520/JTE103215">10.1520/JTE103215</a>.
-</div>
 <div id="ref-Brosnan2009" class="csl-entry">
 Brosnan, J.T., A.S. Mcnitt, and T.J. Serensits. 2009. <span class="nocase">Effects of varying surface characteristics on the hardness and traction of baseball field playing surfaces</span>. International Turfgrass Society Research Journal 11(865): 1–13.
+</div>
+<div id="ref-Brosnan2011" class="csl-entry">
+Brosnan, J.T., A.S. McNitt, and T.J. Serensits. 2011. <span class="nocase">Effects of surface conditions on baseball playing surface pace</span>. Journal of Testing and Evaluation 39(3). doi: <a href="https://doi.org/10.1520/JTE103215">10.1520/JTE103215</a>.
 </div>
 <div id="ref-Brosnan2008a" class="csl-entry">
 Brosnan, J.T., T. Plant, and S. Sciences. 2008. <span class="nocase">Surface Conditions of Highly Maintained Baseball Fields in the Northeastern United States : Part 1 , Non-Turfed Basepaths</span>. Applied Turfgrass Science (April). doi: <a href="https://doi.org/10.1094/ATS-2008-0520-01-RS">10.1094/ATS-2008-0520-01-RS</a>.
@@ -320,7 +324,7 @@ Walker, P.R., G.C. Ward, and K. Burns. 1994. <span class="nocase">Who Invented t
 <div class="footnotes">
 <hr />
 <ol start="1">
-<li id="fn1"><p>Data used to compute these values is compiled in the Appendix, see Table <a href="#tab:labor-per-area-tab"><strong>??</strong></a><a href="lit-review.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>Data used to compute these values is compiled in the Appendix, see Table <a href="appendix.html#tab:labor-per-area-tab">6.1</a><a href="lit-review.html#fnref1" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="lit-review.html"/>
-
+<link rel="next" href="appendix.html"/>
 <script src="libs/header-attrs-2.5.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -52,10 +52,13 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="proposal-style.css" type="text/css" />
+<link rel="stylesheet" href="proposal-fonts.css" type="text/css" />
 </head>
 
 <body>
@@ -106,6 +109,7 @@
 <li class="chapter" data-level="5.3" data-path="proposed-experiments.html"><a href="proposed-experiments.html#chapter-3-a-critical-appraisal-of-particle-size-analysis-as-a-proxy-for-soil-behavior"><i class="fa fa-check"></i><b>5.3</b> Chapter 3: A critical appraisal of particle size analysis as a proxy for soil behavior</a></li>
 <li class="chapter" data-level="5.4" data-path="proposed-experiments.html"><a href="proposed-experiments.html#chapter-4-a-rational-theory-of-mix-design-for-blended-soils-used-on-baseball-and-softball-infields"><i class="fa fa-check"></i><b>5.4</b> Chapter 4: A rational theory of mix design for blended soils used on baseball and softball infields</a></li>
 </ul></li>
+<li class="chapter" data-level="6" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>6</b> Appendix</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -142,16 +146,22 @@
 <div id="hypotheses" class="section level3" number="5.1.2">
 <h3><span class="header-section-number">5.1.2</span> Hypotheses</h3>
 <ol style="list-style-type: decimal">
-<li>The “cleat-in, cleat-out” phenomenon (described in Section @ref(#coarkboard-effect)) can be duplicated using a machine and a laboratory-sized soil specimen.</li>
-<li>The means by which the soil specimen is prepared will affect the test result. Therefore, a protcol must be developed which adequately emulates the real procedures used for construction and maintenance of infield skins. Furthermore, the method must simulate outdoor conditions to adjust the soil water content.<br />
+<li>The “cleat-in, cleat-out” phenomenon (described in Section @ref(#corkboard-effect)) can be duplicated using a machine and a laboratory-sized soil specimen.</li>
+<li>The means by which the soil specimen is prepared will affect the test result. Therefore, a protocol must be developed which adequately emulates the real procedures used for construction and maintenance of infield skins. Furthermore, the method must simulate outdoor conditions to adjust the soil water content.<br />
 </li>
 <li>Subjectivity can be minimized by relying on 3D scanning technology to measure the response of the soil.</li>
-<li>Morphpometrics may be classified by means of the property they depend on; each metric will be minimized at simlar water content but their sensitivity (i.e. <em>relative</em> magnitudes) will differ in this order: surface-area &gt; volume &gt; curvature.</li>
+<li>Morphpometrics may be classified by means of the property they depend on; each metric will be minimized at similar water content but their sensitivity (i.e. <em>relative</em> magnitudes) will differ in this order: surface-area &gt; volume &gt; curvature.</li>
 </ol>
 </div>
 <div id="materials-and-methods" class="section level3" number="5.1.3">
 <h3><span class="header-section-number">5.1.3</span> Materials and Methods</h3>
-<p>A mechanical apparatus has been developed to emulate a baseball or softball athlete’s foot-to-surface interaction (Figure <a href="#fig:cleat-mark-device"><strong>??</strong></a>. The device was designed and fabricated between May 2019 and March 2020 with service from the Penn State Engineering Services Shop.</p>
+<p>A mechanical apparatus has been developed to emulate a baseball or softball athlete’s foot-to-surface interaction (Figure <a href="proposed-experiments.html#fig:cleat-mark-device">5.1</a>). The device was designed and fabricated between May 2019 and March 2020 with service from the Penn State Engineering Services Shop.</p>
+<div class="figure"><span id="fig:cleat-mark-device"></span>
+<img src="images/cleatmark_device.png" alt="Left: The pneumatic apparatus used to simulate foot-to-surface interaction. Right: A typical 9-spike baseball cleat pattern." width="50%" /><img src="images/nine-spike-pattern-compressed.png" alt="Left: The pneumatic apparatus used to simulate foot-to-surface interaction. Right: A typical 9-spike baseball cleat pattern." width="50%" />
+<p class="caption">
+Figure 5.1: Left: The pneumatic apparatus used to simulate foot-to-surface interaction. Right: A typical 9-spike baseball cleat pattern.
+</p>
+</div>
 <p>The apparatus comprises a pneumatic cylinder which combines high travel speed and precise control of the peak load.</p>
 </div>
 <div id="timeline" class="section level3" number="5.1.4">
@@ -178,64 +188,8 @@
 2. the slope is determined <em>both</em> by the type of clay (i.e. the slope is a function of toughness; tougher clays will not be dilluted as easily; they will retain their toughness at higher sand contents; their slopes will be shallower) <strong>and</strong> the type of sand (i.e. the slope is a function of sand type, but only above ~20% sand)</p>
 <p>Generally speaking, the larger the athletes the higher the toughness you want. The maximum toughness that can be used as an infield mix is governed by the strength of dry clods because they have to be draggable. This is complicated by the use of conditioner because they will increase the friability of the soil when used on a real infield. So you can use a base soil which has slightly higher toughness than would really be acceptable if there were no conditioner around….but how much higher is a hard question to answer. To find out you would have to do a conditioner titration on the soils which bracket this transition.</p>
 
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
-Andrade, F.A., H.A. Al-Qureshi, and D. Hotza. 2011. <span class="nocase">Measuring the plasticity of clays: A review</span>. Applied Clay Science 51(1-2): 1–7. doi: <a href="https://doi.org/10.1016/j.clay.2010.10.028">10.1016/j.clay.2010.10.028</a>.
-</div>
-<div class="csl-entry">
-Atterberg, A. 1911. <span class="nocase">Die Plastizit<span class="nocase">ä</span>t der Tone</span>. Intern mitt. boden: 4–37.
-</div>
-<div class="csl-entry">
-Atterberg, Albert. 1974. <span class="nocase">Plasticity of clays</span>. Cold Regions Research Lab, Hanover, NJ.
-</div>
-<div class="csl-entry">
-Barnes, G.E. 2013. <span class="nocase">The Plastic Limit and Workability of Soils</span>. : 427. <a href="https://www.escholar.manchester.ac.uk/api/datastream?publicationPid=uk-ac-man-scw:212752&amp;datastreamId=FULL-TEXT.PDF">https://www.escholar.manchester.ac.uk/api/datastream?publicationPid=uk-ac-man-scw:212752&amp;datastreamId=FULL-TEXT.PDF</a>.
-</div>
-<div class="csl-entry">
-Bobrowski, L.J., and D.M. Griekspoor. 1992. <span class="nocase">Determination of the plastic limit of a soil by means of a rolling device</span>. Geotechnical Testing Journal 15(3): 284–287.
-</div>
-<div class="csl-entry">
-Brosnan, J.T., A.S. McNitt, and T.J. Serensits. 2011. <span class="nocase">Effects of surface conditions on baseball playing surface pace</span>. Journal of Testing and Evaluation 39(3). doi: <a href="https://doi.org/10.1520/JTE103215">10.1520/JTE103215</a>.
-</div>
-<div class="csl-entry">
-Brosnan, J.T., A.S. Mcnitt, and T.J. Serensits. 2009. <span class="nocase">Effects of varying surface characteristics on the hardness and traction of baseball field playing surfaces</span>. International Turfgrass Society Research Journal 11(865): 1–13.
-</div>
-<div class="csl-entry">
-Brosnan, J.T., T. Plant, and S. Sciences. 2008. <span class="nocase">Surface Conditions of Highly Maintained Baseball Fields in the Northeastern United States : Part 1 , Non-Turfed Basepaths</span>. Applied Turfgrass Science (April). doi: <a href="https://doi.org/10.1094/ATS-2008-0520-01-RS">10.1094/ATS-2008-0520-01-RS</a>.
-</div>
-<div class="csl-entry">
-Casagrande, A. 1932. <span class="nocase">Research on the Atterberg limits of soils</span>. Public Roads 13(8): 121–136.
-</div>
-<div class="csl-entry">
-Goodall, S.A., K. Guillard, W.M. Dest, and K.R. Demars. 2005. <span class="nocase">Ball response and traction of skinned infields amended with calcined clay at varying soil moisture contents</span>. International Turfgrass Society Research Journal 10: 1085–1093.
-</div>
-<div class="csl-entry">
-Haigh, S. 2016. <span class="nocase">Consistency of the casagrande liquid limit test</span>. Geotechnical Testing Journal 39(1): 13–19. doi: <a href="https://doi.org/10.1520/GTJ20150093">10.1520/GTJ20150093</a>.
-</div>
-<div class="csl-entry">
-Moreno-Maroto, J.M., and J. Alonso-Azcárate. 2018. <span class="nocase">What is clay? A new definition of <span>“clay”</span> based on plasticity and its impact on the most widespread soil classification systems</span>. Applied Clay Science 161(April): 57–63. doi: <a href="https://doi.org/10.1016/j.clay.2018.04.011">10.1016/j.clay.2018.04.011</a>.
-</div>
-<div class="csl-entry">
-Morris, P. 2007. <span class="nocase">Level Playing Fields: How the Groundskeeping Murphy Brothers Shaped Baseball</span>. University of Nebraska Press, Lincoln, NE.
-</div>
-<div class="csl-entry">
-Terzaghi, K. 1926. <span class="nocase">Simplified soil tests for subgrades and their physical significance</span>. Public Roads 7(8): 153–170.
-</div>
-<div class="csl-entry">
-Terzaghi, K., R. Peck, and G. Mesri. 1996. <span class="nocase">Soil Mechanics in Engineering Practice</span>. 3rd ed. John Wiley <span>&amp;</span> Sons, Inc., New York, NY.
-</div>
-<div class="csl-entry">
-Walker, P.R., G.C. Ward, and K. Burns. 1994. <span class="nocase">Who Invented the Game?</span> Alfred a Knopf.
 </div>
 </div>
-</div>
-</div>
-
-
-
-
-
-
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Moreno-Maroto2018" class="csl-entry">
@@ -247,8 +201,8 @@ Moreno-Maroto, J.M., and J. Alonso-Azcárate. 2018. <span class="nocase">What is
           </div>
         </div>
       </div>
-<a href="lit-review.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="lit-review.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="appendix.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
