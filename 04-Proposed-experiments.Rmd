@@ -6,6 +6,8 @@ This section details the planned research, much of which has already begun. Figu
 
 ## Chapter 1: A novel method for measuring surface deformation of baseball and softball infield skin soils
 
+A  new method to measure disturbance of baseball infield soils by cleated footwear
+
 ### Principal research questions
 1. Can differences among infield mixes be observed in a laboratory test without using human subjects?
 2. How can performance be quantified? 

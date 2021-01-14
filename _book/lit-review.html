@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Review of literature | Evan’s PhD thesis proposal</title>
   <meta name="description" content="This is my first attempt at compiling a large document with the bookdown package in R." />
-  <meta name="generator" content="bookdown 0.21.2 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21.5 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Review of literature | Evan’s PhD thesis proposal" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,7 @@
   
 <link rel="prev" href="definition-of-terms.html"/>
 <link rel="next" href="proposed-experiments.html"/>
-<script src="libs/header-attrs-2.5.3/header-attrs.js"></script>
+<script src="libs/header-attrs-2.6.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -56,6 +56,29 @@
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="proposal-style.css" type="text/css" />
 <link rel="stylesheet" href="proposal-fonts.css" type="text/css" />
@@ -134,23 +157,24 @@
 <h1><span class="header-section-number">4</span> Review of literature</h1>
 <p>This literature review is organized into four sections to address the following topics:</p>
 <p><strong><a href="lit-review.html#infield-performance">4.1</a></strong> <a href="lit-review.html#infield-performance"><strong>Function and performance of baseball/softball infields</strong></a></p>
-<p><strong><a href="lit-review.html#soil-behavior-fundamentals">4.2</a></strong> <a href="lit-review.html#soil-behavior-fundamentals"><strong>Soil behavior terminology and measures</strong></a></p>
+<p><strong><a href="lit-review.html#soil-behavior-fundamentals">4.2</a></strong> <a href="lit-review.html#soil-behavior-fundamentals"><strong>Measures of soil behavior</strong></a></p>
 <p><strong><a href="lit-review.html#artificial-soil-mixtures">4.3</a></strong> <a href="lit-review.html#artificial-soil-mixtures"><strong>Design and properties of artificial soil mixtures</strong></a></p>
-<p><strong><a href="lit-review.html#lab-methods-review">4.4</a></strong> <a href="lit-review.html#lab-methods-review"><strong>Laboratory test methods pertinent to the research questions</strong></a></p>
+<p><strong><a href="lit-review.html#lab-methods-review">4.4</a></strong> <a href="lit-review.html#lab-methods-review"><strong>Laboratory test methods pertinent to the problems of interest</strong></a></p>
 <div id="infield-performance" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Function and performance of baseball infields</h2>
-<p>Athletes engage with the playing surface in two ways: directly (by running, pivoting, and sliding) and indirectly (by fielding batted balls).
-O
-During play, forces are imposed to the infield skin by athletes feet and bodies, and by the ball. This section outlines the goals of a baseball grounds manager and prior scientific research (scant as it is) on this topic.</p>
+<p>In baseball and softball, athletes engage with the playing surface in two ways: directly (by running, pivoting, and sliding) and indirectly (by fielding batted balls).</p>
+<p>Forces are applied to the surface by athletes and by the ball. This section outlines the goals of a baseball grounds manager and the (relatively scant) prior scientific research on this topic.</p>
 <div id="qualitative-description-of-the-importance-of-the-infield" class="section level3" number="4.1.1">
 <h3><span class="header-section-number">4.1.1</span> Qualitative description of the importance of the infield</h3>
-<p>A full-size baseball field occupies 1 ha. About 74% of this total area is surfaced with natural turfgrass or synthetic turf. An additional ~ 16% is occupied by the warning track, which is designed to alert players that they are nearing the wall. Only about 8% of the total playing surface is occupied by the infield skin, yet it plays a disproportionately large influence on the game.</p>
-<p>Data from MLB contests demonstrate that the average ground ball produces 0.04 runs while causing 0.80 outs. In contrast, the average ball hit in the air created 0.23 runs and 0.62 outs. On a runs-per-outs basis, a fly ball is nearly 8 times s valuable to the offense as a ground ball <span class="citation">(<a href="#ref-Carruth2010" role="doc-biblioref"><strong>Carruth2010?</strong></a>)</span>. It is in the defense’s interest to encourage the offense to hit as many ground balls as possible, and this heightens the importance of the infield skin.</p>
-<p>The majority of important plays occur on the infield skin. At a given moment, all the offensive players, all four infielders, and the pitcher and catcher are standing on the infield skin (Figure <a href="lit-review.html#fig:player-locations">4.1</a>). A large majority of batted balls either land or are fielded here (Figure <a href="lit-review.html#fig:batted-ball-density">4.3</a>). As a result, the effort and funds devoted to maintaining is disproportionately large (Figure (<a href="lit-review.html#fig:labor-per-area">4.2</a>)<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
+<p>Portions of a baseball field are termed <strong>skin</strong> if they comprise bare soil rather than natural or synthetic turf. Technically, the pitcher’s mound and the area immediately surrounding home plate are considered distinct from the infield skin. However, this thesis will not treat the mound or home plate areas in detail, so in this document the terms “skin” and “infield skin” are used interchangeably.</p>
+<p>A full-size baseball field occupies ~ 1 ha. Roughly 75% of this total area is surfaced with natural turfgrass or synthetic turf. An additional ~ 15% is occupied by the warning track, which is designed to alert players that they are nearing the wall. Only about 10% of the total playing surface is occupied by the infield skin.</p>
+<!-- I like the passage below, and I did spend a few hours finding the data/reference....but not sure it fits here. Thus I am saving it but commenting out. -->
+<!-- It is in the defense's interest to encourage the offense to hit as many ground balls as possible, and this heightens the importance of the infield skin. In Major League Baseball (MLB), the average ground ball produces 0.04 runs while causing 0.80 outs. In contrast, the average ball hit in the air creates 0.23 runs and 0.62 outs. Therefore, on a runs-per-outs basis, a fly ball is nearly _8 times_ as valuable to the offense as a ground ball [@Carruth2010].  -->
+<p>To motivate the importance of the infield skin, consider Figures <a href="lit-review.html#fig:batted-ball-density">4.3</a>-(Figure (<a href="lit-review.html#fig:labor-per-area">4.2</a>)<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. All the offensive players, the four infielders, and the pitcher and catcher are standing on skinned areas. Because a large majority of important plays occur on the skin, the funds and effort devoted to maintaining the infield skin are disproportionately large.</p>
 <div class="figure"><span id="fig:player-locations"></span>
-<img src="images/illustrations/player_locations/player_locations.png" alt="Locations of players during a professional baseball game, note the paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows)." width="975" />
+<img src="images/illustrations/player_locations/player_locations.png" alt="Locations of players during a professional baseball game. Note the paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows)." width="975" />
 <p class="caption">
-Figure 4.1: Locations of players during a professional baseball game, note the paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows).
+Figure 4.1: Locations of players during a professional baseball game. Note the paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows).
 </p>
 </div>
 <div class="figure"><span id="fig:labor-per-area"></span>
@@ -160,9 +184,9 @@ Figure 4.2: The infield skin consumes a majority of inputs despite comprising le
 </p>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:batted-ball-density"></span>
-<img src="phd-thesis-proposal_files/figure-html/batted-ball-density-1.png" alt="Data from MLB games validate the high level maintenance inputs toward the infield skin. Most of the game is played on this small area." width="384" />
+<img src="phd-thesis-proposal_files/figure-html/batted-ball-density-1.png" alt="Data from actual MLB contests support the intuition that most play occurs on the infield skin." width="384" />
 <p class="caption">
-Figure 4.3: Data from MLB games validate the high level maintenance inputs toward the infield skin. Most of the game is played on this small area.
+Figure 4.3: Data from actual MLB contests support the intuition that most play occurs on the infield skin.
 </p>
 </div>
 <p>The main properties of interest to the athlete (and therefore to the grounds manager) are footing and ball response. Each can be further subdivided.</p>
@@ -170,22 +194,37 @@ Figure 4.3: Data from MLB games validate the high level maintenance inputs towar
 <h4><span class="header-section-number">4.1.1.1</span> Footing</h4>
 <div id="traction" class="section level5" number="4.1.1.1.1">
 <h5><span class="header-section-number">4.1.1.1.1</span> Traction</h5>
-<p>Traction allows the athlete to run, change directions, and perform other maneuvers without slipping, sliding, or losing their balance. Traction is not directly analagous to pure planar friction [ ………. ]</p>
+<p>Traction allows the athlete to run, change directions, and perform other maneuvers without slipping, sliding, or losing their balance. Traction is distinct from planar friction because of the presence of studs or other gripping aids on the players’ footwear <span class="citation"><a href="#ref-McNitt1997a" role="doc-biblioref">McNitt et al.</a> (<a href="#ref-McNitt1997a" role="doc-biblioref">1997</a>)</span>. Even when using machine tests (rather than human subjects), measuring traction is complicated by nonlinear interactions between surface type, shoe type, and loading weights <span class="citation">(<a href="#ref-Nigg1990" role="doc-biblioref">Nigg, 1990</a>)</span>. Excessive traction is associated with lower extremity injuries, but traction differences among shoe types are often larger than those across surface types <span class="citation">(<a href="#ref-Serensits2014" role="doc-biblioref"><strong>Serensits2014?</strong></a>)</span>. Clear-cut thresholds of acceptable and unaccpetable traction have not been established.</p>
+<p>Most athletic field research has focused on natural grass and synthetic turf. There are two published accounts of traction measurements on infield skin surfaces. <span class="citation"><a href="#ref-Brosnan2011" role="doc-biblioref">Brosnan et al.</a> (<a href="#ref-Brosnan2011" role="doc-biblioref">2011</a>)</span> measured traction on research plots of the same infield soil subjected to various treatments. Traction was increased by soil compaction and decreased by surficial additions of calcined clay.</p>
+<p><span class="citation"><a href="#ref-Goodall2005" role="doc-biblioref">Goodall et al.</a> (<a href="#ref-Goodall2005" role="doc-biblioref">2005</a>)</span> measured traction on plots constructed from 5 different soils blended with 4 rates of calcined clay. Higher traction levels were reported for silty and loamy soils than for sandier soils. Mixing the soil with calcined clay prior to plot construction had no effect on traction. No relationship was found between traction and water content, although only 3 water contents were tested.</p>
 </div>
 <div id="the-corkboard-effect" class="section level5" number="4.1.1.1.2">
 <h5><span class="header-section-number">4.1.1.1.2</span> The corkboard effect</h5>
-<p>Minimal surface disruption is a crucial element of field quality. A majority of batted balls are fielded by defensive players on the infield skin. Figure [ ] shows a breakdown of batted ball outcomes in the MLB over several years. A quality infield skin ensures the game’s outcome is decided by the players’ performance alone and is not influenced by chance events such as an errant ball bounce.</p>
-<p>Grounds managers consider ideal infield performance as follows: an athlete’s studded footwear readily penetrates the soil at footstrike. As the athlete moves across the surface, the cleats release without separating any soil solids from the zone surrounding the cleat. No soil adheres to the studs or sole of the shoe. Thus, surface deformation is limited to a small indentation matching the shape of the stud. This phenomenon is colloquially known as the “corkboard effect,” or “cleat-in, cleat-out.” In contrast, a poor-quality infield is one on which soil is readily torn from the surface in larger clods or easily fragmented into powder.</p>
-<p>Small cleat indentations are not likely to cause errant ball response Larger depressions excavated by player’s cleats (or the soil clods themeselves) are impediments which tend to deflect the ball. This property allows the game to continue without the possibility of errant ball-to-surface interactions (Figure <a href="lit-review.html#fig:corkboard-concept">4.4</a>).</p>
+<p>Minimal surface disruption is a crucial element of infield quality. A smooth playing surface ensures the game’s outcome is decided by the players’ performance alone and is not influenced by chance events such as an errant ball bounce.</p>
+<p>Grounds managers consider ideal infield performance as follows: an athlete’s studded footwear readily penetrates the soil at footstrike. As the athlete completes his or her maneuver, the cleats release without separating any soil solids from the zone surrounding the cleat. No material adheres to the studs or sole of the shoe. Thus, surface deformation is limited to a small indentation matching the shape of the stud. This phenomenon is known as “cleat-in, cleat-out” or "the corkboard effect.“<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> In contrast, a poor-quality infield is one on which larger clods of soil are readily chipped out of the surface or easily fragmented into powder.</p>
+<p>Figure <a href="lit-review.html#fig:corkboard-concept">4.4</a> depicts the importance of the corkboard phenomenon. Small, narrow cleat indentations are unlikely to deflect a ball from its initial path, while larger depressions excavated by player’s cleats (or the soil clods themselves) are impediments which tend to produce an errant bounce. Furthermore, if a ball does contact a</p>
 <div class="figure"><span id="fig:corkboard-concept"></span>
 <img src="images/illustrations/cleatmarks/corkboard_concept.png" alt="The &quot;cleat-in, cleat-out&quot; effect ensures predictable ball response." width="976" />
 <p class="caption">
 Figure 4.4: The “cleat-in, cleat-out” effect ensures predictable ball response.
 </p>
 </div>
-<p>Deviations from this ideal occur due to the nature of the constituent particles in the soil and their interactions with water. Rotational and translational motions of the athlete impose shearing forces on the infield surface. Shear force is defined as a force component coplanar with a potential failure surface (Coloumb or similar reference). If the shear force is large enough to induce yield, the yield may manifest as either ductile deformation of the soil matrix, or as a complete rupture of the soil at a depth approximating the stud length. A clod of soil decoupled from the surrounding area creates two surface imperfections: the clod itself, and an indentation in the surface. If impacted by a batted ball, these imperfections may alter the ball’s trajectory and cause a fielder to misplay the hop. Clods are unsightly, and once abraded to their constituent soil particles, contribute to surface dust and stickiness. Therefore, groundskeepers attempt to maintain the infield in a condition which maximizes ductile behavior and minimizes the generation of clods during play.</p>
-<p>Soil clods are generated via brittle failure in the soil. Brittle failure is defined as a mode of yield accompanied by little to no plastic deformation preceding separation of the solid. Energy dissipation during brittle failure is low, and mostly localized along cracks which act to concentrate the stress. In contrast, plastic deformation attenuates more energy through mechanical strain and generation of heat (Kuipers, 1984; Perez, 2017).
-The transition between brittle and ductile stages was first described in soil by the Swedish chemist Albert Atterberg. These phases are termed the semi-solid state and plastic state, and are governed by soil water content (Atterberg, 1911). Crumbling of soil is controlled by the distribution of imperfections or “weakest links” in the soil matrix (Dexter, 2004). Yield must occur for a player’s cleat to penetrate the soil surface. If the soil is in the brittle condition, the yield occurs in the form of microcracks which propagate through the soil mass, weakening its skeleton. If the soil is in the plastic condition, the remolded zone around the cleat is likely to be smaller and more uniform with space (Deepa et al., 2013).</p>
+<p>The transition of a single infield from the ideal “corkboard” state to a condition permitting more disturbance can be described as a brittle-ductile transition. Such a transition is observed with temperature changes in materials such as glass, hydrocarbons, and metals. The brittle-ductile transition of soil is governed not by temperature but by water content.</p>
+<p>Yield must occur for a player’s cleats to penetrate the soil surface. The mode of yield depends on the water content and the packing arrangement of the soil particles. Yield may be one of two types:</p>
+<ol style="list-style-type: decimal">
+<li>brittle yield: microcracks propagate through the soil skeleton, eventually coalescing to fracture the soil mass into discrete fragments. These clods adjust their positions to accommodate the cleats and are usually ejected from the depression as the shoe releases. Crumbling or cracking of soil is controlled by the distribution of imperfections or “weakest links” in the soil matrix <span class="citation"><a href="#ref-Dexter2004" role="doc-biblioref">Dexter</a> (<a href="#ref-Dexter2004" role="doc-biblioref">2004</a>)</span>.</li>
+</ol>
+<p>or</p>
+<ol start="2" style="list-style-type: decimal">
+<li>ductile yield: soil particles are re-arranged to accommodate the cleat, but the soil mass behaves as a continuum. The remolded zone around the indentation is likely to be small and more uniform with space <span class="citation">(<a href="#ref-Deepa2013" role="doc-biblioref">Deepa et al., 2013</a>)</span>.The terms ductile and plastic<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> are used synonymously.</li>
+</ol>
+<p>In general, brittle deformation attenuates less energy than ductile deformation. Ductile behavior is usually associated with higher mechanical strain and more generation of heat <span class="citation">(<a href="#ref-Kuipers1984" role="doc-biblioref">Kuipers, 1984</a>; <a href="#ref-Perez2017" role="doc-biblioref">Perez, 2017</a>)</span></p>
+<p>The transition of fine-grained soil between brittle and plastic states was first outlined by the Swedish chemist Albert Atterberg <span class="citation">(<a href="#ref-Atterberg1911" role="doc-biblioref">Atterberg, 1911</a>; <a href="#ref-Atterberg1974" role="doc-biblioref">Atterberg, 1974</a>)</span>. Atterberg recognized the importance of quantifying plasticity. His test methods are described further in the <a href="lit-review.html#lab-methods-review">4.4</a> section.</p>
+<p>A second important consequence of the soil’s plasticity is that if a ball <em>does</em> contact a cleat indentation, the surface will deform a second time. Any change to the ball’s trajectory will be minimal. This scenario is preferred to a more rigid collision in which the ball is re-directed, possibly leading to a misplay or injury.</p>
+<p>It requires a combination of plasticity and stiffness: the soil must readily deform around the cleats so that they are not rejected, but it must also provide enough resistance to prevent the athlete from sliding.</p>
+<p>The desired degree of stiffness may differ according to the level of play; lower stiffness may be preferred for a youth playing surface while professional-level fields require more resistance to the forces imposed by the larger athletes.</p>
+<p>In summary, the infield skin is a crucial component of both baseball competition and business operations. The grounds crew expends tremendous effort to maintain the infield skin within its ideal range of water content. The goal is to produce a stiff but plastic soil consistency which leads to the corkboard effect. It is emphasized that at present, the corkboard effect is a solely qualitative description of soil behavior and no metrics exist for its study.</p>
+<hr />
 </div>
 </div>
 </div>
@@ -204,7 +243,7 @@ Figure 4.5: Infield soils suyveyed by Brosnan (2008a)
 </div>
 <div id="use-of-artificial-soil-mixtures-on-baseball-infields" class="section level3" number="4.1.3">
 <h3><span class="header-section-number">4.1.3</span> Use of artificial soil mixtures on baseball infields</h3>
-<p>Baseball was first played in the early 19th century, but the definitive origins of the game are likely lost to history <span class="citation">(<a href="#ref-Walker1994" role="doc-biblioref">Walker et al., 1994</a>)</span>. The earliest recorded attempt to alter the physical properties of an infield soil were by Harry Wright in 1875. Wright and his contemporaries incorporated various materials into their infield soils to enhance stability, firmness, or drainage of the playing surface. Amendments included organic debris (straw, ashes) and and inorganic materials (sand, lime, cinders) <span class="citation">(<a href="#ref-Morris2007" role="doc-biblioref">Morris, 2007</a>)</span>.</p>
+<p>Baseball was first played in the early 19th century, but the definitive origins of the game are likely lost to history <span class="citation">(<a href="#ref-Walker1994" role="doc-biblioref">Walker et al., 1994</a>)</span>. The earliest recorded attempt to alter the physical properties of an infield soil was by Harry Wright in 1875. Wright and his contemporaries incorporated various materials into their infield soils to enhance stability, firmness, or drainage of the playing surface. Amendments included organic debris (straw, ashes) and and inorganic materials (sand, lime, cinders) <span class="citation">(<a href="#ref-Morris2007" role="doc-biblioref">Morris, 2007</a>)</span>.</p>
 <p>Infield soil mixes were produced off-site and imported beginning in the 1960s ?Zwasksa?.</p>
 </div>
 </div>
@@ -264,7 +303,7 @@ Moreno-Marato and Alonso-Azcàrate described a plastic limit test in a soil thre
 <div id="attempts-to-improve-atterberg-limit-methods" class="section level4" number="4.4.4.4">
 <h4><span class="header-section-number">4.4.4.4</span> Attempts to improve Atterberg limit methods</h4>
 <p>Many soil tests have been developed with the goal of supplanting the Atterberg limits. However, due to the success and the abundance of data which has accumulated using these test methods, they are unlikely to be abandoned.</p>
-<p>Most criticism of the Atterberg limit tests center around operator tehcnique.</p>
+<p>Most criticism of the Atterberg limit tests center around operator technique.</p>
 </div>
 </div>
 <div id="toughness-tests" class="section level3" number="4.4.5">
@@ -290,11 +329,11 @@ Barnes, G.E. 2013. <span class="nocase">The Plastic Limit and Workability of Soi
 <div id="ref-Bobrowski1992" class="csl-entry">
 Bobrowski, L.J., and D.M. Griekspoor. 1992. <span class="nocase">Determination of the plastic limit of a soil by means of a rolling device</span>. Geotechnical Testing Journal 15(3): 284–287.
 </div>
-<div id="ref-Brosnan2009" class="csl-entry">
-Brosnan, J.T., A.S. Mcnitt, and T.J. Serensits. 2009. <span class="nocase">Effects of varying surface characteristics on the hardness and traction of baseball field playing surfaces</span>. International Turfgrass Society Research Journal 11(865): 1–13.
-</div>
 <div id="ref-Brosnan2011" class="csl-entry">
 Brosnan, J.T., A.S. McNitt, and T.J. Serensits. 2011. <span class="nocase">Effects of surface conditions on baseball playing surface pace</span>. Journal of Testing and Evaluation 39(3). doi: <a href="https://doi.org/10.1520/JTE103215">10.1520/JTE103215</a>.
+</div>
+<div id="ref-Brosnan2009" class="csl-entry">
+Brosnan, J.T., A.S. Mcnitt, and T.J. Serensits. 2009. <span class="nocase">Effects of varying surface characteristics on the hardness and traction of baseball field playing surfaces</span>. International Turfgrass Society Research Journal 11(865): 1–13.
 </div>
 <div id="ref-Brosnan2008a" class="csl-entry">
 Brosnan, J.T., T. Plant, and S. Sciences. 2008. <span class="nocase">Surface Conditions of Highly Maintained Baseball Fields in the Northeastern United States : Part 1 , Non-Turfed Basepaths</span>. Applied Turfgrass Science (April). doi: <a href="https://doi.org/10.1094/ATS-2008-0520-01-RS">10.1094/ATS-2008-0520-01-RS</a>.
@@ -302,14 +341,32 @@ Brosnan, J.T., T. Plant, and S. Sciences. 2008. <span class="nocase">Surface Con
 <div id="ref-Casagrande1932" class="csl-entry">
 Casagrande, A. 1932. <span class="nocase">Research on the Atterberg limits of soils</span>. Public Roads 13(8): 121–136.
 </div>
+<div id="ref-Deepa2013" class="csl-entry">
+Deepa, K.A., S. Haigh, P. Vinod, P.J. Vardanega, and A. Sridharan. 2013. <span class="nocase">Discussion: Remoulded shear strength at plastic and semi-solid states</span>. Proceedings of the Institution of Civil Engineers - Geotechnical Engineering 166(5): 515–517. doi: <a href="https://doi.org/10.1680/geng.12.00093">10.1680/geng.12.00093</a>.
+</div>
+<div id="ref-Dexter2004" class="csl-entry">
+Dexter, A.R. 2004. <span class="nocase">Soil physical quality: Part II. Friability, tillage, tilth and hard-setting</span>. Geoderma 120(3-4): 215–225. doi: <a href="https://doi.org/10.1016/j.geoderma.2003.09.005">10.1016/j.geoderma.2003.09.005</a>.
+</div>
 <div id="ref-Goodall2005" class="csl-entry">
 Goodall, S.A., K. Guillard, W.M. Dest, and K.R. Demars. 2005. <span class="nocase">Ball response and traction of skinned infields amended with calcined clay at varying soil moisture contents</span>. International Turfgrass Society Research Journal 10: 1085–1093.
 </div>
 <div id="ref-Haigh2016" class="csl-entry">
 Haigh, S. 2016. <span class="nocase">Consistency of the casagrande liquid limit test</span>. Geotechnical Testing Journal 39(1): 13–19. doi: <a href="https://doi.org/10.1520/GTJ20150093">10.1520/GTJ20150093</a>.
 </div>
+<div id="ref-Kuipers1984" class="csl-entry">
+Kuipers, H. 1984. <span class="nocase">The Challenge of Soil Cultivations and Soil Water Problems</span>. J. agric. Engng Res. 29: 177–190. <a href="http://blog.nature.org/science/2016/06/20/a-dirty-solution-to-cleaning-the-atmosphere/">http://blog.nature.org/science/2016/06/20/a-dirty-solution-to-cleaning-the-atmosphere/</a>.
+</div>
+<div id="ref-McNitt1997a" class="csl-entry">
+McNitt, A.S., R.O. Middour, and D.V. Waddington. 1997. <span class="nocase">Development and Evaluation of a Method to Measure Traction on Turfgrass Surfaces</span>. Journal of Testing and Evaluation 25(1): 99–107. doi: <a href="https://doi.org/10.1520/JTE11329J">10.1520/JTE11329J</a>.
+</div>
 <div id="ref-Morris2007" class="csl-entry">
 Morris, P. 2007. <span class="nocase">Level Playing Fields: How the Groundskeeping Murphy Brothers Shaped Baseball</span>. University of Nebraska Press, Lincoln, NE.
+</div>
+<div id="ref-Nigg1990" class="csl-entry">
+Nigg, B.M. 1990. <span class="nocase">The validity and relevance of tests used for the assessment of sports surfaces</span>. Medicine and Science in Sports and Exercise1 22(1): 131–139.
+</div>
+<div id="ref-Perez2017" class="csl-entry">
+Perez, N. 2017. <span>Fracture Mechanics</span>. 2nd ed. Springer, Ebook.
 </div>
 <div id="ref-Terzaghi1926" class="csl-entry">
 Terzaghi, K. 1926. <span class="nocase">Simplified soil tests for subgrades and their physical significance</span>. Public Roads 7(8): 153–170.
@@ -325,6 +382,8 @@ Walker, P.R., G.C. Ward, and K. Burns. 1994. <span class="nocase">Who Invented t
 <hr />
 <ol start="1">
 <li id="fn1"><p>Data used to compute these values is compiled in the Appendix, see Table <a href="appendix.html#tab:labor-per-area-tab">6.1</a><a href="lit-review.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>named for its similarity to the experience of removing a thumbtack from a bulletin board.<a href="lit-review.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>from the Greek <em>plastikos</em>, “to mold or form”<a href="lit-review.html#fnref3" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

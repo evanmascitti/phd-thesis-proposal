@@ -75,7 +75,7 @@ field_boundaries <- pit_aug_2020_batted_balls %>%
   labs(title= 'Kernel density of MLB batted balls',
        caption = paste0('- Coordinates indicate where ball was fielded by defender.\n\n- Data shown for 2020 season (n = ', n_value, '; source: MLB Statcast).'),
        fill= 'Density')+
-  scale_fill_gradient(low = 'transparent', high = 'transparent') +
+  #scale_fill_gradient(low = 'transparent', high = 'transparent') +
   geom_ballfield()+
   theme_ballfield()+
   theme(plot.margin = margin(0,0,0,0, unit = "pt"),
@@ -84,7 +84,7 @@ field_boundaries <- pit_aug_2020_batted_balls %>%
         plot.caption = element_text(size = 9))
 
 # show the plot
-# field_boundaries
+ field_boundaries
 
 # combine the actual data with the field boundaries "layer" using cowplot::draw_plot
 
@@ -92,7 +92,7 @@ batted_balls_w_boundaries <- ggdraw() +
   draw_plot(batted_balls_2020_plot)+ 
   draw_plot(field_boundaries)
 #batted_balls_w_boundaries
-
+batted_balls_w_boundaries
 # save the completed plot to disk
 
-# ggsave(batted_balls_w_boundaries, filename = 'images/illustrations/batted_ball_density/mlb_batted_balls_2020.svg')
+#ggsave(batted_balls_w_boundaries, filename = 'images/illustrations/batted_ball_density/mlb_batted_balls_2020.pdf')

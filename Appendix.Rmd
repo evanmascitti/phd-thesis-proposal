@@ -4,7 +4,7 @@ editor_options:
   chunk_output_type: inline
 ---
 # Appendix {#appendix}
-```{r labor-per-area-tab, eval= T}
+```{r labor-per-area-tab, eval= T, echo=F, warning=F, message=F}
 library(tidyverse)
 library(kableExtra)
 
@@ -12,6 +12,7 @@ labor_man_hrs <- read_csv('data/lit-review-data/maintenance-man-hrs.csv') %>%
   mutate(type= as_factor(type),
          type= fct_relevel(type, 'Game mound/bullpen', 'Home plate', 'Infield skin', 'Turf', 'Warning track')) %>% 
   arrange(type) %>% 
+  select(type, name, time, people, time_min) %>% 
   rename(Task= name, `Field area`= type, `Prep time`=time, `Participants`=people,
          `Approx. duration (minutes)`= time_min) %>% 
   arrange(`Field area`) %>% 
@@ -19,7 +20,7 @@ labor_man_hrs <- read_csv('data/lit-review-data/maintenance-man-hrs.csv') %>%
 
 labor_man_hrs %>% 
   kbl(align = "lllcc", caption = 'Field preparation tasks for a typical MLB game day.', longtable = TRUE, booktabs = TRUE) %>% 
-  kable_styling(full_width = T, bootstrap_options = 'striped', latex_options = 'striped')
+  kable_styling(full_width = F, bootstrap_options = 'striped', latex_options = c('striped', "repeat_header") )
 
 ```
 

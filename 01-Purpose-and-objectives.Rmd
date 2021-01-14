@@ -1,15 +1,17 @@
 # Purpose and objectives {#purpose-objectives}
 
-The purpose of my thesis is to create a new way to think about the soils used on baseball and softball infields. 
+The purpose of my thesis is twofold: (1) create a new way to assess infield soil performance, and (2) use the new framework to design improved soil mixtures. 
 
 **My objective is to answer these open-ended questions:**
 
-1. How can infield soil performance be quantified without an experienced grounds manager's expertise?
-2. How can an infield soil mixture be designed to achieve a given set of desired properties?
-3. What simple lab tests can be used to predict the performance of the mix?
+1. How can infield soil performance be objectively quantified?
+2. What can be done to improve the performance of soils currently in use?
+3. Which lab tests can be used to predict the performance of any mix?
 
 **The anticipated outcomes and deliverables from this project are:**
   
-1. A general framework for understanding the behavior of sand-clay mixes in a quantitative way
+1. A general framework for measuring the behavior of sand-clay mixes on baseball and softball fields
 2. Specific recommendations for the ratios which common clayey soils should be mixed with sand for optimal performance at any maintenance level
-3. Suggestions for how to beneficiate poorly-performing clay soils with other kinds of clays to maximize the locally available materials by "spiking" the local clay with a small percentage of imported solum
+3. Suggestions for how to beneficiate poorly-performing soils 
+4. Four refereed journal publications
+5. Software programs which may be useful for purposes beyond this project's scope and lifespan

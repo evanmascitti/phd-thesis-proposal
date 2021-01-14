@@ -1,8 +1,8 @@
 # Definition of terms {#definition-of-terms}
 
-**clay**: a soil material which can be permanently reshaped or molded when moist and which retains develops high strength when dry
+**clay**: a soil material which can be reshaped or molded when moist and which retains develops high strength when dry
 
-**clay-size**: an individual mineral grain which settles in through a column of fluid at the same rate as a spherical particle of 2 &mu;m
+**clay-size**: an individual mineral grain which settles in through a column of fluid at the same rate as a spherical particle having 2 &mu;m diameter
 
 **sand**: a soil material which is predominantly composed of mineral particles having sieve diameters between 53 and 2000 &mu;m
 

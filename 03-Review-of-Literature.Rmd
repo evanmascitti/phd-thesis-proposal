@@ -19,6 +19,7 @@ library(baseballr)
 library(ecmfuns)
 library(balldensityplots)
 library(magick)
+library(DescTools)
 theme_set(theme_cowplot())
 
 ```
@@ -28,17 +29,17 @@ This literature review is organized into four sections to address the following 
 
 **\@ref(infield-performance)** [**Function and performance of baseball/softball infields**](#infield-performance)
 
-**\@ref(soil-behavior-fundamentals)** [**Soil behavior terminology and measures**](#soil-behavior-fundamentals)
+**\@ref(soil-behavior-fundamentals)** [**Measures of soil behavior**](#soil-behavior-fundamentals)
 
 **\@ref(artificial-soil-mixtures)** [**Design and properties of artificial soil mixtures**](#artificial-soil-mixtures)
 
-**\@ref(lab-methods-review)** [**Laboratory test methods pertinent to the research questions**](#lab-methods-review)
+**\@ref(lab-methods-review)** [**Laboratory test methods pertinent to the problems of interest**](#lab-methods-review)
 
 ## Function and performance of baseball infields {#infield-performance} 
 
-Athletes engage with the playing surface in two ways: directly (by running, pivoting, and sliding) and indirectly (by fielding batted balls).
-O
-During play, forces are imposed to the infield skin by athletes feet and bodies, and by the ball. This section outlines the goals of a baseball grounds manager and prior scientific research (scant as it is) on this topic. 
+In baseball and softball, athletes engage with the playing surface in two ways: directly (by running, pivoting, and sliding) and indirectly (by fielding batted balls).
+
+Forces are applied to the surface by athletes and by the ball. This section outlines the goals of a baseball grounds manager and the (relatively scant) prior scientific research on this topic. 
 
 
 ### Qualitative description of the importance of the infield 
@@ -59,9 +60,7 @@ compute_area_pct <- function(df, area) {
   return(area_pct)
 }
 
-skin_area_pct <- compute_area_pct(pnc_areas, "Infield skin")
-hp_area_pct <- compute_area_pct(pnc_areas, "Home plate")
-mounds_area_pct <- compute_area_pct(pnc_areas, "Game mound/bullpen")
+skin_area_pct <- compute_area_pct(pnc_areas, "Infield skin") +compute_area_pct(pnc_areas, "Home plate") + compute_area_pct(pnc_areas, "Game mound/bullpen")
 turf_area_pct <- compute_area_pct(pnc_areas, "Turf")
 wt_area_pct <- compute_area_pct(pnc_areas, "Warning track")
 
@@ -77,13 +76,17 @@ labor_man_hrs <- read_csv('data/lit-review-data/maintenance-man-hrs.csv') %>%
 
 ```
 
-A full-size baseball field occupies `r round(sum(pnc_areas$total_area_ha), 0)` ha. About `r round(turf_area_pct, digits= 0)`% of this total area is surfaced with natural turfgrass or synthetic turf. An additional ~ `r round(wt_area_pct, digits=0)`% is occupied by the warning track, which is designed to alert players that they are nearing the wall. Only about `r signif(skin_area_pct, 1)`% of the total playing surface is occupied by the infield skin, yet it plays a disproportionately large influence on the game.
+Portions of a baseball field are termed **skin** if they comprise bare soil rather than natural or synthetic turf. Technically, the pitcher's mound and the area immediately surrounding home plate are considered distinct from the infield skin. However, this thesis will not treat the mound or home plate areas in detail, so in this document the terms "skin" and "infield skin" are used interchangeably. 
 
-Data from MLB contests demonstrate that the average ground ball produces 0.04 runs while causing 0.80 outs. In contrast, the average ball hit in the air created 0.23 runs and 0.62 outs. On a runs-per-outs basis, a fly ball is nearly 8 times s valuable to the offense as a ground ball [@Carruth2010]. It is in the defense's interest to encourage the offense to hit as many ground balls as possible, and this heightens the importance of the infield skin. 
+A full-size baseball field occupies ~ `r round(sum(pnc_areas$total_area_ha), 0)` ha. Roughly `r DescTools::RoundTo(x = turf_area_pct, multiple = 5)`% of this total area is surfaced with natural turfgrass or synthetic turf. An additional ~ `r DescTools::RoundTo(x = wt_area_pct, multiple = 5)`% is occupied by the warning track, which is designed to alert players that they are nearing the wall. Only about `r DescTools::RoundTo(x = skin_area_pct, multiple = 5)`% of the total playing surface is occupied by the infield skin.
 
-The majority of important plays occur on the infield skin. At a given moment, all the offensive players, all four infielders, and the pitcher and catcher are standing on the infield skin (Figure \@ref(fig:player-locations)). A large majority of batted balls either land or are fielded here (Figure \@ref(fig:batted-ball-density)).  As a result, the effort and funds devoted to maintaining is disproportionately large (Figure (\@ref(fig:labor-per-area))^[Data used to compute these values is compiled in the Appendix, see Table \@ref(tab:labor-per-area-tab)].
+<!-- I like the passage below, and I did spend a few hours finding the data/reference....but not sure it fits here. Thus I am saving it but commenting out. -->
 
-```{r player-locations, eval=T, fig.cap="Locations of players during a professional baseball game, note the paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows).", fig.height=2.5, cache=T}
+<!-- It is in the defense's interest to encourage the offense to hit as many ground balls as possible, and this heightens the importance of the infield skin. In Major League Baseball (MLB), the average ground ball produces 0.04 runs while causing 0.80 outs. In contrast, the average ball hit in the air creates 0.23 runs and 0.62 outs. Therefore, on a runs-per-outs basis, a fly ball is nearly _8 times_ as valuable to the offense as a ground ball [@Carruth2010].  -->
+
+To motivate the importance of the infield skin, consider Figures \@ref(fig:batted-ball-density)-(Figure (\@ref(fig:labor-per-area))^[Data used to compute these values is compiled in the Appendix, see Table \@ref(tab:labor-per-area-tab)]. All the offensive players, the four infielders, and the pitcher and catcher are standing on skinned areas. Because a large majority of important plays occur on the skin, the funds and effort devoted to maintaining the infield skin are disproportionately large.
+
+```{r player-locations, eval=T, fig.cap="Locations of players during a professional baseball game. Note the paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows).", fig.height=2.5, cache=T}
 
 knitr::include_graphics('images/illustrations/player_locations/player_locations.png')
 
@@ -197,7 +200,7 @@ batted_balls_w_boundaries <- ggdraw() +
   draw_plot(field_boundaries)
 ```
 
-```{r batted-ball-density, fig.asp=1, fig.width=4, fig.align='center', fig.cap="Data from MLB games validate the high level maintenance inputs toward the infield skin. Most of the game is played on this small area."}
+```{r batted-ball-density, fig.asp=1, fig.width=4, fig.align='center', fig.cap="Data from actual MLB contests support the intuition that most play occurs on the infield skin."}
 
 batted_balls_w_boundaries
 
@@ -209,25 +212,52 @@ The main properties of interest to the athlete (and therefore to the grounds man
 
 ##### Traction
 
-Traction allows the athlete to run, change directions, and perform other maneuvers without slipping, sliding, or losing their balance. Traction is not directly analagous to pure planar friction [   ..........  ]
+Traction allows the athlete to run, change directions, and perform other maneuvers without slipping, sliding, or losing their balance. Traction is distinct from planar friction because of the presence of studs or other gripping aids on the players' footwear @McNitt1997a. Even when using machine tests (rather than human subjects), measuring traction is complicated by nonlinear interactions between surface type, shoe type, and loading weights [@Nigg1990]. Excessive traction is associated with lower extremity injuries, but traction differences among shoe types are often larger than those across surface types [@Serensits2014]. Clear-cut thresholds of acceptable and unaccpetable traction have not been established.
+
+Most athletic field research has focused on natural grass and synthetic turf. There are two published accounts of traction measurements on infield skin surfaces. @Brosnan2011 measured traction on research plots of the same infield soil subjected to various treatments. Traction was increased by soil compaction and decreased by surficial additions of calcined clay. 
+
+@Goodall2005 measured traction on plots constructed from 5 different soils blended with 4 rates of calcined clay. Higher traction levels were reported for silty and loamy soils than for sandier soils. Mixing the soil with calcined clay prior to plot construction had no effect on traction. No relationship was found between traction and water content, although only 3 water contents were tested.
 
 ##### The corkboard effect
 
-Minimal surface disruption is a crucial element of field quality. A majority of batted balls are fielded by defensive players on the infield skin. Figure [ ] shows a breakdown of batted ball outcomes in the MLB over several years. A quality infield skin ensures the game's outcome is decided by the players' performance alone and is not influenced by chance events such as an errant ball bounce. 
+Minimal surface disruption is a crucial element of infield quality. A smooth playing surface ensures the game's outcome is decided by the players' performance alone and is not influenced by chance events such as an errant ball bounce. 
 
-Grounds managers consider ideal infield performance as follows: an athlete's studded footwear readily penetrates the soil at footstrike. As the athlete moves across the surface, the cleats release without separating any soil solids from the zone surrounding the cleat. No soil adheres to the studs or sole of the shoe. Thus, surface deformation is limited to a small indentation matching the shape of the stud. This phenomenon is colloquially known as the “corkboard effect,” or “cleat-in, cleat-out.” In contrast, a poor-quality infield is one on which soil is readily torn from the surface in larger clods or easily fragmented into powder. 
+Grounds managers consider ideal infield performance as follows: an athlete's studded footwear readily penetrates the soil at footstrike. As the athlete completes his or her maneuver, the cleats release without separating any soil solids from the zone surrounding the cleat. No material adheres to the studs or sole of the shoe. Thus, surface deformation is limited to a small indentation matching the shape of the stud. This phenomenon is known as “cleat-in, cleat-out” or "the corkboard effect.“^[named for its similarity to the experience of removing a thumbtack from a bulletin board.] In contrast, a poor-quality infield is one on which larger clods of soil are readily chipped out of the surface or easily fragmented into powder. 
 
- Small cleat indentations are not likely to cause errant ball response Larger depressions excavated by player's cleats (or the soil clods themeselves) are impediments which tend to deflect the ball. This property allows the game to continue without the possibility of errant ball-to-surface interactions (Figure \@ref(fig:corkboard-concept)). 
+Figure \@ref(fig:corkboard-concept) depicts the importance of the corkboard phenomenon. Small, narrow cleat indentations are unlikely to deflect a ball from its initial path, while larger depressions excavated by player's cleats (or the soil clods themselves) are impediments which tend to produce an errant bounce. Furthermore, if a ball does contact a 
 
 ```{r corkboard-concept, eval=T, fig.cap="The \"cleat-in, cleat-out\" effect ensures predictable ball response."}
 knitr::include_graphics('images/illustrations/cleatmarks/corkboard_concept.png')
 ```
 
+The transition of a single infield from the ideal "corkboard" state to a condition permitting more disturbance can be described as a brittle-ductile transition. Such a transition is observed with temperature changes in materials such as glass, hydrocarbons, and metals. The brittle-ductile transition of soil is governed not by temperature but by water content. 
 
-Deviations from this ideal occur due to the nature of the constituent particles in the soil and their interactions with water. Rotational and translational motions of the athlete impose shearing forces on the infield surface. Shear force is defined as a force component coplanar with a potential failure surface (Coloumb or similar reference). If the shear force is large enough to induce yield, the yield may manifest as either ductile deformation of the soil matrix, or as a complete rupture of the soil at a depth approximating the stud length. A clod of soil decoupled from the surrounding area creates two surface imperfections: the clod itself, and an indentation in the surface. If impacted by a batted ball, these imperfections may alter the ball’s trajectory and cause a fielder to misplay the hop. Clods are unsightly, and once abraded to their constituent soil particles, contribute to surface dust and stickiness. Therefore, groundskeepers attempt to maintain the infield in a condition which maximizes ductile behavior and minimizes the generation of clods during play. 
+Yield must occur for a player’s cleats to penetrate the soil surface. The mode of yield depends on the water content and the packing arrangement of the soil particles. Yield may be one of two types:
 
-Soil clods are generated via brittle failure in the soil. Brittle failure is defined as a mode of yield accompanied by little to no plastic deformation preceding separation of the solid. Energy dissipation during brittle failure is low, and mostly localized along cracks which act to concentrate the stress. In contrast, plastic deformation attenuates more energy through mechanical strain and generation of heat (Kuipers, 1984; Perez, 2017). 
-The transition between brittle and ductile stages was first described in soil by the Swedish chemist Albert Atterberg. These phases are termed the semi-solid state and plastic state, and are governed by soil water content (Atterberg, 1911). Crumbling of soil is controlled by the distribution of imperfections or “weakest links” in the soil matrix (Dexter, 2004). Yield must occur for a player’s cleat to penetrate the soil surface. If the soil is in the brittle condition, the yield occurs in the form of microcracks which propagate through the soil mass, weakening its skeleton. If the soil is in the plastic condition, the remolded zone around the cleat is likely to be smaller and more uniform with space (Deepa et al., 2013). 
+1. brittle yield: microcracks propagate through the soil skeleton, eventually coalescing to fracture the soil mass into discrete fragments. These clods adjust their positions to accommodate the cleats and are usually ejected from the depression as the shoe releases. Crumbling or cracking of soil is controlled by the distribution of imperfections or “weakest links” in the soil matrix @Dexter2004.
+
+or
+
+2. ductile yield: soil particles are re-arranged to accommodate the cleat, but the soil mass behaves as a continuum. The remolded zone around the indentation is likely to be small and more uniform with space [@Deepa2013].The terms ductile and plastic^[from the Greek _plastikos_, "to mold or form"] are used synonymously.  
+
+In general, brittle deformation attenuates less energy than ductile deformation. Ductile behavior is usually associated with higher mechanical strain and more generation of heat [@Kuipers1984; @Perez2017]
+
+The transition of fine-grained soil between brittle and plastic states was first outlined by the Swedish chemist Albert Atterberg [@Atterberg1911; @Atterberg1974]. Atterberg recognized the importance of quantifying plasticity. His test methods are described further in the \@ref(lab-methods-review) section. 
+
+A second important consequence of the soil's plasticity is that if a ball _does_ contact a cleat indentation, the surface will deform a second time. Any change to the ball's trajectory will be minimal. This scenario is preferred to a more rigid collision in which the ball is re-directed, possibly leading to a misplay or injury. 
+
+
+
+It requires a combination of plasticity and stiffness: the soil must readily deform around the cleats so that they are not rejected, but it must also provide enough resistance to prevent the athlete from sliding. 
+
+The desired degree of stiffness may differ according to the level of play; lower stiffness may be preferred for a youth playing surface while professional-level fields require more resistance to the forces imposed by the larger athletes.  
+
+In summary, the infield skin is a crucial component of both baseball competition and business operations. The grounds crew expends tremendous effort to maintain the infield skin within its ideal range of water content. The goal is to produce a stiff but plastic soil consistency which leads to the corkboard effect.  It is emphasized that at present, the corkboard effect is a solely qualitative description of soil behavior and no metrics exist for its study.
+
+___
+
+
+
 
 ### Research on infield surface performance 
 
@@ -248,7 +278,7 @@ However, the work of Brosnan et al. [-@Brosnan2009; -@Brosnan2011] was performed
 
 ### Use of artificial soil mixtures on baseball infields
 
-Baseball was first played in the early 19th century, but the definitive origins of the game are likely lost to history [@Walker1994]. The earliest recorded attempt to alter the physical properties of an infield soil were by Harry Wright in 1875. Wright and his contemporaries incorporated various materials into their infield soils to enhance stability, firmness, or drainage of the playing surface. Amendments included organic debris (straw, ashes) and and inorganic materials (sand, lime, cinders) [@Morris2007].
+Baseball was first played in the early 19th century, but the definitive origins of the game are likely lost to history [@Walker1994]. The earliest recorded attempt to alter the physical properties of an infield soil was by Harry Wright in 1875. Wright and his contemporaries incorporated various materials into their infield soils to enhance stability, firmness, or drainage of the playing surface. Amendments included organic debris (straw, ashes) and and inorganic materials (sand, lime, cinders) [@Morris2007].
 
 Infield soil mixes were produced off-site and imported beginning in the 1960s ?Zwasksa?.
 
@@ -325,7 +355,7 @@ Moreno-Marato and Alonso-Azcàrate also described a faster version of their orig
 
 Many soil tests have been developed with the goal of supplanting the Atterberg limits. However, due to the success and the abundance of data which has accumulated using these test methods, they are unlikely to be abandoned. 
 
-Most criticism of the Atterberg limit tests center around operator tehcnique. 
+Most criticism of the Atterberg limit tests center around operator technique. 
 
 
 ### Toughness tests
