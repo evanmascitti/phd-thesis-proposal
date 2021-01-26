@@ -25,21 +25,19 @@ theme_set(theme_cowplot())
 ```
 
 
-This literature review is organized into four sections to address the following topics:
+This literature review is organized into three sections to address the following topics:
 
 **\@ref(infield-performance)** [**Function and performance of baseball/softball infields**](#infield-performance)
 
-**\@ref(soil-behavior-fundamentals)** [**Measures of soil behavior**](#soil-behavior-fundamentals)
+**\@ref(lab-methods-review)** [**Laboratory test methods pertinent to the problems of interest**](#lab-methods-review)
 
 **\@ref(artificial-soil-mixtures)** [**Design and properties of artificial soil mixtures**](#artificial-soil-mixtures)
-
-**\@ref(lab-methods-review)** [**Laboratory test methods pertinent to the problems of interest**](#lab-methods-review)
 
 ## Function and performance of baseball infields {#infield-performance} 
 
 In baseball and softball, athletes engage with the playing surface in two ways: directly (by running, pivoting, and sliding) and indirectly (by fielding batted balls).
 
-Forces are applied to the surface by athletes and by the ball. This section outlines the goals of a baseball grounds manager and the (relatively scant) prior scientific research on this topic. 
+Existing research on this topic is relatively scant. This section describes the few published research studies and outlines the general goals of a baseball grounds manager.
 
 
 ### Qualitative description of the importance of the infield 
@@ -76,24 +74,29 @@ labor_man_hrs <- read_csv('data/lit-review-data/maintenance-man-hrs.csv') %>%
 
 ```
 
-Portions of a baseball field are termed **skin** if they comprise bare soil rather than natural or synthetic turf. Technically, the pitcher's mound and the area immediately surrounding home plate are considered distinct from the infield skin. However, this thesis will not treat the mound or home plate areas in detail, so in this document the terms "skin" and "infield skin" are used interchangeably. 
+Portions of a baseball field are termed **skin** if they comprise bare soil rather than natural grass or synthetic turf. The pitcher's mound and the area immediately surrounding home plate are considered distinct; these are constructed and maintained somewhat differently from the infield skin. However, this thesis will not treat the mound or home plate areas in detail, so in this document the terms "skin" and "infield skin" are used interchangeably. 
 
-A full-size baseball field occupies ~ `r round(sum(pnc_areas$total_area_ha), 0)` ha. Roughly `r DescTools::RoundTo(x = turf_area_pct, multiple = 5)`% of this total area is surfaced with natural turfgrass or synthetic turf. An additional ~ `r DescTools::RoundTo(x = wt_area_pct, multiple = 5)`% is occupied by the warning track, which is designed to alert players that they are nearing the wall. Only about `r DescTools::RoundTo(x = skin_area_pct, multiple = 5)`% of the total playing surface is occupied by the infield skin.
+A full-size baseball field occupies ~ `r round(sum(pnc_areas$total_area_ha), 0)` ha. Roughly `r DescTools::RoundTo(x = turf_area_pct, multiple = 5)`% of this total area is surfaced with natural turfgrass or synthetic turf. An additional ~ `r DescTools::RoundTo(x = wt_area_pct, multiple = 5)`% is occupied by the warning track, which is alerts players that they are nearing the wall by its changing feel underfoot. Only about `r DescTools::RoundTo(x = skin_area_pct, multiple = 5)`% of the total playing surface is occupied by the infield skin.
 
 <!-- I like the passage below, and I did spend a few hours finding the data/reference....but not sure it fits here. Thus I am saving it but commenting out. -->
 
 <!-- It is in the defense's interest to encourage the offense to hit as many ground balls as possible, and this heightens the importance of the infield skin. In Major League Baseball (MLB), the average ground ball produces 0.04 runs while causing 0.80 outs. In contrast, the average ball hit in the air creates 0.23 runs and 0.62 outs. Therefore, on a runs-per-outs basis, a fly ball is nearly _8 times_ as valuable to the offense as a ground ball [@Carruth2010].  -->
 
-To motivate the importance of the infield skin, consider Figures \@ref(fig:batted-ball-density)-(Figure (\@ref(fig:labor-per-area))^[Data used to compute these values is compiled in the Appendix, see Table \@ref(tab:labor-per-area-tab)]. All the offensive players, the four infielders, and the pitcher and catcher are standing on skinned areas. Because a large majority of important plays occur on the skin, the funds and effort devoted to maintaining the infield skin are disproportionately large.
+To motivate the significance of the infield skin, consider Figures \@ref(fig:player-locations)-\@ref(fig:labor-per-area).^[Data used to compute the values in Figure \@ref(fig:labor-per-area) are compiled in the Appendix, see Table \@ref(tab:labor-per-area-tab)] All the offensive players, the four infielders, and the pitcher and catcher are standing on skinned areas. A large majority of important plays occur here, so the funds and effort devoted to maintaining this area are disproportionately large.
 
-```{r player-locations, eval=T, fig.cap="Locations of players during a professional baseball game. Note the paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows).", fig.height=2.5, cache=T}
+```{r player-locations, fig.cap="Locations of players during a professional baseball game. Note the paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows).", fig.height=2.5}
 
 knitr::include_graphics('images/illustrations/player_locations/player_locations.png')
+```
 
+```{r batted-ball-density, fig.asp=1, fig.width=4, fig.align='center', fig.cap="Data from actual MLB contests support the intuition that most play occurs on the infield skin."}
+
+source("supplemental_R_scripts/generate_batted_ball_density_plot_2021-01-21.R")
+batted_balls_w_boundaries_2020
 
 ```
 
-```{r produce labor per area plot, cache=T}
+```{r produce labor per area plot}
 
 area_colors <- readr::read_csv('data/lit-review-data/useful_soil_colors_for_thesis.csv') %>% 
   dplyr::mutate(type= soil_description)
@@ -141,140 +144,101 @@ labor_per_area_plot <- labor_per_area %>%
 labor_per_area_plot
 ```
 
-```{r produce batted ball density plot, cache=T}
 
-# read the data file for all batted balls in 2020
-batted_balls_2020 <- read_csv('data/lit-review-data/complete-2020-savant-data.csv') %>%
-  filter(hc_x != 'null',
-         hc_y != 'null') %>% 
-  mutate(hc_x= as.double(hc_x),
-         hc_y= as.double(hc_y)) %>%
-  select(home_team, game_date, hc_x, hc_y) %>% 
-    filter(hc_x >25,
-       hc_x < 228,
-       hc_y < 220,
-       hc_y > 30
-       ) %>% 
-  mutate(game_date= lubridate::mdy(game_date))
+<!-- Need to get rid of the extra toughness verbiage and possibly make this its own section  -->
 
-# set the number of total data points in a character vector object with length 1 
-n_value <- scales::comma(length(batted_balls_2020$hc_x))
+At the professional level, great efforts are made to sustain the infield in a playable condition. If a game is cancelled due to field conditions, the host franchise stands to lose several hundred thousand dollars. Therefore, every attempt is made to keep the field in a playable condition and complete the game. At the youth level, most revenue is also driven by concessions and repeated cancellations of tournaments or games may undermine the sustinability of the organization's finances. Many facilities generate a large portion of annual revenue over only a handful of concentrated events (for example, a 3-day tournament). 
 
-# make a kernel density plot of all the batted balls 
-batted_balls_2020_plot <- batted_balls_2020 %>%
-  ggspraychart_ecm(high_color =  "#940000")+
-  labs(title= 'Kernel density of MLB batted balls',
-       caption = paste0('- Coordinates indicate where ball was fielded by defender.\n\n- Data shown for 2020 season (n = ', n_value, '; source: MLB Statcast).'),
-       fill= 'Density')+
-  theme_ballfield()+
-  theme(plot.title= element_text(size = 13),
-        legend.title = element_text(size = 11),
-        plot.caption = element_text(size = 9))
+The median MLB player salary in 2019 was x , with x players earning over $20 million. In a very real sense, elite athletes bodies are the most valued asset of an MLB franchise. Every effort must be made to ensure that player injuries are prevented so a team's investment is not squandered due to lost playing time. A safe infield surface is a must.
 
-# Now for the second part, the field boundaries subset the data to just one
-# game, Aug 9 at PNC Park (no particular reason for choosing this game - just
-# need to pare down the size of the data set so the boundaries are not drawn
-# many times)
 
-pit_2020_08_09_batted_balls <- batted_balls_2020 %>% 
-  filter(home_team== "PIT",
-         game_date== "2020-08-09")
+Toughness is an important property of an infield soil. When the soil offers adequate resistance to foot traffic, play may continue during rain. Once the resistance is lowered enough to make footing unsafe, the game is halted, and the grounds crew covers the field with an impermeable tarp to prevent further saturation. Rain delays and postponements lead to lost revenue and create schedule conflicts at both the professional and recreational levels. Moreover, deployment of the tarp during rainfall is dangerous and physically difficult.
+Even when weather conditions are favorable, high toughness allows the groundskeeper a wider range of water contents to provide excellent playability. This minimizes mistakes when hand-watering the infield. 
 
-# plot the field boundaries
-field_boundaries <- pit_2020_08_09_batted_balls %>%
-  ggspraychart_ecm_skeleton() +
-  labs(title= 'Kernel density of MLB batted balls',
-       caption = paste0('- Coordinates indicate where ball was fielded by defender.\n\n- Data shown for 2020 season (n = ', n_value, '; source: MLB Statcast).'),
-       fill= 'Density')+
-  scale_fill_gradient(low = 'transparent', high = 'transparent') +
-  geom_ballfield()+
-  theme_ballfield()+
-  theme(plot.title= element_text(size = 13),
-        legend.title = element_text(size = 11),
-        plot.caption = element_text(size = 9))
+The groundskeeper is unable to add water to the infield once the game has begun. In hot and dry weather., the soil dries and becomes excessively hard as the game progresses, affecting ball response and also inducing brittle bulking from cleat (Ch. __). Therefore soil toughness also allows the soil to retain its plastic behavior as soil moisture is reduced.
 
-# combine the actual data with the field boundaries "layer" using cowplot::draw_plot
 
-batted_balls_w_boundaries <- ggdraw() +
-  draw_plot(batted_balls_2020_plot)+ 
-  draw_plot(field_boundaries)
-```
 
-```{r batted-ball-density, fig.asp=1, fig.width=4, fig.align='center', fig.cap="Data from actual MLB contests support the intuition that most play occurs on the infield skin."}
-
-batted_balls_w_boundaries
-
-```
-
-The main properties of interest to the athlete (and therefore to the grounds manager) are footing and ball response. Each can be further subdivided. 
+The main surface properties of interest to the athlete (and therefore to the grounds manager) are footing and ball response. Each can be further subdivided. 
 
 #### Footing 
 
 ##### Traction
 
-Traction allows the athlete to run, change directions, and perform other maneuvers without slipping, sliding, or losing their balance. Traction is distinct from planar friction because of the presence of studs or other gripping aids on the players' footwear @McNitt1997a. Even when using machine tests (rather than human subjects), measuring traction is complicated by nonlinear interactions between surface type, shoe type, and loading weights [@Nigg1990]. Excessive traction is associated with lower extremity injuries, but traction differences among shoe types are often larger than those across surface types [@Serensits2014]. Clear-cut thresholds of acceptable and unaccpetable traction have not been established.
+Traction allows the athlete to run, change directions, and perform other maneuvers without slipping, sliding, or otherwise losing control. Traction is distinct from planar friction because of the presence of studs or other gripping aids on the players' footwear [@McNitt1997a]. Even when using machine tests (rather than human subjects), measuring traction is complicated by nonlinear interactions between surface type, shoe type, and loading weights [@Nigg1990]. Excessive rotational traction is associated with lower extremity injuries, but traction differences among shoe types are often larger than those across surface types [@Serensits2014]. Clear-cut thresholds separating acceptable and unaccpetable traction have not been established.
 
-Most athletic field research has focused on natural grass and synthetic turf. There are two published accounts of traction measurements on infield skin surfaces. @Brosnan2011 measured traction on research plots of the same infield soil subjected to various treatments. Traction was increased by soil compaction and decreased by surficial additions of calcined clay. 
+Most athletic field research has focused on natural grass and synthetic turf. There are two published accounts of traction measurements on infield skin surfaces. 
 
 @Goodall2005 measured traction on plots constructed from 5 different soils blended with 4 rates of calcined clay. Higher traction levels were reported for silty and loamy soils than for sandier soils. Mixing the soil with calcined clay prior to plot construction had no effect on traction. No relationship was found between traction and water content, although only 3 water contents were tested.
 
-##### The corkboard effect
+@Brosnan2011 measured traction on research plots of the same infield soil subjected to various treatments. Traction was increased by soil compaction and decreased by surficial additions of calcined clay. 
 
-Minimal surface disruption is a crucial element of infield quality. A smooth playing surface ensures the game's outcome is decided by the players' performance alone and is not influenced by chance events such as an errant ball bounce. 
+##### The brittle-ductile transition and the "corkboard effect"
 
-Grounds managers consider ideal infield performance as follows: an athlete's studded footwear readily penetrates the soil at footstrike. As the athlete completes his or her maneuver, the cleats release without separating any soil solids from the zone surrounding the cleat. No material adheres to the studs or sole of the shoe. Thus, surface deformation is limited to a small indentation matching the shape of the stud. This phenomenon is known as “cleat-in, cleat-out” or "the corkboard effect.“^[named for its similarity to the experience of removing a thumbtack from a bulletin board.] In contrast, a poor-quality infield is one on which larger clods of soil are readily chipped out of the surface or easily fragmented into powder. 
+Minimal surface disruption is a crucial element of infield quality. A smooth playing surface ensures the game's outcome is decided by the players' performance alone and not influenced by chance events such as an errant ball bounce. 
 
-Figure \@ref(fig:corkboard-concept) depicts the importance of the corkboard phenomenon. Small, narrow cleat indentations are unlikely to deflect a ball from its initial path, while larger depressions excavated by player's cleats (or the soil clods themselves) are impediments which tend to produce an errant bounce. Furthermore, if a ball does contact a 
+Grounds managers consider ideal infield performance as follows: an athlete's studded footwear readily penetrates the soil at footstrike. The soil provides adequate resistance as the athlete completes his or her maneuver. The cleats release from the surface without separating any soil solids from the zone surrounding them. No material adheres to the studs or sole of the shoe. Thus, surface deformation is limited to a small indentation matching the shape of the stud. This phenomenon is known as “cleat-in, cleat-out” or "the corkboard effect^[named for its similarity to the experience of removing a thumbtack from a bulletin board.].“ In contrast, a poor-quality infield is one on which larger clods of soil are readily chipped out of the surface or easily fragmented into powder. 
 
-```{r corkboard-concept, eval=T, fig.cap="The \"cleat-in, cleat-out\" effect ensures predictable ball response."}
+Figure \@ref(fig:corkboard-concept) depicts the importance of the corkboard phenomenon. Small, narrow cleat indentations are unlikely to deflect a ball from its initial path, while larger depressions excavated by player's cleats (or the soil clods themselves) are impediments which tend to produce an errant bounce. 
+
+```{r corkboard-concept, eval=T, fig.cap="(A) The \"cleat-in, cleat-out\" effect ensures predictable ball response. (B) Cleat indentations and soil clods inhibit a smooth and predictable ball path."}
 knitr::include_graphics('images/illustrations/cleatmarks/corkboard_concept.png')
 ```
 
-The transition of a single infield from the ideal "corkboard" state to a condition permitting more disturbance can be described as a brittle-ductile transition. Such a transition is observed with temperature changes in materials such as glass, hydrocarbons, and metals. The brittle-ductile transition of soil is governed not by temperature but by water content. 
+A given infield soil moves between these states as its water content changes. This change in state is formally termed the brittle-ductile transition. The brittle-ductile transition is examined further in the \@ref(lab-methods-review) section, but a brief description is provided below to establish its important link to infield performance. 
 
-Yield must occur for a player’s cleats to penetrate the soil surface. The mode of yield depends on the water content and the packing arrangement of the soil particles. Yield may be one of two types:
+A skilled grounds crew takes great care to maintain the soil at the desired moisture. Water is manually added with hoses, and rain is kept off using a large tarpaulin. Soil water content can only be controlled during field preparation; after the game begins, no further adjustments can be made and weather conditions determine the rate of water loss or gain.
 
-1. brittle yield: microcracks propagate through the soil skeleton, eventually coalescing to fracture the soil mass into discrete fragments. These clods adjust their positions to accommodate the cleats and are usually ejected from the depression as the shoe releases. Crumbling or cracking of soil is controlled by the distribution of imperfections or “weakest links” in the soil matrix @Dexter2004.
+Grounds managers have observed that some soils undergo the brittle-ductile transition rapidly, while other soils can withstand a longer drying period before the behavior change occurs. Therefore, it seems plausible that infield soils could be designed to maximize the range of water content over which the corkboard phenomenon will persist.
+
+Some amount of yield must occur for a player’s cleats to penetrate the soil surface. The mode of yield depends on the water content and the packing arrangement of the soil particles. Yield may be one of two types:
+
+1. brittle yield: microcracks propagate through the soil skeleton, eventually coalescing to fracture the soil mass into discrete fragments. These clods adjust their positions to accommodate the cleats and are usually ejected from the depression as the shoe releases. Crumbling or cracking of soil is controlled by the distribution of imperfections or “weakest links” in the soil matrix [@Dexter2004]. In general, brittle deformation attenuates less energy than ductile deformation [@Kuipers1984].
 
 or
 
-2. ductile yield: soil particles are re-arranged to accommodate the cleat, but the soil mass behaves as a continuum. The remolded zone around the indentation is likely to be small and more uniform with space [@Deepa2013].The terms ductile and plastic^[from the Greek _plastikos_, "to mold or form"] are used synonymously.  
+2. ductile yield: soil particles are re-arranged to accommodate the cleat, but the soil mass behaves as a continuum. The remolded zone around the indentation is likely to be small and more uniform with space [@Deepa2013]. Ductile behavior is usually associated with higher mechanical strain and more generation of heat [@Perez2017].
 
-In general, brittle deformation attenuates less energy than ductile deformation. Ductile behavior is usually associated with higher mechanical strain and more generation of heat [@Kuipers1984; @Perez2017]
+A second important consequence of a ductile yield mode is that if a batted baseball _does_ contact a cleat indentation, the surface will deform a second time. Changes to the ball's trajectory will be minimal. This scenario is preferred to a more rigid collision in which the ball is re-directed, possibly leading to a misplay or injury (Figure \@ref(fig:corkboard-concept)). 
 
-The transition of fine-grained soil between brittle and plastic states was first outlined by the Swedish chemist Albert Atterberg [@Atterberg1911; @Atterberg1974]. Atterberg recognized the importance of quantifying plasticity. His test methods are described further in the \@ref(lab-methods-review) section. 
+It is emphasized that no scientific investigations of the corkboard effect have been performed. It is a solely qualitative description of soil behavior, and at present no metrics exist for its study. 
 
-A second important consequence of the soil's plasticity is that if a ball _does_ contact a cleat indentation, the surface will deform a second time. Any change to the ball's trajectory will be minimal. This scenario is preferred to a more rigid collision in which the ball is re-directed, possibly leading to a misplay or injury. 
+### Ball response
 
+The reaction of a baseball upon contact with the surface plays a key role in the outcome of competition (recall Figures \@ref(fig:labor-per-area)-\@ref(fig:batted-ball-density)). As for footing, limited research is available on infield ball response. 
 
+@Goodall2005 is the only published account of controlled research on multiple infield soils. The authors installed 5 soils which were commercially available within the northeastern United States. Static and dynamic ball friction were measured along with traction and other soil properties. The authors found that increases in water content raised the coefficients of static and dynamic friction between the ball and the soil surface. The increase was likely due to greater ball penetration, increasing the contact area between the ball and the surface and also prolonging their interaction. @Goodall2005 suggested that surface pace may be more related to friction than to hardness. This agrees with intuition because the main component of a ground ball's velocity is horizontal (nearly coplanar with the surface), favoring the importance of horizontal friction rather than vertical rebound. Incorporation of calcined clay (particle size 0.5 - 2 mm) also decreased friction, especially for finer-textured soils.
 
-It requires a combination of plasticity and stiffness: the soil must readily deform around the cleats so that they are not rejected, but it must also provide enough resistance to prevent the athlete from sliding. 
+Brosnan et al. studied the effects of construction and maintenance activities on infield surface pace [-@Brosnan2011]. Higher bulk density (&rho;~bulk~) increased surface pace, although the range of bulk densities tested (1.2-1.8 Mg m^-3^) was beneath values typically encountered on infield skins (author's personal observation; data not shown). Water content was negatively correlated with surface pace, but no attempt was made to intentionally alter water content among plots. This study was performed on a single soil material.
 
-The desired degree of stiffness may differ according to the level of play; lower stiffness may be preferred for a youth playing surface while professional-level fields require more resistance to the forces imposed by the larger athletes.  
+The effect of ball spin may be large or small depending on the playing surface properties. If the ball-surface friction coefficient is high, the ball will roll through impact and its release angle will be altered (Figure \@ref(fig:daish-spin-release-angle)). The new spin rate will be determined by the incoming velocity and the friction coefficient. Sidespin imparted by the bowler will readily grip the surface and alter its horizontal path [@Daish1972]. Alternatively, when friction is low, the ball will skid through impact and retain some of its original spin.
 
-In summary, the infield skin is a crucial component of both baseball competition and business operations. The grounds crew expends tremendous effort to maintain the infield skin within its ideal range of water content. The goal is to produce a stiff but plastic soil consistency which leads to the corkboard effect.  It is emphasized that at present, the corkboard effect is a solely qualitative description of soil behavior and no metrics exist for its study.
+```{r daish-spin-release-angle, fig.cap="Initial spin will influence a ball's release angle following impact. Adapted from Daish, 1972."}
 
-___
-
-
-
-
-### Research on infield surface performance 
-
-@Goodall2005 is the only published account of research on infield soil mixtures. The authors installed several soils which were commercially available within their region. 
-
-@Brosnan2008a surveyed the surface conditions of the infield skin on extant playing fields at three maintenance levels. Particle size analyses were performed on soil sampled from each infield skin. The USDA soil texture of those samples is plotted in \@ref(fig:brosnan-survey-usda). These soils were sampled from the upper 13 mm and contained large granules of calcined clay infield conditioner; therefore, the texture measured with this method is coarser than the "true" texture of the base soil. 
-
-```{r brosnan-survey-usda, eval=T, echo=FALSE, fig.cap= "Infield soils suyveyed by Brosnan (2008a)", fig.align="center", out.width="100%"}
-
-knitr::include_graphics('images/brosnan_survey_PSA.PNG')
+knitr::include_graphics("images/illustrations/ball_spin_effect/daish_fig_9.2_redraw.pdf")
 
 ```
 
 
-Additionally, Brosnan et al. published research on the infield skin's role in athlete-to-surface interactions [-@Brosnan2009] and ball-to-surface interactions [-@Brosnan2011]. Bulk density (&rho;~bulk~) was shown to influence surface properties, although the range of bulk densities tested (1.2-1.8 Mg m^-3^) was beneath values typically encountered on infield skins (author's personal observation; data not shown).
+When soil stiffness is low, the ball produces a notable deformation of the pitch. This prolongs the duration of the impact and gives friction more time to operate. As the ball releases, it rolls up the saucer-like depression created by the impact. This yields a slightly steeper release angle relative to that of a more rigid soil surface (Figure \@ref(fig:ball-indentation-release-angle)).  
 
-However, the work of Brosnan et al. [-@Brosnan2009; -@Brosnan2011] was performed on a single soil material and focused on construction and maintenance practices rather than mix design.
+```{r ball-indentation-release-angle, fig.cap="A. A rigid soil surface produces a lower release angle, provided no imperfections are present in the surface. B. A surface with lower stiffness encourages the ball to roll out of the shallow depression created by impact, leading to a slightly steeper release angle."}
+knitr::include_graphics('images/illustrations/ball_indentation_release_angle/ball_indentation_release_angle.pdf')
+```
+
+
+Infield soil bear some similarity to cricket pitches and these have been researched more extensively. Ball response is influenced by soil bulk density, clay content, water content, organic matter, and particle size distribution [@Baker2006].
+
+A laboratory study on surface friction of cricket soils was made by @Adams2001a. This experiment mixed the same clayey soil with 6 types of coarse amendments. All final mixes had sand contents between 30 and 40% by mass. Ball-to-surface friction was highest for the mix containing sand between 125-60 &mu;m. Lower friction was measured for soils with coarser or finer amendments. Using a suede-type leather increased friction relative to polished leather, implying that the degree of wear on the ball may influence surface pace.  
+
+
+
+### Summary of the infield skin's value
+
+The infield skin is a crucial component of baseball's competitive and business operations. A professional grounds crew expends significant effort to maintain the soil water content within this relatively narrow range. An ideal infield surface exhibits a combination of plasticity and stiffness. The soil must readily deform around the cleats so that they are not rejected, but it must also provide enough resistance to prevent the athlete from sliding.
+
+___
+
 
 ### Use of artificial soil mixtures on baseball infields
 
@@ -282,59 +246,57 @@ Baseball was first played in the early 19th century, but the definitive origins 
 
 Infield soil mixes were produced off-site and imported beginning in the 1960s ?Zwasksa?.
 
-## Soil behavior terminology and measures {#soil-behavior-fundamentals} 
-
-Toughness is really the most defining feature of clay soil. 
+Popularity of engineered infield mixes has grown markedly since 2005 and today the majority of professional stadia utilize an engineered soil for their infield skin. 
 
 
+## Laboratory tests of soil behavior and physical properties {#lab-methods-review} 
 
+Ideally, researchers and practitioners could measure all soil properties of interest on an unlimited number of samples. In practice, this is prevented by time constraints and cost. Simpler tests are commonly used as surrogate markers to model the soil's actual properties in the field. The methodology of these tests has been subjected to considerable study because much is riding on their precision and accuracy. This section summarizes the development and evaluation of laboratory test methods pertinent to infield soils. 
 
-
-## Design and properties of artificial soil mixtures {#artificial-soil-mixtures}
-
-Natural soil materials are excavated and deliberately blended for many uses. Potting mixes and green roof media are the largest means of production by volume (reference ??). The purpose of blending multiple soil materials is to create a product having properties not exhibited by any naturally occurring soil material. Even if the desired properties _could_ be found in a single naturally occurring material, the properties of natural soils are subject to spatial variation. In such a scenario, the properties of the mixture can be held constant simply by adjusting the ratio of the components. 
-
-The Atterberg limits and unconfined compression testing are the primary means which have been used to charazcterize soil mixtures. These mixtures may contain two components(sand and clay), or three components (sand and two separate types of clay soil)
-
-
-
-
-## Laboratory methods for evaluating soil behavior and physical properties {#lab-methods-review} 
-
-
-
-### Particle size analysis
 
 ### Compaction tests
+
+
 
 ### Compression and shear strength tests
 
 ### Atterberg limits
 
 #### Origins of the test methods
-A common definition of plasticity is the tendency of a material to deform under an applied load, without fracturing into multiple pieces, and to retain its new shape when the load is removed [@Andrade2011] . The earliest test methods for soil plasticity were developed by Atterberg -@Atterberg1911, -@Atterberg1974. Atterberg noted that although plasticity is easy to observe, the phenomenon does not lend itself to simple measurement. He showed that the consistency of the soil was determined by its water content, and he reasoned that soil was plastic only within a finite range of water content, which differed for every soil. The upper water content boundary was defined as the flow limit, at which two batches of soil paste flowed together when jarred, and the lower water content boundary was defined as the rolling limit, at which the soil could no longer be rolled into thin threads. Atterberg called the difference between these two characteristic water contents the “plasticity number” (now known as the plasticity index or PI). He defined five other thresholds of soil behavior, though the others are not commonly used today. 
 
-Atterberg deemed the plasticity number as the most reliable means of measuring plasticity, though upon reading his work one senses a reluctance to accept this simple number as a fully adequate measure of such a complex phenomenon. He pointed out that his ‘plasticity number’ provides no information amount of plastic strain incurred during deformation, nor does it enumerate the stress required to impart the deformation. He considered the effort needed to deform the soil a separate property, which translates to English as ‘viscosity;’ this property was later termed ‘toughness’ by @Casagrande1932. 
+The terms ductile and plastic^[from the Greek _plastikos_, "to mold or form"] are used synonymously.
 
-The value of Atterberg’s work has never been fully realized in his own discipline of soil science. However, the utilty of his test methods was clear to those in the then-novel field of geotechnical engineering. @Terzaghi1926 and @Casagrande1932 modified and standardized the Atterberg limit tests, leading to their widespread adoption for the design and control of earthworks projects. @Terzaghi1926 acknowledged the arbitrary nature of the tests, yet emphasized their value as a preliminary soil classification tool. He scorned qualitative definitions of soil behavior and favored the use of quantitative descriptions:
+
+A common definition of plasticity  is the tendency of a material to deform under an applied load, without fracturing into multiple pieces, and to retain its new shape when the load is removed [@Andrade2011]. 
+
+The earliest test methods for soil plasticity were developed by Atterberg -@Atterberg1911, -@Atterberg1974. Atterberg noted that although plasticity is easy to observe, the phenomenon does not lend itself to simple measurement. He showed that the consistency of the soil was determined by its water content, and he reasoned that soil was plastic only within a finite range of water content, which differed for every soil. The upper water content boundary was defined as the flow limit, at which two batches of soil paste flowed together when jarred, and the lower water content boundary was defined as the rolling limit, at which the soil could no longer be rolled into thin threads. Atterberg called the difference between these two characteristic water contents the “plasticity number” (now known as the plasticity index or PI). He defined five other thresholds of soil behavior, though the others are not commonly used today. 
+
+Atterberg deemed the plasticity number as the most reliable means of measuring plasticity, though upon reading his work one senses a reluctance to accept this simple number as a fully adequate measure of this complex phenomenon. He pointed out that his ‘plasticity number’ provides no information amount of plastic strain incurred during deformation, nor does it enumerate the stress required to impart the deformation. He considered the effort needed to deform the soil a separate property, which translates to English as ‘viscosity;’ this property was later termed ‘toughness’ by @Casagrande1932. 
+
+The value of Atterberg’s work has never been fully realized in his own discipline of soil science. However, the utilty of his test methods was clear to those in the then-novel field of geotechnical engineering. @Terzaghi1926 and @Casagrande1932 modified and standardized the Atterberg limit tests, leading to their widespread adoption for the design and control of earthworks projects. @Terzaghi1926 acknowledged the arbitrary nature of the tests, yet emphasized their value as a preliminary soil classification tool. He scorned qualitative definitions of soils and favored the use of quantitative descriptions:
 
 > “Every engineer should develop the habit of expressing the plasticity and grain-size characteristics of soils by numerical values rather than adjectives…..the degree of plasticity should be indicated by the estimated value of the plasticity index and not by the words ‘trace of plasticity’ or ‘highly plastic.’ ” 
 @Terzaghi1996
 
-#### Mechanics of the liquid limit test
+#### Liquid limit test: mechanics and sources of error
 
-The liquid limit test described by @Atterberg1911 required the soil to be agitated manually, introducing an unacceptable degree of operator dependence. The test method was first standardized by @Casagrande1932. The Casagrande method uses a brass cup fixed to a rotating cam, which agitates the soil paste by dropping the cup against a hard rubber base of specified height. A recent survey by @Haigh2016 supports Casagrande’s warning that the stiffness of the rubber base can significantly affect the results obtained with this method in addition to the device’s geometry and operator technique,.
+The liquid limit test described by @Atterberg1911 included an unacceptable degree of operator dependence because it required the operator to manually agitate the soil. A mechanical test method was first presented by @Casagrande1932. The Casagrande method uses a brass cup fixed to a rotating cam, which agitates the soil paste by dropping the cup against a hard rubber base of specified height. The method has undergone little alteration up to the present. 
+
+The Casagrande apparatus must be frequently calibrated to ensure accurate results. The most likely sources of error are a worn grooving tool and variability in in drop height caused by a loose locking screw. However, provided a standard test device is used, differences in operator technique comprise a larger source of error than the device itself [@Sherwood1970].
+
+A recent survey by @Haigh2016 supports Casagrande’s warning that the stiffness of the rubber base can significantly affect the test result.
 
 An alternative test device for liquid limit determination was adopted by BS ______ (reference from Holtz et al. ?? )
 
-#### Mechanics of the plastic limit test
+#### Plastic limit test: mechanics and sources of error
 
-Current protocols for the plastic limit include ASTM D4318, AASHTO T 90, and B.S. 1377. In the test, a soil is first wetted to the liquid limit to encourage full saturation. After performing the liquid limit test, a ~10 g sample of soil is gradually dried by gentle blow drying and re-molding with the operator’s fingers. Once the soil can be molded without sticking to the operator’s skin, the soil is rolled into a thread of 3 mm diameter, broken apart, and pressed into a new lump. This process is repeated until the soil crumbles when the rolling action is applied. 
+Current protocols for the plastic limit include ASTM D4318, AASHTO T 90, and B.S. 1377. In the test, a soil is first wetted to the liquid limit to encourage full saturation. After performing the liquid limit test, a ~10 g sample of soil is gradually dried by gentle blow drying and re-molding. Once the soil can be molded without sticking to the operator’s skin, the soil is rolled into a thread of 3 mm diameter, broken apart, and pressed into a new lump. This process is repeated until the soil crumbles when the rolling action is applied. 
 
-@Terzaghi1926 introduced the use of a fixed thread diameter. Recently, the significance of the thread diameter has been questioned [@Barnes2013]. The stability of the soil thread is related to the maximum particle diameter and the rolling technique, and (Barnes, 2013) argued that emphasis should be shifted away from a specific thread diameter and toward observation of the thread during the test. 
-Efforts have been made to improve the plastic limit test. The following section describes alternative test methods developed to improve upon the original thread-rolling method. 
+@Terzaghi1926 introduced the use of a fixed thread diameter. Recently, the significance of the thread diameter has been questioned [@Barnes2013]. The stability of the soil thread is related to the maximum particle diameter and the rolling technique, and @Barnes2013 argued that emphasis should be shifted away from a specific thread diameter and toward observation of the thread during the test. 
 
-Most attempts to improve the plastic limit test have focused on mechanizing the thread-rolling procedure. Test operators utilize different combinations of force, speed, and displacement when rolling the soil. Collectively these variables were termed ‘rolling path’ by [@Barnes2013]. @Bobrowski1992 described a simple apparatus to aid the operator in producing a thread of precisely 3.2 mm. The device consists of a flat plexiglass plate which is used to roll the thread, rather than the operator’s hand. (Bobrowski and Griekspoor, 1992) also state that paper should be affixed to the base of the device to prevent the thread from sliding and to expedite the drying process. Use of this device is allowed, but not mandated, in the current version of ASTM D4318. This device has been criticized by (Barnes, 2013), who cited the data of (Rashid et al., 2008) to assert the rolling device produces excessively rapid drying and eliminates the soil thread from the view of the operator. 
+#### Attempts to improve Atterberg limit methods 
+
+Most attempts to improve the plastic limit test have focused on mechanizing the thread-rolling procedure in hopes of improving its reproducibility across operators. . Test operators utilize different combinations of force, speed, and displacement when rolling the soil. Collectively these variables were termed ‘rolling path’ by [@Barnes2013]. @Bobrowski1992 described a simple apparatus to aid the operator in producing a thread of precisely 3.2 mm. The device consists of a flat plexiglass plate which is used to roll the thread, rather than the operator’s hand. (Bobrowski and Griekspoor, 1992) also state that paper should be affixed to the base of the device to prevent the thread from sliding and to expedite the drying process. Use of this device is allowed, but not mandated, in the current version of ASTM D4318. This device has been criticized by (Barnes, 2013), who cited the data of (Rashid et al., 2008) to assert the rolling device produces excessively rapid drying and eliminates the soil thread from the view of the operator. 
 
 A fully mechanized thread rolling apparatus was developed by (Temyingyong et al., 2002). Their device used two acrylic plates similar to (Bobrowski and Griekspoor, 1992) and added a DC motor to apply the rolling action. The DC voltage was adjusted to control the rolling speed, and the downward force was altered by the addition of weights to the upper plate. They found that the initial diameter of the soil mass explained a larger amount of variation in the test result than did factors which might be ascribed to the subjective manual method (speed and pressure). The device still appears to be a significant improvement over the hand-rolling method; unfortunately, the device is not commercially available and its use has not been adopted by governing bodies. 
 Barnes (2009) introduced a novel thread-rolling apparatus which allows precise control of the load applied to the soil thread. The device comprises two stainless steel plates: a fixed base and an upper loading plate which is manually oscillated. The load is adjusted by sliding a weight ballast along the side of the device opposite the handle. The further the ballast weight is from a pivot point, the lesser the load on the soil thread. The device is still operated by hand and a constant rate of rolling must be maintained through careful operation. A thin smear of petrolatum is used on the stainless steel plates to encourage extrusion of the soil thread. A number of other useful properties have been developed with this device, as described in the section of this review on soil toughness. 
@@ -346,19 +308,41 @@ Moreno-Marato and Alonso-Azcàrate also described a faster version of their orig
 2.	repeatable
 3.	Operator-independent
 
-
-
-
-
-
-#### Attempts to improve Atterberg limit methods 
-
-Many soil tests have been developed with the goal of supplanting the Atterberg limits. However, due to the success and the abundance of data which has accumulated using these test methods, they are unlikely to be abandoned. 
-
-Most criticism of the Atterberg limit tests center around operator technique. 
-
+Many soil tests have been developed with the goal of supplanting the Atterberg limits. However, in the author's view, these tests are unlikely to be abandoned because of the abundance of data which has accumulated from their use and the speed with which they can be performed. 
 
 ### Toughness tests
+
+Toughness is the energy dissipated during a loading event. It is mathematically defined as the area beneath a stress-strain curve up to failure. Toughness bears units of energy per volume (i.e. work; SI units $\mathrm{frac{J}{m^3}}$) [@Mamlouk2006]. In other words, toughness is the total effort required to deform a specimen to its failure condition. The integral is traditionally computed over the entire material test, but the strain range may be abitrarily defined for a specific problem (e.g. @Barnes2013).  
+
+A large peak strength does not necessarily imply a material is tough. A brittle material may have a high strength, but because it fails at low strain the toughness is relatively low. Conversely, a ductile material which deforms to very high strain levels may be quite tough despite its low ultimate strength [@Mamlouk2006]. 
+
+Many fine-textured soils exhibit ductile behavior, but their strength in this state varies widely. This fact is implicit to all who work intimately with clay in trades such as pottery production or earthworks. @Casagrande1932 noted in his landmark Atterberg limits paper:
+>“There is a wide variation in the shearing resistance of different soils at the plastic limit. This difference may be felt by hand when performing the plastic limit test on various soils....the toughness of a clay at its plastic limit may therefore be described as the maximum stiffness or shearing resistance which it can acquire without losing its plasticity.”
+
+ 
+The plastic limit therefore reflects only the water content at which a drying soil becomes brittle, and on its own should not be considered a measure of soil strength or toughness. This distinction has been blurred in academic literature, where the plastic limit is sometimes reported as the water content corresponding to a particular value of cone penetration (e.g. @Whyte1982). Reported values of peak strength at the plastic limit differ by up to 2 orders of magnitude [@Haigh2013]. 
+
+
+
+### Particle size analysis
+
+At the time of writing, particle size analysis is the only means of soil testing which has been applied to infield soils. Mechanical analysis is relatively rapid and inexpensive, and it has been used as a surrogate marker for nearly every aspect of soil science. A tremendous amount of data has accumulated with particle size analysis as its basis. It is useful to examine the principles which underlie the analysis and the development of the techniques, and to identify potential sources of error during the tests.
+
+
+@Brosnan2008a surveyed the surface conditions of the infield skin on extant playing fields at three maintenance levels. Particle size analyses were performed on soil sampled from each infield skin. The USDA soil texture of those samples is plotted in \@ref(fig:brosnan-survey-usda). These soils were sampled from the upper 13 mm and contained large granules of calcined clay infield conditioner; therefore, the texture measured with this method is coarser than the "true" texture of the base soil. 
+
+```{r brosnan-survey-usda, eval=T, echo=FALSE, fig.cap= "Infield soils suyveyed by Brosnan (2008a)", fig.align="center", out.width="100%"}
+
+knitr::include_graphics('images/brosnan_survey_PSA.PNG')
+
+```
+
+## Design and properties of artificial soil mixtures {#artificial-soil-mixtures}
+
+Natural soil materials are excavated and deliberately blended for many uses. Potting mixes and green roof media are the largest means of production by volume (reference ??). The purpose of blending multiple soil materials is to create a product having properties not exhibited by any naturally occurring soil material. Even if the desired properties _could_ be found in a single naturally occurring material, the properties of natural soils are subject to spatial variation. In such a scenario, the properties of the mixture can be held constant simply by adjusting the ratio of the components. 
+
+The Atterberg limits and unconfined compression testing are the primary means which have been used to charazcterize soil mixtures. These mixtures may contain two components(sand and clay), or three components (sand and two separate types of clay soil)
+
 
 
 
