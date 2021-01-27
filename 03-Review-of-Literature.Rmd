@@ -89,14 +89,14 @@ To motivate the significance of the infield skin, consider Figures \@ref(fig:pla
 knitr::include_graphics('images/illustrations/player_locations/player_locations.png')
 ```
 
-```{r batted-ball-density, fig.asp=1, fig.width=4, fig.align='center', fig.cap="Data from actual MLB contests support the intuition that most play occurs on the infield skin."}
+```{r batted-ball-density, fig.asp=1, fig.width=4, fig.align='center', fig.cap="Data from actual MLB contests support the intuition that most play occurs on the infield skin.", cache=T}
 
 source("supplemental_R_scripts/generate_batted_ball_density_plot_2021-01-21.R")
 batted_balls_w_boundaries_2020
 
 ```
 
-```{r produce labor per area plot}
+```{r produce labor per area plot, cache=T}
 
 area_colors <- readr::read_csv('data/lit-review-data/useful_soil_colors_for_thesis.csv') %>% 
   dplyr::mutate(type= soil_description)
@@ -140,7 +140,7 @@ labor_per_area_plot <- labor_per_area %>%
         )
 ```
 
-```{r labor-per-area, eval=T, fig.height=2.5, fig.cap= "The infield skin consumes a majority of inputs despite comprising less than 10 percent of the playing surface area."}
+```{r labor-per-area, fig.height=2.5, fig.cap= "The infield skin consumes a majority of inputs despite comprising less than 10 percent of the playing surface area."}
 labor_per_area_plot
 ```
 
@@ -269,22 +269,132 @@ The terms ductile and plastic^[from the Greek _plastikos_, "to mold or form"] ar
 
 A common definition of plasticity  is the tendency of a material to deform under an applied load, without fracturing into multiple pieces, and to retain its new shape when the load is removed [@Andrade2011]. 
 
-The earliest test methods for soil plasticity were developed by Atterberg -@Atterberg1911, -@Atterberg1974. Atterberg noted that although plasticity is easy to observe, the phenomenon does not lend itself to simple measurement. He showed that the consistency of the soil was determined by its water content, and he reasoned that soil was plastic only within a finite range of water content, which differed for every soil. The upper water content boundary was defined as the flow limit, at which two batches of soil paste flowed together when jarred, and the lower water content boundary was defined as the rolling limit, at which the soil could no longer be rolled into thin threads. Atterberg called the difference between these two characteristic water contents the “plasticity number” (now known as the plasticity index or PI). He defined five other thresholds of soil behavior, though the others are not commonly used today. 
+The earliest test methods for soil plasticity were developed by Atterberg [-@Atterberg1911; -@Atterberg1974]. 
+Atterberg noted that although plasticity is easy to observe, the phenomenon does not lend itself to simple measurement. 
+He showed that the consistency of the soil was determined by its water content, and he reasoned that soil was plastic only within a finite range of water content, which differed for every soil.
+The upper water content boundary was defined as the flow limit, at which two batches of soil paste flowed together when jarred, and the lower water content boundary was defined as the rolling limit, at which the soil could no longer be rolled into thin threads. 
+Atterberg called the difference between these two characteristic water contents the “plasticity number” (now known as the plasticity index or PI). 
+He defined five other thresholds of soil behavior, though the others are not commonly used today. 
 
-Atterberg deemed the plasticity number as the most reliable means of measuring plasticity, though upon reading his work one senses a reluctance to accept this simple number as a fully adequate measure of this complex phenomenon. He pointed out that his ‘plasticity number’ provides no information amount of plastic strain incurred during deformation, nor does it enumerate the stress required to impart the deformation. He considered the effort needed to deform the soil a separate property, which translates to English as ‘viscosity;’ this property was later termed ‘toughness’ by @Casagrande1932. 
+Atterberg deemed the plasticity number as the most reliable means of measuring plasticity, though one senses his reluctance to accept this simple number as a fully adequate measure. 
+Atterberg pointed out that his ‘plasticity number’ provided no information amount of plastic strain incurred during deformation, nor does it enumerate the stress required to impart the deformation.
+He considered the effort needed to deform the soil a separate property, which translates to English as ‘viscosity;’ this property was later termed ‘toughness’ by @Casagrande1932. 
 
-The value of Atterberg’s work has never been fully realized in his own discipline of soil science. However, the utilty of his test methods was clear to those in the then-novel field of geotechnical engineering. @Terzaghi1926 and @Casagrande1932 modified and standardized the Atterberg limit tests, leading to their widespread adoption for the design and control of earthworks projects. @Terzaghi1926 acknowledged the arbitrary nature of the tests, yet emphasized their value as a preliminary soil classification tool. He scorned qualitative definitions of soils and favored the use of quantitative descriptions:
+The value of Atterberg’s work has never been fully realized in his own discipline of soil science.
+However, the utilty of his test methods was clear to those in the then-novel field of geotechnical engineering. 
+@Terzaghi1926 and @Casagrande1932 modified and standardized the Atterberg limit tests, leading to their widespread adoption for the design and control of earthworks projects. 
+@Terzaghi1926 acknowledged the arbitrary nature of the tests, yet emphasized their value as a preliminary soil classification tool. 
+He scorned qualitative definitions of soils and favored the use of quantitative descriptions:
 
-> “Every engineer should develop the habit of expressing the plasticity and grain-size characteristics of soils by numerical values rather than adjectives…..the degree of plasticity should be indicated by the estimated value of the plasticity index and not by the words ‘trace of plasticity’ or ‘highly plastic.’ ” 
-@Terzaghi1996
+> “Every engineer should develop the habit of expressing the plasticity and grain-size characteristics of soils by numerical values rather than adjectives…..the degree of plasticity should be indicated by the estimated value of the plasticity index and not by the words ‘trace of plasticity’ or ‘highly plastic.’ ” <br> \- @Terzaghi1996
+
+Atterberg's original 5 consistency limits included the following distinctions, ordered from highest to lowest water content:
+
+1. Upper limit of viscous flow - soil flows easily, similar to water
+2. Lower limit of viscous flow - soil flows when agitated in a bowl
+3. Adhesion limit - soil no longer adheres to a metal implement
+4. Rolling limit - soil can no longer be rolled into a thread
+5. Cohesion limit - lumps of soil can be no longer pressed together with one's fingers
+ 
+Of these limits, only (2) and (4) are in use today and they are termed the liquid and plastic limits respectively. The following sections detail the mechanics underlying these tests and their limitations. 
 
 #### Liquid limit test: mechanics and sources of error
 
-The liquid limit test described by @Atterberg1911 included an unacceptable degree of operator dependence because it required the operator to manually agitate the soil. A mechanical test method was first presented by @Casagrande1932. The Casagrande method uses a brass cup fixed to a rotating cam, which agitates the soil paste by dropping the cup against a hard rubber base of specified height. The method has undergone little alteration up to the present. 
+The liquid limit test described by @Atterberg1911 lacked reproducibility because it required the operator to manually agitate the soil. 
+A mechanical test method was first presented by @Casagrande1932. 
+The Casagrande method uses a brass cup fixed to a rotating cam, which agitates the soil paste by dropping the cup against a hard rubber base of specified height. 
+The method has undergone little alteration up to the present. 
 
-The Casagrande apparatus must be frequently calibrated to ensure accurate results. The most likely sources of error are a worn grooving tool and variability in in drop height caused by a loose locking screw. However, provided a standard test device is used, differences in operator technique comprise a larger source of error than the device itself [@Sherwood1970].
+Three sources of error may be identified during a soil test. These do not include sampling, which is carried out prior to laboratory testing and may be a yet greater source of error from the "true" parameters of interest. The three error sources in the lab are:
 
-A recent survey by @Haigh2016 supports Casagrande’s warning that the stiffness of the rubber base can significantly affect the test result.
+1. specimen preparation
+2. proper function/calibration of test apparatus
+3. operator technique
+
+
+@Sherwood1970 conducted a detailed investigation on the precision and accuracy of laboratory soil tests. Three soils termed B, G, and W were pulverized and riffled repeatedlyto ensure their homogeneity. The samples were sent to 41 laboratories for analysis.
+
+
+```{r produce plots and values from Sherwood 1970}
+source("supplemental_R_scripts/Sherwood_1970_plots.R")
+```
+
+The liquid limit involves a mechanical device whereas the plastic limit test introduces a greater degree of operator judgment. 
+One might expect better agreement for the liquid limit and this is borne out in the data. Figure \@ref(fig:sherwood-across-labs) shows a wider spread for the plastic limit data points. 
+The coefficient of variation was remarkably consistent across soils: the three materials had COV values of `r  summary_covs_across_labs$PL[1]`, `r  summary_covs_across_labs$PL[2]`, and `r  summary_covs_across_labs$PL[3]`% for the liquid limit and `r  summary_covs_across_labs$LL[1]`, `r  summary_covs_across_labs$LL[2]`, and `r  summary_covs_across_labs$LL[3]`% for the plastic limit. 
+Evidently, the uncertainty associated with a single test result is not a function of soil type. 
+
+Agreement was much better for operators trained in the same lab. 
+Figure \@ref(fig:sherwood-across-operators) shows variation across eight individuals employed by the Road Research Laboratory at the time of the study. 
+Both the liquid and plastic limits are clustered tightly around their mean values.
+Reproducibility was better still for a single operator (Figure \@ref(fig:sherwood-single-operator)).
+
+```{r sherwood-across-labs, fig.cap='Atterberg limit test results can vary substantially across labs.'}
+
+sherwood_variability_plots$across_labs
+
+```
+
+
+```{r sherwood-across-operators, fig.cap='Atterberg limit test results are relatively consistent across well-trained operators in the same lab.'}
+
+sherwood_variability_plots$across_operators
+
+```
+
+
+```{r sherwood-single-operator, fig.cap='Variation of replicate Atterberg limit results is small when the tests are conducted by the same experienced operator.'}
+
+sherwood_variability_plots$single_operator_table1
+```
+
+Sherwood's findings demonstrate that the Atterberg limits are quite repeatable provided the test is performed by an experienced operator with careful workmanship. 
+Expected uncertainties associated with the tests are summarized in Figure \@ref(fig:sherwood-overall-comparison).
+
+```{r sherwood-overall-comparison, fig.cap='Reproducibility is excellent for a single operator, fair among operators in the same lab, and relatively poor across laboratories.'}
+att_lims_variation_sources_plot
+
+```
+
+Sherwood summarized the results of the round-robin testing with a warning about the validity of the tests:
+
+>"The results of this investigation....are for the most part rather disturbing, since it is clear that none of them can be used without quite wide tolerances being placed on the values obtained."
+
+However, he concluded with a more optimistic tone, surmising that results could be improved with better training and the instigation of a voluntary standard monitoring program :
+
+>"Some
+success
+in this direction
+has already
+been
+achieved
+and the British
+Standard
+procedures
+for all tests might well
+be examined
+to make
+sure that sufficient detail is given and that
+ambiguities
+are removed."
+
+
+
+
+
+
+##### Specimen preparation
+
+##### Function of apparatus
+
+The most common error sources with the Casagrande apparatus are a worn grooving tool and variability in in drop height caused by a loose locking screw [@Sherwood1970]. The drop height must be frequently calibrated to ensure accurate results [@ASTMD43182018].
+However, @Sherwood1970 concluded that so long as a standard test device is used, differences in operator technique comprise a larger source of error than the device itself.
+
+##### Operator technique
+
+
+
+A recent survey by @Haigh2016 also supports Casagrande’s warning that the stiffness of the rubber base can significantly affect the test result.
 
 An alternative test device for liquid limit determination was adopted by BS ______ (reference from Holtz et al. ?? )
 

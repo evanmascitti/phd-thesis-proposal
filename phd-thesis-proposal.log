@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.12)  22 JAN 2021 16:09
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.25)  26 JAN 2021 21:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1208,127 +1208,62 @@ Chapter 4.
 ]
 Chapter 5.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 202.
+(Font)              scaled to size 14.4pt on input line 196.
 LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 202.
+(Font)              scaled to size 14.4pt on input line 196.
 LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 209.
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 7.2pt on input line 215.
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 215.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 4.91989pt on input line 215.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 4.92035pt on input line 215.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 4.91936pt on input line 215.
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 215.
-File: images/illustrations/player_locations/player_locations.pdf Graphic file (
-type pdf)
-<use images/illustrations/player_locations/player_locations.pdf>
-File: phd-thesis-proposal_files/figure-latex/batted-ball-density-1.pdf Graphic 
-file (type pdf)
-<use phd-thesis-proposal_files/figure-latex/batted-ball-density-1.pdf>
-File: phd-thesis-proposal_files/figure-latex/labor-per-area-1.pdf Graphic file 
-(type pdf)
-<use phd-thesis-proposal_files/figure-latex/labor-per-area-1.pdf>
+(Font)              scaled to size 12.0pt on input line 199.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 [10
 
 ] [11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[12]
-File: images/illustrations/cleatmarks/corkboard_concept.png Graphic file (type 
-bmp)
-<images/illustrations/cleatmarks/corkboard_concept.png>
-[13] [14] [15]
-File: images/illustrations/ball_spin_effect/daish_fig_9.2_redraw.pdf Graphic fi
-le (type pdf)
-<use images/illustrations/ball_spin_effect/daish_fig_9.2_redraw.pdf>
-File: images/illustrations/ball_indentation_release_angle/ball_indentation_rele
-ase_angle.pdf Graphic file (type pdf)
-<use images/illustrations/ball_indentation_release_angle/ball_indentation_relea
-se_angle.pdf>
-[16]
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 365.
-[17] [18] [19]
-LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 425.
-LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 7.2pt on input line 425.
-LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 5.8pt on input line 425.
-[20]
-File: images/brosnan_survey_PSA.png Graphic file (type bmp)
-<images/brosnan_survey_PSA.png>
-[21] [22]
 Chapter 6.
-
-Underfull \hbox (badness 10000) in paragraph at lines 490--492
-
- []
-
-[23
+[12
 
 ]
-File: images/cleatmark_device.png Graphic file (type bmp)
-<images/cleatmark_device.png>
-File: images/nine-spike-pattern-compressed.png Graphic file (type bmp)
-<images/nine-spike-pattern-compressed.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[24]
-Overfull \hbox (90.68138pt too wide) has occurred while \output is active
-\TU/Arial(0)/m/it/10 6.2.  CHAPTER 2: TOUGHNESS OF CLAY SOIL NEAR THE PLASTIC L
-IMIT USING UNCONFINED COMPRESSION TESTS \TU/Arial(0)/m/n/10 25
- []
-
-[25]
 Chapter 7.
 
-Overfull \hbox (18.06561pt too wide) in alignment at lines 543--548
+Overfull \hbox (18.06561pt too wide) in alignment at lines 293--298
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (18.06561pt too wide) in alignment at lines 548--553
+Overfull \hbox (18.06561pt too wide) in alignment at lines 298--303
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (18.06561pt too wide) in alignment at lines 553--555
+Overfull \hbox (18.06561pt too wide) in alignment at lines 303--305
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (18.06561pt too wide) in alignment at lines 555--557
+Overfull \hbox (18.06561pt too wide) in alignment at lines 305--307
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (18.06561pt too wide) in alignment at lines 557--581
+Overfull \hbox (18.06561pt too wide) in alignment at lines 307--331
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (18.06561pt too wide) in alignment at lines 581--605
+Overfull \hbox (18.06561pt too wide) in alignment at lines 331--355
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (18.06561pt too wide) in alignment at lines 605--615
+Overfull \hbox (18.06561pt too wide) in alignment at lines 355--365
  [] [] [] [] [] 
  []
 
-[26
+[13
 
-] (./phd-thesis-proposal.bbl [27] [28
-
-]) [29] (./phd-thesis-proposal.aux)
+]
+No file phd-thesis-proposal.bbl.
+[14] (./phd-thesis-proposal.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1336,12 +1271,12 @@ Package rerunfilecheck Info: File `phd-thesis-proposal.out' has not changed.
 (rerunfilecheck)             Checksum: 4F4457B9159E0D0B1F4292BA94581B3B;6643.
  ) 
 Here is how much of TeX's memory you used:
- 18914 strings out of 479212
- 331075 string characters out of 5873185
- 785068 words of memory out of 5000000
- 38139 multiletter control sequences out of 15000+600000
- 411164 words of font info for 106 fonts, out of 8000000 for 9000
+ 18707 strings out of 479212
+ 324623 string characters out of 5873185
+ 783379 words of memory out of 5000000
+ 37965 multiletter control sequences out of 15000+600000
+ 410141 words of font info for 93 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 98i,8n,125p,1112b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,7n,125p,669b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on phd-thesis-proposal.pdf (29 pages).
+Output written on phd-thesis-proposal.pdf (14 pages).
