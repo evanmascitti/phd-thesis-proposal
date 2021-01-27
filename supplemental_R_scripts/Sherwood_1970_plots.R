@@ -201,10 +201,10 @@ att_lims_variation_plot_args <- tibble::tibble(
     "Variation among 6 replicate tests by the same operator",
     "Variation among 10 replicate tests by the same operator"),
   plot_caption = c(
-    "Error bars span 95% confidence interval of the mean. Data re-plotted from Sherwood, 1970 (Table 4).",
-    "Error bars span 95% confidence interval of the mean. Data re-plotted from Sherwood, 1970 (Table 3).",
-    "Error bars span 95% confidence interval of the mean. Data re-plotted from Sherwood, 1970 (Table 1).",
-    "Error bars span 95% confidence interval of the mean. Data re-plotted from Sherwood, 1970 (Appendix 4)."),
+    "Error bars span 95% confidence interval of the mean. \nData re-plotted from Sherwood, 1970 (Table 4).",
+    "Error bars span 95% confidence interval of the mean. \nData re-plotted from Sherwood, 1970 (Table 3).",
+    "Error bars span 95% confidence interval of the mean. \nData re-plotted from Sherwood, 1970 (Table 1).",
+    "Error bars span 95% confidence interval of the mean. \nData re-plotted from Sherwood, 1970 (Appendix 4)."),
   plot_subtitle = c("", "All operators were employed by the Road Research Laboratory.", "", "")
 )
 
@@ -218,36 +218,46 @@ sherwood_variability_plots <- pmap(.l= att_lims_variation_plot_args, .f= plot_at
 
 
 # compare variation by single operator with that of RRL operators  --------
-
+sherwood_data$liquid_limit_across_operators_and_labs
+sherwood_data$plastic_limit_across_operators_and_labs
 
 att_lims_variation_sources <- sherwood_data$liquid_limit_across_operators_and_labs %>% 
   rbind(sherwood_data$plastic_limit_across_operators_and_labs) %>% 
   arrange(soil, comparison) %>% 
-  dplyr::mutate(comparison = fct_reorder(comparison, cov))
+  dplyr::mutate(comparison = fct_reorder(comparison, desc(cov)),
+                test = as_factor((test)) ) %>% 
+  dplyr::mutate(test = fct_reorder(test, desc(test)))
+
+att_lims_variation_sources_grouped <- att_lims_variation_sources %>% 
+  group_by(test, comparison) %>% 
+  summarise(cov = mean(cov))
 
 var_sources_facet_labs <- c("41 operators from \ndifferent laboratories", 
                             "6 results by a \nsingle RRL operator", 
                             "8 individual \nRRL operators" ) %>% 
   set_names(unique(att_lims_variation_sources$comparison) )
 
-att_lims_variation_sources_plot <- att_lims_variation_sources %>% 
+att_lims_variation_sources_plot <- att_lims_variation_sources_grouped %>% 
   ggplot(aes(cov, comparison, fill = test))+
-  geom_col(position = 'dodge2', alpha= 2/3)+
-  colorblindr::scale_fill_OkabeIto()+
+  geom_col(width = 0.7, position = position_dodge(width = 0.8), alpha= 2/3)+
+  scale_y_discrete(labels = scales::label_wrap(width = 24))+
+  colorblindr::scale_fill_OkabeIto(guide = guide_legend(reverse = TRUE))+
   scale_x_continuous(limits = c(0,15),
-                     breaks = scales::breaks_width(width = 5, offset = 0))+
+                     breaks = scales::breaks_width(width = 1, offset = 0),
+                     expand= expansion(mult = 0, add = 0))+
   labs(title = "Variation among replicated Atterberg limit tests",
-       caption = "Data re-plotted from Sherwood, 1970 (Tables 5 and 8).",
-       y= "Replication type",
+       caption = "Data re-plotted from Sherwood, 1970 (Tables 5 and 8). \nBars summarized across soils B, G, and W.",
        x= "Coefficient of variation (%)",
        fill = "Test")+
-  background_grid(major = "y", minor = "y")+
-  facet_wrap(~soil, nrow=3)+
+  background_grid(major = "x", minor = "x")+
   theme(panel.grid.major = element_line(linetype = 'dotted'),
         panel.grid.minor = element_line(linetype = 'dotted'),
         strip.background = element_rect(fill = 'grey95'),
-        legend.title.align = 0.5)
-
+        legend.title.align = 0.5,
+        legend.position = c(0.6, 0.6),
+        axis.title.y = element_blank(),
+        axis.ticks.y = element_blank())
+att_lims_variation_sources_plot
 
 
 ###############################

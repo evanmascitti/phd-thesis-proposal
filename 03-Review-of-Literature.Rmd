@@ -348,8 +348,7 @@ sherwood_variability_plots$across_operators
 sherwood_variability_plots$single_operator_table1
 ```
 
-Sherwood's findings demonstrate that the Atterberg limits are quite repeatable provided the test is performed by an experienced operator with careful workmanship. 
-Expected uncertainties associated with the tests are summarized in Figure \@ref(fig:sherwood-overall-comparison).
+@Sherwood1970 demonstrated that the coefficient of variation (COV) among results from a single RRL operator was a small fraction of the COV for the inter-laboratory study. Therefore, Atterberg limit tests are quite repeatable so long as they are performed by an experienced operator with careful workmanship (Figure \@ref(fig:sherwood-overall-comparison)). 
 
 ```{r sherwood-overall-comparison, fig.cap='Reproducibility is excellent for a single operator, fair among operators in the same lab, and relatively poor across laboratories.'}
 att_lims_variation_sources_plot

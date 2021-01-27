@@ -15,14 +15,14 @@ csl: soil-science-society-of-america-journal.csl
 biblio-title: "References"
 biblio-style: apalike
 link-citations: yes
-description: "This is my first attempt at compiling a large document with the **bookdown** package in R."
+description: "This is my first attempt at compiling a large dynamic document with the **bookdown** package in R."
 mainfont: Arial
 mathfont: Fira Math Regular
 urlcolor: blue
 linkcolor: blue
 citecolor: blue
 toccolor: blue
-toc-depth: 2
+toc-depth: 3
 lof: true
 lot: true
 editor_options: 
