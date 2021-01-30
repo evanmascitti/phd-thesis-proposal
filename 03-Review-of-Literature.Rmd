@@ -197,7 +197,7 @@ Some amount of yield must occur for a player’s cleats to penetrate the soil su
 
 or
 
-2. ductile yield: soil particles are re-arranged to accommodate the cleat, but the soil mass behaves as a continuum. The remolded zone around the indentation is likely to be small and more uniform with space [@Deepa2013]. Ductile behavior is usually associated with higher mechanical strain and more generation of heat [@Perez2017].
+2. ductile yield: soil particles are re-arranged to accommodate the cleat, but the soil mass behaves as a continuum. The remolded zone around the indentation is likely to be small and more uniform with space [@Deepa2013]. Ductile behavior is usually associated with higher mechanical strain and more generation of heat [@Perez2017]. The terms ductile and plastic^[from the Greek _plastikos_, "to mold or form"] are used synonymously.
 
 A second important consequence of a ductile yield mode is that if a batted baseball _does_ contact a cleat indentation, the surface will deform a second time. Changes to the ball's trajectory will be minimal. This scenario is preferred to a more rigid collision in which the ball is re-directed, possibly leading to a misplay or injury (Figure \@ref(fig:corkboard-concept)). 
 
@@ -257,20 +257,21 @@ Ideally, researchers and practitioners could measure all soil properties of inte
 
 #### Origins of the test methods
 
-The terms ductile and plastic^[from the Greek _plastikos_, "to mold or form"] are used synonymously.
-
-A common definition of plasticity  is the tendency of a material to deform under an applied load, without fracturing into multiple pieces, and to retain its new shape when the load is removed [@Andrade2011]. 
-
 The earliest test methods for soil plasticity were developed by Atterberg [-@Atterberg1911; -@Atterberg1974]. 
+A commonly recited definition of plasticity is the tendency of a material to deform under an applied load, without fracturing into multiple pieces, and to retain its new shape when the load is removed [@Andrade2011]. 
 Atterberg noted that although plasticity is easy to observe, the phenomenon does not lend itself to simple measurement. 
 He showed that the consistency of the soil was determined by its water content, and he reasoned that soil was plastic only within a finite range of water content, which differed for every soil.
+
+
 The upper water content boundary was defined as the flow limit, at which two batches of soil paste flowed together when jarred, and the lower water content boundary was defined as the rolling limit, at which the soil could no longer be rolled into thin threads. 
 Atterberg called the difference between these two characteristic water contents the “plasticity number” (now known as the plasticity index or PI). 
 He defined five other thresholds of soil behavior, though the others are not commonly used today. 
+ 
 
 Atterberg deemed the plasticity number as the most reliable means of measuring plasticity, though one senses his reluctance to accept this simple number as a fully adequate measure. 
 Atterberg pointed out that his ‘plasticity number’ provided no information amount of plastic strain incurred during deformation, nor does it enumerate the stress required to impart the deformation.
 He considered the effort needed to deform the soil a separate property, which translates to English as ‘viscosity;’ this property was later termed ‘toughness’ by @Casagrande1932. 
+
 
 The value of Atterberg’s work has never been fully realized in his own discipline of soil science.
 However, the utilty of his test methods was clear to those in the then-novel field of geotechnical engineering. 
@@ -291,6 +292,9 @@ Atterberg's original 5 consistency limits included the following distinctions, o
 Of these limits, only (2) and (4) are in use today and they are termed the liquid and plastic limits respectively. The following sections detail the mechanics underlying these tests and their limitations. 
 
 #### Methods in current use 
+
+##### Liquid limit
+
 The liquid limit test described by @Atterberg1911 lacked reproducibility because it required the operator to manually agitate the soil. 
 A mechanical test method was first presented by @Casagrande1932. 
 The method has undergone little alteration up to the present. 
@@ -300,14 +304,27 @@ Casagrande arbitrarily defined the liquid limit as the water content needed to c
 Several trials are made and the water content is plotted against the natural logarithm of blow count. 
 The water content to produce 25 blows is interpolated from this curve. 
 
-A fall-cone method for liquid limit determination was proposed by . This method is considered less operator-dependent and has been widely adopted internationally. Unfortunately most national standards use a different mass and cone angle which makes comparing results difficult. The British method BS 1377 @Holtz
+Several fall-cone methods have been proposed for determining the liquid limit.^[These methods are purportedly traceable to the Russian researcher Piotr Vasilje @, although the author has been unable to verify this claim in peer-reviewed literature] 
+The fall-cone methods have several advantages to the Casagrande method and have been widely adopted internationally. 
+Advantages of the fall-cone methods include:
+
+1. Less operator dependency [@Sherwood1970a]
+2. Provide a more straightforward estimate of the soil's undrained shear strength [@Haigh2016]
+3. Ability to determine the liquid limit for some low-plasticity soils which cannot be tested with the Casagrande cup [@Sherwood1970a]
+
+The British Standard is the most widely-used fall-cone method and considers the liquid limit as the water content at which an 80g cone with a single-sided angle of 30&deg; penetrates the sample to a depth of 20 mm @BS13771990.
+Unfortunately, other nations have developed similar methods with different cone masses and angles and comparing results is challenging. 
+Empirical correlations have been established to convert between the Casagrande LL and the fall-cone LL. 
+For soils with LL under 100, the two methods give good agreement but for higher-LL soils the cone yields lower LL values [@Holtz; @OKelly2017]. 
+
+##### Plastic limit
 
 Atterberg's original plastic limit test remains essentially unchanged. @Terzaghi1926 introduced the use of a fixed thread diameter of 1/8" (3.2 mm), although its significance has been recently questioned [@Barnes2013]. The stability of the soil thread is related to the maximum particle diameter and the rolling technique, and @Barnes2013 argued that emphasis should be shifted away from a specific thread diameter and toward observation of the thread during the test. 
 The soil is wetted to a moldable state and rolled into a thread. 
 The thread is broken up into pieces, remolded, and rolled out again. 
 The plastic limit is the water content at which the soil can no longer be rolled out into a thread of 3.2 mm diameter. 
 
-Standard test methods typically pair the plastic and liquid limit tests. Established national standards include 
+Standard test methods typically pair the plastic and liquid limit tests. In the United States the relevant standards are @ASTMD43182018 and . The tests are essentially equivalent.
 
 
 
@@ -359,6 +376,16 @@ sherwood_variability_plots$single_operator_table1
 att_lims_variation_sources_plot
 
 ```
+
+Finally, a separate study by @Sherwood1970a showed that the fall-cone method has better inter-operator reproducibility. The coefficient of variation was about half that of the Casagrande method. 
+
+```{r sherwood-cone-cup-comparison, fig.cap='The fall-cone method is less variable across operators than the Casagrande cup'}
+
+source("supplemental_R_scripts/Sherwood_1970_plots.R")
+sherwood_ryley_1970_table3_plot
+
+```
+
 
 Sherwood summarized the results of the round-robin testing with a warning about the validity of the tests:
 
@@ -424,11 +451,11 @@ No information was provided about the actual mixing procedure, though one could 
 @Casagrande1958 expressed regret that his original design did not quantitatively specify the rubber base's properties. 
 This led to disparities among the devices produced by various manufacturers, and they yielded different liquid limits despite being otherwise identical. 
 
-A recent survey by @Haigh2016 confirmed that the hardness and resilience of the rubber base varies widely across national specifications. Even within a rubber type (hard or soft), the coefficient of variation in rubber hardness was around 20%. Analytical solutions predict that a 20% deviation in base stiffness yields a change in the liquid limit of 2-3 units (i.e. % gravimetric water content). This value is similar to the standard deviation reported by an ASTM reproducibility study across 14 labs @ASTMD43182018, suggesting a large amount of inter-laboratory variability could be due simply to varition in the rubber base properties of the devices employed. 
+@Sherwood1970 concluded that so long as a standard test device is used, differences in operator technique comprise a larger source of error than the device itself. However, a recent survey by @Haigh2016 confirmed that the hardness and resilience of the rubber base does vary widely across national specifications. Even within a rubber type (hard or soft), the coefficient of variation in rubber hardness was around 20%. Analytical solutions by @Haigh2016 predict that a 20% deviation in base stiffness yields a change in the liquid limit of 2-3% of its value (i.e. coefficient of variation). This variability is similar to the standard deviation reported by an ASTM reproducibility study across 14 labs [@ASTMD43182018], suggesting a large amount of inter-laboratory variability could be due simply to variation in the rubber base properties of the devices employed. 
 
 Assuming the device meets specification, the most common error sources with the Casagrande apparatus are a worn grooving tool and variability in in drop height caused by a loose locking screw [@Sherwood1970]. 
 The drop height must be frequently calibrated to ensure accurate results [@ASTMD43182018].
-However, @Sherwood1970 concluded that so long as a standard test device is used, differences in operator technique comprise a larger source of error than the device itself.
+
 
 ##### Operator technique
 
