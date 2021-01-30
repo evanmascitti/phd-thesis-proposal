@@ -173,7 +173,7 @@ Most athletic field research has focused on natural grass and synthetic turf. Th
 
 @Brosnan2011 measured traction on research plots of the same infield soil subjected to various treatments. Traction was increased by soil compaction and decreased by surficial additions of calcined clay. 
 
-##### The brittle-ductile transition and the "corkboard effect"
+##### The brittle-ductile transition and the "corkboard effect" {#corkboard-section}
 
 Minimal surface disruption is a crucial element of infield quality. A smooth playing surface ensures the game's outcome is decided by the players' performance alone and not influenced by chance events such as an errant ball bounce. 
 
@@ -253,19 +253,11 @@ Popularity of engineered infield mixes has grown markedly since 2005 and today t
 
 Ideally, researchers and practitioners could measure all soil properties of interest on an unlimited number of samples. In practice, this is prevented by time constraints and cost. Simpler tests are commonly used as surrogate markers to model the soil's actual properties in the field. The methodology of these tests has been subjected to considerable study because much is riding on their precision and accuracy. This section summarizes the development and evaluation of laboratory test methods pertinent to infield soils. 
 
-
-### Compaction tests
-
-
-
-### Compression and shear strength tests
-
 ### Atterberg limits
 
 #### Origins of the test methods
 
 The terms ductile and plastic^[from the Greek _plastikos_, "to mold or form"] are used synonymously.
-
 
 A common definition of plasticity  is the tendency of a material to deform under an applied load, without fracturing into multiple pieces, and to retain its new shape when the load is removed [@Andrade2011]. 
 
@@ -298,21 +290,34 @@ Atterberg's original 5 consistency limits included the following distinctions, o
  
 Of these limits, only (2) and (4) are in use today and they are termed the liquid and plastic limits respectively. The following sections detail the mechanics underlying these tests and their limitations. 
 
-#### Liquid limit test: mechanics and sources of error
-
+#### Methods in current use 
 The liquid limit test described by @Atterberg1911 lacked reproducibility because it required the operator to manually agitate the soil. 
 A mechanical test method was first presented by @Casagrande1932. 
-The Casagrande method uses a brass cup fixed to a rotating cam, which agitates the soil paste by dropping the cup against a hard rubber base of specified height. 
 The method has undergone little alteration up to the present. 
+The Casagrande apparatus comprises a brass cup fixed to a rotating cam. A groove is cut in the soil paste. 
+The soil paste is agitated by dropping the cup against a hard rubber base until the soil begins to flow and the groove closes over a span of 1.25 cm (1/2 in).
+Casagrande arbitrarily defined the liquid limit as the water content needed to close the groove after 25 blows. 
+Several trials are made and the water content is plotted against the natural logarithm of blow count. 
+The water content to produce 25 blows is interpolated from this curve. 
 
-Three sources of error may be identified during a soil test. These do not include sampling, which is carried out prior to laboratory testing and may be a yet greater source of error from the "true" parameters of interest. The three error sources in the lab are:
+A fall-cone method for liquid limit determination was proposed by . This method is considered less operator-dependent and has been widely adopted internationally. Unfortunately most national standards use a different mass and cone angle which makes comparing results difficult. The British method BS 1377 @Holtz
 
-1. specimen preparation
-2. proper function/calibration of test apparatus
-3. operator technique
+Atterberg's original plastic limit test remains essentially unchanged. @Terzaghi1926 introduced the use of a fixed thread diameter of 1/8" (3.2 mm), although its significance has been recently questioned [@Barnes2013]. The stability of the soil thread is related to the maximum particle diameter and the rolling technique, and @Barnes2013 argued that emphasis should be shifted away from a specific thread diameter and toward observation of the thread during the test. 
+The soil is wetted to a moldable state and rolled into a thread. 
+The thread is broken up into pieces, remolded, and rolled out again. 
+The plastic limit is the water content at which the soil can no longer be rolled out into a thread of 3.2 mm diameter. 
+
+Standard test methods typically pair the plastic and liquid limit tests. Established national standards include 
 
 
-@Sherwood1970 conducted a detailed investigation on the precision and accuracy of laboratory soil tests. Three soils termed B, G, and W were pulverized and riffled repeatedlyto ensure their homogeneity. The samples were sent to 41 laboratories for analysis.
+
+### Nature and magnitude of error associated with Atterberg limits
+
+Atterberg limit tests can be performed rapidly and require little equipment or consumables. Unfortunately there are multiple sources of error associated with the test. This section outlines research on the precision and accuracy of the tests. 
+
+### Sherwood study 
+
+@Sherwood1970 conducted a detailed investigation on the precision and accuracy of laboratory soil tests. Three soils termed B, G, and W were pulverized and riffled repeatedly to ensure their homogeneity. The samples were sent to 41 laboratories for analysis. The test were also replicated by multiple operators at the Road Research Laboraroty and by a single operator to compare the repeatability by various means of replication. The battery of tests included particle size analysis by hydrometer, specific gravity, Proctor-style compaction, liquid limit, and plastic limit.
 
 
 ```{r produce plots and values from Sherwood 1970}
@@ -359,7 +364,7 @@ Sherwood summarized the results of the round-robin testing with a warning about 
 
 >"The results of this investigation....are for the most part rather disturbing, since it is clear that none of them can be used without quite wide tolerances being placed on the values obtained."
 
-However, he concluded with a more optimistic tone, surmising that results could be improved with better training and the instigation of a voluntary standard monitoring program :
+However, he concluded with a more optimistic tone, surmising that results could be improved with better training and the instigation of a voluntary standard monitoring program:
 
 >"Some
 success
@@ -377,35 +382,71 @@ sure that sufficient detail is given and that
 ambiguities
 are removed."
 
+The three chief sources of laboratory error include:
+
+1. specimen preparation
+2. proper function/calibration of test apparatus
+3. operator technique
+
+Each is outlined in the following sections. Note that these do not include sampling practices, which are carried out prior to laboratory testing and normally comprise a larger source of error than any laboratory procedure [@Brady2007]. 
+
+##### Liquid limit: sources of error
+
+
+###### Specimen preparation
+The means by which a soil specimen is mixed and handled can affect the results obtained from physical tests. 
+
+@Howell1997 performed compaction tests on sand-bentonite mixtures produced with different preparation methods. 
+They showed that a longer "curing" time after adding water slightly increased the optimum water content for compaction (<sub>opt</sub>). 
+The effect was small; %delta;w<sub>opt</sub> was only ~ 0.5% when using granular/pelletized bentonite and not detectable for powedered bentonite. 
+The effect of mixing procedure was more apparent. 
+Mixing water with the sand prior to adding the bentonite increased <sub>opt</sub> by up to 2% compared with mixing the soil components dry and adding the water last. &rho;<sub>max</sub> was also lower when the water was added before the bentonite. 
+Evidently, the water was more apt to associate with the sand in the latter procedure. 
+
+@Armstrong1986 tested 13 means of preparing soil specimens for Atterberg limit tests. 
+They reported a 4 % water content increase of  in the liquid limit due to oven-drying at either 60 or 110 &degC. 
+This was attributed to difficulty in re-hydrating the clay mineral surfaces and micropores. 
+If the soil was oven-dried, the liquid limit was increased by curing the sample for 24 hours after adding water. 
+A further but marginal LL increase was noted for a 48-hour cure time. 
+The relevant finding is that soil specimens should not be oven-dried prior to testing and should be thoroughly wetted to near their liquid limit before beginning the test. 
+@ASTMD43182018 prohibits drying above 60 &deg;C and requires a minimum 16-hour curing time. 
+
+@Dumbleton1966a tested the effect of mixing duration on Atterberg limits of several soils. 
+The liquid limit continued to increase for up to 3 hours of mixing time. 
+The effect was only observed for specific soils, namely those containing iron-oxide cements. 
+The cements were evidently degraded by the longer agitation time because non-cemented London clay showed no change after more mixing. 
+No information was provided about the actual mixing procedure, though one could assume it was performed by hand with a spatula or similar tool. 
 
 
 
+##### Condition of aparatus
 
+@Casagrande1958 expressed regret that his original design did not quantitatively specify the rubber base's properties. 
+This led to disparities among the devices produced by various manufacturers, and they yielded different liquid limits despite being otherwise identical. 
 
-##### Specimen preparation
+A recent survey by @Haigh2016 confirmed that the hardness and resilience of the rubber base varies widely across national specifications. Even within a rubber type (hard or soft), the coefficient of variation in rubber hardness was around 20%. Analytical solutions predict that a 20% deviation in base stiffness yields a change in the liquid limit of 2-3 units (i.e. % gravimetric water content). This value is similar to the standard deviation reported by an ASTM reproducibility study across 14 labs @ASTMD43182018, suggesting a large amount of inter-laboratory variability could be due simply to varition in the rubber base properties of the devices employed. 
 
-##### Function of apparatus
-
-The most common error sources with the Casagrande apparatus are a worn grooving tool and variability in in drop height caused by a loose locking screw [@Sherwood1970]. The drop height must be frequently calibrated to ensure accurate results [@ASTMD43182018].
+Assuming the device meets specification, the most common error sources with the Casagrande apparatus are a worn grooving tool and variability in in drop height caused by a loose locking screw [@Sherwood1970]. 
+The drop height must be frequently calibrated to ensure accurate results [@ASTMD43182018].
 However, @Sherwood1970 concluded that so long as a standard test device is used, differences in operator technique comprise a larger source of error than the device itself.
 
 ##### Operator technique
 
+The means by which the groove is cut and the rate at which the cam is agitated will affect the flow of the soil. 
+Every effort must be made to maintain the tool in an orthogonal position to the cup surface throughout the action [@Casagrande1958]. The cam should be agitated at a constant rate of 2 blows per second [@ASTMD43182018].
 
 
-A recent survey by @Haigh2016 also supports Casagrande’s warning that the stiffness of the rubber base can significantly affect the test result.
+#### Plastic limit: sources of error
 
-An alternative test device for liquid limit determination was adopted by BS ______ (reference from Holtz et al. ?? )
+Current protocols for the plastic limit include ASTM D4318, AASHTO T 90, and B.S. 1377. In the test, a soil is first wetted to the liquid limit to encourage full saturation. 
+After performing the liquid limit test, a ~10 g sample of soil is gradually dried by gentle blow drying and re-molding. 
+Once the soil can be molded without sticking to the operator’s skin, the soil is rolled into a thread of 3 mm diameter, broken apart, and pressed into a new lump. 
+This process is repeated until the soil crumbles when the rolling action is applied. 
 
-#### Plastic limit test: mechanics and sources of error
 
-Current protocols for the plastic limit include ASTM D4318, AASHTO T 90, and B.S. 1377. In the test, a soil is first wetted to the liquid limit to encourage full saturation. After performing the liquid limit test, a ~10 g sample of soil is gradually dried by gentle blow drying and re-molding. Once the soil can be molded without sticking to the operator’s skin, the soil is rolled into a thread of 3 mm diameter, broken apart, and pressed into a new lump. This process is repeated until the soil crumbles when the rolling action is applied. 
+#### Attempts to improve plastic limit test
 
-@Terzaghi1926 introduced the use of a fixed thread diameter. Recently, the significance of the thread diameter has been questioned [@Barnes2013]. The stability of the soil thread is related to the maximum particle diameter and the rolling technique, and @Barnes2013 argued that emphasis should be shifted away from a specific thread diameter and toward observation of the thread during the test. 
-
-#### Attempts to improve Atterberg limit methods 
-
-Most attempts to improve the plastic limit test have focused on mechanizing the thread-rolling procedure in hopes of improving its reproducibility across operators. . Test operators utilize different combinations of force, speed, and displacement when rolling the soil. Collectively these variables were termed ‘rolling path’ by [@Barnes2013]. @Bobrowski1992 described a simple apparatus to aid the operator in producing a thread of precisely 3.2 mm. The device consists of a flat plexiglass plate which is used to roll the thread, rather than the operator’s hand. (Bobrowski and Griekspoor, 1992) also state that paper should be affixed to the base of the device to prevent the thread from sliding and to expedite the drying process. Use of this device is allowed, but not mandated, in the current version of ASTM D4318. This device has been criticized by (Barnes, 2013), who cited the data of (Rashid et al., 2008) to assert the rolling device produces excessively rapid drying and eliminates the soil thread from the view of the operator. 
+Most attempts to improve the plastic limit test have focused on mechanizing the thread-rolling procedure in hopes of improving its reproducibility across operators. Test operators utilize different combinations of force, speed, and displacement when rolling the soil. Collectively these variables were termed ‘rolling path’ by [@Barnes2013]. @Bobrowski1992 described a simple apparatus to aid the operator in producing a thread of precisely 3.2 mm. The device consists of a flat plexiglass plate which is used to roll the thread, rather than the operator’s hand. (Bobrowski and Griekspoor, 1992) also state that paper should be affixed to the base of the device to prevent the thread from sliding and to expedite the drying process. Use of this device is allowed, but not mandated, in the current version of ASTM D4318. This device has been criticized by (Barnes, 2013), who cited the data of (Rashid et al., 2008) to assert the rolling device produces excessively rapid drying and eliminates the soil thread from the view of the operator. 
 
 A fully mechanized thread rolling apparatus was developed by (Temyingyong et al., 2002). Their device used two acrylic plates similar to (Bobrowski and Griekspoor, 1992) and added a DC motor to apply the rolling action. The DC voltage was adjusted to control the rolling speed, and the downward force was altered by the addition of weights to the upper plate. They found that the initial diameter of the soil mass explained a larger amount of variation in the test result than did factors which might be ascribed to the subjective manual method (speed and pressure). The device still appears to be a significant improvement over the hand-rolling method; unfortunately, the device is not commercially available and its use has not been adopted by governing bodies. 
 Barnes (2009) introduced a novel thread-rolling apparatus which allows precise control of the load applied to the soil thread. The device comprises two stainless steel plates: a fixed base and an upper loading plate which is manually oscillated. The load is adjusted by sliding a weight ballast along the side of the device opposite the handle. The further the ballast weight is from a pivot point, the lesser the load on the soil thread. The device is still operated by hand and a constant rate of rolling must be maintained through careful operation. A thin smear of petrolatum is used on the stainless steel plates to encourage extrusion of the soil thread. A number of other useful properties have been developed with this device, as described in the section of this review on soil toughness. 
@@ -421,17 +462,33 @@ Many soil tests have been developed with the goal of supplanting the Atterberg l
 
 ### Toughness tests
 
-Toughness is the energy dissipated during a loading event. It is mathematically defined as the area beneath a stress-strain curve up to failure. Toughness bears units of energy per volume (i.e. work; SI units $\mathrm{frac{J}{m^3}}$) [@Mamlouk2006]. In other words, toughness is the total effort required to deform a specimen to its failure condition. The integral is traditionally computed over the entire material test, but the strain range may be abitrarily defined for a specific problem (e.g. @Barnes2013).  
+Toughness is a conspicuous feature of clay soils. This section describes the nature of toughness and attempts to measure it for soils. 
+
+In mechanics, toughness is the energy dissipated during a loading event. It is mathematically defined as the area beneath a stress-strain curve up to failure. Toughness bears units of energy per volume (i.e. work; SI units $\mathrm{frac{J}{m^3}}$) [@Mamlouk2006]. In other words, toughness is the total effort required to deform a specimen to its failure condition. The integral is traditionally computed over the entire material test, but the strain range may be abitrarily defined for a specific problem (e.g. @Barnes2013; @Barnes2013b).  
 
 A large peak strength does not necessarily imply a material is tough. A brittle material may have a high strength, but because it fails at low strain the toughness is relatively low. Conversely, a ductile material which deforms to very high strain levels may be quite tough despite its low ultimate strength [@Mamlouk2006]. 
 
-Many fine-textured soils exhibit ductile behavior, but their strength in this state varies widely. This fact is implicit to all who work intimately with clay in trades such as pottery production or earthworks. @Casagrande1932 noted in his landmark Atterberg limits paper:
+Many fine-textured soils exhibit ductile behavior, but their strength in this state varies widely. This observation is known by those who work intimately with clay in trades such as pottery production or earthworks. As @Casagrande1932 noted in his landmark Atterberg limits paper:
+
 >“There is a wide variation in the shearing resistance of different soils at the plastic limit. This difference may be felt by hand when performing the plastic limit test on various soils....the toughness of a clay at its plastic limit may therefore be described as the maximum stiffness or shearing resistance which it can acquire without losing its plasticity.”
 
  
 The plastic limit therefore reflects only the water content at which a drying soil becomes brittle, and on its own should not be considered a measure of soil strength or toughness. This distinction has been blurred in academic literature, where the plastic limit is sometimes reported as the water content corresponding to a particular value of cone penetration (e.g. @Whyte1982). Reported values of peak strength at the plastic limit differ by up to 2 orders of magnitude [@Haigh2013]. 
 
+The literature on shear strength and compressive strength is rich, but these studies focus on the peak load at failure and give little mention to energy dissipation up to failure. In most engineering applications little to no strain is desired. A baseball field differs because a small amount of deformation to the soil is desirable (Section \@ref(#corkboard-section)). Few attempts have been made to measure soil toughness directly. 
 
+Barnes published a series of papers descibing an apparatus which replicates the plastic limit hand-rolling procedure [@Barnes2009; @Barnes2013; @Barnes2013b; @Barnes2018]
+
+@Casagrande derived an estimate of the toughness index ???? 
+
+In the hypothetical sense any test which applies a known load and measures a deformation could be used to measure toughness. @Barnes2013 suggested his apparatus would correlate well with the Moisture Condition Value test, which is the logarithm of the number of blows needed to compact a fixed mass of soil to a pre-determined volume.
+
+
+Data from @Barnes2013 and -@Barnes2018 have been re-analyzed by other authors to develop empirical equations for predicting toughness.
+
+from other soil properties [@Moreno-Marato2018; @Vinod2017] and even used to suggest a new system for classifying soils based on toughness [@Moreno-Marato2021]. However, because the Barnes device is a unique apparatus, no attempts have been published to confirm its replicability across other operators or to compare its results with other means of measuring soil toughness. 
+
+It must be acknowledged that while the Barnes apparatus marks a significant advance, it represents but one means of measuring soil toughness. Clays exhibit toughness during many types of strain, not only the harmonic thread-rolling typical of the plastic limit test which the Barnes device seeks to emulate. Similarly, the plastic liimit does not represent the true limit of ductile behavior; it merely establishes an arbitratry if useful threshold for a single type of deformation. Soil can exhibit ductile strain even when its water content lies below the plastic limit. This is readily observed when classifying soils with the USDA hand method, which involves making a ribbon with the thumb and fingers. The soil can still be "ribboned" but will crumble if rolled. 
 
 ### Particle size analysis
 
@@ -451,6 +508,117 @@ knitr::include_graphics('images/brosnan_survey_PSA.PNG')
 Natural soil materials are excavated and deliberately blended for many uses. Potting mixes and green roof media are the largest means of production by volume (reference ??). The purpose of blending multiple soil materials is to create a product having properties not exhibited by any naturally occurring soil material. Even if the desired properties _could_ be found in a single naturally occurring material, the properties of natural soils are subject to spatial variation. In such a scenario, the properties of the mixture can be held constant simply by adjusting the ratio of the components. 
 
 The Atterberg limits and unconfined compression testing are the primary means which have been used to charazcterize soil mixtures. These mixtures may contain two components(sand and clay), or three components (sand and two separate types of clay soil)
+
+### pasted from word 2021-1-28
+
+An engineered soil is defined as an artificial mixture of two or more natural soils for a specific application. The purpose of manufacturing an engineered soil is to obtain a material which exhibits properties superior to those of any naturally occurring soil. 
+Artificial mixtures of sand with clay have been studied extensively. Investigated properties include packing density, permeability, shear strength, pore size distribution, and Atterberg limits. 
+
+#### Definition of the Transitional Fines Content
+In a coarse-grained soil, applied loads are transmitted through a skeleton of grain-to-grain contacts. The behavior of the soil is relatively independent of water content. A minor addition of fine particles will not alter the soil’s behavior so long as the fines fit comfortably within the large voids.  Once sufficient fines are added, they begin to participate in the force chain and with further additions the coarse grains become completely suspended in a matrix of fines. At this point the soil’s behavior will be dominated by the fines and the coarse grains act only as inert inclusions. The percent fines by where the soil behavior changes from that of the sand to that of the fines has been termed the “transitional fines content.” 
+
+Reported values of transitional fines content range from 15 to 45% by dry mass [reference??]. There is no universal mass-based fines percent which defines the TFC because (1) the transition depends on the behavioral threshold of interest (for example, compressibility, shear strength, or permeability), and (2), a unique ratio exists for every combination of coarse-grained and fine-grained components because particle packing depends on the grain-size distribution of each component, the plasticity of the fines, the means of compaction or consolidation, and the state of effective stress.(Zuo and Baudet, 2015) 
+
+The TFC has been variously defined based on: derived values from phase relations and index properties(Thevanayagam, 1998; Monkul and Ozden, 2007; Cabalar, 2011), the minimum global void ratio in compaction experiments(Lade et al., 1998; Ueda et al., 2011), undrained shear strength(Thevanayagam, 1998; Vallejo and Mawby, 2000; Dafalla, 2013; Nagaraj, 2016; Cabalar and Mustafa, 2017; Kim et al., 2018), parameters of the normal compression line or critical state line,(Cabalar, 2011; Carrera et al., 2011; Shipton and Coop, 2012) and liquefaction potential(Lade and Yamamuro, 1997).
+
+
+
+Importance of distinction between volumetric and mass relations
+In an artificial mixture of two or more soils, the relative amounts of each components may be compared on a volumetric or mass basis. The dry mass of solids is considered a more absolute measure of the quantity of each component, as these never change despite fluctuations in water content or bulk density. The ratios or percentage to which the component fractions are normalized should also be made explicit. The most common means to express the amount of each component is to set the total dry mass of the mixture equal to 100% : 
+% sand=g_sand/(g_sand+g_clay )
+However, others have advocated for enumerating the amount of sand to the amount of clay. For example, if 40 grams sand are added to 100 grams clay, this mixture would be termed 40% sand. This approach is analogous to computing water content as the mass of water related to the mass of dry soil. It is scarcely used in scientific literature.   
+% sand=g_sand/g_clay 
+Mass-based ratios are the most rational basis for mixing and testing, yet the behavior of the soil is governed by particle-to-particle relations in physical space. Therefore volumetric relations provide a more accurate depiction of the soil’s behavior, especially when the mixture components have very different specific gravities. 
+
+The importance of intergranular void ratio
+An important variable in the behavior of sand-clay mixtures is the configuration of the sand grains within the bulk soil matrix. The term intergranular void ratio was introduced by (Thevanayagam, 1998) to enumerate the configuration of the coarse grains in a soil mixture. The intergranular void ratio is derived from phase relations (Fig __) by treating the solid fines as voids within the bulk volume, which is held equal to unity.
+ 
+ The intergranular void ratio may be compared with the minimum and maximum void ratio of the pure sand as determined by standard test methods. When the intergranular void ratio exceeds that of the host sand, it is considered that the soil’s behavior will no longer be governed solely by the coarse grain contacts. 
+
+
+Factors influencing the transitional fines content
+Size ratio
+TFC values may be computed analytically from phase relations and minimum/maximum void ratios, yet derived values rarely coincide with those observed in experiments(Zuo and Baudet, 2015). In practice, observed volumetric packing densities (i.e. volumetric solid fraction) are always lower than the theoretical maximum because the calculations rely on simplifying assumptions which are unlikely to be satisfied(Zuo and Baudet, 2015). These assumptions are:
+	The fines are “infinitely small”
+	The coarse grains are smooth spheres
+	Both the coarse and fine soils are packed to their respective optimum densities  
+Observed packing densities in experiments range from 60% to 95% of the theoretical maximum(Furnas, 931; McGeary, 1961; Zuo and Baudet, 2015). 
+An important element of the discrepancy between calculations and experiments is the size ratio between the coarse and fine components (Lade et al., 1998; Ueda et al., 2011). The size ratio is given as: 
+ R=〖D_50〗_sand/〖D_50〗_fines 
+The agreement between calculation and experiment is enhanced with increasing size ratio(Lade et al., 1998; Zuo and Baudet, 2015). If the coarse and fine soils have similar mean grain sizes, mis-fitting and lodging of fines between the coarse grains is responsible for creating additional voids. (Lade et al., 1998) showed that when R < 7, an increase in R imparts a relatively steep increase in packing density. Additionally, (Lade et al., 1998) showed analytically that a void between closely packed spheres of equal sizes has a diameter of ~ 1/6.4 that of the large particles. Therefore, there is a fundamental reason for the abrupt change in slope at R~7. The effect is lessened once R > 7, and the observed void ratio approaches the theoretical maximum asymptotically. Numerical simulations indicate the intergranular void ratio practically independent of 〖D_50〗_fines when R > 100. (Ueda et al., 2011)
+
+			Uniformity of each component
+The theoretical maximum packing density of a two-component mixture is increased when the maximum density of each component is greater. If the mean grain size is suficintly different bewtewne the two components, a wider widening the particle size distribution within each individual component will increase the packing density of each component without causing the fines to interfere with packing of the sand. 
+
+Number of mix components
+As the number of components in the mixture increases, the achievable packing density asymptotically approaches the specific gravity of the solids (zero void space). A four-component mixture by (McGeary, 1961) achieved a volumetric packing density of 0.951 (less than 5 % porosity). This extreme density was only achieved in the experiments by first vibrating the coarsest component to its maximum density, then adding the next finer component and vibrating until it fully penetrated the remaining voids. 
+Plasticity of fines
+The majority of research on TFC mixtures has focused on sand mixed with nonplastic fines. This likely reflects the greater engineering liquefaction potential of silt and also the relative speed at which the experiments can be performed. Mixtures of sand with silt are easily vibrated to their maximum density in an air-dry condition, while investigations of sand mixed with plastic clay require more time- and labor-intensive proctor compaction methods. 
+Plasticity index is positively correlated with optimum water content for compaction(Sridharan and Nagaraj, 2005; Verma and Kumar, 2019). Therefore, in a compaction experiment, a higher plasticity clay would be expected to have a lower mass percent of fines, as more of the intergranular space is occupied by water rather than clay solids. 
+ 
+
+			Method of compaction/ compaction energy
+Mixtures subjected to static compression in an oedometer exhibit typical void ratio vs. log pressure curves. When this method of volume reduction is used, higher ultimate density values are attained than when using dynamic compaction, such as in the standard and modified Proctor tests. The difference in packing can probably be attributed to more complete evacuation of air from the voids. 
+Transitional fines content- how to define?
+		Volume vs mass (again)
+Maximum density
+		Behavior- undrained strength? 
+
+A qualitative definition of the transitional fines content is when the behavior of a soil mixture becomes more similar to the behavior of the fines alone than the sand alone. A transition in actual soil behavior, however defined, is of greater practical interest than a surrogate marker such as void ratio [which is more aptly considered a state parameter than an index property].
+
+
+
+Atterberg limits of sand-clay mixtures
+The Atterberg tests have been used to assess the behavior of sand-clay mixtures. Although the tests are intended to characterize silts and clays, the test results also reflect the size and shape of the sand fraction in an artificial sand-clay mixture.
+This section summarizes research on the Atterberg limits of artificial soil mixtures. Two-component mixtures (sand with a single type of clay material) and three-component mixtures (sand with two forms of clay material) are both discussed. For brevity, in this section the term “clay” is used to mean the fine-grained soil component of the mixture and does not connote any particle size definition. 
+___
+The term “clay” connotes varied meanings to different fields. In this dissertation, in the spirit of brevity, I use the term “clay” in this dissertation in its colloquial sense- that is a fine-grained soil material that can be shaped and molded. When soil mixtures are made one does not typically consider only the fraction of mineral solids having < 2 μm equivalent Stoke’s diameter. Instead, the mix is made on the basis of a specified ratio between 2 or more soils which are combined. 
+____
+Two-component mixtures of clay and coarse additions
+Seed et al., 1964a (Seed et al., 1964)  investigated Atterberg limits of sand-clay mixtures. Three types of clay (kaolinite, illite, and Ca-bentonite) were mixed with varying amounts of sand. All of the sand was < 425 μm in accordance with the standard test methods. 
+For the high-swelling bentonite, the liquid limits of the sand-clay mixtures were inversely proportional to sand content. In other words, the water content per unit clay material remained constant. This relationship was also observed for the illite clay. A linear relation was observed for the kaolinite clay up to 50 % sand, but the liquid limit test could not be performed on the 75 % sand-25 % kaolinite mixture, so whether the liner decline holds above 50 % sand could not be evaluated. 
+The slopes of these liquid limit vs. sand content lines differed by clay type; the authors showed that the slope was in close agreement with the Skempton activity of the clay, computed as (LL/ % < 2 μm). This relationship also held regardless of whether a single clay was mixed with the sand or if the sand was mixed with two types of clay (further discussed in the following section). 
+The plastic limit of the bentonite-sand mixtures also followed a linear relationship with increasing sand, up to the highest percent sand tested (75%). In contrast, the illite and kaolinite clays showed a linear relation only at lower sand contents. At sand content of 50% or higher, the plastic limits were higher than would be predicted by a simple linear regression line. This suggests the sand grains began to play a role in the soil’s behavior.
+A precise estimate of the inflection point for the PL-sand content curve could not be established because of the small number of sand contents investigated. The authors tested only 4 sand contents for the illite clay and 3 sand contents for the kaolinite clay, so the precise terminus of a linear trend could have occurred anywhere between 25 and 75% sand. 
+
+@Sivapullaiah1985 published similar findings on the effects of adding sand to pure clay materials. If the sand grains act solely as inert inclusions, the liquid limit of the sand-clay mixture should decrease in exact proportion to the sand content. @Sivapullaiah1985 termed this effect the “linear law of mixtures.” They showed that the linear law is only valid for sand-clay mixtures within a range of sand contents. Evidence is given as (1) liquid limits which are systematically higher than predicted by the linear law and (2) Plastic limits actually _increasing_ with greater sand content once 60% sand was reached.  The linear law was also shown to be invalid for mixes of bentonite with two types of silt in several ratios.
+@Sivapullaiah1985 clearly demonstrated that the linear law is not valid over the full range of 0-100% clay, but only one data points was collected between 0 and 60% sand. At these low sand contents, the shape of the liquid limit vs. sand content curve (linear or curvilinear) cannot be definitively stated from their data. 
+The effect of sand particle size on the behavior of sand-clay mixtures was also tested by @Sivapullaiah1985. The size of the added sand particles affected both the liquid and plastic limits. Mixes with coarser sand (425 μm – 150 μm) adhered more closely to the linear law of mixtures than finer sand containing only particles 150 μm – 75 μm. Mixes containing bentonite and silt (rather than sand) deviated further still from the linear law. 
+@Sivapullaiah1985 also isolated the effect of sand particle shape on the Atterberg limits of sand-clay mixtures. Bentonite clay was mixed with equal amounts of either angular or round sand of the same particle size fraction (150 μm – 75 μm). Sand contents ranged from 20 - 95 %. There was no discernable difference in the liquid or plastic limit due to particle shape. 
+ 
+
+Dumbleton and West (1966a, 1966b, 1970)
+(Dumbleton, 1966) investigated the liquid and plastic limits of two types of clay mixed with 5 types of coarse particles in various quantities. Silt and sand additions reduced the liquid limit and plastic limit. On an absolute scale, the water content at the liquid limit was changed more substantially than the plastic limit. However, on a relative scale (i.e. compared to characteristic water contents of the pure clay), adding sand or silt produced a similar _relative_ change in both characteristic water contents. Their montmorillonite clay was more affected by sand additions than their kaolinite. This is somewhat contrary to other studies which find montmorillonite to be a more “active” clay mineral (citation). 
+ 
+The degree of the coarse particles’ influence on the test results was inversely related to particle size. In other words, for the same percent coarse addition, the degree of influence on the plasticity of a mix was silt > fine sand > coarse sand. 
+The shape of the coarse particles mixed with the clays also affected the results of @Dumbleton1966a. For the same mass percent of coarse addition, the increase in the plastic limit was platy mica silt > bulky quartz silt angular quartz sand > round quartz sand. The authors attributed the difference to irregularly-shaped particles having higher surface area and requiring more water to coat the particles. This finding contradicts that of @Sivapullaiah1985, whose data showed no difference between angular and round sands of the same sieve diameter. Were the experiment conducted to higher sand content, it is possible an effect of particle shape would have been observed. 
+
+(Dumbleton and West, 1966) furthered their investigation of the coarse fraction’s influence on Atterberg limits. Increasing departure from spherical and round particles tended to raise both the liquid and plastic limits by roughly equivalent amounts. Although the coarse fraction had a measurable influence, the authors determined the nature of the clay material was the more important variable. 
+
+@Barnes2013 tested mixes of London clay with sand (two different size fractions) or silt, in 10% increments of coarse particles from 0 to 100% clay.  
+
+
+
+		Casagrande 1932
+		Barnes dissertation 
+	Mixtures of clays together and non-linear behavior
+			Barnes
+			Clay and pottery books. 
+Three-component mixtures of sand with two types of clay
+The work of (Seed et al., 1964) on relatively pure clay minerals mixed with sand was discussed above. A more complex relationship was observed when two types of clay were mixed together before adding sand. Seed et al. also extended the problem to three-component mixes in which two types of clay were first combined in varying ratios and the resultant mixture further blended with different amounts of sand. The plastic and liquid limits of the mixtures did not lie on a linear interpolation between those of the pure clay endmembers. 
+Three types of clay (kaolinite, illite, and Ca-smectite) were investigated. For mixes of kaolinite with either illite or smectite, a nearly linear relationship was observed. For example, a mix with a mass percent 50% kaolinite and 50% illite had a liquid limit halfway between the liquid limits of each individual clay. 
+Mixtures of smectite with illite did not adhere to a simple linear relationship. The LL of the mixtures were always lower than would be predicted. Small additions of illite to montmorillonite lowered the LL by more than expected, and small additions of smectite to illite raised the LL by less than would be expected. The response of the plastic limit to smectite additions were more complex. With small bentonite additions, the plastic limit was lower than expected, while for larger bentonite additions the PL was higher than expected. 
+Seed et al. noted that if a mass-weighted value of Skempton activity was used instead of pure mass percent, ????
+__
+@Sivapullaiah showed that their linear law was not valid for mixtures of bentonite with kaolinite. The liquid limit of the mixture was always lower than would be expected from the linear law. This implies an interaction between the clay mineral particles. 
+  
+Notable research gaps to address in this project:
+Notable research gaps:
+There are no data available on the brittle and ductile response of soil to cleated baseball shoes.
+Data pertaining to sand-clay mixes only have tested sand with particle sieve diameters of < 425 μm
+The transitional fines content of sand mixed with plastic fines has scarcely been explored 
+The effect of silt-to-clay ratio has been championed yet without systematic evaluation for the same type of extant clay minerals.
+Quantitative analysis has not been applied to the toughness of clays, save for the studies of Barnes who used acyclic shearing mode similar to that of the standard hand-rolling plastic limit test. In addition, the range of acceptable strain values for a given engineering problem significantly changes the toughness computation. For highly ductile materials, the failure strain is extremely high, and an unacceptably large deformation may be incurred before a failure criterion is reached. In the standard unconfined compression test, the test is halted at 20% strain if a clear peak has not been reached. Toughness is computed as the integral of the stress strain curve from zero strain all the way up to the failure strain. In contrast, Barnes elected to define the toughness of clays as a definite integral from the soil thread diameter of 6 mm down to 4 mm, because in this region deformation of the soil thread was considered to be relatively stable and the stress-strain curves extend with only slight curvature. However this approach may underestimate the toughness of more brittle specimens because the energy dissipated at low strain but high stress is not included in the calculation. It is evident that the strain range chosen for the toughness calculation can substantially change the conclusions about toughness, and one must select the failure criterion carefully based on the problem of interest. 
 
 
 
