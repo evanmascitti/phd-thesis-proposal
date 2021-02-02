@@ -56,3 +56,24 @@ ___
 ### Summary of problem importance 
 
 Infield skin soils are important to both economic and competitive aspects of baseball. Little research has been carried out on these materials. It is evident that the topic is ripe for study and that experiments regarding the nature and performance of infield soils would benefit the interests of many groups.
+
+___
+
+He scorned qualitative definitions of soils and favored the use of quantitative descriptions:
+
+___
+
+Ideally, researchers and practitioners could measure all soil properties of interest on an unlimited number of samples. 
+
+___
+
+Atterberg deemed the plasticity number as the most reliable means of measuring plasticity, though one senses his reluctance to accept this simple number as a fully adequate measure. 
+
+___
+
+The battery of tests included particle size analysis by hydrometer, specific gravity, Proctor-style compaction, liquid limit, and plastic limit.
+___
+
+However, he concluded with a more optimistic tone by surmising that results could be improved with better operator training and a providing them with more feedback. He suggested that operators be offered opportunity to calibrate their own results to those for standard materials having established values. 
+
+___

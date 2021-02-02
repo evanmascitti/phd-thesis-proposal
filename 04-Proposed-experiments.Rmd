@@ -1,12 +1,14 @@
 
 # Proposed experiments and papers {#proposed-experiments}
 
-This section details the planned research, much of which has already begun. Figure {#gantt-chart} outlines envisaged timelines for these experiments. Many of the tests will be performed on the same soil mixtures and the experiments, while separate, have substantial overlap. Therefore the testing program will be structured to minimize bottlenecks. In other words, multiple experiments will be in progress at a given time because some of the protocols involve wait times (i.e. for several hours or overnight) during which other lab tasks can be performed. 
+This section details the planned research, much of which has already begun. Figure __
+<!-- \@ref(fig:gantt-chart)  -->
+outlines envisaged timelines for these experiments. Many of the tests will be performed on the same soil mixtures and the experiments, while separate, have substantial overlap. Therefore the testing program will be structured to minimize bottlenecks. In other words, multiple experiments will be in progress at a given time because some of the protocols involve wait times (i.e. for several hours or overnight) during which other lab tasks can be performed.
 
 
-## Chapter 1: A novel method for measuring surface deformation of baseball and softball infield skin soils
+## Dissertation chapter 1: A novel method for measuring surface deformation of baseball and softball infield skin soils {#cleatmark-method-development-chapter}
 
-A  new method to measure disturbance of baseball infield soils by cleated footwear
+<!-- A  new method to measure disturbance of baseball infield soils by cleated footwear -->
 
 ### Principal research questions
 1. Can differences among infield mixes be observed in a laboratory test without using human subjects?
@@ -23,7 +25,6 @@ A  new method to measure disturbance of baseball infield soils by cleated footwe
 
 A mechanical apparatus has been developed to emulate a baseball or softball athlete's foot-to-surface interaction (Figure \@ref(fig:cleat-mark-device)). The device was designed and fabricated between May 2019 and March 2020 with service from the Penn State Engineering Services Shop. 
 
-
 ```{r cleat-mark-device, eval=TRUE, cache=T, fig.cap="Left: The pneumatic apparatus used to simulate foot-to-surface interaction. Right: A typical 9-spike baseball cleat pattern.", fig.show="hold", fig.height=3, out.width="50%"}
 
 knitr::include_graphics('images/cleatmark_device.png')
@@ -38,11 +39,225 @@ The apparatus comprises a pneumatic cylinder which combines high travel speed an
 
 The device was designed and fabricated between May 2019 and March 2020. Calibration and tuning of the machine is ongoing. The first set of mixtures is scheduled to be tested in Nov 2020. The goal is to complete all tests with this device by the end of 2021.
 
-## Chapter 2: Toughness of clay soil near the plastic limit using unconfined compression tests
 
-## Chapter 3: A critical appraisal of particle size analysis as a proxy for soil behavior
+## Dissertation chapter 2: Identifying the brittle-ductile transition of infield soil mixtures subjected to disruption by baseball cleats
 
-## Chapter 4: A rational theory of mix design for blended soils used on baseball and softball infields
+
+### Principal research questions
+
+1. How does clay type interact with sand content to determine the critical water content where the soil changes from cleat-in/cleat-out behavior to clod-forming failure?
+2. Do Atterberg limit tests correlate with the critical water contents?
+3. For a given clay soil, what is the critical sand content above which the cleat-in/cleat-out surface cannot be achieved?
+
+### Hypotheses
+
+
+
+### Materials and Methods
+
+This paper consists of three separate experiments. They are designed to test the effect of:
+
+1. **Varying sand content:** Five fine-grained soils will be mixed with a single sand in ratios ranging from 0-100% sand.^[Soils having no sand-size particles are rare; the 0% is stated here allegorically to indicate the 'pure' clay soil with no added sand.] Sand contents will be clustered around the transitional fines content to help identify the critical behavioral threshold for each clay type (see Figure \@ref(fig:sand-content-clustering)). This is preferred to simply testing mixes with equally-spaced sand contents, because the behavior change is nearly linear up to the transitional fines content.
+
+```{r sand-content-clustering, fig.cap='The sand contents for Experiment 1 in Chapter 2 will be deliberately clustered around the transitional fines content to provide the best data resolution'}
+source('supplemental_R_scripts/clustered_sand_contents.R')
+sand_pcts_to_choose
+
+```
+
+
+2. **Varying silt-to-clay ratio:** The same fine-grained soils from (1) will each be separately mixed with quartz silt to produce soil mixtures having identical silt-to-clay ratios (SCR) but containing different clay minerals. These soils will be further mixed with sand to produce mixtures of either 60 or 70% sand. The target SCR values will be 0.25, 0.5, 1, 2, and 4, but some of the clays already contain too much silt to be tested at the lower SCR values. These soils would simply be tested at any ratios they are capable of meeting (Table \@ref(tab:planned-scr-values)).
+
+```{r planned-scr-values}
+
+scr_possible_vals <- tibble::tibble(
+  `Clay name` = c('Calcium montmorillonite', 'mixed-layer/illite-dominated', 'fine-grained kaolinite', 'sesquioxide-rich', 'high-silt soil'),
+  clay_pct = c(0.6, 0.5, 0.8, 0.8, 0.1),
+  silt_pct = 1- clay_pct,
+  scr = round(silt_pct / clay_pct, 2)
+  ) %>% 
+  dplyr::rename(
+    `% clay-size` = clay_pct,
+    `% silt-size` = silt_pct,
+    `Silt-to-clay ratio` = scr
+  )
+
+scr_possible_vals %>% 
+  kableExtra::kbl(align = 'lccc',
+                  caption = 'The 5 soils from Experiment 1 have different silt-to-clay ratios; silt can be added to produce soils with equivalent SCR values but different clay minerals and clay particle sizes. High-silt soils cannot be tested at an SCR lower than their existing value.') %>% 
+  kableExtra::kable_styling()
+  
+```
+
+
+3. **Varying sand type:** Two of the clays from Experiment (1) will be chosen based on having high and low toughness. They will be mixed with 4 types of sand at 4 sand contents (50, 60, 70, and 75%) for a total of 32 mixes. The sand types include a "coarse", "medium" and "fine" with similar uniformity coefficients (Cu) and a sand having similar D<sub>50</sub> to the "medium" sand. This design allows a comparison of both size and uniformity to be made for a both low- and high-toughness clays.
+
+
+
+### Timeline 
+
+
+
+
+
+## Dissertation chapter 3: Toughness-water content relations of clay soils via unconfined compression testing
+
+
+### Principal research questions
+
+1. Can soil toughness be measured using unconfined compression tests?
+
+2. How does toughness change as a function of water content for different types of clay soils?
+
+3. How does the toughness-water content relationship change as sand is added to the clays?
+
+### Hypotheses
+
+1. Soil toughness can be measured with unconfined compression tests. By testing both specimens dry and wet of the plastic limit, one can interpolate their maximum toughness, which occurs at the plastic limit (i.e. onset of brittle fracturing).
+
+2. Higher plasticity soils will have less change in toughness for a unit change in water content. The maximum toughness of the clay types will be in order of montmorillonite >> mixed-layer/illite > kaolinite > iron-oxide rich > high-silt soil. 
+
+3. Clays with higher maximum toughness will require more sand to reduce their toughness. Because they maintain similar toughness over a broader range of water content, the behavior of the soil is less affected by sand additions.
+
+### Materials and Methods
+
+The same mixtures tested in [Chapter 1](#cleatmark-method-development-chapter) will be used for this study. 
+
+The soils will be wetted to their adhesion limit and packed into a 5-cm diameter steel tube with a dynamic compaction effort of 2,700 kN-m/m<sup>3</sup> (equivalent to the ASTM modified Proctor compaction test, D1557-12e1 [-@ASTMD15572015]. The soil will be packed in a single lift to minimize heterogeneities in the specimen which could arise due to lack of binding between successive lifts. Preparing the specimens in a relatively soft condition also ensures minimal air entrapment. For each mixture, 6 replicate cylinders will be prepared. 
+
+The specimens will be extruded with a manual hydraulic bottle jack (Figure \@ref(fig:proctor-extruder)). One specimen will be immediately sealed in an air-tight plastic bag. The rest will be slowly air dried under a loose polyethylene sheet. Each specimen will be dried to progressively lower water contents and sealed in a plastic bag until testing, with the final specimen being completely air-dried. The goal is to evaluate at least 3 water contents where ductile behavior is observed and at least 2 samples where brittle behavior is observed. This will allow the maximum toughness value to be bracketed by the tests.
+
+```{r proctor-extruder, fig.cap='Bottle jack specimen extruder for preparing compression test specimens.', out.width='80%'}
+knitr::include_graphics('images/gilson_stock_proctor_extruder_photo.jpg')
+```
+
+
+The specimens will be subjected to unconfined compression tests at the Penn State Civil Infrastructure Testing and Evaluation Laboratory. Axial strain and nominal stress will be recorded up to 20% strain or an abrupt failure criterion. The water content of the specimen will then be determined.  
+
+A smooth curve will be fitted to the stress-strain curve using general additive models in the R language for statistical computing [@baseR]. Toughness will be computed as the definite integral up to failure. An arbitrary failure criterion (i.e. maximum acceptable strain) will be chosen for the ductile specimens; this depends on the degree of acceptable deformation by the groundskeeper and has not yet been calculated. 
+
+Toughness will be plotted against water content, and a second curve will be used to determine the rate of change in toughness per unit water content. It is anticipated that this relationsip will follow a semi-logarithmic shape, as for the Barnes apparatus [@Barnes2013]. Figure \@ref(fig:barnes-toughness-vs-water-content-example-plot) shows such a plot. 
+
+Finally, the coefficients from the toughness-water content relationship for each sample can be analyzed as a function of sand content and clay type. This two-way ANOVA will permit the toughness slope to be computed for any soil based on its initial toughness. 
+
+### Timeline 
+
+These tests will be completed beginning in Fall 2021 and continue through April of 2022. 
+
+
+## Dissertation chapter 3: Effect of oversize particles on Atterberg limits of artificial sand-clay mixtures
+
+### Principal research questions
+
+1. Can Atterberg limit tests be performed when sand particles up to 2 mm sieve diameter are included in a soil?
+2. What is the effect of using coarser or finer sand?
+3. What is the effect of sand uniformity?
+
+### Hypotheses
+
+1. The tests can be performed using identical methodology to ASTM D4318 with the 425 &mu; washing step eliminated
+
+2. The liquid limit will be lower for coarser sand due to reduced surface area of the sand particles relative to finer sand.
+
+3. Coarser sand will cause greater particle interference in the plastic limit thread as it nears its 3.2 mm diameter. The thread will crumble prematurely, raising the plastic limit value.
+
+4. The combined effect of (2) and (3) will yield a smaller plasticity index for coarser sand. The results of the experiment can be used to apply a correction for the presence of oversize particles without their removal prior to testing. 
+
+### Materials and Methods 
+
+....
+
+
+### Timeline 
+
+The experiments were begun in March of 2020 during the initial COVID-19 stay-at-home order. Data collection is nearing completion. 
+
+
+## Dissertation chapter 4: A critical appraisal of particle size analysis as a proxy for infield soil behavior
+
+### Principal research questions 
+
+1. Can particle size distribution (PSD) be accurately measured using a range of laboratory techniques?
+2. Does the increased PSD resolution from laser diffraction provide useful information about an infield mix?
+2. What particle size metrics are the best and worst predictors of infield performance?
+
+### Hypotheses 
+
+1. Specimen pre-treatment will drastically alter the results of a particle size test. This uncertainty is associated with the test protocol and is independent of operator performance. The hydrometer and pipette yield similar results, but the laser diffraction method requires an empirical correlation to permit comparison with older methods. The most important step is the physical disaggregation of the soil; ultrasonic dispersion will yield higher clay percentages than stirring or shaking methods. 
+2. Laser diffraction allows rapid analyses of more size fractions than sedimentation analyses, and the amount of fine clay will correlate with infield performance. 
+3. Even with the larger dataset produced with laser diffraction, considering the silt and clay fractions will correlate only loosely with infield performance as measured in  
+
+### Materials and methods 
+
+#### Experiment 1
+
+5 soils will be tested using 3 pre-treatment protocols: 
+
+1. ASTM D7928; milkshake mixer method [@ASTMD79282017]
+2. ASTM D7928; overnight shaker method [@ASTMD79282017]
+3. ASTM D7928; ultrasonic dispersion method [@ASTMD79282017]
+
+These will each be sampled with the pipette method, considered the standard technique for mechanical analysis in soil science [@Gee2002].
+
+Soils dispersed with method (3) will also be subjected to 4 additional sampling methods:
+
+1. pipette analysis with samples removed at 20, 5, 2, and 0.2 &mu;m equivalent spherical diameters; sand tested with sieve method
+2. hydrometer analysis with measurements taken for 20, 5, and 2 &mu;m equivalent spherical diameters; sand tested with sieve method
+3. laser diffraction analysis for fine fraction and either: 
+  a. sand fraction analyzed with sieve method
+  b. sand fraction analyzed with dry laser diffraction method
+
+```{r particle-size-experiments-sample-number-calculation}
+n_soils <- 5
+n_psa_reps <- 5
+n_dispersion_treatments <- 3
+n_sampling_methods <- 4
+
+n_total_tests <- n_soils*n_dispersion_treatments*n_psa_reps + n_soils*n_sampling_methods*n_psa_reps
+
+```
+
+
+All tests will be replicated `r n_psa_reps` times to allow statistical comparison. 
+
+The author has already developed software for the data management and analysis tasks involved for these experiments. The data can be batch-analyzed, reducing the time for data processing to virtually zero. 
+In total, these experiments sum to `r n_total_tests` total analyses. 
+
+### Timeline
+
+These experiments will be conducted throughout 2021, primarily during the summer and early fall. Current lab capacity is to test 12 specimens per workday, so the experiments equate to `r round(n_total_tests/12, 0)` full days of testing. 
+
+
+## Dissertation chapter 5: A rational basis for the design of soil mixtures used on baseball and softball infields
+
+
+### Principal research questions 
+
+1. How can better infield mixes be designed?
+2. How can the performance of an existing mix be improved without replacing it?
+3. What criteria best relate to infield performance, defined as the range of water contents where the soil is both plastic and stiff enough to support athletic maneuvers?
+
+### Hypotheses 
+
+1. Infield mix design should start with the toughness of an available clay soil, not the final sand %.
+2. The level of play and maintenance budget will dictate the desired toughness level. 
+3. The upper bound of the amount of clay soil component that should be included in the mix is a function of the dry shear strength of the mix because it is this property that governs the workability of the mix (i.e. the ability to groom it with implements and hand tools)
+4. If a given toughness level is desired, the % sand needed to achieve this can be computed from empirical equations.
+5. Ideally, toughness should be directly measured when designing a new mix; however it can also be estimated from an empirical correlation with the Atterberg limits 
+6. Particle size analysis is acceptable for quality control purposes, but not for design. Only once a desired blend of a particular sand with a particular clay is established through toughness testing can a definite ratio of sand-size particles to fines be defined for that mix. 
+7. Amending existing soils should be done on the basis of plastictity rather than silt-to-clay ratio. The resulting mixture's properties will not be a linear interpolation between the two; thus a calibration of Atterberg limit results may be required by making several mixtures (for example 0, 20, 40, 60, 80, and 100% of soil A with the implied amount of soil B) to determine the proper amendment ratio.
+
+
+### Materials and Methods 
+
+This paper is primarily a synthesis of the methods papers described above. It will combine the methods into a single framework for designing infield mixes. Simple metrics will be defined, and the framework will be tested by using materials which were _not_ tested in the other experiments to validate the theory's merit. 
+
+### Timeline 
+
+This is the final paper I will write as it encompasses all the lab work and other publications. I anticipate writing it in the second half of 2022.
+
+
+
 
 The end game/envisaged process of mix design: 
 
