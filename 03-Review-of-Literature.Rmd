@@ -47,30 +47,57 @@ ___
 
 #### Traction
 
-Traction allows the athlete to run, change directions, and perform other maneuvers without slipping, sliding, or otherwise losing control. Traction is distinct from planar friction because of the presence of studs or other gripping aids on the players' footwear [@McNitt1997a]. Even when using machine tests (rather than human subjects), measuring traction is complicated by nonlinear interactions between surface type, shoe type, and loading weights [@Nigg1990]. Excessive rotational traction is associated with lower extremity injuries, but traction differences among shoe types are often larger than those across surface types [@Serensits2014]. Clear-cut thresholds separating acceptable and unaccpetable traction have not been established.
+Traction allows the athlete to run, change directions, and perform other maneuvers without slipping, sliding, or otherwise losing control. 
+Traction is distinct from planar friction because of the presence of studs or other gripping aids on the players' footwear [@McNitt1997a]. 
+Even when using machine tests (rather than human subjects), measuring traction is complicated by nonlinear interactions between surface type, shoe type, and loading weights [@Nigg1990]. 
+Excessive rotational traction is associated with lower extremity injuries, but traction differences among shoe types are often larger than those across surface types [@Serensits2014]. 
+Clear-cut thresholds separating acceptable and unaccpetable traction have not been established.
 
-Most athletic field research has focused on natural grass and synthetic turf. There are two published accounts of traction measurements on infield skin surfaces. 
+Most athletic field research has focused on natural grass and synthetic turf. 
+There are two published accounts of traction measurements on infield skin surfaces. 
 
-@Goodall2005 measured traction on plots constructed from 5 different soils blended with 4 rates of calcined clay. Higher traction levels were reported for silty and loamy soils than for sandier soils. Mixing the soil with calcined clay prior to plot construction had no effect on traction. No relationship was found between traction and water content, although only 3 water contents were tested.
+@Goodall2005 measured traction on plots constructed from 5 different soils blended with 4 rates of calcined clay. 
+Higher traction levels were reported for silty and loamy soils than for sandier soils. 
+Mixing the soil with calcined clay prior to plot construction had no effect on traction. 
+No relationship was found between traction and water content, although only 3 water contents were tested.
 
-@Brosnan2011 measured traction on research plots of the same infield soil subjected to various treatments. Traction was increased by soil compaction and decreased by surficial additions of calcined clay. 
+@Brosnan2011 measured traction on research plots of the same infield soil subjected to various treatments. 
+Traction was increased by soil compaction and decreased by surficial additions of calcined clay. 
 
 
 #### The "corkboard effect"
 
-The nature of cleat indentations could be considered an element of footing. However, this topic has not been studied in scientific experiments and no primary literature is available. A description has been provided in the problem description portion of this proposal (Section \@ref(problem-description)). @Zwaska2007 described the corkboard concept and other desirable properties of the infield skin.   
+The nature of cleat indentations could be considered an element of footing. 
+However, this topic has not been studied in scientific experiments and no primary literature is available. 
+A description has been provided in the problem description portion of this proposal (Section \@ref(problem-description)). 
+@Zwaska2007 also described the corkboard concept and other desirable properties of the infield skin.   
 
 
 
 ### Ball response
 
-The reaction of a baseball upon contact with the surface plays a key role in the outcome of competition (recall Figures \@ref(fig:labor-per-area)-\@ref(fig:batted-ball-density)). As for footing, limited research is available on infield ball response. 
+The reaction of a baseball upon contact with the surface plays a key role in the outcome of competition (recall Figures \@ref(fig:labor-per-area)-\@ref(fig:batted-ball-density)). 
+As with footing, limited research is available on infield ball response. 
 
-@Goodall2005 is the only published account of controlled research on multiple infield soils. The authors installed 5 soils which were commercially available within the northeastern United States. Static and dynamic ball friction were measured along with traction and other soil properties. The authors found that increases in water content raised the coefficients of static and dynamic friction between the ball and the soil surface. The increase was likely due to greater ball penetration, increasing the contact area between the ball and the surface and also prolonging their interaction. @Goodall2005 suggested that surface pace may be more related to friction than to hardness. This agrees with intuition because the main component of a ground ball's velocity is horizontal (nearly coplanar with the surface), favoring the importance of horizontal friction rather than vertical rebound. Incorporation of calcined clay (particle size 0.5 - 2 mm) also decreased friction, especially for finer-textured soils.
+@Goodall2005 is the only published account of controlled research on multiple infield soils. 
+The authors installed 5 soils which were commercially available within the northeastern United States. 
+Static and dynamic ball friction were measured along with traction and other soil properties. 
+The authors found that increases in water content raised the coefficients of static and dynamic friction between the ball and the soil surface. 
+The increase was likely due to greater ball penetration, increasing the contact area between the ball and the surface and also prolonging their interaction. 
+@Goodall2005 suggested that surface pace may be more related to friction than to hardness. 
+This agrees with intuition because the main component of a ground ball's velocity is horizontal (nearly coplanar with the surface), favoring the importance of horizontal friction rather than vertical rebound. 
+Incorporation of calcined clay (particle size 0.5 - 2 mm) also decreased friction, especially for finer-textured soils.
 
-Brosnan et al. studied the effects of construction and maintenance activities on infield surface pace [-@Brosnan2011]. Higher bulk density (&rho;~bulk~) increased surface pace, although the range of bulk densities tested (1.2-1.8 Mg m^-3^) was beneath values typically encountered on infield skins (author's personal observation; data not shown). Water content was negatively correlated with surface pace, but no attempt was made to intentionally alter water content among plots. This study was performed on a single soil material.
+Brosnan et al. studied the effects of construction and maintenance activities on infield surface pace [-@Brosnan2011]. 
+Higher bulk density (&rho;~bulk~) increased surface pace, although the range of bulk densities tested (1.2-1.8 Mg m^-3^) was beneath values typically encountered on infield skins (author's personal observation; data not shown). 
+Water content was negatively correlated with surface pace, but no attempt was made to intentionally alter water content among plots. 
+This study was performed on a single soil material.
 
-The effect of ball spin may be large or small depending on the playing surface properties. If the ball-surface friction coefficient is high, the ball will roll through impact and its release angle will be altered (Figure \@ref(fig:daish-spin-release-angle)). The new spin rate will be determined by the incoming velocity and the friction coefficient. Sidespin imparted by the bowler will readily grip the surface and alter its horizontal path [@Daish1972]. Alternatively, when friction is low, the ball will skid through impact and retain some of its original spin.
+The effect of ball spin may be large or small depending on the playing surface properties. 
+If the ball-surface friction coefficient is high, the ball will roll through impact and its release angle will be altered (Figure \@ref(fig:daish-spin-release-angle)).
+The new spin rate will be determined by the incoming velocity and the friction coefficient. 
+Sidespin imparted by the bowler will readily grip the surface and alter its horizontal path [@Daish1972]. 
+Alternatively, when friction is low, the ball will skid through impact and retain some of its original spin.
 
 ```{r daish-spin-release-angle, fig.cap="Initial spin will influence a ball's release angle following impact. Adapted from Daish, 1972."}
 
@@ -79,22 +106,35 @@ knitr::include_graphics("images/illustrations/ball_spin_effect/daish_fig_9.2_red
 ```
 
 
-When soil stiffness is low, the ball produces a notable deformation of the surface. This prolongs the duration of the impact and gives friction more time to operate. As the ball releases, it rolls up the saucer-like depression created by the impact. This yields a slightly steeper release angle relative to that of a more rigid soil surface (Figure \@ref(fig:ball-indentation-release-angle)).  
+When soil stiffness is low, the ball produces a notable deformation of the surface.
+This prolongs the duration of the impact and gives friction more time to operate. 
+As the ball releases, it rolls up the saucer-like depression created by the impact.
+This yields a slightly steeper release angle relative to that of a more rigid soil surface (Figure \@ref(fig:ball-indentation-release-angle)).  
 
 ```{r ball-indentation-release-angle, fig.cap="A. A rigid soil surface produces a lower release angle, provided no imperfections are present in the surface. B. A surface with lower stiffness encourages the ball to roll out of the shallow depression created by impact, leading to a slightly steeper release angle."}
 knitr::include_graphics('images/illustrations/ball_indentation_release_angle/ball_indentation_release_angle.pdf')
 ```
 
 
-Infield soil bear some similarity to cricket pitches and these have been researched more extensively. Ball response is influenced by soil bulk density, clay content, water content, organic matter, and particle size distribution [@Baker2006].
+Infield soil bear some similarity to cricket pitches and these have been researched more extensively. 
+Ball response is influenced by soil bulk density, clay content, water content, organic matter, and particle size distribution [@Baker2006].
 
-A laboratory study on surface friction of cricket soils was made by @Adams2001a. This experiment mixed the same clayey soil with 6 types of coarse amendments. All final mixes had sand contents between 30 and 40% by mass. Ball-to-surface friction was highest for the mix containing sand between 125-60 &mu;m. Lower friction was measured for soils with coarser or finer amendments. Using a suede-type leather increased friction relative to polished leather, implying that the degree of wear on the ball may influence surface pace.
+A laboratory study on surface friction of cricket soils was made by @Adams2001a. 
+This experiment mixed the same clayey soil with 6 types of coarse amendments. 
+All final mixes had sand contents between 30 and 40% by mass. 
+Ball-to-surface friction was highest for the mix containing sand between 125-60 &mu;m. 
+Lower friction was measured for soils with coarser or finer amendments. 
+Using a suede-type leather increased friction relative to polished leather, implying that the degree of wear on the ball may influence surface pace.
 
 ___
 
 ## Laboratory tests of soil behavior and physical properties {#lab-methods-review} 
 
-The goal of laboratory soil testing is to assess or predict the properties of the soil in the field. Many laboratory soil tests are time-consuming and costly. Results from simpler tests are commonly used as surrogate markers for the information yielded by more intensive tests. The methodology underlying these "surrogate" tests has been studied extensively because much is riding on the tests' precision and accuracy. This section summarizes literature on the laboratory test methods pertinent to infield soils. 
+The goal of laboratory soil testing is to assess or predict the properties of a soil in the field. 
+Many laboratory soil tests are costly and time-intensive. 
+Results from simpler tests are commonly used as surrogate markers for the information yielded by more intensive tests. 
+The methodology underlying these "surrogate" tests has been studied extensively because much is riding on their precision and accuracy. 
+This section summarizes literature on the laboratory test methods pertinent to infield soils. 
 
 ### Atterberg limit tests
 
@@ -105,7 +145,7 @@ Plasticity is the tendency of a material to deform under an applied load, withou
 Atterberg noted that plasticity is easy to observe but does not lend itself to simple measurement.
 He showed that soil was plastic only within a finite range of water content which differed for every soil.
 The upper boundary was defined as the flow limit, at which two batches of soil paste flowed together when jarred. 
-The lower boundary was defined as the rolling limit, when the soil had dried enough so it became brittle and could no longer be rolled into thin threads. 
+The lower boundary was defined as the rolling limit, when the soil had dried enough t become brittle and could no longer be rolled into thin threads. 
 He termed the difference between the lower limit of viscous flow and the rolling limit the “plasticity number." 
 Today these are known as the liquid limit, plastic limit, and plasticity index. 
 He defined 3 additional consistency limits, though none are widely used today.
@@ -118,16 +158,21 @@ Atterberg concluded that his ‘plasticity number’ was the most reliable means
 He considered the effort needed to remold the soil a separate property, which translates to English as ‘viscosity;’ this property was later called ‘toughness’ by @Casagrande1932. 
 
 Atterberg’s work has never been fully appreciated in his own discipline of soil science, but his test methods were improved and standardized by geotechnical engineers [@Terzaghi1926; @Casagrande1932].
-@Terzaghi1926 acknowledged the arbitrary nature of the tests but emphasized that their value for preliminary soil investigations. He pointed out the importance of the tests lied in quantifying an observable phenomenon:
+@Terzaghi1926 acknowledged the arbitrary nature of the tests but emphasized that their importance for preliminary soil investigations. 
+He pointed out the value of the tests lied in quantifying an observable phenomenon:
 
 > “Every engineer should develop the habit of expressing the plasticity and grain-size characteristics of soils by numerical values rather than adjectives…..the degree of plasticity should be indicated by the estimated value of the plasticity index and not by the words ‘trace of plasticity’ or ‘highly plastic.’ ” <br> \- @Terzaghi1996
 
-Of Atterberg's original 5 limits, only (2) and (4) are in use today and they are termed the liquid and plastic limits respectively. The following sections detail the mechanics underlying these tests and their limitations. 
+Of Atterberg's original 5 limits, only (2) and (4) are in use today and they are termed the liquid and plastic limits respectively. 
+The following sections detail the mechanics underlying these tests and their limitations. 
 
 
 #### Methods in current use 
 
-Standard test methods typically pair the plastic and liquid limit tests. In the United States the relevant standards are @ASTMD43182018 and @AASHTO2020 while @BS13771990 is typically cited in Europe. The United States methods use the Casagrande method to determine the liquid limit while the British method uses a fall-cone device; these are briefly described below.  The plastic limit tests described in the three standards are essentially identical.
+Standard test methods typically pair the plastic and liquid limit tests. 
+In the United States the relevant standards are @ASTMD43182018 and @AASHTO2020 while @BS13771990 is typically cited in Europe. 
+The United States methods use the Casagrande method to determine the liquid limit while the British method uses a fall-cone device; these are briefly described below
+The plastic limit tests described in the three standards are essentially identical.
 
 ##### Liquid limit
 
@@ -162,18 +207,25 @@ This process is repeated until the soil crumbles when the rolling action is appl
 The plastic limit is the water content at which the soil can no longer be rolled out.
 
 @Terzaghi1926 introduced the use of a fixed thread diameter of 1/8" (3.2 mm), although its significance has been recently questioned  by @Barnes2013. 
-The stability of the soil thread is related to the maximum particle diameter and the rolling technique. @Barnes2013 argued that emphasis should be shifted away from a specific thread diameter and toward observation of the thread during the test. 
+The stability of the soil thread is related to the maximum particle diameter and the rolling technique. 
+@Barnes2013 argued that emphasis should be shifted away from a specific thread diameter and toward observation of the thread during the test. 
 
 
 ### Nature and magnitude of errors associated with Atterberg limits
 
-Atterberg limit tests can be performed rapidly and require only simple equipment and no consumables. They also correlate reasonably well with other soil properties such as shear strength, compressibility, and permeability. Unfortunately there are multiple sources of error associated with the tests and these are often raised as critiques of the utility of the test results. This section outlines research on the precision and accuracy of the tests. 
+Atterberg limit tests can be performed rapidly and require only simple equipment and few consumables. 
+They also correlate reasonably well with other soil properties such as shear strength, compressibility, and permeability. 
+Unfortunately there are multiple sources of error associated with the tests and these are often raised as critiques of the utility of the test results. 
+This section outlines research on the precision and accuracy of the tests. 
 
 ### Reproducibility and repeatability {#atterberg-lims-reproducibility-and-repeatability}
 
-Reproducibility is defined as achieving the same result for the same sample by multiple test operators. Repeatability is achieving the same result through multiple trials of the same sample by the same operator. 
+Reproducibility is defined as achieving the same result for the same sample by multiple test operators. 
+Repeatability is achieving the same result through multiple trials of the same sample by the same operator. 
 
-@Sherwood1970 conducted a detailed investigation on the reproducibility and repeatability of laboratory soil tests. Three soils termed B, G, and W were pulverized and riffled repeatedly to ensure their homogeneity. The samples were sent to 41 laboratories which performed several tests on them, including the Atterberg limits. The tests were replicated by multiple operators at the Road Research Laboratory and by a single operator to compare the variation among each means of replication. 
+@Sherwood1970 conducted a detailed investigation on the reproducibility and repeatability of laboratory soil tests. 
+Three soils termed B, G, and W were pulverized and riffled repeatedly to ensure their homogeneity. The samples were sent to 41 laboratories which performed several tests on them, including the Atterberg limits. 
+The tests were replicated by multiple operators at the Road Research Laboratory and by a single operator to compare the variation among each means of replication. 
 
 
 ```{r produce plots and values from Sherwood 1970}
@@ -181,7 +233,8 @@ source("supplemental_R_scripts/Sherwood_1970_plots_facet_style.R")
 ```
 
 
-Results differed widely across laboratories, but agreement was much better for operators trained in the same lab and better still for repeated tests by the same operator. Figure \@ref(fig:sherwood-overall-comparison) shows that extreme values for the liquid limit differed across labs by as much as `r max(sherwood_across_labs_ranges$LL_range)` units. 
+Results differed widely across laboratories, but agreement was much better for operators trained in the same lab and better still for repeated tests by the same operator. 
+Figure \@ref(fig:sherwood-overall-comparison) shows that extreme values for the liquid limit differed across labs by as much as `r max(sherwood_across_labs_ranges$LL_range)` units. 
 Plastic limit values varied by up to `r max(sherwood_across_labs_ranges$PL_range)` units (30-40% of their mean values). 
 Figure \@ref(fig:sherwood-overall-comparison) shows that variation across eight individuals employed by the Road Research Laboratory at the time of the study. 
 These technicians were considered highly experienced and the spread of their results was much smaller than that across laboratories. 
@@ -193,7 +246,9 @@ att_lims_variation_plot
 
 ```
 
-The spread of data points in \@ref(fig:) could be misleading because the number of replicates was much lower for the within-lab and within-operator studies. Therefore it is also useful to compare the coefficients of variation for the three studies. Figure \@ref(fig:sherwood-cov-comparison) shows that the small range of data points for the single lab or single operator is not due only to fewer samples being tested; the coefficients of variation for one operator's replicates are smaller by a factor of 3 to 10. The coefficient of variation was remarkably consistent across soils: the three materials had COV values of `r  summary_covs_across_labs$LL_cov[1]`, `r  summary_covs_across_labs$LL_cov[2]`, and `r  summary_covs_across_labs$LL_cov[3]`% for the liquid limit and `r  summary_covs_across_labs$PL_cov[1]`, `r  summary_covs_across_labs$PL_cov[2]`, and `r  summary_covs_across_labs$PL_cov[3]`% for the plastic limit. 
+The spread of data points in \@ref(fig:) could be misleading because the number of replicates was much lower for the within-lab and within-operator studies. 
+Therefore it is also useful to compare the coefficients of variation for the three studies. Figure \@ref(fig:sherwood-cov-comparison) shows that the small range of data points for the single lab or single operator is not due only to fewer samples being tested; the coefficients of variation for one operator's replicates are smaller by a factor of 3 to 10. 
+The coefficient of variation was remarkably consistent across soils: the three materials had COV values of `r  summary_covs_across_labs$LL_cov[1]`, `r  summary_covs_across_labs$LL_cov[2]`, and `r  summary_covs_across_labs$LL_cov[3]`% for the liquid limit and `r  summary_covs_across_labs$PL_cov[1]`, `r  summary_covs_across_labs$PL_cov[2]`, and `r  summary_covs_across_labs$PL_cov[3]`% for the plastic limit. 
 Evidently, the uncertainty associated with a single test result is not a function of soil type. 
 
 
@@ -202,9 +257,10 @@ att_lims_cov_plot
 ```
 
 The liquid limit involves a mechanical device whereas the plastic limit test introduces a greater degree of operator judgment. 
-One might expect better agreement for the liquid limit and this is clearly borne out in Figures \@ref(fig:sherwood-overall-comparison)-\@ref(fig:sherwood-cov-comparison).
+One could expect better agreement for the liquid limit and this is clearly borne out in Figures \@ref(fig:sherwood-overall-comparison)-\@ref(fig:sherwood-cov-comparison).
 
-A separate study by @Sherwood1970a showed that the fall-cone method has better inter-operator reproducibility. The coefficient of variation among operators was about half that of the Casagrande method. 
+A separate study by @Sherwood1970a showed that the fall-cone method has better inter-operator reproducibility. 
+The coefficient of variation among operators was about half that of the Casagrande method. 
 
 ```{r sherwood-cone-cup-comparison, fig.cap='The fall-cone method is less variable across operators than the Casagrande cup'}
 
@@ -223,7 +279,14 @@ In summary, @Sherwood1970 showed that most soil physical tests are quite repeata
 
 #### Sources of error in Atterberg limit methods
 
-\@ref(atterberg-lims-reproducibility-and-repeatability) described the expected uncertainties associated wtih Atterberg limit results. It is next useful to exploe the sources of these errors so they can be avoided as much as possibke. The tests depend heavily on an accurate determination of the water content. Clean workmanship is essential to avoid flakes of dry soil contaminating the fresh specimen [@Barnes2013]. The laboratory balance in use must be of sufficient sensitivity and calibrated frequently. The water content determination may comprise a substantial source of error during the tests, although this uncertainty is often ignored. Figure ___ shows a distribution of 50 replicate water content determinations from the same specimen near its LL (data collected by the author). Even with thorough mixing and the use of a milligram balance, Figure ___  indicates one should expect a standard deviation of ~0.2% water content when sampled from an ostensibly homogenous specimen. 
+\@ref(atterberg-lims-reproducibility-and-repeatability) described the expected uncertainties associated wtih Atterberg limit results. 
+It is next useful to explore the sources of these errors so they can be avoided as much as possible. 
+The tests depend heavily on an accurate determination of the water content. 
+Clean workmanship is essential to avoid flakes of dry soil contaminating the fresh specimen [@Barnes2013]. 
+The laboratory balance in use must be of sufficient sensitivity and calibrated frequently. 
+The water content determination may comprise a substantial source of error during the tests, although this uncertainty source receives less attention than the test mechanics.
+Figure ___ shows a distribution of 50 replicate water content determinations from the same specimen near its LL (data collected by the author). 
+Even with thorough mixing and the use of a milligram balance, Figure ___  indicates one should expect a standard deviation of ~0.2% water content when sampled from an ostensibly homogenous specimen. 
 
 Besides measuring the water content, three chief sources of laboratory error for the Atterberg limits include:
 
@@ -264,7 +327,11 @@ No information was provided about the actual mixing procedure, though one could 
 @Casagrande1958 expressed regret that his original design did not quantitatively specify the rubber base's properties. 
 This led to disparities among the devices produced by various manufacturers, and they yielded different liquid limits despite being otherwise identical. 
 
-@Sherwood1970 concluded that so long as a standard test device is used, differences in operator technique comprise a larger source of error than the device itself. However, a recent survey by @Haigh2016 confirmed that the hardness and resilience of the rubber base does vary widely across national specifications. Even within a rubber type (hard or soft), the coefficient of variation in rubber hardness was around 20%. Analytical solutions by @Haigh2016 predict that a 20% deviation in base stiffness yields a change in the liquid limit of 2-3% of its value (i.e. coefficient of variation). This variability is similar to the standard deviation reported by an ASTM reproducibility study across 14 labs [@ASTMD43182018], suggesting a large amount of inter-laboratory variability could be due simply to variation in the rubber base properties of the devices employed. 
+@Sherwood1970 concluded that so long as a standard test device is used, differences in operator technique comprise a larger source of error than the device itself.
+However, a recent survey by @Haigh2016 confirmed that the hardness and resilience of the rubber base does vary widely across national specifications. 
+Even within a rubber type (hard or soft), the coefficient of variation in rubber hardness was around 20%. 
+Analytical solutions by @Haigh2016 predict that a 20% deviation in base stiffness yields a change in the liquid limit of 2-3% of its value (i.e. coefficient of variation). 
+This variability is similar to the standard deviation reported by an ASTM reproducibility study across 14 labs [@ASTMD43182018]. This finding suggests a large fraction of inter-laboratory variability could be due simply to variation in the rubber base properties of the devices employed. 
 
 Assuming the device meets specification, the most common error sources with the Casagrande apparatus are a worn grooving tool and variability in in drop height caused by a loose locking screw [@Sherwood1970]. 
 The drop height must be frequently calibrated to ensure accurate results [@ASTMD43182018].
@@ -282,17 +349,38 @@ Inadequate mixing of the specimen can also contribute to erroneous blow counts a
 
 ###### Plastic limit
 
-
-
 Sources of error include the operator technique, operator judgement, and weighing errors in the water content determination. 
 
 #### Attempts to improve plastic limit test
 
-Most attempts to improve the plastic limit test have focused on mechanizing the thread-rolling procedure in hopes of improving its reproducibility across operators. Test operators utilize different combinations of force, speed, and displacement when rolling the soil. Collectively these variables were termed ‘rolling path’ by [@Barnes2013]. @Bobrowski1992 described a simple apparatus to aid the operator in producing a thread of precisely 3.2 mm. The device consists of a flat plexiglass plate which is used to roll the thread, rather than the operator’s hand. (Bobrowski and Griekspoor, 1992) also state that paper should be affixed to the base of the device to prevent the thread from sliding and to expedite the drying process. Use of this device is allowed, but not mandated, in the current version of ASTM D4318. This device has been criticized by (Barnes, 2013), who cited the data of (Rashid et al., 2008) to assert the rolling device produces excessively rapid drying and eliminates the soil thread from the view of the operator. 
+Most attempts to improve the plastic limit test have focused on mechanizing the thread-rolling procedure in hopes of improving its reproducibility across operators.
+Test operators utilize different combinations of force, speed, and displacement when rolling the soil. Collectively these variables were termed ‘rolling path’ by [@Barnes2013]. 
+@Bobrowski1992 described a simple apparatus to aid the operator in producing a thread of precisely 3.2 mm. 
+The device consists of a flat plexiglass plate which is used to roll the thread, rather than the operator’s hand. @Bobrowski1992 also stated that paper should be affixed to the base of the device to prevent the thread from sliding and to expedite the drying process. 
+Use of this device is allowed, but not mandated, in the current version of ASTM D4318. 
+The Bobrowski-Griekspoor device was criticized by @Barnes2013, who cited the data of @Rashid2008 to assert the rolling device produces excessively rapid drying and eliminates the soil thread from the view of the operator. 
 
-A fully mechanized thread rolling apparatus was developed by (Temyingyong et al., 2002). Their device used two acrylic plates similar to (Bobrowski and Griekspoor, 1992) and added a DC motor to apply the rolling action. The DC voltage was adjusted to control the rolling speed, and the downward force was altered by the addition of weights to the upper plate. They found that the initial diameter of the soil mass explained a larger amount of variation in the test result than did factors which might be ascribed to the subjective manual method (speed and pressure). The device still appears to be a significant improvement over the hand-rolling method; unfortunately, the device is not commercially available and its use has not been adopted by governing bodies. 
-Barnes (2009) introduced a novel thread-rolling apparatus which allows precise control of the load applied to the soil thread. The device comprises two stainless steel plates: a fixed base and an upper loading plate which is manually oscillated. The load is adjusted by sliding a weight ballast along the side of the device opposite the handle. The further the ballast weight is from a pivot point, the lesser the load on the soil thread. The device is still operated by hand and a constant rate of rolling must be maintained through careful operation. A thin smear of petrolatum is used on the stainless steel plates to encourage extrusion of the soil thread. A number of other useful properties have been developed with this device, as described in the section of this review on soil toughness. 
-Moreno-Marato and Alonso-Azcàrate described a plastic limit test in a soil thread is bent rather than rolled. The soil is wetted to a moldable consistency and flattened to ~3 mm.  A special slicing tool is used to create a rectangular prism of soil having precise dimensions of 3 mm x 3mm x 50 mm. The specimen is then rounded into a cylindrical thread using the same tool. The thread is carefully bent about its center, which is anchored around a stainless steel cylinder. When the thread begins to crack, a caliper is used to measure the distance between the two ends of the thread. The test is repeated for at least two other water contents and the water content of the threads is plotted against the displacement with segmented regression. The shallower segment is extrapolated to zero displacement and this water content is taken as the plastic limit. 
+A fully mechanized thread rolling apparatus was developed by @Temyingyong2002. Their device used two acrylic plates similar to @Bobrowski1992 and added a DC motor to apply the rolling action. 
+The DC voltage was adjusted to control the rolling speed, and the downward force was altered by the addition of weights to the upper plate. 
+@Temyingyong2002 found that the initial diameter of the soil mass explained a larger amount of variation in the test result than did factors which might be ascribed to the subjective manual method (speed and pressure). 
+The device still appears to be a significant improvement over the hand-rolling method; unfortunately, the device is not commercially available and its use has not been adopted by governing bodies. 
+
+
+@Barnes2009 introduced a novel thread-rolling apparatus which allows precise control of the load applied to the soil thread. 
+The device comprises two stainless steel plates: a fixed base and an upper loading plate which is manually oscillated. 
+The load is adjusted by sliding a weight ballast along the side of the device opposite the handle. 
+The further the ballast weight is from a pivot point, the lesser the load on the soil thread. The device is still operated by hand and a constant rate of rolling must be maintained through careful operation. 
+A thin smear of petrolatum is used on the stainless steel plates to encourage extrusion of the soil thread. 
+A number of other useful properties have been developed with this device, as described in the section of this review on soil toughness.
+
+
+@Moreno-Maroto2015a described a plastic limit test in which a soil thread is bent rather than rolled. 
+The soil is wetted to a moldable consistency and flattened to ~3 mm. 
+A special slicing tool is used to create a rectangular prism of soil having precise dimensions of 3 mm x 3mm x 50 mm. 
+The specimen is then rounded into a cylindrical thread using the same tool. 
+The thread is carefully bent about its center, which is anchored around a stainless steel cylinder. When the thread begins to crack, a caliper is used to measure the distance between the two ends of the thread. 
+The test is repeated for at least two other water contents and the water content of the threads is plotted against the displacement with segmented regression. 
+The shallower segment is extrapolated to zero displacement and this water content is taken as the plastic limit. 
 
 Moreno-Marato and Alonso-Azcàrate also described a faster version of their original thread-bending test. In this version only a single thread is prepared and its displacement and water content are extrapolated to zero displacement using an empirical equation. This test meets the original requirements of any plastic limit test which could replace the current method, namely:
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.31)  3 FEB 2021 16:00
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.31)  3 FEB 2021 22:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -896,25 +896,50 @@ Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
 \langwohyphens=\language3
 LaTeX Info: Redefining \_ on input line 43.
 )
+(c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption.s
+ty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption3.
+sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen184
+\captionmargin@=\dimen185
+\captionwidth=\dimen186
+\caption@tempdima=\dimen187
+\caption@indent=\dimen188
+\caption@parindent=\dimen189
+\caption@hangindent=\dimen190
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count309
+\c@continuedfloat=\count310
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/ltcaption
+.sty
+Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+))
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/multirow/multirow
 .sty
 Package: multirow 2021/01/29 v2.7 Span multiple rows of a table
 \multirow@colwidth=\skip62
-\multirow@cntb=\count309
+\multirow@cntb=\count311
 \multirow@dima=\skip63
-\bigstrutjot=\dimen184
+\bigstrutjot=\dimen191
 )
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.s
 ty
-\wrapoverhang=\dimen185
-\WF@size=\dimen186
-\c@WF@wrappedlines=\count310
+\wrapoverhang=\dimen192
+\WF@size=\dimen193
+\c@WF@wrappedlines=\count312
 \WF@box=\box58
 \WF@everypar=\toks24
 Package: wrapfig 2003/01/31  v 3.6
 ) (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count311
+\c@float@type=\count313
 \float@exts=\toks25
 \float@box=\box59
 \@float@everytoks=\toks26
@@ -943,25 +968,25 @@ Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 .sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box61
-\sift@deathcycles=\count312
-\@vwid@loff=\dimen187
-\@vwid@roff=\dimen188
+\sift@deathcycles=\count314
+\@vwid@loff=\dimen194
+\@vwid@roff=\dimen195
 )
-\c@taburow=\count313
-\tabu@nbcols=\count314
-\tabu@cnt=\count315
-\tabu@Xcol=\count316
-\tabu@alloc=\count317
-\tabu@nested=\count318
-\tabu@target=\dimen189
-\tabu@spreadtarget=\dimen190
-\tabu@naturalX=\dimen191
-\tabucolX=\dimen192
-\tabu@Xsum=\dimen193
-\extrarowdepth=\dimen194
-\abovetabulinesep=\dimen195
-\belowtabulinesep=\dimen196
-\tabustrutrule=\dimen197
+\c@taburow=\count315
+\tabu@nbcols=\count316
+\tabu@cnt=\count317
+\tabu@Xcol=\count318
+\tabu@alloc=\count319
+\tabu@nested=\count320
+\tabu@target=\dimen196
+\tabu@spreadtarget=\dimen197
+\tabu@naturalX=\dimen198
+\tabucolX=\dimen199
+\tabu@Xsum=\dimen256
+\extrarowdepth=\dimen257
+\abovetabulinesep=\dimen258
+\belowtabulinesep=\dimen259
+\tabustrutrule=\dimen260
 \tabu@thebody=\toks28
 \tabu@footnotes=\toks29
 \tabu@box=\box62
@@ -993,18 +1018,18 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \UL@hyphenbox=\box68
 \UL@skip=\skip67
 \UL@hook=\toks30
-\UL@height=\dimen198
-\UL@pe=\count319
-\UL@pixel=\dimen199
+\UL@height=\dimen261
+\UL@pe=\count321
+\UL@pixel=\dimen262
 \ULC@box=\box69
 Package: ulem 2019/11/18
-\ULdepth=\dimen256
+\ULdepth=\dimen263
 )
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/makecell/makecell
 .sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen257
-\c@nlinenum=\count320
+\rotheadsize=\dimen264
+\c@nlinenum=\count322
 \TeXr@lab=\toks31
 )
 \cslhangindent=\skip68
@@ -1016,35 +1041,35 @@ LaTeX Warning: Label `tab:labor-per-area-tab' multiply defined.
 )
 \openout1 = `phd-thesis-proposal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 129.
-LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 129.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 130.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 129.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 130.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 129.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 130.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 129.
-Package hyperref Info: Link coloring ON on input line 129.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 130.
+Package hyperref Info: Link coloring ON on input line 130.
 
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.
 sty
@@ -1058,11 +1083,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count321
+\c@section@level=\count323
 )
-LaTeX Info: Redefining \ref on input line 129.
-LaTeX Info: Redefining \pageref on input line 129.
-LaTeX Info: Redefining \nameref on input line 129.
+LaTeX Info: Redefining \ref on input line 130.
+LaTeX Info: Redefining \pageref on input line 130.
+LaTeX Info: Redefining \nameref on input line 130.
 (./phd-thesis-proposal.out) (./phd-thesis-proposal.out)
 \@outlinefile=\write3
 \openout3 = `phd-thesis-proposal.out'.
@@ -1101,39 +1126,44 @@ LaTeX Info: Redefining \nameref on input line 129.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: threeparttable package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 131.
+(Font)              scaled to size 17.28pt on input line 132.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 131.
+(Font)              scaled to size 12.0pt on input line 132.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 11.80774pt on input line 131.
+(Font)              scaled to size 11.80774pt on input line 132.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 7.87183pt on input line 131.
+(Font)              scaled to size 7.87183pt on input line 132.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 5.90387pt on input line 131.
+(Font)              scaled to size 5.90387pt on input line 132.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-31.
+32.
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 11.80884pt on input line 131.
+(Font)              scaled to size 11.80884pt on input line 132.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 7.87256pt on input line 131.
+(Font)              scaled to size 7.87256pt on input line 132.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 5.90442pt on input line 131.
+(Font)              scaled to size 5.90442pt on input line 132.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 11.80646pt on input line 131.
+(Font)              scaled to size 11.80646pt on input line 132.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 7.87097pt on input line 131.
+(Font)              scaled to size 7.87097pt on input line 132.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 5.90323pt on input line 131.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 131
+(Font)              scaled to size 5.90323pt on input line 132.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 132
 .
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 131
+LaTeX Font Info:    Trying to load font information for U+msb on input line 132
 .
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1142,9 +1172,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 135.
+(Font)              scaled to size 24.88pt on input line 136.
 LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 135.
+(Font)              scaled to size 24.88pt on input line 136.
 (./phd-thesis-proposal.toc
 LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
 (Font)              scaled to size 10.0pt on input line 1.
@@ -1191,17 +1221,17 @@ LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
 ]
 Chapter 1.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 20.74pt on input line 141.
+(Font)              scaled to size 20.74pt on input line 142.
 LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 20.74pt on input line 141.
+(Font)              scaled to size 20.74pt on input line 142.
 [7
 
 ]
 Chapter 2.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 162.
+(Font)              scaled to size 14.4pt on input line 163.
 LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 162.
+(Font)              scaled to size 14.4pt on input line 163.
 [8
 
 ]
@@ -1211,25 +1241,29 @@ Chapter 3.
 ]
 Chapter 4.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 7.2pt on input line 238.
+(Font)              scaled to size 7.2pt on input line 239.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 238.
+(Font)              scaled to size 8.0pt on input line 239.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 4.91989pt on input line 238.
+(Font)              scaled to size 4.91989pt on input line 239.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 4.92035pt on input line 238.
+(Font)              scaled to size 4.92035pt on input line 239.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 4.91936pt on input line 238.
+(Font)              scaled to size 4.91936pt on input line 239.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 238.
+(Font)              scaled to size 6.0pt on input line 239.
 File: images/illustrations/player_locations/player_locations.pdf Graphic file (
 type pdf)
 <use images/illustrations/player_locations/player_locations.pdf>
 
-Overfull \hbox (36.16968pt too wide) in paragraph at lines 241--241
-[][]
+Overfull \hbox (36.16968pt too wide) in paragraph at lines 242--242
+[][] 
  []
 
+LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 242.
+LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
+(Font)              scaled to size 9.0pt on input line 242.
 File: phd-thesis-proposal_files/figure-latex/batted-ball-density-1.pdf Graphic 
 file (type pdf)
 <use phd-thesis-proposal_files/figure-latex/batted-ball-density-1.pdf>
@@ -1247,15 +1281,15 @@ File: images/illustrations/cleatmarks/corkboard_concept.png Graphic file (type
 bmp)
 <images/illustrations/cleatmarks/corkboard_concept.png>
 
-Overfull \hbox (36.37566pt too wide) in paragraph at lines 284--284
-[][]
+Overfull \hbox (36.37566pt too wide) in paragraph at lines 285--285
+[][] 
  []
 
 [14]
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 309.
+(Font)              scaled to size 8.0pt on input line 310.
 LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 317.
+(Font)              scaled to size 12.0pt on input line 318.
 [15] [16]
 Chapter 5.
 [17
@@ -1268,22 +1302,19 @@ File: images/illustrations/ball_indentation_release_angle/ball_indentation_rele
 ase_angle.pdf Graphic file (type pdf)
 <use images/illustrations/ball_indentation_release_angle/ball_indentation_relea
 se_angle.pdf>
-
-Underfull \vbox (badness 2057) has occurred while \output is active []
-
 [19] [20] [21]
-Underfull \hbox (badness 1609) in paragraph at lines 496--497
+Underfull \hbox (badness 1184) in paragraph at lines 543--547
 \TU/Arial(0)/m/n/10 Atterberg limit tests can be performed rapidly and require 
-only simple equipment and no
+only simple equipment and few
  []
 
-[22]
 File: phd-thesis-proposal_files/figure-latex/sherwood-overall-comparison-1.pdf 
 Graphic file (type pdf)
 <use phd-thesis-proposal_files/figure-latex/sherwood-overall-comparison-1.pdf>
 
-LaTeX Warning: Reference `fig:' on page 23 undefined on input line 517.
+LaTeX Warning: Reference `fig:' on page 22 undefined on input line 571.
 
+[22] [23]
 File: phd-thesis-proposal_files/figure-latex/sherwood-cov-comparison-1.pdf Grap
 hic file (type pdf)
 <use phd-thesis-proposal_files/figure-latex/sherwood-cov-comparison-1.pdf>
@@ -1291,35 +1322,35 @@ File: phd-thesis-proposal_files/figure-latex/sherwood-cone-cup-comparison-1.pdf
  Graphic file (type pdf)
 <use phd-thesis-proposal_files/figure-latex/sherwood-cone-cup-comparison-1.pdf>
 
-[23] [24] [25] [26]
-Underfull \hbox (badness 1394) in paragraph at lines 594--596
+[24] [25]
+Underfull \hbox (badness 1394) in paragraph at lines 658--660
  \TU/Arial(0)/b/n/10 5.2.3.1.2 Apparatus-related errors[] [][]\TU/Arial(0)/m/n/
 10 Casagrande[][] ([][]1958[][]) expressed regret that his original
  []
 
-[27] [28]
+[26] [27]
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 651.
+(Font)              scaled to size 10.0pt on input line 740.
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 7.2pt on input line 651.
+(Font)              scaled to size 7.2pt on input line 740.
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 5.8pt on input line 651.
-[29]
-Overfull \hbox (2.83426pt too wide) in paragraph at lines 694--695
+(Font)              scaled to size 5.8pt on input line 740.
+[28]
+Overfull \hbox (2.83426pt too wide) in paragraph at lines 783--784
 []\TU/Arial(0)/m/n/10 from other soil properties ([][]Vinod and Sreelekshmy Pil
 lai, 2017[][]; [][]Moreno-Maroto and Alonso-Azcárate,
  []
 
 
-Underfull \hbox (badness 1484) in paragraph at lines 694--695
+Underfull \hbox (badness 1484) in paragraph at lines 783--784
 \TU/Arial(0)/m/n/10 2018[][]) and even used to suggest a new system for classif
 ying soils based on toughness
  []
 
-[30]
+[29]
 File: images/brosnan_survey_PSA.png Graphic file (type bmp)
 <images/brosnan_survey_PSA.png>
-[31] [32]
+[30] [31] [32]
 Missing character: There is no 〖 in font Arial/OT:script=latn;language=dflt;map
 ping=tex-text;!
 Missing character: There is no 〗 in font Arial/OT:script=latn;language=dflt;map
@@ -1333,31 +1364,31 @@ ping=tex-text;!
 Missing character: There is no 〗 in font Arial/OT:script=latn;language=dflt;map
 ping=tex-text;!
 
-Underfull \hbox (badness 4291) in paragraph at lines 765--775
+Underfull \hbox (badness 4291) in paragraph at lines 854--864
 \TU/Arial(0)/m/n/10 Observed packing densities in experiments range from 60% to
  95% of the theoretical
  []
 
 [33]
 LaTeX Font Info:    Font shape `TU/Arial(0)/b/it' will be
-(Font)              scaled to size 10.0pt on input line 805.
+(Font)              scaled to size 10.0pt on input line 894.
 [34] [35] [36] [37]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 900--902
+Underfull \hbox (badness 10000) in paragraph at lines 989--991
 
  []
 
 [38
 
 ]
-Underfull \hbox (badness 2635) in paragraph at lines 910--911
+Underfull \hbox (badness 2635) in paragraph at lines 999--1000
 \TU/Arial(0)/m/n/10 A mechanical apparatus has been developed to emulate a base
 ball or softball athlete’s
  []
 
 
-Underfull \hbox (badness 1348) in paragraph at lines 910--911
+Underfull \hbox (badness 1348) in paragraph at lines 999--1000
 \TU/Arial(0)/m/n/10 foot-to-surface interaction (Figure [][]6.1[][]). The devic
 e was designed and fabricated between
  []
@@ -1367,12 +1398,12 @@ File: images/cleatmark_device.png Graphic file (type bmp)
 File: images/nine-spike-pattern-compressed.png Graphic file (type bmp)
 <images/nine-spike-pattern-compressed.png>
 
-Overfull \hbox (0.90646pt too wide) in paragraph at lines 913--913
-[][] []
+Overfull \hbox (0.90646pt too wide) in paragraph at lines 1002--1002
+[][] [] 
  []
 
 
-Underfull \hbox (badness 4995) in paragraph at lines 924--924
+Underfull \hbox (badness 4995) in paragraph at lines 1013--1013
 []\TU/Arial(0)/b/n/14.4 Dissertation chapter 2: Identifying the brittle-ductile
 
  []
@@ -1389,11 +1420,11 @@ Overfull \hbox (272.96112pt too wide) has occurred while \output is active
 
 [39]
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 952.
+(Font)              scaled to size 8.0pt on input line 1041.
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 952.
+(Font)              scaled to size 6.0pt on input line 1041.
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 952.
+(Font)              scaled to size 5.0pt on input line 1041.
 File: phd-thesis-proposal_files/figure-latex/sand-content-clustering-1.pdf Grap
 hic file (type pdf)
 <use phd-thesis-proposal_files/figure-latex/sand-content-clustering-1.pdf>
@@ -1408,14 +1439,14 @@ ATS \TU/Arial(0)/m/n/10 41
 File: images/gilson_stock_proctor_extruder_photo.png Graphic file (type bmp)
 <images/gilson_stock_proctor_extruder_photo.png>
 
-Underfull \hbox (badness 1231) in paragraph at lines 1043--1044
+Underfull \hbox (badness 1231) in paragraph at lines 1132--1133
 []\TU/Arial(0)/m/n/10 The specimens will be subjected to unconfined compression
  tests at the Penn State Civil
  []
 
 
 LaTeX Warning: Reference `fig:barnes-toughness-vs-water-content-example-plot' o
-n page 43 undefined on input line 1047.
+n page 43 undefined on input line 1136.
 
 
 Overfull \hbox (227.18677pt too wide) has occurred while \output is active
@@ -1439,37 +1470,39 @@ IGN OF SOIL MIXTURES USED ON BASEBALL AND SOFTBALL INFIELDS \TU/Arial(0)/m/n/10
 [47]
 Chapter 7.
 
-Overfull \hbox (54.20062pt too wide) in alignment at lines 1252--1257
+Overfull \hbox (54.20062pt too wide) in alignment at lines 1341--1346
+ [] [] [] [] [] 
+ []
+
+LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
+(Font)              scaled to size 9.0pt on input line 1347.
+
+Overfull \hbox (54.20062pt too wide) in alignment at lines 1346--1351
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (54.20062pt too wide) in alignment at lines 1257--1262
+Overfull \hbox (54.20062pt too wide) in alignment at lines 1351--1353
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (54.20062pt too wide) in alignment at lines 1262--1264
+Overfull \hbox (54.20062pt too wide) in alignment at lines 1353--1355
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (54.20062pt too wide) in alignment at lines 1264--1266
+Overfull \hbox (54.20062pt too wide) in alignment at lines 1355--1379
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (54.20062pt too wide) in alignment at lines 1266--1290
+Overfull \hbox (54.20062pt too wide) in alignment at lines 1379--1403
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (54.20062pt too wide) in alignment at lines 1290--1314
- [] [] [] [] [] 
- []
-
-
-Overfull \hbox (54.20062pt too wide) in alignment at lines 1314--1324
+Overfull \hbox (54.20062pt too wide) in alignment at lines 1403--1413
  [] [] [] [] [] 
  []
 
@@ -1478,13 +1511,13 @@ Overfull \hbox (54.20062pt too wide) in alignment at lines 1314--1324
 ] [49]
 Chapter 8.
 
-Underfull \hbox (badness 1701) in paragraph at lines 1364--1366
+Underfull \hbox (badness 1701) in paragraph at lines 1453--1455
 [][]\TU/Arial(0)/m/n/10 Barnes, G.E. 2013a. The Plastic Limit and Workability o
 f Soils. : 427. [][]$[][][][][] [] [] [] [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1364--1366
+Underfull \hbox (badness 10000) in paragraph at lines 1453--1455
 [][][][][][][][] [] [][][][][][][][][][] [] [][] [] [][] [] [][][] [] [][][][][
 ][][][][][] [] [][][][][][][][][][][][][][] [] [][] [][] [][] [][] [][][] [][] 
 [][][] [] [][][][][][] [] [][] []
@@ -1493,34 +1526,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 1364--1366
 [50
 
 ] [51] [52]
-Overfull \hbox (13.27837pt too wide) in paragraph at lines 1460--1462
+Overfull \hbox (13.27837pt too wide) in paragraph at lines 1555--1557
 \TU/Arial(0)/m/n/10 determination of the liquid limit. Geotechnique 20(2): 203–
 208. doi: 10.1680/geot.1970.20.2.203[][][][][]. 
  []
 
 
-Underfull \hbox (badness 3724) in paragraph at lines 1481--1483
+Underfull \hbox (badness 3724) in paragraph at lines 1579--1581
 [][]\TU/Arial(0)/m/n/10 Wikipedia. Fall cone test. [][]$[][][][][] [] [] [] [][
 ] [] [][][][][][][][][] [] [][][] [] [][][][] [] [][][][] [] [][] [] [] [] [][]
 [][][][] [] [][] [] [] [] [][][][][][]$[][]
  []
 
 
-Overfull \hbox (117.45909pt too wide) in paragraph at lines 1484--1486
+Overfull \hbox (117.45909pt too wide) in paragraph at lines 1582--1584
 [] [] [][] [] [] [] [][][][][][][][] [] [][][] [] [][] [] [] [] [][][][] [] [][
 ] [] [][] [] [] [] [][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1484--1486
+Underfull \hbox (badness 10000) in paragraph at lines 1582--1584
 [][] [] [] [] [][][][][] [] [][][][] [] [][] [] [] [] [][][][] [] [][] [] [] []
  [][][][] [] [][] [] [] [] [][][][][][][][][][][] [] [][][] [] [][][] [] [][][]
  [] [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1484--1486
+Underfull \hbox (badness 10000) in paragraph at lines 1582--1584
 [] [] [][][][][][][] [] [][] [] [] [] [][][][][][][][][] [] [][] [] [] [] [][][
 ][][][][][][][][] [] [][] [] [] [] [][][][][][][][][][][][] [] [][][] [] [][] [
 ] [] []
@@ -1537,12 +1570,12 @@ Package rerunfilecheck Info: File `phd-thesis-proposal.out' has not changed.
 (rerunfilecheck)             Checksum: F9065D7850B6AACD28D035C9265AFB9F;15271.
  ) 
 Here is how much of TeX's memory you used:
- 18685 strings out of 479212
- 331143 string characters out of 5873185
- 787644 words of memory out of 5000000
- 37901 multiletter control sequences out of 15000+600000
- 411204 words of font info for 111 fonts, out of 8000000 for 9000
+ 19908 strings out of 479212
+ 355479 string characters out of 5873185
+ 810800 words of memory out of 5000000
+ 39113 multiletter control sequences out of 15000+600000
+ 411228 words of font info for 114 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 98i,9n,125p,1439b,525s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,10n,125p,1439b,525s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on phd-thesis-proposal.pdf (53 pages).

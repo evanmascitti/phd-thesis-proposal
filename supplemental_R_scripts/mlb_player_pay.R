@@ -44,30 +44,33 @@ salary_distribution_2019_plot <- salaries  %>%
                               breaks = 5*10^c(5:7),
                               labels = scales::label_dollar())+
   ggplot2::scale_y_continuous(name = "n",
-                              limits = c(0, 120),
+                              limits = c(0, 100),
                               breaks = seq(0, 100, 20))+
-  ggplot2::geom_segment(ggplot2::aes(x= 8*10^5,
-                                     xend = 620000,
-                                     y= Inf,
-                                     yend= 100),
-                        color ='grey75')+
-  ggplot2::annotate('label', x=1200000,
-                    y=Inf,
-                    label = 'league minimum ($555,000)',
+  # ggplot2::geom_segment(ggplot2::aes(x= 6*10^5,
+  #                                    xend = 6.2*10^5,
+  #                                    y= 97,
+  #                                    yend= 100),
+  #                       size = 0.25,
+  #                       color ='grey75')+
+  ggplot2::annotate('text', 
+                    x=0.8*10^6,
+                    y=96,
+                    label = 'league minimum \n($555,000)',
                     vjust = 'inward',
+                    hjust = 'inward',
                     label.size = 0,
+                    label.padding = ggplot2::unit(0.125, "lines"), 
                     color = 'grey50',
-                    size = 3)+
-  ggplot2::labs(title = '2019 MLB player salaries, USD',
+                    size = 1.75)+
+  ggplot2::labs(title = '2019 MLB player salaries',
                 subtitle = glue::glue("Total payroll = {scales::dollar(total_2019_payroll_billions, suffix = ' billion')}"))+
-  cowplot::theme_cowplot()+
+  cowplot::theme_cowplot(font_size = 12)+
   ggplot2::theme(
     axis.title.y = ggplot2::element_text(angle = 0, vjust = 0.5),
     axis.line.y = ggplot2::element_blank(),
     plot.margin = ggplot2::margin(rep(20, 4))
   )
-
-
+salary_distribution_2019_plot
 salary_time_series <- salaries %>% 
   dplyr::group_by(year) %>% 
   dplyr::summarise(mean_salary = mean(salary, na.rm= T),
@@ -77,8 +80,10 @@ salary_time_series <- salaries %>%
                       values_to = 'salary') %>%
   dplyr::filter(year < 2020) %>% 
   ggplot2::ggplot(ggplot2::aes(year, salary, color = salary_measurement))+
+  ggplot2::scale_x_continuous(breaks = scales::breaks_width(width = 10, offset = 0))+
   ggplot2::geom_line()+
   colorblindr::scale_color_OkabeIto()+
+  cowplot::theme_cowplot(font_size = 12)+
   ggplot2::facet_wrap(~salary_measurement, scales = 'free')
 
 #### 
@@ -126,14 +131,15 @@ mlb_revenues <- mlb_revenues_raw %>%
 
 mlb_revenues_plot <- mlb_revenues %>% 
   ggplot2::ggplot(ggplot2::aes(year, infl_adj_rev/10^9))+
-  ggplot2::geom_line(color = 'darkgreen')+
-  ggplot2::geom_point(color = 'darkgreen')+
+  ggplot2::geom_line(color = 'darkgreen', alpha= 0.8)+
+  ggplot2::geom_point(color = 'darkgreen', alpha = 0.8)+
   ggplot2::scale_y_continuous(name = 'Gross revenues, billions USD',
                               labels = scales::label_dollar(suffix = " B", accuracy = 1),
                               breaks = seq(0,12,2),
                               limits = c(0, 12))+
+  cowplot::theme_cowplot(font_size = 12)+
   cowplot::background_grid(color.major = 'grey95')+
-  ggplot2::labs(title = 'MLB gross revenue, 1995-2019*',
+  ggplot2::labs(title = 'MLB gross revenues*',
                 caption = '*Values inflation-adjusted to 2019 dollars. \nData source: Forbes',
                 x= "")+
   remove_y_lines()+

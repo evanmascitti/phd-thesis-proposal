@@ -3,7 +3,7 @@ table3data <- readr::read_csv("data/lit-review-data/Sherwood_Ryley_1970/table3.c
                       names_to = 'soil',
                       values_to = 'water_content') %>% 
   dplyr::mutate(soil = factor(paste("Soil #", soil)),
-         soil = fct_reorder(soil, desc(water_content)),
+         soil = fct_reorder(soil, water_content),
          method = if_else(method == 'fall_cone',
                           "Fall-cone device",
                           "Casagrande cup"),
@@ -31,7 +31,8 @@ sherwood_ryley_1970_table3_plot <- table3data %>%
         legend.title.align = 0.5,
         legend.position = 'none',
         axis.title.y = element_blank(),
-        axis.ticks.y = element_blank())
+        axis.ticks.y = element_blank(),
+        axis.line.y = element_blank())
 ggplot2::last_plot()
 
 

@@ -40,7 +40,7 @@ The apparatus comprises a pneumatic cylinder which combines high travel speed an
 The device was designed and fabricated between May 2019 and March 2020. Calibration and tuning of the machine is ongoing. The first set of mixtures is scheduled to be tested in Nov 2020. The goal is to complete all tests with this device by the end of 2021.
 
 
-## Dissertation chapter 2: Identifying the brittle-ductile transition of infield soil mixtures subjected to disruption by baseball cleats
+## Dissertation chapter 2: Identifying the brittle-ductile transition of infield soil mixtures subjected to disturbance by baseball cleats
 
 
 ### Principal research questions

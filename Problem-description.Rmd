@@ -1,3 +1,8 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: inline
+---
 # Description/importance of problem {#problem-description}
 
 <!-- The infield is a crucial .......all that stuff here, including the figures of the field, the batted ball density, etc  -->
@@ -137,7 +142,7 @@ labor_per_area_plot
 
 Great effort is made by the grounds staff to sustain the infield in a playable condition. A host MLB franchise may lose >$500,000 if a game is canceled because refunds must be offered to fans, yet overhead stadium operating costs are fixed. Therefore, every attempt is made to keep the field in a playable condition and complete the game. At the youth level, most revenue is driven by concessions and tournament registration fees. Repeated postponements can undermine a facility's operating model. It is clear that playing games during and after rain events is critical for both professional and recreational operations.
 
-```{r mlb-salaries, fig.cap='MLB athletes are valuable assets. Their safety must not be compromised by the playing surface.', fig.show='hold'}
+```{r mlb-salaries, fig.cap='MLB athletes are valuable assets. Their safety and performance must not be compromised by the playing surface.', fig.show='hold'}
 source('supplemental_R_scripts/mlb_player_pay.R')
 cowplot::plot_grid(salary_distribution_2019_plot, mlb_revenues_plot, align = "h")
 
