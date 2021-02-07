@@ -102,6 +102,9 @@ scr_possible_vals %>%
 
 ## Dissertation chapter 3: Toughness-water content relations of clay soils via unconfined compression testing
 
+In the hypothetical sense any test which applies a known load and measures a deformation could be used to measure toughness. @Barnes2013 suggested his apparatus would correlate well with the Moisture Condition Value test, which is the logarithm of the number of blows needed to compact a fixed mass of soil to a pre-determined volume.
+
+
 
 ### Principal research questions
 

@@ -186,7 +186,8 @@ att_lims_variation_plot <- ggplot(
     ) +
     geom_point(
       position = position_jitter(height = 0.2, seed = 1),
-      alpha = 1 / 3 ) +
+      alpha = 1 / 3,
+      size = 3) +
     stat_summary(
       geom = "errorbarh",
       fun.data = ~ mean_se(., mult = 1.96),

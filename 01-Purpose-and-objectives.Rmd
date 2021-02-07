@@ -1,22 +1,26 @@
 # Purpose and Objectives {#purpose-and-objectives}
 
 ## Purpose {#purpose}
-The motive for initiating this research is simple: baseball has an important influence on our American culture and economy, yet science has paid little attention to the surface on which it is played. The safety, enjoyment, and economic value of baseball fields can be improved applying the scientific method to this topic
 
-## Objectives {#objectives}
-
-The objectives of my thesis are twofold: (1) create a new way to assess infield soil performance, and (2) use the new framework to design improved soil mixtures. 
+Baseball plays an important role in the American economy and culture. Using the scientific method to study baseball fields can improve their safety, enjoyment, and economic value at all levels of play. 
 
 **My intent is to answer these open-ended questions:**
 
-1. How can infield soil performance be objectively quantified?
+1. How can infield soil performance be quantified objectively?
 2. How can the performance of infield soils be improved?
-3  Can a rational basis for mix design be developed to reflect soil behavior?
-3. Which lab tests best to predict the performance of a mix?
+3.  Can a rational basis for mix design be developed to reflect soil behavior?
+4. Which lab tests best to predict the performance of a mix?
 
-**The anticipated outcomes from this research are:**
-  
-1. New laboratory methods for measuring the behavior of baseball and softball infield soils
-2. A quantitative framework for designing new infield mixes and amending existing infields
-3. Refereed journal publications, trade magazine articles, and technical presentations
-4. Software which can be used beyond this project's scope and lifespan
+## Formal objectives {#objectives}
+
+The broad goals of my thesis are twofold: (1) create a new way to assess infield soil performance, and (2) use the new framework to design improved soil mixtures. 
+
+These may be expanded and restated as formal objectives:
+
+1. Develop a laboratory method to pinpoint each of the two critical water contents for any infield soil:
+  a. the transition from cleat-in/cleat-out behavior to chip-forming or clod-forming failure
+  b. the threshold at which the soil cannot provide sufficient resistance for safe footing
+2. Extend the difference between 1(a) and 1(b) by systematically varying the components of a soil mixture. 
+3. Determine the simplest means of predicting a soil's performance
+
+

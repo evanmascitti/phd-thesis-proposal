@@ -77,3 +77,24 @@ ___
 However, he concluded with a more optimistic tone by surmising that results could be improved with better operator training and a providing them with more feedback. He suggested that operators be offered opportunity to calibrate their own results to those for standard materials having established values. 
 
 ___
+
+
+The remolded zone around the indentation is likely to be smaller and more uniform with space [@Deepa2013]. Ductile behavior is usually associated with higher mechanical strain and more generation of heat [@Perez2017]. The remolded zone surrounding the cleat will be small [@Perez2017]. 
+
+___
+
+
+
+**The anticipated outcomes from this research are:**
+  
+1. New laboratory methods for measuring the behavior of baseball and softball infield soils
+2. A quantitative framework for designing new infield mixes and amending existing infields
+3. Refereed journal publications, trade magazine articles, and technical presentations
+4. Software which can be used beyond this project's scope and lifespan
+
+___
+
+Of Atterberg's original 5 limits, only (2) and (4) are in use today and they are termed the liquid and plastic limits respectively. 
+The following sections detail the mechanics underlying these tests and their limitations. 
+
+___
