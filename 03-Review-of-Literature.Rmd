@@ -517,16 +517,22 @@ The purpose of blending multiple soils is to create a mixture with properties no
 These soils have been termed engineered soils [@Thompson2008a]. 
 Potters and brick masons were the likely first in antiquity to develop engineered soils using simple intuition and experience. 
 Un-fired bricks containing clay mixed with organic residues have been dated to over 9,000 years before the present [@Staubach2005].
-Today, engineered soils are used for agricultural, horticultural, environmental, engineering, and recreational purposes [@Leake2014].
+Engineered soils are now used for agricultural, horticultural, geotechnical, environmental, and recreational purposes [@Leake2014].
 
-Deliberate soil mixing also ensures a nearly identical soil can be repeatedly produced over time. 
-If natural variation in raw material properties is encountered, the mixture can be adjusted so that its final properties do not vary.
+Control over the mixing process also permits a nearly identical soil to be produced repeatedly. 
+When natural variation is encountered in the raw materials, the mixture may be adjusted so its final properties do not vary.
 The nature of soil solids is wide-ranging. Because these materials may be combined in any ratio, it is easy to imagine the nearly infinite number of possible soil mixtures.
 
 
-The raw components incorporated into a mixture depend on its intended use. Materials which retain plant-available water and nutrients are favored for agricultural or horticultural operations. These include fired or expanded ceramic granules and various types of organic matter. Soil mixtures produced for engineering applications are usually limited to inorganic components Gravel, sand, soil, coal ash, and lime are the commonly used raw materials. 
+The raw components incorporated into a mixture depend on its intended use. 
+Materials which retain plant-available water and nutrients are favored for agricultural or horticultural operations. 
+These include fired or expanded ceramic granules and various types of organic matter. 
+Soil mixtures produced for engineering applications are usually limited to inorganic components.
+Gravel, sand, soil, coal ash, and lime are commonly components. 
 
-Soil mixtures for baseball and softball fields typically contain two materials - a sand and a fine-grained soil. Table \@ref(tab:soil-mixture-study-list) comprises a selection of studies which tested mixes containing sand plus a single soil (2-component mix) or two types of soil (3-component mix). Table \@ref(tab:soil-mixture-study-list) shows that a variety of methods have been employed to evaluate the mixtures, including Atterberg limits, compaction, shear strength, permeability, static compressibility, and pore size distribution.
+Soil mixtures for baseball and softball fields typically contain two materials - a sand and a fine-grained soil.
+Table \@ref(tab:soil-mixture-study-list) comprises a selection of studies which tested mixes containing sand plus a single soil (2-component mix) or two types of soil (3-component mix). 
+Table \@ref(tab:soil-mixture-study-list) also shows that researchers have evaluated the mixtures using a variety of analyses. These include Atterberg limits, compaction, shear strength, permeability, static compressibility, and pore size distribution.
 
 ```{r soil-mixture-study-list}
 #.... %>% 
@@ -537,12 +543,7 @@ Soil mixtures for baseball and softball fields typically contain two materials -
 
 This section describes published research pertaining to the behavior of sand-soil mixtures. 
 
-
-
-### pasted from word 2021-1-28
-
-
-#### Transitional fines content of coarse-fine mixtures
+### Transitional fines content of coarse-fine mixtures
 
 Loads applied to a coarse-grained soil are transmitted through a skeleton of grain-to-grain contacts. 
 The soil's behavior is relatively independent of water content.
@@ -551,9 +552,9 @@ If sufficient fines are added, they begin to participate in the force chain and 
 At this point the soil’s behavior is dominated by the fines and the coarse grains act only as inert inclusions. 
 The percent fines at which the soil's behavior changes from that resembling the 'host' sand to that of the fines has been termed the “transitional fines content.” The transitional fines content (TFC) is relevant to most infield mixes because they have fines content near the TFC.
 
-It is important to acknowledge that the TFC is not a universal number (for example, 30%). Reported values range from 15 to 45% by dry mass [@Zuo2015]. The TFC value varies because (1) it depends on the behavioral threshold of interest (for example, compressibility, shear strength, or permeability), and (2), a unique ratio exists for every combination of coarse-grained and fine-grained components. The total state of particle packing depends on the grain-size distribution of each component, the plasticity of the fines, the means of compaction or consolidation, and the state of effective stress [@Zuo2015].
+It is important to acknowledge that the TFC is not a universal number (for example, 30%). Reported values range from 15 to 45% by dry mass [@Zuo2015]. The TFC value varies across mixtures because (1) it depends on the behavioral threshold of interest (for example, compressibility, shear strength, or permeability), and (2), a unique ratio exists for every combination of coarse-grained and fine-grained components. The total state of particle packing depends on the grain-size distribution of each component, the plasticity of the fines, the means of compaction or consolidation, and the state of effective stress [@Zuo2015].
 
-The TFC has been defined using several methods (Table \@ref(tab:tfc-definition-methods)). A few examples include: calculations from phase relations and index properties [@Thevanayagam1998; @Monkul2007; @Cabalar2011], the minimum global void ratio following compaction [@Lade1998; @Ueda2011], undrained shear strength during triaxial tests [@Thevanayagam1998; @Vallejo2000; @Cabalar2017; @Kim2018], parameters of the normal compression line or critical state line,(@Cabalar2011; @Carrera2011; @Shipton2012] and liquefaction potential [@Lade1997].
+Researchers have defined the TFC using several methods (Table \@ref(tab:tfc-definition-methods)). A few examples include: calculations from phase relations and index properties [@Thevanayagam1998; @Monkul2007; @Cabalar2011], the minimum global void ratio following compaction [@Lade1998; @Ueda2011], undrained shear strength during triaxial tests [@Thevanayagam1998; @Vallejo2000; @Cabalar2017; @Kim2018], parameters of the normal compression line or critical state line,(@Cabalar2011; @Carrera2011; @Shipton2012] and liquefaction potential [@Lade1997].
 
 ```{r tfc-definition-methods}
 tfc_definition_methods <- readr::read_csv("data/lit-review-data/tables/selected_transitional_fines_content_studies.csv") %>%
@@ -568,70 +569,105 @@ tfc_definition_methods
 
 
 
-### Volume and mass relations
+#### Volume and mass relations
 
-In an artificial mixture of two or more soils, the relative amounts of each components may be compared on a volumetric or mass basis. The dry mass of solids is considered a more absolute measure of the quantity of each component, as these never change despite fluctuations in water content or bulk density. The ratios or percentage to which the component fractions are normalized should also be made explicit. The most common means to express the amount of each component is to set the total dry mass of the mixture equal to 100% : 
-% sand=g_sand/(g_sand+g_clay )
-However, others have advocated for enumerating the amount of sand to the amount of clay. For example, if 40 grams sand are added to 100 grams clay, this mixture would be termed 40% sand. This approach is analogous to computing water content as the mass of water related to the mass of dry soil. It is scarcely used in scientific literature.   
-% sand=g_sand/g_clay 
-Mass-based ratios are the most rational basis for mixing and testing, yet the behavior of the soil is governed by particle-to-particle relations in physical space. Therefore volumetric relations provide a more accurate depiction of the soil’s behavior, especially when the mixture components have very different specific gravities. 
+The amount of each component in a soil mixture may be reported on a volumetric or mass basis. 
+Soil suppliers often describe their mixes by the loose volume of each component prior to mixing (for example, 80% sand with 20% peat). 
+The relative dry mass of solids is considered more absolute because these never change despite fluctuations in water content or bulk density. 
+The ratios or percentage to which the component fractions are normalized should also be made explicit. The mass of each component usually normalized to the total dry mass: 
 
-The importance of intergranular void ratio
-An important variable in the behavior of sand-clay mixtures is the configuration of the sand grains within the bulk soil matrix. The term intergranular void ratio was introduced by (Thevanayagam, 1998) to enumerate the configuration of the coarse grains in a soil mixture. The intergranular void ratio is derived from phase relations (Fig __) by treating the solid fines as voids within the bulk volume, which is held equal to unity.
+$$ %~sand~=\frac{g_{sand}}{(g_{sand}+g_{clay})} $$
+However, others have advocated for enumerating the amount of sand to the amount of clay. For example, if 40 grams sand are added to 100 grams clay, this mixture would be termed 40% sand @[Briish clays textbook]. 
+
+$$ %~sand~=\frac{g_{sand}}{g_{clay}} $$
+
+This approach is analogous to computing water content as the mass of water related to the mass of dry soil. However, it is rarely used in scientific literature.   
+
+
+<!-- this paragraph has to get re-worked , too clumsy and verbose-->
+Mass-based measures are the most rational basis for mixing and testing, but soil behavior is governed by particle-to-particle relations in space. Volumetric relations provide a more accurate depiction of the soil’s behavior, especially when the mixture components have very different specific gravities. If relative masses are known, volumetric relations may be readily computed from phase relations.
+
+#### Intergranular void ratio
+
+The term intergranular void ratio was introduced by @Thevanayagam1998 to describe the configuration of large grains in a coarse-fine mixture. 
+Intergranular void ratio may be derived from phase relations (Fig __) by considering the solid fines as voids within the bulk volume, which is held equal to unity.
  
- The intergranular void ratio may be compared with the minimum and maximum void ratio of the pure sand as determined by standard test methods. When the intergranular void ratio exceeds that of the host sand, it is considered that the soil’s behavior will no longer be governed solely by the coarse grain contacts. 
+The intergranular void ratio may be compared with the minimum void ratio of the pure sand. When the void ratio of the granular phase surpasses that of the host sand, behavior will no longer be governed by contact between coarse grains. 
 
 ** good verbiage here : ** Many authors have considered the TFC equivalent to the fines content which produces the lowest total void space. This approach may not reflect the actual behavior of the soil because the global void ratio may not reach its minimum until $e_{sand}$ has already exceeded the minimum $e_{sand}$ for the host sand alone. The coarser grains act mostly independent of one another and behavior is already governed by the fines, thus the transition occurs at a lower fines content than would be suggested by the global void ratio [@Cabalar2011]. 
-Factors influencing the transitional fines content
-Size ratio
-TFC values may be computed analytically from phase relations and minimum/maximum void ratios, yet derived values rarely coincide with those observed in experiments(Zuo and Baudet, 2015). In practice, observed volumetric packing densities (i.e. volumetric solid fraction) are always lower than the theoretical maximum because the calculations rely on simplifying assumptions which are unlikely to be satisfied(Zuo and Baudet, 2015). These assumptions are:
+
+#### Size ratio
+
+TFC values can be computed analytically from phase relations and minimum/maximum void ratios, but derived values rarely coincide with those observed in experiments @Zuo2015. Experimental packing densities ($V_s$) are always lower than the theoretical maximum because the calculations rely on simplifying assumptions which are unlikely to be satisfied [@Zuo2015]. Observed packing densities in experiments range from 60% to 95% of the theoretical maximum [@Furnas1931; @McGeary1961; @Zuo2015].
+
+These assumptions are:
 	The fines are “infinitely small”
 	The coarse grains are smooth spheres
 	Both the coarse and fine soils are packed to their respective optimum densities  
-Observed packing densities in experiments range from 60% to 95% of the theoretical maximum(Furnas, 931; McGeary, 1961; Zuo and Baudet, 2015). 
-An important element of the discrepancy between calculations and experiments is the size ratio between the coarse and fine components (Lade et al., 1998; Ueda et al., 2011). The size ratio is given as: 
- R=〖D_50〗_sand/〖D_50〗_fines 
-The agreement between calculation and experiment is enhanced with increasing size ratio(Lade et al., 1998; Zuo and Baudet, 2015). If the coarse and fine soils have similar mean grain sizes, mis-fitting and lodging of fines between the coarse grains is responsible for creating additional voids. (Lade et al., 1998) showed that when R < 7, an increase in R imparts a relatively steep increase in packing density. Additionally, (Lade et al., 1998) showed analytically that a void between closely packed spheres of equal sizes has a diameter of ~ 1/6.4 that of the large particles. Therefore, there is a fundamental reason for the abrupt change in slope at R~7. The effect is lessened once R > 7, and the observed void ratio approaches the theoretical maximum asymptotically. Numerical simulations indicate the intergranular void ratio practically independent of 〖D_50〗_fines when R > 100. (Ueda et al., 2011)
 
-			Uniformity of each component
-The theoretical maximum packing density of a two-component mixture is increased when the maximum density of each component is greater. If the mean grain size is suficintly different bewtewne the two components, a wider widening the particle size distribution within each individual component will increase the packing density of each component without causing the fines to interfere with packing of the sand. 
 
-Number of mix components
-As the number of components in the mixture increases, the achievable packing density asymptotically approaches the specific gravity of the solids (zero void space). A four-component mixture by (McGeary, 1961) achieved a volumetric packing density of 0.951 (less than 5 % porosity). This extreme density was only achieved in the experiments by first vibrating the coarsest component to its maximum density, then adding the next finer component and vibrating until it fully penetrated the remaining voids. 
-Plasticity of fines
-The majority of research on TFC mixtures has focused on sand mixed with nonplastic fines. This likely reflects the greater engineering liquefaction potential of silt and also the relative speed at which the experiments can be performed. Mixtures of sand with silt are easily vibrated to their maximum density in an air-dry condition, while investigations of sand mixed with plastic clay require more time- and labor-intensive proctor compaction methods. 
-Plasticity index is positively correlated with optimum water content for compaction(Sridharan and Nagaraj, 2005; Verma and Kumar, 2019). Therefore, in a compaction experiment, a higher plasticity clay would be expected to have a lower mass percent of fines, as more of the intergranular space is occupied by water rather than clay solids. 
+The size ratio between the coarse and fine components partially explains the discrepancy between calculated and experimental values [@Lade1998; @Ueda2011]. The size ratio is given as: 
+
+$$ R= \frac{D_{50~sand}}{D_{50~fines}}  $$
+The disparity between calculations and experiments increases with decreasing size ratio [@Lade1998; @Zuo2015]. 
+If the coarse and fine soils have similar $D_{50}$, lodging of fines between the coarse grains is responsible for creating additional voids. 
+A meta-analysis by @Lade1998 concluded that if $R$ < 7, any increase in the size ratio imparts a relatively steep increase in packing density (see \@ref(fig:lade-1998-figure-7)).
+
+```{r lade-1998-figure-7, fig.cap='When the ratio of particle diameters is < 7, increases in the size ratio improve packing density. Above R of 7-10, little density increase is observed. Reproduced from Lade et al. (1998).'}
+knitr::include_graphics('images/illustrations/Lade_1998_Figure_7/Lade_1998_Figure_7.svg')
+```
+
+Additionally, @Lade1998 showed that a void between closely packed spheres of equal sizes has a diameter of ~ $\frac{1}{6.4}$ that of the large particles. 
+Therefore, there is a fundamental reason for the abrupt change in slope at $R$~7. 
+For further increases in $R$, the observed void ratio slowly decreases toward its theoretical minimum. 
+Numerical simulations indicate the intergranular void ratio is practically independent of $D_{50~fines}$ when $R$ > 100 [@Ueda2011].
+
+The geometrical calculations by @Lade1998 assume a single particle size for each mix component. The packing density $V_s$ of a two-component mixture is further increased when each individual component is well-graded. @Red1995 provided solutions for the optimum density of multi-phase mixtures when each has a log-normal particle size curve. 
+
+#### Mixtures with more than 2 phases
+
+Additional voids may be filled by in a coarse-fine mixture by adding progressively smaller particles. The overall void volume approaches zero as more components are added. @McGeary1961 achieved a volumetric packing density of 0.951 (less than 5% porosity) with a four-component mixture. This extremely high packing density could only be achieved by first vibrating the coarsest component to its maximum density, then adding the next finer component and vibrating until it fully penetrated the remaining voids. @McGeary1961 noted that this mixture could still be poured from its container.
+
+
+#### Plasticity of fines
+
+Most research on the transitional fines content has focused on sand mixed with nonplastic fines. 
+This research bias is likely due to the greater liquefaction risks posed by silt compared to clay. 
+It also may reflect the speed at which the experiments can be performed. 
+Mixtures of sand with silt can be vibrated to their maximum density in an air-dry condition, while investigations of sand mixed with plastic clay require more laborious dynamic compaction methods [@ASTMD4253-16; @ASTMD698-12e2]. 
+Plasticity index has been positively correlated with optimum water content for compaction [@Sridharan2005; @Verma2019].
+Therefore, by increasing the plasticity of the fines, one would expect the maximum achievable density of a sand-clay mix to occur at a lower fines content. Compared to a low-plasticity clay, more of the intergranular space is occupied by water in a zero-air voids condition ($S_e$ = 1). 
  
 
-			Method of compaction/ compaction energy
-Mixtures subjected to static compression in an oedometer exhibit typical void ratio vs. log pressure curves. When this method of volume reduction is used, higher ultimate density values are attained than when using dynamic compaction, such as in the standard and modified Proctor tests. The difference in packing can probably be attributed to more complete evacuation of air from the voids. 
-Transitional fines content- how to define?
-		Volume vs mass (again)
-Maximum density
-		Behavior- undrained strength? 
+#### Method of compaction/consolidation
 
-A qualitative definition of the transitional fines content is when the behavior of a soil mixture becomes more similar to the behavior of the fines alone than the sand alone. A transition in actual soil behavior, however defined, is of greater practical interest than a surrogate marker such as void ratio [which is more aptly considered a state parameter than an index property].
+Mixtures subjected to static compression in an oedometer exhibit typical void ratio vs. log pressure curves. 
+When this method is used, higher ultimate density values are attained compared to dynamic compaction tests.
+The difference in ultimate density can be attributed to more complete evacuation of air from the voids. 
+A soil compacted at its optimum water content retains 5-15% air voids ($S_e=85-95%$) [@Holtz2010]. 
+Slow consolidation from a saturated condition generates a higher final density because there is no entrapped air.
+Oedometer experiments on artificial soil mixtures probably have less practical significance than compaction experiments because engineered soils are usually installed in an unsaturated condition. 
 
+#### Transitional fines content summary
 
-## TFC summary
+- There is no universal value for the TFC (for example, 70% sand by mass). 
 
-- From the above it is clear that there is no unique value for the TFC (for example, 70% sand by mass).
+- Factors affecting the TFC value in a binary mixture include sand gradation, fines plasticity, compaction energy, and behavioral parameter of interest.
 
-- descriptions of behavioral thresholds are better specified using volumetric relations of the solid constituents rather than mass-based values because of differences in speecific gravity of the soil particles and the relative density of the bulk mixture
+- descriptions of behavioral thresholds are best specified using volumetric relations to account for the presence of water and specific gravity differences between the solids
  
-- analytical solutions complimented with measured index properties (i.e. maximum and minimum void ratio of the host sand) provide a useful starting point or estimation, but experiments are required for a more precise solution.
+- Calculations provide a useful starting point or estimation of the TFC, but experiments are required for a more precise solution.
 
-There is no unique value for the TFC. The TFC is different for every combination of an an arbitrary sand and an arbitrary clay 
 
-## Atterberg limits of sand-clay mixtures
-The Atterberg tests have been used to assess the behavior of sand-clay mixtures. Although the tests are intended to characterize silts and clays, the test results also reflect the size and shape of the sand fraction in an artificial sand-clay mixture.
-This section summarizes research on the Atterberg limits of artificial soil mixtures. Two-component mixtures (sand with a single type of clay material) and three-component mixtures (sand with two forms of clay material) are both discussed. For brevity, in this section the term “clay” is used to mean the fine-grained soil component of the mixture and does not connote any particle size definition. 
-___
-The term “clay” connotes varied meanings to different fields. In this dissertation, in the spirit of brevity, I use the term “clay” in this dissertation in its colloquial sense- that is a fine-grained soil material that can be shaped and molded. When soil mixtures are made one does not typically consider only the fraction of mineral solids having < 2 μm equivalent Stoke’s diameter. Instead, the mix is made on the basis of a specified ratio between 2 or more soils which are combined. 
-____
+## Behavior of sand-clay mixtures in Atterberg limit tests
 
-Two-component mixtures of clay and coarse additions
-Seed et al., 1964a (Seed et al., 1964)  investigated Atterberg limits of sand-clay mixtures. Three types of clay (kaolinite, illite, and Ca-bentonite) were mixed with varying amounts of sand. All of the sand was < 425 μm in accordance with the standard test methods. 
+The Atterberg tests have been used to assess the behavior of sand-clay mixtures. 
+The tests are intended to characterize fine-grained soils but their results can also reflect the nature of the coarse fraction.
+This section summarizes research on the Atterberg limits of artificial soil mixtures. Two-component mixtures (sand with a single type of clay material) and three-component mixtures (sand with two forms of clay material) are both examined For brevity, in this section the term “clay” is used to mean the fine-grained soil component of the mixture and does not connote any particle size or mineralogical definition. 
+
+### Two-component mixtures
+
+@Seed1964a investigated Atterberg limits of sand-clay mixtures. Three types of clay (kaolinite, illite, and Ca-bentonite) were mixed with varying amounts of sand. All of the sand was < 425 μm.
 
 For the high-swelling bentonite, the liquid limits of the sand-clay mixtures were inversely proportional to sand content. In other words, the water content per unit clay material remained constant. This relationship was also observed for the illite clay. A linear relation was observed for the kaolinite clay up to 50 % sand, but the liquid limit test could not be performed on the 75 % sand-25 % kaolinite mixture, so whether the liner decline holds above 50 % sand could not be evaluated. 
 

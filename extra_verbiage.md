@@ -102,3 +102,8 @@ ___
  - it is a _transition_ along the coarse-fine continuum.
  
 ___
+
+The term “clay” connotes varied meanings to different fields. In this dissertation, in the spirit of brevity, I use the term “clay” in this dissertation in its colloquial sense- that is a fine-grained soil material that can be shaped and molded. When soil mixtures are made one does not typically consider only the fraction of mineral solids having < 2 μm equivalent Stoke’s diameter. Instead, the mix is made on the basis of a specified ratio between 2 or more soils which are combined. 
+____
+
+A qualitative definition of the transitional fines content is when the behavior of a soil mixture becomes more similar to the behavior of the fines alone than the sand alone. A transition in actual soil behavior, however defined, is of greater practical interest than a surrogate marker such as void ratio [which is more aptly considered a state parameter than an index property].
