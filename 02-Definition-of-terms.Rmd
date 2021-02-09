@@ -7,3 +7,5 @@
 **sand**: a soil material which is predominantly composed of mineral particles having sieve diameters between 53 and 2000 &mu;m
 
 **packing fraction**: the volume fraction occupied by solids, normalized to the total soil volume (1-void fraction); $V_{s}$
+
+**void fraction**: the volume fraction _not_ occupied by solids, normalized to the total soil volume (1-packing fraction); $V_{v}$

@@ -98,3 +98,7 @@ Of Atterberg's original 5 limits, only (2) and (4) are in use today and they are
 The following sections detail the mechanics underlying these tests and their limitations. 
 
 ___
+
+ - it is a _transition_ along the coarse-fine continuum.
+ 
+___

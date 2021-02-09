@@ -7,4 +7,4 @@ plots/
 images/
 _book/
 _bookdown_files/
-
+*.bib

@@ -1,5 +1,6 @@
 # read data 
 library(magrittr)
+library(gganimate)
 ggplot2::theme_set(cowplot::theme_cowplot())
 
 
@@ -52,7 +53,7 @@ salary_distribution_2019_plot <- salaries  %>%
   #                                    yend= 100),
   #                       size = 0.25,
   #                       color ='grey75')+
-  ggplot2::annotate('text', 
+  ggplot2::annotate('label', 
                     x=0.8*10^6,
                     y=96,
                     label = 'league minimum \n($555,000)',
@@ -144,6 +145,4 @@ mlb_revenues_plot <- mlb_revenues %>%
                 x= "")+
   remove_y_lines()+
   ggplot2::theme(plot.margin = ggplot2::margin(rep(15, 4)))
-
-
-
+  

@@ -140,7 +140,7 @@ labor_per_area_plot
 
 
 ```{r mlb-salaries, fig.cap='MLB athletes are valuable assets. Their safety and performance must not be compromised by the playing surface.', fig.show='hold'}
-source('supplemental_R_scripts/mlb_player_pay.R')
+source('supplemental_R_scripts/mlb_salaries_and_revenue.R')
 cowplot::plot_grid(salary_distribution_2019_plot, mlb_revenues_plot, align = "h")
 
 ```

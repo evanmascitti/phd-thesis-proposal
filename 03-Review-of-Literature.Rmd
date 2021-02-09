@@ -512,31 +512,63 @@ ___
 
 ## Design and properties of artificial soil mixtures {#artificial-soil-mixtures}
 
-Natural soil materials are excavated and deliberately blended for many uses. Potting mixes and green roof media are the largest means of production by volume (reference ??). The purpose of blending multiple soil materials is to create a product having properties not exhibited by any naturally occurring soil material. Even if the desired properties _could_ be found in a single naturally occurring material, the properties of natural soils are subject to spatial variation. In such a scenario, the properties of the mixture can be held constant simply by adjusting the ratio of the components. 
+Natural materials do not always meet the requirements for a particular use. Natural soils^[Here the term "soil" refers to a particular soil **material**, in contrast to a pedogenic definition which encompasses a characteristic arrangement of horizons and other features. See Section \@ref(#definition-of-terms), Definition of Terms.] are commonly excavated and blended to benefit their physical or chemical properties [@Brady2007].
+The purpose of blending multiple soils is to create a mixture with properties not exhibited by any naturally occurring soil.
+These soils have been termed engineered soils [@Thompson2008a]. 
+Potters and brick masons were the likely first in antiquity to develop engineered soils using simple intuition and experience. 
+Un-fired bricks containing clay mixed with organic residues have been dated to over 9,000 years before the present [@Staubach2005].
+Today, engineered soils are used for agricultural, horticultural, environmental, engineering, and recreational purposes [@Leake2014].
 
-Artificial sand-clay mixtures usually contain two components, but some studies have combined sand with two clays to form a three-way mixture. Several methods have been employed to test the engineering behavior of  sand-clay mixtures. Atterberg limits are the most popular due to their relative speed and low cost. Compaction and shear tests are also common. Other properties which have been studied include permeability, static compressibility, and pore size distribution.
+Deliberate soil mixing also ensures a nearly identical soil can be repeatedly produced over time. 
+If natural variation in raw material properties is encountered, the mixture can be adjusted so that its final properties do not vary.
+The nature of soil solids is wide-ranging. Because these materials may be combined in any ratio, it is easy to imagine the nearly infinite number of possible soil mixtures.
 
-This section describes prior research pertaining to the behavior of sand-clay mixtures in laboratory tests. 
+
+The raw components incorporated into a mixture depend on its intended use. Materials which retain plant-available water and nutrients are favored for agricultural or horticultural operations. These include fired or expanded ceramic granules and various types of organic matter. Soil mixtures produced for engineering applications are usually limited to inorganic components Gravel, sand, soil, coal ash, and lime are the commonly used raw materials. 
+
+Soil mixtures for baseball and softball fields typically contain two materials - a sand and a fine-grained soil. Table \@ref(tab:soil-mixture-study-list) comprises a selection of studies which tested mixes containing sand plus a single soil (2-component mix) or two types of soil (3-component mix). Table \@ref(tab:soil-mixture-study-list) shows that a variety of methods have been employed to evaluate the mixtures, including Atterberg limits, compaction, shear strength, permeability, static compressibility, and pore size distribution.
+
+```{r soil-mixture-study-list}
+#.... %>% 
+# 
+# kableExtra::kbl(caption = 'Selected studies on behavior of coarse-fine soil mixtures. Measured physical properties vary according to the problem of interest.')
+
+```
+
+This section describes published research pertaining to the behavior of sand-soil mixtures. 
 
 
 
 ### pasted from word 2021-1-28
 
-An engineered soil is defined as an artificial mixture of two or more natural soils for a specific application. The purpose of manufacturing an engineered soil is to obtain a material which exhibits properties superior to those of any naturally occurring soil. 
 
-Artificial mixtures of sand with clay have been studied extensively. . 
+#### Transitional fines content of coarse-fine mixtures
 
-#### Definition of the Transitional Fines Content
+Loads applied to a coarse-grained soil are transmitted through a skeleton of grain-to-grain contacts. 
+The soil's behavior is relatively independent of water content.
+A minor addition of fine particles will not alter the soil’s behavior so long as the fines fit comfortably within the large voids.  
+If sufficient fines are added, they begin to participate in the force chain and with further additions the coarse grains become completely suspended in a matrix of fines. 
+At this point the soil’s behavior is dominated by the fines and the coarse grains act only as inert inclusions. 
+The percent fines at which the soil's behavior changes from that resembling the 'host' sand to that of the fines has been termed the “transitional fines content.” The transitional fines content (TFC) is relevant to most infield mixes because they have fines content near the TFC.
 
-In a coarse-grained soil, applied loads are transmitted through a skeleton of grain-to-grain contacts. The behavior of the soil is relatively independent of water content. A minor addition of fine particles will not alter the soil’s behavior so long as the fines fit comfortably within the large voids.  Once sufficient fines are added, they begin to participate in the force chain and with further additions the coarse grains become completely suspended in a matrix of fines. At this point the soil’s behavior will be dominated by the fines and the coarse grains act only as inert inclusions. The percent fines by where the soil behavior changes from that of the sand to that of the fines has been termed the “transitional fines content.” It should be pointed out that there is no single, unique value at which the behavioral threshold occurs - it is a _transition_ which occurs continuously. Regardless, it can be useful to distill the transition to a single number or range of numbers representing the percent fines which cause the transition. There are several means to identify this value. 
+It is important to acknowledge that the TFC is not a universal number (for example, 30%). Reported values range from 15 to 45% by dry mass [@Zuo2015]. The TFC value varies because (1) it depends on the behavioral threshold of interest (for example, compressibility, shear strength, or permeability), and (2), a unique ratio exists for every combination of coarse-grained and fine-grained components. The total state of particle packing depends on the grain-size distribution of each component, the plasticity of the fines, the means of compaction or consolidation, and the state of effective stress [@Zuo2015].
 
-Reported values of transitional fines content range from 15 to 45% by dry mass [reference??]. There is no universal mass-based fines percent which defines the TFC because (1) the transition depends on the behavioral threshold of interest (for example, compressibility, shear strength, or permeability), and (2), a unique ratio exists for every combination of coarse-grained and fine-grained components because particle packing depends on the grain-size distribution of each component, the plasticity of the fines, the means of compaction or consolidation, and the state of effective stress.(Zuo and Baudet, 2015) 
+The TFC has been defined using several methods (Table \@ref(tab:tfc-definition-methods)). A few examples include: calculations from phase relations and index properties [@Thevanayagam1998; @Monkul2007; @Cabalar2011], the minimum global void ratio following compaction [@Lade1998; @Ueda2011], undrained shear strength during triaxial tests [@Thevanayagam1998; @Vallejo2000; @Cabalar2017; @Kim2018], parameters of the normal compression line or critical state line,(@Cabalar2011; @Carrera2011; @Shipton2012] and liquefaction potential [@Lade1997].
 
-The TFC has been variously defined based on: derived values from phase relations and index properties (Thevanayagam, 1998; Monkul and Ozden, 2007; Cabalar, 2011), the minimum global void ratio in compaction experiments (Lade et al., 1998; Ueda et al., 2011), undrained shear strength(Thevanayagam, 1998; Vallejo and Mawby, 2000; Dafalla, 2013; Nagaraj, 2016; Cabalar and Mustafa, 2017; Kim et al., 2018), parameters of the normal compression line or critical state line,(Cabalar, 2011; Carrera et al., 2011; Shipton and Coop, 2012) and liquefaction potential (Lade and Yamamuro, 1997).
+```{r tfc-definition-methods}
+tfc_definition_methods <- readr::read_csv("data/lit-review-data/tables/selected_transitional_fines_content_studies.csv") %>%
+  dplyr::mutate(Reference = paste0(Citation, " (", year, ") "))%>% 
+  dplyr::arrange(Citation) %>% 
+  dplyr::select(Reference, `Type of 'fines'`, `Tests performed`,`Reported TFC  ( % by mass)`) %>% 
+  kableExtra::kbl(caption = 'Selected studies on the transitional fines content (TFC) of coarse-fine mixtures. Methods used to identify the TFC depends on the problem of interest.') %>% 
+  kableExtra::kable_styling()
+
+tfc_definition_methods
+```
 
 
 
-### Importance of distinction between volumetric and mass relations
+### Volume and mass relations
 
 In an artificial mixture of two or more soils, the relative amounts of each components may be compared on a volumetric or mass basis. The dry mass of solids is considered a more absolute measure of the quantity of each component, as these never change despite fluctuations in water content or bulk density. The ratios or percentage to which the component fractions are normalized should also be made explicit. The most common means to express the amount of each component is to set the total dry mass of the mixture equal to 100% : 
 % sand=g_sand/(g_sand+g_clay )
@@ -549,7 +581,7 @@ An important variable in the behavior of sand-clay mixtures is the configuration
  
  The intergranular void ratio may be compared with the minimum and maximum void ratio of the pure sand as determined by standard test methods. When the intergranular void ratio exceeds that of the host sand, it is considered that the soil’s behavior will no longer be governed solely by the coarse grain contacts. 
 
-
+** good verbiage here : ** Many authors have considered the TFC equivalent to the fines content which produces the lowest total void space. This approach may not reflect the actual behavior of the soil because the global void ratio may not reach its minimum until $e_{sand}$ has already exceeded the minimum $e_{sand}$ for the host sand alone. The coarser grains act mostly independent of one another and behavior is already governed by the fines, thus the transition occurs at a lower fines content than would be suggested by the global void ratio [@Cabalar2011]. 
 Factors influencing the transitional fines content
 Size ratio
 TFC values may be computed analytically from phase relations and minimum/maximum void ratios, yet derived values rarely coincide with those observed in experiments(Zuo and Baudet, 2015). In practice, observed volumetric packing densities (i.e. volumetric solid fraction) are always lower than the theoretical maximum because the calculations rely on simplifying assumptions which are unlikely to be satisfied(Zuo and Baudet, 2015). These assumptions are:
@@ -581,8 +613,17 @@ Maximum density
 A qualitative definition of the transitional fines content is when the behavior of a soil mixture becomes more similar to the behavior of the fines alone than the sand alone. A transition in actual soil behavior, however defined, is of greater practical interest than a surrogate marker such as void ratio [which is more aptly considered a state parameter than an index property].
 
 
+## TFC summary
 
-Atterberg limits of sand-clay mixtures
+- From the above it is clear that there is no unique value for the TFC (for example, 70% sand by mass).
+
+- descriptions of behavioral thresholds are better specified using volumetric relations of the solid constituents rather than mass-based values because of differences in speecific gravity of the soil particles and the relative density of the bulk mixture
+ 
+- analytical solutions complimented with measured index properties (i.e. maximum and minimum void ratio of the host sand) provide a useful starting point or estimation, but experiments are required for a more precise solution.
+
+There is no unique value for the TFC. The TFC is different for every combination of an an arbitrary sand and an arbitrary clay 
+
+## Atterberg limits of sand-clay mixtures
 The Atterberg tests have been used to assess the behavior of sand-clay mixtures. Although the tests are intended to characterize silts and clays, the test results also reflect the size and shape of the sand fraction in an artificial sand-clay mixture.
 This section summarizes research on the Atterberg limits of artificial soil mixtures. Two-component mixtures (sand with a single type of clay material) and three-component mixtures (sand with two forms of clay material) are both discussed. For brevity, in this section the term “clay” is used to mean the fine-grained soil component of the mixture and does not connote any particle size definition. 
 ___
@@ -594,7 +635,7 @@ Seed et al., 1964a (Seed et al., 1964)  investigated Atterberg limits of sand-cl
 
 For the high-swelling bentonite, the liquid limits of the sand-clay mixtures were inversely proportional to sand content. In other words, the water content per unit clay material remained constant. This relationship was also observed for the illite clay. A linear relation was observed for the kaolinite clay up to 50 % sand, but the liquid limit test could not be performed on the 75 % sand-25 % kaolinite mixture, so whether the liner decline holds above 50 % sand could not be evaluated. 
 
-The slopes of these liquid limit vs. sand content lines differed by clay type; the authors showed that the slope was in close agreement with the Skempton activity of the clay, computed as (LL/ % < 2 μm). This relationship also held regardless of whether a single clay was mixed with the sand or if the sand was mixed with two types of clay (further discussed in the following section).
+The slopes of these liquid limit vs. sand content lines differed by clay type; the authors showed that the slope was in close agreement with the Skempton activity of the clay, computed as (LL/ % < 2 &mu;m). This relationship also held regardless of whether a single clay was mixed with the sand or if the sand was mixed with two types of clay (further discussed in the following section).
 
 The plastic limit of the bentonite-sand mixtures also followed a linear relationship with increasing sand, up to the highest percent sand tested (75%). In contrast, the illite and kaolinite clays showed a linear relation only at lower sand contents. At sand content of 50% or higher, the plastic limits were higher than would be predicted by a simple linear regression line. This suggests the sand grains began to play a role in the soil’s behavior.
 
@@ -635,6 +676,18 @@ Seed et al. noted that if a mass-weighted value of Skempton activity was used in
 
 __
 @Sivapullaiah1985 showed that their linear law was not valid for mixtures of bentonite with kaolinite. The liquid limit of the mixture was always lower than would be expected from the linear law. This implies an interaction between the clay mineral particles. 
+
+
+
+___
+
+@Nagaraj2016 and effect of sand size and clay type on shear strength of sand-clay mixtures 
+
+
+
+
+
+
   
 #### Notable research gaps to address in this project:
 
