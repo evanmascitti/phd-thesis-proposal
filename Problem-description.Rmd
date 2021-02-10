@@ -147,16 +147,9 @@ cowplot::plot_grid(salary_distribution_2019_plot, mlb_revenues_plot, align = "h"
 
 <!-- Need to get rid of the extra toughness verbiage and possibly make this its own section  -->
 
-Great effort is made by the grounds staff to sustain the infield in a playable condition. A host MLB franchise may lose >$500,000 if a game is canceled because refunds must be offered to fans, yet overhead stadium operating costs are fixed. Therefore, every attempt is made to keep the field in a playable condition and complete the game. At the youth level, most revenue is driven by concessions and tournament registration fees. Repeated postponements can undermine a facility's operating model. It is clear that playing games during and after rain events is critical for both professional and recreational operations.
+Great effort is made by the grounds staff to sustain the infield in a playable condition. A host MLB franchise may lose >$500,000 if a game is canceled because refunds must be offered to fans, but overhead stadium operating costs are fixed. Therefore, every attempt is made to keep the field in a playable condition and complete the game. At the youth level, most revenue is driven by concessions and tournament registration fees. Repeated postponements can undermine a facility's operating model. Continuing gameplay during and after rain events is critical for both professional and recreational operations.
 
-Athlete safety is paramount to player well-being and also to the business success of a professional franchise. Figure \@ref(fig:mlb-salaries) shows the distribution of MLB player salaries for 2019 and the steady rise in their pay with time. The median MLB player salary in 2019 was \$`r median_2019_salary_millions` million, with `r 100*round((total_2019_million_dollar_players / n_players_2019), 2)`% of players earning over $1 million and `r total_2019_10_million_dollar_players` players earning over \$10 million. Athletes are the most valuable assets of an MLB franchise. A team cannot afford for them be injured by a poor playing surface. 
-
-
-Toughness is an important property of an infield soil. When the soil offers adequate resistance to foot traffic, play may continue during rain. Once the resistance is lowered enough to make footing unsafe, the game is halted, and the grounds crew covers the field with an impermeable tarp to prevent further saturation. Rain delays and postponements lead to lost revenue and create schedule conflicts at both the professional and recreational levels. Moreover, deployment of the tarp during rainfall is dangerous and physically difficult.
-Even when weather conditions are favorable, high toughness allows the groundskeeper a wider range of water contents to provide excellent playability. This minimizes mistakes when hand-watering the infield. 
-
-The groundskeeper is unable to add water to the infield once the game has begun. In hot and dry weather., the soil dries and becomes excessively hard as the game progresses, affecting ball response and also inducing brittle bulking from cleat (Ch. __). Therefore soil toughness also allows the soil to retain its plastic behavior as soil moisture is reduced.
-
+Athlete safety is paramount to players' well-being and to the business success of a professional franchise. Figure \@ref(fig:mlb-salaries) shows the distribution of MLB player salaries for 2019. The median MLB player salary in 2019 was \$`r median_2019_salary_millions` million, with `r total_2019_million_dollar_players` players earning over $1 million and `r total_2019_10_million_dollar_players` players earning over \$10 million. Figure \@ref(fig:mlb-salaries) also shows MLB revenue growth since 1995. These revenues provide many jobs (stadium operations, front-office, etc.) and depend on the athletes' health and performance. Players are a franchise's most valuable asset. A team cannot afford for them be injured by a poor playing surface. 
 
 
 ##### The brittle-ductile transition and the "corkboard effect" {#corkboard-section}
@@ -189,6 +182,7 @@ A second important consequence of a ductile yield mode is that if a batted baseb
 
 It is emphasized that no scientific investigations of the corkboard effect have been performed. It is a solely qualitative description of soil behavior, and at present no metrics exist for its study. 
 
+
 ### Use of artificial soil mixtures on baseball infields
 
 Baseball was first played in the early 19th century, but the definitive origins of the game are likely lost to history [@Walker1994]. The earliest recorded attempt to alter the physical properties of an infield soil was by Harry Wright in 1875. Wright and his contemporaries incorporated various materials into their infield soils to enhance stability, firmness, or drainage of the playing surface. Amendments included organic debris (straw, ashes) and and inorganic materials (sand, lime, cinders) [@Morris2007].
@@ -199,4 +193,6 @@ Popularity of engineered infield mixes has grown markedly since 2005 and today t
 
 ### Summary - importance of the infield skin
 
-The infield skin is a crucial component of baseball's competitive and business operations. A professional grounds crew expends significant effort to maintain the soil water content within this relatively narrow range. An ideal infield surface exhibits a combination of plasticity and stiffness. The soil must readily deform around the cleats so that they are not rejected, but it must also provide enough resistance to prevent the athlete from sliding.
+The infield skin is a crucial component of baseball's competitive and business operations. A professional grounds crew expends significant effort to maintain the soil water content within this relatively narrow range. An ideal infield surface exhibits a combination of plasticity and stiffness. The soil must readily deform around the cleats so that they are not rejected, but it must also provide enough resistance to prevent the athlete from sliding. A soil which exhibits these properties over a wide range of water contents increases the odds of completing a game during a rain event, and it allows the groundskeeper a larger margin for error when hand-watering.
+
+

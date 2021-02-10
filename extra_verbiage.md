@@ -107,3 +107,15 @@ The term “clay” connotes varied meanings to different fields. In this disser
 ____
 
 A qualitative definition of the transitional fines content is when the behavior of a soil mixture becomes more similar to the behavior of the fines alone than the sand alone. A transition in actual soil behavior, however defined, is of greater practical interest than a surrogate marker such as void ratio [which is more aptly considered a state parameter than an index property].
+
+__
+
+Although the shape of the coarse fraction had a measurable influence, its role was small compared to the coarse fraction's particle size and the nature of the clay minerals. (Dumbleton and West, 1966b)
+___
+
+When the soil offers adequate resistance to foot traffic, play may continue during rain. Once the resistance is lowered enough to make footing unsafe, the game is halted, and the grounds crew covers the field with an impermeable tarp to prevent further saturation. Rain delays and postponements lead to lost revenue and create schedule conflicts at both the professional and recreational levels. Moreover, deployment of the tarp during rainfall is dangerous and physically difficult.
+Even when weather conditions are favorable, high toughness allows the groundskeeper a wider range of water contents to provide excellent playability. This minimizes mistakes when hand-watering the infield. 
+
+The groundskeeper is unable to add water to the infield once the game has begun. In hot and dry weather., the soil dries and becomes excessively hard as the game progresses, affecting ball response and also inducing brittle bulking from cleat (Ch. __). Therefore soil toughness also allows the soil to retain its plastic behavior as soil moisture is reduced.
+
+___
