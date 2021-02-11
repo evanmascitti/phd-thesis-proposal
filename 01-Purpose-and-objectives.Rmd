@@ -4,23 +4,26 @@
 
 Baseball plays an important role in the American economy and culture. Using the scientific method to study baseball fields can improve their safety, enjoyment, and economic value at all levels of play. 
 
+The broad goals of my thesis are twofold: (1) create a new way to assess infield soil performance, and (2) use the new framework to design improved soil mixtures. 
+
 **My intent is to answer these open-ended questions:**
 
-1. How can infield soil performance be quantified objectively?
-2. How can the performance of infield soils be improved?
-3.  Can a rational basis for mix design be developed to reflect soil behavior?
-4. Which lab tests best to predict the performance of a mix?
+1. How can infield soil performance be quantified?
+2. How can infield soil performance be improved via rational mix design?
+3. Which soil tests best predict the performance of a mix?
 
 ## Formal objectives {#objectives}
 
-The broad goals of my thesis are twofold: (1) create a new way to assess infield soil performance, and (2) use the new framework to design improved soil mixtures. 
+The questions above can be expanded and translated to formal objectives:
 
-These may be expanded and restated as formal objectives:
+1) Develop a laboratory method to pinpoint each of the two critical water contents for any infield soil:
+    
+    a) the transition from cleat-in/cleat-out behavior to chip-forming or clod-forming failure
+    
+    b) the threshold at which the soil cannot provide adequate resistance for safe footing
+    
+2) Demonstrate that the difference between 1(a) and 1(b) can be extended by systematically varying the components of a soil mixture. 
 
-1. Develop a laboratory method to pinpoint each of the two critical water contents for any infield soil:
-  a. the transition from cleat-in/cleat-out behavior to chip-forming or clod-forming failure
-  b. the threshold at which the soil cannot provide sufficient resistance for safe footing
-2. Extend the difference between 1(a) and 1(b) by systematically varying the components of a soil mixture. 
-3. Determine the simplest means of predicting a soil's performance
+3) Determine the optimal means of predicting a soil's performance through laboratory testing.
 
 

@@ -3,7 +3,7 @@ output: html_document
 editor_options: 
   chunk_output_type: console
 ---
-# Description/importance of problem {#problem-description}
+# Description of problem {#problem-description}
 
 <!-- The infield is a crucial .......all that stuff here, including the figures of the field, the batted ball density, etc  -->
 
@@ -16,7 +16,7 @@ ___
 - A quality infield soil makes the field safer and the grounds manager's job easier.
 - Infield mixes were developed through trial and error and may be refined through scientific study.
 
-## Qualitative description of the importance of the infield 
+## Importance of the infield 
 
 ```{r}
 library(tidyverse)
@@ -145,26 +145,24 @@ cowplot::plot_grid(salary_distribution_2019_plot, mlb_revenues_plot, align = "h"
 
 ```
 
-<!-- Need to get rid of the extra toughness verbiage and possibly make this its own section  -->
+Great effort is made by the grounds staff to sustain the infield in a playable condition. Wet playing conditions are the primary source of postponements. A host MLB franchise may lose >$500,000 if a game is canceled because refunds must be offered to fans yet stadium operation costs are fixed. Therefore, every attempt is made to keep the field in a playable condition and complete the game. At the youth level, most revenue is driven by concessions and tournament registration fees. Repeated postponements can undermine a facility's operating model. Continuing gameplay during and after rain events is critical for both professional and recreational operations.
 
-Great effort is made by the grounds staff to sustain the infield in a playable condition. A host MLB franchise may lose >$500,000 if a game is canceled because refunds must be offered to fans, but overhead stadium operating costs are fixed. Therefore, every attempt is made to keep the field in a playable condition and complete the game. At the youth level, most revenue is driven by concessions and tournament registration fees. Repeated postponements can undermine a facility's operating model. Continuing gameplay during and after rain events is critical for both professional and recreational operations.
-
-Athlete safety is paramount to players' well-being and to the business success of a professional franchise. Figure \@ref(fig:mlb-salaries) shows the distribution of MLB player salaries for 2019. The median MLB player salary in 2019 was \$`r median_2019_salary_millions` million, with `r total_2019_million_dollar_players` players earning over $1 million and `r total_2019_10_million_dollar_players` players earning over \$10 million. Figure \@ref(fig:mlb-salaries) also shows MLB revenue growth since 1995. These revenues provide many jobs (stadium operations, front-office, etc.) and depend on the athletes' health and performance. Players are a franchise's most valuable asset. A team cannot afford for them be injured by a poor playing surface. 
+Athlete safety is paramount to players' well-being and to the business success of a professional franchise. Figure \@ref(fig:mlb-salaries) shows the distribution of MLB player salaries for 2019. The median MLB player salary in 2019 was \$`r median_2019_salary_millions` million, with `r total_2019_million_dollar_players` players earning over $1 million and `r total_2019_10_million_dollar_players` players earning over \$10 million. Figure \@ref(fig:mlb-salaries) also shows MLB revenue growth since 1995. These revenues support hundreds of jobs at each stadium and depend on the athletes' health and performance. Players are a franchise's most valuable asset. A team cannot afford for them be injured by a poor playing surface.
 
 
 ##### The brittle-ductile transition and the "corkboard effect" {#corkboard-section}
 
 Minimal surface disruption is a crucial element of infield quality. A smooth playing surface ensures the game's outcome is decided by the players' performance alone and not influenced by chance events such as an errant ball bounce. 
 
-Grounds managers consider ideal infield performance as follows: an athlete's studded footwear readily penetrates the soil at footstrike. The soil provides adequate resistance as the athlete completes his or her maneuver. The cleats release from the surface without separating any soil solids from the zone surrounding them. No material adheres to the studs or sole of the shoe. Thus, surface deformation is limited to a small indentation matching the shape of the stud. This phenomenon is known as “cleat-in, cleat-out” or "the corkboard effect^[named for its similarity to the experience of removing a thumbtack from a bulletin board.].“ In contrast, a poor-quality infield is one on which larger clods of soil are readily chipped out of the surface or easily fragmented into powder. 
+Grounds managers consider ideal infield performance as follows: an athlete's studded footwear readily penetrates the soil at footstrike. The soil provides adequate resistance as the athlete completes his or her maneuver. The cleats release from the surface without separating any soil solids from the zone surrounding them. No material adheres to the studs or sole of the shoe. Thus, surface deformation is limited to a small indentation matching the shape of the stud. This phenomenon is known as “cleat-in, cleat-out” or "the corkboard effect.“^[named for its similarity to the experience of removing a thumbtack from a bulletin board.] In contrast, a poor-quality infield is one on which larger clods of soil are readily chipped out of the surface or easily fragmented into powder. 
 
-Figure \@ref(fig:corkboard-concept) depicts the importance of the corkboard phenomenon. Small, narrow cleat indentations are unlikely to deflect a ball from its initial path, while larger depressions excavated by player's cleats (or the soil clods themselves) are impediments which tend to produce an errant bounce. 
+Figure \@ref(fig:corkboard-concept) depicts the the corkboard phenomenon and its importance to gameplay. Small, narrow cleat indentations are unlikely to deflect a ball from its initial path, while larger depressions excavated by player's cleats (or the soil clods themselves) are impediments which tend to produce an errant bounce. 
 
 ```{r corkboard-concept, eval=T, fig.cap="(A) The \"cleat-in, cleat-out\" effect ensures predictable ball response. (B) Cleat indentations and soil clods inhibit a smooth and predictable ball path."}
 knitr::include_graphics('images/illustrations/cleatmarks/corkboard_concept.png')
 ```
 
-A given infield soil moves between these states as its water content changes. This change in state is formally termed the brittle-ductile transition. The brittle-ductile transition is examined further in the \@ref(lab-methods-review) section, but a brief description is provided below to establish its important link to infield performance. 
+A given infield soil moves between these states as its water content changes. This change in state is formally termed the brittle-ductile transition. The brittle-ductile transition is examined further in this proposal's literature review (Section \@ref(lab-methods-review)), but a brief description is provided here to establish its important link to infield performance. 
 
 A skilled grounds crew takes great care to maintain the soil at the desired moisture. Water is manually added with hoses, and rain is kept off using a large tarpaulin. Soil water content can only be controlled during field preparation; after the game begins, no further adjustments can be made and weather conditions determine the rate of water loss or gain.
 
@@ -176,7 +174,7 @@ Some amount of yield must occur for a player’s cleats to penetrate the soil su
 
 or
 
-2. ductile yield: soil particles are re-arranged to accommodate the cleat, but the soil mass behaves as a continuum. No material is sepratated from the surface. In general, brittle deformation attenuates less energy than ductile deformation [@Kuipers1984]. 
+2. ductile yield: soil particles are re-arranged to accommodate the cleat, but the soil mass behaves as a continuum. No material is sepratated from the surface. In general, ductile yield attenuates more energy than brittle fracture [@Kuipers1984]. 
 
 A second important consequence of a ductile yield mode is that if a batted baseball _does_ contact a cleat indentation, the surface will deform a second time. Changes to the ball's trajectory will be minimal. This scenario is preferred to a more rigid collision in which the ball is re-directed, possibly leading to a misplay or injury (Figure \@ref(fig:corkboard-concept)). 
 
@@ -189,10 +187,10 @@ Baseball was first played in the early 19th century, but the definitive origins 
 
 Infield soil mixes were produced off-site and imported beginning in the 1960s ?Zwasksa?.
 
-Popularity of engineered infield mixes has grown markedly since 2005 and today the majority of professional stadia utilize an engineered soil for their infield skin.
+Popularity of engineered infield mixes has grown markedly since 2005 and today the majority of professional stadia utilize an engineered soil for their infield skin [@Hagerty2018].
 
 ### Summary - importance of the infield skin
 
-The infield skin is a crucial component of baseball's competitive and business operations. A professional grounds crew expends significant effort to maintain the soil water content within this relatively narrow range. An ideal infield surface exhibits a combination of plasticity and stiffness. The soil must readily deform around the cleats so that they are not rejected, but it must also provide enough resistance to prevent the athlete from sliding. A soil which exhibits these properties over a wide range of water contents increases the odds of completing a game during a rain event, and it allows the groundskeeper a larger margin for error when hand-watering.
+The infield skin is a crucial component of baseball's competitive and business operations. A professional grounds crew expends significant effort to maintain the soil water content within a relatively narrow range. An ideal infield surface exhibits a combination of plasticity and stiffness. The soil must readily deform around the cleats so that they are not rejected, but it must also provide enough resistance to prevent the athlete from losing traction. A soil which exhibits these properties over a wide range of water contents increases the odds of completing a game during a rain event, and it allows the groundskeeper a larger margin for error when hand-watering.
 
 

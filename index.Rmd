@@ -41,10 +41,10 @@ knitr::opts_chunk$set(message=FALSE,
 
 Baseball fields are built from soil. Therefore, soil behavior determines the safety and function of the field. The purpose of this dissertation is to assess and improve the behavior of soil mixtures used on baseball infields. 
 
-The production of soil mixtures has received much study. However, there are no published experiments on this topic as it pertains to baseball and
+Soil mixtures have received much study. However, there are no published experiments on this topic pertaining to baseball and
 softball fields.
 
-This thesis proposal is organized into four sections:
+This dissertation proposal is organized into four sections:
 
 [**Purpose and objectives**](#purpose-objectives): A broad description of the scope and aims of the project
 

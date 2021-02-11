@@ -30,5 +30,5 @@ moreno_maroto_chart <- ggplot2::ggplot(data = labels_data,
     fill = "transparent",
     size = 0.25)  )+
   ggplot2::annotate('text', color = 'darkblue', size = 3.25, label = 'C-line (PI = 0.5 x LL)', x= 66, y= 36.5, angle = 0.6*45)+
-  ggplot2::annotate('text', color = 'darkblue', size = 3.25, label = 'M-line (PI = 0.33 x LL)', x= 68, y= 3.5+66*1/3, angle = 0.6*1/3)
+  ggplot2::annotate('text', color = 'darkblue', size = 3.25, label = 'M-line (PI = 0.33 x LL)', x= 68, y= 3.5+66*1/3, angle = 0.6*90*1/3)
   

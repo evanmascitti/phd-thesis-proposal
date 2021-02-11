@@ -27,13 +27,13 @@ theme_set(theme_cowplot())
 
 This literature review is organized into three sections to address the following topics:
 
-**\@ref(infield-performance)** [**Function and performance of baseball/softball infields**](#infield-performance)
+**\@ref(infield-performance)** [**Performance of baseball/softball infields**](#infield-performance)
 
-**\@ref(lab-methods-review)** [**Laboratory test methods pertinent to the problems of interest**](#lab-methods-review)
+**\@ref(lab-methods-review)** [**Laboratory tests of soil behavior and physical properties**](#lab-methods-review)
 
 **\@ref(artificial-soil-mixtures)** [**Design and properties of artificial soil mixtures**](#artificial-soil-mixtures)
 
-## Function and performance of baseball infields {#infield-performance} 
+## Performance of baseball infield surfaces {#infield-performance} 
 
 In baseball and softball, athletes engage with the playing surface in two ways: directly (by running, pivoting, and sliding) and indirectly (by fielding batted balls).
 Footing and ball response are the main surface properties of interest to the athlete and the grounds manager.
@@ -383,7 +383,9 @@ The thread is carefully bent about its center, which is anchored around a stainl
 The test is repeated for at least two other water contents and the water content of the threads is plotted against the displacement with segmented regression. 
 The shallower segment is extrapolated to zero displacement and this water content is taken as the plastic limit. 
 
-Moreno-Marato and Alonso-Azcàrate also described a faster version of their original thread-bending test. In this version only a single thread is prepared and its displacement and water content are extrapolated to zero displacement using an empirical equation. This test meets the original requirements of any plastic limit test which could replace the current method, namely:
+Moreno-Marato and Alonso-Azcàrate (2017???) also described a faster version of their original thread-bending test. 
+In this version only a single thread is prepared and its displacement and water content are extrapolated to zero displacement using an empirical equation. 
+This test meets the original requirements of any plastic limit test which could replace the current method, namely:
 
 1.	Rapid
 2.	repeatable
@@ -469,7 +471,7 @@ moreno_maroto_chart
 ```
 
 They retained the existing groups in the USCS but added additional groups for soils intermediate between silts and clays. 
-The new chart eliminated the A-line and instead defined two lines to separate clays from intermediate soils and intermediate soils from silts. The lines were drawn on the basis of toughness computed from their equation and re-linked to the LL and PL of a soil.  
+The new chart eliminated the A-line and instead defined two lines to separate clays from intermediate soils and intermediate soils from silts. The lines were drawn on the basis of toughness computed from their equation and converted to LL and PL values.  
 Moreno-Maroto and Alonso-Azcárate later compared their own classification system with other systems based on plasticity [@Moreno-Maroto2021].
 They noted that USCS tends to classify soils with high liquid limits but low toughness as clays and argued that toughness is the most defining feature of clay and behavior of these soils is more silt-like.
 They favored their own use of a quantitative property (toughness) to classify soils rather than the empirical A-line used by USCS. 
@@ -480,7 +482,7 @@ However, the emphasis on toughness by @Moreno-Maroto2018; -@Moreno-Maroto2021 is
 @Vinod2017 also used data from @Barnes2013 to form an empirical correlation. 
 Their objective was to predict the optimum moisture content for compaction at any compaction effort without actually performing a Proctor-style compaction test. They hypothesized that the optimum water content for compaction could be predicted from another property defined by @Barnes2013, termed the toughness limit. 
 Barnes defined the toughness limit as the water content where a soil changes from an unworkable, adhesive consistency to a state having measurable toughness.
-@Vinod2017 first correlated the toughness limits of the 59 soils tested by @Barnes2013 with their respective liquidity indexes ($I_L$), defined as $I_L=LL - LL$)). 
+@Vinod2017 first correlated the toughness limits of the 59 soils tested by @Barnes2013 with their respective liquidity indexes ($I_L$, defined as $I_L=LL - LL$). 
 @Vinod2017 found that the average position of the toughness limit was $PL + 0.42 \cdot I_L$. 
 In other words, the toughness limit was 42% of the way between the plastic and liquid limits. 
 This correlation was then used to develop an empirical equation to predict the optimum water content from the plastic limit, liquid limit, and compaction energy. 
@@ -512,7 +514,18 @@ Many soil tests have been developed with the goal of supplanting the Atterberg l
 ___
 
 
-## Design and properties of artificial soil mixtures {#artificial-soil-mixtures}
+## Behavior of artificial soil mixtures {#artificial-soil-mixtures}
+
+Soil mixtures for baseball and softball fields typically contain two materials - a sand and a fine-grained soil.
+This section summarizes research about how the components of a soil mixture affect its behavior.
+Table \@ref(tab:soil-mixture-study-list) also shows that researchers have evaluated soil mixtures using a variety of analyses. 
+This review focuses on studies which have measured compaction, Atterberg limits, shear strength, and toughness because these properties are the tests most relevant to baseball and softball infields. Other methods which have been utilized include permeability, static compressibility, and pore size distribution. 
+
+In this sectioin, the first topic outlined is the rationale for using engineered soils.
+Next, the concept of the transitional fines content is introduced. Third, specific research studies on coarse-fine mixtures are discussed Finally, artificial mixtures containing multiple clay types are reviewed.
+For brevity, in this section the term “clay” simply refers to the fine-grained mixture component and does not connote any specific definition of texture, particle size, plasticity, or mineralogy. 
+
+### Rationale for producing engineered soils 
 
 Natural materials do not always meet the requirements for a particular use. Natural soils^[Here the term "soil" refers to a particular soil **material**, in contrast to a pedogenic definition which encompasses a characteristic arrangement of horizons and other features. See Section \@ref(#definition-of-terms), Definition of Terms.] are commonly excavated and blended to benefit their physical or chemical properties [@Brady2007].
 The purpose of blending multiple soils is to create a mixture with properties not exhibited by any naturally occurring soil.
@@ -530,11 +543,8 @@ The raw components incorporated into a mixture depend on its intended use.
 Materials which retain plant-available water and nutrients are favored for agricultural or horticultural operations. 
 These include fired or expanded ceramic granules and various types of organic matter. 
 Soil mixtures produced for engineering applications are usually limited to inorganic components.
-Gravel, sand, soil, coal ash, and lime are commonly components. 
+Gravel, sand, soil, coal ash, and lime are common components. 
 
-Soil mixtures for baseball and softball fields typically contain two materials - a sand and a fine-grained soil.
-Table \@ref(tab:soil-mixture-study-list) comprises a selection of studies which tested mixes containing sand plus a single soil (2-component mix) or two types of soil (3-component mix). 
-Table \@ref(tab:soil-mixture-study-list) also shows that researchers have evaluated the mixtures using a variety of analyses. These include Atterberg limits, compaction, shear strength, permeability, static compressibility, and pore size distribution.
 
 ```{r soil-mixture-study-list}
 #.... %>% 
@@ -543,7 +553,7 @@ Table \@ref(tab:soil-mixture-study-list) also shows that researchers have evalua
 
 ```
 
-This section describes published research pertaining to the behavior of sand-soil mixtures. 
+
 
 ### Transitional fines content of coarse-fine mixtures
 
@@ -551,8 +561,8 @@ Loads applied to a coarse-grained soil are transmitted through a skeleton of gra
 The soil's behavior is relatively independent of water content.
 A minor addition of fine particles will not alter the soil’s behavior so long as the fines fit comfortably within the large voids.  
 If sufficient fines are added, they begin to participate in the force chain and with further additions the coarse grains become completely suspended in a matrix of fines. 
-At this point the soil’s behavior is dominated by the fines and the coarse grains act only as inert inclusions. 
-The percent fines at which the soil's behavior changes from that resembling the 'host' sand to that of the fines has been termed the “transitional fines content.” The transitional fines content (TFC) is relevant to most infield mixes because they have fines content near the TFC.
+At this point the soil’s behavior is dominated by the fines and their water content, with the coarse grains acting only as inert inclusions. 
+The percent fines at which the soil's behavior changes from that resembling the 'host' sand to that of the fines has been termed the “transitional fines content.” The transitional fines content (TFC) is relevant to most infield mixes because they have fines content near the TFC. Infield soils are transitional because they must exhibit the plasticity of a fine-grained soil but the dimensional stability and workability of a coarse-grained soil. 
 
 It is important to acknowledge that the TFC is not a universal number (for example, 30%). Reported values range from 15 to 45% by dry mass [@Zuo2015]. The TFC value varies across mixtures because (1) it depends on the behavioral threshold of interest (for example, compressibility, shear strength, or permeability), and (2), a unique ratio exists for every combination of coarse-grained and fine-grained components. The total state of particle packing depends on the grain-size distribution of each component, the plasticity of the fines, the means of compaction or consolidation, and the state of effective stress [@Zuo2015].
 
@@ -578,10 +588,10 @@ Soil suppliers often describe their mixes by the loose volume of each component 
 The relative dry mass of solids is considered more absolute because these never change despite fluctuations in water content or bulk density. 
 The ratios or percentage to which the component fractions are normalized should also be made explicit. The mass of each component usually normalized to the total dry mass: 
 
-$$ %~sand~=\frac{g_{sand}}{(g_{sand}+g_{clay})} $$
-However, others have advocated for enumerating the amount of sand to the amount of clay. For example, if 40 grams sand are added to 100 grams clay, this mixture would be termed 40% sand @[Briish clays textbook]. 
+$$ \%~sand~=\frac{g_{sand}}{(g_{sand}+g_{clay})} $$
+However, others have advocated for enumerating the amount of sand to the amount of clay. For example, if 40 grams sand are added to 100 grams clay, this mixture would be termed 40% sand [@ British clays textbook]. 
 
-$$ %~sand~=\frac{g_{sand}}{g_{clay}} $$
+$$ \%~sand~=\frac{g_{sand}}{g_{clay}} $$
 
 This approach is analogous to computing water content as the mass of water related to the mass of dry soil. However, it is rarely used in scientific literature.   
 
@@ -652,24 +662,18 @@ Oedometer experiments on artificial soil mixtures probably have less practical s
 
 #### Transitional fines content summary
 
-- There is no universal value for the TFC (for example, 70% sand by mass). 
+- There is no universal value for the TFC (for example, 70% sand by mass); it ranges from 15-50 % and is specific to a given mixture, specimen prepration method, and problem of interest. 
 
-- Factors affecting the TFC value in a binary mixture include sand gradation, fines plasticity, compaction energy, and behavioral parameter of interest.
+- Factors affecting the TFC value in a binary mixture include sand gradation, plasticity of the fines, compaction energy, and behavioral parameter of interest.
 
 - descriptions of behavioral thresholds are best specified using volumetric relations to account for the presence of water and specific gravity differences between the solids
  
 - Calculations provide a useful starting point or estimation of the TFC, but experiments are required for a more precise solution.
 
 
-## Behavior of artificial soil mixtures 
+### Effect of coarse fraction on mix behavior
 
-This section summarizes research about how the components of a soil mixture affect its behavior.
-Researchers have used a variety of methods to evaluate soil mixtures. 
-This review focuses on studies which have measured Atterberg limits, shear strength, or toughness because these properties are the most relevant concerns on baseball and softball infields.
-Two-component mixtures (sand with a single type of clay) and three-component mixtures (sand with two forms of clay) are both examined. 
-For brevity, in this section the term “clay” simply refers to the fine-grained mixture component and does not connote any specific definition of texture, particle size, plasticity, or mineralogy. 
-
-### Effect of sand content
+#### Effect of sand content
 
 @Seed1964a investigated Atterberg limits of sand-clay mixtures. Three types of clay (kaolinite, illite, and Ca-bentonite) were mixed with varying amounts of sand. All of the sand was < 425 μm.
 
@@ -705,7 +709,7 @@ Therefore, the shape of the liquid limit vs. sand content curve below 60% sand c
 @Nagaraj2016 and effect of sand size and clay type on shear strength of sand-clay mixtures ...[[[[[[]]]]]]
 
 
-### Effect of sand/silt particle size 
+#### Effect of sand/silt particle size 
 
 The influence of coarse particle additions' particle size was tested by @Sivapullaiah1985. 
 For equal sand percentages, both the liquid and plastic limits were affected by the size of the added sand particles.
@@ -718,13 +722,13 @@ For the same percent 'coarse addition,' coarse sand caused a smaller change in t
 
 @Barnes2013 tested mixes of London clay with sand (two different size fractions) or silt, in 10% increments of coarse particles from 0 to 100% clay. Finer particles decreased a mixture's toughness at its plastic limit. @Barnes2013 argued that increased the clay's toughness was higher at a given 'matrix water content' (water per unit <2<sub>mu</sub>m fration), but this is a somewhat abstract idea because water is also associated with particles > <2<sub>mu</sub>m. reflected only when all the soils were above their respective plastic limits. 
 
-### Effect of sand particle shape 
+#### Effect of sand particle shape 
 
 @Sivapullaiah1985 found no effect of sand particle shape on the Atterberg limits. Bentonite clay was mixed with equal amounts of either angular or round sand of the same particle size fraction (150 μm – 75 μm). Sand contents ranged from 20 - 95 %. There was no discernible difference in the liquid or plastic limits.
 
 Dumbleton and West [-@Dumbleton1966b] studied the influence of the coarse fraction’s shape on Atterberg limits. Increasing departure from spherical and round particles tended to raise both the liquid and plastic limits by roughly equivalent amounts. For the same mass percent of coarse addition, the increase in the plastic limit was platy mica silt > bulky quartz silt > angular quartz sand > round quartz sand. The authors attributed the difference to irregularly-shaped particles having higher surface area and requiring more water to coat the particles. This finding differs from that of @Sivapullaiah1985, whose data showed no difference between angular and round sands of the same sieve diameter. 
 
-### Effect of sand uniformity
+#### Effect of sand uniformity
 
 The uniformity of sand included in soil mixtures has not been studied extensively. 
 @Dumbleton1966b found that mixes made with broadly-graded sand had similar Atterberg limits to mixes containing sand from a single mesh size. 
@@ -736,6 +740,9 @@ This narrow range precludes efficient particle packing (see Section \@ref(#tfc-s
 
 ### Effect of mixing multiple clay types 
 
+When two clays are combined, the resultant mixture often has properties which are more reflective dominant dominated by one of the clays. 
+
+the resultatn mixture has properties which do not necessarily reflect the proportions of the mixture. A small amount of a high-activity clay such as monmorillonite can dominate the behavior of the mixture. 
 @Seed1964a extended their work on pure clays to three-component mixtures in which two types of clay were first mixed together before adding the sand.
 
 Adding kaolinite to either illite or smectite had a nearly proportional effect on the Atterberg limits.
@@ -745,19 +752,31 @@ The liquid limits of smectite-illite mixes were always lower than predicted by t
 Small additions of illite to smectite lowered the LL by more than expected, and small additions of smectite to illite raised the LL by less than expected.
 An opposite effect was observed for the plastic limit. With small bentonite additions, the plastic limit was lower than expected, while for larger bentonite additions it was higher than expected.
 
+Barnes study
 
-### Summary: behavior of artificial soil mixtures 
+Dumbleton and West 
 
-These findings collectively demonstrate the complex behavior that results when two or more soils are artificially mixed. This is particularly true when multiple clay types are combined. @Seed1964a concluded that this technique could be very useful in designing soil mixtures:
+Ceramic textbooks :
 
->"Such a blending of two soils, producing a new soil with characteristics better than both of its constituents, would be an interesting addition to soil stabilization techniques."
+Clay bodies for ceramic applications are commonly manufactured by adding a 1-3% bentonite {ref}. It is evident that a minute amount of one clay can drasticall alter the behavior of a mixture. [ref???]
 
 For equal sand contents, the plastic and liquid limits of the mixtures did not lie on a linear interpolation between those of the pure clay endmembers.
 
 @Sivapullaiah1985 showed that their linear law was not valid for mixtures of bentonite with kaolinite. The liquid limit of the mixture was always lower than would be expected. This implies an interaction between the clay mineral particles.  
 
 
-Clay bodies for ceramic applications are commonly manufactured by adding a 1-3% bentonite {ref}. It is evident that a minute amount of one clay can drasticall alter the behavior of a mixture. [ref???]
+
+### Summary: behavior of artificial soil mixtures 
+
+Soils are often mixed to beneficiate their properties. 
+
+.....
+
+These findings collectively demonstrate the complex behavior that results when two or more soils are artificially mixed. This is particularly true when multiple clay types are combined. @Seed1964a concluded that this technique could be very useful in designing soil mixtures:
+
+>"Such a blending of two soils, producing a new soil with characteristics better than both of its constituents, would be an interesting addition to soil stabilization techniques."
+
+
 
 
 #### Notable research gaps to address in this project:
