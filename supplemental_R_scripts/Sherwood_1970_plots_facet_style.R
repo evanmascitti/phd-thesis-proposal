@@ -196,7 +196,7 @@ att_lims_variation_plot <- ggplot(
       geom = "errorbarh",
       fun.data = ~ mean_se(., mult = 1.96),
       height = 0.1,
-      size = 0.625,
+      size = 0.5,
       color = 'black'
     ) +
     scale_color_manual(values= rev(colorblindr::palette_OkabeIto[1:2]))+
@@ -250,12 +250,11 @@ att_lims_cov_plot <- att_lims_variation_sources_grouped %>%
   scale_y_discrete(labels = scales::label_wrap(width = 24))+
   scale_fill_manual(values= rev(colorblindr::palette_OkabeIto[1:2]))+
   guides(fill = guide_legend(reverse = T))+
-  #colorblindr::scale_fill_OkabeIto(guide = guide_legend(reverse = T))+
   scale_x_continuous(limits = c(0,15),
                      breaks = scales::breaks_width(width = 1, offset = 0),
                      expand= expansion(mult = 0, add = 0))+
   labs(title = "Coefficients of variation among replicated plasticity tests",
-       subtitle = "Data re-plotted from Sherwood, 1970 (Tables 5 and 8). \nBars represent mean COV across soils B, G, and W.",
+       caption = "Data re-plotted from Sherwood, 1970 (Tables 5 and 8). \nBars represent mean COV across soils B, G, and W.",
        x= "Coefficient of variation (%)",
        fill = "Test")+
   cowplot::background_grid(major = "x", size.major = 0.25)+

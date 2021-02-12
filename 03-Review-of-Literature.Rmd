@@ -31,7 +31,7 @@ This literature review is organized into three sections to address the following
 
 **\@ref(lab-methods-review)** [**Laboratory tests of soil behavior and physical properties**](#lab-methods-review)
 
-**\@ref(artificial-soil-mixtures)** [**Design and properties of artificial soil mixtures**](#artificial-soil-mixtures)
+**\@ref(artificial-soil-mixtures)** [**Design and behavior of artificial soil mixtures**](#artificial-soil-mixtures)
 
 ## Performance of baseball infield surfaces {#infield-performance} 
 
@@ -112,7 +112,7 @@ Tthis may be the critical feature which links hardness, bounce, pace, and ball s
 As the ball releases, it rolls up the saucer-like depression created by its own impact.
 This yields a slightly steeper release angle relative to that of a more rigid soil surface (Figure \@ref(fig:ball-indentation-release-angle)). 
 
-```{r ball-indentation-release-angle, fig.cap="A. A rigid soil surface produces a lower release angle, provided no imperfections are present in the surface. B. A surface with lower stiffness encourages the ball to roll out of the shallow depression created by impact, leading to a slightly steeper release angle.", fig.scap="Deformation of infield soil surface at ball impact"}
+```{r ball-indentation-release-angle, fig.cap="A. A rigid soil surface produces a lower release angle, provided no imperfections are present in the surface. B. A surface with lower stiffness encourages the ball to roll out of the shallow depression created by impact, leading to a slightly steeper release angle.", fig.scap="Deformation of infield soil surface at ball impact", fig.align='center'}
 knitr::include_graphics('images/illustrations/ball_indentation_release_angle/ball_indentation_release_angle.pdf')
 ```
 
@@ -257,25 +257,25 @@ One could expect better agreement for the liquid limit and this is clearly borne
 
 A separate study by @Sherwood1970a showed that the fall-cone method has better inter-operator reproducibility. Figure \@ref(fig:sherwood-cone-cup-comparison) shows the spread of the 6 replicated tests for each method. The coefficient of variation among operators was about half that of the Casagrande method. 
 
-
-```{r sherwood-cov-comparison, fig.cap='Atterberg limit tests are much more repeatable by a single operator than across operators or labs.',  fig.scap="COV for Atterberg replicaton types"}
-knitr::opts_chunk$set(fig.pos = "!t")
-att_lims_cov_plot
-```
-
-
-```{r sherwood-cone-cup-comparison, fig.height = 6, fig.cap='The fall-cone method is less variable across operators than the Casagrande cup'}
-
-source("supplemental_R_scripts/Sherwood_Ryley_1970_plot.R")
-sherwood_ryley_1970_table3_plot
-
-```
-
 Sherwood summarized the results of the round-robin testing with a warning about not only the Atterberg limits, but all the soil physical tests evaluated in his study:
 
 >"The results of this investigation....are for the most part rather disturbing, since it is clear that none of them can be used without quite wide tolerances being placed on the values obtained."
 
 In summary, @Sherwood1970 showed that most soil physical tests are quite repeatable so long as they are performed by an experienced operator with a well-tuned apparatus and careful workmanship.
+
+
+```{r sherwood-cov-comparison, fig.height = 4, fig.cap='Atterberg limit tests are much more repeatable by a single operator than across operators or labs.',  fig.scap="COV for Atterberg replicaton types"}
+# knitr::opts_chunk$set(fig.pos = "!t")
+att_lims_cov_plot
+```
+
+
+```{r sherwood-cone-cup-comparison, fig.height = 4, fig.cap='The fall-cone method is less variable across operators than the Casagrande cup'}
+
+source("supplemental_R_scripts/Sherwood_Ryley_1970_plot.R")
+sherwood_ryley_1970_table3_plot
+
+```
 
 
 #### Sources of error in Atterberg limit methods
@@ -517,7 +517,7 @@ Many soil tests have been developed with the goal of supplanting the Atterberg l
 ___
 
 
-## Behavior of artificial soil mixtures {#artificial-soil-mixtures}
+## Artificial soil mixtures {#artificial-soil-mixtures}
 
 Soil mixtures for baseball and softball fields typically contain two materials - a sand and a fine-grained soil.
 This section summarizes research about how the components of a soil mixture affect its behavior.
@@ -566,12 +566,19 @@ A minor addition of fine particles will not alter the soil’s behavior so long 
 If sufficient fines are added, they begin to participate in the force chain and with further additions the coarse grains become completely suspended in a matrix of fines.
 The soil's behavior becomes dominated by the fines with the coarse grains acting only as inert inclusions. 
 This threshold has been termed the transitional fines content (TFC). 
-The global void ratio also increases with fines content > TFC because solid sand particles are displaced by an equivalent volume of fines and inter-fine voids. 
-The transitional fines content (TFC) is relevant to most infield mixes because they have fines content near the TFC. Infield soils are transitional materials because they must exhibit the plasticity of a fine-grained soil but the dimensional stability and workability of a coarse-grained soil. 
+The global void ratio also increases with fines content > TFC because solid sand particles are displaced by a corresponding volume of fines and inter-fine voids.
 
-It is important to acknowledge that the TFC is not a universal number. The majority of studies report values between 20 and 30% fines by dry mass with extreme values range 15 to 45% [@Zuo2015; ]. The TFC value varies across mixtures because (1) it depends on the behavioral threshold of interest (for example, compressibility, shear strength, or permeability), and (2), a unique ratio exists for every combination of coarse-grained and fine-grained components. The total state of particle packing depends on the grain-size distribution of each component, the plasticity of the fines, the means of compaction or consolidation, and the state of effective stress [@Zuo2015].
+Infield soils must exhibit the plasticity of a fine-grained soil but the dimensional stability and workability of a coarse-grained soil. 
+Therefore, the TFC is a relevant concept to the design of infield mixes.
+The following sub-sections review literature on the TFC concept. 
 
-Researchers have defined the TFC using several methods (Table \@ref(tab:tfc-definition-methods)). A few examples include: calculations from phase relations and index properties [@Thevanayagam1998; @Monkul2007; @Cabalar2011], the minimum global void ratio following compaction [@Lade1998; @Ueda2011], undrained shear strength during triaxial tests [@Thevanayagam1998; @Vallejo2000; @Cabalar2017; @Kim2018], parameters of the normal compression line or critical state line,(@Cabalar2011; @Carrera2011; @Shipton2012] and liquefaction potential [@Lade1997].
+#### Means to define the TFC 
+
+It is important to acknowledge that the TFC is not a universal number. Most studies report values of 20-30% fines by dry mass, with extreme values ranging from about 15 to 50% [@Zuo2015; @Kenney1991; @Vallejo2000]. 
+The TFC value varies across mixtures because (1) it depends on the behavioral threshold of interest (for example, compressibility, shear strength, or permeability), and (2) a unique ratio exists for every combination of coarse-grained and fine-grained components. 
+The total state of particle packing depends on the grain-size distribution of each component, the plasticity of the fines, the means of compaction or consolidation, and the state of effective stress [@Zuo2015].
+
+Researchers have defined the TFC using several methods (Table \@ref(tab:tfc-definition-methods)). A few examples include: calculations from phase relations and index properties [@Thevanayagam1998; @Monkul2007; @Cabalar2011; @Lade1998], the minimum global void ratio following compaction [@Lade1998; @Ueda2011], undrained shear strength during triaxial tests [@Thevanayagam1998; @Vallejo2000; @Cabalar2017; @Kim2018], parameters of the normal compression line or critical state line,(@Cabalar2011; @Carrera2011; @Shipton2012] and liquefaction potential [@Lade1997].
 
 ```{r tfc-definition-methods}
 tfc_definition_methods <- readr::read_csv("data/lit-review-data/tables/selected_transitional_fines_content_studies.csv") %>%
@@ -586,21 +593,12 @@ tfc_definition_methods
 
 
 
-#### Maximum density and intergranular void ratio
+##### Maximum total density
 
-The term intergranular void ratio was introduced by @Thevanayagam1998 to describe the configuration of large grains in a coarse-fine mixture. 
-Intergranular void ratio may be derived from phase relations (Fig __) by considering the solid fines as voids within the bulk volume, which is held equal to unity.
- 
-The intergranular void ratio may be compared with the minimum void ratio of the pure sand. When the void ratio of the granular phase surpasses that of the host sand, behavior will no longer be governed by contact between coarse grains. 
-
-** good verbiage here : ** 
-Minimum porosity of a mixture occurs when the fines and their interfine voids are just sufficient to fill the sand skeleton's larger voids.
-Many authors have defined the TFC as the fines content which produces the lowest total void space. This approach may not reflect the actual behavior of the soil because the global void ratio may not reach its minimum until $e_{sand}$ has already exceeded the minimum $e_{sand}$ for the host sand alone. The coarser grains act mostly independent of one another and behavior is already governed by the fines, thus the transition occurs at a lower fines content than would be suggested by the global void ratio [@Cabalar2011]. 
-
-
-#### Size ratio {#tfc-size-ratio}
-
-The theoretical maximum density of a coarse-fine mixture is determined by the maximum possible density of each component in its pure state. If the fines are assumed to be infinitely small, the global solids volume or packing fraction is
+The maximum possible density of a coarse-fine mixture occurs when the fines just fill the large voids in the sand skeleton.
+This concept permits a simple estimate of the TFC.
+The individual components are assumed to exist at their respective maximum densities (minimum void volumes). 
+A convenient analytical solution for the global solids volume $V_s$ is:
 
 \begin{equation}
 \\
@@ -610,9 +608,33 @@ V_{solids}=1-n_{global}=1-\left[ n_{coarse}\cdot n_{fines}\right]
 \\
 \end{equation}
 
-where $n_{global}$ is the global porosity, $n_{coarse}$ and $n_{fines}$ represent the porosity of each component when packed to their respective maximum densities. 
+where $n_{global}$ is the global porosity and $n_{coarse}$ and $n_{fines}$ represent the porosity of each component when packed to their respective maximum densities [@Lade1998]. 
+For example, a sand having a minimum porosity of 0.35 and a clay having a minimum porosity of 0.4, the theoretical maximum solids volume or "packing fraction" of the mixture is $1-\left[0.35\cdot0.40\right]=0.86$ or 14% porosity.
 
-For example, a sand having a minimum porosity of 0.35 and a clay having a minimum porosity of 0.4, the theoretical maximum packing fraction of the mixture is $1-\left[0.35\cdot0.40\right]=0.86$ i.e. 14% porosity. Measured packing fractions in experiments are always lower than the theoretical maximum because the calculations rely on simplifying assumptions which are unlikely to be satisfied [@Zuo2015]. Observed packing fractions in experiments range from 60% to 95% of the theoretical maximum [@Furnas1931; @McGeary1961; @Zuo2015].  
+Packing fractions measured in experiments are always lower than their theoretical maxima [@Zuo2015]. 
+They range from 60% to 95% of the theoretical maximum [@Furnas1931; @McGeary1961; @Zuo2015]. 
+The disparity can be attributed to the fact that simplifying assumptions of maximum density of each component and "infinitely small" fines are unlikely to be satisfied [@Zuo2015].  
+
+This simple approach may not reflect the actual behavior of the soil. [@Cabalar2011] showed that the behavior transition from sand-like to clay-like occurs at a fines content lower than predicted by the global void ratio. 
+The intergranular void ratio (discussed below) may yield a more accurate prediction of the behavioral threshold.  
+
+
+#####  Intergranular void ratio
+
+A second mathematical means to define the TFC is the intergranular void ratio $e_{SA}$ [@Thevanayagam1998]. 
+This parameter enumerates the configuration of large grains within a coarse-fine mixture. 
+$e_{SA}$ is derived from phase relations (Fig __) by considering the solid fines as voids.
+ 
+For any fines percent and water content, $e_{SA_{mixture}}$ is compared to the minimum void ratio of the pure sand $e_{min_{pure~sand}}$. 
+When $e_{SA_{mixture}}$ exceeds $e_{min_{pure~sand}}$, soil behavior will no longer be governed by contacts between coarse grains because of their loose configuration.
+Therefore the TFC is defined as the fines content where $e_{SA_{mixture}}=e_{min_{pure~sand}}$
+
+
+#### Other TFC considerations 
+
+##### Effect of coarse/fine particle size ratio {#tfc-size-ratio}
+
+The analytical solutions described above assume that the fines are infinitely small, fitting completely within the larger grains.
 
 The size ratio between the coarse and fine components partially explains the discrepancy between calculated and experimental values [@Lade1998; @Ueda2011]. 
 In Equation \@ref(eq:global-tfc-void-ratio), it is assumed that the fines are infinitely small. 
@@ -628,35 +650,42 @@ R=\frac{D_{50~sand}}{D_{50~fines}}
 
 The disparity between calculations and experiments increases with decreasing size ratio [@Lade1998; @Zuo2015]. 
 If the coarse and fine soils have similar $D_{50}$, lodging of fines between the coarse grains is responsible for creating additional voids. 
-A meta-analysis by @Lade1998 concluded that if $R$ < 7, any increase in the size ratio imparts a relatively steep increase in packing density (see Figure \@ref(fig:lade-1998-figure-7)).
+@Lade1998 concluded that when $R$ < 7, any increase in the size ratio imparts a relatively steep increase in packing density (see Figure \@ref(fig:lade-1998-figure-7)).
+For further increases in $R$, the observed void ratio slowly decreases toward its theoretical minimum. 
 
 ```{r lade-1998-figure-7, fig.cap='When the ratio of particle diameters is < 7, increases in the size ratio improve packing density. Above R of 7-10, little density increase is observed. Reproduced from Lade et al. (1998).'}
 knitr::include_graphics('images/illustrations/Lade_1998_Figure_7/Lade_1998_Figure_7.pdf')
 ```
 
-Additionally, @Lade1998 showed that a void between closely packed spheres of equal sizes has a diameter of ~ $\frac{1}{6.4}$ that of the large particles. 
+@Lade1998 also showed that a void between closely packed spheres of equal sizes has a diameter of ~ $\frac{1}{6.4}$ that of the large particles. 
 Therefore, there is a fundamental reason for the abrupt change in slope at $R$~7. 
-For further increases in $R$, the observed void ratio slowly decreases toward its theoretical minimum. 
+
 Numerical simulations indicate the intergranular void ratio is practically independent of $D_{50~fines}$ when $R$ > 100 [@Ueda2011].
 
-The geometrical calculations by @Lade1998 assume a single particle size for each mix component. The packing density $V_s$ of a two-component mixture is further increased when each individual component is well-graded. @Reed1995 provided solutions for the optimum density of multi-phase mixtures when each has a log-normal particle size curve. 
+The geometrical calculations by @Lade1998 assume a single particle size for each mix component. 
+The solid volume $V_s$ of a two-component mixture is further increased when each individual component is well-graded. 
+@Reed1995 provided solutions for the optimum ratios of multi-phase mixtures when each has a log-normal particle size curve. 
 
-#### Mixtures with more than 2 phases
+##### Mixtures with more than 2 phases
 
-Additional voids may be filled by in a coarse-fine mixture by adding progressively smaller particles. The overall void volume approaches zero as more components are added. @McGeary1961 achieved a volumetric packing density of 0.951 (less than 5% porosity) with a four-component mixture. This extremely high packing density could only be achieved by first vibrating the coarsest component to its maximum density, then adding the next finer component and vibrating until it fully penetrated the remaining voids. @McGeary1961 noted that this mixture could still be poured from its container.
+Additional voids may be filled by in a coarse-fine mixture by adding progressively smaller particles. 
+The overall void volume approaches zero as more components are added.
+@McGeary1961 achieved a solids volume of 0.951 (less than 5% porosity) with a four-component mixture. 
+This extreme packing density could only be achieved by first vibrating the coarsest component to its maximum density, then adding the next finer component and vibrating until it fully penetrated the remaining voids. 
+@McGeary1961 noted that this mixture could still be poured from its container.
 
 
-#### Plasticity of fines
+##### Plasticity of fines
 
-Most research on the transitional fines content has focused on sand mixed with nonplastic fines. 
+Most research on the transitional fines content has focused on sand mixed with non-plastic fines. 
 This research bias is likely due to the high liquefaction risk posed by silts. 
 It also may reflect the speed at which the experiments can be performed. 
 Mixtures of sand with silt can be vibrated to their maximum density in an air-dry condition, while investigations of sand mixed with plastic clay require more laborious dynamic compaction methods [@ASTMD4253-16; @ASTMD698-12e2]. 
 Plasticity index has been positively correlated with optimum water content for compaction [@Sridharan2005a; @Verma2019].
-Therefore, by increasing the plasticity of the fines, one would expect the maximum achievable density of a sand-clay mix to occur at a lower fines content. Compared to a low-plasticity clay, more of the intergranular space is occupied by water in a zero-air voids condition ($S_e$ = 1). 
+Therefore, by increasing the plasticity of the fines, one would expect the maximum achievable density of a mix to occur at a lower fines content. Compared to a low-plasticity soil, more of the intergranular space is occupied by water in a zero-air voids condition ($S_e$ = 1). 
  
 
-#### Method of compaction/consolidation
+##### Method of compaction/consolidation
 
 Mixtures subjected to static compression in an oedometer exhibit typical void ratio vs. log pressure curves. 
 When this method is used, higher ultimate density values are attained compared to dynamic compaction tests.
@@ -688,7 +717,7 @@ This relationship was also observed for the illite clay.
 A linear relation was observed for the kaolinite clay up to 50 % sand, but the liquid limit test could not be performed on the 75 % sand-25 % kaolinite mixture. 
 Therefore, it was not clear whether the linear relationship would have persisted above 50 % sand.
 
-@Seed1964a showed that the slopes of liquid limit vs. sand content lines differed by clay type. The slopes were in close agreement with the Skempton activity of the clay, computed as $\frac{LL}{\%~<~2~ \mathrm{\mu m}}$. 
+@Seed1964a showed that the slopes of liquid limit vs. sand content lines differed by clay type. The slopes were in close agreement with the Skempton activity of the clay, computed as $\frac{LL}{\%~<~2~\mathrm{{\mu}m}}$. 
 The relationship to clay activity held regardless of whether the sand was mixed with a single clay or a pre-blended clay mixture. 
 
 The plastic limit of the bentonite-sand mixtures also followed a linear relationship with increasing sand, up to the highest percent sand tested (75%). 
@@ -747,7 +776,7 @@ This narrow range precludes efficient particle packing (see Section \@ref(#tfc-s
 
 When two clays are combined, the resultant mixture often has properties which are more reflective dominant dominated by one of the clays. 
 
-the resultatn mixture has properties which do not necessarily reflect the proportions of the mixture. A small amount of a high-activity clay such as monmorillonite can dominate the behavior of the mixture. 
+The resultant mixture has properties which do not necessarily reflect the proportions of the mixture. A small amount of a high-activity clay such as monmorillonite can dominate the behavior of the mixture. 
 @Seed1964a extended their work on pure clays to three-component mixtures in which two types of clay were first mixed together before adding the sand.
 
 Adding kaolinite to either illite or smectite had a nearly proportional effect on the Atterberg limits.

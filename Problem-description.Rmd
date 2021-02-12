@@ -78,7 +78,7 @@ A full-size baseball field occupies ~ `r round(sum(pnc_areas$total_area_ha), 0)`
 
 To motivate the significance of the infield skin, consider Figures \@ref(fig:player-locations)-\@ref(fig:labor-per-area).^[Data used to compute the values in Figure \@ref(fig:labor-per-area) are compiled in the Appendix, see Table \@ref(tab:labor-per-area-tab)] All the offensive players, the four infielders, and the pitcher and catcher are standing on skinned areas. A large majority of important plays occur here, so the funds and effort devoted to maintaining this area are disproportionately large.
 
-```{r player-locations, fig.cap="Locations of players during a professional baseball game. Note the relative paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows).", fig.height=2.5}
+```{r player-locations, fig.cap="Locations of players during a professional baseball game. Note the relative paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows).", fig.height=2.5, cache =T}
 
 knitr::include_graphics('images/illustrations/player_locations/player_locations.png')
 ```
@@ -139,7 +139,7 @@ labor_per_area_plot
 ```
 
 
-```{r mlb-salaries, fig.cap='MLB athletes are valuable assets. Their safety and performance must not be compromised by the playing surface.', fig.show='hold'}
+```{r mlb-salaries, fig.cap='MLB athletes are valuable assets. Their safety and performance must not be compromised by the playing surface.', fig.show='hold', cache=T}
 source('supplemental_R_scripts/mlb_salaries_and_revenue.R')
 cowplot::plot_grid(salary_distribution_2019_plot, mlb_revenues_plot, align = "h")
 

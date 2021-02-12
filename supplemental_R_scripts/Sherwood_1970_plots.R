@@ -171,7 +171,7 @@ plot_att_lims_variation_hz <- function(df, mean_df, plot_title, plot_subtitle, p
       geom = "errorbarh",
       fun.data = ~ mean_se(., mult = 1.96),
       height = 0.4,
-      size = 0.625,
+      size = 0.5,
       color = 'black'
     ) +
     colorblindr::scale_color_OkabeIto() +
