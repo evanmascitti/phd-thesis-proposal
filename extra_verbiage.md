@@ -119,3 +119,83 @@ Even when weather conditions are favorable, high toughness allows the groundskee
 The groundskeeper is unable to add water to the infield once the game has begun. In hot and dry weather., the soil dries and becomes excessively hard as the game progresses, affecting ball response and also inducing brittle bulking from cleat (Ch. __). Therefore soil toughness also allows the soil to retain its plastic behavior as soil moisture is reduced.
 
 ___
+
+#### Volume and mass relations
+
+The amount of each component in a soil mixture may be reported on a volumetric or mass basis. 
+Soil suppliers often describe their mixes by the loose volume of each component prior to mixing (for example, 80% sand with 20% peat). 
+The relative dry mass of solids is considered more absolute because these never change despite fluctuations in water content or bulk density. 
+The ratios or percentage to which the component fractions are normalized should also be made explicit. The mass of each component usually normalized to the total dry mass: 
+
+$$ \%~sand~=\frac{g_{sand}}{(g_{sand}+g_{clay})} $$
+However, others have advocated for enumerating the amount of sand to the amount of clay. For example, if 40 grams sand are added to 100 grams clay, this mixture would be termed 40% sand [@ British clays textbook]. 
+
+$$ \%~sand~=\frac{g_{sand}}{g_{clay}} $$
+
+This approach is analogous to computing water content as the mass of water related to the mass of dry soil. However, it is rarely used in scientific literature.   
+
+
+<!-- this paragraph has to get re-worked , too clumsy and verbose-->
+Mass-based measures are the most rational basis for mixing and testing, but soil behavior is governed by particle-to-particle relations in space. Volumetric relations provide a more accurate depiction of the soil’s behavior, especially when the mixture components have very different specific gravities. If relative masses are known, volumetric relations may be readily computed from phase relations.
+
+___
+
+#### Volume and mass relations
+
+The amount of each component in a soil mixture may be reported on a volumetric or mass basis. 
+Soil suppliers often describe their mixes by the loose volume of each component prior to mixing (for example, 80% sand with 20% peat). 
+The relative dry mass of solids is considered more absolute because these never change despite fluctuations in water content or bulk density. 
+The ratios or percentage to which the component fractions are normalized should also be made explicit. The mass of each component usually normalized to the total dry mass: 
+
+$$ \%~sand~=\frac{g_{sand}}{(g_{sand}+g_{clay})} $$
+However, others have advocated for enumerating the amount of sand to the amount of clay. For example, if 40 grams sand are added to 100 grams clay, this mixture would be termed 40% sand [@ British clays textbook]. 
+
+$$ \%~sand~=\frac{g_{sand}}{g_{clay}} $$
+
+This approach is analogous to computing water content as the mass of water related to the mass of dry soil. However, it is rarely used in scientific literature.   
+
+
+<!-- this paragraph has to get re-worked , too clumsy and verbose-->
+Mass-based measures are the most rational basis for mixing and testing, but soil behavior is governed by particle-to-particle relations in space. Volumetric relations provide a more accurate depiction of the soilâ€™s behavior, especially when the mixture components have very different specific gravities. If relative masses are known, volumetric relations may be readily computed from phase relations.
+
+#### Intergranular void ratio
+
+
+
+___
+############
+
+
+____
+
+this is a potentially different copy of what's above:
+
+
+#### Volume and mass relations
+
+The amount of each component in a soil mixture may be reported on a volumetric or mass basis. 
+Soil suppliers often describe their mixes by the loose volume of each component prior to mixing (for example, 80% sand with 20% peat). 
+The relative dry mass of solids is considered more absolute because these never change despite fluctuations in water content or bulk density. 
+The ratios or percentage to which the component fractions are normalized should also be made explicit. The mass of each component usually normalized to the total dry mass: 
+
+$$ \%~sand~=\frac{g_{sand}}{(g_{sand}+g_{clay})} $$
+However, others have advocated for enumerating the amount of sand to the amount of clay. For example, if 40 grams sand are added to 100 grams clay, this mixture would be termed 40% sand [@ British clays textbook]. 
+
+$$ \%~sand~=\frac{g_{sand}}{g_{clay}} $$
+
+This approach is analogous to computing water content as the mass of water related to the mass of dry soil. However, it is rarely used in scientific literature.   
+
+
+<!-- this paragraph has to get re-worked , too clumsy and verbose-->
+Mass-based measures are the most rational basis for mixing and testing, but soil behavior is governed by particle-to-particle relations in space. Volumetric relations provide a more accurate depiction of the soil’s behavior, especially when the mixture components have very different specific gravities. If relative masses are known, volumetric relations may be readily computed from phase relations.
+
+#### Intergranular void ratio
+
+The term intergranular void ratio was introduced by @Thevanayagam1998 to describe the configuration of large grains in a coarse-fine mixture. 
+Intergranular void ratio may be derived from phase relations (Fig __) by considering the solid fines as voids within the bulk volume, which is held equal to unity.
+ 
+The intergranular void ratio may be compared with the minimum void ratio of the pure sand. When the void ratio of the granular phase surpasses that of the host sand, behavior will no longer be governed by contact between coarse grains. 
+
+** good verbiage here : ** 
+Minimum porosity of a mixture occurs when the fines and their interfine voids are just sufficient to fill the sand skeleton's larger voids.
+Many authors have defined the TFC as the fines content which produces the lowest total void space. This approach may not reflect the actual behavior of the soil because the global void ratio may not reach its minimum until $e_{sand}$ has already exceeded the minimum $e_{sand}$ for the host sand alone. The coarser grains act mostly independent of one another and behavior is already governed by the fines, thus the transition occurs at a lower fines content than would be suggested by the global void ratio [@Cabalar2011]. 

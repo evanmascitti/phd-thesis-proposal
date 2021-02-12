@@ -1,7 +1,7 @@
 ---
 title: "Evan's PhD thesis proposal"
 author: "Evan C Mascitti"
-date: "last updated `r ecmfuns::ecm_timestamp()`"
+date: "``last updated `r ecmfuns::ecm_timestamp()` ``"
 site: bookdown::bookdown_site
 documentclass: book
 always_allow_html: true
@@ -19,6 +19,7 @@ link-citations: yes
 description: "This is my first attempt at compiling a large dynamic document with the **bookdown** package in R."
 mainfont: Arial
 mathfont: Fira Math Regular
+codefont: Lucida Console
 urlcolor: blue
 linkcolor: blue
 citecolor: blue
@@ -41,10 +42,10 @@ knitr::opts_chunk$set(message=FALSE,
 
 Baseball fields are built from soil. Therefore, soil behavior determines the safety and function of the field. The purpose of this dissertation is to assess and improve the behavior of soil mixtures used on baseball infields. 
 
-Soil mixtures have received much study. However, there are no published experiments on this topic pertaining to baseball and
+The production of soil mixtures has received much study. However, there are no published experiments on this topic as it pertains to baseball and
 softball fields.
 
-This dissertation proposal is organized into four sections:
+This thesis proposal is organized into four sections:
 
 [**Purpose and objectives**](#purpose-objectives): A broad description of the scope and aims of the project
 

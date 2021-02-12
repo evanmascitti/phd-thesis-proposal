@@ -168,6 +168,8 @@ test_condition_labs <- c("Single operators at 41 different laboratories",
                          "6 results by a single operator") %>% 
   set_names(c('inter_lab', 'inter_operator', 'single_operator'))
 
+# now make the plot itself 
+
 att_lims_variation_plot <- ggplot(
   data = mean_values,
   mapping = aes(
@@ -179,47 +181,44 @@ att_lims_variation_plot <- ggplot(
       limits = c(0, 100),
       expand = expansion(mult = 0, add = 3)
     ) +
-    geom_vline(
-      xintercept = seq(0, 100, 5),
-      color = 'grey85',
-      linetype = 'dotted'
-    ) +
+    scale_y_discrete(
+      name = 'Soil\nID',
+      )+
+    # geom_vline(
+    #   xintercept = seq(0, 100, 5),
+    #   color = 'grey85',
+    #   linetype = 'dotted'
+    # ) +
     geom_point(
       position = position_jitter(height = 0.2, seed = 1),
-      alpha = 1 / 3,
-      size = 3) +
+      alpha = 1 / 3) +
     stat_summary(
       geom = "errorbarh",
       fun.data = ~ mean_se(., mult = 1.96),
-      height = 0.4,
+      height = 0.1,
       size = 0.625,
       color = 'black'
     ) +
-    colorblindr::scale_color_OkabeIto() +
-    labs(title = 'Relative uncertainty among replicate Atterberg limit tests',
-         caption = 'Error bars span 95% confidence interval of the mean. \nData re-plotted from Sherwood, 1970 (Tables 1, 3, 4).',
-         y= 'Soil\nidentifier')+
+    scale_color_manual(values= rev(colorblindr::palette_OkabeIto[1:2]))+
+    labs(title = 'Relative uncertainty among replicated plasticity tests',
+         caption = 'Error bars span 95% confidence interval of the mean. \nData re-plotted from Sherwood, 1970 (Tables 1, 3, 4).'
+         )+
   cowplot::theme_cowplot() +
-  # to put all the soils on one panel: 
   facet_wrap(~ test_condition, ncol = 1, labeller = labeller(test_condition = test_condition_labs)) +
-  # to make one plot for each soil:
-  #facet_grid(test_condition ~ soil, labeller = labeller(test_condition = test_condition_labs)) +
-  guides(color = guide_legend(override.aes = list(size= 4, alpha = 1/2)))+
+  guides(color = guide_legend(override.aes = list(size= 4, alpha = 1/2), reverse = T))+
   ggplot2::theme(
       axis.line.y = element_blank(),
       axis.title.y = element_text(angle = 0, vjust = 0.5),
       strip.text = element_text(face = "bold"),
       strip.background = element_rect(fill = 'grey95'),
+      plot.title.position = 'plot',
       legend.title.align = 0.5,
       legend.title = element_blank(),
       legend.position = 'top',
       legend.text = element_text(hjust = 1),
       legend.text.align = 0.5,
-      #legend.key.size = unit(6, "mm")
-    )
-
-att_lims_variation_plot
-
+      )
+last_plot()
 #######
 
 # compare variation by single operator with that of RRL operators  --------
@@ -242,24 +241,28 @@ var_sources_facet_labs <- c("41 operators from \ndifferent laboratories",
                             "8 individual \nRRL operators" ) %>% 
   set_names(unique(att_lims_variation_sources$comparison) )
 
+
+# make cov plot 
+
 att_lims_cov_plot <- att_lims_variation_sources_grouped %>% 
   ggplot(aes(cov, comparison, fill = test))+
   geom_col(width = 0.7, position = position_dodge(width = 0.8), alpha= 1/2)+
   scale_y_discrete(labels = scales::label_wrap(width = 24))+
-  scale_fill_manual(values= rev(colorblindr::palette_OkabeIto[1:2]),)+
+  scale_fill_manual(values= rev(colorblindr::palette_OkabeIto[1:2]))+
   guides(fill = guide_legend(reverse = T))+
   #colorblindr::scale_fill_OkabeIto(guide = guide_legend(reverse = T))+
   scale_x_continuous(limits = c(0,15),
                      breaks = scales::breaks_width(width = 1, offset = 0),
                      expand= expansion(mult = 0, add = 0))+
-  labs(title = "Coefficients of variation among Atterberg limit tests replicates",
+  labs(title = "Coefficients of variation among replicated plasticity tests",
        subtitle = "Data re-plotted from Sherwood, 1970 (Tables 5 and 8). \nBars represent mean COV across soils B, G, and W.",
        x= "Coefficient of variation (%)",
        fill = "Test")+
-  background_grid(major = "x", minor = "x")+
+  cowplot::background_grid(major = "x", size.major = 0.25)+
   theme(panel.grid.major = element_line(linetype = 'dotted'),
         panel.grid.minor = element_line(linetype = 'dotted'),
         strip.background = element_rect(fill = 'grey95'),
+        plot.title.position = 'plot',
         legend.title.align = 0.5,
         legend.position = c(0.725, 0.55),
         axis.title.y = element_blank(),
