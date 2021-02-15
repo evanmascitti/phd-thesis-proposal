@@ -47,19 +47,20 @@ lit_review_density_comparison_plot <- combined_densities %>%
                         nudge_y = -0.1)+
   scale_x_continuous(limits = c(1.3, 2.7),
                      breaks = seq(1.4, 2.4, 0.2),
-                     labels = seq(1.4, 2.4, 0.2))+
+                     labels = scales::label_number(accuracy = 0.1))+
   scale_color_brewer(palette = 'Dark2')+
-  labs(title = 'Infield soil bulk density',
+  labs(title = 'Range of infield soil bulk density',
        subtitle = 'Data collection method in parentheses.',
        x= bquote("Dry density, Mg m"^-3))+
   #guides(color= guide_legend(title = 'Data source', reverse = T))+
   cowplot::theme_cowplot()+
-  theme(legend.position = 'none',
+  ggplot2::theme(legend.position = 'none',
         axis.line.y= element_blank(),
         axis.text.y = element_blank(),
         axis.ticks.y = element_blank(),
         axis.title.y = element_blank(),
-        plot.background = element_rect(size = 0.25)
+        plot.background = element_rect(size = 0.25, color = 'grey75'),
+        plot.margin = ggplot2::margin(10, 10, 10, 10)
   )
 
 lit_review_density_comparison_plot

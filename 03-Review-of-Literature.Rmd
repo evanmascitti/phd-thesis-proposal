@@ -91,11 +91,11 @@ Incorporation of calcined clay (particle size 0.5 - 2 mm) also decreased frictio
 @Brosnan2011 studied the effects of construction and maintenance activities on infield surface pace.
 Water content was negatively correlated with surface pace, but no attempt was made to intentionally alter water content among plots. 
 Higher bulk density $\rho_{bulk}$ increased surface pace. 
-However, Figure \@ref(fig:lit-review-density-comparison) shows that the density values reported by @Goodall2005 and @Brosnan2011 may not be representative of professionally-managed infield skins.
+However, Figure \@ref(fig:lit-review-density-comparison) shows that the density values reported by @Goodall2005 and @Brosnan2011 may not be representative of professionally-managed infield skins. 
 @Brosnan2011 also found that topdressing plots with calcined clay had no effect on pace, nor did scarifying the surface by up to 2 cm. 
 
 
-```{r lit-review-density-comparison, fig.cap="Dry bulk density values reported in research studies may be lower than those on extant professional playing surfaces", fig.scap="Dry density from published literature compared to author's data" }
+```{r lit-review-density-comparison, fig.cap="Dry bulk density values reported in research studies may be lower than those on professional playing surfaces.", fig.scap="Dry density from published literature compared to author's data" }
 
 source('supplemental_R_scripts/pnc_density_vs_published_values.R')
 lit_review_density_comparison_plot
@@ -123,24 +123,27 @@ knitr::include_graphics("images/illustrations/ball_spin_effect/daish_fig_9.2_red
 
 ```
 
-```{r ball-indentation-release-angle, out.width="100%", fig.cap="A. A rigid soil surface produces a lower release angle, provided no imperfections are present in the surface. B. A surface with moderate stiffness encourages a longer impact duration, attenuating both spin and forward velocity.", fig.scap="Deformation of infield soil surface at ball impact", fig.align='center'}
-knitr::include_graphics('images/illustrations/ball_indentation/ball_indentation.png')
+```{r ball-indentation-release-angle, out.width="100%", fig.cap="A surface with moderate stiffness encourages the ball to slightly indent the soil. A longer impact duration allows more time for friction to work, attenuating both spin and forward velocity.", fig.scap="Deformation of infield soil surface at ball impact", fig.align='center'}
+knitr::include_graphics('images/illustrations/ball_indentation/ball_indentation_1_panel.png')
 ```
 
 
-Infield soil bear some similarity to cricket pitches and these have been researched more extensively. 
+Infield skins bear many similarities to cricket pitches, which have been researched more extensively. 
 Ball response is influenced by soil bulk density, clay content, water content, organic matter, and particle size distribution [@Baker2006].
 
 A laboratory study on surface friction of cricket soils was made by @Adams2001a. 
 This experiment mixed the same clayey soil with 6 types of coarse amendments. 
-All final mixes had sand contents between 30 and 40% by mass. 
+All final mixes had sand content between 30 and 40% by mass. 
 Ball-to-surface friction was highest for the mix containing sand between 125-60 &mu;m. 
 Lower friction was measured for soils with coarser or finer amendments. 
 Using a suede-type leather increased friction relative to polished leather, implying that the degree of wear on the ball may influence surface pace.
 
 ### Summary: performance of infield skin soils 
 
-Stable footing and predictable ball response comprise the requirements of an infield skin. Soil composition, density, and water content act together to govern the stiffness of the surface. Surface deformation attenuates linear and rotational kinetic energy of the ball. Existing studies on the infield skin have focused on construction/maintenance practices rather than mix design. 
+Stable footing and predictable ball response comprise the requirements of an infield skin. 
+Soil composition, density, and water content act together to govern the stiffness of the surface. 
+Surface deformation attenuates linear and rotational kinetic energy of the ball.
+Existing studies on the infield skin have focused on construction/maintenance practices rather than mix design. 
 
 ___
 
@@ -173,7 +176,7 @@ He defined 3 additional consistency limits, though none are widely used today. T
 - Cohesion limit: lumps of soil can be no longer pressed together with one's fingers
 
 Atterberg concluded that his ‘plasticity number’ was the most reliable means of measuring plasticity but pointed out that it gave no information about the effort required to deform the soil.
-He considered the effort needed to remold the soil a separate property, which translates to English as ‘viscosity.’ This distinction will be considered further in the section on soil toughness (\@ref(toughness)).
+He considered the effort needed to remold the soil a separate property, which translates to English as ‘viscosity.’ This distinction will be considered further in Section ref(soil-toughness).
 
 Atterberg’s work has never been fully appreciated in his own discipline of agricultural soil science. His test methods were improved and standardized by geotechnical engineers [@Terzaghi1926; @Casagrande1932].
 @Terzaghi1926 acknowledged the arbitrary nature of the tests but emphasized that their importance for preliminary soil investigations. 
@@ -328,7 +331,7 @@ Evidently, the water was more apt to associate with the sand in the latter proce
 They reported a 4 % water content increase of in the liquid limit due to oven-drying at either 60 or 110 &deg; C. 
 This was attributed to difficulty in re-hydrating the clay mineral surfaces and micropores. 
 If the soil was oven-dried, the liquid limit was increased by curing the sample for 24 hours after adding water. 
-A further but marginal LL increase was noted for a 48-hour cure time. 
+Another marginal LL increase was noted for a 48-hour cure time. 
 The relevant finding is that soil specimens should not be oven-dried prior to testing and should be thoroughly cured with water before beginning the test. 
 @ASTMD43182018 prohibits drying above 60 &deg; C and requires a minimum 16-hour curing time. 
 
@@ -367,7 +370,7 @@ Inadequate mixing of the specimen can also contribute to erroneous blow counts a
 
 ###### Plastic limit
 
-Sources of error include the operator's rolling path, judgement of the crumbling condition, and weighing errors in the water content determination. 
+Sources of error include the operator's rolling path, judgment of the crumbling condition, and weighing errors in the water content determination. 
 
 #### Attempts to improve plastic limit test
 
@@ -401,7 +404,7 @@ The thread is carefully bent about its center, which is anchored around a stainl
 The test is repeated for at least two other water contents and the water content of the threads is plotted against the displacement with segmented regression. 
 The shallower segment is extrapolated to zero displacement and this water content is taken as the plastic limit. 
 
-Moreno-Marato and Alonso-Azcàrate (2017???) also described a faster version of their original thread-bending test. 
+Moreno-Maroto and Alonso-Azcàrate (2017???) also described a faster version of their original thread-bending test. 
 In this version only a single thread is prepared and its displacement and water content are extrapolated to zero displacement using an empirical equation. 
 This test meets the original requirements of any plastic limit test which could replace the current method, namely:
 
@@ -445,9 +448,9 @@ Major findings by Barnes [-@Barnes2009; -@Barnes2013; -@Barnes2013b; -@Barnes201
 
 1. New characteristic water contents and indices can be defined in terms of toughness. For example, the toughness coefficient is the rate of change in toughness as a function of water content.
 2. Both clay-size content and clay-mineral content affect toughness. The general order of decreasing toughness at the plastic limit was montmorillonite > illite > kaolinite.
-3. The addition of coarse particles decreased toughness by dilluting the clay content. For equal 'matrix water content' (i.e. water per unit clay-size material) coarse particles _increased_ toughness because of the increased work required to shear them through the viscous clay matrix. However, maximum toughness was lower for mixed soils becuase the presence of coarse particles brought the onset of brittle failure at a higher water content due to interparticle interference. these raised the plastic limit relative to the pure clay.
+3. The addition of coarse particles decreased toughness by diluting the clay content. For equal 'matrix water content' (i.e. water per unit clay-size material) coarse particles _increased_ toughness because of the increased work required to shear them through the viscous clay matrix. However, maximum toughness was lower for mixed soils because the presence of coarse particles brought the onset of brittle failure at a higher water content due to interparticle interference. these raised the plastic limit relative to the pure clay.
 4. Some clays undergo strain-hardening during the rolling procedure, while others exhibit strain-softening behavior. 
-5. The toughness of clays does not obey the linear law of mixtures. Mixing two clays together will not result in a mixture whose behavior does not relfproportions. In other words, the behavior of the mixture cannot be predicted by a simple linear interpolation between the two pure materials. 
+5. The toughness of clays does not always obey a linear law of mixtures. In other words, the behavior of an artificial mixture containing two clays will not necessarily reflect the mixture's proportions. 
 
 The Barnes apparatus marks a significant advance, but it represents only one means of measuring soil toughness. 
 Because it is a single, unique apparatus there is no information about the reproducibility of its results across operators. 
@@ -476,11 +479,23 @@ The language above suggests Casagrande favored the use of a direct toughness mea
 
 The formula assumes a semi-logarithmic relationship between water content and shear strength exists over the whole range of plasticity. It uses the flow index derived from the liquid limit test to extrapolate the shear strength at the plastic limit. A steeper flow curve indicates less change in shear strength for a unit increase in water content. @Casagrande1932 derived the following formula for what he termed the 'toughness index':
 
-$$ I_t = \frac{PI}{F} $$ 
+\begin{equation}
+I_t = \frac{PI}{F} 
+(\#eq:casagrande-toughness-index)
+\end{equation}
 
 where $I_t$ is the toughness index, $PI$ is the plasticity index, and $F$ is the slope of the flow curve. 
 
-@Moreno-Maroto2018 used data from @Barnes2013 to develop an empirical equation for computing maximum toughness ($T_{max}$) from the plastic and liquid limits of a specimen \@ref(eqn:). 
+@Moreno-Maroto2018 correlated the plastic and liquid limits with maximum toughness ($T_{max}$) measured by@Barnes2013. By re-arranging their equation, toughness is computed as:
+
+\begin{equation}
+\\
+T_{max}=\frac{130~\cdot~PI}{LL}-44
+\\
+(\#eq:moreno-maroto-toughness)
+\\
+\end{equation}
+ 
 @Moreno-Maroto2018 also suggested a new basis for classifying fine-grained soils from their toughness equation (Figure \@ref(fig:moreno-maroto-chart) and qualitative observations [@Moreno-Maroto2017].
 
 ```{r moreno-maroto-chart, fig.cap='Soil classification chart proposed by Moreno-Maroto and Alonso-Azcárate (2018). Toughness data from Barnes (2013) and the empirical equation from Moreno-Maroto and Alonso-Azcárate (2018) were used to define the positions of the C-line and M-line.'}
@@ -534,12 +549,19 @@ ___
 
 ## Artificial soil mixtures {#artificial-soil-mixtures}
 
+<!-- these first two sections need to be pared down and combined (the ones introducing the section and the one the rationale for producing engineered soils -->
+
+The essence of this topic's value was noted by @Seed1964a:
+
+>"Blending of two soils, producing a new soil with characteristics better than both of its constituents, would be an interesting addition to soil stabilization techniques."
+
+
 Soil mixtures for baseball and softball fields typically contain two materials - a sand and a fine-grained soil.
 This section summarizes research about how the components of a soil mixture affect its behavior.
 Table \@ref(tab:soil-mixture-study-list) also shows that researchers have evaluated soil mixtures using a variety of analyses. 
 This review focuses on studies which have measured compaction, Atterberg limits, shear strength, and toughness because these properties are the tests most relevant to baseball and softball infields. Other methods which have been utilized include permeability, static compressibility, and pore size distribution. 
 
-In this sectioin, the first topic outlined is the rationale for using engineered soils.
+In this section, the first topic outlined is the rationale for using engineered soils.
 Next, the concept of the transitional fines content is introduced. Third, specific research studies on coarse-fine mixtures are discussed Finally, artificial mixtures containing multiple clay types are reviewed.
 For brevity, in this section the term “clay” simply refers to the fine-grained mixture component and does not connote any specific definition of texture, particle size, plasticity, or mineralogy. 
 
@@ -722,7 +744,7 @@ Oedometer experiments on artificial soil mixtures probably have less practical s
 
 ### Effect of coarse fraction on mix behavior
 
-#### Effect of sand content
+#### Total sand content
 
 @Seed1964a investigated Atterberg limits of sand-clay mixtures. Three types of clay (kaolinite, illite, and Ca-bentonite) were mixed with varying amounts of sand. All of the sand was < 425 μm.
 
@@ -758,7 +780,7 @@ Therefore, the shape of the liquid limit vs. sand content curve below 60% sand c
 @Nagaraj2016 and effect of sand size and clay type on shear strength of sand-clay mixtures ...[[[[[[]]]]]]
 
 
-#### Effect of sand/silt particle size 
+#### Sand/silt particle size 
 
 The influence of coarse particle additions' particle size was tested by @Sivapullaiah1985. 
 For equal sand percentages, both the liquid and plastic limits were affected by the size of the added sand particles.
@@ -771,13 +793,7 @@ For the same percent 'coarse addition,' coarse sand caused a smaller change in t
 
 @Barnes2013 tested mixes of London clay with sand (two different size fractions) or silt, in 10% increments of coarse particles from 0 to 100% clay. Finer particles decreased a mixture's toughness at its plastic limit. @Barnes2013 argued that increased the clay's toughness was higher at a given 'matrix water content' (water per unit <2<sub>mu</sub>m fration), but this is a somewhat abstract idea because water is also associated with particles > <2<sub>mu</sub>m. reflected only when all the soils were above their respective plastic limits. 
 
-#### Effect of sand particle shape 
-
-@Sivapullaiah1985 found no effect of sand particle shape on the Atterberg limits. Bentonite clay was mixed with equal amounts of either angular or round sand of the same particle size fraction (150 μm – 75 μm). Sand contents ranged from 20 - 95 %. There was no discernible difference in the liquid or plastic limits.
-
-Dumbleton and West [-@Dumbleton1966b] studied the influence of the coarse fraction’s shape on Atterberg limits. Increasing departure from spherical and round particles tended to raise both the liquid and plastic limits by roughly equivalent amounts. For the same mass percent of coarse addition, the increase in the plastic limit was platy mica silt > bulky quartz silt > angular quartz sand > round quartz sand. The authors attributed the difference to irregularly-shaped particles having higher surface area and requiring more water to coat the particles. This finding differs from that of @Sivapullaiah1985, whose data showed no difference between angular and round sands of the same sieve diameter. 
-
-#### Effect of sand uniformity
+#### Sand uniformity
 
 The uniformity of sand included in soil mixtures has not been studied extensively. 
 @Dumbleton1966b found that mixes made with broadly-graded sand had similar Atterberg limits to mixes containing sand from a single mesh size. 
@@ -787,7 +803,14 @@ If this were the case, the range of sand particle diameters would only fall betw
 This is a relatively narrow range which would preclude efficient particle packing (see Section \@ref(#tfc-size-ratio)). It is possible the uniformity would play a bigger role if coarser sand were used in the mixture.
 
 
-### Effect of mixing multiple clays
+#### Sand particle shape 
+
+@Sivapullaiah1985 found no effect of sand particle shape on the Atterberg limits. Bentonite clay was mixed with equal amounts of either angular or round sand of the same particle size fraction (150 μm – 75 μm). Sand contents ranged from 20 - 95 %. There was no discernible difference in the liquid or plastic limits.
+
+Dumbleton and West [-@Dumbleton1966b] studied the influence of the coarse fraction’s shape on Atterberg limits. Increasing departure from spherical and round particles tended to raise both the liquid and plastic limits by roughly equivalent amounts. For the same mass percent of coarse addition, the increase in the plastic limit was platy mica silt > bulky quartz silt > angular quartz sand > round quartz sand. The authors attributed the difference to irregularly-shaped particles having higher surface area and requiring more water to coat the particles. This finding differs from that of @Sivapullaiah1985, whose data showed no difference between angular and round sands of the same sieve diameter. 
+
+
+### Artificial clay mixtures
 
 When clays are deliberately mixed, the mixture's properties do not always reflect the ratio of its components. One clay may dominate the behavior. 
 @Seed1964a extended their work on sand-clay mixes to include three-component mixtures, in which two types of pure clay were first combined before adding the sand.
@@ -798,15 +821,19 @@ The liquid limits of the smectite-illite mixes were always lower than predicted 
 Small additions of illite to smectite lowered the LL by more than expected, and small additions of smectite to illite raised the LL by less than expected.
 An opposite effect was observed for the plastic limit. With small bentonite additions, the plastic limit was lower than expected, while for larger bentonite additions it was higher than expected.
 
-Barnes study
-
 Dumbleton and West 
+
+@Barnes2018 studied the toughness of clay mixtures. Various ball clay were combined to produce two-component mixtures containing 0, 20, 40, 60, 80, and 100% of each component. A single ball clay was also mixed with a fireclay of low plastcity. All the clays were kaolinite-dominated, but detailed mineralogy data were not collected.
+
+In 2 of the 3 mixture pairings, the plastic limits of the mixtures were suppressed compared to values predicted by the linear law of mixtures. The pure AT and KT ball clays had nearly identical plastic limits (~30%), but the plastic limits of mixtures containing these clays was always less than 30%. By lowering the plastic limit more than the liquid limit, the overall range of water contents where the mix was plastic was extended. Critically, the maximum toughness of the mixture (i.e. at its plastic limit) was also increased over that of either pure clay.
+
+
 
 Ceramic textbooks :
 
-Clay bodies for ceramic applications are commonly manufactured by adding a 1-3% bentonite {ref}. It is evident that a minute amount of one clay can drasticall alter the behavior of a mixture. [ref???]
+Clay bodies for ceramic applications are commonly manufactured by adding a 1-3% bentonite {ref}. It is evident that a minute amount of one clay can drastically alter the behavior of a mixture. [ref???]
 
-For equal sand contents, the plastic and liquid limits of the mixtures did not lie on a linear interpolation between those of the pure clay endmembers.
+For equal sand contents, the plastic and liquid limits of the mixtures did not lie on a linear interpolation between those of the pure clay end-members.
 
 @Sivapullaiah1985 showed that their linear law was not valid for mixtures of bentonite with kaolinite. The liquid limit of the mixture was always lower than would be expected. This implies an interaction between the clay mineral particles.  
 
@@ -815,14 +842,17 @@ For equal sand contents, the plastic and liquid limits of the mixtures did not l
 ### Summary: behavior of artificial soil mixtures 
 
 Soils are often mixed to beneficiate their properties. 
-
-.....
-
-These findings collectively demonstrate the complex behavior that results when two or more soils are artificially mixed. This is particularly true when multiple clay types are combined. @Seed1964a concluded that this technique could be very useful in designing soil mixtures:
-
->"Such a blending of two soils, producing a new soil with characteristics better than both of its constituents, would be an interesting addition to soil stabilization techniques."
+The transitional fines content describes the change from soil behavior dominated by grain-to-grain contacts to behavior dominated by water content and plasticity or toughness. 
+This threshold has been variously definied according to the problem of interest. There is no universal number to describe its position, which ranges from ~15-35% by mass. 
+Dominant factors governing the TFC position for a pair of soils include the particle size ratio between them, the void volume of the host sand, and the the plasticity of the fines. 
 
 
+If sand or silt is added to a clay, the amount, size, and shape of the coarse particles can all influence the mixture's behavior. 
+Coarse, rotund particles have a small influence on a clay while finer and more irregular particles tend to raise both the plastic and liquid limits of the mix. 
+Mixing one clay with another results in a mixture whose properties cannot be easily predicted. 
+
+These findings collectively demonstrate the complexities which result from the artificial mixing of two or more soils.
+This complexity demonstrates the importance of further research on the design of soil mixtures. 
 
 
 #### Notable research gaps to address in this project:

@@ -1,13 +1,14 @@
 ---
 title: "Evan's PhD thesis proposal"
 author: "Evan C Mascitti"
-date: "``last updated `r ecmfuns::ecm_timestamp()` ``"
+date: "``last compiled `r ecmfuns::ecm_timestamp()` ``"
 site: bookdown::bookdown_site
 documentclass: book
 always_allow_html: true
+keep_md: true
 classoption: 
   - openany
-linestretch: 1.25
+linestretch: 2
 links-as-notes: true
 papersize: letter
 # for final thesis submission to allow binding:

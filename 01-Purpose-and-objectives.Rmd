@@ -2,19 +2,26 @@
 
 ## Purpose {#purpose}
 
-Baseball plays an important role in the American economy and culture. Using the scientific method to study baseball fields can improve their safety, enjoyment, and economic value at all levels of play. 
+Baseball fields can be improved by using the scientific method. 
+A high-quality playing surface enhances the safety, enjoyment, and economic value of the game at all levels of play.
+Many parties stand to benefit from research on baseball fields because the game plays a major role in America's economy and culture.
 
-The broad goals of my thesis are twofold: (1) create a new way to assess infield soil performance, and (2) use the new framework to design improved soil mixtures. 
+## Objectives {#objectives}
 
-**My intent is to answer these open-ended questions:**
+**The goals of my thesis are twofold:**
 
-1. How can infield soil performance be quantified?
-2. How can infield soil performance be improved via rational mix design?
-3. Which soil tests best predict the performance of a mix?
+1. create a new way to assess infield soil performance
 
-## Formal objectives {#objectives}
+and 
 
-The questions above can be expanded and translated to formal objectives:
+2. use the new framework to design improved soil mixtures. 
+<!-- **I seek to answer these open-ended questions:** -->
+
+<!-- 1. How can infield soil performance be measured? -->
+<!-- 2. How can rational mix design improve infield soil performance? -->
+<!-- 3. Which soil tests best predict the performance of a mix? -->
+
+These may be re-stated as formal objectives:
 
 1) Develop a laboratory method to pinpoint each of the two critical water contents for any infield soil:
     
