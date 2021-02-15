@@ -199,3 +199,10 @@ The intergranular void ratio may be compared with the minimum void ratio of the 
 ** good verbiage here : ** 
 Minimum porosity of a mixture occurs when the fines and their interfine voids are just sufficient to fill the sand skeleton's larger voids.
 Many authors have defined the TFC as the fines content which produces the lowest total void space. This approach may not reflect the actual behavior of the soil because the global void ratio may not reach its minimum until $e_{sand}$ has already exceeded the minimum $e_{sand}$ for the host sand alone. The coarser grains act mostly independent of one another and behavior is already governed by the fines, thus the transition occurs at a lower fines content than would be suggested by the global void ratio [@Cabalar2011]. 
+
+____
+
+
+This study was performed on a single soil material.
+
+___

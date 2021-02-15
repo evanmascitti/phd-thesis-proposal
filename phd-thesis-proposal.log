@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.2.10)  12 FEB 2021 17:54
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.2.10)  15 FEB 2021 08:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1219,13 +1219,13 @@ LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
 [5
 
 ] (./phd-thesis-proposal.lof
-Underfull \hbox (badness 7116) in paragraph at lines 16--16
+Underfull \hbox (badness 7116) in paragraph at lines 17--17
  [][] [][][]\TU/Arial(0)/m/n/10 Soil classification chart proposed by Moreno-Ma
 roto and Alonso-Azcárate (2018). 
  []
 
 
-Underfull \hbox (badness 1303) in paragraph at lines 16--16
+Underfull \hbox (badness 1303) in paragraph at lines 17--17
  \TU/Arial(0)/m/n/10 Toughness data from Barnes (2013) and the empirical equati
 on from Moreno-Maroto 
  []
@@ -1300,124 +1300,128 @@ Chapter 5.
 [16
 
 ]
+File: phd-thesis-proposal_files/figure-latex/lit-review-density-comparison-1.pd
+f Graphic file (type pdf)
+<use phd-thesis-proposal_files/figure-latex/lit-review-density-comparison-1.pdf
+>
+[17] [18]
 File: images/illustrations/ball_spin_effect/daish_fig_9.2_redraw.pdf Graphic fi
 le (type pdf)
 <use images/illustrations/ball_spin_effect/daish_fig_9.2_redraw.pdf>
-[17]
-File: images/illustrations/ball_indentation_release_angle/ball_indentation_rele
-ase_angle.pdf Graphic file (type pdf)
-<use images/illustrations/ball_indentation_release_angle/ball_indentation_relea
-se_angle.pdf>
-[18]
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 465.
-
-LaTeX Warning: Reference `toughness' on page 19 undefined on input line 485.
-
+File: images/illustrations/ball_indentation/ball_indentation.ai Graphic file (t
+ype pdf)
+<use images/illustrations/ball_indentation/ball_indentation.ai>
 [19]
-Underfull \hbox (badness 4001) in paragraph at lines 492--493
+LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
+(Font)              scaled to size 8.0pt on input line 476.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[20]
+
+LaTeX Warning: Reference `toughness' on page 21 undefined on input line 496.
+
+
+Underfull \hbox (badness 4001) in paragraph at lines 503--504
 []\TU/Arial(0)/m/n/10 “Every engineer should develop the habit of expressing th
 e plasticity and grain-size
  []
 
-
-Underfull \hbox (badness 1082) in paragraph at lines 538--543
+[21]
+Underfull \hbox (badness 1082) in paragraph at lines 549--554
  \TU/Arial(0)/b/n/10 5.2.1.2.2 Plastic limit[] \TU/Arial(0)/m/n/10 Atterberg’s 
 original plastic limit test remains essentially unchanged. After
  []
 
-[20]
+[22]
 File: phd-thesis-proposal_files/figure-latex/sherwood-overall-comparison-1.pdf 
 Graphic file (type pdf)
 <use phd-thesis-proposal_files/figure-latex/sherwood-overall-comparison-1.pdf>
 
-LaTeX Warning: Float too large for page by 31.9984pt on input line 577.
+LaTeX Warning: Float too large for page by 31.9984pt on input line 588.
 
-[21] [22]
 File: phd-thesis-proposal_files/figure-latex/sherwood-cov-comparison-1.pdf Grap
 hic file (type pdf)
 <use phd-thesis-proposal_files/figure-latex/sherwood-cov-comparison-1.pdf>
+[23] [24]
 File: phd-thesis-proposal_files/figure-latex/sherwood-cone-cup-comparison-1.pdf
  Graphic file (type pdf)
 <use phd-thesis-proposal_files/figure-latex/sherwood-cone-cup-comparison-1.pdf>
 
-[23] [24] [25]
-Underfull \hbox (badness 2080) in paragraph at lines 725--728
+[25] [26] [27]
+Underfull \hbox (badness 2080) in paragraph at lines 736--739
 []\TU/Arial(0)/m/n/10 Moreno-Marato and Alonso-Azcàrate (2017???) also describe
 d a faster version of their original
  []
 
-[26]
+[28]
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 752.
+(Font)              scaled to size 10.0pt on input line 763.
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 7.2pt on input line 752.
+(Font)              scaled to size 7.2pt on input line 763.
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 5.8pt on input line 752.
-[27] [28]
+(Font)              scaled to size 5.8pt on input line 763.
+[29] [30]
 
-LaTeX Warning: Reference `eqn:' on page 29 undefined on input line 823.
+LaTeX Warning: Reference `eqn:' on page 31 undefined on input line 834.
 
 
-Underfull \hbox (badness 2197) in paragraph at lines 823--825
-\TU/Arial(0)/m/n/10 soils from their toughness equation (Figure [][]5.6[][] and
+Underfull \hbox (badness 2197) in paragraph at lines 834--836
+\TU/Arial(0)/m/n/10 soils from their toughness equation (Figure [][]5.7[][] and
  qualitative observations ([][]Moreno-Maroto and
  []
 
 File: phd-thesis-proposal_files/figure-latex/moreno-maroto-chart-1.pdf Graphic 
 file (type pdf)
 <use phd-thesis-proposal_files/figure-latex/moreno-maroto-chart-1.pdf>
-[29]
+[31] [32]
 File: images/brosnan_survey_PSA.png Graphic file (type bmp)
 <images/brosnan_survey_PSA.png>
 
-Underfull \vbox (badness 1205) has occurred while \output is active []
+LaTeX Warning: Reference `tab:soil-mixture-study-list' on page 33 undefined on 
+input line 895.
 
-[30] [31]
-
-LaTeX Warning: Reference `tab:soil-mixture-study-list' on page 32 undefined on 
-input line 884.
-
+[33]
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 894.
+(Font)              scaled to size 8.0pt on input line 905.
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 894.
+(Font)              scaled to size 6.0pt on input line 905.
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 894.
+(Font)              scaled to size 5.0pt on input line 905.
 LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 894.
-[32]
-Overfull \hbox (282.55531pt too wide) in paragraph at lines 939--958
+(Font)              scaled to size 8.0pt on input line 905.
+[34]
+Overfull \hbox (282.55531pt too wide) in paragraph at lines 950--969
  [][] 
  []
 
-[33]
+[35]
 File: images/illustrations/Lade_1998_Figure_7/Lade_1998_Figure_7.pdf Graphic fi
 le (type pdf)
 <use images/illustrations/Lade_1998_Figure_7/Lade_1998_Figure_7.pdf>
-[34] [35]
-Underfull \hbox (badness 2351) in paragraph at lines 1059--1065
+[36] [37]
+Underfull \hbox (badness 2351) in paragraph at lines 1070--1076
  \TU/Arial(0)/b/n/10 5.3.2.2.4 Method of compaction/consolidation[] \TU/Arial(0
 )/m/n/10 Mixtures subjected to static compression in an
  []
 
-[36]
+[38]
 Missing character: There is no 𝜇 in font Arial/OT:script=latn;language=dflt;!
-[37] [38] [39] [40]
+[39] [40] [41] [42]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1229--1231
+Underfull \hbox (badness 10000) in paragraph at lines 1237--1239
 
  []
 
-[41
+[43
 
 ]
 File: images/cleatmark_device.png Graphic file (type bmp)
 <images/cleatmark_device.png>
 File: images/nine-spike-pattern-compressed.png Graphic file (type bmp)
 <images/nine-spike-pattern-compressed.png>
-[42]
+[44]
 File: phd-thesis-proposal_files/figure-latex/sand-content-clustering-1.pdf Grap
 hic file (type pdf)
 <use phd-thesis-proposal_files/figure-latex/sand-content-clustering-1.pdf>
@@ -1425,147 +1429,146 @@ hic file (type pdf)
 Overfull \hbox (327.94427pt too wide) has occurred while \output is active
 \TU/Arial(0)/m/it/10 6.2.  DISSERTATION CHAPTER 2: IDENTIFYING THE BRITTLE-DUCT
 ILE TRANSITION OF INFIELD SOIL MIXTURES SUBJECTED TO DISTURBANCE BY BASEBALL CL
-EATS \TU/Arial(0)/m/n/10 43
+EATS \TU/Arial(0)/m/n/10 45
  []
 
-[43] [44]
+[45] [46]
+Overfull \hbox (191.05176pt too wide) has occurred while \output is active
+\TU/Arial(0)/m/it/10 6.3.  DISSERTATION CHAPTER 3: TOUGHNESS-WATER CONTENT RELA
+TIONS OF CLAY SOILS VIA UNCONFINED COMPRESSION TESTING \TU/Arial(0)/m/n/10 47
+ []
+
+[47]
 File: images/gilson_stock_proctor_extruder_photo.png Graphic file (type bmp)
 <images/gilson_stock_proctor_extruder_photo.png>
 
-Overfull \hbox (191.05176pt too wide) has occurred while \output is active
-\TU/Arial(0)/m/it/10 6.3.  DISSERTATION CHAPTER 3: TOUGHNESS-WATER CONTENT RELA
-TIONS OF CLAY SOILS VIA UNCONFINED COMPRESSION TESTING \TU/Arial(0)/m/n/10 45
- []
-
-[45]
-
 LaTeX Warning: Reference `fig:barnes-toughness-vs-water-content-example-plot' o
-n page 46 undefined on input line 1378.
+n page 48 undefined on input line 1386.
 
-[46]
-Underfull \hbox (badness 1253) in paragraph at lines 1430--1430
+[48]
+Underfull \hbox (badness 1253) in paragraph at lines 1438--1438
 []\TU/Arial(0)/b/n/14.4 Dissertation chapter 4: A critical appraisal of particl
 e size
  []
 
 
-Overfull \hbox (150.94232pt too wide) has occurred while \output is active
-\TU/Arial(0)/m/it/10 6.5.  DISSERTATION CHAPTER 4: A CRITICAL APPRAISAL OF PART
-ICLE SIZE ANALYSIS AS A PROXY FOR INFIELD SOIL BEHAVIOR \TU/Arial(0)/m/n/10 47
- []
-
-[47] [48]
-Overfull \hbox (188.87761pt too wide) has occurred while \output is active
-\TU/Arial(0)/m/it/10 6.6.  DISSERTATION CHAPTER 5: A RATIONAL BASIS FOR THE DES
-IGN OF SOIL MIXTURES USED ON BASEBALL AND SOFTBALL INFIELDS \TU/Arial(0)/m/n/10
- 49
+Overfull \hbox (158.46458pt too wide) has occurred while \output is active
+\TU/Arial(0)/m/it/10 6.4.  DISSERTATION CHAPTER 3: EFFECT OF OVERSIZE PARTICLES
+ ON ATTERBERG LIMITS OF ARTIFICIAL SAND-CLAY MIXTURES \TU/Arial(0)/m/n/10 49
  []
 
 [49] [50]
+Overfull \hbox (188.87761pt too wide) has occurred while \output is active
+\TU/Arial(0)/m/it/10 6.6.  DISSERTATION CHAPTER 5: A RATIONAL BASIS FOR THE DES
+IGN OF SOIL MIXTURES USED ON BASEBALL AND SOFTBALL INFIELDS \TU/Arial(0)/m/n/10
+ 51
+ []
+
+[51] [52]
 Chapter 7.
 
-Overfull \hbox (18.06561pt too wide) in alignment at lines 1583--1588
+Overfull \hbox (18.06561pt too wide) in alignment at lines 1591--1596
  [] [] [] [] [] 
  []
 
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 1589.
+(Font)              scaled to size 9.0pt on input line 1597.
 
-Overfull \hbox (18.06561pt too wide) in alignment at lines 1588--1593
+Overfull \hbox (18.06561pt too wide) in alignment at lines 1596--1601
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (18.06561pt too wide) in alignment at lines 1593--1595
+Overfull \hbox (18.06561pt too wide) in alignment at lines 1601--1603
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (18.06561pt too wide) in alignment at lines 1595--1597
+Overfull \hbox (18.06561pt too wide) in alignment at lines 1603--1605
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (18.06561pt too wide) in alignment at lines 1597--1621
+Overfull \hbox (18.06561pt too wide) in alignment at lines 1605--1629
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (18.06561pt too wide) in alignment at lines 1621--1645
+Overfull \hbox (18.06561pt too wide) in alignment at lines 1629--1653
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (18.06561pt too wide) in alignment at lines 1645--1655
+Overfull \hbox (18.06561pt too wide) in alignment at lines 1653--1663
  [] [] [] [] [] 
- []
-
-[51
-
-] [52]
-Chapter 8.
-
-Underfull \hbox (badness 1117) in paragraph at lines 1668--1670
-[][]\TU/Arial(0)/m/n/10 American Society for Testing Materials. 2017. D7928-17 
-Standard Test Method for Particle-Size
  []
 
 [53
 
+] [54]
+Chapter 8.
+
+Underfull \hbox (badness 1117) in paragraph at lines 1676--1678
+[][]\TU/Arial(0)/m/n/10 American Society for Testing Materials. 2017. D7928-17 
+Standard Test Method for Particle-Size
+ []
+
+[55
+
 ]
-Overfull \hbox (3.61092pt too wide) in paragraph at lines 1728--1730
+Overfull \hbox (3.61092pt too wide) in paragraph at lines 1736--1738
 \TU/Arial(0)/m/n/10 International Journal of Pavement Engineering 18(8): 714–72
 6. doi: 10.1080/10298436.2015.1121782[][][][][]. 
  []
 
-[54] [55] [56]
-Underfull \hbox (badness 2478) in paragraph at lines 1872--1874
+[56] [57] [58]
+Underfull \hbox (badness 2478) in paragraph at lines 1883--1885
 \TU/Arial(0)/m/n/10 sands. Journal of Geotechnical and Geoenvironmental Enginee
 ring 124(6): 479–491. doi:
  []
 
-
-Overfull \hbox (1.55417pt too wide) in paragraph at lines 1878--1880
+[59]
+Overfull \hbox (1.55417pt too wide) in paragraph at lines 1889--1891
 \TU/Arial(0)/m/n/10 strength of binary granular mixture. Granular Matter 13(6):
  731–742. doi: 10.1007/s10035-011-0292-1[][][][][]. 
  []
 
-[57]
-Underfull \hbox (badness 2469) in paragraph at lines 1896--1898
+
+Underfull \hbox (badness 2469) in paragraph at lines 1907--1909
 [][]\TU/Arial(0)/m/n/10 Wikipedia. 2020. Fall cone test. [][]$[][][][][] [] [] 
 [] [][] [] [][][][][][][][][] [] [][][] [] [][][][] [] [][][][] [] [][] [] [] [
 ] [][][][][][] [] [][] [] [] [] [][][][][][]$[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1902--1904
+Underfull \hbox (badness 10000) in paragraph at lines 1913--1915
 \TU/Arial(0)/m/n/10 8–9. [][]$[][][][][] [] [] [] [][][] [] [][][][][][] [] [][
 ][] [] [][][] [] [][] [] [] [] [][] [] [] [] [][][][][] [] [] [] [][] [] [] [] 
 [][][] [] [][][] [] [] [] [][][][][][] [] [] [] [][] [] [] []
  []
 
 
-Overfull \hbox (36.86119pt too wide) in paragraph at lines 1902--1904
+Overfull \hbox (36.86119pt too wide) in paragraph at lines 1913--1915
 [][][][][][][][] [] [][][] [] [][] [] [] [] [][][][] [] [][] [] [][] [] [] [] [
 ][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1902--1904
+Underfull \hbox (badness 10000) in paragraph at lines 1913--1915
 [][] [] [] [] [][][][][] [] [][][][] [] [][] [] [] [] [][][][] [] [][] [] [] []
  [][][][] [] [][] [] [] [] [][][][][][][][][][][] [] [][][] [] [][][] [] [][][]
  [] [][] [] [] [] [][][][][][][] []
  []
 
 
-Overfull \hbox (37.41783pt too wide) in paragraph at lines 1902--1904
+Overfull \hbox (37.41783pt too wide) in paragraph at lines 1913--1915
 [][] [] [] [] [][][][][][][][][] [] [][] [] [] [] [][][][][][][][][][][] [] [][
 ] [] [] [] [][][][][][][][][][][][] [] [][][] [] [][] [] [] [] [][][][][] [] []
 [][][][][][][][][][][][][][][][] []
  []
 
-[58] (./phd-thesis-proposal.aux)
+[60] (./phd-thesis-proposal.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1573,15 +1576,15 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `phd-thesis-proposal.out' has not changed.
-(rerunfilecheck)             Checksum: 45B3B7905808658B968BC842A79F30DB;17803.
+(rerunfilecheck)             Checksum: 8525FB8ED2A4831DC01C75004E6AF791;18062.
  ) 
 Here is how much of TeX's memory you used:
- 19451 strings out of 479210
- 352154 string characters out of 5873170
- 811340 words of memory out of 5000000
- 38647 multiletter control sequences out of 15000+600000
+ 19462 strings out of 479210
+ 352646 string characters out of 5873170
+ 811777 words of memory out of 5000000
+ 38657 multiletter control sequences out of 15000+600000
  411228 words of font info for 114 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  98i,10n,125p,1439b,525s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on phd-thesis-proposal.pdf (58 pages).
+Output written on phd-thesis-proposal.pdf (60 pages).

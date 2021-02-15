@@ -88,16 +88,34 @@ The increase was likely due to greater ball penetration, increasing the contact 
 This agrees with intuition because the main component of a ground ball's velocity is horizontal (nearly coplanar with the surface), favoring the importance of horizontal friction rather than vertical rebound. 
 Incorporation of calcined clay (particle size 0.5 - 2 mm) also decreased friction, especially for finer-textured soils.
 
-Brosnan et al. studied the effects of construction and maintenance activities on infield surface pace [-@Brosnan2011]. 
-Higher bulk density (&rho;~bulk~) increased surface pace, although the range of bulk densities tested (1.2-1.8 Mg m^-3^) was beneath values typically encountered on infield skins (author's personal observation; data not shown). 
+@Brosnan2011 studied the effects of construction and maintenance activities on infield surface pace.
 Water content was negatively correlated with surface pace, but no attempt was made to intentionally alter water content among plots. 
-This study was performed on a single soil material.
+Higher bulk density $\rho_{bulk}$ increased surface pace. 
+However, Figure \@ref(fig:lit-review-density-comparison) shows that the density values reported by @Goodall2005 and @Brosnan2011 may not be representative of professionally-managed infield skins.
+@Brosnan2011 also found that topdressing plots with calcined clay had no effect on pace, nor did scarifying the surface by up to 2 cm. 
 
-The effect of ball spin may be large or small depending on the playing surface properties. 
-If the ball-surface friction coefficient is high, the ball will roll through impact and its release angle will be altered (Figure \@ref(fig:daish-spin-release-angle)).
-The new spin rate will be determined by the incoming velocity and the friction coefficient. 
-Sidespin imparted by the bowler will readily grip the surface and alter its horizontal path [@Daish1972]. 
-Alternatively, when friction is low, the ball will skid through impact and retain some of its original spin.
+
+```{r lit-review-density-comparison, fig.cap="Dry bulk density values reported in research studies may be lower than those on extant professional playing surfaces", fig.scap="Dry density from published literature compared to author's data" }
+
+source('supplemental_R_scripts/pnc_density_vs_published_values.R')
+lit_review_density_comparison_plot
+```
+
+
+The effect of ball spin may be large or small depending on the the ball-surface friction coefficient [@Daish1972; @Cross2019].
+Low friction cases the ball to skid through impact and retain some of its original spin.
+Higher friction allows the ball to 'grip' the surface and roll through impact. 
+Skilled cricket bowlers readily exploit this property on a moist wicket to redirect the ball [@Daish1972].
+In the high-friction case, initial spin is fully attenuated after impact and the new spin rate is controlled by the ball's original velocity and the friction coefficient.
+The release angle will be more affected by a high-friction surface (Figure \@ref(fig:daish-spin-release-angle)).
+
+
+When soil stiffness is low, the ball produces a notable indentation of the surface (Figure \@ref(fig:ball-indentation-release-angle)).
+An important consequence of the larger deformation is that the contact area between the ball and the surface is increased. 
+This prolongs the impact duration and allows friction more time to attenuate spin and forward velocity [@Daish1972]. 
+As the ball releases, it rolls up the saucer-like depression created by its own impact at a slightly steeper angle compared to a rigid surface (Figure \@ref(fig:ball-indentation-release-angle)). 
+A moderate indentation may be the critical feature linking hardness, bounce, pace, and spin.
+
 
 ```{r daish-spin-release-angle, fig.cap="Initial spin will influence a ball's release angle following impact. Adapted from Daish, 1972.", fig.scap="Ball spin effect on release angle"}
 
@@ -105,15 +123,8 @@ knitr::include_graphics("images/illustrations/ball_spin_effect/daish_fig_9.2_red
 
 ```
 
-
-When soil stiffness is low, the ball produces a notable deformation of the surface (Figure \@ref(fig:ball-indentation-release-angle)).
-An important consequence of the larger deformation is that the contact area between the ball and the surface is increased. This prolongs the impact duration and allows friction more time to operate [@Daish1972]. 
-Tthis may be the critical feature which links hardness, bounce, pace, and ball spin.
-As the ball releases, it rolls up the saucer-like depression created by its own impact.
-This yields a slightly steeper release angle relative to that of a more rigid soil surface (Figure \@ref(fig:ball-indentation-release-angle)). 
-
-```{r ball-indentation-release-angle, fig.cap="A. A rigid soil surface produces a lower release angle, provided no imperfections are present in the surface. B. A surface with lower stiffness encourages the ball to roll out of the shallow depression created by impact, leading to a slightly steeper release angle.", fig.scap="Deformation of infield soil surface at ball impact", fig.align='center'}
-knitr::include_graphics('images/illustrations/ball_indentation_release_angle/ball_indentation_release_angle.pdf')
+```{r ball-indentation-release-angle, out.width="100%", fig.cap="A. A rigid soil surface produces a lower release angle, provided no imperfections are present in the surface. B. A surface with moderate stiffness encourages a longer impact duration, attenuating both spin and forward velocity.", fig.scap="Deformation of infield soil surface at ball impact", fig.align='center'}
+knitr::include_graphics('images/illustrations/ball_indentation/ball_indentation.png')
 ```
 
 
@@ -126,6 +137,10 @@ All final mixes had sand contents between 30 and 40% by mass.
 Ball-to-surface friction was highest for the mix containing sand between 125-60 &mu;m. 
 Lower friction was measured for soils with coarser or finer amendments. 
 Using a suede-type leather increased friction relative to polished leather, implying that the degree of wear on the ball may influence surface pace.
+
+### Summary: performance of infield skin soils 
+
+Stable footing and predictable ball response comprise the requirements of an infield skin. Soil composition, density, and water content act together to govern the stiffness of the surface. Surface deformation attenuates linear and rotational kinetic energy of the ball. Existing studies on the infield skin have focused on construction/maintenance practices rather than mix design. 
 
 ___
 
@@ -766,23 +781,20 @@ Dumbleton and West [-@Dumbleton1966b] studied the influence of the coarse fracti
 
 The uniformity of sand included in soil mixtures has not been studied extensively. 
 @Dumbleton1966b found that mixes made with broadly-graded sand had similar Atterberg limits to mixes containing sand from a single mesh size. 
-However, a detailed particle size distribution was not given in this study so it is difficult to know how large the difference in uniformty was between the sands. 
+However, a detailed particle size distribution was not given in this study so it is difficult to know how different the uniformity was between the sands. 
 It could be assumed that 100% of the sand passed the #40 sieve (425 &mu;m) because this is the standard range of allowed sand sizes in Atterberg limit tests.
 If this were the case, the range of sand particle diameters would only fall between ~50 to 425 &mu;m. 
-This narrow range precludes efficient particle packing (see Section \@ref(#tfc-size-ratio)); it is possible the uniformity would play a bigger role if coarser sand were used in the mixture.
+This is a relatively narrow range which would preclude efficient particle packing (see Section \@ref(#tfc-size-ratio)). It is possible the uniformity would play a bigger role if coarser sand were used in the mixture.
 
 
-### Effect of mixing multiple clay types 
+### Effect of mixing multiple clays
 
-When two clays are combined, the resultant mixture often has properties which are more reflective dominant dominated by one of the clays. 
-
-The resultant mixture has properties which do not necessarily reflect the proportions of the mixture. A small amount of a high-activity clay such as monmorillonite can dominate the behavior of the mixture. 
-@Seed1964a extended their work on pure clays to three-component mixtures in which two types of clay were first mixed together before adding the sand.
-
+When clays are deliberately mixed, the mixture's properties do not always reflect the ratio of its components. One clay may dominate the behavior. 
+@Seed1964a extended their work on sand-clay mixes to include three-component mixtures, in which two types of pure clay were first combined before adding the sand.
 Adding kaolinite to either illite or smectite had a nearly proportional effect on the Atterberg limits.
 For example, a mix with a mass percent 50% kaolinite and 50% illite had a liquid limit halfway between the liquid limits of each individual clay. 
-However, mixtures of smectite with illite did not adhere to this linear relationship. 
-The liquid limits of smectite-illite mixes were always lower than predicted by the linear law.
+Mixtures of smectite with illite did not adhere to this linear interpolation. 
+The liquid limits of the smectite-illite mixes were always lower than predicted by the linear law.
 Small additions of illite to smectite lowered the LL by more than expected, and small additions of smectite to illite raised the LL by less than expected.
 An opposite effect was observed for the plastic limit. With small bentonite additions, the plastic limit was lower than expected, while for larger bentonite additions it was higher than expected.
 

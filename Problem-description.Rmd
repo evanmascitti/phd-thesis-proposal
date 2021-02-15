@@ -36,7 +36,7 @@ theme_set(theme_cowplot())
 ```
 
 
-```{r compute-field-areas, cache=T}
+```{r compute-field-areas }
 pnc_areas <- read_csv('data/lit-review-data/pnc-google-earth-dims.csv') %>% 
   group_by(type) %>% 
   summarise(total_area_ft2= sum(ft2)) %>% 
@@ -59,7 +59,7 @@ wt_area_pct <- compute_area_pct(pnc_areas, "Warning track")
 
 ```
 
-```{r compute-man-hrs, cache=T}
+```{r compute-man-hrs }
 
 labor_man_hrs <- read_csv('data/lit-review-data/maintenance-man-hrs.csv') %>% 
   mutate(time_hr= time_min/60) %>% 
@@ -83,14 +83,14 @@ To motivate the significance of the infield skin, consider Figures \@ref(fig:pla
 knitr::include_graphics('images/illustrations/player_locations/player_locations.png')
 ```
 
-```{r batted-ball-density, fig.asp=1, fig.width=4, fig.align='center', fig.cap="Data from actual MLB contests support the intuition that most play occurs on the infield skin.", cache=T}
+```{r batted-ball-density, fig.asp=1, fig.width=4, fig.align='center', fig.cap="Data from actual MLB contests support the intuition that most play occurs on the infield skin." }
 
 source("supplemental_R_scripts/generate_batted_ball_density_plot_2021-01-21.R")
 batted_balls_w_boundaries_2020
 
 ```
 
-```{r produce labor per area plot, cache=T}
+```{r produce labor per area plot }
 
 area_colors <- readr::read_csv('data/lit-review-data/useful_soil_colors_for_thesis.csv') %>% 
   dplyr::mutate(type= soil_description)
@@ -139,7 +139,7 @@ labor_per_area_plot
 ```
 
 
-```{r mlb-salaries, fig.cap='MLB athletes are valuable assets. Their safety and performance must not be compromised by the playing surface.', fig.show='hold', cache=T}
+```{r mlb-salaries, fig.cap='MLB athletes are valuable assets. Their safety and performance must not be compromised by the playing surface.', fig.show='hold' }
 source('supplemental_R_scripts/mlb_salaries_and_revenue.R')
 cowplot::plot_grid(salary_distribution_2019_plot, mlb_revenues_plot, align = "h")
 

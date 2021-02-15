@@ -7,7 +7,7 @@ documentclass: book
 always_allow_html: true
 classoption: 
   - openany
-linestretch: 1.15
+linestretch: 1.25
 links-as-notes: true
 papersize: letter
 # for final thesis submission to allow binding:
