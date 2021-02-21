@@ -153,6 +153,11 @@ The goal of laboratory soil testing is to assess or predict the properties of a 
 Many laboratory soil tests are costly and time-intensive. 
 Results from simpler tests are commonly used as surrogate markers for the information yielded by more intensive tests. 
 The methodology underlying these "surrogate" tests has been studied extensively because much is riding on their precision and accuracy. 
+@Sherwood1970 performed a large-scale inter-laboratory survey of various soil physical methods. 
+His conclusion was disheartening:
+>"The results of this investigation....are for the most part rather disturbing, since it is clear that none of [the tests] can be used without quite wide tolerances being placed on the values obtained."
+
+The questions raised by @Sherwood1970 merit further investigation if a reliable means for testing infield mixes is to be developed.
 This section summarizes literature on the two classes of laboratory tests pertinent to infield soils: plasticity tests and particle size analysis. 
 
 ### Plasticity tests
@@ -274,10 +279,6 @@ The liquid limit involves a mechanical device whereas the plastic limit test int
 One could expect better agreement for the liquid limit and this is clearly borne out in Figures \@ref(fig:sherwood-overall-comparison)-\@ref(fig:sherwood-cov-comparison).
 
 A separate study by @Sherwood1970a showed that the fall-cone method has better inter-operator reproducibility. Figure \@ref(fig:sherwood-cone-cup-comparison) shows the spread of the 6 replicated tests for each method. The coefficient of variation among operators was about half that of the Casagrande method. 
-
-Sherwood summarized the results of the round-robin testing with a warning about not only the Atterberg limits, but all the soil physical tests evaluated in his study:
-
->"The results of this investigation....are for the most part rather disturbing, since it is clear that none of them can be used without quite wide tolerances being placed on the values obtained."
 
 In summary, @Sherwood1970 showed that most soil physical tests are quite repeatable so long as they are performed by an experienced operator with a well-tuned apparatus and careful workmanship.
 
