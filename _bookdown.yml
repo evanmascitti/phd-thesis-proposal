@@ -3,6 +3,7 @@ rmd_files: ["index.Rmd", "01-Purpose-and-objectives.Rmd", "02-Definition-of-term
             "Problem-description.Rmd", "03-Review-of-Literature.Rmd", "04-Proposed-experiments.Rmd", "Appendix.Rmd",
             "References.Rmd"]
 delete_merged_file: true
+new_session: true
 language:
    ui:
      chapter_name: "Section"

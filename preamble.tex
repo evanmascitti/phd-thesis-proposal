@@ -3,7 +3,94 @@
 \usepackage[none]{hyphenat}
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{float}
-% the following 2 lines place a border around the figures 
+
+% everything abve works well
+
+% extras that I am testing come below 
+
+% this one works if all else fails....not using any add-on packages;
+% see https://latexref.xyz/_005cchapter.html
+
+\renewcommand{\chaptername}{Section}
+
+
+% A simple version to just change the chapter label and format 
+% see the docs, it is a shortcut instead of specifying the 
+% entire formatting command. But it seems to do what I want
+
+% I figured this out on my own (i.e. no hyperlink - see Section 2.4, "quick reference"
+% in the docs for titlesec, link is http://mirrors.ctan.org/macros/latex/contrib/titlesec/titlesec.pdf
+
+% \usepackage{titlesec}
+% \titlelabel{Section \thechapter \quad}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% a more complex example using the titlesec package from overleaf
+% see https://www.overleaf.com/learn/latex/sections_and_chapters#Document_chapters_and_sections_in_a_Book.2FReport
+
+
+% A more complex example from the  titles package
+% I changed the font size to Huge instead of Large but it doesn't seem to change 
+% much. But I have to leave this alone for now and get back to something more 
+% pressing 
+
+% \usepackage{titlesec}
+% 
+% \titleformat
+% {\chapter} % command
+% [display] % shape
+% {\bfseries\Huge\itshape} % format
+% {Section \ \thechapter} % label
+% {0.5ex} % sep
+% {
+%     \rule{\textwidth}{1pt}
+%     \vspace{1ex}
+%     \centering
+% } % before-code
+% [
+% \vspace{-0.5ex}%
+% \rule{\textwidth}{0.3pt}
+% ] % after-code
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% re-style block quotations??
+% there are 2 environments that handle block quotations- the quotation environment 
+% is for multi-paragraph quotes and each paragraph is indented.
+% the quote environment is meant for shorter quotes. Evidently R Markdown 
+% puts at least the short ones in the quote environment; I discovered this by 
+% inspecting the .tex file usingkeep_tex: true in the YAML
+
+
+% see https://stackoverflow.com/questions/4018493/vertical-line-with-every-quotation/4023967
+% for solution
+\usepackage{framed}
+
+% change bar size to 0.5 pt instead of the default 3 pt
+
+\renewenvironment{leftbar}{\def\FrameCommand{\vrule width 1pt \hspace{10pt}}\MakeFramed {\advance\hsize-\width \FrameRestore}}{\endMakeFramed}
+
+% for multi-paragraph quotations 
+% \renewenvironment{quotation}%
+% {\begin{leftbar}\begin{quotation}}%
+% {\end{quotation}\end{leftbar}}
+
+% for single-paragraph quotations 
+% remove indent with \noindent
+
+\renewenvironment{quote}%
+{\begin{leftbar}\small\begin{quotation}\noindent}%
+{\end{quotation}\end{leftbar}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% the following 2 lines place a border around all figures 
 % \floatstyle{boxed} 
 % \restylefloat{figure}
 

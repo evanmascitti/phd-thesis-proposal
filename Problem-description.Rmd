@@ -1,11 +1,15 @@
----
-output: html_document
-editor_options: 
-  chunk_output_type: console
----
+
 # Description of problem {#problem-description}
 
 <!-- The infield is a crucial .......all that stuff here, including the figures of the field, the batted ball density, etc  -->
+
+```{r setup, include=F}
+
+options(tinytex.verbose = TRUE)
+knitr::opts_chunk$set(message=FALSE,
+                      echo = FALSE,
+                      warning = FALSE)
+```
 
 ___
 ## Key ideas 
@@ -18,7 +22,7 @@ ___
 
 ## Importance of the infield 
 
-```{r}
+```{r load-packages, include=F}
 library(tidyverse)
 library(measurements)
 library(latex2exp)

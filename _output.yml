@@ -2,8 +2,9 @@ bookdown::pdf_book:
   includes:
     in_header: preamble.tex
   latex_engine: xelatex
+  #pandoc_args: --top-level-division=section
   # citation_package: biblatex
-  keep_tex: false
+  keep_tex: true
 
 bookdown::gitbook:
   split_by: chapter
@@ -18,16 +19,16 @@ bookdown::gitbook:
     toc_depth: 2
     download: ["pdf", "epub"]
 
-bookdown::epub_book: default
+# bookdown::epub_book: default
 
 bookdown::word_document2:
     toc: true
 
-bookdown::pdf_document2:
-  latex_engine: xelatex
+# bookdown::pdf_document2:
+#  latex_engine: xelatex
 
-bookdown::html_document2:
-  css: [proposal-style.css, proposal-fonts.css]
+# bookdown::html_document2:
+ # css: [proposal-style.css, proposal-fonts.css]
 
   
 

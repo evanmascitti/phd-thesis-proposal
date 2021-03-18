@@ -1,13 +1,18 @@
----
-output: html_document
-editor_options: 
-  chunk_output_type: inline
----
+
 # Appendix {#appendix}
-```{r labor-per-area-tab, eval= T, echo=F, warning=F, message=F}
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = F, warning = F, message = F)
+```
+
+```{r load-packages, include=F}
 library(tidyverse)
 library(kableExtra)
+```
 
+
+
+```{r labor-per-area-tab, eval= T, echo=F, warning=F, message=F}
 labor_man_hrs <- read_csv('data/lit-review-data/maintenance-man-hrs.csv') %>% 
   mutate(type= as_factor(type),
          type= fct_relevel(type, 'Game mound/bullpen', 'Home plate', 'Infield skin', 'Turf', 'Warning track')) %>% 

@@ -1,5 +1,17 @@
 
+
 # Proposed experiments and papers {#proposed-experiments}
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = F, warning = F, message = F)
+
+```
+
+```{r load-packages, include=F}
+library(tidyverse)
+```
+
 
 This section details the planned research, much of which has already begun. Figure __
 <!-- \@ref(fig:gantt-chart)  -->
@@ -25,7 +37,7 @@ outlines envisaged timelines for these experiments. Many of the tests will be pe
 
 A mechanical apparatus has been developed to emulate a baseball or softball athlete's foot-to-surface interaction (Figure \@ref(fig:cleat-mark-device)). The device was designed and fabricated between May 2019 and March 2020 with service from the Penn State Engineering Services Shop. 
 
-```{r cleat-mark-device, eval=TRUE , fig.cap="Left: The pneumatic apparatus used to simulate foot-to-surface interaction. Right: A typical 9-spike baseball cleat pattern.", fig.show="hold", fig.height=3, out.width="50%"}
+```{r cleat-mark-device, fig.cap="Left: The pneumatic apparatus used to simulate foot-to-surface interaction. Right: A typical 9-spike baseball cleat pattern.", fig.show="hold", fig.height=3, out.width="50%"}
 
 knitr::include_graphics('images/cleatmark_device.png')
 knitr::include_graphics('images/nine-spike-pattern-compressed.png') 

@@ -1,5 +1,13 @@
 # Purpose and Objectives {#purpose-and-objectives}
 
+```{r setup, include=F}
+
+options(tinytex.verbose = TRUE)
+knitr::opts_chunk$set(message=FALSE,
+                      echo = FALSE,
+                      warning = FALSE)
+```
+
 ## Purpose {#purpose}
 
 Baseball fields can be improved by using the scientific method. 

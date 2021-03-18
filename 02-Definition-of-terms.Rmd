@@ -1,5 +1,13 @@
 # Definition of terms {#definition-of-terms}
 
+```{r setup, include=F}
+
+options(tinytex.verbose = TRUE)
+knitr::opts_chunk$set(message=FALSE,
+                      echo = FALSE,
+                      warning = FALSE)
+```
+
 **clay**: a soil material which can be reshaped or molded when moist and which retains develops high strength when dry
 
 **clay-size**: an individual mineral grain which settles in through a column of fluid at the same rate as a spherical particle having 2 &mu;m diameter

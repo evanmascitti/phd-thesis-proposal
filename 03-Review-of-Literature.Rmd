@@ -1,12 +1,15 @@
----
-output: html_document
-editor_options: 
-  chunk_output_type: console
----
 
 # Review of literature {#lit-review}
 
-```{r load packages}
+```{r setup, include=F}
+
+options(tinytex.verbose = TRUE)
+knitr::opts_chunk$set(message=FALSE,
+                      echo = FALSE,
+                      warning = FALSE)
+```
+
+```{r load packages, include=F}
 library(tidyverse)
 library(measurements)
 library(latex2exp)
@@ -154,7 +157,9 @@ Many laboratory soil tests are costly and time-intensive.
 Results from simpler tests are commonly used as surrogate markers for the information yielded by more intensive tests. 
 The methodology underlying these "surrogate" tests has been studied extensively because much is riding on their precision and accuracy. 
 @Sherwood1970 performed a large-scale inter-laboratory survey of various soil physical methods. 
-His conclusion was disheartening:
+His conclusion was less than optimistic:
+
+\\
 >"The results of this investigation....are for the most part rather disturbing, since it is clear that none of [the tests] can be used without quite wide tolerances being placed on the values obtained."
 
 The questions raised by @Sherwood1970 merit further investigation if a reliable means for testing infield mixes is to be developed.
@@ -497,7 +502,7 @@ T_{max}=\frac{130~\cdot~PI}{LL}-44
 \\
 \end{equation}
  
-@Moreno-Maroto2018 also suggested a new basis for classifying fine-grained soils from their toughness equation (Figure \@ref(fig:moreno-maroto-chart) and qualitative observations [@Moreno-Maroto2017].
+@Moreno-Maroto2018 also suggested a new basis for classifying fine-grained soils from their toughness equation (Figure \@ref(fig:moreno-maroto-chart)) and qualitative observations [@Moreno-Maroto2017].
 
 ```{r moreno-maroto-chart, fig.cap='Soil classification chart proposed by Moreno-Maroto and Alonso-Azcárate (2018). Toughness data from Barnes (2013) and the empirical equation from Moreno-Maroto and Alonso-Azcárate (2018) were used to define the positions of the C-line and M-line.'}
 source('draw_moreno-maroto_chart.R')
@@ -552,9 +557,14 @@ ___
 
 <!-- these first two sections need to be pared down and combined (the ones introducing the section and the one the rationale for producing engineered soils -->
 
-The essence of this topic's value was noted by @Seed1964a:
+Natural materials do not always meet the requirements for a particular use. 
+Natural soils^[Here the term "soil" refers to a particular soil **material**, in contrast to a pedogenic definition which encompasses a characteristic arrangement of horizons and other features. See Section \@ref(#definition-of-terms), Definition of Terms.] are commonly excavated and blended to benefit their physical or chemical properties [@Brady2007].
+@Seed1964a articulated the value of this topic:
 
 >"Blending of two soils, producing a new soil with characteristics better than both of its constituents, would be an interesting addition to soil stabilization techniques."
+
+The purpose of blending multiple soils is to create a mixture with properties not exhibited by any naturally occurring soil.
+These soils have been termed engineered soils [@Thompson2008a]. 
 
 
 Soil mixtures for baseball and softball fields typically contain two materials - a sand and a fine-grained soil.
@@ -568,9 +578,8 @@ For brevity, in this section the term “clay” simply refers to the fine-grain
 
 ### Rationale for producing engineered soils 
 
-Natural materials do not always meet the requirements for a particular use. Natural soils^[Here the term "soil" refers to a particular soil **material**, in contrast to a pedogenic definition which encompasses a characteristic arrangement of horizons and other features. See Section \@ref(#definition-of-terms), Definition of Terms.] are commonly excavated and blended to benefit their physical or chemical properties [@Brady2007].
-The purpose of blending multiple soils is to create a mixture with properties not exhibited by any naturally occurring soil.
-These soils have been termed engineered soils [@Thompson2008a]. 
+
+Z
 Potters and brick masons were the likely first in antiquity to develop engineered soils using simple intuition and experience. 
 Un-fired bricks containing clay mixed with organic residues have been dated to over 9,000 years before the present [@Staubach2005].
 Engineered soils are now used for agricultural, horticultural, geotechnical, environmental, and recreational purposes [@Leake2014].
@@ -793,6 +802,12 @@ Mixes containing silt (rather than sand) deviated even further from the linear l
 For the same percent 'coarse addition,' coarse sand caused a smaller change in the Atterberg limits while fine sand had a larger effect, and the effect of silt was even greater.
 
 @Barnes2013 tested mixes of London clay with sand (two different size fractions) or silt, in 10% increments of coarse particles from 0 to 100% clay. Finer particles decreased a mixture's toughness at its plastic limit. @Barnes2013 argued that increased the clay's toughness was higher at a given 'matrix water content' (water per unit <2<sub>mu</sub>m fration), but this is a somewhat abstract idea because water is also associated with particles > <2<sub>mu</sub>m. reflected only when all the soils were above their respective plastic limits. 
+
+@Rehman2020 tested natural soils (not artificial mixtures) sieved to either 2 mm or 425 &mu;m. 
+There was little difference in the PL and LL for soils with LL < 35. 
+When the LL exceeded 35, greater discrepancies were observed. 
+This result is not surprising given the higher specific surface area of finer particles. 
+The authors did not specify whether the sieving procedure was performed wet or dry.
 
 #### Sand uniformity
 
