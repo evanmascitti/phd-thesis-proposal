@@ -9,3 +9,4 @@ _book/
 _bookdown_files/
 *.bib
 *.ply
+*.rds

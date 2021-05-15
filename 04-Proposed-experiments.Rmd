@@ -15,27 +15,26 @@ library(tidyverse)
 
 This section details the planned research, much of which has already begun. Figure __
 <!-- \@ref(fig:gantt-chart)  -->
-outlines envisaged timelines for these experiments. Many of the tests will be performed on the same soil mixtures and the experiments, while separate, have substantial overlap. Therefore the testing program will be structured to minimize bottlenecks. In other words, multiple experiments will be in progress at a given time because some of the protocols involve wait times (i.e. for several hours or overnight) during which other lab tasks can be performed.
+outlines envisaged timelines for these experiments. Many of the tests will be performed on the same soil mixtures and the experiments, while treated separately, have substantial overlap. Therefore the testing program will be structured to minimize bottlenecks. In other words, multiple experiments will be in progress at a given time because some of the protocols involve wait times (i.e. for several hours or overnight) during which other lab tasks can be performed.
 
 
-## Dissertation chapter 1: A novel method for measuring surface deformation of baseball and softball infield skin soils {#cleatmark-method-development-chapter}
-
-<!-- A  new method to measure disturbance of baseball infield soils by cleated footwear -->
+## Dissertation chapter 1: A alaboratory method for measuring surface deformation of baseball and softball infield skin soils {#cleatmark-method-development-chapter}
 
 ### Principal research questions
 1. Can differences among infield mixes be observed in a laboratory test without using human subjects?
-2. How can performance be quantified? 
+2. How can "performance" be quantified? 
 3. How can the method be made objective and repeatable?
 
 ### Hypotheses
 1. The "cleat-in, cleat-out" phenomenon (described in Section \@ref(#corkboard-effect)) can be duplicated using a machine and a laboratory-sized soil specimen. 
-2. The means by which the soil specimen is prepared will affect the test result. Therefore, a protocol must be developed which adequately emulates the real procedures used for construction and maintenance of infield skins. Furthermore, the method must simulate outdoor conditions to adjust the soil water content.  
+2. The means by which the soil specimen is prepared will affect the test result. Therefore, a protocol must be developed which adequately emulates the real procedures used for construction and maintenance of infield skins. The method must also simulate outdoor conditions to adjust the soil water content.  
 3. Subjectivity can be minimized by relying on 3D scanning technology to measure the response of the soil. 
-4. Morphpometrics may be classified by means of the property they depend on; each metric will be minimized at similar water content but their sensitivity (i.e. _relative_ magnitudes) will differ in this order: surface-area > volume > curvature.  
+4. For a given soil, a critical water content threshold can be identified where disruption of the surface is minimized.
+5. The obtained water content from (4) will be similar across multiple surface metrics (i.e. volume change, surface area, curvature).
 
 ### Materials and Methods
 
-A mechanical apparatus has been developed to emulate a baseball or softball athlete's foot-to-surface interaction (Figure \@ref(fig:cleat-mark-device)). The device was designed and fabricated between May 2019 and March 2020 with service from the Penn State Engineering Services Shop. 
+A mechanical apparatus has been developed to emulate a baseball or softball athlete's foot-to-surface interaction (Figure \@ref(fig:cleat-mark-device)). The device was designed and fabricated in spring of 2020 by the Penn State State Engineering Services Shop. 
 
 ```{r cleat-mark-device, fig.cap="Left: The pneumatic apparatus used to simulate foot-to-surface interaction. Right: A typical 9-spike baseball cleat pattern.", fig.show="hold", fig.height=3, out.width="50%"}
 
@@ -45,11 +44,253 @@ knitr::include_graphics('images/nine-spike-pattern-compressed.png')
 ```
 
 
-The apparatus comprises a pneumatic cylinder which combines high travel speed and precise control of the peak load. 
+The apparatus comprises a pneumatic cylinder charged with a benchtop air compressor. Pneumatic power was chosen for its combination of high travel speed with good control of the peak load. 
+
+Several pilot experiments were performed to develop an optimal procedure for testing a given soil mixture. There are four main steps in the test: 
+
+1. Prepare the soil specimen
+2. Produce cleat indentations with the apparatus
+3. Record a 3D mesh of the tested specimen
+4. Derive surface properties from the mesh
+
+Each step was individually scrutinized. Investigated parameters include:
+
+**Sample preparation**:
+- compaction energy (standard vs. modified Proctor routine)
+- drydown apparatus (heat lamp wattage, distance, duration)
+- timing of water additions and repairs
+
+**Device operation:**
+- loading pressure 
+- number of cleats
+- orientation of cleats
+- torsion angle
+
+**Scanner configuration**:
+- angle from horizontal
+- distance from specimen
+- rotational step size 
+
+**Morphometric analysis**:
+- cleaning and orientation adjustments
+- pointcloud reduction (decimation)
+- comparison of derived morphometrics
+
+
+#### Method overview
+
+This sub-section is a high-level description of the method, from creating a soil mixture to a final result. 
+
+
+##### Producing the mix
+
+Modern infield soils are blended from two components - a (nearly) pure sand, and a fine-grained soil. 
+Mixes are often categorized on the basis of their total sand-size content. 
+For the purpose of simplicity, this sub-section refers to the two mixture components as "sand" and "clay", and temporarily ignores these terms' important particle-size and mineralogical connotations (see {#definition-of-terms}. 
+Nearly all "sands" have a measurable quantity of particles <2&mu;m sieve diameter, and nearly all "clays" have a measurable quantity of particles >50 &mu;m.^[the lower boundary of sand-size particles as defined by USDA classification system [@USDA1999]  ]
+To produce a mixture having $S$% percent sand-size particles by oven-dry mass requires knowledge of:
+  - the fines content of the "sand" 
+  - the sand content of the "fines" 
+  - the extant gravimetric water content $w$ of each component. 
+
+Computing the air-dry masses of each soil then requires a solution to a basic 2-member system of equations as derived below:
+
+Variables are defined as:
+
+- $S_{final}$: the final mixture's sand percentage as a decimal - $S_{sand}$: mass fraction of the "sand" > 53 &mu;m as a decimal.
+
+- $S_{clay}$: mass fraction of the "clay" > 53 &mu;m as a decimal
+
+- Note that because $S_{ sand}$ and $S_{clayey}$ are referenced to different soils, $S_{sand}~+~S_{clay}~\neq~S_{final}$
+
+- $m_{sand}$: oven-dry mass fraction of the "sand" _as added to the final mixture_
+
+- $m_{clay}$: oven-dry mass fraction of the "clay" _as added to the final mixture_
+
+- $m_{final}$: the total oven-dry mass of the final mixture, equal to unity.
+
+- $w$: gravimetric water content of a soil, normalized to the oven-dry soil solids, in decimal form.
+
+
+The total oven-dry mass of the mixture is equal to unity; therefore the clay mass can be solved as a function of the sand mass:
+\begin{align*}
+m_{final} = m_{sand} + m_{clay} &= 1 \\
+m_{clay} &= 1 - m_{ sand} \\
+\end{align*}
+
+The percent > 53 &mum; (i.e. sand-size) of the final mixture is a weighted average between the oven-dry sand-size percentages extant in each component and the masses of each component used to make the mixture:
+
+$$S_{final} = (~m_{sand}~\cdot~S_{sand})~+~(~m_{clay}~\cdot~S_{clay})$$
+Substituting for $m_{clay}$, we obtain
+
+
+$$S_{final} = (~m_{sand}~\cdot~S_{sand})~+~\left[(1-m_{sand}~)\cdot~S_{clay}~\right]$$ 
+
+
+Which can be distributed and rearranged to isolate $m_{sand}$:
+
+\begin{align*}
+S_{final} - S_{clay} &= ( m_{sand} \cdot S_{sand}) - (m_{sand} \cdot S_{clay}) \\ 
+S_{final}  -S_{clay} &= m_{sand}\cdot( S_{sand} - S_{clay}) \\
+m_{sand} &= \frac{S_f - S_{clay}}{S_{sand} - S_{clay}}\\
+\end{align*}
+
+Each oven-dry component mass is then corrected for its respective hygroscopic water content and scaled to the desired final mixture mass:
+
+\begin{align}
+m_{sand (air-dry)} &= m_{sand}\cdot (1+w) \\
+\text{Sand~mass~(kg)} &= \frac{S_{clay}-S_{clay}}{S_{sand} - S_{clay}} \cdot (1+w_{sand }) \cdot m_{total~mixture~(kg)} \\
+(\#eq:sand-clay-ratios)
+\end{align}
+
+For example, assume the "sand" component is 96% sand-size, the "clay" is 8% sand-size, and 50 kg of oven-dry final mix is required.
+The water content of the sandy component is 0.2%, i.e. 0.002, and the gravimetric water content of the clayey component is 1.9%, i.e. 0.019.
+
+
+Plugging these values into the equations gives an air-dry sandy component mass of `r round((0.6-0.08)/(0.96-0.08)*43*1.002, 2)` kg.
+
+
+$$\left(\frac{0.60~-~0.08}{0.96~-~0.08}\right)~\times~(1+0.002)~\times43~kg~=~25.46~kg$$
+
+
+To make these calculations efficient and reproducible, the above forumlae have been compiled into a set of functions in the R Language for Statistical Computing.
+
+
+#### Preparing the specimen
+
+An important consideration in this test's development is accurately simulating the conditions encountered on actual infields. 
+As noted in Section {#}, infield soils are intentionally compacted to extremely high densities.
+The infield also undergoes frequent wetting and drying cycles. These affect soil water potential and may also induce volume change.
+
+A sample preparation routine was developed using two main criteria:
+
+1. Emulate the conditions found on actual infields 
+2. Reduce operator-dependence by using standardized protocols for initial compaction and subsequent repairs
+
+Soils of varying grain size and plasticity exhibit differnt behavior under compaction. Rather than  compacting all samples to the same dry density, it was deemed more approproate to compact each sample at its respective optimum water content ($w_{opt}$). Therefore, a compaction test was required _prior_to any sample construction for actual cleat-mark testing. 
+The two most widely-used compaction tests are the Standard and Modified Proctor tests, designated by @ASTMD698-12 and @ASTMd15572015.
+The equipment used to compact infield soils is generally smaller than that used for larger earthworks projects. 
+
+It is not immediately clear which Proctor test corresponds better to infield soil construction. Unfortunately there is no straightforward conversion between equipment size used in the field and the compaction energy applied during a laboratory test. 
+@Selig1971 provided a formula for a simple case of towing a cylindrical drum towed across the soil surface, but this type of equipment is rarely used on infields and the calculation depends highly on the coefficient of rolling resistance which varies widely. An analytical solution is not necessarily required. In fact, the impact energies employed by both flavors of Proctor test were established by simply comparing the test results with  densities observed in actual earthworks projects [@Proctor1932; @Holtz2010] . 
+A similar approach was taken for this study. 
+Compaction tests were performed were performed on selected soils at both efforts.
+The results indicate the Modified test more closely matches the density values achieved during construction of actual infield surfaces (Figure \@ref(fig:duraedge-standard-vs-modified).
+A pilot experiment was also performed to determine determine whether a a notable difference in sample behavior occurred between the two energy levels.
+
+
+A proctor test was performed for each sample to determine the proper water content for compaction into the custom cleat-mark cylinders. 
+A rough estimate of $w_{opt}$ was made by adding small amounts of water to a hand specimen. 
+The gravimetric water content was determined and five total aliquots were prepared - one at this water content, with two drier and two wetter. 
+Appropriate amounts of water were incorporated by hand to yield $w$ spacing of ~0.02. 
+Samples were cured in plastic bags for &GreaterEqual; 16 hr. 
+Each specimen was compacted and weighed, and a representative sample was removed for the water content determination. 
+To derive $w_{opt}$, a polynomial spline was fitted to the plot of dry density vs. water content.
+The function's first derivative was set to zero and the $\rho_{max}$ and $w_{opt}$ values were computed by setting the curve's derivative to zero and interpolating at this point (Figure \@ref(fig:deriving-proctor-values). 
+<!-- This approach is further documented in **soiltestr**.  -->
+@ASTMD698-12 suggests the operator draw the compaction curve manually, but a computational approach
+removes operator judgement and makes the analysis more reproducible.
+See @Howell1997 and @Webb2014 for other examples of fitting mathematical functions to Proctor data.
+
+
+<!-- (ref:deriving-proctor-values-caption) Values for $\\rho_{max}$ and $w_{opt}$ (black arrows) were derived from the compaction curves using a spline fitting routuine.' -->
+
+```{r deriving-proctor-values, fig.cap=''}
+knitr::include_graphics('imported-figures/deriving-proctor-values.pdf')
+```
+
+
+A sufficient mass of air-dry soil was then brought to the appropriate $w_{opt}$ for the test energy.
+The water was weighed and thoroughly incorporated by hand and allowed to cure for &GreaterEqual;16 hr. 
+
+
+##### Conversion of Proctor test energy-per-volume to cleat-mark cylinder equivalent
+
+Due to the design of the pneumatic device, a direct protocol translation between the Proctor mold and the cleat-mark cylinders was not possible.
+The Proctor mold is 10.2 cm diameter x 11.4 cm deep.
+The pneumatic test device was designed to hold cylinders with a 10.2 cm (4 in) deep soil profile. 
+This is a commonly used specification for infield construction. 
+At this depth, a fully-loaded cylinder containing moist soil has a mass of ~5.5 kg.
+Unfortunately, the automatic turntable for the 3D scanner has a maximum capacity of 5 kg and a means to reduce the specimen mass was required. 
+2.5 cm cylindrical plugs were fabricated from high-strength polymer resin poured into each cylinder \@ref(fig:resin-plugs).
+The resin has a bulk density of just ~0.6 Mg m^-3^ so the plugs reduce the total specimen mass to ~ 4.5 kg while maintaining a profile depth of 7.5 cm. 
+After inserting the plugs, each cylinder's volume was precisely determined by filling it with de-aired water and recording the filled mass.
+This procedure allows precise density computations despite any differences in the plugs' sizes. 
+A conversion was then developed to equate eac Proctor test energy to 
+the larger cleat mark cylinder. The conversion for the Standard test 
+(25 blows per layer, 3 layers) is straightforward because the new total profile thickness (3 in or 7.5 cm) corresponds exactly to 2/3 of the regular Proctor mold. 
+Therefore the lift thickness is held constant and the number of lifts is simply reduced to 2. 56 blows per layer are used for the 15 cm-diameter mold. 
+The Modified test calls for 5 lifts, which is not evenly divisible into the new total height.
+An additional energy conversion is required to translate the Modified compaction routine to the cleat-mark cylinders.
+This calculation is outlined in Equation \@ref(eq:modified-energy-per-volume).
+
+
+\begin{align*} 
+\frac{E_{Modified~Proctor_{total}}}{vol_{Modified~Proctor}}&=\frac{E_{cleat-mark_{total}}}{vol_{cleat-mark}} \\
+\frac{2700~\frac{kJ}{m^3}}{978~cm^3}&=\frac{E_{cleat-mark_{total}}}{1537~cm^3} \\
+E_{cleat-mark_{total}}&=~4243 \frac{kJ}{m^3} \\
+\end{align*}
+
+A single blow of the Modified hammer applies:
+
+\begin{align*}
+E&=mgh \\
+E&=\frac{4.54~kg}{}~\times~\frac{9.81~m}{s^2}~\times~\frac{0.457~m}{} \\
+E&=\frac{\frac{20.34~kgm^2}{s^2}}{\text{blow}} \\
+&=\frac{20.34~J}{\text{blow}} \\
+\end{align*}
+
+Therefore a total energy of 4243 kJ requires:
+
+\begin{equation}
+\frac{4243~J}{\text{cylinder}}\times\frac{1~\text{blow}}{20.34~J}=209~\text{blows per cylinder} \\
+(\#eq:modified-energy-per-volume)
+\end{equation}
+
+Split over 3 layers, $209 / 3 \approx 70$ blows per layer are required.
+
+
+##### Comparison of density achieved during Proctor tests and cleat-mark compaction routine 
+
+To validate the energy conversion outlined in \@ref(eq:modified-energy-per-volume), the masses and water contents of each cylinder were recorded following compaction.
+Three replicates of two soils at both energies were prepared for a total of 12 specimens. 
+
+These were compared with the values of &rho;~max~ and w~opt~ derived from the original Proctor test (either standard or modified).
+
+Three replicated specimens were prepared from two soils. 
+Figure \@ref(fig:proctor-vs-cleat-mark-achieved-density-fig) shows that the three replicates have very similar dry densities and that the cleat-mark compaction routine packed them to a slightly lower dry density than the Modified test.
+This result corresponds well with prior research on varying the mold diameter of compaction tests. 
+@ASTMD698-12e1 states:
+
+>"Results have been found to vary slightly when a material is tested at the same compactive effort in different size molds, with the smaller mold size typically yielding larger values of density/unit weight."
+
+@Johnson1962 reported differences of 0.05 Mg m^-3^ for a clayey sand.
+Therefore it seems that the chosen compaction routine is both repeatable and sufficiently adequate.
+
+
+
+
+##### Summary - specimen preparation 
+
+
+
+Additionally, full trial runs were completed using each routine for the daily specimen repairs. 
+No obvious difference was detected between the two efforts. 
+Therefore, the Modified effort was adopted for all further study. 
+
+
+
+#### Operating the device 
+
+
+#### 
+
+
+
 
 ### Timeline 
 
-The device was designed and fabricated between May 2019 and March 2020. Calibration and tuning of the machine is ongoing. The first set of mixtures is scheduled to be tested in Nov 2020. The goal is to complete all tests with this device by the end of 2021.
+The device was designed and fabricated in spring 2020. Calibration and tuning of the 3D scanner began July of 2020. The method is nearly complete and the final step will be to perform an error analysis across replicate soil specimens. 
 
 
 ## Dissertation chapter 2: Identifying the brittle-ductile transition of infield soil mixtures subjected to disturbance by baseball cleats
@@ -107,8 +348,6 @@ scr_possible_vals %>%
 
 
 ### Timeline 
-
-
 
 
 
