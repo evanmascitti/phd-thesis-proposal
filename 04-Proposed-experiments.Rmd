@@ -9,7 +9,10 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F)
 ```
 
 ```{r load-packages, include=F}
-library(tidyverse)
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(kableExtra)
+  })
 ```
 
 
@@ -150,7 +153,7 @@ The water content of the sandy component is 0.2%, i.e. 0.002, and the gravimetri
 Plugging these values into the equations gives an air-dry sandy component mass of `r round((0.6-0.08)/(0.96-0.08)*43*1.002, 2)` kg.
 
 
-$$\left(\frac{0.60~-~0.08}{0.96~-~0.08}\right)~\times~(1+0.002)~\times43~kg~=~25.46~kg$$
+$$\left(\frac{0.60~-~0.08}{0.96~-~0.08}\right)~\times~(1+0.002)~\times43~kg~=~25.46~\text{kg}$$
 
 
 To make these calculations efficient and reproducible, the above forumlae have been compiled into a set of functions in the R Language for Statistical Computing.
@@ -174,15 +177,24 @@ The equipment used to compact infield soils is generally smaller than that used 
 It is not immediately clear which Proctor test corresponds better to infield soil construction. Unfortunately there is no straightforward conversion between equipment size used in the field and the compaction energy applied during a laboratory test. 
 @Selig1971 provided a formula for a simple case of towing a cylindrical drum towed across the soil surface, but this type of equipment is rarely used on infields and the calculation depends highly on the coefficient of rolling resistance which varies widely. An analytical solution is not necessarily required. In fact, the impact energies employed by both flavors of Proctor test were established by simply comparing the test results with  densities observed in actual earthworks projects [@Proctor1932; @Holtz2010] . 
 A similar approach was taken for this study. 
-Compaction tests were performed were performed on selected soils at both efforts.
-The results indicate the Modified test more closely matches the density values achieved during construction of actual infield surfaces (Figure \@ref(fig:duraedge-standard-vs-modified).
-A pilot experiment was also performed to determine determine whether a a notable difference in sample behavior occurred between the two energy levels.
+Compaction tests were performed were performed at both efforts on a widely-used commercial infield mix.
+The lab tests were compared with density values obtained from intact core sampling on an MLB infield (Figure \@ref(fig:proctor-vs-observed-infield-density)).
+The observed values from the staduim fall somewhat between those attained with the lab tests. 
+Recall that these values for &rho; are somewhat higher than those which have been used for other infield soils research (c.f. Figure \@ref(fig:lit-review-density-comparison)).
+A pilot experiment was also performed to determine determine whether a notable difference in sample behavior occurred between the two energy levels.
+
+(ref:proctor-vs-observed-infield-density-caption) For the same soil, dry density values observed on a professionally managed infield surface lie between those achieved with the Standard and Modified Proctor tests. 
+
+
+```{r proctor-vs-observed-infield-density, fig.cap='(ref:proctor-vs-observed-infield-density-caption)'}
+knitr::include_graphics('./figs/pdf/proctor-vs-observed-infield-density.pdf')
+```
 
 
 A proctor test was performed for each sample to determine the proper water content for compaction into the custom cleat-mark cylinders. 
 A rough estimate of $w_{opt}$ was made by adding small amounts of water to a hand specimen. 
 The gravimetric water content was determined and five total aliquots were prepared - one at this water content, with two drier and two wetter. 
-Appropriate amounts of water were incorporated by hand to yield $w$ spacing of ~0.02. 
+Appropriate amounts of water were incorporated by hand to yield $w$ spacing of &asymp;0.02. 
 Samples were cured in plastic bags for &GreaterEqual; 16 hr. 
 Each specimen was compacted and weighed, and a representative sample was removed for the water content determination. 
 To derive $w_{opt}$, a polynomial spline was fitted to the plot of dry density vs. water content.
@@ -206,20 +218,22 @@ The water was weighed and thoroughly incorporated by hand and allowed to cure fo
 
 ##### Conversion of Proctor test energy-per-volume to cleat-mark cylinder equivalent
 
-Due to the design of the pneumatic device, a direct protocol translation between the Proctor mold and the cleat-mark cylinders was not possible.
-The Proctor mold is 10.2 cm diameter x 11.4 cm deep.
-The pneumatic test device was designed to hold cylinders with a 10.2 cm (4 in) deep soil profile. 
-This is a commonly used specification for infield construction. 
-At this depth, a fully-loaded cylinder containing moist soil has a mass of ~5.5 kg.
-Unfortunately, the automatic turntable for the 3D scanner has a maximum capacity of 5 kg and a means to reduce the specimen mass was required. 
+A direct translation of protocols between the Proctor tests and preparation of the cleat-mark cylinders was not possible. 
+The Proctor mold is 10.2 cm diameter x 11.4 cm deep while the pneumatic test device uses cylinders 15.4 cm diameter x 10.2 cm deep. 
+The cleat-mark cylinder dimensions were initially chosen based on two criteria: 
+(1) the minimum diameter needed to accommodate several baseball cleats, and (2) a commonly used specification for infield soil depth (10.2 cm or 4 in)
+
+With these dimensions, a fully-loaded cylinder containing moist soil has a mass of ~5.5 kg.
+Unfortunately, it was later discovered that the automatic turntable for the 3D scanner has a maximum capacity of 5 kg. 
+Therefore an adjustment to reduce the specimen mass was required. 
 2.5 cm cylindrical plugs were fabricated from high-strength polymer resin poured into each cylinder \@ref(fig:resin-plugs).
-The resin has a bulk density of just ~0.6 Mg m^-3^ so the plugs reduce the total specimen mass to ~ 4.5 kg while maintaining a profile depth of 7.5 cm. 
+The resin has a bulk density of just ~0.6 Mg m^-3^ so the plugs reduce the total specimen mass to ~ 4.5 kg and maintainin a sufficient profile depth of 7.5 cm. 
 After inserting the plugs, each cylinder's volume was precisely determined by filling it with de-aired water and recording the filled mass.
 This procedure allows precise density computations despite any differences in the plugs' sizes. 
-A conversion was then developed to equate eac Proctor test energy to 
+A conversion was then developed to equate each Proctor test energy to 
 the larger cleat mark cylinder. The conversion for the Standard test 
 (25 blows per layer, 3 layers) is straightforward because the new total profile thickness (3 in or 7.5 cm) corresponds exactly to 2/3 of the regular Proctor mold. 
-Therefore the lift thickness is held constant and the number of lifts is simply reduced to 2. 56 blows per layer are used for the 15 cm-diameter mold. 
+Therefore the lift thickness was held constant and the number of lifts was simply reduced to 2. 56 blows per layer are used for the 15 cm-diameter mold. 
 The Modified test calls for 5 lifts, which is not evenly divisible into the new total height.
 An additional energy conversion is required to translate the Modified compaction routine to the cleat-mark cylinders.
 This calculation is outlined in Equation \@ref(eq:modified-energy-per-volume).
@@ -268,24 +282,198 @@ This result corresponds well with prior research on varying the mold diameter of
 Therefore it seems that the chosen compaction routine is both repeatable and sufficiently adequate.
 
 
+Full trial runs were completed using each routine for the daily specimen repairs. 
+A single water content was derived for each soil x effort combination using the Normalized RFI as the surface metric of interest. 
+These values are summarized in \@ref(tab:derived-water-contents-from-cleat-mark-test-effort-comparison-tab).
+These tests were not replicated so they cannot be statistically compared, but it appears that the compaction effort does not markedly influence the test result.
 
 
-##### Summary - specimen preparation 
+```{r derived-water-contents-from-cleat-mark-test-effort-comparison-tab, fig.cap="The critical volumetric water contents derived from the cleat mark test were nearly identical for the two compaction treatments."}
+# hard-coding paths like this this is usually a no-no, but I am 
+# doing it here to maintain the link between this table and the data
+# and to do so without using something like make....the data lie in
+# a totally separate prokect so I can't use relative paths from the project # root without navigating upward in my own computer's file system tree
+
+
+# read and clean up data 
+derived_test_values_from_compaction_pilot_data <- readr::read_rds('../../cleatmarkmethod/ecmdata/derived-data/cleaned-rds-files/disturbance-vs-water-content-cleaned-data.rds')
+
+derived_test_values_from_compaction_pilot_table <- derived_test_values_from_compaction_pilot_data$tidied_w_vals %>%
+  dplyr::filter(metric_label == 'dne') %>%
+  dplyr::ungroup() %>%
+  dplyr::select(sample_name, effort, volumetric_w_c) %>%
+  tidyr::pivot_wider(names_from = effort, values_from = volumetric_w_c) %>%
+  dplyr::mutate(sample_name = readr::parse_number(sample_name)) %>% 
+  dplyr::rename(Soil = sample_name) 
+  
+
+# set names of the columns;  must escape % symbol for Latex to parse correctly 
+colnames(derived_test_values_from_compaction_pilot_table) <- c("\\% Sand", "Standard", "Modified")
+
+# set a vector for caption
+derived_test_values_from_compaction_pilot_table_caption <- "The critical volumetric water contents derived from the cleat mark test were nearly identical for the two compaction treatments."
+
+# build kable 
+kableExtra::kbl(derived_test_values_from_compaction_pilot_table, 
+                align = 'c',
+                digits = 3, 
+                format = 'latex', 
+                booktabs = TRUE, 
+                escape = FALSE,
+                caption = derived_test_values_from_compaction_pilot_table_caption,
+                caption.short = "Critical water contents from cleat mark test performed with 2 compaction efforts") %>% 
+  kableExtra::add_header_above(header = c(" " = 1, "$\\\\theta_{critical}$" = 2), escape = FALSE) %>% 
+  kableExtra::kable_styling(position = 'center')
+
+```
 
 
 
-Additionally, full trial runs were completed using each routine for the daily specimen repairs. 
-No obvious difference was detected between the two efforts. 
-Therefore, the Modified effort was adopted for all further study. 
+##### Summary - specimen preparation
+
+Ultimately, the Modified effort was adopted for all further study for the following reasons:
+
+1. Despite the lack of a statistical comparison, the "critical" water contents derived from the two methods were quite similar. The differences due to soil type appears to be larger than any difference due to compaction effort. 
+
+2. Soil bulk density on an actual infield was higher than that from a Standard Proctor test. The prevailing opinion among grounds managers is that the infield should be as compacted as possible. Therefore, a realistic lab test should favor greater compaction wherever possible. 
+
+
+#### Performing the test 
+
+
+There are three basic steps in the cleat-mark test:
+
+1. Produce cleat indentations on the specimen
+2. Collect a 3D scan of the surface 
+3. Measure the water content and any other types of data
+
+Each is outlined here. 
+
+
+##### Cleat indentations 
+
+The pneumatic device is first charged to 690 kPa (100 psi).
+The specimen is secured into the device with adjustable clips. 
+The device is manually actuated and then retracted. 
+Any soil ejected from the cleat indentations is carefully removed so that the clods are not crushed by subsequent tests.
+This sequence is repeated twice more, rotating the specimen by 60&degree; after each test.
+The reserved soil clods are carefully replaced at their original locations.
+
+##### 3D scan
+
+Six markers are placed on the rim of the aluminum sample holder. 
+The markers allow the scanner to register individual pointclouds and merge them into a single mesh.
+A series of scans is made using a step size of 20&deg; for a total of 18 captures per specimen. 
+These are merged using EinScan's software (without scaling or reduction) and exported as a single `.ply` file.
+The `.ply` format is an open file format and permits both ASCII and binary encoding. 
+It was designed to be simple yet extensible: while the only requirements are a set of x, y, and z vertex coordinates and corresponding face indices, arbitrary information such as color and texture may be also be encoded directly alongside the spatial coordinates [@Turk1994].
+
+
+##### Water content and ancillary data 
+
+A small intact soil core is removed (depth = 15 mm) using a small soil probe.
+The core is ejected and immediately weighed to &plusmn; 0.001 g. 
+The bottom of the core normally separates in an uneven pattern so a geometric computation
+of the cylinder's volume is not adequate.
+A 3D scan is then made of the core to allow an accurate computation of its volume.
+The volume of the `.ply` object is determined using the `vcgVolume()` function in the **Rvcg** package. 
+The volumetric water content of the specimen is determined from its gravimetric water content and dry density:
+
+\begin{align}
+\text{Gravimetric water content:} \\ 
+w &= \frac{water~loss~(g)}{m_{oven-dry~soil}~(g)} \\
+\text{Dry bulk density:} \\
+\rho_{dry} &= \frac{m_{oven-dry~soil}~(g)}{core~volume~(cm^3)} \\
+\text{Volumetric water content:} \\
+\theta  &= \rho_{dry} \times w \\
+(\#eq:vwc-equation) 
+\end{align}
+
+Penetrometer resistance is measured with a handheld device having a maximum capacity of 5 kg cm^-1^. 
+Four ratings are taken and averaged to producea a representative value. 
+Visual observations on the nature of deformation are noted. 
+Finally, a color photograph of the sample is taken after the test.
+
+
+#### Mesh processing pipeline 
+
+In their raw state, the `.ply` files are of little use because the pointclouds' coordinates are relative to the scanner's detector. 
+A number of cleaning and processing operations are requried in order to make the meshes suitable for measurements. 
+
+<!-- edit this some so the tenses match, etc  -->
 
 
 
-#### Operating the device 
+The raw meshes generated by the device are oriented in a coordinate system relative to the scanner's detectors. Due to the specimen geometry the scans also contained incomplete fragments of the aluminum cylinders housing the soil. To allow meaningful comparison of the soil surfaces, the cylinder portion must be removed from the mesh and the surface must be oriented in real-world coordinates. 
+These tasks may be done interactively with point-and-click software such as MeshLab [reference to VCG], but an interactive approach is neither scaleable nor reproducible. Instead, processing routine was written using the R Language for Statistical Computing [@R-core2021].  
+This code was primarily based on the **`Rvcg`** and **`Morpho`** packages [@Schlager2017], which are in turn built atop the open-source C++ libraries maintained by the ISTI-CNR Visual Computing Lab (Pisa, Italy, <https://www.isti.cnr.it/en/>). 
+Source code associated with the orientation and cleaning of the meshes are available in this paper's supplemental materials. 
+Briefly, a 4x4 roto-translation matrix was recorded using a reference specimen with an undisturbed surface. This matrix was saved as an .rda data object and applied iteratively to each mesh from that particuar scanner orientation. The sample was then adjusted in the x-y plane based on its maximum x and y coordinate values. Any points greater than 70 mm from the mesh's center were removed by computing Bboolean values for each vertex solved from the basic equation for a circle with origin $(0,0)$  :
 
 
-#### 
+\begin{align}
+		\begin{split}
+			(x - h)^2 + (y - k)^2 &= r^2 \\
+			\mathrm{Since}~x=0~\mathrm{and}~y=0;~~ (x - 0)^2 + (y - 0)^2 &= 70^2 \\
+			x^2 +y^2 &= 70^2 \\
+		\end{split}
+(\#eq:cylinder-clipping-equation) 
+\end{align}
 
 
+Therefore for a given vertex, if $x^2+y^2>70$ the vertex was removed from the matrix of coordinates. The result is shown in \@ref(fig:orienting-and-removing-cyl-fig)
+
+
+(ref:orienting-and-removing-cyl-caption) A. Orientation of the raw mesh generated by 3D scanner. B. Orientation of the specimen after application of roto-translation matrix. C. Final orientation of mesh after removing extraneous portions of the mesh and performing secondary position adjustments. Junction of the three axes represents $(0,0,0)$.
+
+
+
+#### Surface perormance metrics 
+
+Several measurements have been developed to ennumerate the degree of disturbance to the soil surface after testing.
+All are conceptually referenced to an undisturbed soil surface of the same radius, lying in the $(x, y)$ plane. 
+
+The measurements are grouped into three categories:
+
+1. Volume of disturbed soil
+
+Effectively these are the "cut" or "fill" required to return the tested sample to its originally planar state. Several algorithms were developed to compute these values from the pointcloud (voxel re-sampling, )
+
+2. Normalized Relief Index (NRFI)
+
+This is the simplest of the measurements - it is a normalized ratio of the actual surface area of the triangluar mesh to its 2D footprint. The surface area of the reference plane is subtracted and the result is multiplied by 100 to make the values simpler to compare. NRFI is essentially the percent gain in surface area for the tested specimen over its undisturbed equivalent. The formula is: 
+
+\begin{equation}
+NRFI = \left(\frac{\text{surface area}_{\text{ total}}}{\pi~r^2} - \pi~r^2 \right) \times 100 \\
+(\#eq:nrfi-equation) 
+\end{equation}
+
+
+3. Dirichlet Normal Energy (DNE)
+
+Dirichlet Normal Energy is a relatively complex algorithm often used in anthropology and biology. It is a measure of the total curvature of a surface. Briefly, the vertex normals of each point are averaged ....See @Pampush and @pampush-cited-works for a more complete derivation of DNE.
+
+#### Determination of $w_{crit}$
+
+The goal of the cleat-mark test is to arrive at a single water content where the soil exhibits an abrupt change between brittle and ductile behavior. 
+
+Each surface metric was plotted against volumetric water content.
+A third-order polynomial regression was fitted to the data. 
+Deriving a single point from this curve requires some discussion of the physical meaning behind the data points. 
+
+Moving from wet to dry:
+
+For this discussion NFRI is referenced as the metric of choice, but the general shape of the relationship is the same for other metrics as well. 
+
+When the soil is very wet, the device extends to its maximum strain level. Increasing the water content is not likely to achieve any additional disturbance. 
+
+At lower water contents, disturbance is relatively constant as no soil is removed or fractured from the surface and the new surface area is goverened purely by the shape of the cleats. 
+
+When the soil reaches the crutical transutio it begns to grafment under  the evice's action. 
+
+As the soil continues to dry, the brittleness is maximized and the soil forms chips and clods. These often fragment further and produce additonal surface are . 
+
+When the soil is very dry, the cleats are largely unable to penetrate the soil at the applied load. Little deformation can occur and the NFRI.
 
 
 ### Timeline 
@@ -375,9 +563,9 @@ In the hypothetical sense any test which applies a known load and measures a def
 
 ### Materials and Methods
 
-The same mixtures tested in [Chapter 1](#cleatmark-method-development-chapter) will be used for this study. 
+The same mixtures tested in Chapter \@ref(cleatmark-method-development-chapter) will be used for this study. 
 
-The soils will be wetted to their adhesion limit and packed into a 5-cm diameter steel tube with a dynamic compaction effort of 2,700 kN-m/m<sup>3</sup> (equivalent to the ASTM modified Proctor compaction test, D1557-12e1 [-@ASTMD15572015]. The soil will be packed in a single lift to minimize heterogeneities in the specimen which could arise due to lack of binding between successive lifts. Preparing the specimens in a relatively soft condition also ensures minimal air entrapment. For each mixture, 6 replicate cylinders will be prepared. 
+The soils will be wetted to their adhesion limit and packed into a 5-cm diameter steel tube with a dynamic compaction effort of 2,700 kN-m m^3^ (equivalent to the ASTM modified Proctor compaction test, D1557-12e1 [-@ASTMD15572015]. The soil will be packed in a single lift to minimize heterogeneities in the specimen which could arise due to lack of binding between successive lifts. Preparing the specimens in a relatively soft condition also ensures minimal air entrapment. For each mixture, 6 replicate cylinders will be prepared. 
 
 The specimens will be extruded with a manual hydraulic bottle jack (Figure \@ref(fig:proctor-extruder)). One specimen will be immediately sealed in an air-tight plastic bag. The rest will be slowly air dried under a loose polyethylene sheet. Each specimen will be dried to progressively lower water contents and sealed in a plastic bag until testing, with the final specimen being completely air-dried. The goal is to evaluate at least 3 water contents where ductile behavior is observed and at least 2 samples where brittle behavior is observed. This will allow the maximum toughness value to be bracketed by the tests.
 
