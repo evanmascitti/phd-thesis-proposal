@@ -474,7 +474,6 @@ In most engineering applications little to no strain is desired.
 A baseball field differs because a small amount of deformation to the soil is desirable (Section \@ref(#corkboard-section)). 
 
 
-
 #### Computing toughness from index properties
 
 @Casagrande1932 described the relationship of toughness to soil testing and classification:
@@ -546,6 +545,29 @@ At the time of writing, particle size analysis is the only means of soil testing
 knitr::include_graphics('images/brosnan_survey_PSA.PNG')
 
 ```
+
+
+### Soil water content {#soil-water-content}
+
+Agronomists, engineers and pedologists all consider soil water content an important concept. Soil water has been studied extensively using a variety of methods. 
+This brief section does not attempt to review the overwhelming body of literature on water content. 
+It simply defines the main connotations in which the term "water content" is used. 
+
+Soil water content has two basic definitions: 
+
+(1.) gravimetric ($w$): mass of water referenced to oven-dry mass of soil^[the mass of water is referenced to _moist_ soil in some fields including pottery and coal geoscience. This approach is not widely favored because the denominator changes as a function of the measurement value and there is no absolute reference.]
+
+(2.) volumetric ($\theta$): volume of water referenced to total volume of soil solids plus voids
+
+A "true" value for $\theta$ is readily computed from $w$ if soil's dry bulk density $\rho_{bulk}$ is also known ($\theta=w~\cdot~\rho_{bulk}$).
+
+$\theta$ is commonly estimated in-situ with indirect techniques such as neutron scattering or time-domain reflectometry [@Brady2007].
+
+Both measurements are used across disciplines. 
+Each has merits and downfalls. 
+$w$ is easiest to measure: it simply requires an accurate balance and a drying oven. 
+$\theta$ has a clearer physical meaning in terms of soil behavior and the interactions among particles. 
+As a broad generalization, $w$ is favored by engineers and $\theta$ is favored by agronomists and soil physicists.
 
 ### Summary: laboratory tests of soil behavior and physical properties
 

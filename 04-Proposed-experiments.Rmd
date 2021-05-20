@@ -4,14 +4,15 @@
 
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = F, warning = F, message = F)
+knitr::opts_chunk$set(echo = F, warning = F, message = F, out.width = '90%', eval=F)
 
 ```
 
-```{r load-packages, include=F}
+```{r load-packages, eval=TRUE}
 suppressPackageStartupMessages({
   library(tidyverse)
   library(kableExtra)
+  library(magick)
   })
 ```
 
@@ -39,7 +40,7 @@ outlines envisaged timelines for these experiments. Many of the tests will be pe
 
 A mechanical apparatus has been developed to emulate a baseball or softball athlete's foot-to-surface interaction (Figure \@ref(fig:cleat-mark-device)). The device was designed and fabricated in spring of 2020 by the Penn State State Engineering Services Shop. 
 
-```{r cleat-mark-device, fig.cap="Left: The pneumatic apparatus used to simulate foot-to-surface interaction. Right: A typical 9-spike baseball cleat pattern.", fig.show="hold", fig.height=3, out.width="50%"}
+```{r cleat-mark-device, fig.cap="Left: The pneumatic apparatus used to simulate foot-to-surface interaction. Right: A typical 9-spike baseball cleat pattern.", fig.show="hold", fig.height=3, out.width="50%", eval=TRUE}
 
 knitr::include_graphics('images/cleatmark_device.png')
 knitr::include_graphics('images/nine-spike-pattern-compressed.png') 
@@ -92,8 +93,11 @@ Mixes are often categorized on the basis of their total sand-size content.
 For the purpose of simplicity, this sub-section refers to the two mixture components as "sand" and "clay", and temporarily ignores these terms' important particle-size and mineralogical connotations (see {#definition-of-terms}. 
 Nearly all "sands" have a measurable quantity of particles <2&mu;m sieve diameter, and nearly all "clays" have a measurable quantity of particles >50 &mu;m.^[the lower boundary of sand-size particles as defined by USDA classification system [@USDA1999]  ]
 To produce a mixture having $S$% percent sand-size particles by oven-dry mass requires knowledge of:
+
   - the fines content of the "sand" 
+  
   - the sand content of the "fines" 
+  
   - the extant gravimetric water content $w$ of each component. 
 
 Computing the air-dry masses of each soil then requires a solution to a basic 2-member system of equations as derived below:
@@ -116,10 +120,11 @@ Variables are defined as:
 
 
 The total oven-dry mass of the mixture is equal to unity; therefore the clay mass can be solved as a function of the sand mass:
-\begin{align*}
+
+\begin{align}
 m_{final} = m_{sand} + m_{clay} &= 1 \\
 m_{clay} &= 1 - m_{ sand} \\
-\end{align*}
+\end{align}
 
 The percent > 53 &mum; (i.e. sand-size) of the final mixture is a weighted average between the oven-dry sand-size percentages extant in each component and the masses of each component used to make the mixture:
 
@@ -168,14 +173,15 @@ The infield also undergoes frequent wetting and drying cycles. These affect soil
 A sample preparation routine was developed using two main criteria:
 
 1. Emulate the conditions found on actual infields 
+
 2. Reduce operator-dependence by using standardized protocols for initial compaction and subsequent repairs
 
 Soils of varying grain size and plasticity exhibit differnt behavior under compaction. Rather than  compacting all samples to the same dry density, it was deemed more approproate to compact each sample at its respective optimum water content ($w_{opt}$). Therefore, a compaction test was required _prior_to any sample construction for actual cleat-mark testing. 
-The two most widely-used compaction tests are the Standard and Modified Proctor tests, designated by @ASTMD698-12 and @ASTMd15572015.
+The two most widely-used compaction tests are the Standard and Modified Proctor tests, designated by @ASTMD698-12 and @ASTMD15572015.
 The equipment used to compact infield soils is generally smaller than that used for larger earthworks projects. 
 
 It is not immediately clear which Proctor test corresponds better to infield soil construction. Unfortunately there is no straightforward conversion between equipment size used in the field and the compaction energy applied during a laboratory test. 
-@Selig1971 provided a formula for a simple case of towing a cylindrical drum towed across the soil surface, but this type of equipment is rarely used on infields and the calculation depends highly on the coefficient of rolling resistance which varies widely. An analytical solution is not necessarily required. In fact, the impact energies employed by both flavors of Proctor test were established by simply comparing the test results with  densities observed in actual earthworks projects [@Proctor1932; @Holtz2010] . 
+@Selig1971 provided a formula for a simple case of towing a cylindrical drum towed across the soil surface, but this type of equipment is rarely used on infields and the calculation depends highly on the coefficient of rolling resistance which varies widely. An analytical solution is not necessarily required. Both flavors of Proctor test were developed by simply comparing the laboratory test results with densities observed in successful earthworks projects [@Proctor1933a; @Holtz2010] . 
 A similar approach was taken for this study. 
 Compaction tests were performed were performed at both efforts on a widely-used commercial infield mix.
 The lab tests were compared with density values obtained from intact core sampling on an MLB infield (Figure \@ref(fig:proctor-vs-observed-infield-density)).
@@ -186,7 +192,7 @@ A pilot experiment was also performed to determine determine whether a notable d
 (ref:proctor-vs-observed-infield-density-caption) For the same soil, dry density values observed on a professionally managed infield surface lie between those achieved with the Standard and Modified Proctor tests. 
 
 
-```{r proctor-vs-observed-infield-density, fig.cap='(ref:proctor-vs-observed-infield-density-caption)'}
+```{r proctor-vs-observed-infield-density, fig.cap='(ref:proctor-vs-observed-infield-density-caption)', eval=TRUE}
 knitr::include_graphics('./figs/pdf/proctor-vs-observed-infield-density.pdf')
 ```
 
@@ -205,9 +211,9 @@ removes operator judgement and makes the analysis more reproducible.
 See @Howell1997 and @Webb2014 for other examples of fitting mathematical functions to Proctor data.
 
 
-<!-- (ref:deriving-proctor-values-caption) Values for $\\rho_{max}$ and $w_{opt}$ (black arrows) were derived from the compaction curves using a spline fitting routuine.' -->
+(ref:deriving-proctor-values-caption) Values for $\\rho_{max}$ and $w_{opt}$ (black arrows) were derived from the compaction curves using a spline fitting routuine.'
 
-```{r deriving-proctor-values, fig.cap=''}
+```{r deriving-proctor-values, fig.cap='(ref:deriving-proctor-values-caption)', fig.scap='Example compaction curves prior to cleat-mark test', eval=TRUE}
 knitr::include_graphics('imported-figures/deriving-proctor-values.pdf')
 ```
 
@@ -221,6 +227,7 @@ The water was weighed and thoroughly incorporated by hand and allowed to cure fo
 A direct translation of protocols between the Proctor tests and preparation of the cleat-mark cylinders was not possible. 
 The Proctor mold is 10.2 cm diameter x 11.4 cm deep while the pneumatic test device uses cylinders 15.4 cm diameter x 10.2 cm deep. 
 The cleat-mark cylinder dimensions were initially chosen based on two criteria: 
+
 (1) the minimum diameter needed to accommodate several baseball cleats, and (2) a commonly used specification for infield soil depth (10.2 cm or 4 in)
 
 With these dimensions, a fully-loaded cylinder containing moist soil has a mass of ~5.5 kg.
@@ -255,11 +262,11 @@ E&=\frac{\frac{20.34~kgm^2}{s^2}}{\text{blow}} \\
 \end{align*}
 
 Therefore a total energy of 4243 kJ requires:
-
 \begin{equation}
-\frac{4243~J}{\text{cylinder}}\times\frac{1~\text{blow}}{20.34~J}=209~\text{blows per cylinder} \\
+\frac{4243~J}{\text{cylinder}}\times\frac{\text{1 blow}}{20.34~J}= \text{209 blows per cylinder} \\
 (\#eq:modified-energy-per-volume)
 \end{equation}
+
 
 Split over 3 layers, $209 / 3 \approx 70$ blows per layer are required.
 
@@ -274,7 +281,7 @@ These were compared with the values of &rho;~max~ and w~opt~ derived from the or
 Three replicated specimens were prepared from two soils. 
 Figure \@ref(fig:proctor-vs-cleat-mark-achieved-density-fig) shows that the three replicates have very similar dry densities and that the cleat-mark compaction routine packed them to a slightly lower dry density than the Modified test.
 This result corresponds well with prior research on varying the mold diameter of compaction tests. 
-@ASTMD698-12e1 states:
+@ASTMD698-12 states:
 
 >"Results have been found to vary slightly when a material is tested at the same compactive effort in different size molds, with the smaller mold size typically yielding larger values of density/unit weight."
 
@@ -288,7 +295,7 @@ These values are summarized in \@ref(tab:derived-water-contents-from-cleat-mark-
 These tests were not replicated so they cannot be statistically compared, but it appears that the compaction effort does not markedly influence the test result.
 
 
-```{r derived-water-contents-from-cleat-mark-test-effort-comparison-tab, fig.cap="The critical volumetric water contents derived from the cleat mark test were nearly identical for the two compaction treatments."}
+```{r derived-water-contents-from-cleat-mark-test-effort-comparison-tab, fig.cap="The critical volumetric water contents derived from the cleat mark test were nearly identical for the two compaction treatments.", eval=TRUE}
 # hard-coding paths like this this is usually a no-no, but I am 
 # doing it here to maintain the link between this table and the data
 # and to do so without using something like make....the data lie in
@@ -327,15 +334,242 @@ kableExtra::kbl(derived_test_values_from_compaction_pilot_table,
 
 ```
 
-
-
-##### Summary - specimen preparation
+##### Summary - specimen compaction
 
 Ultimately, the Modified effort was adopted for all further study for the following reasons:
 
 1. Despite the lack of a statistical comparison, the "critical" water contents derived from the two methods were quite similar. The differences due to soil type appears to be larger than any difference due to compaction effort. 
 
 2. Soil bulk density on an actual infield was higher than that from a Standard Proctor test. The prevailing opinion among grounds managers is that the infield should be as compacted as possible. Therefore, a realistic lab test should favor greater compaction wherever possible. 
+
+#### Measuring & adjusting the water content 
+
+Wetting and drying cycles are considered an important part of conditioning an infield. 
+A heavy hand-watering is usually the first action taken following grading and compaction. Evacuating as much air from the profile aids in settling the soil to a stable condition.
+The brittle-ductile transition mostly occurs during day games when no water can be added after the game begins. 
+
+
+A given soil must be tested at a range of water contents which bracket $w_{crit}$. 
+The water content was adjusted up or down by adding a known volume of water or by drying under a heat lamp manifold. 
+The manifold was calibrated to emulate the outdoor conditions on a summer day in the northeastern United States.
+Figure \@ref(fig:heat-lamps-photo) shows the apparatus which comprises 12 regularly spaced clamp fixtures, each housing a 150-W broad-spectrum incandescent bulb (Exo-Terra PT2114 - A21/150W). 
+
+
+Finally, the variation in water content due to time is much larger than any heterogeneities across an individual specimen or across replications. 
+For this particular soil, gravimetric water loss was essentially linear for the first 3 hours of drying. 
+After > &thickapprox; 3 hours, the rate of loss decreased. 
+This is a well-documented phenomenon in soil physics (citation needed). 
+
+
+Proper configuration of the drying apparatus was determined through a series of calibrations.
+These measured the effect of lamp distance, the variability of $w$ within and across specimens, and the validity of two methods for measuring $\theta$.
+These are next described. 
+
+
+###### Water content study 1: Lamp distance 
+
+In this experiment, gravimetric water content was determined in the top 15 mm using an 8 mm diameter soil probe.
+Four samples were extracted each hour and averaged to produce a representative value for the surface.
+The surface temperature was also recorded using an infrared laser thermometer. 
+The distance between the heat bulb and the soil specimen markedly affects the drying rate. 
+Figure \@ref(fig:water-content-change-by-lamp-height)A shows that a 15 cm distance caused excessively rapid drying (initially over 3 % by dry mass per hour). 
+Figure \@ref(fig:water-content-change-by-lamp-height)B also shows the rate of water loss was not constant with time. 
+Conversely, a 45 cm lamp height produced only a small change in water content over 3-4 hr (the typical length of a professional baseball game). 
+The 30 cm distance produced the most realistic result. 
+
+###### Water content study 2: Uniformity across specimen surface and across replicate specimens
+A second experiment was performed to assess the uniformity of $w$ across the specimen surface. 
+The cleat-mark test pairs a single water content value with a surface disruption measurement. 
+This experiment was important to determine the uncertainty around the water content measurement. 
+Figure \@ref(fig:w-variation-across-space-and-time) shows the results of this calibration repeated for three replicate specimens. 
+The water content is highly uniform across the surface of a single specimen, and the difference across replications is small. 
+
+ 
+```{r heat-lamps-photo, fig.cap='Drydown manifold used to reduce water content prior to cleat-mark test', eval=TRUE}
+knitr::include_graphics('./images/heat-lamps.JPG')
+```
+
+
+```{r water-content-derivatives-per-lamp-height, fig.cap='The first derivative of $w$ with respect to time indicates that the rate of water loss changed rapidly for the lowest lamp height. The 30 and 45 cm heights lost water at a steadier rate.', eval=TRUE}
+knitr::include_graphics('../../cleatmarkmethod/figs/pdf/water-loss-derivatives.pdf')
+```
+ 
+
+```{r w-variation-across-space-and-time, fig.cap='$w$ was consistent across the surface of a single specimen and across replicate cylinders.', eval=TRUE}
+
+knitr::include_graphics('figs/pdf/w-variation-across-space-and-time.pdf')
+
+```
+
+ 
+```{r lamp-height-calibration, fig.cap='Surface temperature for the 30 cm lamp height closely matches conditions observed on a sunny day in Pennsylvania (outdoor photo credit: Andrew Burnette)', eval=FALSE}
+
+knitr::include_graphics('../../cleatmarkmethod/figs/manually-built/drydown-surface-temp-comparison.png')
+
+```
+ 
+###### Water content study 3: precise measurement of $\theta$
+The third water content study's aim was to develop a method for measuring _volumetric_ water content $\theta$. 
+Relative merits of $w$ and $\theta$ are discussed in Section \@ref(soil-water-content) and by @Brady2007. 
+In the present study it is far easier to measure $w$ on the small samples available for testing. However, it is the volume of water present rather than the mass which determines the spacing of soil particles and the nature of their contacts.  
+In this context the physical significance of $\theta$ is clearer and it would be prefrrable to use $\theta$ if a sufficiently accurate and precise measurement can be made. 
+Also, $\theta$ is often measured in-situ on an actual infield by using time-domain reflectometry probes, and values obtained in the lab test will afford better comparison if made on a volumetric basis.
+Therefore a method was sought to accurately measure $\theta$ for samples large enough to yield accurate data but small enough to avoid destroying the entire specimen. 
+
+A small intact soil core is removed (diameter = 21mm, depth = 15 mm) using a small soil probe.
+The core is ejected and immediately weighed to &plusmn; 0.001 g. 
+The bottom of the core normally separates in an uneven pattern so a geometric computation
+of the cylinder's volume is not adequate.
+Two methods were employed to measure the volume of the plug:
+
+(1.) Sand replacement
+
+(2.) 3D scanning
+
+```{r density-plug-imgs, fig.cap='Two methods for measuring the volume of a 15 mm-deep by 21 mm diameter soil plug: A. Sand replacement method with a miniature plastic cone. B. 3D scanning method with plug situated on a rest to provide clearance from turn table.', eval=TRUE}
+
+# read images and combine/annotate with magick, then write composite to disk
+sand_cone_method_path <- '../../cleatmarkmethod/photos-and-screen-recordings/mini-density/02-sand-cone-fill.JPG'
+
+# run magick code only if I remove file or decide to manually alter this statement:
+# if(!file.exists('images/sand-replacement-and-scanner-mini-density-composite.png')){
+# scanner_method_path <- '../../cleatmarkmethod/photos-and-screen-recordings/mini-density/03-tack-skewered-plug.JPG'
+# magick::image_read(c(sand_cone_method_path, scanner_method_path)) %>% 
+#   magick::image_annotate(text = LETTERS[1:2], size = 500, location = geometry_point(200,0), color = 'white', strokecolor = 'black') %>% 
+#   magick::image_border(color = 'white', geometry = '20x20') %>% 
+#   magick::image_append() %>% 
+#   magick::image_border('black') %>% 
+#   magick::image_write('images/sand-replacement-and-scanner-mini-density-composite.png', format = 'png')
+# }
+
+# read image back in 
+knitr::include_graphics('images/sand-replacement-and-scanner-mini-density-composite.png')
+```
+
+\@ref(fig:)
+Method (1) was essentially a miniaturized version of @ASTMD1556-07. 
+A small plastic cone was trimmed and its volume was carefully calibrated with deaired water.
+A dry sand was calibrated to  loose density of 1.54 Mg m^-3^.
+Together these components were used to fill the cavity left by the soil plug (Figure \@ref(fig:).
+The plug volume was calculated by converting the mass of sand used to volume and subtracting the known cone volume:
+
+\begin{align}
+\quad V_{plug} &= V_{sand_{~total}} - V_{cone} ; \quad V_{sand_{~total}} = \frac{m_{sand_{~total}}}{\rho_{sand}} \\
+V_{plug} &= \frac{m_{sand_{~total}}}{\rho_{sand}} - V_{cone} \\
+(\#eq:mini-density-sand-backfill-equation)
+\end{align}
+
+In method (2) a 3D scan of the core was recorded. 
+3D scanning has been used to measure bulk density for irregularly-shaped soil clods [@Rossi2008]. The scanning process was similar to that described in Section \@ref(cleat-mark-specimen-3D-scanning).
+The primary difference was that for the water content plug scan, two scans were recorded with the plug in different orientations.
+This was required for all sides to be "seen" by the scanner in at least one scan. 
+An additional challenge was raising the specimen above the turntable surface so it would register separately from the turntable. 
+Ultimately the plug was stationed atop a small hex nut, providing enough clearance so the soil could be differentiated from the turntable without allowing its position to shift during the turntable's rotation. 
+
+The volume of the `.ply` mesh was determined using the `vcgVolume()` function in the **`Rvcg`** package. 
+A volumetric water content was then computed from the specimen's gravimetric water content and its dry density:
+
+\begin{align}
+\text{Gravimetric water content:} \\ 
+w &= \frac{water~loss~(g)}{m_{oven-dry~soil}~(g)} \\
+\text{Dry bulk density:} \\
+\rho_{dry} &= \frac{m_{oven-dry~soil}~(g)}{core~volume~(cm^3)} \\
+\text{Volumetric water content:} \\
+\theta  &= \rho_{dry} \times w \\
+(\#eq:vwc-equation) 
+\end{align}
+
+
+<!-- have to put this chunk first so values are available for reference  -->
+
+
+```{r compute-values-for-sand-replacement-vs-scanner-vol, eval=T}
+# read data frame  
+sand_backfill_vs_scanner_vol_data <- readr::read_rds(fs::path(
+  '../../cleatmarkmethod/ecmdata/derived-data/cleaned-rds-files/mini-plug-density-comp-cleaned-data.rds') ) %>% 
+  mutate(vol_method = factor(vol_method))
+
+
+# head(sand_backfill_vs_scanner_vol_data)
+
+mod <- lm(data = sand_backfill_vs_scanner_vol_data,
+       formula = dry_density ~ vol_method * cylinder_ID)
+
+# check assumption of homogeneity of variance with Levene test 
+
+# car::leveneTest(mod)
+# p-vlue is 0.133 so can assume equal variance 
+
+
+# compute pooled standard deviation for each 
+# group independently 
+mini_density_scanner_vol_sd_vals <- sand_backfill_vs_scanner_vol_data %>% 
+  split(sand_backfill_vs_scanner_vol_data$vol_method) %>% 
+  map(lm, formula  = dry_density ~ cylinder_ID) %>% 
+  map_dbl(sigma)
+
+scanner_rho_sd <- mini_density_scanner_vol_sd_vals[["3D scanner"]] %>% round(2)
+sand_replacement_rho_sd <- mini_density_scanner_vol_sd_vals[["Sand displacement"]] %>% round(2)
+
+# compute average inrease in rho from one sand replacement method 
+# to scanner method 
+avg_diff_between_sand_replacement_and_scanner_rho <-
+  sand_backfill_vs_scanner_vol_data %>% 
+  group_by(cylinder_ID, vol_method) %>% 
+  summarise(mean = mean(dry_density)) %>% 
+  pivot_wider(names_from = vol_method, values_from = mean) %>% mutate(avg_diff = `3D scanner` - `Sand displacement`) %>%
+  pluck('avg_diff') %>% 
+  mean() %>% 
+  round(3)
+  
+
+
+# just to reassure myself these values are correct, 
+# compute sigma for the whole model
+# sigma(mod)
+# mean(mini_density_scanner_vol_sd_vals)
+# they are not idenical but close enough toe make me feel
+# confident this is correct....probably they are not identical due to some 
+# mathematics re: the squaring and averaging. 
+# 
+
+
+# compute summary tibble 
+sd_df <-  sand_backfill_vs_scanner_vol_data %>% 
+  dplyr::group_by(cylinder_ID, vol_method) %>% 
+  dplyr::summarise(dplyr::across(dry_density, 
+                                 list(mean = mean, sd = sd), 
+                                 .names="{.fn}"),
+                   .groups = 'drop')
+# compute some values from the table for use in dynamic references 
+
+
+```
+
+
+Each of the two methods was performed for 5 replicate soil plugs on 12 prepared cleat-mark specimens.
+Mean values and standard deviations were computed for each method; these data are plotted in Figure \@ref(fig:sand-backfill-vs-3D-scanner-for-volumetric-w-determination-fig) and the values are compiled in the Appendix (Table \@ref(tab:sand-backfill-vs-3D-scanner-for-volumetric-w-determination-table)).
+
+(ref:sand-backfill-vs-3D-scanner-for-volumetric-w-determination-fig-caption) The 3D scanning method for computing the extracted plug's volume 
+```{r sand-backfill-vs-3D-scanner-for-volumetric-w-determination-fig, fig.cap='(ref:sand-backfill-vs-3D-scanner-for-volumetric-w-determination-fig-caption)', eval=TRUE}
+
+```
+The distribution of scatter in Figure \@ref(fig:sand-backfill-vs-3D-scanner-for-volumetric-w-determination-fig) clearly shows the better precision of the scanner method. 
+The standard deviation of $\rho$ for a single specimen was `r sand_replacement_rho_sd` when measured with sand replacement. This standard deviation was reduced to `r scanner_rho_sd` when measured with the scanner. 
+Recall that the ultimate utility of the density measurement is computing a volumetric water content from $w$. As an example, if the true gravimetric water content is 15%, the consequence of such a large error in the density measurement propagates to a $\theta$ standard deviation of `r round(sand_replacement_rho_sd*0.15, 3)`. This would appear an unacceptably large range if the cleat-mark analysis is to pinpoint $\theta_{crit}$ within < 1 % accuracy. 
+
+Interestingly, the scanner method produced not just less scatter in $\rho$ but also higher mean values for 11 of the 12 cylinders. 
+The average difference was `r `avg_diff_between_sand_replacement_and_scanner_rho` Mg m^-3^. Most likely the probe produces some plastic distortion of the hole's sidewalls when it is inserted and removed. This additional space is filled by sand which increases the measured volume and decreasing the computed dry density. Also, for this small sample diameter the probe's sidewalls (0.5 mm) comprise a non-negligible fraction of the total hole's size. Again, this volume is considered part of the plug volume for the sand replacement method but not for the scanner method. The scanner method directly measures the volume of the soil plug so it more accurately represents the soil sample's true dimensions. Finally, intact core sampling is also assumed to produces some compaction in the sidewalls as the probe is driven into the surface [@Lichter1994]. However, these samples are already intentionally compacted to a high degree and this effect is probably minor. The dry density values obtained from the 3D scanning method also compare favorably with those attained in the initial Proctor tests (data not shown).
+
+In summary, the 3D scanner method for determining $\rho$ showed good precision. Its small standard deviation of `r scanner_rho_sd` warrants the use of a single plug to represent the density of the cleat-mark specimen. Additional gravimetric samples will be taken to reduce as these can be processed rapidly and further reduce the uncertainty around $\theta$.
+
+
+
+###### Summary: measuring and adjusting water content 
+
+A routine was developed to wet and dry the samples in a controlled manner. 
+A set of heat lamps dries the surfaces uniformly across both space and time. 
+Volumetric water content can be measured with good precision and accuracy with a combination of gravimetric methods and 3D scanning. 
 
 
 #### Performing the test 
@@ -344,7 +578,9 @@ Ultimately, the Modified effort was adopted for all further study for the follow
 There are three basic steps in the cleat-mark test:
 
 1. Produce cleat indentations on the specimen
+
 2. Collect a 3D scan of the surface 
+
 3. Measure the water content and any other types of data
 
 Each is outlined here. 
@@ -359,7 +595,7 @@ Any soil ejected from the cleat indentations is carefully removed so that the cl
 This sequence is repeated twice more, rotating the specimen by 60&degree; after each test.
 The reserved soil clods are carefully replaced at their original locations.
 
-##### 3D scan
+##### 3D scan {#cleat-mark-specimen-3D-scanning}
 
 Six markers are placed on the rim of the aluminum sample holder. 
 The markers allow the scanner to register individual pointclouds and merge them into a single mesh.
@@ -371,23 +607,7 @@ It was designed to be simple yet extensible: while the only requirements are a s
 
 ##### Water content and ancillary data 
 
-A small intact soil core is removed (depth = 15 mm) using a small soil probe.
-The core is ejected and immediately weighed to &plusmn; 0.001 g. 
-The bottom of the core normally separates in an uneven pattern so a geometric computation
-of the cylinder's volume is not adequate.
-A 3D scan is then made of the core to allow an accurate computation of its volume.
-The volume of the `.ply` object is determined using the `vcgVolume()` function in the **Rvcg** package. 
-The volumetric water content of the specimen is determined from its gravimetric water content and dry density:
-
-\begin{align}
-\text{Gravimetric water content:} \\ 
-w &= \frac{water~loss~(g)}{m_{oven-dry~soil}~(g)} \\
-\text{Dry bulk density:} \\
-\rho_{dry} &= \frac{m_{oven-dry~soil}~(g)}{core~volume~(cm^3)} \\
-\text{Volumetric water content:} \\
-\theta  &= \rho_{dry} \times w \\
-(\#eq:vwc-equation) 
-\end{align}
+water content blah blah blah 
 
 Penetrometer resistance is measured with a handheld device having a maximum capacity of 5 kg cm^-1^. 
 Four ratings are taken and averaged to producea a representative value. 
@@ -416,7 +636,7 @@ Briefly, a 4x4 roto-translation matrix was recorded using a reference specimen w
 			(x - h)^2 + (y - k)^2 &= r^2 \\
 			\mathrm{Since}~x=0~\mathrm{and}~y=0;~~ (x - 0)^2 + (y - 0)^2 &= 70^2 \\
 			x^2 +y^2 &= 70^2 \\
-		\end{split}
+		\end{split} 
 (\#eq:cylinder-clipping-equation) 
 \end{align}
 
@@ -451,34 +671,64 @@ NRFI = \left(\frac{\text{surface area}_{\text{ total}}}{\pi~r^2} - \pi~r^2 \righ
 
 3. Dirichlet Normal Energy (DNE)
 
-Dirichlet Normal Energy is a relatively complex algorithm often used in anthropology and biology. It is a measure of the total curvature of a surface. Briefly, the vertex normals of each point are averaged ....See @Pampush and @pampush-cited-works for a more complete derivation of DNE.
+Dirichlet Normal Energy is a relatively morphometric used in anthropology and biology. It is a measure of the total curvature of a surface. Briefly, the vertex normals of each point are averaged ....See @Pampush2016 and @Bunn2011 for a more complete treatment of DNE.
 
 #### Determination of $w_{crit}$
 
-The goal of the cleat-mark test is to arrive at a single water content where the soil exhibits an abrupt change between brittle and ductile behavior. 
+The goal of the cleat-mark test is to identify a single water content where the soil exhibits an abrupt change between brittle and ductile behavior. In reality the brittle-ductile transition occurs somewhat more gradually. However, for assessment of infield mixes, a threshold water content is required and the transition is sufficiently abrupt to assign a single value.  
 
 Each surface metric was plotted against volumetric water content.
-A third-order polynomial regression was fitted to the data. 
-Deriving a single point from this curve requires some discussion of the physical meaning behind the data points. 
+Figure \@ref(fig:example-nfri-vs-water-content-curve) shows an example curve. 
+A third-order polynomial regression was fitted to the data.
+The critical water content $w_{crit}$ was identified as the first local minimum as the soil moves from wet to dry (right to left on Figure \@ref(fig:example-nfri-vs-water-content-curve)).
 
-Moving from wet to dry:
+(ref:example-nfri-vs-water-content-curve) An example of the characteristic water contents used to derive $w_{crit}$. Water contents above A generally yield little additional surface area. Water content B represents the state in which the soil is most 'vulnerable' to fragmentation. As water content reduces further toward point C, the soil hardens and the cleats are less able to penetrate the surface. 
 
-For this discussion NFRI is referenced as the metric of choice, but the general shape of the relationship is the same for other metrics as well. 
+```{r example-nfri-vs-water-content-curve, fig.cap='(ref:example-nfri-vs-water-content-curve-caption)'}
 
-When the soil is very wet, the device extends to its maximum strain level. Increasing the water content is not likely to achieve any additional disturbance. 
+knitr::include_graphics('./figs/pdf/example-w-crit-curve.pdf')
 
-At lower water contents, disturbance is relatively constant as no soil is removed or fractured from the surface and the new surface area is goverened purely by the shape of the cleats. 
+```
 
-When the soil reaches the crutical transutio it begns to grafment under  the evice's action. 
 
-As the soil continues to dry, the brittleness is maximized and the soil forms chips and clods. These often fragment further and produce additonal surface are . 
+The choice of this point as $w_{crit}$ warrants a brief discussion behind the physical meaning of the curve's shape.
 
-When the soil is very dry, the cleats are largely unable to penetrate the soil at the applied load. Little deformation can occur and the NFRI.
+For this discussion NFRI is referenced as the metric of choice, but the general shape of the relationship is similar for other metrics.
+
+When the soil is very wet, the device easily actuates to the full extent afforded by its geometry. 
+Further increases in the water content can only produce a marginally greater disruption to the specimen. The NRFI vs. $\theta$ curve is relatively flat. 
+
+At lower water contents, disturbance is relatively constant because no soil is removed or fractured from the surface. 
+Any new surface area is governed purely by the shape of the cleats. 
+This is an ideal state from the perspective of the grounds manager. 
+
+When the soil reaches $w_{crit}$ it begins to fragment into discrete pieces as the cleats penetrate the surface. 
+
+As the soil continues to dry, brittleness is maximized and the soil forms larger chips and clods. 
+These may fragment further which produces additonal surface area. 
+
+A possible complication not depicted in Figure \@ref(fig:example-nfri-vs-water-content-curve) is that with further decreases in water content the soil becomes so hard that NFRI falls below its value at $w_{crit}.
+Although NFRI is nominally lower in this state, the soil is in an undesirable condition because of its high strength.
+Ball response will be erratic and players can incur injuries due to extreme surface hardness.
+For this reason, any points drier than the local maximum marked as point (B) in Figure \@ref(fig:example-nfri-vs-water-content-curve) are discarded prior to optimizing the curve to derive $w_{crit}$.
+
+
+# Summary: cleat-mark method 
+
+- The method described above provides an bjective means to choose a single water content for any infield soil. This value is termed $w_{crit}$.
+
+- $w_{crit}$ is considered the lower boundary of the water contents suitable for play.
+
+- A standard routine was adopted for building and repairing the soil specimens. The routine uses techniques similar to those empolyed on actual infields, including the Modified Proctor hammer and a drying apparatus to emulate natural sunlight. 
+
+- It is recognized that the shape of the disturbance metric vs. water content curve may not be equivalent for all soils. The curve-fitting routine merits further study.
+- 
+
 
 
 ### Timeline 
 
-The device was designed and fabricated in spring 2020. Calibration and tuning of the 3D scanner began July of 2020. The method is nearly complete and the final step will be to perform an error analysis across replicate soil specimens. 
+The device was designed and fabricated in spring 2020. Calibration and tuning of the 3D scanner began July of 2020. The method described above has been tested on multiple soils. The final step will be to perform an error analysis across replicate soil specimens. 
 
 
 ## Dissertation chapter 2: Identifying the brittle-ductile transition of infield soil mixtures subjected to disturbance by baseball cleats
@@ -487,7 +737,9 @@ The device was designed and fabricated in spring 2020. Calibration and tuning of
 ### Principal research questions
 
 1. How does clay type interact with sand content to determine the critical water content where the soil changes from cleat-in/cleat-out behavior to clod-forming failure?
+
 2. Do Atterberg limit tests correlate with the critical water contents?
+
 3. For a given clay soil, what is the critical sand content above which the cleat-in/cleat-out surface cannot be achieved?
 
 ### Hypotheses
@@ -500,7 +752,7 @@ This paper consists of three separate experiments. They are designed to test the
 
 1. **Varying sand content:** Five fine-grained soils will be mixed with a single sand in ratios ranging from 0-100% sand.^[Soils having no sand-size particles are rare; the 0% is stated here allegorically to indicate the 'pure' clay soil with no added sand.] Sand contents will be clustered around the transitional fines content to help identify the critical behavioral threshold for each clay type (see Figure \@ref(fig:sand-content-clustering)). This is preferred to simply testing mixes with equally-spaced sand contents, because the behavior change is nearly linear up to the transitional fines content.
 
-```{r sand-content-clustering, fig.cap='The sand contents for Experiment 1 in Chapter 2 will be deliberately clustered around the transitional fines content to provide the best data resolution'}
+```{r sand-content-clustering, fig.cap='The sand contents for Experiment 1 in Chapter 2 will be deliberately clustered around the transitional fines content to provide the best data resolution', eval=TRUE}
 source('supplemental_R_scripts/clustered_sand_contents.R')
 sand_pcts_to_choose
 
@@ -509,7 +761,7 @@ sand_pcts_to_choose
 
 2. **Varying silt-to-clay ratio:** The same fine-grained soils from (1) will each be separately mixed with quartz silt to produce soil mixtures having identical silt-to-clay ratios (SCR) but containing different clay minerals. These soils will be further mixed with sand to produce mixtures of either 60 or 70% sand. The target SCR values will be 0.25, 0.5, 1, 2, and 4, but some of the clays already contain too much silt to be tested at the lower SCR values. These soils would simply be tested at any ratios they are capable of meeting (Table \@ref(tab:planned-scr-values)).
 
-```{r planned-scr-values}
+```{r planned-scr-values, eval=TRUE}
 
 scr_possible_vals <- tibble::tibble(
   `Clay name` = c('Calcium montmorillonite', 'mixed-layer/illite-dominated', 'fine-grained kaolinite', 'sesquioxide-rich', 'high-silt soil'),
@@ -576,7 +828,7 @@ knitr::include_graphics('images/gilson_stock_proctor_extruder_photo.jpg')
 
 The specimens will be subjected to unconfined compression tests at the Penn State Civil Infrastructure Testing and Evaluation Laboratory. Axial strain and nominal stress will be recorded up to 20% strain or an abrupt failure criterion. The water content of the specimen will then be determined.  
 
-A smooth curve will be fitted to the stress-strain curve using general additive models in the R language for statistical computing [@baseR]. Toughness will be computed as the definite integral up to failure. An arbitrary failure criterion (i.e. maximum acceptable strain) will be chosen for the ductile specimens; this depends on the degree of acceptable deformation by the groundskeeper and has not yet been calculated. 
+A smooth curve will be fitted to the stress-strain curve using general additive models in the R language for statistical computing [@R-core2021]. Toughness will be computed as the definite integral up to failure. An arbitrary failure criterion (i.e. maximum acceptable strain) will be chosen for the ductile specimens; this depends on the degree of acceptable deformation by the groundskeeper and has not yet been calculated. 
 
 Toughness will be plotted against water content, and a second curve will be used to determine the rate of change in toughness per unit water content. It is anticipated that this relationsip will follow a semi-logarithmic shape, as for the Barnes apparatus [@Barnes2013]. Figure \@ref(fig:barnes-toughness-vs-water-content-example-plot) shows such a plot. 
 
@@ -592,7 +844,9 @@ These tests will be completed beginning in Fall 2021 and continue through April 
 ### Principal research questions
 
 1. Can Atterberg limit tests be performed when sand particles up to 2 mm sieve diameter are included in a soil?
+
 2. What is the effect of using coarser or finer sand?
+
 3. What is the effect of sand uniformity?
 
 ### Hypotheses
@@ -620,7 +874,9 @@ The experiments were begun in March of 2020 during the initial COVID-19 stay-at-
 ### Principal research questions 
 
 1. Can particle size distribution (PSD) be accurately measured using a range of laboratory techniques?
+
 2. Does the increased PSD resolution from laser diffraction provide useful information about an infield mix?
+
 2. What particle size metrics are the best and worst predictors of infield performance?
 
 ### Hypotheses 
@@ -636,7 +892,9 @@ The experiments were begun in March of 2020 during the initial COVID-19 stay-at-
 5 soils will be tested using 3 pre-treatment protocols: 
 
 1. ASTM D7928; milkshake mixer method [@ASTMD79282017]
+
 2. ASTM D7928; overnight shaker method [@ASTMD79282017]
+
 3. ASTM D7928; ultrasonic dispersion method [@ASTMD79282017]
 
 These will each be sampled with the pipette method, considered the standard technique for mechanical analysis in soil science [@Gee2002].
@@ -644,12 +902,16 @@ These will each be sampled with the pipette method, considered the standard tech
 Soils dispersed with method (3) will also be subjected to 4 additional sampling methods:
 
 1. pipette analysis with samples removed at 20, 5, 2, and 0.2 &mu;m equivalent spherical diameters; sand tested with sieve method
+
 2. hydrometer analysis with measurements taken for 20, 5, and 2 &mu;m equivalent spherical diameters; sand tested with sieve method
+
 3. laser diffraction analysis for fine fraction and either: 
+
   a. sand fraction analyzed with sieve method
+  
   b. sand fraction analyzed with dry laser diffraction method
 
-```{r particle-size-experiments-sample-number-calculation}
+```{r particle-size-experiments-sample-number-calculation, echo=FALSE, eval=TRUE}
 n_soils <- 5
 n_psa_reps <- 5
 n_dispersion_treatments <- 3
@@ -676,17 +938,25 @@ These experiments will be conducted throughout 2021, primarily during the summer
 ### Principal research questions 
 
 1. How can better infield mixes be designed?
+
 2. How can the performance of an existing mix be improved without replacing it?
+
 3. What criteria best relate to infield performance, defined as the range of water contents where the soil is both plastic and stiff enough to support athletic maneuvers?
 
 ### Hypotheses 
 
 1. Infield mix design should start with the toughness of an available clay soil, not the final sand %.
+
 2. The level of play and maintenance budget will dictate the desired toughness level. 
-3. The upper bound of the amount of clay soil component that should be included in the mix is a function of the dry shear strength of the mix because it is this property that governs the workability of the mix (i.e. the ability to groom it with implements and hand tools)
+
+3. The upper bound of the amount of clay soil component that should be included in the mix is a function of the dry shear strength of the mix because it is this property that governs the workability of the mix (i.e. the ability to groom it with implements and hand tools).
+
 4. If a given toughness level is desired, the % sand needed to achieve this can be computed from empirical equations.
-5. Ideally, toughness should be directly measured when designing a new mix; however it can also be estimated from an empirical correlation with the Atterberg limits 
+
+5. Ideally, toughness should be directly measured when designing a new mix; however it can also be estimated from an empirical correlation with the Atterberg limits
+
 6. Particle size analysis is acceptable for quality control purposes, but not for design. Only once a desired blend of a particular sand with a particular clay is established through toughness testing can a definite ratio of sand-size particles to fines be defined for that mix. 
+
 7. Amending existing soils should be done on the basis of plastictity rather than silt-to-clay ratio. The resulting mixture's properties will not be a linear interpolation between the two; thus a calibration of Atterberg limit results may be required by making several mixtures (for example 0, 20, 40, 60, 80, and 100% of soil A with the implied amount of soil B) to determine the proper amendment ratio.
 
 
@@ -710,7 +980,9 @@ The end game/envisaged process of mix design:
 3. Use an empirical equation I will develop to interpolate along the dose-respone curve of toughness vs. sand content. It will probably be linear for coarse sand and non-linear for finer sand. Probably I would need to develop multiple equations based on the properties of the sand....either choose from two or three equations (i.e. sand too fine, sand ok, sand excellent), or what would be even better (but probably beyond the scope of my own project and therefore a great starter for one of my future grad students) is to represent the sand variable as something continuous, such as mean particle diameter, or better yet specific surface area (could derive this from PSA curve with a correctly-fitted model) and then you would have _two_ continuous variables with which to form the dose-response curve. Anyway, you interpolate on this curve to get the sand-clay ratio you want, then make the mixture from that ratio. In this way the properties of the resultant mixture are not only replicable, they are precisely controllable. You have your hand on the dial!
 
 Basically you end up with a line plotting toughness against % sand. The nature of the line is determined by :
+
 1. the intercept of the line is determined by the initial toughness (i.e. that of the "pure" clay soil component) which is in turn determined by the mineralogy and particle size of the clay soil component. 
+
 2. the slope is determined _both_ by the type of clay (i.e. the slope is a function of toughness; tougher clays will not be dilluted as easily; they will retain their toughness at higher sand contents; their slopes will be shallower) **and** the type of sand (i.e. the slope is a function of sand type, but only above ~20% sand)
 
 

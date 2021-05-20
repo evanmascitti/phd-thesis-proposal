@@ -10,3 +10,7 @@ _bookdown_files/
 *.bib
 *.ply
 *.rds
+*.pdf
+*.svg
+*.png
+*.JPG

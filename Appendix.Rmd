@@ -29,3 +29,53 @@ labor_man_hrs %>%
 
 ```
 
+
+
+<!-- scatter for sand replacement vs 3D scanner methods for computing dry density 
+ of ~21 mm plug   -->
+
+```{r sand-backfill-vs-3D-scanner-for-volumetric-w-determination-table}
+# read data frame  
+sand_backfill_vs_scanner_vol_data <- readr::read_rds(fs::path(
+  '../../cleatmarkmethod/ecmdata/derived-data/cleaned-rds-files/mini-plug-density-comp-cleaned-data.rds') )
+
+# compute summary tibble 
+sd_df <-  sand_backfill_vs_scanner_vol_data %>% 
+  dplyr::group_by(cylinder_ID, vol_method) %>% 
+  dplyr::summarise(dplyr::across(dry_density, 
+                                 list(mean = mean, sd = sd), 
+                                 .names="{.fn}"),
+                   .groups = 'drop')
+
+# generate kable
+sd_df %>% 
+  pivot_wider(names_from = vol_method,
+              values_from = c(mean, sd)) %>% 
+  kableExtra::kbl(x = .,
+                  format = 'latex',
+                  digits = c(0,2,2,3,3),
+                  row.names = FALSE,
+                  col.names = c('Cylinder ID',
+                                rep(c('Sand replacement', '3D scanner'), 2)),
+                  align = 'c',
+                  caption = 'The 3D scanner produced much less variation in the computed dry density than the sand replacement method ',
+                  escape = FALSE,
+                  booktabs = TRUE,
+                  centering = TRUE,
+                  caption.short = 'Dry density for plugs using sand replacement vs. 3D scanner',
+                  linesep = c("", "", "\\addlinespace")
+                  
+                  ) %>% 
+  kableExtra::add_header_above(header = c(" " = 1, "$\\\\bar{x}$" = 2, "$\\\\sigma$"= 2), escape = FALSE) %>% 
+  kableExtra::kable_styling(position = 'center')
+
+# compute some values from the table for use in dynamic references 
+
+
+# print the actual table 
+
+
+
+
+
+```
