@@ -13,9 +13,15 @@ library(kableExtra)
 
 
 ```{r labor-per-area-tab, eval= T, echo=F, warning=F, message=F}
-labor_man_hrs <- read_csv('data/lit-review-data/maintenance-man-hrs.csv') %>% 
-  mutate(type= as_factor(type),
-         type= fct_relevel(type, 'Game mound/bullpen', 'Home plate', 'Infield skin', 'Turf', 'Warning track')) %>% 
+labor_man_hrs <- readr::read_csv('data/lit-review-data/maintenance-man-hrs.csv',
+                          col_types = 'cccii') %>% 
+  mutate(dplyr::across(
+    where(is.numeric),
+    ~str_replace(
+      as.character(.), "^0$", "-")),
+    type= factor(type, 
+                      levels = c('Game mound/bullpen', 'Home plate', 'Infield skin', 'Turf', 'Warning track'),
+                      ordered = TRUE)) %>%
   arrange(type) %>% 
   select(type, name, time, people, time_min) %>% 
   rename(Task= name, `Field area`= type, `Prep time`=time, `Participants`=people,
@@ -24,8 +30,21 @@ labor_man_hrs <- read_csv('data/lit-review-data/maintenance-man-hrs.csv') %>%
   group_by(`Field area`)
 
 labor_man_hrs %>% 
-  kbl(align = "lllcc", caption = 'Field preparation tasks for a typical MLB game day.', longtable = TRUE, booktabs = TRUE) %>% 
-  kable_styling(full_width = F, bootstrap_options = 'striped', latex_options = c('striped', "repeat_header") )
+  kbl(format = 'latex',
+      align = "lllcc", 
+      caption = 'Field preparation tasks for a typical MLB game day.', 
+      longtable = TRUE, 
+      booktabs = TRUE
+      ) %>%
+  kableExtra::column_spec(column = ncol(labor_man_hrs), width = '1in') %>% 
+  kableExtra::column_spec(column = 1, bold = TRUE) %>% 
+  kableExtra::row_spec(0, bold = TRUE) %>% 
+  kableExtra::collapse_rows(columns = 1:2, latex_hline = 'custom', valign = 'top') %>% 
+  kableExtra::kable_styling(
+    full_width = F, 
+    latex_options = c("repeat_header"),
+    font_size = 9) 
+  
 
 ```
 
@@ -58,7 +77,7 @@ sd_df %>%
                   col.names = c('Cylinder ID',
                                 rep(c('Sand replacement', '3D scanner'), 2)),
                   align = 'c',
-                  caption = 'The 3D scanner produced much less variation in the computed dry density than the sand replacement method ',
+                  caption = 'The 3D scanner produced much less variation in the computed dry density than the sand replacement method. Mean ($\\\\bar{x}$) and standard deviation ($\\\\sigma$) values reflect the value for 5 replicate measurements made on a given cleat-mark specimen.',
                   escape = FALSE,
                   booktabs = TRUE,
                   centering = TRUE,
@@ -66,7 +85,7 @@ sd_df %>%
                   linesep = c("", "", "\\addlinespace")
                   
                   ) %>% 
-  kableExtra::add_header_above(header = c(" " = 1, "$\\\\bar{x}$" = 2, "$\\\\sigma$"= 2), escape = FALSE) %>% 
+  kableExtra::add_header_above(header = c(" " = 1, "$\\\\bar{x}$" = 2, "$\\\\sigma$"= 2), escape = FALSE, bold = TRUE) %>% 
   kableExtra::kable_styling(position = 'center')
 
 # compute some values from the table for use in dynamic references 

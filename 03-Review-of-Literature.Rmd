@@ -6,10 +6,12 @@
 options(tinytex.verbose = TRUE)
 knitr::opts_chunk$set(message=FALSE,
                       echo = FALSE,
-                      warning = FALSE)
+                      warning = FALSE,
+                      out.width = '90%')
 ```
 
-```{r load packages, include=F}
+```{r load-packages}
+suppressPackageStartupMessages({
 library(tidyverse)
 library(measurements)
 library(latex2exp)
@@ -23,8 +25,9 @@ library(ecmfuns)
 library(balldensityplots)
 library(magick)
 library(DescTools)
+library(kableExtra)
 theme_set(theme_cowplot())
-
+})
 ```
 
 
@@ -73,13 +76,13 @@ Traction was increased by soil compaction and decreased by surficial additions o
 The nature of cleat indentations could be considered an element of footing. 
 However, this topic has not been studied in scientific experiments and no primary literature is available. 
 A description has been provided in the problem description portion of this proposal (Section \@ref(problem-description)). 
-@Zwaska2007 also described the corkboard concept and other desirable properties of the infield skin.   
+@Zwaska1999 also described the corkboard concept and other desirable properties of the infield skin.   
 
 
 
-### Ball response
+### Ball response {#ball-response-lit-review}
 
-The reaction of a baseball upon contact with the surface plays a key role in the outcome of competition (recall Figures \@ref(fig:labor-per-area)-\@ref(fig:batted-ball-density)). 
+The reaction of a baseball upon contact with the surface plays a key role in the outcome of competition (recall Figures \@ref(fig:batted-ball-density) and \@ref(fig:corkboard-concept)). 
 As with footing, limited research is available on infield ball response. 
 
 @Goodall2005 is the only published account of controlled research on multiple infield soils. 
@@ -93,12 +96,12 @@ Incorporation of calcined clay (particle size 0.5 - 2 mm) also decreased frictio
 
 @Brosnan2011 studied the effects of construction and maintenance activities on infield surface pace.
 Water content was negatively correlated with surface pace, but no attempt was made to intentionally alter water content among plots. 
-Higher bulk density $\rho_{bulk}$ increased surface pace. 
+Higher bulk density ($\rho_{bulk}$) increased surface pace. 
 However, Figure \@ref(fig:lit-review-density-comparison) shows that the density values reported by @Goodall2005 and @Brosnan2011 may not be representative of professionally-managed infield skins. 
 @Brosnan2011 also found that topdressing plots with calcined clay had no effect on pace, nor did scarifying the surface by up to 2 cm. 
 
 
-```{r lit-review-density-comparison, fig.cap="Dry bulk density values reported in research studies may be lower than those on professional playing surfaces.", fig.scap="Dry density from published literature compared to author's data" }
+```{r lit-review-density-comparison, fig.cap="Dry bulk density values reported in research studies may be lower than those on professional playing surfaces.", fig.scap="Dry density from published literature compared to an actual MLB infield" }
 
 source('supplemental_R_scripts/pnc_density_vs_published_values.R')
 lit_review_density_comparison_plot
@@ -156,27 +159,126 @@ The goal of laboratory soil testing is to assess or predict the properties of a 
 Many laboratory soil tests are costly and time-intensive. 
 Results from simpler tests are commonly used as surrogate markers for the information yielded by more intensive tests. 
 The methodology underlying these "surrogate" tests has been studied extensively because much is riding on their precision and accuracy. 
-@Sherwood1970 performed a large-scale inter-laboratory survey of various soil physical methods. 
-His conclusion was less than optimistic:
 
-\\
->"The results of this investigation....are for the most part rather disturbing, since it is clear that none of [the tests] can be used without quite wide tolerances being placed on the values obtained."
+This section reviews literature on the laboratory tests most pertinent to infield soils.
+The first two sub-sections briefly cover soil water content and particle size analysis.
+The latter two sub-sections provide a more extensive treatment of two test categories most relevant to infield soils: plasticity tests and toughness tests.
 
-The questions raised by @Sherwood1970 merit further investigation if a reliable means for testing infield mixes is to be developed.
-This section summarizes literature on the two classes of laboratory tests pertinent to infield soils: plasticity tests and particle size analysis. 
+
+### Soil water content {#soil-water-content}
+
+Agronomists, engineers and pedologists all consider soil water content an important concept. 
+Soil water has been studied extensively using a variety of methods. 
+This brief section does not attempt to review the overwhelming body of literature on soil water content. 
+It simply defines the main connotations in which the term "water content" is used. 
+
+Soil water content has two basic definitions: 
+
+(1.) Gravimetric ($w$): mass of water referenced to oven-dry mass of soil^[the mass of water is referenced to _moist_ soil in some fields including pottery and coal geoscience. This approach is not widely favored because the denominator changes as a function of the measurement value, so there is no absolute reference.]
+
+(2.) Volumetric ($\theta$): volume of water referenced to total volume of soil solids plus voids
+
+A "true" value for $\theta$ is readily computed from $w$ if soil's dry bulk density $\rho_{bulk}$ is also known ($\theta=w~\cdot~\rho_{bulk}$).
+
+$\theta$ is commonly estimated in-situ with indirect techniques such as neutron scattering or time-domain reflectometry [@Brady2007].
+
+Both $w$ and $\theta$ are used across disciplines. 
+Each has merits and downfalls. 
+$w$ is easiest to measure: it simply requires an accurate balance and a drying oven. 
+$\theta$ has a clearer physical meaning in terms of soil behavior and the interactions among particles. 
+$\theta$ is more useful for irrigation and water flux calculations.
+As a broad generalization, $w$ is favored by engineers and $\theta$ is favored by agronomists and soil physicists.
+
+___
+
+### Particle size analysis
+
+Soils consist of solid particles having a range of sizes. 
+Particle size analysis (PSA) refers to a series of tests which measure the distribution of particle sizes for a given soil.
+PSA is inexpensive and relatively fast to perform. 
+As a result it has been used as a surrogate marker for some property in nearly every sub-discipline of soil science. 
+Unfortunately the results of a PSA are highly dependent on the method employed, and there is no universally-accepted protocol.
+
+PSA has been the focus of most discussions around infield mix [@Schroder2009; @Schroder2012]. 
+Current recommendations for infield mixes revolve around total sand content and silt-to-clay ratio (SCR) [@ASTMF2107-08]. 
+There are two main problems with using PSA as an indicator of infield performance:
+
+1. Obtaining accurate PSA data is challenging.
+1. The linkage between particle size and soil behavior is spurious. 
+
+The author has conducted an an extensive literature review of PSA literature. I opted not to include it in this proposal because PSA is not the focus of this dissertation. 
+I felt that a long discussion around PSA methods would divert the reader's focus away from more central themes of the project. 
+Instead I have included this section to briefly summarize the current usage of PSA for infield mixes and voice some concerns I have regarding the use (and abuse) of PSA around this topic. 
+Rather than recount the minutiae of particular studies, I focus on the sentiments of governing authorities and the views of historically significant soil scientists.  
+
+
+#### PSA methods 
+
+There is no universally agreed-upon method for performing a PSA - many samples requires special treatment, making comparison of results difficult. 
+Authors rarely report the full protocol used for their PSA results. 
+The vast array of possible combinations of pre-treatement, dispersion, and measurement techniques mean that comparing PSA results across studies is difficult or impossible. 
+
+@ASTMD79282017 is the current accepted protocol for most U.S. labs. This document provides a clear disclaimer about the variability of natural soils and the need for context-specific methods:
+
+>"Some types of soil require special treatment in order to correctly determine the particle sizes...these treatments, however, add significant time and effort when performing the sedimentation test and are allowable but outside the scope of this test method."
+
+In particular, the measurement of clay-size particles is highly subject to differences in techniques. 
+@Gee2002 is considered an authoritative text on PSA methods. These authors note the large potential variation in clay-size content:
+
+>Depending on the method of chemical treatment and physical dispersion used, measured clay content for an individual soil sample can vary by factors of four or more.
+
+The above statements imply that the a single infield mix could easily pass a PSA specification when tested with one method but fail when tested with another - even when tested without error in the same lab, by the same operator.
+A system which relies so heavily on un-standardized methods cannot provide an adequate means of classification.
+
+
+#### Relationship between PSA and soil behavior 
+
+The behavior of fine-grained soil is governed not just by its particles' size but also by their surface charge and shape.
+There can be wide disparities in the behavior of two soils having very similar textural classifications.
+This was recognized by many pioneers of modern soil science and geotechnical engineering. 
+A few quotations from the literature are instructive:
+
+- @Casagrande1947 compared agricultural classification systems based on grain size with his Airfield classification developed during World War II. He pointed out the main pitfall of a textural classification system:
+
+>"Engineers who have used [the textural triangle] have often noticed serious discrepancies between the names as derived from the triangle and the actual physical characteristics of the soils." 
+
+- @Terzaghi1996 discussed the importance of choosing the correct soil tests during site characterization: 
+
+>“Any classification system based on grain size alone is likely to be misleading, because the physical properties of the finest soil fractions depend on many factors other than grain size.” 
+
+- @Blackall1952, described the views of A. Atterberg, whose work formed the basis of both the grain-size system used in agricultural soil science _and_ the plasticity-based system used by engineers:
+
+>“He decided...that very often the mechanical composition obtained from settling analysis did not express the physical properties of the soil. So he set out to determine the physical properties peculiar to the different soil types, and found plasticity to be particularly characteristic of clay.”
+
+
+
+#### Summary: particle size analysis 
+
+PSA is a useful starting point in predicting a soil's physical behavior and how it will interact with water. 
+This forms the basis for the USDA textural triangle.
+However PSA is difficult to measure accurately. 
+In addition, PSA cannot always predict how a soil will respond to changes in water content. 
+This is the most important trait of an infield soil.
+Therefore, there are serious doubts about the validity of PSA as an all-telling means of infield soil analysis.
+Developing a framework more grounded in actual soil behavior is the primary motivator of this dissertation.
+
+___
+
 
 ### Plasticity tests
 
 The behavior of fine-grained soil is markedly affected by its water content [@Holtz2010]. Plasticity tests mark the water contents where behavioral thresholds occur for a given soil.  This section reviews the tests' history, methodology, and potential shortcomings.
 
-#### Origins of Atterberg limit test methods {#atterberg-limits-origins}
+#### Origins of plasticity tests {#atterberg-limits-origins}
 
 The earliest test methods for soil plasticity were developed by Atterberg [-@Atterberg1911; -@Atterberg1974].
 Plasticity^[from the Greek _plastikos_, "to mold or form"] is the tendency of a material to deform under an applied load, without fracturing into multiple pieces, and to retain its new shape when the load is removed [@Andrade2011].
+
+
 Atterberg noted that plasticity is easy to observe but does not lend itself to simple measurement.
 He showed that soil was plastic only within a finite range of water content which differed for every soil.
-He termed the upper boundary the 'flow limit,' at which two batches of soil paste flowed together when jarred. 
-He defined the lower boundary as the 'rolling limit,' when the soil had dried enough to become brittle and could no longer be rolled into thin threads. 
+He termed the upper boundary the "flow limit," at which two batches of soil paste flowed together when jarred. 
+He defined the lower boundary as the "rolling limit," when the soil had dried enough to become brittle and could no longer be rolled into thin threads. 
 The difference between the flow limit and the rolling limit was the “plasticity number." 
 Today these are known as the liquid limit, plastic limit, and plasticity index. 
 He defined 3 additional consistency limits, though none are widely used today. These were:
@@ -185,8 +287,8 @@ He defined 3 additional consistency limits, though none are widely used today. T
 - Adhesion limit: soil no longer adheres to a metal implement
 - Cohesion limit: lumps of soil can be no longer pressed together with one's fingers
 
-Atterberg concluded that his ‘plasticity number’ was the most reliable means of measuring plasticity but pointed out that it gave no information about the effort required to deform the soil.
-He considered the effort needed to remold the soil a separate property, which translates to English as ‘viscosity.’ This distinction will be considered further in Section ref(soil-toughness).
+Atterberg concluded that his plasticity number was the most reliable means of measuring plasticity but pointed out that it gave no information about the effort required to deform the soil.
+He considered the effort needed to remold the soil a separate property, which translates to English as "viscosity." This distinction will be considered further in Section \@ref(soil-toughness).
 
 Atterberg’s work has never been fully appreciated in his own discipline of agricultural soil science. His test methods were improved and standardized by geotechnical engineers [@Terzaghi1926; @Casagrande1932].
 @Terzaghi1926 acknowledged the arbitrary nature of the tests but emphasized that their importance for preliminary soil investigations. 
@@ -195,12 +297,18 @@ He pointed out the value of the tests lied in quantifying an observable phenomen
 > “Every engineer should develop the habit of expressing the plasticity and grain-size characteristics of soils by numerical values rather than adjectives…..the degree of plasticity should be indicated by the estimated value of the plasticity index and not by the words ‘trace of plasticity’ or ‘highly plastic.’ ” <br> \- @Terzaghi1996
 
 
+A variety of other methods have been employed to measure the plasticity of clays.
+These include torque rheometers, extruders, and compression devices [@Andrade2011].
+The remainder of this section focuses on the Atterberg tests and their derivatives because the other methods are scarcely used in soil science. 
+
 #### Modern protocols for Atterberg limits 
 
 Standard test methods typically pair the plastic and liquid limit tests. 
 In the United States the relevant standards are @ASTMD43182018 and @AASHTO2020 while @BS13771990 is typically cited in Europe. 
 The United States methods use the Casagrande method to determine the liquid limit while the British method uses a fall-cone device; these are briefly described below.
 The plastic limit tests described in the three standards are essentially identical.
+Note that in Atterberg limit tests the term **water content** is always used on a gravimetric basis.
+
 
 ##### Liquid limit
 
@@ -221,10 +329,10 @@ Merits of the fall-cone methods include:
 2. Provide a more straightforward estimate of the soil's undrained shear strength [@Haigh2016]
 3. Ability to determine the liquid limit for some low-plasticity soils which cannot be tested with the Casagrande cup [@Sherwood1970a; @Sivapullaiah1985]
 
-The British Standard is the most widely-used fall-cone method and considers the liquid limit as the water content at which an 80g cone with a single-sided angle of 30&deg; penetrates the sample to a depth of 20 mm [@BS13771990].
+The British Standard is the most widely-used fall-cone method and considers the liquid limit as the water content at which an 80 g cone with a single-sided angle of 30&deg; penetrates the sample to a depth of 20 mm [@BS13771990].
 Unfortunately, other nations have developed similar methods with different cone masses and angles and comparing results is challenging. 
 Empirical correlations have been established to convert between the Casagrande LL and the fall-cone LL. 
-For soils with LL under 100, the two methods give good agreement but for higher-LL soils the cone yields lower LL values [@Holtz2010; @OKelly2017]. 
+For soils with LL <100, the two methods give good agreement but for soils with LL>100 the cone yields lower values [@Holtz2010; @OKelly2017]. 
 
 ##### Plastic limit
 
@@ -239,21 +347,23 @@ The stability of the soil thread is related to the maximum particle diameter and
 @Barnes2013 argued that emphasis should be shifted away from a specific thread diameter and toward observation of the thread during the test. 
 
 
-### Nature and magnitude of errors associated with Atterberg limits {#atterberg-limits-errors}
+#### Uncertainty associated with Atterberg limits {#atterberg-limits-errors}
 
 Atterberg limit tests can be performed rapidly and require only simple equipment and few consumables. 
 They also correlate reasonably well with other soil properties such as shear strength, compressibility, and permeability. 
 Unfortunately there are multiple sources of error associated with the tests and these are often raised as critiques of their utility.
 This section outlines research on the precision and accuracy of the tests. 
 
-#### Reproducibility and repeatability {#atterberg-limits-reproducibility-and-repeatability}
+##### Repeatability and reproducibility {#atterberg-limits-reproducibility-and-repeatability}
 
-Reproducibility is defined as achieving the same result for the same sample by multiple test operators. 
-Repeatability is achieving the same result through multiple trials of the same sample by the same operator. 
+Repeatability is the similarity of results obtained via multiple trials of the same test, on the same sample, by the same operator.
+Reproducibility is the similarity of results for the same sample by multiple test operators or multiple labs [@Ullman2009]. 
 
-@Sherwood1970 conducted a detailed investigation on the reproducibility and repeatability of laboratory soil tests. 
+
+@Sherwood1970 conducted an extensive investigation on the repeatability and reproducibility of several common laboratory tests. 
 Three soils termed B, G, and W were pulverized and riffled repeatedly to ensure their homogeneity. The samples were sent to 41 laboratories which performed several tests on them, including the Atterberg limits. 
-The tests were replicated by multiple operators at the Road Research Laboratory and by a single operator to compare the variation among each means of replication. 
+The tests were replicated by multiple operators at the Road Research Laboratory (RRL) and also by a single expert RRL operator.
+The goal was to compare the variation across each means of replication. 
 
 
 ```{r produce plots and values from Sherwood 1970}
@@ -269,55 +379,54 @@ These technicians were considered highly experienced and the spread of their res
 Repeatability was better still for a single operator; all six results are tightly clustered around their mean with maximum deviations of `r max(sherwood_single_operator_ranges$LL)` units for the liquid limit and `r max(sherwood_single_operator_ranges$PL)` units for the plastic limit. 
 
 
-```{r sherwood-overall-comparison, fig.height=9, fig.cap='Reproducibility is excellent for a single operator, fair among operators in the same lab, and relatively poor across laboratories.'}
+```{r sherwood-overall-comparison, fig.height=9, fig.cap='Reproducibility is excellent for a single operator, fair among operators in the same lab, and relatively poor across laboratories.', fig.scap='Repeatability and reproducibility of Atterberg limit tests'}
 att_lims_variation_plot
 
 ```
 
-The spread of data points in Figure \@ref(fig:sherwood-overall-comparison) could be seen as misleading because the number of replicates was fewer for the within-lab and within-operator studies than the inter-lab study. 
-Therefore it is useful to compare the coefficients of variation (COV) for the three studies. Figure \@ref(fig:sherwood-cov-comparison) shows that the smaller range of results for a single lab or single operator is due to better precision and not to fewer samples being tested. Compared to the inter-lab study, the COV for one operator's replicates are smaller by a factor of 10 and the COV for the 8 RRL operators was smaller by a factor of ___. 
-The coefficient of variation was remarkably consistent across soils: the three materials had COV values of `r  summary_covs_across_labs$LL_cov[1]`, `r  summary_covs_across_labs$LL_cov[2]`, and `r  summary_covs_across_labs$LL_cov[3]`% for the liquid limit and `r  summary_covs_across_labs$PL_cov[1]`, `r  summary_covs_across_labs$PL_cov[2]`, and `r  summary_covs_across_labs$PL_cov[3]`% for the plastic limit. 
+The spread of data points in Figure \@ref(fig:sherwood-overall-comparison) could be viewed as misleading because the number of replicates was fewer for the within-lab and within-operator studies than the inter-lab study. 
+Therefore it is useful to compare the coefficients of variation (COV) for the three studies. Figure \@ref(fig:sherwood-cov-comparison) shows that the smaller range of results for a single lab or single operator is truly due to better precision and not to fewer samples being tested. Compared to the inter-lab study, the plastic limit COV for one operator's replicates are smaller by a factor of `r pl_single_operator_vs_multiple_labs_cov_factor` and the COV for the 8 RRL operators was smaller by a factor of `r pl_multiple_operators_vs_multiple_labs_cov_factor`.
+The coefficient of variation was remarkably consistent across soils: across the 41 labs, the three materials had COV values of `r  summary_covs_across_labs$LL_cov[1]`, `r  summary_covs_across_labs$LL_cov[2]`, and `r  summary_covs_across_labs$LL_cov[3]`% for the liquid limit and `r  summary_covs_across_labs$PL_cov[1]`, `r  summary_covs_across_labs$PL_cov[2]`, and `r  summary_covs_across_labs$PL_cov[3]`% for the plastic limit. 
 Evidently, the uncertainty associated with a single test result is not a function of soil type. 
 
 
 The liquid limit involves a mechanical device whereas the plastic limit test introduces a greater degree of operator judgment. 
-One could expect better agreement for the liquid limit and this is clearly borne out in Figures \@ref(fig:sherwood-overall-comparison)-\@ref(fig:sherwood-cov-comparison).
+One could expect better agreement for the liquid limit and this is clearly borne out in Figure \@ref(fig:sherwood-cov-comparison).
 
-A separate study by @Sherwood1970a showed that the fall-cone method has better inter-operator reproducibility. Figure \@ref(fig:sherwood-cone-cup-comparison) shows the spread of the 6 replicated tests for each method. The coefficient of variation among operators was about half that of the Casagrande method. 
+A separate study by @Sherwood1970a showed that the fall-cone method has better inter-operator reproducibility than the Casagrande cup. Figure \@ref(fig:sherwood-cone-cup-comparison) shows the spread of the 6 replicated tests for each method. The coefficient of variation among operators was about half that of the Casagrande method. 
 
-In summary, @Sherwood1970 showed that most soil physical tests are quite repeatable so long as they are performed by an experienced operator with a well-tuned apparatus and careful workmanship.
+Wide variability across labs was not limited to Atterberg limit tests. 
+@Sherwood1970 performed similar analyses for three other tests (Proctor compaction, hydrometer analysis, and specific gravity).
+His own assessment of the study was less than optimistic:
+
+>"The results of this investigation....are for the most part rather disturbing, since it is clear that none of [the tests] can be used without quite wide tolerances being placed on the values obtained."
 
 
 ```{r sherwood-cov-comparison, fig.height = 4, fig.cap='Atterberg limit tests are much more repeatable by a single operator than across operators or labs.',  fig.scap="COV for Atterberg replicaton types"}
-# knitr::opts_chunk$set(fig.pos = "!t")
 att_lims_cov_plot
 ```
 
 
-```{r sherwood-cone-cup-comparison, fig.height = 4, fig.cap='The fall-cone method is less variable across operators than the Casagrande cup'}
+```{r sherwood-cone-cup-comparison, fig.height = 4, fig.cap='The fall-cone method is less variable across operators than the Casagrande cup', fig.scap='Variabilty of fall-cone LL method vs. Casagrande cup'}
 
 source("supplemental_R_scripts/Sherwood_Ryley_1970_plot.R")
 sherwood_ryley_1970_table3_plot
 
 ```
 
+___
 
-#### Sources of error in Atterberg limit methods
+##### Sources of error in Atterberg limit methods
 
-\@ref(atterberg-limits-reproducibility-and-repeatability) described the expected uncertainties associated with Atterberg limit results. 
-It is next useful to explore the sources of these errors so they can be avoided as much as possible. 
-The tests depend heavily on an accurate determination of the water content. 
-Clean workmanship is essential to avoid flakes of dry soil contaminating the fresh specimen [@Barnes2013]. 
-The laboratory balance in use must be of sufficient sensitivity and calibrated frequently. 
-The water content determination may comprise a substantial source of error during the tests, although this uncertainty source receives less attention than the test mechanics.
-Figure ___ shows a distribution of 50 replicate water content determinations from the same specimen near its LL (data collected by the author). 
-Even with thorough mixing and the use of a milligram balance, Figure ___  indicates one should expect a standard deviation of ~0.2% water content when sampled from an ostensibly homogenous specimen. 
+Section \@ref(atterberg-limits-reproducibility-and-repeatability) described the expected uncertainties associated with Atterberg limit results. 
+@Sherwood1970 showed that most soil physical tests are repeatable only when performed by qualified operators with a well-tuned apparatus and careful workmanship.
 
-Besides measuring the water content, three chief sources of laboratory error for the Atterberg limits include:
+It is next useful to explore the sources of these errors so they can be avoided as much as possible. Four chief sources of laboratory error for the Atterberg limits include:
 
 1. specimen preparation
 2. proper function/calibration of test apparatus
-3. operator technique 
+3. operator technique
+4. water content determination
 
 Each is outlined in the following sections. 
 
@@ -327,24 +436,24 @@ Note that these do not include sampling practices, which are carried out prior t
 The means by which a soil specimen is mixed and handled can affect the results obtained from physical tests.     
 
 @Howell1997 performed compaction tests on sand-bentonite mixtures produced with different preparation methods. 
-They showed that a longer "curing" time after adding water slightly increased the optimum water content for compaction (w <sub>opt</sub>). 
-The effect was small; &Delta; w<sub>opt</sub> was only ~ 0.5% when using granular/pelletized bentonite and not detectable for powedered bentonite. 
+They showed that a longer "curing" time after adding water slightly increased the optimum water content for compaction $w_{opt}$. 
+The effect was small; $\Delta~w_{opt}$ was only ~ 0.5% when using granular/pelletized bentonite and not detectable for powdered bentonite. 
 The effect of mixing procedure was more apparent. 
-Mixing water with the sand prior to adding the bentonite increased w<sub>opt</sub> by up to 2% compared with mixing the soil components dry and adding the water last. &rho; <sub>max</sub> was also lower when the water was added before the bentonite. 
+Mixing water with the sand prior to adding the bentonite increased $w_{opt}$ by up to 2% compared with mixing the soil components dry and adding the water last. $\rho_{max}$ was also lower when the water was added before the bentonite. 
 Evidently, the water was more apt to associate with the sand in the latter procedure. 
 
 @Armstrong1986 tested 13 means of preparing soil specimens for Atterberg limit tests. 
-They reported a 4 % water content increase of in the liquid limit due to oven-drying at either 60 or 110 &deg; C. 
+They reported a 4 % water content decrease of in the liquid limit due to oven-drying at either 60 or 110&deg; C. 
 This was attributed to difficulty in re-hydrating the clay mineral surfaces and micropores. 
-If the soil was oven-dried, the liquid limit was increased by curing the sample for 24 hours after adding water. 
+If the soil was oven-dried, the liquid limit could be increased by curing the sample for 24 hours after adding water. 
 Another marginal LL increase was noted for a 48-hour cure time. 
-The relevant finding is that soil specimens should not be oven-dried prior to testing and should be thoroughly cured with water before beginning the test. 
+The relevant finding is that soil specimens should never be oven-dried prior to testing. If they are air-dry, they should be thoroughly cured with water before beginning the test. 
 @ASTMD43182018 prohibits drying above 60 &deg; C and requires a minimum 16-hour curing time. 
 
 @Dumbleton1966a tested the effect of mixing duration on Atterberg limits of several soils. 
-The liquid limit continued to increase for up to 3 hours of mixing time. 
-The effect was only observed for specific soils, namely those containing iron-oxide cements. 
-The cements were evidently degraded by the longer agitation time because non-cemented London clay showed no change after more mixing. 
+The liquid limit for some soils continually increased with additional mixing.
+The LL of soils containing iron oxide cements increased continually for up to 3 hours of mixing.
+Evidently the cements were degraded by the extra agitation because non-cemented London clay showed no change after additional mixing. 
 No information was provided about the actual mixing procedure, though one could assume it was performed by hand with a spatula or similar tool. 
 
 
@@ -352,7 +461,7 @@ No information was provided about the actual mixing procedure, though one could 
 ##### Apparatus-related errors
 
 @Casagrande1958 expressed regret that his original design did not quantitatively specify the rubber base's properties. 
-This led to disparities among the devices produced by various manufacturers, and they yielded different liquid limits despite being otherwise identical. 
+The loose specification led to disparities among the devices produced by various manufacturers, and these yielded different liquid limits despite being otherwise identical. 
 
 @Sherwood1970 concluded that so long as a standard test device is used, differences in operator technique comprise a larger source of error than the device itself.
 However, a recent survey by @Haigh2016 confirmed that the hardness and resilience of the rubber base does vary widely across national specifications. 
@@ -366,7 +475,7 @@ The drop height must be frequently calibrated to ensure accurate results [@ASTMD
 
 ##### Operator technique errors
 
-###### Liquid limit 
+###### Technique errors: liquid limit 
 
 The means by which the groove is cut and the rate at which the cam is agitated will affect the flow of the soil. 
 Every effort must be made to maintain the tool in an orthogonal position to the cup surface throughout the action [@Casagrande1958]. 
@@ -374,18 +483,41 @@ Cutting a uniform grove can be especially challenging for soils containing sand 
 The cam should be agitated at a constant rate of 2 blows per second [@ASTMD43182018].
 Inadequate mixing of the specimen can also contribute to erroneous blow counts and water content determinations. 
 
-###### Plastic limit
+###### Technique errors: plastic limit
 
 Sources of error include the operator's rolling path, judgment of the crumbling condition, and weighing errors in the water content determination. 
+
+##### Water content determination 
+
+The LL and PL methods depend heavily on an accurate determination of the water content. 
+Clean workmanship is essential to avoid flakes of dry soil contaminating the fresh specimen [@Barnes2013]. 
+The laboratory balance in use must be of sufficient sensitivity and frequently calibrated. 
+The water content determination may comprise a substantial source of error during the tests, although this uncertainty source receives less attention than the test mechanics.
+
+```{r LL-w-determination-variability, fig.cap='The determination of $w$ is an often-overlooked source of error in Atterberg limit testing.', fig.scap='Variability in $w$ determination during LL test'}
+# this generates the value to reference below. 
+# It can also re-generate the relevant figure, but for now I commented that code 
+# out to save time. 
+source('./supplemental_R_scripts/proposal-fig-generation/LL-water-content-measurement-standard-deviation-calibration_2021-01-25-fig.R')
+knitr::include_graphics('figs/pdf/LL-w-uncertainty-for-a-single-point.pdf')
+```
+
+
+Figure \@ref(fig:LL-w-determination-variability) shows the water contents of 10 replicate determinations from the same soil specimen near its LL (data collected by the author).
+To clarify, these data points are not the liquid limit - they are specimens removed from a bowl of soil having (ostensibly) homogenous water content. 
+Each point represents the water content determined from a ~5 g sample from the same bowl of soil.
+The samples were taken in rapid succession and could be considered identical "technical replications."
+Figure \@ref(fig:LL-w-determination-variability)  indicates that even with the use of a milligram balance, one should expect a water content standard deviation of ~ `r LL_sd` when sampled from a well-mixed specimen.
+
 
 #### Attempts to improve plastic limit test
 
 Most attempts to improve the plastic limit test have focused on mechanizing the thread-rolling procedure in hopes of improving its reproducibility across operators.
 Test operators utilize different combinations of force, speed, and displacement when rolling the soil. Collectively these variables were termed ‘rolling path’ by [@Barnes2013]. 
 @Bobrowski1992 described a simple apparatus to aid the operator in producing a thread of precisely 3.2 mm. 
-The device consists of a flat plexiglass plate which is used to roll the thread, rather than the operator’s hand. @Bobrowski1992 also stated that paper should be affixed to the base of the device to prevent the thread from sliding and to expedite the drying process. 
+The device consists of a flat plexiglass plate which is used to roll the thread instad of the operator’s hand. @Bobrowski1992 also stated that paper should be affixed to the base of the device to prevent the thread from sliding and to expedite the drying process. 
 Use of this device is allowed, but not mandated, in the current version of ASTM D4318. 
-The Bobrowski-Griekspoor device was criticized by @Barnes2013, who cited the data of @Rashid2008 to assert the rolling device produces excessively rapid drying and eliminates the soil thread from the view of the operator. 
+The Bobrowski-Griekspoor device was criticized by @Barnes2013, who cited the data of @Rashid2008 to assert that the rolling device produces excessively rapid drying and eliminates the soil thread from the view of the operator. 
 
 A fully mechanized thread rolling apparatus was developed by @Temyingyong2002. Their device used two acrylic plates similar to @Bobrowski1992 and added a DC motor to apply the rolling action. 
 The DC voltage was adjusted to control the rolling speed, and the downward force was altered by the addition of weights to the upper plate. 
@@ -399,35 +531,51 @@ The device comprises two stainless steel plates: a fixed base and an upper loadi
 The load is adjusted by sliding a weight ballast along the side of the device opposite the handle. 
 The further the ballast weight is from a pivot point, the lesser the load on the soil thread. The device is still operated by hand and a constant rate of rolling must be maintained through careful operation. 
 A thin smear of petrolatum is used on the stainless steel plates to encourage extrusion of the soil thread. 
-A number of other useful properties have been developed with this device, as described in the section of this review on soil toughness.
+A number of other useful properties have been developed with this device, as described in the section of this review on soil toughness (Section \@ref(soil-toughness)).
 
 
 @Moreno-Maroto2015a described a plastic limit test in which a soil thread is bent rather than rolled. 
 The soil is wetted to a moldable consistency and flattened to ~3 mm. 
 A special slicing tool is used to create a rectangular prism of soil having precise dimensions of 3 mm x 3mm x 50 mm. 
 The specimen is then rounded into a cylindrical thread using the same tool. 
-The thread is carefully bent about its center, which is anchored around a stainless steel cylinder. When the thread begins to crack, a caliper is used to measure the distance between the two ends of the thread. 
+The thread is carefully bent about its center, which is anchored around a stainless steel cylinder. When the thread begins to crack, a caliper is used to measure the distance between the two ends of the thread (\@ref(fig:moreno-marato-thread-bending-procedure)). 
 The test is repeated for at least two other water contents and the water content of the threads is plotted against the displacement with segmented regression. 
 The shallower segment is extrapolated to zero displacement and this water content is taken as the plastic limit. 
 
-Moreno-Maroto and Alonso-Azcàrate (2017???) also described a faster version of their original thread-bending test. 
+```{r moreno-marato-thread-bending-procedure, fig.cap='Thread-bending test described by Moreno-Maroto and Alonso-Azcárate (2015)'}
+knitr::include_graphics('./images/moreno-marato-bending-limit-procedure.png')
+```
+
+@Moreno-Maroto2017 also described a faster version of their original thread-bending test. 
 In this version only a single thread is prepared and its displacement and water content are extrapolated to zero displacement using an empirical equation. 
-This test meets the original requirements of any plastic limit test which could replace the current method, namely:
+The authors argued that their test meets the original requirements of any plastic limit test which could replace the current method, namely:
 
-1.	Rapid
+1.	rapid
 2.	repeatable
-3.	Operator-independent
+3.	operator-independent
 
-### Soil toughness {#soil-toughness}
+
+#### Summary: Plastiticy tests 
+
+The Atterberg limit tests have changed little since their adoption in the early 20th century. 
+The tests are quick to perform and correlate reasonably well with other soil behavior parameters. 
+Chief sources of error include specimen preparation and operator technique. 
+Smaller sources include apparatus-related and weighing errors. 
+
+Many attempts have been made to improve or supplant the canonical test methods.
+In the author's view the original tests are unlikely to be abandoned because of their simplicity and the abundance of data which has accumulated from their use.
+
+
+### Toughness tests {#soil-toughness}
 
 Toughness is a conspicuous feature of clay soils. It plays an important role on the infield skin because the soil must be both stiff and ductile to achieve the corkboard effect. 
 This section describes the nature of toughness and research which has measured or modeled it for clay soils.
 
-#### Definitions of toughness 
+#### Definitions of toughness {#toughness-definitions}
 
 In mechanics, toughness is the total effort or work required to deform a specimen to its failure condition. 
 It is mathematically defined as the area beneath a stress-strain curve up to failure.
-This integral is traditionally computed over the entire material test, but the strain range may be arbitrarily defined for a specific problem (e.g. @Barnes2013; -@Barnes2013b).
+This integral is traditionally computed over the entire material test, but the strain range may be arbitrarily defined for a specific problem [@Barnes2013; @Barnes2013b].
 Toughness is a measure of work and bears units of energy per unit volume ($\mathrm{frac{J}{m^3}}$) [@Mamlouk2006]. 
  
 
@@ -435,8 +583,8 @@ A large peak strength does not necessarily imply a material is tough.
 A brittle material may have a high strength, but because it fails at low strain the toughness is relatively low. 
 Conversely, a ductile material which deforms to very high strain levels may be quite tough despite its low ultimate strength [@Mamlouk2006]. 
 
-Many fine-textured soils exhibit ductile behavior, but their strength in this state varies widely. 
-This observation is known by those who work intimately with clay in trades such as pottery production or earthworks. Atterberg himself noted that his 'plasticity number' did not provide information on the toughness of the soil (Section \@ref(atterberg-limits-origins)), and Casagrande noted [-@Casagrande1932]:
+Many fine-grained soils exhibit ductile behavior, but their strength in this state varies widely. 
+This observation is well-known by those who work intimately with clay in trades such as pottery production or earthworks. Atterberg himself noted that his "plasticity number" did not provide information on the toughness of the soil (Section \@ref(atterberg-limits-origins)).  Similarly, @Casagrande1932 noted:
 
 >“There is a wide variation in the shearing resistance of different soils at the plastic limit. This difference may be felt by hand when performing the plastic limit test on various soils....the toughness of a clay at its plastic limit may therefore be described as the maximum stiffness or shearing resistance which it can acquire without losing its plasticity.”
 
@@ -450,13 +598,13 @@ The Barnes device was originally intended to reduce variability in operator tech
 Barnes realized that stress and strain could be measured during the test and these could be translated to toughness.
 This work comprises the only published research which directly measured the toughness of clay soils. 
 
-Major findings by Barnes [-@Barnes2009; -@Barnes2013; -@Barnes2013b; -@Barnes2018]included :
+Major findings by Barnes [-@Barnes2009; -@Barnes2013; -@Barnes2013b; -@Barnes2018] included :
 
-1. New characteristic water contents and indices can be defined in terms of toughness. For example, the toughness coefficient is the rate of change in toughness as a function of water content.
+1. New characteristic water contents and indices can be defined in terms of toughness. For example, the toughness coefficient is the rate of change in toughness as a function of water content ($\frac{\text{d}T}{\text{d}w}$).
 2. Both clay-size content and clay-mineral content affect toughness. The general order of decreasing toughness at the plastic limit was montmorillonite > illite > kaolinite.
-3. The addition of coarse particles decreased toughness by diluting the clay content. For equal 'matrix water content' (i.e. water per unit clay-size material) coarse particles _increased_ toughness because of the increased work required to shear them through the viscous clay matrix. However, maximum toughness was lower for mixed soils because the presence of coarse particles brought the onset of brittle failure at a higher water content due to interparticle interference. these raised the plastic limit relative to the pure clay.
+3. The addition of coarse particles decreased toughness by diluting the clay content. For equal 'matrix water content' (i.e. water per unit clay-size material) coarse particles _increased_ toughness because of the increased work required to shear them through the viscous clay matrix. However, maximum toughness was lower for mixed soils because the presence of coarse particles brought the onset of brittle failure at a higher water content due to interparticle interference. The total effect of coarse additions is to raise the plastic limit relative to the pure clay and reduce maximum toughness.
 4. Some clays undergo strain-hardening during the rolling procedure, while others exhibit strain-softening behavior. 
-5. The toughness of clays does not always obey a linear law of mixtures. In other words, the behavior of an artificial mixture containing two clays will not necessarily reflect the mixture's proportions. 
+5. The toughness of clay mixtures does not always obey a linear law. In other words, the behavior of an artificial mixture containing two clays will not necessarily reflect the mixture's proportions. 
 
 The Barnes apparatus marks a significant advance, but it represents only one means of measuring soil toughness. 
 Because it is a single, unique apparatus there is no information about the reproducibility of its results across operators. 
@@ -464,25 +612,25 @@ There is also no research comparing its results with other means of measuring so
 
 
 Clays exhibit toughness during many types of strain, not only the harmonic thread-rolling typical of the plastic limit test which the Barnes device seeks to emulate. 
-Similarly, the plastic liimit does not represent the true limit of ductile behavior; it merely establishes an arbitratry if useful threshold for a single type of deformation. 
+Similarly, the plastic limit does not represent the true limit of ductile behavior; it merely establishes a useful but arbitrary threshold for a single type of deformation. 
 A soil can undergo ductile strain even when its water content lies below the plastic limit. 
-This is readily observed when classifying soils with the USDA field texture evaluation. This method involves forminga ribbon with the thumb and fingers. 
+This is readily observed when classifying soils with the USDA field texture evaluation. This method involves forming a ribbon with the thumb and fingers. 
 A soil can often be "ribboned" but with will crumble if rolled. This highlights the arbitrary nature of the thread rolling test and its cyclic shearing which tends to force air to the center of the thread. 
 
 The literature on shear strength and compressive strength is rich, but these studies focus on the peak load at failure and give little mention to energy dissipation up to failure. 
 In most engineering applications little to no strain is desired. 
-A baseball field differs because a small amount of deformation to the soil is desirable (Section \@ref(#corkboard-section)). 
+A baseball field differs because a small amount of deformation to the soil is desirable (Section \@ref(corkboard-effect-section)). 
 
 
 #### Computing toughness from index properties
 
-@Casagrande1932 described the relationship of toughness to soil testing and classification:
+@Casagrande1932 commented further on the relationship of toughness to soil testing and classification:
 
 >"In order to classify clays according to their toughness it would be necessary to determine the shearing resistance at the plastic limit by means of a  direct shearing test or an unconfined compression test. "
 
 The language above suggests Casagrande favored the use of a direct toughness measurement, but he also derived a formula to estimate a soil's toughness.
 
-The formula assumes a semi-logarithmic relationship between water content and shear strength exists over the whole range of plasticity. It uses the flow index derived from the liquid limit test to extrapolate the shear strength at the plastic limit. A steeper flow curve indicates less change in shear strength for a unit increase in water content. @Casagrande1932 derived the following formula for what he termed the 'toughness index':
+The formula assumes a semi-logarithmic relationship between water content and shear strength exists over the whole range of plasticity. It uses the flow index derived from the liquid limit test to extrapolate the shear strength at the plastic limit. A steeper flow curve indicates less change in shear strength for a unit increase in water content. The resulting formula is what @Casagrande1932 termed the "toughness index":
 
 \begin{equation}
 I_t = \frac{PI}{F} 
@@ -491,7 +639,7 @@ I_t = \frac{PI}{F}
 
 where $I_t$ is the toughness index, $PI$ is the plasticity index, and $F$ is the slope of the flow curve. 
 
-@Moreno-Maroto2018 correlated the plastic and liquid limits with maximum toughness ($T_{max}$) measured by@Barnes2013. By re-arranging their equation, toughness is computed as:
+@Moreno-Maroto2018 correlated the plastic and liquid limits with maximum toughness ($T_{max}$) measured by @Barnes2013. By re-arranging their equation, toughness is computed as:
 
 \begin{equation}
 \\
@@ -503,75 +651,54 @@ T_{max}=\frac{130~\cdot~PI}{LL}-44
  
 @Moreno-Maroto2018 also suggested a new basis for classifying fine-grained soils from their toughness equation (Figure \@ref(fig:moreno-maroto-chart)) and qualitative observations [@Moreno-Maroto2017].
 
-```{r moreno-maroto-chart, fig.cap='Soil classification chart proposed by Moreno-Maroto and Alonso-Azcárate (2018). Toughness data from Barnes (2013) and the empirical equation from Moreno-Maroto and Alonso-Azcárate (2018) were used to define the positions of the C-line and M-line.'}
+```{r moreno-maroto-chart, fig.cap='Soil classification chart proposed by Moreno-Maroto and Alonso-Azcárate (2018). Toughness data from Barnes (2013) and the empirical equation from Moreno-Maroto and Alonso-Azcárate (2018) were used to define the positions of the C-line and M-line.', fig.scap='Toughness-based soil classification chart'}
 source('draw_moreno-maroto_chart.R')
 moreno_maroto_chart
 ```
 
 They retained the existing groups in the USCS but added additional groups for soils intermediate between silts and clays. 
-The new chart eliminated the A-line and instead defined two lines to separate clays from intermediate soils and intermediate soils from silts. The lines were drawn on the basis of toughness computed from their equation and converted to LL and PL values.  
+The new chart eliminated the A-line and instead defined the C-line and M-line to separate clays from intermediate soils and intermediate soils from silts. The lines were drawn on the basis of toughness computed from their equation and converted to LL and PL values.  
+They also pointed out that the slopes of their C-line and M-line closely match the toughness groups given by @Barnes2009.
+An advantage of this new classification system is that it is based on a continuous, quantitative property (toughness).
+A limitation is that toughness is computed from an empirical equation and not measured directly.
 Moreno-Maroto and Alonso-Azcárate later compared their own classification system with other systems based on plasticity [@Moreno-Maroto2021].
-They noted that USCS tends to classify soils with high liquid limits but low toughness as clays and argued that toughness is the most defining feature of clay and behavior of these soils is more silt-like.
-They favored their own use of a quantitative property (toughness) to classify soils rather than the empirical A-line used by USCS. 
-The author considers this claim to be rather circular because any attempt to classify soils into groups invokes a degree of arbitrariness. The slopes of the C-line and M-line closely match the toughness classification given by @Barnes2009, but these too are arbitrary. Another limitation of the system described by @Moreno-Maroto2018 is that toughness is computed from an empirical equation and not measured directly.
-However, the emphasis on toughness by @Moreno-Maroto2018; -@Moreno-Maroto2021 is valid and should be explored further. 
+In the latter paper the authors noted that USCS tends to classify soils having high LL and low toughness as clays. They argued that the behavior of these soils is more silt-like and that their M- and C-lines clarify this distinction. 
+The author considers the above debate rather circular. 
+_Any_ attempt to classify soils into groups invokes a degree of arbitrariness. A pedantic discussion of "silt-like" or "clay-like" behavior typifies the murky business of classifying natural entities into discrete bins. 
+There are no universally agreed-upon definitions of "clay" and "silt." These terms' working definitions are context-sepcific; the qualities important to the earthworks engineer differ from that of the potter, which differ from that of the geologist and so on. 
+Despite these limitations, the emphasis on toughness by Moreno-Maroto and Alonso-Azcárate [-@Moreno-Maroto2018; -@Moreno-Maroto2021] is important and should be explored further. 
 
 
 @Vinod2017 also used data from @Barnes2013 to form an empirical correlation. 
-Their objective was to predict the optimum moisture content for compaction at any compaction effort without actually performing a Proctor-style compaction test. They hypothesized that the optimum water content for compaction could be predicted from another property defined by @Barnes2013, termed the toughness limit. 
+Their objective was to predict the optimum moisture content for compaction at any compaction effort without actually performing a Proctor-style compaction test. They hypothesized that the optimum water content for compaction could be predicted from another property defined by @Barnes2013, termed the toughness limit $w_T$. 
 Barnes defined the toughness limit as the water content where a soil changes from an unworkable, adhesive consistency to a state having measurable toughness.
-@Vinod2017 first correlated the toughness limits of the 59 soils tested by @Barnes2013 with their respective liquidity indexes ($I_L$, defined as $I_L=LL - LL$). 
+@Vinod2017 first correlated the toughness limits of the 59 soils tested by @Barnes2013 with their respective liquidity indexes ($I_L$, defined as $I_L=LL - PL$). 
 @Vinod2017 found that the average position of the toughness limit was $PL + 0.42 \cdot I_L$. 
 In other words, the toughness limit was 42% of the way between the plastic and liquid limits. 
 This correlation was then used to develop an empirical equation to predict the optimum water content from the plastic limit, liquid limit, and compaction energy. 
 The authors reported a good correlation, but the spread of their data shows that the optimum water content measured with an actual compaction test routinely differed by 5-10% from the value predicted by their equation. 
-Although such an equation may be useful for a cursory investigation, the idea that it could replace compaction testing seems spurious. 
+Such an equation may be useful for a cursory investigation, but the idea that it could replace compaction testing seems spurious. 
 
 #### Summary: toughness research
 
-The toughness of soil has not been studied extensively. Toughness is the total work needed to deform a specimen to failure. 
+The toughness of soil has not been studied extensively. 
+Toughness is the total work needed to deform a specimen to failure. 
 Work by G. Barnes has produced a useful device which directly measures toughness during a thread-rolling procedure. 
 Empirical correlations can estimate soil toughness, but these should be validated with further experimentation.
 
-### Particle size analysis
-
-At the time of writing, particle size analysis is the only means of soil testing which has been applied to infield soils. Mechanical analysis is relatively rapid and inexpensive, and it has been used as a surrogate marker for nearly every aspect of soil science. A tremendous amount of data has accumulated with particle size analysis as its basis. It is useful to examine the principles which underlie the analysis and the development of the techniques, and to identify potential sources of error during the tests.
-
-
-@Brosnan2008a surveyed the surface conditions of the infield skin on extant playing fields at three maintenance levels. Particle size analyses were performed on soil sampled from each infield skin. The USDA soil texture of those samples is plotted in \@ref(fig:brosnan-survey-usda). These soils were sampled from the upper 13 mm and contained large granules of calcined clay infield conditioner; therefore, the texture measured with this method is coarser than the "true" texture of the base soil. 
-
-```{r brosnan-survey-usda, eval=T, echo=FALSE, fig.cap= "Infield soils suyveyed by Brosnan (2008a)", fig.align="center", out.width="100%"}
-
-knitr::include_graphics('images/brosnan_survey_PSA.PNG')
-
-```
-
-
-### Soil water content {#soil-water-content}
-
-Agronomists, engineers and pedologists all consider soil water content an important concept. Soil water has been studied extensively using a variety of methods. 
-This brief section does not attempt to review the overwhelming body of literature on water content. 
-It simply defines the main connotations in which the term "water content" is used. 
-
-Soil water content has two basic definitions: 
-
-(1.) gravimetric ($w$): mass of water referenced to oven-dry mass of soil^[the mass of water is referenced to _moist_ soil in some fields including pottery and coal geoscience. This approach is not widely favored because the denominator changes as a function of the measurement value and there is no absolute reference.]
-
-(2.) volumetric ($\theta$): volume of water referenced to total volume of soil solids plus voids
-
-A "true" value for $\theta$ is readily computed from $w$ if soil's dry bulk density $\rho_{bulk}$ is also known ($\theta=w~\cdot~\rho_{bulk}$).
-
-$\theta$ is commonly estimated in-situ with indirect techniques such as neutron scattering or time-domain reflectometry [@Brady2007].
-
-Both measurements are used across disciplines. 
-Each has merits and downfalls. 
-$w$ is easiest to measure: it simply requires an accurate balance and a drying oven. 
-$\theta$ has a clearer physical meaning in terms of soil behavior and the interactions among particles. 
-As a broad generalization, $w$ is favored by engineers and $\theta$ is favored by agronomists and soil physicists.
-
 ### Summary: laboratory tests of soil behavior and physical properties
 
-Many soil tests have been developed with the goal of supplanting the Atterberg limits. However, in the author's view, these tests are unlikely to be abandoned because of the abundance of data which has accumulated from their use and the speed with which they can be performed. 
+
+The goal of laboratory soil testing is to provide information about a soil's 
+nature or properties. 
+In the context of infield mixes soil testing is used to predict how a material will respond to changes in water content and its interactions with projectiles and athlete's cleated footwear.
+
+Particle size analysis is the only soil testing method which has been applied to infield soils research. 
+There is reason to believe this concept does not accurately reflect the performance of all infield soils.
+The wide variety of methods employed in PSA also makes comparing results difficult.
+The Atterberg limit tests are well-accepted and despite their known shortcomings may provide an alternative means for assessing infield soils. 
+Little research on soil toughness is available but the few available studies suggest toughness is a useful concept for studying infield soils. 
+
 ___
 
 
@@ -580,8 +707,8 @@ ___
 <!-- these first two sections need to be pared down and combined (the ones introducing the section and the one the rationale for producing engineered soils -->
 
 Natural materials do not always meet the requirements for a particular use. 
-Natural soils^[Here the term "soil" refers to a particular soil **material**, in contrast to a pedogenic definition which encompasses a characteristic arrangement of horizons and other features. See Section \@ref(#definition-of-terms), Definition of Terms.] are commonly excavated and blended to benefit their physical or chemical properties [@Brady2007].
-@Seed1964a articulated the value of this topic:
+Natural soils^[Here the term "soil" refers to a particular soil **material**, in contrast to a pedogenic definition which encompasses a characteristic arrangement of horizons and other features. See Section \@ref(definition-of-terms), Definition of Terms.] are commonly excavated and blended to benefit their physical or chemical properties [@Brady2007].
+@Seed1964a succinctly described this topic's importnce:
 
 >"Blending of two soils, producing a new soil with characteristics better than both of its constituents, would be an interesting addition to soil stabilization techniques."
 
@@ -600,8 +727,6 @@ For brevity, in this section the term “clay” simply refers to the fine-grain
 
 ### Rationale for producing engineered soils 
 
-
-Z
 Potters and brick masons were the likely first in antiquity to develop engineered soils using simple intuition and experience. 
 Un-fired bricks containing clay mixed with organic residues have been dated to over 9,000 years before the present [@Staubach2005].
 Engineered soils are now used for agricultural, horticultural, geotechnical, environmental, and recreational purposes [@Leake2014].
@@ -632,12 +757,14 @@ Gravel, sand, soil, coal ash, and lime are common components.
 Loads applied to a coarse-grained soil are transmitted through a skeleton of grain-to-grain contacts. 
 The soil's behavior is relatively independent of water content.
 A minor addition of fine particles will not alter the soil’s behavior so long as the fines fit comfortably within the large voids.  
+
 If sufficient fines are added, they begin to participate in the force chain and with further additions the coarse grains become completely suspended in a matrix of fines.
 The soil's behavior becomes dominated by the fines with the coarse grains acting only as inert inclusions. 
 This threshold has been termed the transitional fines content (TFC). 
 The global void ratio also increases with fines content > TFC because solid sand particles are displaced by a corresponding volume of fines and inter-fine voids.
 
-Infield soils must exhibit the plasticity of a fine-grained soil but the dimensional stability and workability of a coarse-grained soil. 
+Infield soils must exhibit plasticity for good performance during play but they cannot have such high strength that they cannot be worked with tools and implements.
+In other words, an infield mix is _transitional_ between coarse and fine grained soils.
 Therefore, the TFC is a relevant concept to the design of infield mixes.
 The following sub-sections review literature on the TFC concept. 
 
@@ -650,14 +777,45 @@ The total state of particle packing depends on the grain-size distribution of ea
 Researchers have defined the TFC using several methods (Table \@ref(tab:tfc-definition-methods)). A few examples include: calculations from phase relations and index properties [@Thevanayagam1998; @Monkul2007; @Cabalar2011; @Lade1998], the minimum global void ratio following compaction [@Lade1998; @Ueda2011], undrained shear strength during triaxial tests [@Thevanayagam1998; @Vallejo2000; @Cabalar2017; @Kim2018], parameters of the normal compression line or critical state line,(@Cabalar2011; @Carrera2011; @Shipton2012] and liquefaction potential [@Lade1997].
 
 ```{r tfc-definition-methods}
-tfc_definition_methods <- readr::read_csv("data/lit-review-data/tables/selected_transitional_fines_content_studies.csv") %>%
-  dplyr::mutate(Reference = paste0(Citation, " (", year, ") "))%>% 
-  dplyr::arrange(Citation) %>% 
-  dplyr::select(Reference, `Type of 'fines'`, `Tests performed`,`Reported TFC  ( % by mass)`) %>% 
-  kableExtra::kbl(caption = 'Selected studies on the transitional fines content (TFC) of coarse-fine mixtures. Methods used to identify the TFC depends on the problem of interest.') %>% 
-  kableExtra::kable_styling()
+tfc_definition_methods <- readr::read_csv(
+  "data/lit-review-data/tables/selected_transitional_fines_content_studies_one_per_row.csv",
+  col_types = 'ccccc', na = '') %>% 
+  tidyr::fill(dplyr::everything()) %>%
+  dplyr::mutate(reference = paste0(citation, " (", year, ") "),
+                tests_performed = paste('\u00B7', tests_performed)) %>% 
+  dplyr::arrange(citation) %>% 
+  dplyr::group_by(across(-tests_performed)) %>% 
+  dplyr::arrange(tests_performed, .by_group = TRUE) %>% 
+  dplyr::ungroup() %>% 
+  dplyr::select(reference, fines_type, tests_performed, reported_tfc)
+  
 
-tfc_definition_methods
+# tfc_definition_methods
+tfc_study_column_names <- c(
+  'Reference',
+  'Type of fines',
+  'Tests performed',
+  'Reported TFC (% by mass)'
+)
+
+tfc_def_kable <- tfc_definition_methods %>% 
+  kbl(format = 'latex',
+      booktabs = TRUE,
+      linesep = "",
+      align = 'lllc',
+      col.names = tfc_study_column_names,
+      caption = 'Selected studies on the transitional fines content (TFC) of coarse-fine mixtures. Methods used to identify the TFC depends on the problem of interest.',
+      caption.short = 'Relevant studies on transitional fines content (TFC)') %>% 
+  column_spec(2, width = '1.1in') %>% 
+  # column_spec(3, width = '2in', latex_valign = 'm') %>% 
+  column_spec(4, width = '1.1in') %>% 
+  row_spec(0, bold = TRUE) %>% 
+  kableExtra::column_spec(column = 1, bold = TRUE) %>% 
+  collapse_rows(columns = c(1, 2, 4),
+                latex_hline = 'major') %>% 
+  kableExtra::kable_styling(full_width = FALSE, latex_options = 'scale_down')
+
+tfc_def_kable
 ```
 
 
@@ -684,7 +842,8 @@ Packing fractions measured in experiments are always lower than their theoretica
 They range from 60% to 95% of the theoretical maximum [@Furnas1931; @McGeary1961; @Zuo2015]. 
 The disparity can be attributed to the fact that simplifying assumptions of maximum density of each component and "infinitely small" fines are unlikely to be satisfied [@Zuo2015].  
 
-This simple approach may not reflect the actual behavior of the soil. [@Cabalar2011] showed that the behavior transition from sand-like to clay-like occurs at a fines content lower than predicted by the global void ratio. 
+The simple approach of defining the TFC as the % fines producing the minimum amount of vpids may not reflect the actual behavior of the soil. 
+@Cabalar2011 showed that the behavior transition from sand-like to clay-like occurs at a fines content lower than predicted by the global void ratio. 
 The intergranular void ratio (discussed below) may yield a more accurate prediction of the behavioral threshold.  
 
 
@@ -699,7 +858,11 @@ When $e_{SA_{mixture}}$ exceeds $e_{min_{pure~sand}}$, soil behavior will no lon
 Therefore the TFC is defined as the fines content where $e_{SA_{mixture}}=e_{min_{pure~sand}}$
 
 
-#### Other TFC considerations 
+#### Factors affecting TFC value
+
+The TFC for a given set of mix components varies widely. 
+This section describes factors which govern the value of the TFC.
+
 
 ##### Effect of coarse/fine particle size ratio {#tfc-size-ratio}
 
@@ -722,7 +885,7 @@ If the coarse and fine soils have similar $D_{50}$, lodging of fines between the
 @Lade1998 concluded that when $R$ < 7, any increase in the size ratio imparts a relatively steep increase in packing density (see Figure \@ref(fig:lade-1998-figure-7)).
 For further increases in $R$, the observed void ratio slowly decreases toward its theoretical minimum. 
 
-```{r lade-1998-figure-7, fig.cap='When the ratio of particle diameters is < 7, increases in the size ratio improve packing density. Above R of 7-10, little density increase is observed. Reproduced from Lade et al. (1998).'}
+```{r lade-1998-figure-7, fig.cap='When the ratio of particle diameters is < 7, increases in the size ratio improve packing density. Above R of 7-10, little density increase is observed. Reproduced from Lade et al. (1998).', fig.scap='Importance of particle diameter ratio for intergranular packing'}
 knitr::include_graphics('images/illustrations/Lade_1998_Figure_7/Lade_1998_Figure_7.pdf')
 ```
 
@@ -759,13 +922,13 @@ Therefore, by increasing the plasticity of the fines, one would expect the maxim
 Mixtures subjected to static compression in an oedometer exhibit typical void ratio vs. log pressure curves. 
 When this method is used, higher ultimate density values are attained compared to dynamic compaction tests.
 The difference in ultimate density can be attributed to more complete evacuation of air from the voids. 
-A soil compacted at its optimum water content typically retains air in 5-15% of its void volume ($S_e=0.85-0.95$) [@Holtz2010]. 
+A soil compacted at its optimum water content typically retains air in 5-15% of its void volume ($S_e=0.85~\text{to}~0.95$) [@Holtz2010]. 
 Slow consolidation from a saturated condition generates a higher final density because there is no entrapped air.
 Oedometer experiments on artificial soil mixtures probably have less practical significance than compaction experiments because engineered soils are usually installed in an unsaturated condition. 
 
 #### Transitional fines content summary
 
-- There is no universal value for the TFC (for example, 70 %);. Values range from 15-45 % by mass and are specific to a given mixture, specimen prepration method, and problem of interest. 
+- There is no universal value for the TFC (for example, 70%);. Values range from 15-45 % by mass and are specific to a given mixture, specimen prepration method, and problem of interest. 
 
 - Factors affecting the TFC value in a binary mixture include sand gradation, plasticity of the fines, compaction energy, and behavioral parameter of interest.
 
@@ -776,6 +939,9 @@ Oedometer experiments on artificial soil mixtures probably have less practical s
 
 ### Effect of coarse fraction on mix behavior
 
+The Atterberg limits are geared toward fine-grained soils but the presence of particles in the silt-size and sand-size regions also affect the test results. 
+This sub-section covers research on the effect of coarse additions to finer-grained soils. 
+
 #### Total sand content
 
 @Seed1964a investigated Atterberg limits of sand-clay mixtures. Three types of clay (kaolinite, illite, and Ca-bentonite) were mixed with varying amounts of sand. All of the sand was < 425 μm.
@@ -783,10 +949,10 @@ Oedometer experiments on artificial soil mixtures probably have less practical s
 The liquid limits of the sand-bentonite mixtures were inversely proportional to sand content. 
 In other words, the water content per unit clay material remained constant. 
 This relationship was also observed for the illite clay. 
-A linear relation was observed for the kaolinite clay up to 50 % sand, but the liquid limit test could not be performed on the 75 % sand-25 % kaolinite mixture. 
-Therefore, it was not clear whether the linear relationship would have persisted above 50 % sand.
+A linear relation was observed for the kaolinite clay up to 50% sand, but the liquid limit test could not be performed on the 75% sand-25% kaolinite mixture. 
+Therefore, it was not clear whether the linear relationship would have persisted above 50% sand.
 
-@Seed1964a showed that the slopes of liquid limit vs. sand content lines differed by clay type. The slopes were in close agreement with the Skempton activity of the clay, computed as $\frac{LL}{\%~<~2~\mathrm{{\mu}m}}$. 
+@Seed1964a showed that the slopes of liquid limit vs. sand content lines differed by clay type. The slopes were in close agreement with the Skempton activity of the clay, computed as $\frac{LL}{\%~<2~\mathrm{{\mu}m}}$. 
 The relationship to clay activity held regardless of whether the sand was mixed with a single clay or a pre-blended clay mixture. 
 
 The plastic limit of the bentonite-sand mixtures also followed a linear relationship with increasing sand, up to the highest percent sand tested (75%). 
@@ -809,7 +975,14 @@ Evidence was given as (1) liquid limits which are systematically higher than pre
 Therefore, the shape of the liquid limit vs. sand content curve below 60% sand cannot be discerned from their data. 
 
 
-@Nagaraj2016 and effect of sand size and clay type on shear strength of sand-clay mixtures ...[[[[[[]]]]]]
+@Nagaraj2016 tested the unconfined shear strength of sand-clay mixes made from varying gradations and proportions of sand.
+The mixtures contained with either kaolinite or montmorillonite. 
+For both types of clay an "optimum" sand content was identified for maximum shear strength. 
+This value ranged from 40-60% sand: shear strength was maximized in this range, with lower shear strengths observed when either more or less sand was included.
+The authors suggested that sand content of 40-60% maximizes the frictional interaction between the sand grains without reducing the ability of the clay to strengthen the mix.
+A limitation of this study is that all mixtures were tested immediately after compaction at their respective values for $w_{opt}$. 
+Shear strength is a function of water content, so the "optimum" sand content is likely different at various water contents. 
+In other words, sandier mixes would likely have greater shear strength at high water contents but mixes with more clay would have higher shear strength when dry. 
 
 
 #### Sand/silt particle size 
@@ -893,14 +1066,27 @@ These findings collectively demonstrate the complexities which result from the a
 This complexity demonstrates the importance of further research on the design of soil mixtures. 
 
 
-#### Notable research gaps to address in this project:
+## Summary: Review of Literature
 
-There are no data available on the brittle and ductile response of soil to cleated baseball shoes.
-Data pertaining to sand-clay mixes only have tested sand with particle sieve diameters of < 425 μm
-The transitional fines content of sand mixed with plastic fines has scarcely been explored 
-The effect of silt-to-clay ratio has been championed yet without systematic evaluation for the same type of extant clay minerals.
 
-Quantitative analysis has not been applied to the toughness of clays, save for the studies of Barnes who used a cyclic shearing mode similar to that of the standard hand-rolling plastic limit test. In addition, the range of acceptable strain values for a given engineering problem significantly changes the toughness computation. For highly ductile materials, the failure strain is extremely high, and an unacceptably large deformation may be incurred before a failure criterion is reached. In the standard unconfined compression test, the test is halted at 20% strain if a clear peak has not been reached. Toughness is computed as the integral of the stress strain curve from zero strain all the way up to the failure strain. In contrast, Barnes elected to define the toughness of clays as a definite integral from the soil thread diameter of 6 mm down to 4 mm, because in this region deformation of the soil thread was considered to be relatively stable and the stress-strain curves extend with only slight curvature. However this approach may underestimate the toughness of more brittle specimens because the energy dissipated at low strain but high stress is not included in the calculation. It is evident that the strain range chosen for the toughness calculation can substantially change the conclusions about toughness, and one must select the failure criterion carefully based on the problem of interest. 
+This literature review summarized research pertaining to 3 main areas: 
+
+1. surface properties of baseball infields
+1. laboratory testing for soil behavior and physical properties
+1. design and function of artificial soil mixtures.
+
+
+The review identified several areas where existing research is lacking. These include the following:
+
+1. The importance of particle size analysis for infield mixes has been championed without any systematic evaluation of soils having different PSDs or similar PSDs but different mineralogy.
+1. There is no existing research on the cleat-in, cleat-out effect.
+1. Existing research on sand-clay mixes has almost exlusively used sand with particle sieve diameters of < 425 μm. This arbitrary cutoff limits the applicability of existing data to infield mixes which often contain significant amounts of coarser sand. 
+1. Most studies about the transitional fines content of sand have used non-plastic fines. Plasticity is an important part of a well-functioning infield soil so these studies are not directly applicable. 
+1. The effects of clay mineralogy, coarse additions, and water content on soil toughness have only been explored using a single device which has limited scope.
+
+This project attempts to address the topics above with original experiments.
+These are outlined in Section \@ref(proposed-experiments).
+
 
 
 

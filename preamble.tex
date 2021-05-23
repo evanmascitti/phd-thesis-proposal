@@ -5,12 +5,41 @@
 \usepackage{float}
 
 % set vertical line spacing for amsmath equations 
-\setlength{\jot}{10pt}
+\setlength{\jot}{8pt}
 
 % everything abve works well
 
 % extras that I am testing come below 
 
+
+% Use the section numbers instead of titles because some of 
+% my sections are spilling off the page 
+
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% 
+% \renewcommand{\sectionmark}
+% {\thesection}
+
+% this is what I _really_ want: truncate the header 
+% only when it is too long, and add an ellipsis
+% see https://tex.stackexchange.com/questions/6862/how-can-i-display-a-short-chapter-name-in-the-header-and-a-long-chapter-name-in/6866
+
+ % \usepackage[fit]{truncate}
+ % \usepackage{fancyhdr}
+ % \pagestyle{fancy}
+ % \fancyhead[RO,LE]{\truncate{.95\headwidth}{\leftmark}}
+ 
+ \usepackage{fancyhdr}
+ \fancyhead[LE,RO]{\thechapter}
+ 
+ %%%%%%%%%%%%%%%%%%%%
+ 
+ 
+ % limit depth of numbered sections 
+\setcounter{secnumdepth}{2}
+ 
+ %%%%%%%%%%%%%%%%%%%%
 % this one works if all else fails....not using any add-on packages;
 % see https://latexref.xyz/_005cchapter.html
 
@@ -84,14 +113,33 @@
 % for single-paragraph quotations 
 % remove indent with \noindent
 
+% \usepackage{tgpagella} % loads the font packge needed for the quote font I will use, but it is over-riding my Arial font for _everything_ not just the quote environment
+% see https://tex.stackexchange.com/questions/193736/changing-font-in-a-particular-environment/193740
+% and https://www.overleaf.com/learn/latex/Font_typefaces for inspiration 
+
+% I had this inside the environment, after the begin quotation statement 
+% \fontfamily{qpl}\selectfont
+
 \renewenvironment{quote}%
-{\begin{leftbar}\small\begin{quotation}\noindent}%
+{\begin{leftbar} \begin{quotation} \noindent \footnotesize }%
 {\end{quotation}\end{leftbar}}
 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+ 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
 
 % the following 2 lines place a border around all figures 
 % \floatstyle{boxed} 

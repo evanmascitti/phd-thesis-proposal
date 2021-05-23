@@ -206,3 +206,30 @@ ____
 This study was performed on a single soil material.
 
 ___
+
+
+[need to remake this plot. The axes are technically correct but they are not plotted in the standard USDA way.]
+
+@Brosnan2008a surveyed the surface conditions of the infield skin on extant playing fields at three maintenance levels. Particle size analyses were performed on soil sampled from each infield skin. The USDA soil texture of those samples is plotted in \@ref(fig:brosnan-survey-usda). @Brosnan2008a noted thtat these soils were sampled from the upper 13 mm and contained large granules of calcined clay infield conditioner; therefore, the texture measured with this method is coarser than the "true" texture of the base soil. 
+
+```{r brosnan-survey-usda, eval=T, echo=FALSE, fig.cap= "Infield soils suyveyed by Brosnan (2008a)", fig.align="center", out.width="100%"}
+
+knitr::include_graphics('images/brosnan_survey_PSA.PNG')
+
+```
+
+---
+
+Quantitative analysis has not been applied to the toughness of clays, save for the studies of Barnes who used a cyclic shearing mode similar to that of the standard hand-rolling plastic limit test. In addition, the range of acceptable strain values for a given engineering problem significantly changes the toughness computation. For highly ductile materials, the failure strain is extremely high, and an unacceptably large deformation may be incurred before a failure criterion is reached. In the standard unconfined compression test, the test is halted at 20% strain if a clear peak has not been reached. Toughness is computed as the integral of the stress strain curve from zero strain all the way up to the failure strain. In contrast, Barnes elected to define the toughness of clays as a definite integral from the soil thread diameter of 6 mm down to 4 mm, because in this region deformation of the soil thread was considered to be relatively stable and the stress-strain curves extend with only slight curvature. However this approach may underestimate the toughness of more brittle specimens because the energy dissipated at low strain but high stress is not included in the calculation. It is evident that the strain range chosen for the toughness calculation can substantially change the conclusions about toughness, and one must select the failure criterion carefully based on the problem of interest. 
+
+
+----
+
+
+Many of the tests will be performed on the same soil mixtures and the experiments, while treated separately, have substantial overlap. 
+Therefore the testing program will be structured to minimize bottlenecks. 
+In other words, multiple experiments will be in progress at a given time because some of the protocols involve wait times (i.e. for several hours or overnight) during which other lab tasks can be performed.
+
+
+---
+

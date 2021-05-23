@@ -20,7 +20,7 @@ ___
 - A quality infield soil makes the field safer and the grounds manager's job easier.
 - Infield mixes were developed through trial and error and may be refined through scientific study.
 
-## Importance of the infield 
+## Importance of the infield {#importance-of-the-infield} 
 
 ```{r load-packages, include=F}
 library(tidyverse)
@@ -73,9 +73,10 @@ labor_man_hrs <- read_csv('data/lit-review-data/maintenance-man-hrs.csv') %>%
 ```
 
 Portions of a baseball field are termed **skin** if they comprise bare soil rather than natural grass or synthetic turf. 
-The pitcher's mound and the area immediately surrounding home plate are considered distinct; these are constructed and maintained somewhat differently from the infield skin. 
-This thesis will not treat the mound or home plate areas in detail. 
-Therefore, in this document the terms "skin" and "infield skin" are used interchangeably. 
+The pitcher's mound and the area immediately surrounding home plate are skinned areas, but these are considered distinct from the infield skin because they are constructed and maintained somewhat differently.
+The term "infield" sometimes refers to the infield grass portion of the field.
+This thesis will not study the infield grass, nor will it treat the mound and home plate areas in detail.
+Therefore, in this document the terms "infield" and "infield skin" are used interchangeably. 
 
 A full-size baseball field occupies about `r round(sum(pnc_areas$total_area_ha), 0)` ha. Roughly `r DescTools::RoundTo(x = turf_area_pct, multiple = 5)`% of this total area is surfaced with natural turfgrass or synthetic turf. 
 An additional `r DescTools::RoundTo(x = wt_area_pct, multiple = 5)`% is occupied by the warning track, which is alerts players that they are nearing the wall by its changing feel underfoot. 
@@ -84,17 +85,16 @@ Only about `r DescTools::RoundTo(x = skin_area_pct, multiple = 5)`% of the total
 <!-- I like the passage below, and I did spend a few hours finding the data/reference....but not sure it fits here. Thus I am saving it but commenting out. -->
 
 <!-- It is in the defense's interest to encourage the offense to hit as many ground balls as possible, and this heightens the importance of the infield skin. In Major League Baseball (MLB), the average ground ball produces 0.04 runs while causing 0.80 outs. In contrast, the average ball hit in the air creates 0.23 runs and 0.62 outs. Therefore, on a runs-per-outs basis, a fly ball is nearly _8 times_ as valuable to the offense as a ground ball [@Carruth2010].  -->
-
 To motivate the significance of the infield skin, consider Figures \@ref(fig:player-locations)-\@ref(fig:labor-per-area).^[Data used to compute the values in Figure \@ref(fig:labor-per-area) are compiled in the Appendix, see Table \@ref(tab:labor-per-area-tab)] 
 All the offensive players, the four infielders, and the pitcher and catcher are standing on skinned areas. 
 A majority of important plays occur on skinned areas, so the funds and effort devoted to maintaining them are disproportionately large.
 
-```{r player-locations, fig.cap="Locations of players during a professional baseball game. Note the relative paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows).", fig.height=2.5, cache =T}
+```{r player-locations, fig.cap="Locations of players during a professional baseball game. Note the relative paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows).", fig.scap='Locations of players during a professional baseball game', fig.height=2.5, cache =T}
 
 knitr::include_graphics('images/illustrations/player_locations/player_locations.png')
 ```
 
-```{r batted-ball-density, fig.asp=1, fig.width=4, fig.align='center', fig.cap="Data from actual MLB contests support the intuition that most play occurs on the infield skin." }
+```{r batted-ball-density, fig.asp=1, fig.width=4, fig.align='center', fig.cap="Data from actual MLB contests support the intuition that most play occurs on the infield skin.", fig.scap="Concentration of play on the infield skin" }
 
 source("supplemental_R_scripts/generate_batted_ball_density_plot_2021-01-21.R")
 batted_balls_w_boundaries_2020
@@ -145,12 +145,12 @@ labor_per_area_plot <- labor_per_area %>%
         )
 ```
 
-```{r labor-per-area, fig.height=2.5, fig.cap= "The infield skin consumes a majority of inputs despite comprising less than 10 percent of the playing surface area."}
+```{r labor-per-area, fig.height=2.5, fig.cap= "The infield skin consumes a majority of inputs despite comprising less than 10 percent of the playing surface area.", fig.scap="Labor inputs for a professionally-managed infield skin"}
 labor_per_area_plot
 ```
 
 
-```{r mlb-salaries, fig.cap='MLB athletes are valuable assets. Their safety and performance must not be compromised by the playing surface.', fig.show='hold' }
+```{r mlb-salaries, fig.cap='MLB athletes are valuable assets. Their safety and performance must not be compromised by the playing surface.', fig.scap='Financial implications of infield safety', fig.show='hold' }
 source('supplemental_R_scripts/mlb_salaries_and_revenue.R')
 cowplot::plot_grid(salary_distribution_2019_plot, mlb_revenues_plot, align = "h")
 
@@ -172,7 +172,7 @@ These revenues support hundreds of jobs at each stadium which depend on the athl
 Players are a franchise's most valuable asset. A team cannot afford for them be injured by a poor playing surface.
 
 
-##### The brittle-ductile transition and the "corkboard effect" {#corkboard-section}
+##### The brittle-ductile transition and the "corkboard effect" {#corkboard-effect-section}
 
 Minimal surface disruption is a crucial element of infield quality. 
 A smooth playing surface ensures the game's outcome is decided by the players' performance alone and not influenced by chance events such as an errant ball bounce. 
@@ -188,7 +188,7 @@ In contrast, a poor-quality infield is one on which larger clods of soil are rea
 Figure \@ref(fig:corkboard-concept) depicts the the corkboard phenomenon and its importance to gameplay. 
 Small, narrow cleat indentations are unlikely to deflect a ball from its initial path, while larger depressions excavated by player's cleats (or the soil clods themselves) are impediments which tend to produce an errant bounce. 
 
-```{r corkboard-concept, eval=T, fig.cap="(A) The \"cleat-in, cleat-out\" effect ensures predictable ball response. (B) Cleat indentations and soil clods inhibit a smooth and predictable ball path."}
+```{r corkboard-concept, eval=T, fig.cap="\textbf{A.} The \"cleat-in, cleat-out\" effect ensures predictable ball response. \textbf{B.} Cleat indentations and soil clods inhibit a smooth and predictable ball path.", fig.scap="\"Cleat-in, cleat-out\" effect"}
 knitr::include_graphics('images/illustrations/cleatmarks/corkboard_concept.png')
 ```
 
@@ -199,11 +199,11 @@ This change in state is formally termed the brittle-ductile transition. The brit
 Some amount of yield must occur for a player’s cleats to penetrate the soil surface. 
 The mode of yield depends on the water content and the packing arrangement of the soil particles. Yield may be one of two types:
 
-1. brittle yield: microcracks propagate through the soil skeleton, eventually coalescing to fracture the soil mass into discrete fragments. These clods adjust their positions to accommodate the cleats and are usually ejected from the depression as the shoe releases. Crumbling or cracking of soil is controlled by the distribution of imperfections or “weakest links” in the soil matrix [@Dexter2004]. 
+1. **brittle yield**: microcracks propagate through the soil skeleton, eventually coalescing to fracture the soil mass into discrete fragments. These clods adjust their positions to accommodate the cleats and are usually ejected from the depression as the shoe releases. Crumbling or cracking of soil is controlled by the distribution of imperfections or “weakest links” in the soil matrix [@Dexter2004]. 
 
 or
 
-2. ductile yield: soil particles are re-arranged to accommodate the cleat, but the soil mass behaves as a continuum. 
+2. **ductile yield**: soil particles are re-arranged to accommodate the cleat, but the soil mass behaves as a continuum. 
 No material is sepratated from the surface. 
 In general, ductile yield attenuates more energy than brittle fracture [@Kuipers1984]. 
 
@@ -224,25 +224,19 @@ The earliest recorded attempt to alter the physical properties of an infield soi
 Wright and his contemporaries incorporated various materials into their infield soils to enhance stability, firmness, or drainage of the playing surface.
 Amendments included organic debris (straw, ashes) and and inorganic materials (sand, lime, cinders) [@Morris2007].
 
-Infield soil mixes were produced off-site and imported beginning in the 1960s ?Zwasksa?.
+Deliberately mixed infield soils were first used beginning in the 1970s, but these were usually blended by the groundskeeper at the stadium rather than being purchased in bulk from a soil supplier (P. Zwaska, personal communication, 2020).
 
 Popularity of engineered infield mixes has grown markedly since 2005. Today the majority of professional stadia utilize an engineered soil for their infield skin [@Hagerty2018].
 
 ### Summary - importance of the infield skin
 
 The infield skin is a crucial component of baseball's competitive and business operations. 
-A professional grounds crew expends significant effort to maintain the soil water content within a relatively narrow range. 
 An ideal infield surface exhibits a combination of plasticity and stiffness. 
 The soil must readily deform around the cleats so that they are not rejected, but it must also provide enough resistance to prevent the athlete from losing traction. 
-A soil which exhibits these properties over a wide range of water contents increases the odds of completing a game during a rain event, and it allows the groundskeeper a larger margin for error when hand-watering.
+A professional grounds crew expends significant effort to produce such a surface by diligently managing soil water content.
+The grounds manager cannot adjust the infield's water content once the game begins.
+The soil's condition changes throughout the game; it may become wetter during a rain event or drier during hot, sunny conditions. 
+An ideal infield soil exhibits moderate stiffness while maintaining its plasticity over a wide range of water contents.
+Such a soil increases the odds of completing a game during a rain event, and it allows the groundskeeper a larger margin for error when hand-watering.
 
-___
-so the soil must sustain its desired consistency for a period of several hours. Water content may change in either direction during the game. Therefore, a soil which sustains the desired consistency over a broad range of water contents makes the field perform better and eases the groundskeeper's task.
-
-
-___
-
-A skilled grounds crew takes great care to maintain the soil at the desired moisture. 
-Water is manually added with hoses, and rain is kept off using a large tarpaulin. 
-Soil water content can only be controlled during field preparation; after the game begins, no further adjustments can be made and weather conditions determine the rate of water loss or gain.
 ___

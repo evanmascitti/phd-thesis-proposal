@@ -6,14 +6,44 @@ options(tinytex.verbose = TRUE)
 knitr::opts_chunk$set(message=FALSE,
                       echo = FALSE,
                       warning = FALSE)
+
+suppressPackageStartupMessages({
+  library(magrittr)
+  })
 ```
 
-**clay**: a soil material which can be reshaped or molded when moist and which retains develops high strength when dry
 
-**clay-size**: an individual mineral grain which settles in through a column of fluid at the same rate as a spherical particle having 2 &mu;m diameter
+```{r make-def-of-terms, results='asis'}
+thesis_terms <-readr::read_csv('./data/lit-review-data/tables/proposal-definition-of-terms.csv',
+                                   na = '',
+                               col_types = 'cc') %>% 
+  dplyr::filter(dplyr::if_all(everything(), ~!is.na(.))) %>% 
+  dplyr::arrange(term) %>% 
+  dplyr::mutate(term = paste0("**", term, "**:")) %>% 
+  dplyr::mutate(entry = paste0(term, "\n\n", ":  ", definition, "\n\n"))
 
-**sand**: a soil material which is predominantly composed of mineral particles having sieve diameters between 53 and 2000 &mu;m
+# this is it right here !! 
+cat(thesis_terms$entry)
+```
 
-**packing fraction**: the volume fraction occupied by solids, normalized to the total soil volume (1-void fraction); $V_{s}$
 
-**void fraction**: the volume fraction _not_ occupied by solids, normalized to the total soil volume (1-packing fraction); $V_{v}$
+
+
+
+<!-- **clay**  -->
+<!-- :  a soil material which can be reshaped or molded when moist and which retains develops high strength when dry -->
+
+<!-- **clay-size** -->
+<!-- :  an individual mineral grain which settles in through a column of fluid at the same rate as a spherical particle having 2 &mu;m diameter -->
+
+<!-- **sand** -->
+<!-- :  a soil material which is predominantly composed of mineral particles having sieve diameters between 53 and 2000 &mu;m -->
+
+<!-- **sand-size** -->
+<!-- :  a soil material which is predominantly composed of mineral particles having sieve diameters between 53 and 2000 &mu;m -->
+
+<!-- **packing fraction** -->
+<!-- :  the volume fraction occupied by solids, normalized to the total soil volume (1-void fraction); $V_{s}$ -->
+
+<!-- **void fraction** -->
+<!-- :  the volume fraction _not_ occupied by solids, normalized to the total soil volume (1-packing fraction); $V_{v}$ -->

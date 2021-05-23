@@ -297,3 +297,17 @@ sherwood_single_operator_ranges <- att_lims_single_operator_table1 %>%
   rename(LL = `Liquid limit`,
          PL = `Plastic limit`)
 
+#######
+
+pl_covs <- att_lims_variation_sources_grouped %>% 
+  dplyr::filter(str_detect(test, regex('plastic', ignore_case = T)))
+
+named_pl_covs <- pl_covs$cov %>% 
+  set_names(pl_covs$comparison)
+
+pl_single_operator_vs_multiple_labs_cov_factor <- round(named_pl_covs["41 operators from different laboratories"] / named_pl_covs["6 results by a single RRL operator"], 0)
+
+pl_multiple_operators_vs_multiple_labs_cov_factor <- round(named_pl_covs["41 operators from different laboratories"] / named_pl_covs["8 individual RRL operators"], 0)
+
+
+

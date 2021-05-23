@@ -18,11 +18,8 @@ Many parties stand to benefit from research on baseball fields because the game 
 
 **The goals of my thesis are twofold:**
 
-1. create a new way to assess infield soil performance
-
-and 
-
-2. use the new framework to design improved soil mixtures. 
+1. Create a new way to assess infield soil performance
+2. Use the new framework to design improved soil mixtures
 <!-- **I seek to answer these open-ended questions:** -->
 
 <!-- 1. How can infield soil performance be measured? -->
@@ -31,14 +28,12 @@ and
 
 These may be re-stated as formal objectives:
 
-1) Develop a laboratory method to pinpoint each of the two critical water contents for any infield soil:
-    
-    a) the transition from cleat-in/cleat-out behavior to chip-forming or clod-forming failure
-    
+1. Develop a laboratory method to pinpoint each of the two critical water contents for any infield soil:
+    a) the transition from cleat-in/cleat-out yield to chip-forming or clod-forming failure
     b) the threshold at which the soil cannot provide adequate resistance for safe footing
     
-2) Demonstrate that the difference between 1(a) and 1(b) can be extended by systematically varying the components of a soil mixture. 
+2. Demonstrate that the difference between 1(a) and 1(b) can be extended by systematically varying the components of a soil mixture. 
 
-3) Determine the optimal means of predicting a soil's performance through laboratory testing.
+3. Determine the optimal means of predicting a soil's performance through laboratory testing.
 
 

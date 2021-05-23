@@ -1,0 +1,61 @@
+## Dissertation chapter 4: A critical appraisal of particle size analysis as a proxy for infield soil behavior
+
+### Principal research questions 
+
+1. Can particle size distribution (PSD) be accurately measured using a range of laboratory techniques?
+  
+  2. Does the increased PSD resolution from laser diffraction provide useful information about an infield mix?
+  
+  2. What particle size metrics are the best and worst predictors of infield performance?
+  
+  ### Hypotheses 
+  
+  1. Specimen pre-treatment will drastically alter the results of a particle size test. This uncertainty is associated with the test protocol and is independent of operator performance. The hydrometer and pipette yield similar results, but the laser diffraction method requires an empirical correlation to permit comparison with older methods. The most important step is the physical disaggregation of the soil; ultrasonic dispersion will yield higher clay percentages than stirring or shaking methods. 
+2. Laser diffraction allows rapid analyses of more size fractions than sedimentation analyses, and the amount of fine clay will correlate with infield performance. 
+3. Even with the larger dataset produced with laser diffraction, considering the silt and clay fractions will correlate only loosely with infield performance as measured in  
+
+### Materials and methods 
+
+#### Experiment 1
+
+5 soils will be tested using 3 pre-treatment protocols: 
+  
+  1. ASTM D7928; milkshake mixer method [@ASTMD79282017]
+
+2. ASTM D7928; overnight shaker method [@ASTMD79282017]
+
+3. ASTM D7928; ultrasonic dispersion method [@ASTMD79282017]
+
+These will each be sampled with the pipette method, considered the standard technique for mechanical analysis in soil science [@Gee2002].
+
+Soils dispersed with method (3) will also be subjected to 4 additional sampling methods:
+  
+  1. pipette analysis with samples removed at 20, 5, 2, and 0.2 &mu;m equivalent spherical diameters; sand tested with sieve method
+
+2. hydrometer analysis with measurements taken for 20, 5, and 2 &mu;m equivalent spherical diameters; sand tested with sieve method
+
+3. laser diffraction analysis for fine fraction and either: 
+  
+  a. sand fraction analyzed with sieve method
+
+b. sand fraction analyzed with dry laser diffraction method
+
+```{r particle-size-experiments-sample-number-calculation, echo=FALSE, eval=TRUE}
+n_soils <- 5
+n_psa_reps <- 5
+n_dispersion_treatments <- 3
+n_sampling_methods <- 4
+
+n_total_tests <- n_soils*n_dispersion_treatments*n_psa_reps + n_soils*n_sampling_methods*n_psa_reps
+
+```
+
+
+All tests will be replicated `r n_psa_reps` times to allow statistical comparison. 
+
+The author has already developed software for the data management and analysis tasks involved for these experiments. The data can be batch-analyzed, reducing the time for data processing to virtually zero. 
+In total, these experiments sum to `r n_total_tests` total analyses. 
+
+### Timeline
+
+These experiments will be conducted throughout 2021, primarily during the summer and early fall. Current lab capacity is to test 12 specimens per workday, so the experiments equate to `r round(n_total_tests/12, 0)` full days of testing. 
