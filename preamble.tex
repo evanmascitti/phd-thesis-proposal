@@ -11,6 +11,19 @@
 
 % extras that I am testing come below 
 
+% define navy as a link color and use it for internal links
+\usepackage{xcolor}
+\definecolor{dodgerblue4}{HTML}{104E8B}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=dodgerblue4
+}
+
+% \linkcolor{navy}
+
 
 % Use the section numbers instead of titles because some of 
 % my sections are spilling off the page 
@@ -101,9 +114,13 @@
 % for solution
 \usepackage{framed}
 
-% change bar size to 0.5 pt instead of the default 3 pt
 
-\renewenvironment{leftbar}{\def\FrameCommand{\vrule width 1pt \hspace{10pt}}\MakeFramed {\advance\hsize-\width \FrameRestore}}{\endMakeFramed}
+% define R's grey30 color in HTML hex notation
+\definecolor{grey30}{HTML}{4D4D4D}
+
+% change bar size to 0.5 pt instead of the default 3 pt
+% use the newly defined grey color 
+\renewenvironment{leftbar}{\def\FrameCommand{\color{grey30}\vrule width 1pt \hspace{10pt}}\MakeFramed {\advance\hsize-\width \FrameRestore}}{\endMakeFramed}
 
 % for multi-paragraph quotations 
 % \renewenvironment{quotation}%

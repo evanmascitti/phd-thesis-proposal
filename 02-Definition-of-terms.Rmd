@@ -13,37 +13,27 @@ suppressPackageStartupMessages({
 ```
 
 
+<!-- The list is generated using the code below and a csv file which contains the definitions.  -->
+
+<!-- This allows me to keep the list in order and make the best use of  -->
+<!-- Pandoc's built-in definition list feature which easily translates to LaTeX. -->
+
 ```{r make-def-of-terms, results='asis'}
-thesis_terms <-readr::read_csv('./data/lit-review-data/tables/proposal-definition-of-terms.csv',
-                                   na = '',
-                               col_types = 'cc') %>% 
-  dplyr::filter(dplyr::if_all(everything(), ~!is.na(.))) %>% 
-  dplyr::arrange(term) %>% 
-  dplyr::mutate(term = paste0("**", term, "**:")) %>% 
+thesis_terms <- readr::read_csv(
+  './data/lit-review-data/tables/proposal-definition-of-terms.csv',
+  na = '',
+  col_types = 'cc'
+) %>%
+  dplyr::filter(dplyr::if_all(everything(), ~ !is.na(.))) %>%
+  dplyr::arrange(term) %>%
+  dplyr::mutate(term = paste0("**", term, "**:")) %>%
   dplyr::mutate(entry = paste0(term, "\n\n", ":  ", definition, "\n\n"))
 
 # this is it right here !! 
+# Print the table out; it will be treated as Markdown text and inserted 
+# into the document
 cat(thesis_terms$entry)
 ```
 
 
 
-
-
-<!-- **clay**  -->
-<!-- :  a soil material which can be reshaped or molded when moist and which retains develops high strength when dry -->
-
-<!-- **clay-size** -->
-<!-- :  an individual mineral grain which settles in through a column of fluid at the same rate as a spherical particle having 2 &mu;m diameter -->
-
-<!-- **sand** -->
-<!-- :  a soil material which is predominantly composed of mineral particles having sieve diameters between 53 and 2000 &mu;m -->
-
-<!-- **sand-size** -->
-<!-- :  a soil material which is predominantly composed of mineral particles having sieve diameters between 53 and 2000 &mu;m -->
-
-<!-- **packing fraction** -->
-<!-- :  the volume fraction occupied by solids, normalized to the total soil volume (1-void fraction); $V_{s}$ -->
-
-<!-- **void fraction** -->
-<!-- :  the volume fraction _not_ occupied by solids, normalized to the total soil volume (1-packing fraction); $V_{v}$ -->

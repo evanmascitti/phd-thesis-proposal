@@ -78,7 +78,7 @@ LL_sd <- round(sd(LL_reps$water_content), 3)
 #                      breaks = scales::breaks_width(0.01))+
 #   cowplot::theme_minimal_hgrid(font_size = 12, color = 'black')+
 #   ggplot2::labs(title = expression('Expected uncertainty around'~italic(w)~'for a single LL point'),
-#                 subtitle = 'Points represent replicate determinations from the same bowl of homogenously-mixed soil')+
+#                 subtitle = 'Points represent replicate determinations from the same bowl of homogenously-mixed soil.')+
 #   ggplot2::theme(
 #     panel.grid = element_blank(),
 #     axis.text.y = element_blank(),

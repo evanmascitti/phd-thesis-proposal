@@ -1,5 +1,5 @@
 
-# Workflow, reproducibility, and data management 
+# Workflow, reproducibility, and data management {#workflow}
 
 This section is a brief, non-technical manifesto about what I am learning in graduate school - besides soil science.
 The majority of this proposal has focused on the specifics of the research project I have undertaken.
@@ -107,14 +107,16 @@ R Markdown also supports the inclusion of raw \LaTeX{} or HTML sytnax.
 
 ## Package testing 
 
-Since I do many particular analyses repeatedly it is useful to make the functions re-usable. 
-Instead of copy-pasting a script every time I want to do a similar particle-size analysis, I wrote my own package of functions in R. 
-This also makes the code very easy to share with others - instead of providing very detailed instructions about how to use the script -- with the possibility of breaking file paths, etc. -- they can simply call `devtools::install_github(evanmascitti/soiltestr)`
-One challenge is that by adding new functions or making changes, it is possible to break existing code. 
-To prevent this from happening I write re-usable tests for any new functions using the **testthat** package in R [@Wickham2011]. 
-Then before making the changes permanent, I can re-run all the tests to ensure the existing functions are still behaving the way they are supposed to. 
+Since I do many particular analyses repeatedly, it is a good idea to make the functions re-usable. 
+Instead of copy-pasting a script and then changing one or two things in it, I write my own R packages. 
+This also makes the code very easy to share with others - instead of providing very detailed instructions about how to use the script -- with the possibility of breaking file paths, etc. -- the other person can simply call (for example) `devtools::install_github(evanmascitti/soiltestr)`.
+
+One challenge in package development is that by adding new functions or making changes, it is possible to break existing code. 
+To prevent this from happening I write re-usable tests for any new functions using the **testthat** package in R [@R-testthat]. 
+Before making the changes permanent, I can simply call `devtools::test()` to re-run all the tests - this ensure the existing functions are still behaving the way they are supposed to. 
 For example, I recently added a function to handle pre-treatment corrections for particle size analysis. 
-I have a test that checks a particular analysis returns a clay content of 26.2%. If the function returns something different, I immediately know that something has broken and I can fix it right away before the issue is buried or forgotten about. 
+I have a test that checks a particular sample data file returns a clay content of 26.2%. 
+If the function returns something different, I immediately know that something has broken and I can fix it right away before the issue is buried or forgotten. 
 
 ## Pipeline automation 
 
@@ -132,8 +134,14 @@ However `Make` is also an excellent tool for automating data analysis pipelines.
 
 The core concept behind `Make` is simple: it builds _target_ files from _prerequisites_ using a _recipe_. 
 Once the user has written a plain-text file known as a `Makefile`, `Make` watches for changes in the prerequisite files.
-It then builds a dependency graph and ensures that all target files are kept up to date.
-If a dependncy file changes, `Make` automatically re-builds any outputs which use that file - but it will not touch other files that are already up-to-date.
+It then builds a dependency graph (Figure \@ref(fig:example-make-dependency-graph)) and ensures that all target files are kept up to date.
+If a dependency file changes, `Make` automatically re-builds any outputs which use that file - but it will not touch other files that are already up-to-date.
+This might seem really complicated, but I would argue it is a lot less complicated than having to _remember_ how all the components of a project fit together. I much prefer to define the process explicitly and let the computer handle the "remembering."
+
+```{r example-make-dependency-graph, out.width='90%', fig.align='center'}
+knitr::include_graphics('./example-mf-project/dependency-graph.png')
+```
+
 
 As an example, this proposal includes many figures, each which depend on raw data and an R script. 
 The very same figures may be used in other places - say, a presentation for students, a presentation for my PhD committee, and a manuscript. 

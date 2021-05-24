@@ -27,8 +27,8 @@ mainfont: Arial
 # mathfont: "TeX Gyre DejaVu Math"
 mathfont: Fira Math Regular
 # codefont: Lucida Console
-urlcolor: blue
-linkcolor: blue
+# urlcolor: blue
+# linkcolor: blue
 citecolor: blue
 toccolor: blue
 # toc-depth: 3
@@ -36,8 +36,26 @@ lof: true
 lot: true
 ---
 
-# Overview {#overview}
 
+# Executive summary
+
+
+
+This document outlines the research progress I have made since beginning my PhD in 2019 and describes my plans for completing the project.
+
+It is divided into 3 main sections:
+
+[**Purpose and objectives**](#purpose-objectives): A broad description of the scope and aims of the project.
+
+[**Review of literature**](#lit-review): Summary of scientific research relevant to my project. Includes 3 major sub-sections: (1)  pertaining to baseball/softball fields, (2) laboratory soil testing methods, and (3) the behavior of artificial soil mixtures.
+
+[**Proposed experiments**](#proposed-experiments): The planned course of laboratory research, organized as anticipated publication units.
+
+
+In addition, I have included two shorter sections: a definition of terms (Section \@ref(definition-of-terms)) (since many have different meanings across scientific fields) and a description of my workflow and data management plan (Section \@ref(workflow)). 
+The latter is written informally. It has nothing to do with the technical/soils aspects of my research, but I've included it because it comprises an important practical part of completing my degree.
+
+The proposal concludes with an Appendix housing a few tables and my References.
 
 ```{r setup, include=FALSE}
 
@@ -47,23 +65,3 @@ knitr::opts_chunk$set(message=FALSE,
                       warning = FALSE)
 
 ```
-
-Baseball fields are built from soil. Therefore, soil behavior determines the safety and function of the field. The purpose of this dissertation is to assess and improve the behavior of soil mixtures used on baseball infields. 
-
-The production of soil mixtures has received much study. However, there are no published experiments on this topic as it pertains to baseball and
-softball fields.
-
-This thesis proposal is organized into four sections:
-
-[**Purpose and objectives**](#purpose-objectives): A broad description of the scope and aims of the project
-
-[**Definition of terms**](#definition-of-terms): Explicit meanings of verbiage used this document (these may vary across scientific fields)
-
-[**Review of literature**](#lit-review): A summary of scientific research pertaining to baseball/softball fields, laboratory soil testing methods, and the behavior of artificial soil mixtures
-
-[**Proposed experiments**](#proposed-experiments): The planned course of laboratory research, organized as anticipated publication units
-
-
-
-
-

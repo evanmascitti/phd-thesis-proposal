@@ -1,0 +1,15 @@
+all: paper proposal presentation1 presentation2
+
+paper: fig-1.pdf fig-2.pdf paper.Rmd
+
+proposal: fig-1.pdf fig-2.pdf proposal.Rmd
+
+presentation1: fig-1.pdf fig2.pdf presentation1.Rmd
+
+presentation2: fig-2.pdf presentation2.Rmd
+
+clean-data.csv: raw-data.csv data-cleaning.R
+
+fig1.pdf: clean-data.csv fig-1.R
+
+fig2.pdf: clean-data.csv fig-2.R

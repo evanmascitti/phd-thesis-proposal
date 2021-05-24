@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.5.17)  22 MAY 2021 23:41
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.5.17)  24 MAY 2021 17:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -950,6 +950,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks25
 \@floatcapt=\box60
 )
+Package hyperref Info: Option `colorlinks' set `true' on input line 143.
+
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr
 .sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
@@ -1072,43 +1074,40 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \csllabelwidth=\skip79
 (./phd-thesis-proposal.aux
 
-LaTeX Warning: Label `r-markdown-finished-output' multiply defined.
-
-
 LaTeX Warning: Label `tab:labor-per-area-tab' multiply defined.
 
 )
 \openout1 = `phd-thesis-proposal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 310.
-LaTeX Font Info:    ... okay on input line 310.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 310.
-LaTeX Font Info:    ... okay on input line 310.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 310.
-LaTeX Font Info:    ... okay on input line 310.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 310.
-LaTeX Font Info:    ... okay on input line 310.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 310.
-LaTeX Font Info:    ... okay on input line 310.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 310.
-LaTeX Font Info:    ... okay on input line 310.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 310.
-LaTeX Font Info:    ... okay on input line 310.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 310.
-LaTeX Font Info:    ... okay on input line 310.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 310.
-LaTeX Font Info:    ... okay on input line 310.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 310.
-LaTeX Font Info:    ... okay on input line 310.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 310.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 327.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 310.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 327.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 310.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 327.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 310.
-Package hyperref Info: Link coloring ON on input line 310.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 327.
+Package hyperref Info: Link coloring ON on input line 327.
 
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.
 sty
@@ -1124,9 +1123,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count328
 )
-LaTeX Info: Redefining \ref on input line 310.
-LaTeX Info: Redefining \pageref on input line 310.
-LaTeX Info: Redefining \nameref on input line 310.
+LaTeX Info: Redefining \ref on input line 327.
+LaTeX Info: Redefining \pageref on input line 327.
+LaTeX Info: Redefining \nameref on input line 327.
 (./phd-thesis-proposal.out) (./phd-thesis-proposal.out)
 \@outlinefile=\write4
 \openout4 = `phd-thesis-proposal.out'.
@@ -1171,38 +1170,38 @@ Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 312.
+(Font)              scaled to size 17.28pt on input line 329.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 312.
+(Font)              scaled to size 12.0pt on input line 329.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 11.80774pt on input line 312.
+(Font)              scaled to size 11.80774pt on input line 329.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 7.87183pt on input line 312.
+(Font)              scaled to size 7.87183pt on input line 329.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 5.90387pt on input line 312.
+(Font)              scaled to size 5.90387pt on input line 329.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-12.
+29.
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 11.80884pt on input line 312.
+(Font)              scaled to size 11.80884pt on input line 329.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 7.87256pt on input line 312.
+(Font)              scaled to size 7.87256pt on input line 329.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 5.90442pt on input line 312.
+(Font)              scaled to size 5.90442pt on input line 329.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 11.80646pt on input line 312.
+(Font)              scaled to size 11.80646pt on input line 329.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 7.87097pt on input line 312.
+(Font)              scaled to size 7.87097pt on input line 329.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 5.90323pt on input line 312.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 312
+(Font)              scaled to size 5.90323pt on input line 329.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 329
 .
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 312
+LaTeX Font Info:    Trying to load font information for U+msb on input line 329
 .
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1211,9 +1210,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 316.
+(Font)              scaled to size 24.88pt on input line 333.
 LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 316.
+(Font)              scaled to size 24.88pt on input line 333.
 (./phd-thesis-proposal.toc
 LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
 (Font)              scaled to size 10.0pt on input line 1.
@@ -1241,9 +1240,9 @@ LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
 
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/sl' in size <10> not available
 (Font)              Font shape `TU/Arial(0)/m/it' tried instead on input line 3
-18.
+35.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 318.
+(Font)              scaled to size 10.0pt on input line 335.
 [3] (./phd-thesis-proposal.lot)
 \tf@lot=\write6
 \openout6 = `phd-thesis-proposal.lot'.
@@ -1259,11 +1258,11 @@ LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
 [6]
 Section 1.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 20.74pt on input line 322.
+(Font)              scaled to size 20.74pt on input line 339.
 LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 20.74pt on input line 322.
+(Font)              scaled to size 20.74pt on input line 339.
 
-Underfull \hbox (badness 1127) in paragraph at lines 337--338
+Underfull \hbox (badness 1127) in paragraph at lines 349--350
 [][][]\TU/Arial(0)/b/n/10 Proposed experiments[][]\TU/Arial(0)/m/n/10 : The pla
 nned course of laboratory research, organized as
  []
@@ -1273,11 +1272,11 @@ nned course of laboratory research, organized as
 ]
 Section 2.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 343.
+(Font)              scaled to size 14.4pt on input line 360.
 LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 343.
+(Font)              scaled to size 14.4pt on input line 360.
 
-Underfull \hbox (badness 1975) in paragraph at lines 379--381
+Underfull \hbox (badness 1975) in paragraph at lines 396--398
 []\TU/Arial(0)/m/n/10 Demonstrate that the difference between 1(a) and 1(b) can
  be extended by
  []
@@ -1287,38 +1286,33 @@ Underfull \hbox (badness 1975) in paragraph at lines 379--381
 ]
 Section 3.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 7.2pt on input line 395.
+(Font)              scaled to size 7.2pt on input line 418.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 5.8pt on input line 395.
+(Font)              scaled to size 5.8pt on input line 418.
 [9
 
 ]
 Section 4.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 439.
+(Font)              scaled to size 8.0pt on input line 464.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 4.91989pt on input line 439.
+(Font)              scaled to size 4.91989pt on input line 464.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 4.92035pt on input line 439.
+(Font)              scaled to size 4.92035pt on input line 464.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 4.91936pt on input line 439.
+(Font)              scaled to size 4.91936pt on input line 464.
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 439.
+(Font)              scaled to size 6.0pt on input line 464.
 [10
 
 ]
-File: images/illustrations/player_locations/player_locations.pdf Graphic file (
-type pdf)
-<use images/illustrations/player_locations/player_locations.pdf>
-
-Overfull \hbox (72.30469pt too wide) in paragraph at lines 444--444
-[][] 
- []
-
+File: images/illustrations/player-locations/player-locations.ai Graphic file (t
+ype pdf)
+<use images/illustrations/player-locations/player-locations.ai>
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 444.
+(Font)              scaled to size 9.0pt on input line 469.
 LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 444.
+(Font)              scaled to size 9.0pt on input line 469.
 File: Problem-description_files/figure-latex/batted-ball-density-1.pdf Graphic 
 file (type pdf)
 <use Problem-description_files/figure-latex/batted-ball-density-1.pdf>
@@ -1332,19 +1326,14 @@ ype pdf)
 File: images/illustrations/cleatmarks/corkboard_concept.png Graphic file (type 
 bmp)
 <images/illustrations/cleatmarks/corkboard_concept.png>
-
-Overfull \hbox (72.51067pt too wide) in paragraph at lines 497--497
-[][] 
- []
-
-[13] [14]
+[13]
 LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 535.
-[15] [16]
+(Font)              scaled to size 12.0pt on input line 554.
+[14] [15]
 Section 5.
-[17
+[16
 
-] [18]
+] [17]
 File: 03-Review-of-Literature_files/figure-latex/lit-review-density-comparison-
 1.pdf Graphic file (type pdf)
 <use 03-Review-of-Literature_files/figure-latex/lit-review-density-comparison-1
@@ -1355,27 +1344,48 @@ le (type pdf)
 File: images/illustrations/ball_indentation/ball_indentation_1_panel.png Graphi
 c file (type bmp)
 <images/illustrations/ball_indentation/ball_indentation_1_panel.png>
-[19] [20]
-Underfull \hbox (badness 6625) in paragraph at lines 684--684
+[18] [19]
+Underfull \hbox (badness 6625) in paragraph at lines 717--717
 []\TU/Arial(0)/b/n/14.4 Laboratory tests of soil behavior and physical
  []
 
+[20]
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 705.
+(Font)              scaled to size 8.0pt on input line 738.
+File: 03-Review-of-Literature_files/figure-latex/example-phase-diagram-1.pdf Gr
+aphic file (type pdf)
+<use 03-Review-of-Literature_files/figure-latex/example-phase-diagram-1.pdf>
 [21] [22]
-Underfull \hbox (badness 2150) in paragraph at lines 758--760
+Underfull \hbox (badness 2150) in paragraph at lines 825--827
 \TU/Arial(0)/m/n/8 sizes…these treatments, however, add significant time and ef
 fort when performing the
  []
 
+LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
+(Font)              scaled to size 8.0pt on input line 833.
 [23] [24]
-Underfull \hbox (badness 2753) in paragraph at lines 859--861
+Underfull \hbox (badness 2753) in paragraph at lines 926--928
 [] \TU/Arial(0)/m/n/8 “Every engineer should develop the habit of expressing th
 e plasticity and grain-size
  []
 
-[25] [26]
-Underfull \hbox (badness 5578) in paragraph at lines 935--939
+[25]
+File: ./figs/png/example-LL-combined-panels.png Graphic file (type bmp)
+<./figs/png/example-LL-combined-panels.png>
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
+(Font)              scaled to size 8.8558pt on input line 961.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
+(Font)              scaled to size 8.85663pt on input line 961.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
+(Font)              scaled to size 8.85484pt on input line 961.
+[26]
+File: figs/png/example-pl-threads-panels.png Graphic file (type bmp)
+<figs/png/example-pl-threads-panels.png>
+
+Underfull \vbox (badness 5726) has occurred while \output is active []
+
+[27]
+Underfull \hbox (badness 5578) in paragraph at lines 1020--1024
 [][][]\TU/Arial(0)/m/n/10 Sherwood[][] ([][]1970[][]) conducted an extensive in
 vestigation on the repeatability and
  []
@@ -1384,7 +1394,7 @@ File: 03-Review-of-Literature_files/figure-latex/sherwood-overall-comparison-1.
 pdf Graphic file (type pdf)
 <use 03-Review-of-Literature_files/figure-latex/sherwood-overall-comparison-1.p
 df>
-[27] [28]
+[28] [29]
 File: 03-Review-of-Literature_files/figure-latex/sherwood-cov-comparison-1.pdf 
 Graphic file (type pdf)
 <use 03-Review-of-Literature_files/figure-latex/sherwood-cov-comparison-1.pdf>
@@ -1392,152 +1402,152 @@ File: 03-Review-of-Literature_files/figure-latex/sherwood-cone-cup-comparison-1
 .pdf Graphic file (type pdf)
 <use 03-Review-of-Literature_files/figure-latex/sherwood-cone-cup-comparison-1.
 pdf>
-[29] [30] [31]
+[30] [31] [32]
 File: figs/pdf/LL-w-uncertainty-for-a-single-point.pdf Graphic file (type pdf)
 <use figs/pdf/LL-w-uncertainty-for-a-single-point.pdf>
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 8.8558pt on input line 1071.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 8.85663pt on input line 1071.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 8.85484pt on input line 1071.
 
-Underfull \hbox (badness 2126) in paragraph at lines 1082--1088
+Underfull \hbox (badness 2126) in paragraph at lines 1188--1194
 \TU/Arial(0)/m/n/10 Most attempts to improve the plastic limit test have focuse
 d on mechanizing the
  []
 
-[32]
+[33]
+File: ./images/barnes-apparatus.png Graphic file (type bmp)
+<./images/barnes-apparatus.png>
+[34]
 File: ./images/moreno-marato-bending-limit-procedure.png Graphic file (type bmp
 )
 <./images/moreno-marato-bending-limit-procedure.png>
-[33]
+[35]
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 1152.
+(Font)              scaled to size 10.0pt on input line 1272.
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 7.2pt on input line 1152.
+(Font)              scaled to size 7.2pt on input line 1272.
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 5.8pt on input line 1152.
-[34] [35]
-Underfull \hbox (badness 1648) in paragraph at lines 1215--1216
+(Font)              scaled to size 5.8pt on input line 1272.
+[36] [37]
+Underfull \hbox (badness 1648) in paragraph at lines 1338--1339
 []\TU/Arial(0)/m/n/10 The language above suggests Casagrande favored the use of
  a direct toughness
  []
 
-[36]
+
+Underfull \hbox (badness 2103) in paragraph at lines 1363--1364
+\TU/Arial(0)/m/n/10 fine-grained soils based on their toughness equation (Figur
+e [][]5.13[][]) and qualitative
+ []
+
 File: 03-Review-of-Literature_files/figure-latex/moreno-maroto-chart-1.pdf Grap
 hic file (type pdf)
 <use 03-Review-of-Literature_files/figure-latex/moreno-maroto-chart-1.pdf>
 
-Underfull \hbox (badness 3219) in paragraph at lines 1239--1239
+Underfull \hbox (badness 3219) in paragraph at lines 1371--1371
 \TU/Arial(0)/m/n/9 Toughness data from Barnes (2013) and the empirical equation
  from Moreno-Maroto and
  []
 
-[37]
-Underfull \hbox (badness 2237) in paragraph at lines 1273--1273
+[38] [39]
+Underfull \hbox (badness 2237) in paragraph at lines 1409--1409
 []\TU/Arial(0)/b/n/12 Summary: laboratory tests of soil behavior and physical
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[38]
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 1291.
+(Font)              scaled to size 8.0pt on input line 1425.
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 1291.
+(Font)              scaled to size 6.0pt on input line 1425.
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 1291.
-LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 1291.
+(Font)              scaled to size 5.0pt on input line 1425.
 
-LaTeX Warning: Reference `tab:soil-mixture-study-list' on page 39 undefined on 
-input line 1303.
+LaTeX Warning: Reference `tab:soil-mixture-study-list' on page 40 undefined on 
+input line 1437.
 
-[39] [40]
-Underfull \hbox (badness 1014) in paragraph at lines 1350--1351
+[40] [41]
+Underfull \hbox (badness 1014) in paragraph at lines 1485--1486
 \TU/Arial(0)/m/n/10 include: calculations from phase relations and index proper
 ties ([][]Lade et al., 1998[][];
  []
 
-[41]
-Underfull \hbox (badness 1158) in paragraph at lines 1422--1425
+[42]
+Underfull \hbox (badness 1158) in paragraph at lines 1557--1560
  []\TU/Arial(0)/b/n/10 Intergranular void ratio[] \TU/Arial(0)/m/n/10 A second 
 mathematical means to define the TFC is the
  []
 
 
-Underfull \hbox (badness 1038) in paragraph at lines 1439--1440
+Underfull \hbox (badness 1038) in paragraph at lines 1574--1575
  []\TU/Arial(0)/b/n/10 Effect of coarse/fine particle size ratio[] \TU/Arial(0)
 /m/n/10 The analytical solutions described above
  []
 
-[42]
+[43]
 File: images/illustrations/Lade_1998_Figure_7/Lade_1998_Figure_7.pdf Graphic fi
 le (type pdf)
 <use images/illustrations/Lade_1998_Figure_7/Lade_1998_Figure_7.pdf>
-[43]
-Underfull \hbox (badness 1072) in paragraph at lines 1493--1499
+[44]
+Underfull \hbox (badness 1072) in paragraph at lines 1633--1639
 \TU/Arial(0)/m/n/10 experiments on artificial soil mixtures probably have less 
 practical significance than
  []
 
-[44]
+[45]
 Missing character: There is no 𝜇 (U+1D707) in font Arial/OT:script=latn;languag
 e=dflt;!
-[45] [46]
-Underfull \hbox (badness 1348) in paragraph at lines 1583--1589
+[46] [47]
+Underfull \hbox (badness 1348) in paragraph at lines 1723--1729
 \TU/Arial(0)/m/n/10 The uniformity of sand included in soil mixtures has not be
 en studied extensively.
  []
 
-[47] [48] [49]
+[48] [49] [50] [51]
 Section 6.
-[50
+[52
 
 ]
 File: images/cleatmark_device.png Graphic file (type bmp)
 <images/cleatmark_device.png>
 File: images/nine-spike-pattern.jpg Graphic file (type bmp)
 <images/nine-spike-pattern.jpg>
-[51] [52]
-Overfull \hbox (20.61223pt too wide) in paragraph at lines 1826--1827
+
+Overfull \hbox (1.84236pt too wide) in paragraph at lines 1878--1878
+[][] [] 
+ []
+
+[53] [54]
+Overfull \hbox (20.61223pt too wide) in paragraph at lines 1990--1991
 []\TU/Arial(0)/m/n/10 Note that because $[][]$ and $[][]$ are referenced to dif
 ferent soils, $[][] [] []  [][][] [] []  [][][]$ 
  []
 
-[53] [54] [55]
+[55] [56] [57]
 File: ../../cleatmarkmethod/figs/pdf/proctor-vs-observed-infield-density.pdf Gr
 aphic file (type pdf)
 <use ../../cleatmarkmethod/figs/pdf/proctor-vs-observed-infield-density.pdf>
-[56]
 File: ../../cleatmarkmethod/figs/pdf/deriving-proctor-values.pdf Graphic file (
 type pdf)
 <use ../../cleatmarkmethod/figs/pdf/deriving-proctor-values.pdf>
 LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 1950.
+(Font)              scaled to size 9.0pt on input line 2113.
 
-LaTeX Warning: Reference `fig:proctor-vs-cleat-mark-cyls-photo' on page 57 unde
-fined on input line 1960.
+LaTeX Warning: Reference `fig:proctor-vs-cleat-mark-cyls-photo' on page 58 unde
+fined on input line 2123.
 
+[58]
 File: ../../cleatmarkmethod/photos-and-screen-recordings/resin-plug.jpg Graphic
  file (type bmp)
 <../../cleatmarkmethod/photos-and-screen-recordings/resin-plug.jpg>
-[57]
+[59]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[58] [59]
+[60]
 File: ../../cleatmarkmethod/figs/pdf/proctor-vs-qc-density-comparison.pdf Graph
 ic file (type pdf)
 <use ../../cleatmarkmethod/figs/pdf/proctor-vs-qc-density-comparison.pdf>
-[60]
-Underfull \hbox (badness 2285) in paragraph at lines 2101--2104
+[61] [62]
+Underfull \hbox (badness 2285) in paragraph at lines 2263--2266
 []\TU/Arial(0)/m/n/10 Proper configuration of the drying apparatus was determin
 ed through a series of
  []
 
-[61]
 File: ./images/heat-lamps.jpg Graphic file (type bmp)
 <./images/heat-lamps.jpg>
 File: 04-Proposed-experiments_files/figure-latex/water-content-change-by-lamp-h
@@ -1550,330 +1560,304 @@ File: ../../cleatmarkmethod/figs/manually-built/drydown-surface-temp-comparison
 .png Graphic file (type bmp)
 <../../cleatmarkmethod/figs/manually-built/drydown-surface-temp-comparison.png>
 
-[62] [63]
+[63] [64] [65]
 File: images/sand-replacement-and-scanner-mini-density-composite.png Graphic fi
 le (type bmp)
 <images/sand-replacement-and-scanner-mini-density-composite.png>
-[64]
+[66]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2220.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2382.
 File: ../../cleatmarkmethod/figs/pdf/mini-plug-density-comp.pdf Graphic file (t
 ype pdf)
 <use ../../cleatmarkmethod/figs/pdf/mini-plug-density-comp.pdf>
-[65] [66]
-
-LaTeX Warning: Reference `fig:scanner-markers' on page 67 undefined on input li
-ne 2295.
-
 [67] [68]
+
+LaTeX Warning: Reference `fig:scanner-markers' on page 69 undefined on input li
+ne 2457.
+
+[69] [70]
 File: ../../cleatmarkmethod/figs/pdf/z-histogram.pdf Graphic file (type pdf)
 <use ../../cleatmarkmethod/figs/pdf/z-histogram.pdf>
 File: ../../cleatmarkmethod/figs/manually-built/processing-pipeline-panel.png G
 raphic file (type bmp)
 <../../cleatmarkmethod/figs/manually-built/processing-pipeline-panel.png>
 
-LaTeX Warning: Reference `fig:decimation-titration-surface-area' on page 69 und
-efined on input line 2386.
+LaTeX Warning: Reference `fig:decimation-titration-surface-area' on page 71 und
+efined on input line 2548.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[69] [70]
+[71] [72]
 File: ./figs/pdf/example-w-crit-curve.pdf Graphic file (type pdf)
 <use ./figs/pdf/example-w-crit-curve.pdf>
-[71]
+[73]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[72] [73]
+[74] [75]
 File: 04-Proposed-experiments_files/figure-latex/sand-content-clustering-1.pdf 
 Graphic file (type pdf)
 <use 04-Proposed-experiments_files/figure-latex/sand-content-clustering-1.pdf>
 
-Underfull \hbox (badness 1043) in paragraph at lines 2545--2546
+Underfull \hbox (badness 1043) in paragraph at lines 2706--2707
 []\TU/Arial(0)/b/n/10 Varying silt-to-clay ratio: \TU/Arial(0)/m/n/10 The same 
 fine-grained soils from (1) will each be
  []
 
-[74]
-Underfull \hbox (badness 3919) in paragraph at lines 2579--2580
+[76]
+Underfull \hbox (badness 3919) in paragraph at lines 2740--2741
 \TU/Arial(0)/m/n/10 Paper title: \TU/Arial(0)/b/n/10 Toughness-water content re
 lations of clay soils via unconfined
  []
 
-[75]
-Underfull \hbox (badness 1097) in paragraph at lines 2617--2618
+[77]
+Underfull \hbox (badness 1097) in paragraph at lines 2778--2779
 []\TU/Arial(0)/m/n/10 Clays with higher maximum toughness will require more san
 d to reduce their
  []
 
-[76]
+[78]
 File: images/gilson_stock_proctor_extruder_photo.jpg Graphic file (type bmp)
 <images/gilson_stock_proctor_extruder_photo.jpg>
 File: ./images/barnes-example-toughness-vs-w-plot.png Graphic file (type bmp)
 <./images/barnes-example-toughness-vs-w-plot.png>
-[77] [78] [79] [80]
-Underfull \hbox (badness 1189) in paragraph at lines 2819--2821
-\TU/Arial(0)/m/n/10 notebooks, Microsoft Excel, Microsoft Word, Google docs, Ev
-ernote, and Microsoft
- []
-
-[81]
-Underfull \hbox (badness 1082) in paragraph at lines 2854--2858
-\TU/Arial(0)/m/n/10 I generate reports, presentations, and papers with the \TU/
-Arial(0)/b/n/10 rmarkdown \TU/Arial(0)/m/n/10 package ([][]$[][][][][] []
- []
-
-[82] [83] [84]
+[79] [80] [81] [82]
 Section 7.
-[85
+[83
 
 ]
-Underfull \hbox (badness 1189) in paragraph at lines 2989--2991
+Underfull \hbox (badness 1189) in paragraph at lines 2994--2996
 \TU/Arial(0)/m/n/10 notebooks, Microsoft Excel, Microsoft Word, Google docs, Ev
 ernote, and Microsoft
  []
 
-[86]
-Underfull \hbox (badness 1082) in paragraph at lines 3027--3032
+
+Underfull \vbox (badness 1097) has occurred while \output is active []
+
+[84]
+Underfull \hbox (badness 1082) in paragraph at lines 3032--3037
 \TU/Arial(0)/m/n/10 I generate reports, presentations, and papers with the \TU/
 Arial(0)/b/n/10 rmarkdown \TU/Arial(0)/m/n/10 package ([][]$[][][][][] []
  []
 
-[87] [88]
+[85]
+
+LaTeX Warning: Reference `fig:example-make-dependency-graph' on page 86 undefin
+ed on input line 3076.
+
+[86]
+File: ./example-mf-project/dependency-graph.png Graphic file (type bmp)
+<./example-mf-project/dependency-graph.png>
 File: images/xkcd-files.png Graphic file (type bmp)
 <images/xkcd-files.png>
-[89] [90]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[87] [88] [89]
 Section 8.
 
-Overfull \hbox (23.87923pt too wide) in alignment at lines 3126--3131
+Overfull \hbox (23.87923pt too wide) in alignment at lines 3146--3151
  [] [] [] [] [] 
  []
 
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 3132.
+(Font)              scaled to size 9.0pt on input line 3152.
 
-Overfull \hbox (23.87923pt too wide) in alignment at lines 3131--3136
+Overfull \hbox (23.87923pt too wide) in alignment at lines 3151--3156
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (23.87923pt too wide) in alignment at lines 3136--3138
+Overfull \hbox (23.87923pt too wide) in alignment at lines 3156--3158
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (23.87923pt too wide) in alignment at lines 3138--3140
+Overfull \hbox (23.87923pt too wide) in alignment at lines 3158--3160
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (23.87923pt too wide) in alignment at lines 3140--3180
+Overfull \hbox (23.87923pt too wide) in alignment at lines 3160--3200
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (23.87923pt too wide) in alignment at lines 3180--3220
+Overfull \hbox (23.87923pt too wide) in alignment at lines 3200--3240
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (23.87923pt too wide) in alignment at lines 3220--3236
+Overfull \hbox (23.87923pt too wide) in alignment at lines 3240--3256
  [] [] [] [] [] 
  []
 
-[91
+[90
 
-] [92] [93]
+] [91] [92]
 Section 9.
 
-Underfull \hbox (badness 1424) in paragraph at lines 3282--3284
+Underfull \hbox (badness 1424) in paragraph at lines 3302--3304
 \TU/Arial(0)/m/n/10 Maintenance of Skinned Areas on Baseball and Softball Field
 s. : 1–8. doi:
  []
 
 
-Underfull \hbox (badness 1609) in paragraph at lines 3291--3293
+Underfull \hbox (badness 1609) in paragraph at lines 3311--3313
 [][]\TU/Arial(0)/m/n/10 ASTM: D 698 - 00a. 2003. Standard Test Methods for Labo
 ratory Compaction
  []
 
 
-Underfull \hbox (badness 1715) in paragraph at lines 3297--3299
+Underfull \hbox (badness 1715) in paragraph at lines 3317--3319
 \TU/Arial(0)/m/n/10 Compaction Characteristics of Soil Using Standard Effort (1
 2 400 ft-lbf/ft3 (600
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 3300--3302
+Underfull \hbox (badness 1270) in paragraph at lines 3320--3322
 [][]\TU/Arial(0)/m/n/10 ASTM International. 2015. D1557 - 12e1 Standard Test Me
 thods for Laboratory
  []
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 3300--3302
+Underfull \hbox (badness 1418) in paragraph at lines 3320--3322
 \TU/Arial(0)/m/n/10 Compaction Characteristics of Soil Using Modified Effort (5
 6,000 ft-lbf/ft3 (2,700
  []
 
-[94
+[93
 
 ]
-Overfull \hbox (2.11156pt too wide) in paragraph at lines 3306--3308
+Overfull \hbox (2.11156pt too wide) in paragraph at lines 3326--3328
 \TU/Arial(0)/m/n/10 Compressive Strength of Cohesive Soil. ASTM International i
 : 1–7. doi: [][]10.1520/D2166[][]. 
  []
 
 
-Underfull \hbox (badness 1286) in paragraph at lines 3324--3326
+Underfull \hbox (badness 1286) in paragraph at lines 3344--3346
 [][]\TU/Arial(0)/m/n/10 Barnes, G.E. 2013a. The Plastic Limit and Workability o
 f Soils. : 427. [][]$[][][][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3324--3326
+Underfull \hbox (badness 10000) in paragraph at lines 3344--3346
 [] [] [][][] [] [][][][][][][][] [] [][][][][][][][][][] [] [][] [] [][] [] [][
 ][] [] [][][][][][][][][][] [] [][][][][][][][][][][][][][] [] [][] [][] [][] [
 ][] [][][] [][] [][][] []
  []
 
 
-Underfull \hbox (badness 3657) in paragraph at lines 3348--3350
+Underfull \hbox (badness 3657) in paragraph at lines 3368--3370
 \TU/Arial(0)/m/n/10 quantification for dietary inference, with previous methods
  in isolation and in
  []
 
-[95]
-Overfull \hbox (20.45557pt too wide) in paragraph at lines 3384--3386
+[94]
+Overfull \hbox (20.45557pt too wide) in paragraph at lines 3404--3406
 \TU/Arial(0)/m/n/10 Soils and Their Plasticity. Clay Minerals 6(3): 179–193. do
 i: [][]10.1180/claymin.1966.006.3.05[][]. 
  []
 
 
-Underfull \hbox (badness 2818) in paragraph at lines 3390--3392
+Underfull \hbox (badness 2818) in paragraph at lines 3410--3412
 [][]\TU/Arial(0)/m/n/10 Furnas, C.C. 1931. I — Mathematical Relations for Beds 
 of Broken Solids of
  []
 
 
-Underfull \hbox (badness 2818) in paragraph at lines 3390--3392
+Underfull \hbox (badness 2818) in paragraph at lines 3410--3412
 \TU/Arial(0)/m/n/10 Maximum Density. Industrial and Engineering Chemistry1 23(9
 ): 1052–1058.
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 3399--3401
+[95]
+Underfull \hbox (badness 10000) in paragraph at lines 3422--3424
 [][]$[][][][][] [] [] [] [][][] [] [][][] [] [][][] [] [][][][][][][][] [] [][]
 [] [][] [][][][][][][] [][] [][][] [][] [][][][][][][][] [][] [][] [][] [][][][
 ][][] [][] [][] [][] [][][][][][][] [][] [][][] [][] [][][][][][][] [][]
  []
 
-[96]
-Underfull \hbox (badness 1221) in paragraph at lines 3405--3407
+
+Underfull \hbox (badness 1221) in paragraph at lines 3428--3430
 [][]\TU/Arial(0)/m/n/10 Haigh, S.K., P.J. Vardanega, and M.D. Bolton. 2013. The
  plastic limit of clays.
  []
 
 
-Underfull \hbox (badness 1881) in paragraph at lines 3420--3422
+Underfull \hbox (badness 1881) in paragraph at lines 3443--3445
 [][]\TU/Arial(0)/m/n/10 Kim, D., B.H. Nam, and H. Youn. 2018. Effect of clay co
 ntent on the shear
  []
 
 
-Underfull \hbox (badness 2744) in paragraph at lines 3420--3422
+Underfull \hbox (badness 2744) in paragraph at lines 3443--3445
 \TU/Arial(0)/m/n/10 strength of clay–sand mixture. International Journal of Geo
 -Engineering 9(1).
  []
 
 
-Underfull \hbox (badness 1895) in paragraph at lines 3432--3434
+Underfull \hbox (badness 1895) in paragraph at lines 3455--3457
 [][]\TU/Arial(0)/m/n/10 Leake, S., and E. Haege. 2014. Soils for Landscape Deve
 lopment- Selection,
  []
 
-[97]
-Underfull \hbox (badness 2626) in paragraph at lines 3450--3452
+[96]
+Underfull \hbox (badness 2626) in paragraph at lines 3473--3475
 [][]\TU/Arial(0)/m/n/10 Monkul, M.M., and G. Ozden. 2007. Compressional behavio
 r of clayey sand
  []
 
 
-Underfull \hbox (badness 3668) in paragraph at lines 3450--3452
+Underfull \hbox (badness 3668) in paragraph at lines 3473--3475
 \TU/Arial(0)/m/n/10 and transition fines content. Engineering Geology 89(3-4): 
 195–205. doi:
  []
 
-[98]
-Underfull \hbox (badness 6348) in paragraph at lines 3501--3503
+[97]
+Underfull \hbox (badness 6348) in paragraph at lines 3524--3526
 \TU/Arial(0)/m/n/10 26–31. [][]$[][][][][] [] [] [] [][][][][][][][][][][][][][
 ][][] [] [][][] [] [][][][] [] [][] [] [][] [] [][][][][][][] [][] [][][][] [][
 ] [][][][][][][][][][][] [][] [][][] [][] [][][][] [][]
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 3519--3521
+Underfull \hbox (badness 1132) in paragraph at lines 3542--3544
 [][]\TU/Arial(0)/m/n/10 Sherwood, P.T., and M.D. Ryley. 1970. An investigation 
 of a cone-penetrometer
  []
 
-[99]
-Underfull \hbox (badness 2343) in paragraph at lines 3558--3560
+[98]
+Underfull \hbox (badness 2343) in paragraph at lines 3584--3586
 [][]\TU/Arial(0)/m/n/10 Ullman, N., and J. Monson. 2009. What are repeatability
  and reproducibility?
  []
 
 
-Underfull \hbox (badness 1275) in paragraph at lines 3561--3563
+Underfull \hbox (badness 1275) in paragraph at lines 3587--3589
 [][]\TU/Arial(0)/m/n/10 Vallejo, L.E., and R. Mawby. 2000. Porosity influence o
 n the shear strength of
  []
 
 
-Underfull \hbox (badness 2990) in paragraph at lines 3561--3563
+Underfull \hbox (badness 2990) in paragraph at lines 3587--3589
 \TU/Arial(0)/m/n/10 granular material-clay mixtures. Engineering Geology 58(2):
  125–136. doi:
  []
 
 
-Underfull \hbox (badness 1199) in paragraph at lines 3573--3575
+Underfull \hbox (badness 1199) in paragraph at lines 3599--3601
 \TU/Arial(0)/m/n/10 vulnerability at Organ Pipe Cactus National Monument, Arizo
 na. United States
  []
 
-[100]
-Underfull \hbox (badness 1286) in paragraph at lines 3588--3590
+[99]
+Underfull \hbox (badness 1286) in paragraph at lines 3617--3619
 \TU/Arial(0)/m/n/10 sand-non plastic fines mixtures. Soils and Foundations 55(1
 ): 213–219. doi:
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 3591--3593
-[] [] [][][] [] [][][][][][] [] [][][] [] [][][] [] [][] [] [] [] [][] [] [] []
- [][][][][] [] [] [] [][] [] [] [] [][][] [] [][][] [] [] [] [][][][][][] [] []
- [] [][] [] [] []
- []
-
-
-Overfull \hbox (109.13121pt too wide) in paragraph at lines 3591--3593
-[][][][][][][][] [] [][][] [] [][] [] [] [] [][][][] [] [][] [] [][] [] [] [] [
-][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3591--3593
-[][] [] [] [] [][][][][] [] [][][][] [] [][] [] [] [] [][][][] [] [][] [] [] []
- [][][][] [] [][] [] [] [] [][][][][][][][][][][] [] [][][] [] [][][] [] [][][]
- []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3591--3593
-[][] [] [] [] [][][][][][][] [] [][] [] [] [] [][][][][][][][][] [] [][] [] [] 
-[] [][][][][][][][][][][] [] [][] [] [] [] [][][][][][][][][][][][] []
- []
-
-[101] (./phd-thesis-proposal.aux)
+[100] (./phd-thesis-proposal.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1881,15 +1865,15 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `phd-thesis-proposal.out' has not changed.
-(rerunfilecheck)             Checksum: EEF8AEE50433BC25EF9B02BFED75E1B7;5913.
+(rerunfilecheck)             Checksum: 3E2D30E5FF08C97302FEF043380E70A6;5797.
  ) 
 Here is how much of TeX's memory you used:
- 20568 strings out of 478764
- 385477 string characters out of 5862455
- 823673 words of memory out of 5000000
- 40154 multiletter control sequences out of 15000+600000
- 412229 words of font info for 125 fonts, out of 8000000 for 9000
+ 20657 strings out of 478764
+ 389409 string characters out of 5862455
+ 822761 words of memory out of 5000000
+ 40237 multiletter control sequences out of 15000+600000
+ 412221 words of font info for 124 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  85i,17n,124p,1348b,534s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on phd-thesis-proposal.pdf (101 pages).
+Output written on phd-thesis-proposal.pdf (100 pages).
