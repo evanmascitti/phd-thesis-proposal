@@ -1,0 +1,241 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \setmainfont[]{Arial}
+  \setmathfont[]{Fira Math Regular}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={debugging  is very very frustrating},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage[utf8]{inputenc}
+\usepackage{makecell}
+\usepackage{xcolor}
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{debugging \LaTeX{} is very very frustrating}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\hypertarget{tfc-defined-by-increasing-intergranular-void-ratio}{%
+\subparagraph{TFC defined by increasing intergranular void ratio}\label{tfc-defined-by-increasing-intergranular-void-ratio}}
+
+A second mathematical means to define the TFC is the intergranular void ratio \(e_{sand}\) {[}@Thevanayagam1998{]}.
+This parameter reflects the relative density of the larger grains.
+Equation \eqref{eq:intergranular-void-ratio-equation} demonstrates that \(e_{sand}\) is derived from phase relations by considering the solid fines as voids:
+
+\begin{align}
+e_{sand} &= \frac{V_{voids}}{V_{sand}} \nonumber \\
+e_{sand} &= \frac{V_{clay} + V_{water}}{V_{sand}} \nonumber \\
+e_{sand} &= \frac{\frac{m_{clay}}{G_{clay}} + \frac{m_{water}}{Gwater}}{\frac{m_{sand}}{G_{sand}}}; \quad m_{water} = w \cdot m_{solids} = w \cdot 1 = w \nonumber \\
+e_{sand} &= \frac{\frac{m_{clay}}{G_{clay}} + \frac{{w}}{Gwater}}{\frac{m_{sand}}{G_{sand}}}
+\label{eq:intergranular-void-ratio-equation}
+\end{align}
+
+Where \(G\) represents the specific gravity of a phase and \(m\) represents its mass fraction, with \(m_{solids} = 1\).
+
+The state of the sand grains can be considered in terms of their porosity rather than their void ratio:
+
+\begin{align}
+n_{sa}&=\frac{\frac{\left( m_{c_{mass-based}} \times  \rho_{bulk} \right)}{G_c}+\left( 1 - \frac{\rho_{bulk}}{G_s} \right)}{1}
+\label{eq:lit-review-intergranular-porosity-equation}
+\end{align}
+
+A more complete derivation of Equation \eqref{eq:lit-review-intergranular-porosity-equation} is given in the Appendix (Section \ref{generalized-intergranular-porosity-equation}).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{source}\NormalTok{(here}\SpecialCharTok{::}\FunctionTok{here}\NormalTok{(}\StringTok{\textquotesingle{}supplemental\_R\_scripts/proposal{-}fig{-}generation/tfc{-}drawings/drawing{-}intergranular{-}void{-}ratio{-}75{-}pct{-}sand.R\textquotesingle{}}\NormalTok{))}
+
+\CommentTok{\# the script also calculates some values to use dynamically below.}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{rounded\_phase\_volumes }\OtherTok{\textless{}{-}}\NormalTok{ phase\_volumes }\SpecialCharTok{\%\textgreater{}\%}
+\NormalTok{  dplyr}\SpecialCharTok{::}\FunctionTok{mutate}\NormalTok{(dplyr}\SpecialCharTok{::}\FunctionTok{across}\NormalTok{(}\AttributeTok{.fns =}\NormalTok{ round, }\AttributeTok{digits =}\DecValTok{2}\NormalTok{))}
+
+
+\NormalTok{rounded\_phase\_masses }\OtherTok{\textless{}{-}}\NormalTok{ phase\_masses }\SpecialCharTok{\%\textgreater{}\%}
+\NormalTok{  dplyr}\SpecialCharTok{::}\FunctionTok{mutate}\NormalTok{(dplyr}\SpecialCharTok{::}\FunctionTok{across}\NormalTok{(}\AttributeTok{.fns =}\NormalTok{ round, }\AttributeTok{digits =}\DecValTok{2}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+Figure \ref{fig:intergranular-void-ratio-diagram} illustrates phase volumes for a hypthetical sand-clay mixture having transitional fines content \(TFC=0.25\), i.e.~75\% sand by mass.
+Assuming full saturation, \(V_{sand}=\) 0.57, \(V_{clay}=\) 0.19, and \(V_{water}=\theta=\) 0.24. Total volume \(V_{total}=1\). \(e_{sand}\) is 0.76 and \(n_{sand}=\) 0.43.
+These are similar to typical \(e_{min}\) or \(n_{max}\) values for a pure, uniform sand.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(here}\SpecialCharTok{::}\FunctionTok{here}\NormalTok{(}\StringTok{\textquotesingle{}figs/pdf/intergranular{-}void{-}ratio{-}75{-}percent{-}sand.pdf\textquotesingle{}}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[hptb]
+\includegraphics[width=0.6\linewidth]{E:/OneDrive - The Pennsylvania State University/PSU2019-present/A_inf_soils_PhD/drafts/phd-thesis-proposal/figs/pdf/intergranular-void-ratio-75-percent-sand} \caption[Intergranular void ratio of a sand-clay mixture.]{The solid fines are considered as part of the voids phase when computing $e_{SA}$.}\label{fig:intergranular-void-ratio-diagram}
+\end{figure}
+
+@Thevanayagam1998 proposed that \(e_{sand}\) at a given \(m_{clay}\) and \(w\) be compared with the minimum void ratio of the pure ``host'' sand \(e_{max_{pure~sand}}\).
+When \(e_{sand}\) exceeds \(e_{max_{pure~sand}}\), the soil's behavior will no longer be governed by contacts between coarse grains because of their loose configuration.
+Therefore @Thevanayagam1998 defined the TFC as the fines content where \(e_{sand}=e_{max_{pure~sand}}\)
+
+\hypertarget{tfc-size-ratio}{%
+\subparagraph{Effect of coarse/fine particle size ratio}\label{tfc-size-ratio}}
+
+The solutions described above assume that the fines are infinitely small, fitting completely within the larger grains.
+In reality, lodging of fines between the coarse grains often creates additional voids.
+@Lade1998 defined a size ratio \(R\) as the quotient of each component's mean grain size:
+
+\begin{equation}
+R=\frac{D_{50~sand}}{D_{50~fines}} \\
+\label{eq:tfc-size-ratio}
+\end{equation}
+
+The disparity between calculations and experiments increases with decreasing size ratio {[}@Lade1998; @Zuo2015{]}.
+@Lade1998 concluded that when \(R\) \textless{} 7, any increase in the size ratio imparts a relatively steep increase in packing density.
+For further increases in \(R\), the observed void ratio slowly decreases toward its theoretical minimum (Figure \ref{fig:lade-1998-figure-7}).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(here}\SpecialCharTok{::}\FunctionTok{here}\NormalTok{(}\StringTok{\textquotesingle{}images/illustrations/Lade\_1998\_Figure\_7/Lade\_1998\_Figure\_7.pdf\textquotesingle{}}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+\includegraphics{E:/OneDrive - The Pennsylvania State University/PSU2019-present/A_inf_soils_PhD/drafts/phd-thesis-proposal/images/illustrations/Lade_1998_Figure_7/Lade_1998_Figure_7} \caption[Importance of particle diameter ratio for intergranular packing]{When the ratio of particle diameters is < 7, increases in the size ratio improve packing density. Above R of 7-10, little density increase is observed. Reproduced from Lade et al. (1998).}\label{fig:lade-1998-figure-7}
+\end{figure}
+
+@Lade1998 also showed that a void between closely packed spheres of equal sizes has a diameter of \textasciitilde{} \(\frac{1}{6.4}\) that of the large particles.
+Therefore, there is a fundamental reason for the abrupt change in slope at \(R\)\textasciitilde7.
+
+Numerical simulations indicate the intergranular void ratio is practically independent of \(D_{50~fines}\) when \(R\) \textgreater{} 100 {[}@Ueda2011{]}.
+
+The geometrical calculations by @Lade1998 assume a single particle size for each mix component.
+The solid volume \(V_s\) of a two-component mixture is further increased when each individual component is well-graded.
+@Reed1995 provided solutions for the optimum ratios of multi-phase mixtures when each has a log-normal particle size curve.
+
+\end{document}

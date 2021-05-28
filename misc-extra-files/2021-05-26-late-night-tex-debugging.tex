@@ -1,0 +1,145 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \setmainfont[]{Arial}
+  \setmathfont[]{Fira Math Regular}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={debugging  is very very frustrating},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage[utf8]{inputenc}
+\usepackage{makecell}
+\usepackage{xcolor}
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{debugging \LaTeX{} is very very frustrating}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+Researchers have defined the TFC using several methods. A few examples include calculations from phase relations and index properties, the minimum global void ratio following compaction, undrained triaxial shear strength, parameters of the normal compression line or critical state line, and liquefaction potential (Table \ref{tab:tfc-definition-methods}).
+
+\begin{table}
+
+\caption[Selected studies on transitional fines content (TFC)]{\label{tab:tfc-definition-methods}Transitional fines content values vary widely but often lie between 20-30\% by mass.}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{>{}lll>{\centering\arraybackslash}p{1in}}
+\toprule
+\textbf{Reference} & \textbf{Type of fines} & \textbf{Tests performed} & \textbf{Reported TFC (mass \%)}\\
+\midrule
+ &  & · consolidation (oedometer) & \\
+
+\multirow{-2}{*}{\raggedright\arraybackslash \textbf{Cabalar (2011)}} & \multirow{-2}{*}{\raggedright\arraybackslash fine sand} & · direct shear & \multirow{-2}{1in}{\centering\arraybackslash 10-12}\\
+\cmidrule{1-4}
+ &  & · oedometer & \\
+
+\multirow{-2}{*}{\raggedright\arraybackslash \textbf{Carrera (2011)}} & \multirow{-2}{*}{\raggedright\arraybackslash low-plasticity silt} & · undrained triaxial & \multirow{-2}{1in}{\centering\arraybackslash 30-50}\\
+\cmidrule{1-4}
+ &  & · liquefaction potential & \\
+
+ &  & · minimium void ratio & \\
+
+\multirow{-3}{*}{\raggedright\arraybackslash \textbf{Lade et al. (1998)}} & \multirow{-3}{*}{\raggedright\arraybackslash fine sand; nonplastic silt} & · undrained triaxial & \multirow{-3}{1in}{\centering\arraybackslash 20-50}\\
+\cmidrule{1-4}
+\textbf{Monkul and Ozden (2007)} & kaolinite clay & · consolidation (oedometer) & 19-34\\
+\cmidrule{1-4}
+ &  & · minimium void ratio & \\
+
+\multirow{-2}{*}{\raggedright\arraybackslash \textbf{Thevanayagam (1998)}} & \multirow{-2}{*}{\raggedright\arraybackslash nonplastic silt} & · undrained triaxial & \multirow{-2}{1in}{\centering\arraybackslash 20-30}\\
+\cmidrule{1-4}
+ &  & · direct shear & \\
+
+\multirow{-2}{*}{\raggedright\arraybackslash \textbf{Ueda et al. (2011)}} & \multirow{-2}{*}{\raggedright\arraybackslash fine sand} & · numerical modeling & \multirow{-2}{1in}{\centering\arraybackslash 25-50}\\
+\cmidrule{1-4}
+ &  & · direct shear & \\
+
+\multirow{-2}{*}{\raggedright\arraybackslash \textbf{Vallejo and Mawby (2000)}} & \multirow{-2}{*}{\raggedright\arraybackslash kaolinite clay} & · minimium void ratio & \multirow{-2}{1in}{\centering\arraybackslash 25-60}\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\end{document}

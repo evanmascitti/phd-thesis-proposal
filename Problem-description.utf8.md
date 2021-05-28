@@ -3,85 +3,26 @@
 
 <!-- The infield is a crucial .......all that stuff here, including the figures of the field, the batted ball density, etc  -->
 
-```{r setup, include=F}
 
-options(tinytex.verbose = TRUE)
-knitr::opts_chunk$set(message=FALSE,
-                      echo = FALSE,
-                      warning = FALSE,
-                      out.width = '90%')
-```
 
 ___
 ## Key ideas 
 
 - The infield skin plays a vital role in gameplay. 
 - Safety risks and revenue losses occur if the infield becomes unplayable due to rain.
-- Infield quality is compromised when the soil becomes brittle and hard.
+- Infield quality is compromised when the soil becomes brittle and hard through drying.
 - Maintaining the infield soil's water content is a challenging task for grounds managers.
 - A quality infield soil makes the field safer and the grounds manager's job easier.
 - Infield mixes were developed through trial and error and may be refined through scientific study.
 
 ## Importance of the infield {#importance-of-the-infield} 
 
-```{r load-packages, include=F}
-suppressPackageStartupMessages({
-  library(tidyverse)
-library(measurements)
-library(latex2exp)
-library(scales)
-library(ImaginR)
-library(imager)
-library(here)
-library(cowplot)
-#library(baseballr)
-library(ecmfuns)
-#library(balldensityplots)
-library(magick)
-library(DescTools)
-  })
-theme_set(theme_cowplot())
-
-knitr::opts_chunk$set(message=FALSE,
-                      echo = FALSE,
-                      warning = FALSE,
-                      out.width = '90%',
-                      fig.align = 'center')
-
-```
 
 
-```{r compute-field-areas }
-pnc_areas <- read_csv('data/lit-review-data/pnc-google-earth-dims.csv') %>% 
-  group_by(type) %>% 
-  summarise(total_area_ft2= sum(ft2)) %>% 
-  mutate(total_area_ha= measurements::conv_unit(total_area_ft2, from = "ft2", to = "hectare"),
-         area_pct= total_area_ha/ sum(total_area_ha))
-
-compute_area_pct <- function(df, area) {
-  area_pct <- df %>% 
-    filter(type == {{area}}) %>% 
-    .$area_pct*100 %>% 
-  signif(digits = 2)
-  
-  return(area_pct)
-}
-
-skin_area_pct <- compute_area_pct(pnc_areas, "Infield skin") +compute_area_pct(pnc_areas, "Home plate") + compute_area_pct(pnc_areas, "Game mound/bullpen")
-turf_area_pct <- compute_area_pct(pnc_areas, "Turf")
-wt_area_pct <- compute_area_pct(pnc_areas, "Warning track")
 
 
-```
 
-```{r compute-man-hrs }
 
-labor_man_hrs <- read_csv('data/lit-review-data/maintenance-man-hrs.csv') %>% 
-  mutate(time_hr= time_min/60) %>% 
-  group_by(type)  %>% 
-  summarise(total_man_hr= sum(people*time_hr) )
-
-```
 
 Portions of a baseball field are termed **skin** if they comprise bare soil rather than natural grass or synthetic turf. 
 The pitcher's mound and the area immediately surrounding home plate are skinned areas, but these are considered distinct from the infield skin. 
@@ -90,84 +31,55 @@ The term "infield" sometimes refers to the infield grass portion of the field.
 This thesis will not study the infield grass, nor will it treat the mound and home plate areas in detail.
 Therefore, I use the terms "infield" and "infield skin" interchangeably. 
 
-A full-size baseball field occupies about `r round(sum(pnc_areas$total_area_ha), 0)` ha (Figure \@ref(fig:player-locations)). Roughly `r DescTools::RoundTo(x = turf_area_pct, multiple = 5)`% of this total area is surfaced with natural turfgrass or synthetic turf. 
-An additional `r DescTools::RoundTo(x = wt_area_pct, multiple = 5)`% is occupied by the warning track, which is alerts players that they are nearing the wall by its changing feel underfoot. 
-Only about `r DescTools::RoundTo(x = skin_area_pct, multiple = 5)`% of the total playing surface is occupied by the infield skin.
-
-
-```{r player-locations, fig.cap="Locations of players during a professional baseball game. Note the relative paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows).", fig.scap='Locations of players during a professional baseball game', fig.height=2.5, fig.pos='ptbh'}
-
-knitr::include_graphics('images/illustrations/player-locations/player-locations.png')
-```
-
+A full-size baseball field occupies about 1 ha. Roughly 75% of this total area is surfaced with natural turfgrass or synthetic turf. 
+An additional 15% is occupied by the warning track, which is alerts players that they are nearing the wall by its changing feel underfoot. 
+Only about 10% of the total playing surface is occupied by the infield skin.
 
 <!-- I like the passage below, and I did spend a few hours finding the data/reference....but not sure it fits here. Thus I am saving it but commenting out. -->
 
 <!-- It is in the defense's interest to encourage the offense to hit as many ground balls as possible, and this heightens the importance of the infield skin. In Major League Baseball (MLB), the average ground ball produces 0.04 runs while causing 0.80 outs. In contrast, the average ball hit in the air creates 0.23 runs and 0.62 outs. Therefore, on a runs-per-outs basis, a fly ball is nearly _8 times_ as valuable to the offense as a ground ball [@Carruth2010].  -->
 To motivate the significance of the infield skin, consider Figures \@ref(fig:player-locations)-\@ref(fig:labor-per-area-fig).^[Data used to compute the values in Figure \@ref(fig:labor-per-area-fig) are compiled in the Appendix, see Table \@ref(tab:labor-per-area-tab)] 
 All the offensive players, the four infielders, and the pitcher and catcher are standing on skinned areas (Figure \@ref(fig:player-locations)). 
-A majority of important plays occur on skinned areas (Figure \@ref(fig:batted-ball-density)). The funds and effort devoted to maintaining them are disproportionately large (Figure \@ref(fig:labor-per-area-fig)).
+A majority of important plays occur on skinned areas (Figure \@ref(fig:batted-ball-density)), so the funds and effort devoted to maintaining them are disproportionately large (Figure \@ref(fig:labor-per-area-fig)).
 
-```{r batted-ball-density, fig.align='center', fig.cap="Data from actual MLB contests support the intuition that most play occurs on the infield skin.", fig.scap="Concentration of play on the infield skin", fig.pos= 'pthb'}
+\begin{figure}[ptbh]
 
-knitr::include_graphics('./figs/pdf/batted-balls-w-boundaries-2020.pdf')
+{\centering \includegraphics[width=0.9\linewidth]{images/illustrations/player-locations/player-locations} 
 
-```
+}
 
-```{r produce labor per area plot }
+\caption[Locations of players during a professional baseball game]{Locations of players during a professional baseball game. Note the relative paucity of players on turf (blue arrows) compared to bare soil/skin areas (red arrows).}(\#fig:player-locations)
+\end{figure}
 
-area_colors <- readr::read_csv('data/lit-review-data/useful_soil_colors_for_thesis.csv') %>% 
-  dplyr::mutate(type= soil_description)
+\begin{figure}[pthb]
 
-labor_per_area <- pnc_areas %>% 
-  left_join(labor_man_hrs) %>% 
-  mutate(total_area_m2 = conv_unit(total_area_ha, "hectare", "m2"),
-         man_hr_per_m2= total_man_hr / total_area_m2,
-         man_hr_per_100m2= 100*man_hr_per_m2 ) %>% 
-  select(type, man_hr_per_100m2) %>% 
-  left_join(area_colors) %>% 
-  filter(type %in% c("Turf", "Warning track", "Infield skin")) %>% 
-  mutate(type= as_factor(type),
-         type= fct_reorder(type, 1/man_hr_per_100m2),
-         label= paste0("**", as.character(type), "**") )
+{\centering \includegraphics[width=0.9\linewidth]{./figs/pdf/batted-balls-w-boundaries-2020} 
 
-labor_per_area_plot <- labor_per_area %>% 
-  ggplot(aes(man_hr_per_100m2, type, fill= hex_color, label= label))+
-  geom_col(alpha = 0.9)+
-  labs(title= "Labor allocation on a typical MLB game day*",
-       caption= "* Values computed by the author from personal experience; see Appendix for details.",
-       y="Field component",
-       x= TeX("Labor intensity, worker-hr $\\m^{-2}$") )+
-  ggtext::geom_richtext(aes(x= man_hr_per_100m2 +0.01), #, color= hex_color),
-                        color= "black",
-                        fill= NA, 
-                        label.color= NA, 
-                        size= 10/.pt, 
-                        hjust= 0) +
-  scale_fill_identity()+
-  scale_color_identity()+
-  scale_x_continuous(limits= c(0, 1.5), n.breaks = 5)+
-  background_grid()+
-  theme_minimal_vgrid()+
-  theme(axis.title.y = element_blank(),
-        axis.text.y = element_blank(),
-        axis.ticks.y = element_blank(),
-        axis.line.y = element_blank(),
-        axis.line.x= element_line(size = 0.5),
-        plot.title = element_text(hjust = 0.5)
-  )
-```
+}
 
-```{r labor-per-area-fig, fig.height=2.5, fig.cap= "The infield skin consumes a majority of inputs despite comprising less than 10 percent of the playing surface area.", fig.scap="Labor inputs for a professionally-managed infield skin", fig.pos='pthb'}
-labor_per_area_plot
-```
+\caption[Concentration of play on the infield skin]{Data from actual MLB contests support the intuition that most play occurs on the infield skin.}(\#fig:batted-ball-density)
+\end{figure}
 
 
-```{r mlb-salaries, fig.cap='MLB athletes are valuable assets. Their safety and performance must not be compromised by the playing surface.', fig.scap='Financial implications of infield safety', fig.show='hold' }
-source('supplemental_R_scripts/mlb_salaries_and_revenue.R')
-cowplot::plot_grid(salary_distribution_2019_plot, mlb_revenues_plot, align = "h")
 
-```
+\begin{figure}[pthb]
+
+{\centering \includegraphics[width=0.9\linewidth]{Problem-description_files/figure-latex/labor-per-area-fig-1} 
+
+}
+
+\caption[Labor inputs for a professionally-managed infield skin]{The infield skin consumes a majority of inputs despite comprising less than 10 percent of the playing surface area.}(\#fig:labor-per-area-fig)
+\end{figure}
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Problem-description_files/figure-latex/mlb-salaries-1} 
+
+}
+
+\caption[Financial implications of infield safety]{MLB athletes are valuable assets. Their safety and performance must not be compromised by the playing surface.}(\#fig:mlb-salaries)
+\end{figure}
 
 Great effort is made by the grounds staff to sustain the infield in a playable condition. 
 Wet playing conditions are the primary cause of postponements. 
@@ -180,13 +92,13 @@ Continuing gameplay during and after rain events is critical for both profession
 
 Athlete safety is paramount to players' well-being and to the business success of a professional franchise. 
 Figure \@ref(fig:mlb-salaries) shows the distribution of MLB player salaries for 2019. 
-The median MLB player salary in 2019 was \$`r median_2019_salary_millions` million, with `r total_2019_million_dollar_players` players earning over $1 million and `r total_2019_10_million_dollar_players` players earning over \$10 million. 
+The median MLB player salary in 2019 was \$1.45 million, with 474 players earning over $1 million and 120 players earning over \$10 million. 
 Figure \@ref(fig:mlb-salaries) also shows MLB revenue growth since 1995. 
 These revenues support hundreds of jobs at each stadium which depend on the athletes' health and performance. 
 Players are a franchise's most valuable asset. A team cannot afford for them be injured by a poor playing surface.
 
 
-## The brittle-ductile transition and the "corkboard effect" {#corkboard-effect-section}
+##### The brittle-ductile transition and the "corkboard effect" {#corkboard-effect-section}
 
 Minimal surface disruption is a crucial element of infield quality. 
 A smooth playing surface ensures the game's outcome is decided by the players' performance alone and not influenced by chance events such as an errant ball bounce. 
@@ -202,9 +114,14 @@ In contrast, a poor-quality infield is one on which larger clods of soil are rea
 Figure \@ref(fig:corkboard-concept) depicts the the corkboard phenomenon and its importance to gameplay. 
 Small, narrow cleat indentations are unlikely to deflect a ball from its initial path. Larger depressions excavated by player's cleats (or the soil clods themselves) are impediments which tend to produce an errant bounce. 
 
-```{r corkboard-concept, eval=T, fig.cap="\\textbf{A.} The \"cleat-in, cleat-out\" effect ensures predictable ball response. \\textbf{B.} Cleat indentations and soil clods inhibit a smooth and predictable ball path.", fig.scap="\"Cleat-in, cleat-out\" effect"}
-knitr::include_graphics('images/illustrations/cleatmarks/corkboard_concept.png')
-```
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{images/illustrations/cleatmarks/corkboard_concept} 
+
+}
+
+\caption["Cleat-in, cleat-out" effect]{\textbf{A.} The "cleat-in, cleat-out" effect ensures predictable ball response. \textbf{B.} Cleat indentations and soil clods inhibit a smooth and predictable ball path.}(\#fig:corkboard-concept)
+\end{figure}
 
 A given infield soil moves between these states as its water content changes. 
 This change in state is formally termed the brittle-ductile transition. The brittle-ductile transition is examined further in this proposal's literature review on plasticity tests (Section \@ref(plasticity-tests)), but a brief description is provided here to establish its important link to infield performance. 
@@ -229,7 +146,7 @@ It is emphasized that no scientific investigations of the corkboard effect have 
 It is a solely qualitative description of soil behavior, and at present no measurements exist for its study. 
 
 
-## Use of artificial soil mixtures on baseball infields
+### Use of artificial soil mixtures on baseball infields
 
 Baseball was first played in the early 19th century, but the definitive origins of the game are likely lost to history [@Walker1994]. 
 The earliest recorded attempt to alter the physical properties of an infield soil was by Harry Wright in 1875. 
@@ -240,7 +157,7 @@ Deliberately imported infield soils were first used beginning in the 1970s, but 
 
 Popularity of engineered infield mixes has grown markedly since 2005. Today the majority of professional stadia utilize an engineered soil for their infield skin [@Hagerty2018].
 
-## Summary - problem description
+### Summary - importance of the infield skin
 
 The infield skin is a crucial component of baseball's competitive and business operations. 
 An ideal infield surface exhibits a combination of plasticity and stiffness. 

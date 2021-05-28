@@ -23,14 +23,14 @@ This section details my planned research.
 
 I have organized this section into the 5 papers I plan to publish and ultimately compile as my dissertation.
 Each sub-section describes the paper's focus, my hypotheses, and how I plan to collect and analyze the data.
-The final sub-section is a brief description of my workflow and data management plan. 
 
 I spent the bulk of the past 12 months developing and validating the method described in Section \@ref(cleatmark-method-development-chapter).
 I also completed collecting data for the experiment described in Section \@ref(oversize-particles-atterberg-limits-experiment).
-Figure __
-<!-- \@ref(fig:gantt-chart)  -->
-outlines envisaged timelines for the rest of the project. 
+Figure \@ref(fig:gantt-chart) shows envisaged timelines for the rest of the project. 
 
+```{r gantt-chart, fig.cap='Estimated windows for completing dissertation research and other degree requirements', fig.scap='Project Gantt chart', out.width='99%'}
+knitr::include_graphics('figs/pdf/phd-gantt-chart.pdf')
+```
 
 
 ## Paper 1: Cleat-in cleat out method {#cleatmark-method-development-chapter}
@@ -39,14 +39,14 @@ Paper title: **A laboratory method to measure deformation of baseball and softba
 
 ### Overview 
 
-This section has the most detail of the proposed experiments. 
-The development of the method has been thoroughly tested and most of the small pilot experiments are recounted here. 
-The level of detail could be viewed as excessive, but I feel this is the appropriate place to document my efforts in validating the method. 
+The goal of this test is to identify a single water content at which a given soil transitions abruptly from cleat-in cleat-out behavior to a clod-forming failure mode.
+
+The level of detail in this section could be viewed as excessive, but I feel this is the appropriate place to document my efforts in validating the method. It has many steps and each has been validated independently.
 
 ### Principal research questions
 
 1. Can a laboratory method developed to replicate the interaction between an athlete's footwear and a small soil specimen?
-2. What measurements best ennumerate infield soil "performance?" 
+2. What measurements best enumerate infield soil "performance?" 
 3. How accurate and repeatable is the method?
 
 ### Hypotheses
@@ -117,8 +117,8 @@ This sub-section is a high-level description of the method, from creating a soil
 
 Modern infield soils are blended from two components - a (nearly) pure sand, and a fine-grained soil. 
 Mixes are often categorized on the basis of their total sand-size content. 
-For the purpose of simplicity, this sub-section refers to the two mixture components as "sand" and "clay", temporarily ignoring these terms' important particle-size and mineralogical connotations (see [Definition of Terms](definition-of-terms).
-Nearly all "sands" have a measurable quantity of particles <2&mu;m sieve diameter, and nearly all "clays" have a measurable quantity of particles >50 &mu;m.^[the lower boundary of sand-size particles as defined by USDA classification system [@USDA1999]  ]
+For the purpose of simplicity, this sub-section refers to the two mixture components as "sand" and "clay", temporarily ignoring these terms' important particle-size and mineralogical connotations (see [Definition of Terms](#definition-of-terms).
+Nearly all "sands" have a measurable quantity of particles <2 &mu;m sieve diameter, and nearly all "clays" have a measurable quantity of particles >50 &mu;m.^[the lower boundary of sand-size particles as defined by USDA classification system [@USDA1999]  ]
 To produce a mixture having $S$% percent sand-size particles by oven-dry mass requires knowledge of:
 
   - the fines content of the "sand" 
@@ -132,8 +132,7 @@ The variables are defined as:
 
 - $S_{final}$: the final mixture's sand percentage as a decimal 
 - $S_{sand}$: mass fraction of the "sand" > 53 &mu;m as a decimal.
-- $S_{clay}$: mass fraction of the "clay" > 53 &mu;m as a decimal
-  - Note that because $S_{ sand}$ and $S_{clay}$ are referenced to different soils, $S_{sand}~+~S_{clay}~\neq~S_{final}$
+- $S_{clay}$: mass fraction of the "clay" > 53 &mu;m as a decimal. Note that because $S_{ sand}$ and $S_{clay}$ are referenced to different soils, $S_{sand}~+~S_{clay}~\neq~S_{final}$
 
 - $m_{sand}$: oven-dry mass fraction of the "sand" _as a decimal percentage of the final mixture mass_
 
@@ -180,7 +179,7 @@ Each oven-dry component mass is then corrected for its respective hygroscopic wa
   \begin{split} \\
     m_{sand (air-dry)} &= m_{sand}\cdot (1+w) \\
     \text{Sand~air-dry~mass~(kg)} &= \frac{S_{clay}-S_{clay}}{S_{sand} - S_{clay}} \cdot (1+w_{sand }) \cdot m_{total~mixture~(kg)} \\
-    \text{Clay~air-dry~mass~(kg)} &= \left[1 - \left( \frac{S_{final} - S_{clay}}{S_{sand} - S_{clay}} \right) \right] \cdot (1+w_{clay})\cdot m_{total~mixture~(kg)} \\
+    \text{Clay~air-dry~mass~(kg)} &= \left[1 - \left( \frac{S_{final} - S_{clay}}{S_{sand} - S_{clay}} \right) \right] \cdot (1+w_{clay})\cdot m_{total~mixture~(kg)}
 (\#eq:sand-clay-ratios)
   \end{split} \\
 \end{align}
@@ -426,7 +425,7 @@ knitr::include_graphics('../../cleatmarkmethod/figs/pdf/proctor-vs-qc-density-co
 
 Full trial runs were completed using each routine for the daily specimen repairs. 
 The full procedure is detailed in Section \@ref(performing-cleat-mark-test).
-A single critical water content $w_{crit}$ was derived for each soil x effort combination using the Normalized RFI as the surface metric of interest. 
+A single critical water content $\theta_{crit}$ was derived for each soil x effort combination using the Normalized RFI as the surface metric of interest. 
 These values are summarized in \@ref(tab:derived-water-contents-from-cleat-mark-test-effort-comparison-tab).
 These data suggest the compaction effort does not markedly influence the ultimate value determined for $w_{crit}$. The tests were not replicated so they cannot be statistically compared.
 
@@ -465,8 +464,8 @@ kableExtra::kbl(derived_test_values_from_compaction_pilot_table,
                 escape = FALSE,
                 position = 'htbp',
                 caption = derived_test_values_from_compaction_pilot_table_caption,
-                caption.short = "$\theta_{crit}$ values from cleat mark test performed with 2 compaction efforts") %>% 
-  kableExtra::add_header_above(header = c(" " = 1, "$\\\\theta_{critical}$" = 2), escape = FALSE) %>% 
+                caption.short = "$\\theta_{crit}$ values from cleat mark test performed with 2 compaction efforts") %>% 
+  kableExtra::add_header_above(header = c(" " = 1, "$\\\\theta_{crit}$" = 2), escape = FALSE) %>% 
   kableExtra::kable_styling(position = 'center')
 
 ```
@@ -758,7 +757,7 @@ The pneumatic device is first charged to 690 kPa (100 psi).
 The specimen is secured into the device with adjustable clips. 
 The device is manually actuated and then retracted. 
 Any soil ejected from the cleat indentations is carefully removed so that the clods are not crushed by subsequent tests.
-This sequence is repeated twice more, rotating the specimen by 60&degree; after each test.
+This sequence is repeated twice more, rotating the specimen by 60    &deg; after each test.
 The reserved soil clods are carefully replaced at their original locations.
 
 ##### 3D scan {#cleat-mark-specimen-3D-scanning}
@@ -914,7 +913,7 @@ When the soil reaches $\theta_{crit}$ it begins to fragment into discrete pieces
 As the soil continues to dry, brittleness is maximized and the soil forms larger chips and clods. 
 These may fragment further which produces additonal surface area. 
 
-A possible complication not depicted in Figure \@ref(fig:example-nfri-vs-water-content-curve) is that with further decreases in water content the soil becomes so hard that NFRI falls below its value at $w_{crit}.
+A possible complication not depicted in Figure \@ref(fig:example-nfri-vs-water-content-curve) is that with further decreases in water content the soil becomes so hard that NFRI falls below its value at $\theta_{crit}$.
 Although NFRI is nominally lower in this state, the soil is in an undesirable condition because of its high strength.
 Ball response will be erratic and players can incur injuries due to extreme surface hardness.
 For this reason, any points drier than the local maximum marked as point (B) in Figure \@ref(fig:example-nfri-vs-water-content-curve) are discarded prior to optimizing the curve to derive $\theta_{crit}$.
@@ -1059,7 +1058,7 @@ One specimen will be immediately sealed in an air-tight plastic bag.
 The rest will be slowly air dried under a loose polyethylene sheet. 
 Each specimen will be dried to progressively lower water contents and sealed in a plastic bag until testing, with the final specimen being completely air-dried. 
 The goal is to evaluate at least 3 water contents where ductile behavior is observed and at least 2 samples where brittle behavior is observed.
-This will allow the maximum toughness value to be bracketed by the tests.
+This will allow the maximum toughness value to be bracketed by the tests and a curve to be fit on a plot of toughness vs. water content.
 
 ```{r proctor-extruder, fig.cap='Bottle jack specimen extruder for preparing compression test specimens.', out.width='80%'}
 knitr::include_graphics('images/gilson_stock_proctor_extruder_photo.jpg')
@@ -1104,26 +1103,37 @@ Paper title: **Effect of oversize particles on Atterberg limits of artificial sa
 
 ### Hypotheses
 
-1. The tests can be performed using identical methodology to ASTM D4318 with the 425 &mu; washing step eliminated
+1. The tests can be performed using identical methodology to ASTM D4318 with the 425 &mu;m washing step eliminated
 
-2. The liquid limit will be lower for coarser sand due to reduced surface area of the sand particles relative to finer sand.
+1. The liquid limit will be lower for coarser sands due to reduced particle surface area.
 
-3. Coarser sand will cause greater particle interference in the plastic limit thread as it nears its 3.2 mm diameter. The thread will crumble prematurely, raising the plastic limit value.
+1. Coarser sand will cause greater particle interference in the plastic limit thread as it nears its 3.2 mm diameter. The thread will crumble prematurely, raising the plastic limit value.
 
-4. The combined effect of (2) and (3) will yield a smaller plasticity index for coarser sand. The results of the experiment can be used to apply a correction for the presence of oversize particles without their removal prior to testing. 
+1. The combined effect of (2) and (3) will yield a smaller plasticity index for coarser sand. 
+
+1.The results of the experiment can be used to apply a correction for the presence of oversize particles without their removal prior to testing. 
 
 ### Materials and Methods 
 
-....
+Three separate experiments will be performed.
+Each will mix two or more sands with the same clay at various sand %.
+The three experiments are:
+
+1. Five sands of different size but similar $C_u$
+
+1. Two sands with same $D_{50} and $$C_u$ but different roundness
+
+1. Two sands with similar $D_{50}$ but different $C_u$ 
 
 
 ### Timeline 
 
-The experiments were begun in March of 2020 during the initial COVID-19 stay-at-home order. Data collection is nearing completion. 
+I started this experiment during the COVID-19 "work-from-home" period. 
+Atterberg limits were the only lab tests I could realistically complete from my house. 
+I finished collecting the data over the past winter. 
 
-
-
-
+I have begun analyzing the data and writing the manuscript.
+I plan to submit to the Soil Science Society Journal in fall of 2021. 
 
 ## Paper 5: Putting it all together
 

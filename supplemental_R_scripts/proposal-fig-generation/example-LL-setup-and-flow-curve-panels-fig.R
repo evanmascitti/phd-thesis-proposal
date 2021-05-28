@@ -1,11 +1,20 @@
-# This script generates an example flow curve figure and 
-# combines it with an image of the LL test. It uses patchwork 
-# to combine the panels and annotate them with capital letters. 
-# Then I export the figure as a png file. 
+# This generates a plot from the example data 
+# in soiltestr, then combines it with a photograph.
+# I used magick to put the photo into a ggplot 
+# environment and then combined them with patchwork.
+# the other approach would be to save the plot as a 
+# png and then use magick to combine and annotate
+# them, but this requires fiddling with the 
+# text sizes to get the right resolution.
+# I'd prefer to just leave everything in the ggplot 
+# environment as the sizing is handled automatically 
+# and there are no intermediate png files left over.
 
-
+library(magrittr)
 library(soiltestr)
 library(patchwork)
+library(magick)
+
 
 example_flow_curve <- example_LL_data[example_LL_data$expt_mix_num == 3L, ] %>% 
   dplyr::left_join(asi468::tin_tares$`2020-05-24`, by = 'tin_number') %>%   add_w() %>% 
@@ -20,4 +29,4 @@ example_LL_combined_panels <- patchwork::wrap_plots(LL_image_ggplot, example_flo
   plot_annotation(tag_levels = 'A',
                   tag_suffix = '.')
 
-ecmfuns::export_plot(example_LL_combined_panels, formats = 'png', rds = FALSE)
+ecmfuns::export_plot(example_LL_combined_panels, formats = 'png', rds = FALSE, dpi=600)

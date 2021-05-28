@@ -1,0 +1,78 @@
+---
+title: debugging \LaTeX{} is very very frustrating
+mainfont: Arial
+mathfont: "Fira Math Regular"
+output: 
+  bookdown::pdf_document2:
+    latex_engine: xelatex
+    keep_tex: true
+header-includes:
+  - \usepackage{booktabs}
+  - \usepackage{longtable}
+  - \usepackage{array}
+  - \usepackage{multirow}
+  - \usepackage{wrapfig}
+  - \usepackage{float}
+  - \usepackage{colortbl}
+  - \usepackage{pdflscape}
+  - \usepackage{tabu}
+  - \usepackage{threeparttable}
+  - \usepackage{threeparttablex}
+  - \usepackage[normalem]{ulem}
+  - \usepackage[utf8]{inputenc}
+  - \usepackage{makecell}
+  - \usepackage{xcolor}
+---
+
+```{r setup, include=F}
+knitr::opts_chunk$set(echo = F, warning = F, message = F)
+knitr::opts_knit$set(root.dir = here::here())
+library(magrittr)
+library(kableExtra)
+```
+
+Researchers have defined the TFC using several methods. A few examples include calculations from phase relations and index properties, the minimum global void ratio following compaction, undrained triaxial shear strength, parameters of the normal compression line or critical state line, and liquefaction potential (Table \@ref(tab:tfc-definition-methods)).
+
+<!-- can't figure out what is wrong with this table  -->
+<!-- it is definitely related to collapsing the rows, but it was  -->
+<!--  working  completely fine yesterday. I even copied the old code  -->
+<!--  and I get the same error  -->
+
+```{r tfc-definition-methods, eval=TRUE}
+tfc_definition_methods <- readr::read_csv(
+  here::here("data/lit-review-data/tables/selected_transitional_fines_content_studies_one_per_row.csv"),
+  col_types = 'ccccc', na = '') %>% 
+  tidyr::fill(dplyr::everything()) %>%
+  dplyr::mutate(reference = paste0(citation, " (", year, ") "),
+                tests_performed = paste('\u00B7', tests_performed)) %>% 
+  dplyr::arrange(citation) %>% 
+  dplyr::group_by(across(-tests_performed)) %>% 
+  dplyr::arrange(tests_performed, .by_group = TRUE) %>% 
+  dplyr::ungroup() %>% 
+  dplyr::select(reference, fines_type, tests_performed, reported_tfc) %>% 
+  dplyr::rename_with(stringr::str_remove, pattern = "_")
+
+  
+tfc_study_column_names <- c(
+  'Reference',
+  'Type of fines',
+  'Tests performed',
+  'Reported TFC (mass \\%)'
+)
+
+tfc_def_kable <- tfc_definition_methods %>% 
+  kbl(format = 'latex', align = 'lllc',
+      booktabs = TRUE,
+      col.names = tfc_study_column_names,
+      caption = 'Transitional fines content values vary widely but often lie between 20-30\\% by mass.',
+      caption.short = 'Selected studies on transitional fines content (TFC)',
+      escape = FALSE) %>% 
+  column_spec(column = 4, width = '1in') %>%
+  column_spec(column = 1, bold=TRUE) %>% 
+  row_spec(row = 0, bold = TRUE) %>% 
+ kableExtra::collapse_rows(columns = c(1,2,4),
+                           latex_hline = 'major') %>% 
+  kableExtra::kable_styling(latex_options = 'scale_down')
+
+tfc_def_kable
+```

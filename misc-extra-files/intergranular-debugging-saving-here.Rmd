@@ -1,0 +1,39 @@
+---
+title: debugging \LaTeX{} is very very frustrating
+output: 
+  bookdown::pdf_document2:
+    latex_engine: xelatex
+---
+
+```{r setup, include=F}
+knitr::opts_chunk$set(echo = F, warning = F, message = F)
+knitr::opts_knit$set(root.dir = here::here())
+```
+
+
+\begin{align}
+e_{sand} &= \frac{V_{voids}}{V_{sand}} \nonumber \\
+e_{sand} &= \frac{V_{clay} + V_{water}}{V_{sand}} \nonumber \\
+e_{sand} &= \frac{\frac{m_{clay}}{G_{clay}} + \frac{m_{water}}{Gwater}}{\frac{m_{sand}}{G_{sand}}}; \quad m_{water} = w \cdot m_{solids} = w \cdot 1 = w \nonumber \\
+e_{sand} &= \frac{\frac{m_{clay}}{G_{clay}} + \frac{{w}}{Gwater}}{\frac{m_{sand}}{G_{sand}}} 
+(\#eq:intergranular-void-ratio-equation)
+\end{align}
+  
+Where $G$ represents the specific gravity of a phase and $m$ represents its mass fraction, with $m_{solids} = 1$.
+  
+  
+```{r compute-phase-volumes}
+source(here::here('supplemental_R_scripts/proposal-fig-generation/tfc-drawings/drawing-intergranular-void-ratio-75-pct-sand.R'))
+  
+```
+  
+Figure \@ref(fig:intergranular-void-ratio-diagram) illustrates phase volumes for a sand-clay mixture having `r 100*phase_masses$m_sa`% sand by mass and $w=$ `r phase_diagram_w`. Assuming full saturation, $V_{sand}=$ `r phase_volumes$v_sa`, $V_{clay}=$ `r phase_volumes$v_c`, and $V_{water}=\theta=$ `r phase_volumes$v_w`. $e_{sand}$ is `r round((phase_volumes$v_w + phase_volumes$v_c)/(phase_volumes$v_sa), digits =2)` and $n_{sand}=$ `r round((phase_volumes$v_w + phase_volumes$v_c)/(phase_volumes$v_w + phase_volumes$v_c + phase_volumes$v_sa), digits = 2)`, which are similar to typical values for $e_{min}$ or $n_{max}$ for a uniform, pure sand.
+
+```{r intergranular-void-ratio-diagram, fig.cap='The solid fines are considered as part of the voids phase when computing $e_{SA}$.', fig.scap='Intergranular void ratio of a sand-clay mixture.', out.width='60%'}
+  knitr::include_graphics(here::here('figs/pdf/intergranular-void-ratio-75-percent-sand.pdf'))
+
+```
+  
+  @Thevanayagam1998 proposed that $e_{sand}$ at a given $m_{clay}$ and $w$ be compared with the minimum void ratio of the pure "host" sand $e_{min_{pure~sand}}$.
+  When $e_{sand}$ exceeds $e_{min_{pure~sand}}$, the soil's behavior will no longer be governed by contacts between coarse grains because of their loose configuration.
+Therefore @Thevanayagam1998 defined the TFC as the fines content where $e_{sand}=e_{min_{pure~sand}}$

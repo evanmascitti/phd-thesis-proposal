@@ -1,0 +1,24 @@
+---
+title: test-verbatim
+output: 
+  bookdown::pdf_document2:
+    extra_dependencies: 'verbatim'
+---
+
+Can't get verbatim to work inside a figure caption. 
+
+It seems to be a LaTeX issue, not a bookdown issue.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, warning = F, message = F)
+knitr::opts_knit$set(root.dir = here::here())
+```
+
+This is a test of the use of verbatim environment inside a figure caption. 
+
+```{r example-make-dependency-graph, out.width='90%', fig.align='center', fig.cap='Dependency graph of a minimal example Makefile.'}
+
+knitr::include_graphics(here::here(
+  'example-mf-project/dependency-graph.png')
+)
+```

@@ -1,0 +1,18 @@
+---
+title: LaTeX math scratchpad
+mainfont: Arial
+mathfont: Fira Math Regular
+output:
+  bookdown::pdf_document2:
+    latex_engine: xelatex
+---
+
+See Equation \@ref(eq:intergranular-void-ratio-equation)
+
+\begin{align}
+e_{sand} &= \frac{V_{voids}}{V_{sand}} \nonumber \\
+e_{sand} &= \frac{V_{clay} + V_{water}}{V_{sand}} \nonumber\\
+e_{sand} &= \frac{\frac{m_{clay}}{G_{clay}} + \frac{m_{water}}{Gwater}}{\frac{m_{sand}}{G_{sand}}}; \quad m_{water} = w \cdot m_{solids} = w \cdot 1 = w  \nonumber\\ 
+e_{sand} &= \frac{\frac{m_{clay}}{G_{clay}} + \frac{{w}}{Gwater}}{\frac{m_{sand}}{G_{sand}}}
+(\#eq:intergranular-void-ratio-equation)
+\end{align}

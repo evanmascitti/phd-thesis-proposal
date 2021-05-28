@@ -1,0 +1,19 @@
+---
+title: testing short snippets of Rmd code
+output:
+  bookdown::pdf_document2:
+    latex_engine: xelatex
+---
+
+```{r setup, include=F}
+knitr::opts_chunk$set(echo=F,warning=F,message=F)
+knitr::opts_knit$set(root.dir=here::here())
+```
+
+# Section 1
+
+```{=latex}
+\begin{center}
+   `cleatmarkmethod_cyl04_2021-04-11.ply`
+\end{center}
+```

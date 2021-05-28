@@ -1,12 +1,6 @@
 # Purpose and Objectives {#purpose-and-objectives}
 
-```{r setup, include=F}
 
-options(tinytex.verbose = TRUE)
-knitr::opts_chunk$set(message=FALSE,
-                      echo = FALSE,
-                      warning = FALSE)
-```
 
 ## Purpose {#purpose}
 
@@ -29,17 +23,11 @@ Potential beneficiaries include grounds managers, soil suppliers, contractors, p
 
 These may be re-stated as formal objectives:
 
-**Objective 1.** 
-
-:  Develop a laboratory method to pinpoint the two critical water contents for any infield soil:
-
-a) the transition from a cleat-in/cleat-out yield mode to chip-forming or clod-forming failure
-
-b) the threshold at which the soil cannot provide adequate resistance for safe playing conditions
+Objective 1. Develop a laboratory method to pinpoint each of the two critical water contents for any infield soil:
+    a) the transition from a cleat-in/cleat-out yield mode to chip-forming or clod-forming failure
+    b) the threshold at which the soil cannot provide adequate resistance for safe playing conditions
     
-**Objective 2.** 
-
-:  Demonstrate that the difference between 1(a) and 1(b) can be extended by systematically varying the components of a soil mixture. 
+Objective 2. Demonstrate that the difference between 1(a) and 1(b) can be extended by systematically varying the components of a soil mixture. 
 
 <!-- Objective 3. Determine the optimal means of predicting a soil's performance through laboratory testing. -->
 

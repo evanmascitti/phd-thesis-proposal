@@ -1,5 +1,5 @@
 
-# Appendix {#appendix}
+# Appendix {#appendix} 
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = F, warning = F, message = F)
@@ -9,8 +9,6 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F)
 library(tidyverse)
 library(kableExtra)
 ```
-
-
 
 ```{r labor-per-area-tab, eval= T, echo=F, warning=F, message=F}
 labor_man_hrs <- readr::read_csv('data/lit-review-data/maintenance-man-hrs.csv',
@@ -48,10 +46,9 @@ labor_man_hrs %>%
 
 ```
 
-
-
 <!-- scatter for sand replacement vs 3D scanner methods for computing dry density 
  of ~21 mm plug   -->
+\newpage
 
 ```{r sand-backfill-vs-3D-scanner-for-volumetric-w-determination-table}
 # read data frame  
@@ -66,7 +63,8 @@ sd_df <-  sand_backfill_vs_scanner_vol_data %>%
                                  .names="{.fn}"),
                    .groups = 'drop')
 
-# generate kable
+# generate and print kable
+
 sd_df %>% 
   pivot_wider(names_from = vol_method,
               values_from = c(mean, sd)) %>% 
@@ -77,7 +75,7 @@ sd_df %>%
                   col.names = c('Cylinder ID',
                                 rep(c('Sand replacement', '3D scanner'), 2)),
                   align = 'c',
-                  caption = 'The 3D scanner produced much less variation in the computed dry density than the sand replacement method. Mean ($\\\\bar{x}$) and standard deviation ($\\\\sigma$) values reflect the value for 5 replicate measurements made on a given cleat-mark specimen.',
+                  caption = 'The 3D scanner produced much less variation in the computed dry density than the sand replacement method. Mean ($\\bar{x}$) and standard deviation ($\\sigma$) values reflect the value for 5 replicate measurements made on a given cleat-mark specimen.',
                   escape = FALSE,
                   booktabs = TRUE,
                   centering = TRUE,
@@ -85,16 +83,118 @@ sd_df %>%
                   linesep = c("", "", "\\addlinespace")
                   
                   ) %>% 
-  kableExtra::add_header_above(header = c(" " = 1, "$\\\\bar{x}$" = 2, "$\\\\sigma$"= 2), escape = FALSE, bold = TRUE) %>% 
+  kableExtra::add_header_above(header = c(" " = 1, "$\\\\bar{x}$" = 2, "$\\\\sigma$"= 2), escape = FALSE, bold = TRUE) %>%
+  kableExtra::row_spec(row = 0, bold = TRUE) %>% 
   kableExtra::kable_styling(position = 'center')
 
-# compute some values from the table for use in dynamic references 
-
-
-# print the actual table 
-
-
-
-
-
 ```
+
+\newpage
+
+## Additional proofs and derivations
+
+### Intergranular porosity generalized for any % sand and $\rho_{bulk}$ {#generalized-intergranular-porosity-equation}
+
+While engineers favor void ratio ($e$), most soil scientists are more familiar with porosity ($n$) to describe the amount of void space in a soil.
+Therefore it is convenient to have a solution for $n_{sa}$ to consider the relative density of the sand grains within a coarse-fine mixture.
+To compute $n_{sa}$, the volume occupied by the fines phase is considered as void space (c.f. Figure \@ref(fig:intergranular-void-ratio-diagram)).
+A derivation for $n_{sa}$ is given below.
+
+Porosity inherently normalizes the total soil volume to 1.
+The following abbreviations are used:
+
+
+\begin{align*}
+V_v &= \mathrm{total~void~volume} \\
+V_c &= \mathrm{clay~solids~volume} \\
+V_{tot} &= \mathrm{total~bulk~soil~volume} \\
+m_c &= \mathrm{clay~solids~mass} \\
+m_{sa} &= \mathrm{sand~solids~mass} \\
+m_{tot} &= \mathrm{total~soil~solids~mass} \\
+G_{c} &= \mathrm{clay~solids~specific~gravity} \\
+G_{sa} &= \mathrm{sand~solids~specific~gravity} \\
+G_{s} &= \mathrm{overall~soil~solids~specific~gravity} \\
+n_{global} &= \mathrm{overall~soil~porosity} \\
+n_{sa} &= \mathrm{intergranular~porosity} \\
+\end{align*}
+
+
+First, the basic definition of porosity is altered to consider the solid fines as part of the voids phase:
+  
+\begin{align}
+n &= \frac{V_{v}}{V_{tot}} \nonumber \\
+n_{sa}& = \frac{V_c + V_v}{V_{tot}}  \\
+n_{sa}& = \frac{V_c+n_{global}}{1} \\
+n_{sa}&=\frac{\frac{m_c}{G_c}+\left( 1 - \frac{\rho_{bulk}}{G_s} \right)}{1}
+(\#eq:basic-intergranular-porosity-equation)
+\end{align}
+
+A value of 2.7 is often assumed for $G_s$ of both the sand and clay, but this is usually not the case. For a general solution that accounts for differences between $G_{sa}$ and $G_c$, we may compute $G_s$ as a weighted average between $G_{sa}$ and $G_c$:
+
+\begin{equation}
+G_s = m_{sa_{mass-based}}~G_{sa} + m_{c_{mass-based}}~G_c
+(\#eq:weighted-average-of-Gs)
+\end{equation}
+
+In \@ref(eq:weighted-average-of-Gs), each $m$ term is a standard mass fraction (i.e. a decimal of the total soil mass; $m_{sa_{mass-based}} + m_{c_{mass-based}} = 1$).
+
+We then substitute this weighted $G_s$ value into \@ref(eq:basic-intergranular-porosity-equation):
+
+\begin{align}
+n_{sa}&=\frac{\frac{m_c}{G_c}+\left[ 1 - \frac{\rho_{bulk}}{\left(  m_{sa_{mass-based}}~G_{sa}\right)  + \left( m_{c_{mass-based}}~G_c \right) } \right]}{1}
+(\#eq:Gs-weighted-intergranular-porosity-equation)
+\end{align}
+
+
+When porosity is used, the total soil _volume_ is equal to 1.
+This means the mass fractions must be re-normalized. 
+In other words, the first $m_c$ term in Equation \@ref(eq:Gs-weighted-intergranular-porosity-equation) is not equal to 0.4 even though the soil is 40% clay by mass. 
+We must convert the clay mass so it is relative to the soil volume of 1.
+Conveniently, because the total volume is equal to 1 the total mass is equal to $\rho_{bulk}$:
+
+\begin{align}
+\rho_{bulk} &= \frac{m_{tot}}{V_{tot}} \nonumber \\ 
+\rho_{bulk} &= \frac{m_{tot}}{1} \nonumber \\
+\rho_{bulk} &= m_{tot}
+\label{eq:component-mass-renormalization}
+\end{align}
+
+To find the volume-normalized mass of either the clay or the sand we multiply the usual mass fraction of the component by the total solids mass, which, from \@ref(eq:component-mass-renormalization), is the same as $\rho_{bulk}$:
+
+\begin{align*}
+m_{component_{~volume-normalized}} &= m_{component_{mass-based}} \times \rho_{bulk}
+\end{align*}
+
+Finally, we may substitute a volume-normalized solution for $m_c$ into \@ref(eq:Gs-weighted-intergranular-porosity-equation), yielding a solution for $n_{sa}$:
+
+\begin{align}
+n_{sa}&=\frac{\frac{    m_{c_{mass-based}} ~ \rho_{bulk}    }{G_c}+\left[ 1 - \frac{\rho_{bulk}}{\left(  m_{sa_{mass-based}} ~ G_{sa}\right)  + \left( m_{c_{mass-based}} ~ G_c \right) } \right]}{1}
+(\#eq:final-intergranular-porosity-equation)
+\end{align}
+
+For example, a soil having 60% sand component by mass and 40% clay component by mass, with the clay component having $G_s=2.8$, the sand component having $G_{sa}=2.65$, and the soil having a total bulk density of 2.10 Mg m^-3^, we obtain
+
+
+\begin{align*}
+n_{sa} &= \frac{\frac{\left(0.4 \times  2.10 \right)}{2.8}+\left( 1 - \frac{2.10}{ \left( 0.6 \times 2.65  \right) + \left(  0.4 \times 2.8 \right)  } \right)}{1} \\
+n_{sa} &= 0.3 + \left( 1 - \frac{2.10}{2.71} \right) \\
+n_{sa} &= 0.525
+\end{align*}
+
+
+Typical values of $n$ for a pure, uniform sand range from 0.25-0.45. Therefore, $n_{sa}$ will almost surely be < 0.525. 
+The sand in this example is in a configuration looser than it would ever exhibit in its pure state.
+
+A similar solution could be derived using $w$ and $S_e$.
+The complexity of this approach arises from the need to compute the air volume when $S_e<1$. 
+$S_e$ can be computed if $\rho_{bulk}$ is known.
+
+
+## Colophon
+
+This document was rendered `r Sys.time()` using the following R packages:
+
+```{r echo=FALSE, include=TRUE, results='markup'}
+devtools::session_info()
+```
+

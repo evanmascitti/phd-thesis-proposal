@@ -233,3 +233,46 @@ In other words, multiple experiments will be in progress at a given time because
 
 ---
 
+### Rationale for producing engineered soils
+
+
+Materials which retain plant-available water and nutrients are favored for agricultural or horticultural operations. 
+These include fired or expanded ceramic granules and various types of organic matter. 
+Soil mixtures produced for engineering applications are usually limited to inorganic components.
+Gravel, sand, soil, coal ash, and lime are common components [@Holtz2010]. ___
+
+---
+
+
+These are normally referred to by soil suppliers as "sand" and "clay," irrespective of the size or nature of their constituent particles. 
+For brevity, in this section the term “clay” simply refers to the fine-grained mixture component of a soil mixture.
+It does not connote any specific definition of texture, particle size, plasticity, or mineralogy. 
+
+---
+
+#### Factors affecting TFC value
+
+The TFC for a given set of mix components varies widely. 
+This section describes factors which govern the value of the TFC.
+
+---
+
+Plasticity tests are geared toward fine-grained soils but the presence of particles in the silt-size and sand-size regions also affect the test results. 
+
+
+__________
+
+This could be really useful later as it is a good paper:
+
+
+@Nagaraj2016 tested the unconfined shear strength of sand-clay mixes made from varying gradations and proportions of sand.
+The mixtures contained with either kaolinite or montmorillonite.
+For both types of clay an "optimum" sand content was identified for maximum shear strength.
+This value ranged from 40-60% sand: shear strength was maximized in this range, with lower shear strengths observed when either more or less sand was included.
+The authors suggested that sand content of 40-60% maximizes the frictional interaction between the sand grains without reducing the ability of the clay to strengthen the mix.
+A limitation of this study is that all mixtures were tested immediately after compaction at their respective values for $w_{opt}$.
+Shear strength is a function of water content, so the "optimum" sand content is likely different at various water contents.
+In other words, sandier mixes would likely have greater shear strength at high water contents but mixes with more clay would have higher shear strength when dry.
+
+___
+

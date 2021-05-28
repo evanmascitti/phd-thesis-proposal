@@ -1,0 +1,1 @@
+options(tinytex.verbose = TRUE)

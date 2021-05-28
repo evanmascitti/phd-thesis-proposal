@@ -20,7 +20,7 @@
 # into my proposal folder so it can be run using `source()`.
 
 suppressPackageStartupMessages({
-  # library(ggplot2)
+  library(ggplot2)
   library(magrittr)
 })
 
@@ -52,44 +52,44 @@ LL_sd <- round(sd(LL_reps$water_content), 3)
 
 # plot code starts below
 
-# errorbar_endpts <- tibble::tibble(
-#   test_type = 'LL',
-#   xmin = mean(LL_reps$water_content) - 0.5*LL_sd,
-#   xmax = mean(LL_reps$water_content) + 0.5*LL_sd
-# )
-# 
-# LL_w_uncertainty_for_a_single_point <- LL_reps %>%
-#   ggplot(aes(water_content, y = test_type))+
-#   geom_errorbarh(data = errorbar_endpts,
-#                  inherit.aes = FALSE,
-#                  aes(xmin = xmin, xmax = xmax, y = test_type),
-#                  height = 0.05,
-#                  size = 0.25,
-#                  position = position_nudge(y = 0.125))+
-#   geom_point(color = 'steelblue', alpha = 1/2,
-#              position = position_jitter(height = 0.03, seed = 2))+
-#   annotate('text', x = mean(LL_reps$water_content),
-#            y = 1.25,
-#            label = glue::glue(
-#              'Standard deviation = {LL_sd}'),
-#            size = 3)+
-#   scale_x_continuous(expression('Water content, g g'^-1),
-#                      limits = c(0.25,0.35),
-#                      breaks = scales::breaks_width(0.01))+
-#   cowplot::theme_minimal_hgrid(font_size = 12, color = 'black')+
-#   ggplot2::labs(title = expression('Expected uncertainty around'~italic(w)~'for a single LL point'),
-#                 subtitle = 'Points represent replicate determinations from the same bowl of homogenously-mixed soil.')+
-#   ggplot2::theme(
-#     panel.grid = element_blank(),
-#     axis.text.y = element_blank(),
-#     axis.ticks.y = element_blank(),
-#     axis.title.y = element_blank()
-#   )
-# 
-# ecmfuns::export_plot(x = LL_w_uncertainty_for_a_single_point,
-#                      dirs = 'figs',
-#                      formats = c('pdf', 'png'),
-#                      rds = FALSE)
+errorbar_endpts <- tibble::tibble(
+  test_type = 'LL',
+  xmin = mean(LL_reps$water_content) - 0.5*LL_sd,
+  xmax = mean(LL_reps$water_content) + 0.5*LL_sd
+)
+
+LL_w_uncertainty_for_a_single_point <- LL_reps %>%
+  ggplot(aes(water_content, y = test_type))+
+  geom_errorbarh(data = errorbar_endpts,
+                 inherit.aes = FALSE,
+                 aes(xmin = xmin, xmax = xmax, y = test_type),
+                 height = 0.05,
+                 size = 0.25,
+                 position = position_nudge(y = 0.125))+
+  geom_point(color = 'steelblue', alpha = 1/2,
+             position = position_jitter(height = 0.03, seed = 2))+
+  annotate('text', x = mean(LL_reps$water_content),
+           y = 1.25,
+           label = glue::glue(
+             'Standard deviation = {LL_sd}'),
+           size = 3)+
+  scale_x_continuous(expression('Water content, g g'^-1),
+                     limits = c(0.25,0.35),
+                     breaks = scales::breaks_width(0.01))+
+  cowplot::theme_minimal_hgrid(font_size = 12, color = 'black')+
+  ggplot2::labs(title = expression('Expected uncertainty around'~italic(w)~'for a single LL point'),
+                subtitle = 'Points represent replicate determinations from the same bowl of well-mixed soil.')+
+  ggplot2::theme(
+    panel.grid = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.title.y = element_blank()
+  )
+
+ecmfuns::export_plot(x = LL_w_uncertainty_for_a_single_point,
+                     dirs = 'figs',
+                     formats = c('pdf', 'png'),
+                     rds = FALSE)
 
 # remove all objects except the LL_sd value, which I wish to return
 # to the R session

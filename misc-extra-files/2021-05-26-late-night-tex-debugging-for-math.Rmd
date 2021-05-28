@@ -1,0 +1,114 @@
+---
+title: debugging \LaTeX{} is very very frustrating
+mainfont: Arial
+mathfont: "Fira Math Regular"
+output: 
+  bookdown::pdf_document2:
+    latex_engine: xelatex
+    keep_tex: true
+header-includes:
+  - \usepackage{booktabs}
+  - \usepackage{longtable}
+  - \usepackage{array}
+  - \usepackage{multirow}
+  - \usepackage{wrapfig}
+  - \usepackage{float}
+  - \usepackage{colortbl}
+  - \usepackage{pdflscape}
+  - \usepackage{tabu}
+  - \usepackage{threeparttable}
+  - \usepackage{threeparttablex}
+  - \usepackage[normalem]{ulem}
+  - \usepackage[utf8]{inputenc}
+  - \usepackage{makecell}
+  - \usepackage{xcolor}
+---
+
+#####  TFC defined by increasing intergranular void ratio
+
+A second mathematical means to define the TFC is the intergranular void ratio $e_{sand}$ [@Thevanayagam1998].
+This parameter reflects the relative density of the larger grains.
+Equation \@ref(eq:intergranular-void-ratio-equation) demonstrates that $e_{sand}$ is derived from phase relations by considering the solid fines as voids:
+
+\begin{align}
+e_{sand} &= \frac{V_{voids}}{V_{sand}} \nonumber \\
+e_{sand} &= \frac{V_{clay} + V_{water}}{V_{sand}} \nonumber \\
+e_{sand} &= \frac{\frac{m_{clay}}{G_{clay}} + \frac{m_{water}}{Gwater}}{\frac{m_{sand}}{G_{sand}}}; \quad m_{water} = w \cdot m_{solids} = w \cdot 1 = w \nonumber \\
+e_{sand} &= \frac{\frac{m_{clay}}{G_{clay}} + \frac{{w}}{Gwater}}{\frac{m_{sand}}{G_{sand}}}
+(\#eq:intergranular-void-ratio-equation)
+\end{align}
+
+Where $G$ represents the specific gravity of a phase and $m$ represents its mass fraction, with $m_{solids} = 1$.
+
+The state of the sand grains can be considered in terms of their porosity rather than their void ratio:
+
+\begin{align}
+n_{sa}&=\frac{\frac{\left( m_{c_{mass-based}} \times  \rho_{bulk} \right)}{G_c}+\left( 1 - \frac{\rho_{bulk}}{G_s} \right)}{1}
+(\#eq:lit-review-intergranular-porosity-equation)
+\end{align}
+
+A more complete derivation of Equation \@ref(eq:lit-review-intergranular-porosity-equation) is given in the Appendix (Section \@ref(generalized-intergranular-porosity-equation)).
+
+
+```{r compute-phase-volumes}
+source(here::here('supplemental_R_scripts/proposal-fig-generation/tfc-drawings/drawing-intergranular-void-ratio-75-pct-sand.R'))
+
+# the script also calculates some values to use dynamically below.
+
+```
+
+
+```{r}
+
+rounded_phase_volumes <- phase_volumes %>%
+  dplyr::mutate(dplyr::across(.fns = round, digits =2))
+
+
+rounded_phase_masses <- phase_masses %>%
+  dplyr::mutate(dplyr::across(.fns = round, digits =2))
+
+
+```
+
+Figure \@ref(fig:intergranular-void-ratio-diagram) illustrates phase volumes for a hypthetical sand-clay mixture having transitional fines content $TFC=0.25$, i.e. `r 100*rounded_phase_masses$m_sa`% sand by mass. <!-- and $w=$ `r round(phase_diagram_w, digits=3)`.  -->
+Assuming full saturation, $V_{sand}=$ `r rounded_phase_volumes$v_sa`, $V_{clay}=$ `r rounded_phase_volumes$v_c`, and $V_{water}=\theta=$ `r rounded_phase_volumes$v_w`. Total volume $V_{total}=1$. $e_{sand}$ is `r round((phase_volumes$v_w + phase_volumes$v_c)/(phase_volumes$v_sa), digits =2)` and $n_{sand}=$ `r round((phase_volumes$v_w + phase_volumes$v_c)/(phase_volumes$v_w + phase_volumes$v_c + phase_volumes$v_sa), digits = 2)`.
+These are similar to typical $e_{min}$ or $n_{max}$ values for a pure, uniform sand.
+
+```{r intergranular-void-ratio-diagram, fig.cap='The solid fines are considered as part of the voids phase when computing $e_{SA}$.', fig.scap='Intergranular void ratio of a sand-clay mixture.', out.width='60%', fig.pos='hptb'}
+knitr::include_graphics(here::here('figs/pdf/intergranular-void-ratio-75-percent-sand.pdf'))
+
+```
+
+@Thevanayagam1998 proposed that $e_{sand}$ at a given $m_{clay}$ and $w$ be compared with the minimum void ratio of the pure "host" sand $e_{max_{pure~sand}}$.
+When $e_{sand}$ exceeds $e_{max_{pure~sand}}$, the soil's behavior will no longer be governed by contacts between coarse grains because of their loose configuration.
+Therefore @Thevanayagam1998 defined the TFC as the fines content where $e_{sand}=e_{max_{pure~sand}}$
+
+
+##### Effect of coarse/fine particle size ratio {#tfc-size-ratio}
+
+The solutions described above assume that the fines are infinitely small, fitting completely within the larger grains.
+In reality, lodging of fines between the coarse grains often creates additional voids.
+@Lade1998 defined a size ratio $R$ as the quotient of each component's mean grain size:
+
+\begin{equation}
+R=\frac{D_{50~sand}}{D_{50~fines}} \\
+(\#eq:tfc-size-ratio)
+\end{equation}
+
+
+The disparity between calculations and experiments increases with decreasing size ratio [@Lade1998; @Zuo2015].
+@Lade1998 concluded that when $R$ < 7, any increase in the size ratio imparts a relatively steep increase in packing density.
+For further increases in $R$, the observed void ratio slowly decreases toward its theoretical minimum (Figure \@ref(fig:lade-1998-figure-7)).
+
+```{r lade-1998-figure-7, fig.cap='When the ratio of particle diameters is < 7, increases in the size ratio improve packing density. Above R of 7-10, little density increase is observed. Reproduced from Lade et al. (1998).', fig.scap='Importance of particle diameter ratio for intergranular packing'}
+knitr::include_graphics(here::here('images/illustrations/Lade_1998_Figure_7/Lade_1998_Figure_7.pdf'))
+```
+
+@Lade1998 also showed that a void between closely packed spheres of equal sizes has a diameter of ~ $\frac{1}{6.4}$ that of the large particles.
+Therefore, there is a fundamental reason for the abrupt change in slope at $R$~7.
+
+Numerical simulations indicate the intergranular void ratio is practically independent of $D_{50~fines}$ when $R$ > 100 [@Ueda2011].
+
+The geometrical calculations by @Lade1998 assume a single particle size for each mix component.
+The solid volume $V_s$ of a two-component mixture is further increased when each individual component is well-graded.
+@Reed1995 provided solutions for the optimum ratios of multi-phase mixtures when each has a log-normal particle size curve.
