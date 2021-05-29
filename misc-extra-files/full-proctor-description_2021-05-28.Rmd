@@ -1,0 +1,23 @@
+A proctor test was performed for each sample to determine $w_{opt}$. 
+A rough estimate of $w_{opt}$ was made by adding small amounts of water to a hand specimen. 
+The gravimetric water content was determined and five total aliquots were prepared - one at this water content, with two drier and two wetter. 
+Appropriate amounts of water were incorporated by hand to yield $w$ spacing of &asymp; 0.02. 
+Samples were cured in plastic bags for &GreaterEqual; 16 hr. 
+Each specimen was compacted and weighed, and a representative sample was removed for the water content determination. 
+
+To derive $w_{opt}$, a polynomial spline was fitted to the plot of dry density vs. water content.
+Values for $\rho_{max}$ and $w_{opt}$ were computed by setting the curve's derivative to zero and solving for each value at this point (Figure \@ref(fig:deriving-proctor-values)). 
+<!-- This approach is further documented in **soiltestr**.  -->
+@ASTMD698-12 suggests the operator draw the compaction curve manually, but a computational approach
+removes operator judgement and makes the analysis more reproducible.
+See @Howell1997 and @Webb2014 for other examples of fitting mathematical functions to Proctor data.
+
+
+(ref:deriving-proctor-values-caption) Values for $\rho_{max}$ and $w_{opt}$ (black arrows) were derived from the compaction curves using a spline fitting routine.'
+
+```{r deriving-proctor-values, fig.cap='(ref:deriving-proctor-values-caption)', fig.scap='Example compaction curves prior to cleat-mark test', eval=TRUE}
+knitr::include_graphics('../../cleatmarkmethod/figs/pdf/deriving-proctor-values.pdf')
+```
+
+
+A sufficient mass of air-dry soil was then brought to the appropriate $w_{opt}$ for the test energy.

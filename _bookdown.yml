@@ -1,13 +1,15 @@
 book_filename: "phd-thesis-proposal"
-rmd_files: ["index.Rmd", 
-"01-Purpose-and-objectives.Rmd", 
-"Problem-description.Rmd", 
-"03-Review-of-Literature.Rmd", 
-"04-Proposed-experiments.Rmd", 
+
+rmd_files: ["index.Rmd",
+"01-Purpose-and-objectives.Rmd",
+"Problem-description.Rmd",
+"03-Review-of-Literature.Rmd",
+"04-Proposed-experiments.Rmd",
 "05-workflow-reproducibility-data-management.Rmd",
-"02-Definition-of-terms.Rmd", 
+"02-Definition-of-terms.Rmd",
 "References.Rmd",
 "Appendix.Rmd"]
+
 delete_merged_file: true
 new_session: true
 language:

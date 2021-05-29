@@ -22,6 +22,7 @@ suppressPackageStartupMessages({
 This section details my planned research. 
 
 I have organized this section into the 5 papers I plan to publish and ultimately compile as my dissertation.
+Two are nearly complete. 
 Each sub-section describes the paper's focus, my hypotheses, and how I plan to collect and analyze the data.
 
 I spent the bulk of the past 12 months developing and validating the method described in Section \@ref(cleatmark-method-development-chapter).
@@ -39,23 +40,28 @@ Paper title: **A laboratory method to measure deformation of baseball and softba
 
 ### Overview 
 
-The goal of this test is to identify a single water content at which a given soil transitions abruptly from cleat-in cleat-out behavior to a clod-forming failure mode.
+This paper outlines a new test method to measure the cleat-in/cleat-out effect (Section \@ref(corkboard-effect-section)).
+The goal of our test is to identify a single water content at which a given infield soil transitions abruptly from cleat-in cleat-out behavior to a clod-forming failure mode.
 
-The level of detail in this section could be viewed as excessive, but I feel this is the appropriate place to document my efforts in validating the method. It has many steps and each has been validated independently.
+The level of detail given in this section could be viewed as excessive, but I feel it is the appropriate place to document my efforts in validating the method. 
+It has many steps and each has been validated independently.
+Developing a method from scratch is hardly a linear process, but I have done my best to move in a logical order.
+In this spirit, I have put many of the detailed calculations to the Appendix.
+My intent is to avoid disrupting the flow of the method's description, but to ensure everything is available should the reader wish to verify the details.
 
 ### Principal research questions
 
-1. Can a laboratory method developed to replicate the interaction between an athlete's footwear and a small soil specimen?
-2. What measurements best enumerate infield soil "performance?" 
+1. Can a laboratory method replicate the interaction between an athlete's footwear and a small soil specimen?
+2. What measurements best enumerate the cleat-in/cleat-out effect?
 3. How accurate and repeatable is the method?
 
 ### Hypotheses
 
-1. The "cleat-in, cleat-out" phenomenon (described in Section \@ref(corkboard-effect-section)) can be duplicated using a machine and a laboratory-sized soil specimen rather than outdoor plots and human subjects. 
+1. The cleat-in/cleat-out phenomenon described in Section \@ref(corkboard-effect-section) can be duplicated using a machine and a laboratory-sized soil specimen, rather than outdoor plots and human subjects. 
 1. The means by which the soil specimen is prepared will affect the test result. Therefore, a protocol must be developed which adequately emulates the real procedures used for construction and maintenance of infield skins. The method must also simulate outdoor conditions to adjust the soil water content.
 1. Subjective assessments can be eliminated through use of 3D scanning technology to measure the response of the soil. 
-1. For a given soil, a critical water content threshold can be identified where disruption of the surface is minimized.
-1. The obtained water content from (4) will be similar across multiple surface metrics (i.e. volume change, surface area, curvature).
+1. For a given soil, a critical water content threshold $\theta_{crit}$ can be identified where disruption of the surface is minimized.
+1. The obtained water content from (4) will be similar across multiple surface metrics (i.e. volume change, surface area, curvature) but different across soils. 
 
 ### Materials and Methods
 
@@ -108,120 +114,74 @@ Each step was individually scrutinized through small pilot experiments to develo
 - comparison of derived morphometrics
 
 
-#### Method overview
+#### Method details
 
-This sub-section is a high-level description of the method, from creating a soil mixture to a final result. 
+The next series of sub-sections comprise a detailed description of the method, from creating a soil mixture to a final result. 
 
 
 ##### Producing the mix
 
 Modern infield soils are blended from two components - a (nearly) pure sand, and a fine-grained soil. 
 Mixes are often categorized on the basis of their total sand-size content. 
-For the purpose of simplicity, this sub-section refers to the two mixture components as "sand" and "clay", temporarily ignoring these terms' important particle-size and mineralogical connotations (see [Definition of Terms](#definition-of-terms).
+For the purpose of simplicity, this sub-section refers to the two mixture components as "sand" and "clay", temporarily ignoring these terms' important particle-size and mineralogical connotations.
 Nearly all "sands" have a measurable quantity of particles <2 &mu;m sieve diameter, and nearly all "clays" have a measurable quantity of particles >50 &mu;m.^[the lower boundary of sand-size particles as defined by USDA classification system [@USDA1999]  ]
-To produce a mixture having $S$% percent sand-size particles by oven-dry mass requires knowledge of:
+The soils are mixed in an air-dry condition so their hygroscopic water content must also be considered. 
+Therefore, to produce a mixture having $S$% percent sand-size particles by oven-dry mass requires knowledge of:
 
-  - the fines content of the "sand" 
+- the fines content of the "sand" 
   
-  - the sand content of the "fines" 
+- the sand content of the "clay" 
   
-  - the extant gravimetric water content $w$ of each component. 
+- the extant gravimetric water content $w$ of each component. 
 
-Computing the air-dry masses of each soil then requires a solution to a basic 2-member system of equations \@ref(eq:sand-clay-ratios)
-The variables are defined as:
-
-- $S_{final}$: the final mixture's sand percentage as a decimal 
-- $S_{sand}$: mass fraction of the "sand" > 53 &mu;m as a decimal.
-- $S_{clay}$: mass fraction of the "clay" > 53 &mu;m as a decimal. Note that because $S_{ sand}$ and $S_{clay}$ are referenced to different soils, $S_{sand}~+~S_{clay}~\neq~S_{final}$
-
-- $m_{sand}$: oven-dry mass fraction of the "sand" _as a decimal percentage of the final mixture mass_
-
-- $m_{clay}$: oven-dry mass fraction of the "clay" _as added to the final mixture_
-
-- $m_{final}$: the total oven-dry mass of the final mixture, equal to unity.
-
-- $w$: gravimetric water content of a soil, normalized to the oven-dry soil solids, in decimal form.
-
-
-The total oven-dry mass of the mixture is equal to unity; therefore the clay mass can be solved as a function of the sand mass:
-
-\begin{align*}
-m_{final} = m_{sand} + m_{clay} &= 1 \\
-m_{clay} &= 1 - m_{ sand} \\
-\end{align*}
-
-The percent > 53 &mu;m (i.e. sand-size) of the final mixture is a weighted average between the sand-size percentages of each component and the masses of each component used in the mixture:
-
-$$S_{final} = (~m_{sand}~\cdot~S_{sand})~+~(~m_{clay}~\cdot~S_{clay})$$
-Substituting for $m_{clay}$, we obtain
-
-
-$$S_{final} = (~m_{sand}~\cdot~S_{sand})~+~\left[(1-m_{sand}~)\cdot~S_{clay}~\right]$$ 
-
-
-Which can be distributed and rearranged to isolate $m_{sand}$:
-
-\begin{align*}
-S_{final} - S_{clay} &= ( m_{sand} \cdot S_{sand}) - (m_{sand} \cdot S_{clay}) \\ 
-S_{final}  -S_{clay} &= m_{sand}\cdot( S_{sand} - S_{clay}) \\
-m_{sand} &= \frac{S_{final} - S_{clay}}{S_{sand} - S_{clay}}\\
-\end{align*}
-
-And because $m_{clay}=1-m_{sand}$,
-
-\begin{equation*}
-m_{clay} = 1 - \left( \frac{S_{final} - S_{clay}}{S_{sand} - S_{clay}} \right)\\
-\end{equation*}
-
-Each oven-dry component mass is then corrected for its respective hygroscopic water content and scaled to the desired final mixture mass:
+The air-dry masses of each soil are then computed from a basic 2-member system of equations. 
+A complete derivation is provided in the Appendix (Section \@ref(sand-clay-mix-calcs)). 
+The resulting formulae are given in Equations \@ref(eq:sand-clay-ratios-air-dry-sand-mass) and \@ref(eq:sand-clay-ratios-air-dry-clay-mass):
 
 \begin{align}
-  \begin{split} \\
-    m_{sand (air-dry)} &= m_{sand}\cdot (1+w) \\
-    \text{Sand~air-dry~mass~(kg)} &= \frac{S_{clay}-S_{clay}}{S_{sand} - S_{clay}} \cdot (1+w_{sand }) \cdot m_{total~mixture~(kg)} \\
-    \text{Clay~air-dry~mass~(kg)} &= \left[1 - \left( \frac{S_{final} - S_{clay}}{S_{sand} - S_{clay}} \right) \right] \cdot (1+w_{clay})\cdot m_{total~mixture~(kg)}
-(\#eq:sand-clay-ratios)
-  \end{split} \\
+  \text{Sand~air-dry~mass~(kg)} &= \frac{S_{final}-S_{clay}}{S_{sand} - S_{clay}}  \cdot m_{total~mixture~(kg)} \cdot (1+w_{sand })
+(\#eq:sand-clay-ratios-air-dry-sand-mass) \\
+\nonumber \\
+\text{Clay~air-dry~mass~(kg)} &= \left[1 - \left( \frac{S_{final} - S_{clay}}{S_{sand} - S_{clay}} \right) \right] \cdot m_{total~mixture~(kg)} \cdot (1+w_{clay})
+(\#eq:sand-clay-ratios-air-dry-clay-mass)
 \end{align}
 
 
-For example, assume 50 kg of final mix having 6% sand-size particles is required. The "sand" mix component is 96% sand-size and the "clay" mix component is 8% sand-size.
-The gravimetric water content of the sandy component $w_{sand}$ is 0.2%, i.e. 0.002, and $w_{clay}$ is 1.9%, i.e. 0.019.
 
-
-Plugging these values into the equations gives an air-dry "sand" component mass of `r round((0.6-0.08)/(0.96-0.08)*50*1.002, 1)` kg and an air-dry "clay" component mass of `r round((1-((0.6-0.08)/(0.96-0.08)))*50*1.019, 1)` kg.
-
-$$\left(\frac{0.60~-~0.08}{0.96~-~0.08}\right)~\times~(1+0.002)~\times 50~kg~=~25.46~\text{kg}$$
-
-
-To make these calculations efficient and reproducible, the above forumlae have been compiled into a set of functions in the R Language for Statistical Computing.
+To make these calculations efficient and reproducible, the above forumlae have been compiled into a set of functions using the R Language for Statistical Computing [@R-core2021].
 
 
 #### Preparing the specimen
 
 An important consideration in this test's development is accurately simulating the conditions encountered on actual infields. As discussed in Section \@ref(ball-response-lit-review), infield soils are intentionally compacted to extremely high densities.
-The infield also undergoes frequent wetting and drying cycles. These affect soil water potential and may also induce volume change.
-
-A sample preparation routine was developed using two main criteria:
+The infield also undergoes frequent wetting and drying cycles. These affect soil water potential and may also induce volume change. Therefore the sample preparation routine was developed using two main criteria:
 
 1. Emulate the conditions found on actual infields 
 
-2. Reduce operator-dependence by using standardized protocols for compaction and repairs
+2. Reduce operator-dependence by using standardized procedures for compaction and repairs
 
-Soils of varying grain size and plasticity exhibit different behavior under compaction. Rather than  compacting all samples to the same dry density, it was deemed more approproate to compact each sample at its respective optimum water content ($w_{opt}$). Therefore, a compaction test was required _prior_ to any sample construction for actual cleat-mark testing. 
 
-The two most widely-used compaction tests are the Standard and Modified Proctor tests, designated by ASTM D698 and D1557 [-@ASTMD698-12; @ASTMD15572015].
-The equipment used to compact infield soils is generally smaller than that used for larger earthworks projects. 
-It is not immediately clear which Proctor test corresponds better to infield soil construction. Unfortunately there is no straightforward conversion from the roller size used in actual construction activity to the compaction energy applied during a laboratory test. 
+##### Choosing a compaction routine 
+
+It was deemed most appropriate to compact each sample at its respective optimum water content ($w_{opt}$).^[A possible alternative would be to compact every soil to the same value of $\rho$, but soils at the same $\rho$ will behave quite differently depending on their texture and mineralogy.] Therefore, a compaction test was required _prior_ to any sample construction for actual cleat-mark testing. 
+
+The two most widely-used compaction tests are the Standard and Modified Proctor tests, designated by ASTM D698 and D1557 [@ASTMD698-12; @ASTMD15572015].
+It is not immediately clear which Proctor test corresponds better to infield soil construction. 
+The equipment used to compact infield soils is generally smaller than that used for larger earthworks projects.
+Unfortunately there is no straightforward conversion from a roller size used in actual construction activity to the compaction energy applied during a laboratory test. 
 @Selig1971 provided a formula for the simple case of a cylindrical drum towed across a soil surface, but this type of equipment is rarely used on infields. Furthermore, the calculation depends on the coefficient of rolling resistance which varies with water content and soil stiffness. 
 
 An analytical solution is not necessarily required. Both Proctor test varieties were developed by comparing the laboratory test results with densities observed in successful earthworks projects [@Proctor1933a; @Holtz2010]. 
 A similar empirical approach was taken for this study. 
-Compaction tests were performed were performed at both efforts on a widely-used commercial infield mix.
-The lab tests were compared with density values obtained from intact core sampling on an MLB infield (Figure \@ref(fig:proctor-vs-observed-infield-density)).
-The observed values from the staduim fall somewhat between those attained with the lab tests. 
-Recall that these values for $\rho$ are somewhat higher than those which have been used for other infield soils research (c.f. Figure \@ref(fig:lit-review-density-comparison)).
-A pilot experiment was also performed to determine determine whether a notable difference in sample behavior occurred between the two energy levels.
+
+Compaction tests were performed at both efforts on a widely-used commercial infield mix (60% sand).
+A value for $\rho_{max}$ was derived from each compaction curve using a spline-fitting routine in R.
+See the Appendix for more details on the fitting routine (\@ref(deriving-values-from-proctor-curves)).
+
+The $\rho_{max}$ values from these lab tests were compared with $\rho_{bulk}$ of an MLB infield constructed with the same soil. 
+Figure \@ref(fig:proctor-vs-observed-infield-density) shows that the observed values from the stadium fall somewhat between those attained with the two lab tests. 
+Recall that all of these values for $\rho$ are somewhat higher than those which have been used for other infield soils research (c.f. Figure \@ref(fig:lit-review-density-comparison)).
+
 
 (ref:proctor-vs-observed-infield-density-caption) For a popular commercial infield mix, dry density values observed on a professionally managed infield surface lie between those achieved with the Standard and Modified Proctor tests.
 
@@ -230,102 +190,24 @@ A pilot experiment was also performed to determine determine whether a notable d
 knitr::include_graphics('../../cleatmarkmethod/figs/pdf/proctor-vs-observed-infield-density.pdf')
 ```
 
+A pilot experiment was also performed to determine if a notable difference in sample behavior occurred between the two energy levels.
+Two soils were used in this experiment. 
+These were mixed from the same sand and clay components to yield mixtures of 60 and 75% sand. 
+Fresh batches of each air-dry soil were brought to their respective $w_{opt}$ for the two energy levels. 
+The material was thoroughly hand-mixed with the appropriate mass of water and allowed to cure for &GreaterEqual;16 hr. 
 
-A proctor test was performed for each sample to determine $w_{opt}$. 
-A rough estimate of $w_{opt}$ was made by adding small amounts of water to a hand specimen. 
-The gravimetric water content was determined and five total aliquots were prepared - one at this water content, with two drier and two wetter. 
-Appropriate amounts of water were incorporated by hand to yield $w$ spacing of &asymp; 0.02. 
-Samples were cured in plastic bags for &GreaterEqual; 16 hr. 
-Each specimen was compacted and weighed, and a representative sample was removed for the water content determination. 
-
-To derive $w_{opt}$, a polynomial spline was fitted to the plot of dry density vs. water content.
-Values for $\rho_{max}$ and $w_{opt}$ were computed by setting the curve's derivative to zero and solving for each value at this point (Figure \@ref(fig:deriving-proctor-values)). 
-<!-- This approach is further documented in **soiltestr**.  -->
-@ASTMD698-12 suggests the operator draw the compaction curve manually, but a computational approach
-removes operator judgement and makes the analysis more reproducible.
-See @Howell1997 and @Webb2014 for other examples of fitting mathematical functions to Proctor data.
-
-
-(ref:deriving-proctor-values-caption) Values for $\rho_{max}$ and $w_{opt}$ (black arrows) were derived from the compaction curves using a spline fitting routine.'
-
-```{r deriving-proctor-values, fig.cap='(ref:deriving-proctor-values-caption)', fig.scap='Example compaction curves prior to cleat-mark test', eval=TRUE}
-knitr::include_graphics('../../cleatmarkmethod/figs/pdf/deriving-proctor-values.pdf')
-```
-
-
-A sufficient mass of air-dry soil was then brought to the appropriate $w_{opt}$ for the test energy.
-The water was weighed and thoroughly incorporated by hand and allowed to cure for &GreaterEqual;16 hr. 
-
-
-##### Conversion of Proctor test energy-per-volume to cleat-mark cylinder equivalent
-
-A direct translation of protocols between the Proctor tests and preparation of the cleat-mark cylinders was not possible. 
-The Proctor mold is 10.2 cm diameter x 11.4 cm deep while the pneumatic test device uses cylinders 15.4 cm diameter x 10.2 cm deep \@ref(fig:proctor-vs-cleat-mark-cyls-photo).
-```{r proctor-vs-cleat-mark-cyls-photo, fig.cap='The cleat-mark cylinders were designed with different dimensions than a typical Proctor mold. A conversion was required to equate the compaction energy between them.', fig.scap='Proctor mold and cleat-mark cylinders'}
-# add this photo when I take it
-# knitr::include_graphics(...)
-
-```
-
-The cleat-mark cylinder dimensions were initially chosen based on two criteria: 
-
-(1) the minimum diameter needed to accommodate several baseball cleats, and 
-
-(2) a commonly used specification for infield soil depth (10.2 cm / 4 in)
-
-With these dimensions, a fully-loaded cylinder containing moist soil has a mass of ~5.5 kg.
-Unfortunately, it was later discovered that the automatic turntable for the 3D scanner has a maximum capacity of 5 kg. 
-Therefore an adjustment to reduce the specimen mass was required. 
-2.5 cm cylindrical plugs were fabricated from high-strength polymer resin poured into each cylinder (Figure \@ref(fig:resin-plugs)).
-The resin has a bulk density of just ~0.6 Mg m^-3^ so the plugs reduce the total specimen mass to ~ 4.5 kg and maintain a sufficient profile depth of 7.5 cm.
-After inserting the plugs, each cylinder's volume was precisely determined by filling it with de-aired water and recording the filled mass.
-This procedure allows precise density computations despite any differences in the plugs' sizes. 
-
-```{r resin-plugs, fig.cap='Low-density resin plugs used to reduce cylinder volume.'}
-knitr::include_graphics('../../cleatmarkmethod/photos-and-screen-recordings/resin-plug.JPG')
-```
-
-
-A conversion was then developed to equate each Proctor test energy to 
-the larger cleat-mark cylinder. The conversion for the Standard test 
-(25 blows per layer, 3 layers) is straightforward because the new total profile thickness (3 in or 7.5 cm) corresponds exactly to 2/3 of the regular Proctor mold. 
-Therefore the lift thickness was held constant and the number of lifts was simply reduced to 2. 56 blows per layer are used for the 15 cm-diameter mold @ASTMD698-12.
-The Modified test calls for 5 lifts, which is not evenly divisible into the new total height.
-An additional energy conversion is required to translate the Modified compaction routine to the cleat-mark cylinders.
-This calculation is outlined in Equation \@ref(eq:modified-energy-per-volume).
-
-
-\begin{align*} 
-\frac{E_{Modified~Proctor_{total}}}{vol_{Modified~Proctor}}&=\frac{E_{cleat-mark_{total}}}{vol_{cleat-mark}} \\
-\frac{2700~\frac{kJ}{m^3}}{978~cm^3}&=\frac{E_{cleat-mark_{total}}}{1537~cm^3} \\
-E_{cleat-mark_{total}}&=~4243 \frac{kJ}{m^3} \\
-\end{align*}
-
-A single blow of the Modified hammer applies:
-
-\begin{align*}
-E&=mgh \\
-E&=\frac{4.54~kg}{}~\times~\frac{9.81~m}{s^2}~\times~\frac{0.457~m}{} \\
-E&=\frac{\frac{20.34~kgm^2}{s^2}}{\text{blow}} \\
-&=\frac{20.34~J}{\text{blow}} \\
-\end{align*}
-
-Therefore a total energy of 4243 kJ requires:
-\begin{equation}
-\frac{4243~J}{\text{cylinder}}\times\frac{\text{1 blow}}{20.34~J}= \text{209 blows per cylinder} \\
-(\#eq:modified-energy-per-volume)
-\end{equation}
-
-
-Split over 3 layers, $209 / 3 \approx 70$ blows per layer are required.
-
+The soil was next compacted into the cleat-mark cylinders with the appropriate number of blows.
+Due to the geometry of the cleat-mark cylinders this required a conversion for the compaction energy per unit volume of soil. 
+This calculation is detailed in the Appendix, Section \@ref(cleat-mark-energy-per-vol-conversion).
+The standard routine used 2 lifts with 56 blows per lift.
+The modified routine used 3 lifts with 63 blows per lift (See Equation \@ref(eq:modified-energy-per-volume-appendix)).
 
 ##### Comparison of density achieved during Proctor tests and cleat-mark compaction routine 
 
-To validate the energy conversion outlined in Equation  \@ref(eq:modified-energy-per-volume), the masses and water contents of each cylinder were recorded following compaction.
-Three replicates of two soils at both energies were prepared for a total of 12 specimens. 
+To validate the energy conversion, the masses and water contents of each prepared cleat-mark cylinder were recorded following compaction.
+Three replicates of both soils at both energies were prepared, for a total of 12 specimens. 
 
-These were compared with the values of $\rho_{max}$ and $w_{opt}$ derived from the original Proctor test (either standard or modified).
+These were compared with the corresponding values of $\rho_{max}$ derived from the original Proctor tests.
 
 ```{r compute-pooled-sd-for-3-cleatmark-replication-densities}
 patton_mocha_metadata <- readr::read_csv('../../cleatmarkmethod/ecmdata/metadata/mixture-descriptions-and-metadata.csv', col_types = 'cccfc')
@@ -401,33 +283,40 @@ density_diffs <- bind_rows(proctor_test_results, mean_qc_density_values) %>%
   mutate(diff = proctor - qc)
 
 
-avg_density_diff <- round(mean(density_diffs$diff), 3)
+avg_density_diff <- round(mean(density_diffs$diff), 2)
 
 ```
 
 
-
-Figure \@ref(fig:proctor-vs-cleat-mark-achieved-density-fig) shows that the three replicates within a soil x effort pair were very consistent; the pooled standard deviation within each soil x effort combination was just `r pooled_qc_density_sd` Mg m^-3^.
-Figure \@ref(fig:proctor-vs-cleat-mark-achieved-density-fig) also clearly shows that the cleat-mark compaction routine packed the soil to a similar but systematically lower dry density than the corresponding Proctor test.
-This result corresponds well with prior research on varying the mold diameter during compaction tests. 
+Figure \@ref(fig:proctor-vs-cleat-mark-achieved-density-fig) shows that the three replicates within a soil-by-effort pair were very consistent. The pooled standard deviation for a soil-by-effort combination was just `r pooled_qc_density_sd` Mg m^-3^.
+Figure \@ref(fig:proctor-vs-cleat-mark-achieved-density-fig) also clearly shows that the cleat-mark compaction routine packed the soil to a similar but systematically lower dry density than the corresponding Proctor tests.
+This result agrees with other research on varying the mold diameter during compaction tests. 
 @ASTMD698-12 states:
 
 >"Results have been found to vary slightly when a material is tested at the same compactive effort in different size molds, with the smaller mold size typically yielding larger values of density/unit weight."
 
-@Johnson1962 reported differences of 0.05 Mg m^-3^ for a clayey sand.
-This is comparable to the mean difference of `r avg_density_diff` observed in this small experiment.
-Therefore it seems that the chosen compaction routine is both repeatable and of sufficient energy.
+@Johnson1962 compacted a clayey sand in variously-sized molds. 
+They reported a difference of 0.05 Mg m^-3^ between the 4" and 6" diameter molds.
+This is very similar to the mean difference of `r avg_density_diff` observed in this small experiment.
+It would appear that the small decrease in dry density should be expected given the specimen size. 
+Therefore, the energy conversion between the Proctor compaction mold and the cleat-mark cylinders was deemed valid. 
 
-```{r proctor-vs-cleat-mark-achieved-density-fig, fig.cap='$\\rho$ achieved with the cleat-mark cylinders was consistent across replications and slightly lower than $\\rho$ derived from the corresponding Proctor curve', fig.scap='$\\rho$ for cleat-mark cylinders c.f. Proctor testing'}
+
+```{r proctor-vs-cleat-mark-achieved-density-fig, fig.cap='$\\rho_{bulk}$ achieved with the cleat-mark cylinders was consistent across replications and slightly lower than $\\rho$ derived from the corresponding Proctor curve', fig.scap='$\\rho_{max}$ for cleat-mark cylinders c.f. Proctor testing'}
 knitr::include_graphics('../../cleatmarkmethod/figs/pdf/proctor-vs-qc-density-comparison.pdf')
 
 ```
 
-Full trial runs were completed using each routine for the daily specimen repairs. 
-The full procedure is detailed in Section \@ref(performing-cleat-mark-test).
-A single critical water content $\theta_{crit}$ was derived for each soil x effort combination using the Normalized RFI as the surface metric of interest. 
-These values are summarized in \@ref(tab:derived-water-contents-from-cleat-mark-test-effort-comparison-tab).
-These data suggest the compaction effort does not markedly influence the ultimate value determined for $w_{crit}$. The tests were not replicated so they cannot be statistically compared.
+
+##### Trial run to compare compaction routines 
+
+The next step in developing the specimen preparation routine was to determine whether the Standard or Modified routines would ultimately yield differences in the $\theta_{crit}$ value corresponding with the cleat-in/cleat-out behavioral threshold. 
+
+Full trial runs of the cleat mark test were completed using each routine for the daily specimen repairs. 
+The full procedure for the test will be detailed in Section \@ref(performing-cleat-mark-test).
+A single critical water content $\theta_{crit}$ was derived for each soil-by-effort combination using the Normalized RFI as the surface metric of interest. 
+These values are summarized in Table \@ref(tab:derived-water-contents-from-cleat-mark-test-effort-comparison-tab).
+These data suggest the compaction effort does not markedly influence the ultimate value determined for $\theta_{crit}$. The tests were not replicated so they cannot be statistically compared.
 
 
 ```{r derived-water-contents-from-cleat-mark-test-effort-comparison-tab, fig.cap="The critical volumetric water contents derived from the cleat mark test were nearly identical for the two compaction treatments.", eval=TRUE}
@@ -440,61 +329,95 @@ These data suggest the compaction effort does not markedly influence the ultimat
 # read and clean up data 
 derived_test_values_from_compaction_pilot_data <- readr::read_rds('../../cleatmarkmethod/ecmdata/derived-data/cleaned-rds-files/disturbance-vs-water-content-cleaned-data.rds')
 
+# derived_test_values_from_compaction_pilot_table <- derived_test_values_from_compaction_pilot_data$tidied_w_vals %>%
+#   dplyr::filter(metric_label == 'dne') %>%
+#   dplyr::ungroup() %>%
+#   dplyr::select(sample_name, effort, volumetric_w_c) %>%
+#   tidyr::pivot_wider(names_from = effort, values_from = volumetric_w_c) %>%
+#   dplyr::mutate(sample_name = readr::parse_number(sample_name)) %>% 
+#   dplyr::rename(Soil = sample_name) 
+  
+
+# set names of the columns;  must escape % symbol for Latex to parse correctly 
+# colnames(derived_test_values_from_compaction_pilot_table) <- c("\\% Sand", "Standard", "Modified")
+# 
+# # set a vector for caption
+# derived_test_values_from_compaction_pilot_table_caption <- "The critical volumetric water contents derived from the cleat mark test were nearly identical for the two compaction treatments."
+# 
+# # build kable 
+# kableExtra::kbl(derived_test_values_from_compaction_pilot_table, 
+#                 align = 'c',
+#                 digits = 3, 
+#                 format = 'latex', 
+#                 booktabs = TRUE, 
+#                 escape = FALSE,
+#                 position = 'htbp',
+#                 caption = derived_test_values_from_compaction_pilot_table_caption,
+#                 caption.short = "$\\theta_{crit}$ values from cleat mark test performed with 2 compaction efforts") %>% 
+#   kableExtra::add_header_above(header = c(" " = 1, "$\\\\theta_{crit}$" = 2), escape = FALSE) %>% 
+#   kableExtra::kable_styling(position = 'center')
+
+
 derived_test_values_from_compaction_pilot_table <- derived_test_values_from_compaction_pilot_data$tidied_w_vals %>%
   dplyr::filter(metric_label == 'dne') %>%
   dplyr::ungroup() %>%
   dplyr::select(sample_name, effort, volumetric_w_c) %>%
-  tidyr::pivot_wider(names_from = effort, values_from = volumetric_w_c) %>%
-  dplyr::mutate(sample_name = readr::parse_number(sample_name)) %>% 
-  dplyr::rename(Soil = sample_name) 
+  tidyr::pivot_wider(names_from = sample_name, values_from = volumetric_w_c) %>%
+  dplyr::rename(Effort = effort) %>% 
+  dplyr::rename_with(.cols = where(is.numeric),
+                     .fn = ~stringr::str_replace(., "%", "\\\\%")
+  )
   
 
-# set names of the columns;  must escape % symbol for Latex to parse correctly 
-colnames(derived_test_values_from_compaction_pilot_table) <- c("\\% Sand", "Standard", "Modified")
-
 # set a vector for caption
-derived_test_values_from_compaction_pilot_table_caption <- "The critical volumetric water contents derived from the cleat mark test were nearly identical for the two compaction treatments."
 
-# build kable 
-kableExtra::kbl(derived_test_values_from_compaction_pilot_table, 
+derived_test_values_from_compaction_pilot_table_caption <- "The critical volumetric water contents derived from the cleat mark test were nearly identical for the two compaction treatments."
+ 
+# # build kable 
+kableExtra::kbl(derived_test_values_from_compaction_pilot_table,
                 align = 'c',
-                digits = 3, 
-                format = 'latex', 
-                booktabs = TRUE, 
+                digits = 3,
+                format = 'latex',
+                booktabs = TRUE,
                 escape = FALSE,
                 position = 'htbp',
                 caption = derived_test_values_from_compaction_pilot_table_caption,
-                caption.short = "$\\theta_{crit}$ values from cleat mark test performed with 2 compaction efforts") %>% 
-  kableExtra::add_header_above(header = c(" " = 1, "$\\\\theta_{crit}$" = 2), escape = FALSE) %>% 
+                caption.short = "$\\theta_{crit}$ values from cleat mark test performed with 2 compaction efforts") %>%
+  kableExtra::row_spec(row = 0, bold = TRUE) %>% 
+  kableExtra::add_header_above(header = c(" " = 1, "$\\\\theta_{crit}$" = 2), escape = FALSE, bold = TRUE) %>% 
+  kableExtra::row_spec()
   kableExtra::kable_styling(position = 'center')
+
 
 ```
 
 ##### Summary - specimen compaction
 
-Ultimately, the Modified effort was adopted for all further study for the following reasons:
+The Modified effort was ultimately adopted for all further study.
+This choice is justified by the following:
 
-1. The "critical" water contents derived from the two methods were quite similar. 
-Although a statistical comparison was not possible, the differences due to soil type appears to be larger than any difference due to compaction effort. 
+1. The "critical" water contents derived from the two methods were very similar (\@ref(tab:derived-water-contents-from-cleat-mark-test-effort-comparison-tab)). Although a statistical comparison was not possible, the differences due to soil type appears to be larger than any difference due to compaction effort. 
 
-2. Soil bulk density on an actual infield was higher than that from a Standard Proctor test. 
-The prevailing opinion among grounds managers is that the infield should be as compacted as possible. 
+2. Soil bulk density on an actual infield was higher than that obtained from a Standard Proctor test but lower than that obtained from a Modified Proctor test (Figure \@ref(fig:proctor-vs-observed-infield-density). 
+The prevailing opinion among baseball grounds managers is that the infield should be as compacted as possible. 
 Therefore, a realistic lab test should favor greater rather than lesser compaction.
 
 #### Measuring & adjusting the water content 
 
 Wetting and drying cycles are considered an important part of conditioning an infield. 
-A heavy hand-watering is usually the first action taken following grading and compaction. Evacuating air from the profile aids in settling the soil to a stable condition.
+<!-- this is a good thing to mention but this is the wrong place for it -->
+<!-- A heavy hand-watering is usually the first action taken following grading and compaction.  -->
+<!-- Evacuating air from the profile aids in settling the soil to a stable condition. -->
 The brittle-ductile transition mostly occurs during day games when no water can be added after the game begins. 
 
-A given soil must be tested at a range of water contents which bracket $w_{crit}$. 
-The water content was adjusted up or down by adding a known volume of water or by drying under a heat lamp manifold. 
+A given soil must be tested at a range of water contents which bracket $\theta_{crit}$. 
+In our lab test, the water content was adjusted up or down by adding a known volume of water or by drying under a heat lamp manifold. 
 The manifold was calibrated to emulate the outdoor conditions on a summer day in the northeastern United States.
-Figure \@ref(fig:heat-lamps-photo) shows the apparatus which comprises 12 regularly spaced clamp fixtures, each housing a 150-W broad-spectrum incandescent bulb (Exo-Terra PT2114 - A21/150W). 
+Figure \@ref(fig:heat-lamps-photo) shows the apparatus which comprises 12 regularly-spaced clamp fixtures, each housing a 150-W broad-spectrum incandescent bulb (Exo-Terra PT2114 - A21/150W). 
 
 
 Proper configuration of the drying apparatus was determined through a series of calibrations.
-These measured the effect of lamp distance, the variability of $w$ within and across specimens, and the validity of two methods for measuring $\theta$.
+These measured the effect of lamp distance, the variability in water content within and across specimens, and the validity of two methods for measuring $\theta$.
 These are next described. 
 
 
@@ -503,12 +426,30 @@ These are next described.
 In this experiment, gravimetric water content was determined in the top 15 mm using an 8 mm diameter soil probe.
 Four samples were extracted each hour and averaged to produce a representative value for the surface.
 The surface temperature was also recorded using an infrared laser thermometer. 
-The distance between the heat bulb and the soil specimen markedly affects the drying rate. 
-Figure \@ref(fig:water-content-change-by-lamp-height)A shows that a 15 cm distance caused excessively rapid drying (initially over 3 % by dry mass per hour). 
+
+Figure \@ref(fig:water-content-change-by-lamp-height)A shows that the distance between the heat bulb and the soil specimen markedly affects the drying rate. 
+A 15 cm distance caused excessively rapid drying (initially over 3 % by dry mass per hour). 
 Figure \@ref(fig:water-content-change-by-lamp-height)B also shows the rate of water loss was not constant with time. 
-Conversely, a 45 cm lamp height produced only a small change in water content over 3-4 hr (the typical length of a professional baseball game). 
+
+At the other extreme, a 45 cm lamp height produced only a small change in water content over 3-4 hr (the typical length of a professional baseball game). 
 The 30 cm distance produced the most realistic result. 
 
+Figure \@ref(fig:lamp-height-calibration) shows that the surface temperature observed beneath te 30 cm lamp height compared favorably with that of an actual infield on a sunny August day in Pennsylvania. 
+
+
+```{r heat-lamps-photo, fig.cap='Drydown manifold used prior to cleat-mark test', eval=TRUE}
+knitr::include_graphics('./images/heat-lamps.JPG')
+```
+
+
+
+```{r lamp-height-calibration, fig.cap='Surface temperature for the 30 cm lamp height closely matches conditions observed on a sunny day in Pennsylvania (outdoor photo credit: Andrew Burnette)', fig.scap='Temperature beneath drydown apparatus c.f. outdoor conditions', eval=TRUE}
+
+knitr::include_graphics('../../cleatmarkmethod/figs/manually-built/drydown-surface-temp-comparison.png')
+
+```
+ 
+ 
 ###### Water content study 2: Uniformity across specimen surface and across replicate specimens
 
 A second experiment was performed to assess the uniformity of $w$ across the specimen surface. 
@@ -524,10 +465,10 @@ Figure \@ref(fig:w-variation-across-space-and-time) shows the results for each r
 The water content is highly uniform across the surface of a single specimen, and the difference across replications is small. 
 
  
-```{r heat-lamps-photo, fig.cap='Drydown manifold used prior to cleat-mark test', eval=TRUE}
-knitr::include_graphics('./images/heat-lamps.JPG')
-```
-
+<!-- Some extra language : -->
+<!-- For this particular soil, the rate of water loss $\frac{\Delta w}{hr}$ was essentially linear for the first 3 hours of drying.  -->
+<!-- After > &thickapprox; 3 hours, the rate of loss slowed. -->
+<!-- This is a well-documented phenomenon in soil physics and often corresponds with the breaking of contunuous capillary flow [reference needed; Watson soil physics textbook] -->
 
 ```{r water-content-change-by-lamp-height, fig.cap='\\textbf{A.} Water loss was most significant for the 15 cm height. \\textbf{B.} The first derivative of $w$ with respect to time shows the rate of water loss changed rapidly for the lowest lamp height. The 30 and 45 cm heights lost water at a steadier rate.', fig.scap='Changes in total $w$ and evaporation rate with time', eval=TRUE}
 
@@ -545,8 +486,9 @@ water_loss_figs <- list.files('../../cleatmarkmethod/figs/rds/',
 water_loss_patchwork <- water_loss_figs %>% 
   wrap_plots()+
   theme(legend.position = 'none')+
-  plot_layout(guides = 'collect')+
-  plot_annotation(tag_levels = 'A') &
+  patchwork::plot_layout(guides = 'collect')+
+  patchwork::plot_annotation(tag_levels = 'A',
+                  tag_suffix = '.') &
   theme(plot.tag = element_text(size = 16))
 
 
@@ -562,16 +504,9 @@ knitr::include_graphics('figs/pdf/w-variation-across-space-and-time.pdf')
 ```
 
  
-```{r lamp-height-calibration, fig.cap='Surface temperature for the 30 cm lamp height closely matches conditions observed on a sunny day in Pennsylvania (outdoor photo credit: Andrew Burnette)', fig.scap='Temperature beneath drydown apparatus c.f. outdoor conditions', eval=TRUE}
+The variation in water content due to time is clearly larger than any heterogeneities across an individual specimen or across replications. 
 
-knitr::include_graphics('../../cleatmarkmethod/figs/manually-built/drydown-surface-temp-comparison.png')
 
-```
- 
-Finally, the variation in water content due to time is clearly larger than any heterogeneities across an individual specimen or across replications. 
-For this particular soil, the rate of water loss $\frac{\Delta w}{hr}$ was essentially linear for the first 3 hours of drying. 
-After > &thickapprox; 3 hours, the rate of loss slowed.
-This is a well-documented phenomenon in soil physics and often corresponds with the breaking of contunuous capillary flow [reference needed; Watson soil physics textbook]
 
 ###### Water content study 3: precise measurement of $\theta$ {#sand-replacement-vs-scanner-for-theta}
 The third water content study's aim was to develop a method for measuring _volumetric_ water content $\theta$. 

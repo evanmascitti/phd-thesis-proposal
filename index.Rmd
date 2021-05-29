@@ -21,14 +21,9 @@ csl: soil-science-society-of-america-journal.csl
 biblio-title: "References"
 link-citations: yes
 description: "This is my first attempt at compiling a large dynamic document with the **bookdown** package in R."
-mainfont: "Arial"
+mainfont: "Roboto"
 mathfont: "Fira Math Regular"
-citecolor: blue
-toccolor: blue
-toc-depth: 2
-lof: yes
-lot: yes
-toc: yes
+toc: false
 nocite: |
     @Monkul2007, @Cabalar2011, @Lade1998; @Ueda2011,
     @Thevanayagam1998, @Vallejo2000, @Cabalar2017, @Kim2018, @Cabalar2011,
@@ -40,8 +35,7 @@ nocite: |
 # Executive summary {.unnumbered #exeuctive-summary}
 
 This document outlines the research progress I have made since beginning my PhD in 2019 and describes my plans for completing the project.
-
-It is divided into 4 main sections:
+It comprises 4 main sections:
 
 Section \@ref(purpose-and-objectives), [Purpose and objectives](#purpose-objectives)
 
@@ -72,6 +66,24 @@ Although it is un-related to the technical/soils aspects of my project, I includ
 Regardless of whether the reader finds this section enlightening, writing it has served as a useful "statement of beliefs" for me.
 
 The proposal concludes with a [glossary](#definition-of-terms), an [Appendix](#appendix) housing some additional tables and equations, and my [references](#references).
+
+
+<!-- I turned off the default TOC and I am inserting the  -->
+<!-- contents and lists of figs and tables here manually with LaTeX. -->
+<!-- It is a bit hacky but it works....using the bookmark package  -->
+<!-- from CTAN to allow the contents to be bookmarked in the resulting -->
+<!-- pdf file. Probably same thing would work for figs and tables -->
+<!-- lists but need to take the time to learn what the arguments mean -->
+
+\tableofcontents
+
+\pdfbookmark[chapter]{\contentsname}{toc}
+
+\listoffigures
+
+
+\listoftables
+
 
 <!-- ```{=latex} -->
 <!-- \newpage  -->

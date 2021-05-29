@@ -31,7 +31,7 @@ These may be re-stated as formal objectives:
 
 **Objective 1.** 
 
-:  Develop a laboratory method to pinpoint the two critical water contents for any infield soil:
+:  Develop laboratory methods to pinpoint the two critical water contents for any infield soil:
 
 a) the transition from a cleat-in/cleat-out yield mode to chip-forming or clod-forming failure
 

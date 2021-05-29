@@ -3,17 +3,105 @@ title: testing short snippets of Rmd code
 output:
   bookdown::pdf_document2:
     latex_engine: xelatex
+    includes:
+      in_header: test-preamble.tex
 ---
 
-```{r setup, include=F}
-knitr::opts_chunk$set(echo=F,warning=F,message=F)
-knitr::opts_knit$set(root.dir=here::here())
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = F, warning = F, message = F,
+                      out.width = '90%', fig.align = 'center')
+
 ```
 
-# Section 1
+```{r load-packages, eval=TRUE}
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(kableExtra)
+  library(magick)
+  library(patchwork)
+  })
+```
 
-```{=latex}
-\begin{center}
-   `cleatmarkmethod_cyl04_2021-04-11.ply`
-\end{center}
+
+Full trial runs of the cleat mark test were completed using each routine for the daily specimen repairs. 
+The full procedure for the test will be detailed in Section \@ref(performing-cleat-mark-test).
+A single critical water content $\theta_{crit}$ was derived for each soil-by-effort combination using the Normalized RFI as the surface metric of interest. 
+These values are summarized in Table \@ref(tab:derived-water-contents-from-cleat-mark-test-effort-comparison-tab).
+These data suggest the compaction effort does not markedly influence the ultimate value determined for $\theta_{crit}$. The tests were not replicated so they cannot be statistically compared.
+
+
+```{r derived-water-contents-from-cleat-mark-test-effort-comparison-tab, fig.cap="The critical volumetric water contents derived from the cleat mark test were nearly identical for the two compaction treatments.", eval=TRUE}
+# hard-coding paths like this this is usually a no-no, but I am 
+# doing it here to maintain the link between this table and the data
+# and to do so without using something like make....the data lie in
+# a totally separate prokect so I can't use relative paths from the project # root without navigating upward in my own computer's file system tree
+
+
+# read and clean up data 
+derived_test_values_from_compaction_pilot_data <- readr::read_rds(
+  here::here('misc-extra-files', 'test-table-data.rds'))
+
+# derived_test_values_from_compaction_pilot_table <- derived_test_values_from_compaction_pilot_data$tidied_w_vals %>%
+#   dplyr::filter(metric_label == 'dne') %>%
+#   dplyr::ungroup() %>%
+#   dplyr::select(sample_name, effort, volumetric_w_c) %>%
+#   tidyr::pivot_wider(names_from = effort, values_from = volumetric_w_c) %>%
+#   dplyr::mutate(sample_name = readr::parse_number(sample_name)) %>% 
+#   dplyr::rename(Soil = sample_name) 
+  
+
+# set names of the columns;  must escape % symbol for Latex to parse correctly 
+# colnames(derived_test_values_from_compaction_pilot_table) <- c("\\% Sand", "Standard", "Modified")
+# 
+# # set a vector for caption
+# derived_test_values_from_compaction_pilot_table_caption <- "The critical volumetric water contents derived from the cleat mark test were nearly identical for the two compaction treatments."
+# 
+# # build kable 
+# kableExtra::kbl(derived_test_values_from_compaction_pilot_table, 
+#                 align = 'c',
+#                 digits = 3, 
+#                 format = 'latex', 
+#                 booktabs = TRUE, 
+#                 escape = FALSE,
+#                 position = 'htbp',
+#                 caption = derived_test_values_from_compaction_pilot_table_caption,
+#                 caption.short = "$\\theta_{crit}$ values from cleat mark test performed with 2 compaction efforts") %>% 
+#   kableExtra::add_header_above(header = c(" " = 1, "$\\\\theta_{crit}$" = 2), escape = FALSE) %>% 
+#   kableExtra::kable_styling(position = 'center')
+
+
+# changing orientation 
+derived_test_values_from_compaction_pilot_table <- derived_test_values_from_compaction_pilot_data$tidied_w_vals %>%
+  dplyr::filter(metric_label == 'dne') %>%
+  dplyr::ungroup() %>%
+  dplyr::select(sample_name, effort, volumetric_w_c) %>%
+  tidyr::pivot_wider(names_from = sample_name, values_from = volumetric_w_c) %>%
+  dplyr::rename(Effort = effort) %>% 
+  dplyr::rename_with(.cols = where(is.numeric),
+                     .fn = ~stringr::str_replace(., "%", "\\\\%")
+  )
+                
+  
+
+# set names of the columns;  must escape % symbol for Latex to parse correctly 
+# colnames(derived_test_values_from_compaction_pilot_table) <- c("\\% Sand", "Standard", "Modified")
+# 
+# set a vector for caption
+
+derived_test_values_from_compaction_pilot_table_caption <- "The critical volumetric water contents derived from the cleat mark test were nearly identical for the two compaction treatments."
+ 
+# # build kable 
+kableExtra::kbl(derived_test_values_from_compaction_pilot_table,
+                align = 'c',
+                digits = 3,
+                format = 'latex',
+                booktabs = TRUE,
+                escape = FALSE,
+                position = 'htbp',
+                caption = derived_test_values_from_compaction_pilot_table_caption,
+                caption.short = "$\\theta_{crit}$ values from cleat mark test performed with 2 compaction efforts") %>%
+  kableExtra::add_header_above(header = c(" " = 1, "$\\\\theta_{crit}$" = 2), escape = FALSE) %>%
+  kableExtra::kable_styling(position = 'center')
+
+
 ```

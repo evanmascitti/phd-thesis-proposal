@@ -20,6 +20,20 @@
 \usepackage{makecell}
 \usepackage{xcolor}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% load cancel package for clearer unit conversions
+\usepackage{cancel}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% apparently this package makes better bookmarks, 
+% I need it for putting the TOC into the document tree
+% see https://tex.stackexchange.com/questions/65544/how-to-link-table-of-contents-in-thesis-pdf
+
+\usepackage{bookmark}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 % set vertical line spacing for amsmath equations 
@@ -73,8 +87,9 @@
  %%%%%%%%%%%%%%%%%%%%
  
  
- % limit depth of numbered sections 
+ % limit depth of numbered sections and table of contents 
 \setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{1} % chapter level is 0
  
  %%%%%%%%%%%%%%%%%%%%
 % this one works if all else fails....not using any add-on packages;

@@ -236,7 +236,7 @@ PSA is inexpensive and relatively fast compared to other analyses.
 It has been used as a surrogate marker for some other soil property in nearly every sub-discipline of soil science. 
 Unfortunately the results of a PSA are highly dependent on the method employed, and there is no universally-accepted protocol [@Gee2002].
 
-PSA has formed the basis for most discussions about infield mix (for example, @Schroder2009; -@Schroder2012). 
+PSA has formed the basis for most discussions about infield mix [@Schroder2009; @Schroder2012]. 
 Current recommendations for infield mixes revolve around total sand content and silt-to-clay ratio (SCR) [@ASTMF2107-08]. 
 There are two potential problems with using PSA as a specification for infield soils:
 
@@ -244,14 +244,14 @@ There are two potential problems with using PSA as a specification for infield s
 1. The linkage between PSA and the behavior of fine-grained soils can be spurious. 
 
 When I began this project, I conducted an an extensive review of PSA literature.
-I chose not to include it in this proposal because PSA is not the focus of this dissertation. 
+I chose not to include it in this proposal because PSA is not the focus of my dissertation. 
 This document is already very long and I felt that a long discussion of PSA methods would divert the reader's focus away from more central themes of the project. 
 
-Instead, I have included this section to briefly outline possible pitfalls of using PSA to characterize infield soils. 
+This section briefly outlines some possible pitfalls of using PSA for characterizing infield soils. 
 Rather than recount the minutiae of particular studies, I focus on the positions held by governing bodies and the views of historically significant soil scientists.  
 
 
-#### PSA method diversity 
+#### Ambiguity of PSA methods
 
 There is no universally agreed-upon method for performing a PSA. Many samples require special treatment, making comparison of results difficult.
 
@@ -736,7 +736,8 @@ Moreno-Maroto and Alonso-Azcárate later compared their own classification syste
 In the latter paper the authors noted that USCS tends to classify soils having high LL and low toughness as clays. They argued that the behavior of these soils is more silt-like and that their M- and C-lines clarify this distinction. 
 
 The author considers the above debate rather circular. 
-_Any_ attempt to classify soils into groups invokes a degree of arbitrariness. Pedantic debates about "silt-like" or "clay-like" behavior typify the murky business of classifying natural entities into discrete bins. 
+_Any_ attempt to classify soils into groups invokes a degree of arbitrariness. 
+A pedantic debate about "silt-like" and "clay-like" behavior typifies the murky business of classifying natural entities into discrete bins. 
 
 There are no universally agreed-upon definitions of "clay" and "silt," although a number of academic and professional societies maintain their own official language (for example, @Guggenheim1995). These terms' working definitions are context-specific; the qualities important to the earthworks engineer differ from that of the potter, which differ from that of the geologist and so on. 
 Despite these limitations, the emphasis on toughness by Moreno-Maroto and Alonso-Azcárate [-@Moreno-Maroto2018; -@Moreno-Maroto2021] is important and should be explored further. 
@@ -1097,7 +1098,7 @@ Therefore, the shape of the liquid limit vs. sand content curve below 60% sand c
 For the same percent "coarse addition," coarser sand caused a smaller change in the Atterberg limits while finer sand had a larger effect. The effect of silt was even greater.
 
 The influence of coarse additions' particle size was also tested by  @Sivapullaiah1985.
-For equal sand percentages, both the liquid and plastic limits were affected by the size of the added sand particles.
+Both the liquid and plastic limits were affected by the size of the added sand particles.
 Mixes containing coarser sand (425 μm – 150 μm) adhered more closely to the linear law of mixtures than finer sand having only particles 150 μm – 75 μm.
 Mixes containing added silt deviated even further from the linear law.
 
@@ -1108,6 +1109,11 @@ There was little difference in the PL and LL for soils with LL < 35.
 When the LL exceeded 35, greater discrepancies were observed.
 This result is not surprising given the higher specific surface area of finer particles.
 The authors did not specify whether the sieving procedure was performed wet or dry.
+
+
+Note that with the exception of @Rehman2020, all the above studies used sand exclusively < 425 &mu;m. 
+Many infield mixes contain significant mass percentages of sand larger than this diameter.
+
 
 #### Sand uniformity
 
@@ -1132,7 +1138,7 @@ The authors attributed the difference to irregularly-shaped particles having hig
 @Sivapullaiah1985 found no effect of sand particle shape on the Atterberg limits.
 Bentonite clay was mixed with equal amounts of either angular or round sand of the same particle size fraction (150 μm – 75 μm). Sand contents ranged from 20 - 95 %. 
 There was no discernible difference in the liquid or plastic limits.
-This finding differs from those of -@Dumbleton1966b, which showed a measureable difference between angular and round particles of the same size fraction.
+This finding differs from those of @Dumbleton1966b, which showed a measureable difference between angular and round particles of the same size fraction.
 
 
 
@@ -1153,7 +1159,7 @@ An opposite effect was observed for the plastic limit. With small bentonite addi
 Their results were similar to those of @Seed1964a. 
 The LL and PL were suppressed below the values predicted from a linear interpolation between the two clays' values. Figure \@ref(fig:dumbleton-west-1666b-fig8-redraw) shows this discrepancy.
 
-```{r dumbleton-west-1666b-fig8-redraw, fig.cap='Data from Dumbleton and West (1966b) show the behavior of a clay mixture is not a simple linear interpolation between its components\' properties.', fig.scap='Atterberg limits of clay mixtures (from Dumbleton and West, 1966b)'}
+```{r dumbleton-west-1666b-fig8-redraw, fig.cap='Data from Dumbleton and West (1966b) show the behavior of a clay mixture is not a simple linear interpolation between its components\' properties. Similar results were obtained by Seed et al. (1964) and Sivapullaiah and Sridharan (1985).', fig.scap='Atterberg limits of clay mixtures (from Dumbleton and West, 1966b)'}
 knitr::include_graphics('figs/pdf/dumbleton-west-1966b-fig8-redraw.pdf')
 ```
 

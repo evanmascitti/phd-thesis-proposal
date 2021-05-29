@@ -11,22 +11,20 @@ library(magrittr)
 This section is a brief, non-technical manifesto about what I am learning in graduate school besides soil science.
 The majority of this proposal has focused on the specifics of the research project I have undertaken.
 Needless to say that is the most important part of getting my PhD. 
-However, I feel that in the field of science not enough attention is paid to the _actual mechanics of how work is achieved_.
+However, I feel that as a group, scientists do not give enough attention to the _actual mechanics of how work is achieved_.
 Practical "workflow skills" are rarely taught at the undergraduate or graduate level.
-I guess most of us assume that one's workflow is simply an individual preference, or that everybody just _knows_ how to manage large projects. 
+I guess it is assumed that one's workflow is simply an individual preference, or that everybody just _knows_ how to organize large projects. 
 I think these are both mistakes. 
 
-The purpose of this short section is to transparently describe the practices I have adopted in my day-to-day work.
-They are relevant to this proposal because these practices ensure my data is stored safely, and that the results of my work are correct and reproducible.
-I want my work to be useful both to others and to my future self. This requires some best practices as the data are collected, stored, and analyzed. 
+The purpose of this section is to transparently describe the practices I have adopted in my day-to-day work.
+They are relevant to this proposal because these habits help ensure the results of my work are correct and reproducible.
+I want my discoveries to be useful both to others and to my future self. This requires some best practices as the data are collected, stored, and analyzed. 
 
 
-My routines are rather different than a typical Microsoft Office-based workflow, and they might seem extreme or unnecessary to Office loyalists.
-However I feel strongly about this topic and am proud of how I've leveraged computational tools to improve the quality and efficiency of what I do.
+My routines are rather different from a typical Microsoft Office-based workflow, and they might seem extreme or unnecessary to Office loyalists.
+However, I feel strongly about this topic and am proud of how I've leveraged computational tools to improve the quality and efficiency of what I do.
 I hope to eventually teach some of the habits explained below to my own students. 
 
-
-### Data storage {#data-storage}
 
 #### File formats 
 
@@ -37,11 +35,14 @@ Compare this to the commonly used `.xlsx` format which (while technically an "op
 To ensure the data is kept in its original state, I never perform any direct operations on raw data files. 
 If I discover an error, I make a new copy and correct it with an R script and so there is a record of what was done. 
 I store my data on a local hard drive which is automatically backed up with PSU's subscription to Microsoft OneDrive for Business. 
+I use a number of other principles for organizing my tabular data.
+I learned most of these from an entertaining and useful paper, which I highly recommend:  [Data Organization in Spreadsheets](https://doi.org/10.1080/00031305.2017.1375989) [@Broman2018].
+Hadley Wickham's "tidy" data framework [@Wickham2014] also factors heavily in my data collection and storage routines. 
 
 #### File naming conventions 
 
 I am very cautious about how I name files.
-While this seems like a trivial topic, I actually think it is actually one of the most important and overlooked tasks in research.
+At first blush this sounds like a trivial topic, but I actually think it is actually one of the most important and overlooked tasks in research.
 I always write dates using the ISO standard notation: `YYYY-MM-DD`.
 This makes sorting dates much easier because they are naturally ordered from oldest to newest.
 Compare this with the U.S. convention of `DD-MM-YYYY`; these will be sorted by the date and not in true temporal order. 
@@ -57,7 +58,7 @@ Here is an example file name for one of my hundreds of `.ply` meshes:
 Because of its consistent separators, this file name can be easily parsed into three pieces of information: the name of the experiment, the cylinder ID, and the date.
 Note the leading zeroes before single digits - since we have 12 cylinders, this prevents the computer from sorting the files as:
 
-`cyl1` \newline 
+\noindent `cyl1` \newline 
 `cyl10` \newline 
 `cyl11` \newline 
 `cyl12` \newline
@@ -68,7 +69,7 @@ Note the leading zeroes before single digits - since we have 12 cylinders, this 
 
 The cylinder ID can be easily joined with a metadata file containing more information about the specimen, but these three pieces of information are all that is needed to uniquely identify the file. 
 
-### Day-to-day note taking {#note-taking}
+#### Day-to-day lab notebook {#lab-notebook}
 
 I have iterated through almost every possible means of keeping a "lab notebook": paper notebooks, Microsoft Excel, Microsoft Word, Google docs, Evernote, and Microsoft OneNote.
 Each is better than nothing, but in my view all have significant flaws. 
@@ -78,23 +79,23 @@ This is a robust system for recording my thoughts and also including images, web
 The other tools described below help to track the status and provenance of a project, but there is no substitute for simply writing down what I did. 
 
 
-### Data wrangling and analysis {#data-wrangling-and-analysis}
+#### Data wrangling and analysis {#data-wrangling-and-analysis}
 
 I perform most data analyses using R, with occasional use of Python.
-I use base R plus a group of packages known as the **tidyverse** (<https://www.tidyverse.org/>) [@tidyverse2019].
+I mostly use a group of packages known as the **tidyverse** (<https://www.tidyverse.org/>) [@R-tidyverse].
 The **tidyverse** makes many common and frustrating data wrangling routines much, much easier.
 This frees up time and cognitive load for higher-order tasks. 
 Tidyverse code is easy to write and it makes for a simple transition from Excel or SAS.
 
-Many believe that R is just for statistics, but this is a misconception.
-R is a fully-functioning programming language in which both simple and complex tasks can be performed. 
+Many believe that R is just a free statistics program, but this is a misconception.
+R is a fully-functioning programming language, so it can do much more than statistics. 
 However, R _is_ distinct from most other programming languages in that it was designed for flexibility and interactive data analysis.
 This lends it a fluency which is less present in more general-purpose languages such as C++ or Python.
 R is open-source and can perform all the routine statistical procedures available in programs such as SAS or SPSS. 
 However, unlike its proprietary alternatives, R can be extended by anybody who wishes to do so.
 This means that the menu of available analyses is limited only by the user's imagination and computational skill. 
 
-### Figures and tables {#figures-and-tables}
+#### Figures and tables {#figures-and-tables}
 
 I produce figures using the **ggplot2** package in R [@R-ggplot2]. 
 This package is built around the principles outlined in \underline{The Grammar of Graphics} [@Wilkinson2005].
@@ -105,10 +106,10 @@ This package allows fine-grained control over formatting while maintaining the l
 Candidly, I often resent this package's documentation and user interface, but I still use it because of its powerful formatting capabilities and because it can output tables to a variety of document formats. 
 
 
-### Finished output {#r-markdown-finished-output}
+#### Finished output {#r-markdown-finished-output}
 
 I generate reports, presentations, and papers with the **knitr** and **rmarkdown** R packages (<https://rmarkdown.rstudio.com/>) [@R-knitr; @R-rmarkdown].
-R Markdown effectively supplants MS Office programs: it directly links one's writing with the source code for a data analysis.
+R Markdown effectively supplants MS Office programs: it directly weaves one's writing with the source code for a data analysis.
 This means that there is no need to copy-paste results into a "finished" document. 
 By eliminating copy-paste, R Markdown makes the analysis process not just easier but **more likely to be correct**.
 For a quick and amusing take on the value of R Markdown , I recommend watching [this 2-minute video](https://www.youtube.com/watch?v=s3JldKoA0zw).
@@ -118,12 +119,12 @@ Markdown instead uses special characters such as `*`, `~` and `#` to provide sem
 One of the best features of R Markdown is that it can be used to generate many, many types of output. 
 These include pdf files, HTML documents, websites, slide shows, posters, and others. 
 
-In one step, R Markdown runs your analysis code, weaves the output into the Markdown file, and then calls a command-line tool called Pandoc (<https://pandoc.org/>) to translate the Markdown document into more complex markup languages such as \LaTeX, HTML, or XML. Finally, Pandoc converts the document to a finished output. 
+In one step, R Markdown runs your analysis code, weaves the output into a Markdown file, and then calls a command-line tool called Pandoc (<https://pandoc.org/>) to translate the Markdown document into more complex markup languages such as \LaTeX, HTML, or XML. Finally, Pandoc converts the document to a finished output. 
 The simplicity of Pandoc's Markdown abstracts away the complex sytnax of these other languages. This means the writer can focus on the content instead of minutae like whether an angle bracket or backslash was forgotten. 
 Happily, Pandoc also supports the inclusion of raw \LaTeX{} or HTML sytnax. 
 This means all the advanced features of these languages are available when Markdown alone will not suffice.
 
-### Package writing and testing  {#package-writing-and-testing}
+#### Package writing and testing  {#package-writing-and-testing}
 
 Since I repeatedly perform many of the same analyses with different data, it is wise to make the functions re-usable. 
 Instead of copy-pasting a script and then changing one or two things in it, I write re-usable functions and store them in my own R packages.
@@ -142,11 +143,11 @@ For example, I recently added a function to handle pre-treatment corrections for
 I have a test which checks whether a particular sample data file returns a clay content of 26.2%. 
 If the function returns something different, I immediately know that something has broken and I can fix it right away.
 
-### Pipeline automation  {#pipeline-automation}
+#### Pipeline automation  {#pipeline-automation}
 
 R Markdown is an excellent tool, but it is rare that an entire project can be jammed into a single `.Rmd` document.
 For example, a research project might generate a presentation for students, a report to funders, and a final manuscript. 
-It's likely each output will use some of the same figures and tables - that means that if we change any of these by adding a caption, or changing the regression model in a scatter plot - they need to be updated in multiple places. 
+It's likely each output will use some of the same figures and table. That means that if we make any changes - for example, by adding new data or by changing some model parameters - the figure or table needs to be updated in multiple places. 
 That means more work and more chance for mistakes.
 
 
@@ -164,8 +165,9 @@ fig-1.pdf: fig-1.R   clean-data.csv
 ```
 
 This rule states that the otuput (`fig-1.pdf`) should be built using `fig-1.R` and `clean-data.csv` by running the R script `fig-1.R`.
+This script will read `clean-data.csv`, generate the plot, and save it as `fig-1.pdf`.^[I never use numbers when naming figures, because their order may change later. I use descriptive names instead. However, a number makes more sense to demonstrate the point in this minimal example.]
 
-The user writes a plain-text file known as a `Makefile` containing a rule for each target file. 
+A user of GNU `Make` writes a plain-text file known as a `Makefile` containing a rule for each target. 
 There are a number of syntax shortcuts to reduce typing, but all rules still follow the basic structure above.
 `Make` now knows how to build the target files and it watches for changes in the prerequisites.
 If a prerequisite file is updated, `Make` automatically re-builds any outputs which use the updated file.
@@ -177,6 +179,14 @@ The graph is read from top down - it shows the relationships between raw data an
 This graph might seem really complicated, but I would argue it is a lot less complicated than having to _remember_ how all the components of a project fit together. 
 I much prefer to define the process explicitly and let the computer handle the "remembering."
 This is a simple example, and real projects have a lot more dependencies. 
+
+```{r example-make-dependency-graph, out.width='90%', fig.align='center', fig.cap='Dependency graph of a minimal example Makefile.'}
+knitr::include_graphics(here::here(
+  'example-mf-project/example-dependency-graph.pdf')
+)
+```
+
+
 
 
 Below is the corresponding `Makefile` for the example project drawn in \@ref(fig:example-make-dependency-graph).
@@ -190,47 +200,63 @@ show_output(here::here('example-mf-project/mfile-w-extensions.makefile'))
 ```
 
 
-```{r example-make-dependency-graph, out.width='90%', fig.align='center', fig.cap='Dependency graph of a minimal example Makefile.'}
-knitr::include_graphics(here::here(
-  'example-mf-project/example-dependency-graph.pdf')
-)
-```
-
-
-`Make` is language agnostic, so it can be used with any language which can be run from a Unix shell.
+`Make` is language agnostic, so it can run any programs compatible with a Unix shell.
 `Make` syntax is not intuitive and debugging a `Makefile` can be especially challenging.
 It was first written in the 1970s by developers in need of an automated means to compile their C programs.
 This task is well outside the scope of my own research, but I have still found `Make` invaluable for managing my projects.
 
 
-### Version control with Git {#version-control}
+#### Version control with Git {#version-control}
 
 We all fear losing our hard work during a computer malfunction. 
 It can be useful to store old versions of a project for backup and for later reference.
-We might employ a manual version control system, such as naming files like 'report-version-4.docx.` Hopefully we avoid a situation like the XKCD comic below:
+We might employ a manual version control system by as naming files successively, like `report-4.docx.` Hopefully we avoid a situation like the comic below:
 
-```{r xkcd-files-comic, out.width='30%', echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+```{r phd-files-comic, echo=FALSE, out.width='50%', message=FALSE, warning=FALSE, fig.align='center'}
 
-
-# save file
-if(!file.exists('images/xkcd-files.png')){
-curl::curl_download(url = 'https://imgs.xkcd.com/comics/documents.png',
-                    destfile = 'images/xkcd-files.png')
-do('https://imgs.xkcd.com/comics/documents.png')
+gif_convert <- function(url, file){
+  
+  magick_obj <- magick::image_read(path = url)
+  
+  converted_magick_obj <- magick::image_convert(magick_obj, format = 'png')
+  
+  magick::image_write(image = converted_magick_obj, path = file)
+  
 }
 
-knitr::include_graphics('images/xkcd-files.png')
+# make tibble of arguments 
+
+images <- tibble::tibble(
+  url = c('http://phdcomics.com/comics/archive/phd101212s.gif',
+          'http://phdcomics.com/comics/archive/phd052810s.gif'),
+  file = as.character(fs::path(
+    'images',
+    paste0(
+      c('final-comic', 
+        'file-explorer'),
+    '.png')
+  )
+)
+)
+
+# save if they don't yet exist 
+purrr::pwalk(images[!file.exists(images$file), ], gif_convert)
+
+# just include the one with all the edits, the other one requires 
+# too much contemplation and I'm just going for a quick laugh 
+knitr::include_graphics('images/final-comic.png')
 ```
 
-Manual version control is useful but it depends highly on the user's vigilance and it is prone to human error.
 We might also use features such as MS Word's "Track Changes." 
+Manual version control is useful but it depends highly on the user's vigilance and it is prone to human error.
+
 
 Instead, I prefer to use Git for version control. 
 You could think of Git as "track changes on steroids."
 Git automatically tracks every file in a project, without cumbersome markup and with minimal need for human intervention. 
 
 Version control is even more important as the scope of a project increases. 
-If I change something in my code, I could risk breaking other existing results.
+If I change something in my re-usable functions, I could risk breaking other existing results.
 With Git I never need to worry about this because it is easy to revert to a prior version.
 
 
@@ -250,20 +276,33 @@ However I anticipate using it in the future to collaborate with my own graduate 
 
 
 
-### Summary: workflow, reproducibility, data storage {.unnumbered #summary-workflow}
+#### Summary: workflow, reproducibility, data storage {.unnumbered #summary-workflow}
 
-This workflow may seem rather extreme to someone accustomed to using programs such as Excel, Word, PowerPoint, and SAS. 
-Indeed, when I first heard of ideas like building presentations with code or ditching MS Word, I was initially skeptical.
+This workflow may seem rather extreme to someone accustomed to using MS Office, Minitab and SAS. 
+Indeed, when I first heard of ideas like drawing diagrams with code or ditching Word and Powerpoint, I was initially skeptical.
 
 About a year into my PhD I realized that my existing systems were simply not adequate. 
-I began to lose track of some experiments. I became increasingly incensed at the notion of wasting my valuable time collecting data that might eventually vaporize. I decided something had to change. I first became interested in R because I saw my friends making pretty graphs and I wanted to do that too - but I quickly became hooked on the idea of reproducible research and all the associated tools.
+I began to lose track of some experiments. 
+I became increasingly incensed at the notion of wasting my valuable time collecting data that might eventually vaporize. 
+I decided something had to change. 
 
-<!-- Making work reproducible is hard - it is a lot more work, but it's worth it because I know the results are correct, and I know they will be useful later on.  -->
-
+At first I was only interested in R because I saw my friends making pretty graphs with **ggplot2**, and I wanted to do that too - but I quickly became hooked on the idea of reproducible research and all the associated tools.
 
 I am not a naturally organized person, and I used to think that programming was not for me. 
-I have perhaps over-compensated for these innate tendencies and gone a bit further than necessary -- but I feel it has been more than worth the effort.
-I now swear by these routines and I feel grateful to have learned them. 
-I know they will further my ability to do high-quality science. 
-If I succeed in my goal to become a professor, I would feel an urge (a duty, even) to teach a graduate-level course on these topics. 
-They have helped me so much, and surely I am not unique - many others could benefit from then too. 
+I have perhaps over-compensated for these innate tendencies and gone a bit further than necessary -- but it's been more than worth the effort.
+I swear by these routines because they enhance my ability to do high-quality science. 
+If I succeed in becoming a professor I would feel an urge (a duty, even) to teach a course on these topics. 
+They have helped me so much, and surely I'm not unique - many others could benefit from then too. 
+
+
+Making research reproducible is hard.
+During frustrating moments of debugging \LaTeX or fighting with `Make`, I sometimes wonder if it is worth all the extra effort.
+In these moments I remember a quote often uttered by one of my baseball coaches:
+
+>"If you don't have time to do it right, when will you have time to do it over?"
+
+
+
+
+
+

@@ -2,7 +2,7 @@
 # Appendix {#appendix} 
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = F, warning = F, message = F)
+knitr::opts_chunk$set(echo = F, warning = F, message = F, out.width = '80%', fig.align = 'center')
 ```
 
 ```{r load-packages, include=F}
@@ -10,7 +10,7 @@ library(tidyverse)
 library(kableExtra)
 ```
 
-```{r labor-per-area-tab, eval= T, echo=F, warning=F, message=F}
+```{r labor-per-area-tab}
 labor_man_hrs <- readr::read_csv('data/lit-review-data/maintenance-man-hrs.csv',
                           col_types = 'cccii') %>% 
   mutate(dplyr::across(
@@ -89,9 +89,13 @@ sd_df %>%
 
 ```
 
+
 \newpage
 
 ## Additional proofs and derivations
+
+This section contains some useful equations and calculations that are best presented as supplemental materials. 
+They are important to include, but their presence in the main text would have cluttered its presentation. 
 
 ### Intergranular porosity generalized for any % sand and $\rho_{bulk}$ {#generalized-intergranular-porosity-equation}
 
@@ -189,6 +193,187 @@ A similar solution could be derived using $w$ and $S_e$.
 The complexity of this approach arises from the need to compute the air volume when $S_e<1$. 
 $S_e$ can be computed if $\rho_{bulk}$ is known.
 
+### Oven-dry sand solids based on impure "sand" and "clay" components and hygroscopic water content {#sand-clay-mix-calcs}
+
+The soil mixtures tested in this project are made on a dry-mass basis. 
+Soils are mixed in an air-dry condition and it is rare for a "sand" to have 0% fines or a "clay" to have 0% sand-size particles. 
+Therefore, accurate mixture calculations require a weighted calculation to account for water content and sand-size particle content. 
+This section details the calculation. 
+
+The variables are defined as:
+
+- $S_{final}$: the final mixture's sand percentage as a decimal 
+- $S_{sand}$: mass fraction of the "sand" > 53 &mu;m as a decimal.
+- $S_{clay}$: mass fraction of the "clay" > 53 &mu;m as a decimal. 
+  - Note that because $S_{ sand}$ and $S_{clay}$ are referenced to different soils, $S_{sand}~+~S_{clay}~\neq~S_{final}$
+
+- $m_{sand}$: oven-dry mass fraction of the "sand" component _as a decimal of the final mixture mass_
+
+- $m_{clay}$: oven-dry mass fraction of the "clay" component _as a decimal of the final mixture mass_
+
+- $m_{final}$: the total oven-dry mass of the final mixture, equal to unity.
+
+- $w$: gravimetric water content of a soil, normalized to the oven-dry soil solids, in decimal form.
+
+
+The total oven-dry mass of the mixture is equal to unity; therefore the clay mass can be solved as a function of the sand mass:
+
+\begin{align}
+m_{final} = m_{sand} + m_{clay} &= 1 \\
+m_{clay} &= 1 - m_{ sand}
+\end{align}
+
+The percent > 53 &mu;m (i.e. sand-size) of the final mixture is a weighted average between the sand-size percentages of each component and the masses of each component used in the mixture:
+
+\begin{equation}
+S_{final} = (~m_{sand}~\cdot~S_{sand})~+~(~m_{clay}~\cdot~S_{clay})
+\end{equation}
+
+Substituting for $m_{clay}$, we obtain
+
+\begin{equation}
+S_{final} = (~m_{sand}~\cdot~S_{sand})~+~\left[(1-m_{sand}~)\cdot~S_{clay}~\right]
+\end{equation}
+
+Which can be distributed and rearranged to isolate $m_{sand}$:
+
+\begin{align}
+S_{final} - S_{clay} &= ( m_{sand} \cdot S_{sand}) - (m_{sand} \cdot S_{clay}) \\ 
+S_{final}  -S_{clay} &= m_{sand}\cdot( S_{sand} - S_{clay}) \\
+m_{sand} &= \frac{S_{final} - S_{clay}}{S_{sand} - S_{clay}}
+\end{align}
+
+And because $m_{clay}=1-m_{sand}$,
+
+\begin{equation}
+m_{clay} = 1 - \left( \frac{S_{final} - S_{clay}}{S_{sand} - S_{clay}} \right)
+\end{equation}
+
+Each oven-dry component mass is then scaled to the desired final mixture mass and corrected for its respective hygroscopic water content and :
+
+\begin{align}
+  \text{Sand~air-dry~mass~(kg)} &= \frac{S_{final}-S_{clay}}{S_{sand} - S_{clay}}  \cdot m_{total~mixture~(kg)} \cdot (1+w_{sand })
+(\#eq:sand-clay-ratios-air-dry-sand-mass-appendix) \\
+\nonumber \\
+\text{Clay~air-dry~mass~(kg)} &= \left[1 - \left( \frac{S_{final} - S_{clay}}{S_{sand} - S_{clay}} \right) \right] \cdot m_{total~mixture~(kg)} \cdot (1+w_{clay})
+(\#eq:sand-clay-ratios-air-dry-clay-mass-appendix)
+\end{align}
+
+
+For example, assume 50 kg of final mix having 60% sand-size particles is required. The "sand" mix component is 96% sand-size and the "clay" mix component is 8% sand-size.
+The gravimetric water content of the sandy component $w_{sand}$ is 0.2%, i.e. 0.002, and $w_{clay}$ is 1.9%, i.e. 0.019.
+
+
+Plugging these values into the equations gives an air-dry "sand" component mass of `r round((0.6-0.08)/(0.96-0.08)*50*1.002, 1)` kg and an air-dry "clay" component mass of `r round((1-((0.6-0.08)/(0.96-0.08)))*50*1.019, 1)` kg.
+
+\begin{align}
+\left(\frac{0.60~-~0.08}{0.96~-~0.08}\right)~&\times 50~\text{kg}~=~29.6~\text{kg}~\times~(1+0.002) \\
+\left[ 1 - \left(\frac{0.60~-~0.08}{0.96~-~0.08}\right) \right] ~&\times 50~\text{kg}~=~20.8~\text{kg}~\times~(1+0.019)
+\end{align}
+
+
+### Deriving values for $\rho_{max}$ and $w_{opt}$ using polynomial splines {#deriving-values-from-proctor-curves}
+
+To derive $w_{opt}$, a polynomial spline was fitted to the plot of dry density vs. water content.
+Values for $\rho_{max}$ and $w_{opt}$ were computed by setting the curve's derivative to zero and solving for each value at this point (Figure \@ref(fig:deriving-proctor-values)). 
+<!-- This approach is further documented in **soiltestr**.  -->
+@ASTMD698-12 suggests the operator draw the compaction curve manually, but a computational approach
+removes operator judgement and makes the analysis more reproducible.
+See @Howell1997 and @Webb2014 for other examples of fitting mathematical functions to Proctor data.
+
+
+(ref:deriving-proctor-values-caption) Values for $\rho_{max}$ and $w_{opt}$ (black arrows) were derived from the compaction curves using a spline fitting routine.'
+
+```{r deriving-proctor-values, fig.cap='(ref:deriving-proctor-values-caption)', fig.scap='Example compaction curves prior to cleat-mark test'}
+knitr::include_graphics('../../cleatmarkmethod/figs/pdf/deriving-proctor-values.pdf')
+```
+
+
+This routine is performed using functions in the author's **soiltestr** package for R.
+The package can be installed from GitHub with the following command:
+
+```{r install-soiltestr-command, echo=TRUE, eval=FALSE}
+remotes::install_github('evanmascitti/soiltestr')
+```
+
+Example data and code are available by loading the package and calling `?proctor_fit` from the R console. 
+A more detailed vignette on its usage will be added at a later date. 
+
+
+### Conversion of Proctor test energy-per-volume to cleat-mark cylinder equivalent {#cleat-mark-energy-per-vol-conversion}
+
+A direct translation of protocols between the Proctor tests and preparation of the cleat-mark cylinders was not possible. 
+The Proctor mold is 10.2 cm diameter x 11.4 cm deep while the pneumatic test device uses cylinders 15.4 cm diameter x 10.2 cm deep \@ref(fig:proctor-vs-cleat-mark-cyls-photo).
+```{r proctor-vs-cleat-mark-cyls-photo, fig.cap='The cleat-mark cylinders were designed with different dimensions than a typical Proctor mold. A conversion was required to equate the compaction energy between them.', fig.scap='Proctor mold and cleat-mark cylinders'}
+# add this photo when I take it
+# knitr::include_graphics(...)
+
+```
+
+The cleat-mark cylinder dimensions were initially chosen based on two criteria: 
+
+(1) the minimum diameter needed to accommodate several baseball cleats, and 
+
+(2) a commonly used specification for infield soil depth (4 inches, i.e. 10.2 cm)
+
+With these dimensions, a fully-loaded cylinder containing moist soil has a mass of ~5.5 kg.
+Unfortunately, it was later discovered that the automatic turntable for the 3D scanner has a maximum capacity of 5 kg. 
+Therefore an adjustment to reduce the specimen mass was required. 
+2.5 cm cylindrical plugs were fabricated from high-strength polymer resin poured into each cylinder (Figure \@ref(fig:resin-plugs)).
+The resin has a bulk density of just ~0.6 Mg m^-3^ so the plugs reduce the total specimen mass to ~ 4.5 kg and maintain a sufficient profile depth of 7.5 cm.
+After inserting the plugs, each cylinder's volume was precisely determined by filling it with de-aired water and recording the filled mass.
+This procedure allows precise density computations despite any differences in the plugs' sizes. 
+
+```{r resin-plugs, fig.cap='Low-density resin plugs used to reduce cylinder volume.'}
+knitr::include_graphics('../../cleatmarkmethod/photos-and-screen-recordings/resin-plug.JPG')
+```
+
+
+A conversion was then developed to equate each Proctor test energy to 
+the larger cleat-mark cylinder. The conversion for the Standard test 
+(25 blows per layer, 3 layers) is straightforward because the new total profile thickness (3 in or 7.5 cm) corresponds exactly to 2/3 of the regular Proctor mold. 
+Therefore the lift thickness was held constant and the number of lifts was simply reduced to 2. 56 blows per layer are used for the 15 cm-diameter mold [@ASTMD698-12].
+The Modified test calls for 5 lifts, which is not evenly divisible into the new total height.
+An additional energy conversion is required to translate the Modified compaction routine to the cleat-mark cylinders.
+This calculation is outlined below.
+
+<!-- \begin{align}  -->
+<!-- \frac{E_{Modified~Proctor_{total}}}{vol_{Modified~Proctor}}&=\frac{E_{cleat-mark_{total}}}{vol_{cleat-mark}} \\ -->
+<!-- \frac{2700~\frac{kJ}{m^3}}{978~cm^3}&=\frac{E_{cleat-mark_{total}}}{1537~cm^3} \\ -->
+<!-- \frac{4243~kJ}{m^3} \times  \frac{1m^3}{1 \times 10^6 cm^3} &=~4243 \frac{kJ}{m^3} \\ -->
+<!-- E_{cleat-mark_{total}}&=~4243 \frac{kJ}{m^3}  -->
+<!-- \end{align} -->
+
+The compaction effort is standardized as energy per unit volume of compacted soil. 
+We must determine the total number of blows to use per cylinder and then per lift. 
+The average volume of the 12 cleat-mark cylinders (determined with the de-aired water calibration described above) was 1413 cm^-3^, so this was the starting point for the calculation.  
+
+\begin{align} 
+\frac{1413~\cancel{cm^3}}{1~cleat-mark~cylinder} &\times \frac{1~\cancel{m^3}}{1~\times10^6~\cancel{cm^3}}~\times \frac{2700~kNm}{\cancel{m^3}}  = \frac{3.815~kNm}{1~cleat-mark~cylinder} \\
+\nonumber \\
+\frac{3.815~\cancel{kNm}}{1~cleat-mark~cylinder} &\times \frac{1000~\cancel{Nm}}{1~\cancel{kNm}} \times \frac{1~J}{1~\cancel{Nm}} = \frac{3815~J}{1~cleat-mark~cylinder} \
+\end{align}
+
+From classical mechanics, a single blow of the Modified hammer applies:
+
+
+\begin{align}
+\begin{split}
+E&=mgh \\
+E&=\frac{4.54~kg}{}~\times~\frac{9.81~m}{s^2}~\times~\frac{0.457~m}{} \\
+E&=\frac{20.34~kgm^2}{s^2} =20.3~\text{J}
+\end{split}
+\end{align}
+
+Therefore a total energy of 3815 J requires:
+\begin{equation}
+\frac{3815~\text{\cancel{J}}}{cylinder}\times\frac{1 blow}{20.34~\text{\cancel{J}}}= \text{187.6 blows per cylinder}
+(\#eq:modified-energy-per-volume-appendix)
+\end{equation}
+
+
+Split over 3 layers, $187.6 / 3 \approx 63$ blows per layer are required.
+
 
 ## Colophon
 
@@ -197,4 +382,5 @@ This document was rendered `r Sys.time()` using the following R packages:
 ```{r echo=FALSE, include=TRUE, results='markup'}
 devtools::session_info()
 ```
+
 

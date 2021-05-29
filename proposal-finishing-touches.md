@@ -1,0 +1,3 @@
+- take photo of Proctor mold next to cleat mark cylinders 
+- take photo of markers up close 
+- figure out duplicated labor-per-area-tab reference 

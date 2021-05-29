@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.5.28)  28 MAY 2021 15:55
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.5.28)  29 MAY 2021 19:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -226,140 +226,140 @@ LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/unicode-math/unic
 ode-math-table.tex)))
 
-Package fontspec Info: Arial scale = 0.8311533923217035.
+Package fontspec Info: Roboto scale = 0.8157901577225113.
 
 
-Package fontspec Info: Arial scale = 0.8311533923217035.
+Package fontspec Info: Roboto scale = 0.8157901577225113.
 
 
-Package fontspec Info: Arial scale = 0.8311533923217035.
+Package fontspec Info: Roboto scale = 0.8157901577225113.
 
 
-Package fontspec Info: Arial/B scale = 0.8311533923217035.
+Package fontspec Info: Roboto/B scale = 0.8157901577225113.
 
 
-Package fontspec Info: Arial/B scale = 0.8311533923217035.
+Package fontspec Info: Roboto/B scale = 0.8157901577225113.
 
 
-Package fontspec Info: Arial/I scale = 0.8311533923217035.
+Package fontspec Info: Roboto/I scale = 0.8157901577225113.
 
 
-Package fontspec Info: Arial/I scale = 0.8311533923217035.
+Package fontspec Info: Roboto/I scale = 0.8157901577225113.
 
 
-Package fontspec Info: Arial/BI scale = 0.8311533923217035.
+Package fontspec Info: Roboto/BI scale = 0.8157901577225113.
 
 
-Package fontspec Info: Arial/BI scale = 0.8311533923217035.
+Package fontspec Info: Roboto/BI scale = 0.8157901577225113.
 
 
-Package fontspec Info: Font family 'Arial(0)' created for font 'Arial' with
+Package fontspec Info: Font family 'Roboto(0)' created for font 'Roboto' with
 (fontspec)             options [Scale=MatchLowercase,Ligatures=TeX,Scale=1].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1]"Arial/OT:script=latn;language=dflt;mapping=tex-
-text;"
+(fontspec)             <->s*[1]"Roboto/OT:script=latn;language=dflt;mapping=tex
+-text;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"Arial/OT:script=latn;language=dflt;+smcp;mappin
-g=tex-text;"
+(fontspec)             <->s*[1]"Roboto/OT:script=latn;language=dflt;+smcp;mappi
+ng=tex-text;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1]"Arial/B/OT:script=latn;language=dflt;mapping=te
-x-text;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[1]"Arial/B/OT:script=latn;language=dflt;+smcp;mapp
-ing=tex-text;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[1]"Arial/I/OT:script=latn;language=dflt;mapping=te
-x-text;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"Arial/I/OT:script=latn;language=dflt;+smcp;mapp
-ing=tex-text;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[1]"Arial/BI/OT:script=latn;language=dflt;mapping=t
+(fontspec)             <->s*[1]"Roboto/B/OT:script=latn;language=dflt;mapping=t
 ex-text;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[1]"Arial/BI/OT:script=latn;language=dflt;+smcp;map
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"Roboto/B/OT:script=latn;language=dflt;+smcp;map
 ping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"Roboto/I/OT:script=latn;language=dflt;mapping=t
+ex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"Roboto/I/OT:script=latn;language=dflt;+smcp;map
+ping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1]"Roboto/BI/OT:script=latn;language=dflt;mapping=
+tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"Roboto/BI/OT:script=latn;language=dflt;+smcp;ma
+pping=tex-text;"
 
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 22.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 21.
 
-Package fontspec Info: Arial scale = 0.9999970574474535.
-
-
-Package fontspec Info: Arial scale = 0.9999970574474535.
-
-
-Package fontspec Info: Arial scale = 0.9999970574474535.
-
-
-Package fontspec Info: Arial/B scale = 0.9999970574474535.
-
-
-Package fontspec Info: Arial/B scale = 0.9999970574474535.
-
-
-Package fontspec Info: Arial/I scale = 0.9999970574474535.
+Package fontspec Info: Roboto scale = 0.9999971118382861.
 
 
-Package fontspec Info: Arial/I scale = 0.9999970574474535.
+Package fontspec Info: Roboto scale = 0.9999971118382861.
 
 
-Package fontspec Info: Arial/BI scale = 0.9999970574474535.
+Package fontspec Info: Roboto scale = 0.9999971118382861.
 
 
-Package fontspec Info: Arial/BI scale = 0.9999970574474535.
+Package fontspec Info: Roboto/B scale = 0.9999971118382861.
 
 
-Package fontspec Info: Font family 'Arial(1)' created for font 'Arial' with
+Package fontspec Info: Roboto/B scale = 0.9999971118382861.
+
+
+Package fontspec Info: Roboto/I scale = 0.9999971118382861.
+
+
+Package fontspec Info: Roboto/I scale = 0.9999971118382861.
+
+
+Package fontspec Info: Roboto/BI scale = 0.9999971118382861.
+
+
+Package fontspec Info: Roboto/BI scale = 0.9999971118382861.
+
+
+Package fontspec Info: Font family 'Roboto(1)' created for font 'Roboto' with
 (fontspec)             options [Scale=MatchLowercase].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[0.9999970574474535]"Arial/OT:script=latn;language=
-dflt;"
+(fontspec)             <->s*[0.9999971118382861]"Roboto/OT:script=latn;language
+=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[0.9999970574474535]"Arial/OT:script=latn;language=
-dflt;+smcp;"
+(fontspec)             <->s*[0.9999971118382861]"Roboto/OT:script=latn;language
+=dflt;+smcp;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[0.9999970574474535]"Arial/B/OT:script=latn;languag
-e=dflt;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[0.9999970574474535]"Arial/B/OT:script=latn;languag
-e=dflt;+smcp;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[0.9999970574474535]"Arial/I/OT:script=latn;languag
-e=dflt;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[0.9999970574474535]"Arial/I/OT:script=latn;languag
-e=dflt;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[0.9999970574474535]"Arial/BI/OT:script=latn;langua
+(fontspec)             <->s*[0.9999971118382861]"Roboto/B/OT:script=latn;langua
 ge=dflt;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[0.9999970574474535]"Arial/BI/OT:script=latn;langua
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[0.9999971118382861]"Roboto/B/OT:script=latn;langua
 ge=dflt;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.9999971118382861]"Roboto/I/OT:script=latn;langua
+ge=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[0.9999971118382861]"Roboto/I/OT:script=latn;langua
+ge=dflt;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.9999971118382861]"Roboto/BI/OT:script=latn;langu
+age=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[0.9999971118382861]"Roboto/BI/OT:script=latn;langu
+age=dflt;+smcp;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/Arial(1)/m/n on input line 22.
+(Font)                  OT1/lmr/m/n --> TU/Roboto(1)/m/n on input line 21.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/Arial(1)/m/it on input line 22.
+(Font)                  OT1/lmr/m/it --> TU/Roboto(1)/m/it on input line 21.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/Arial(1)/b/n on input line 22.
+(Font)                  OT1/lmr/bx/n --> TU/Roboto(1)/b/n on input line 21.
 
-Package fontspec Info: Fira Math Regular scale = 0.9839710923746873.
+Package fontspec Info: Fira Math Regular scale = 1.002501621421292.
 
 
 Package fontspec Info: Could not resolve font "Fira Math Regular/B" (it
 (fontspec)             probably doesn't exist).
 
 
-Package fontspec Info: Fira Math Regular scale = 0.9839710923746873.
+Package fontspec Info: Fira Math Regular scale = 1.002501621421292.
 
 
 Package fontspec Info: Font family 'FiraMathRegular(0)' created for font 'Fira
@@ -371,27 +371,27 @@ allCapsFont={},Script=Math].
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[0.9839710923746873]"Fira Math
+(fontspec)             <->s*[1.002501621421292]"Fira Math
 (fontspec)             Regular/OT:script=math;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(0)/m/n' will be
-(Font)              scaled to size 9.83978pt on input line 23.
+(Font)              scaled to size 10.02502pt on input line 22.
 
-Package fontspec Info: Fira Math Regular scale = 0.9839710923746873.
+Package fontspec Info: Fira Math Regular scale = 1.002501621421292.
 
 
 Package fontspec Info: Could not resolve font "Fira Math Regular/B" (it
 (fontspec)             probably doesn't exist).
 
 
-Package fontspec Info: Fira Math Regular scale = 0.9839710923746873.
+Package fontspec Info: Fira Math Regular scale = 1.002501621421292.
 
 
-Package fontspec Info: Fira Math Regular scale = 0.9839710923746873.
+Package fontspec Info: Fira Math Regular scale = 1.002501621421292.
 
 
-Package fontspec Info: Fira Math Regular scale = 0.9839710923746873.
+Package fontspec Info: Fira Math Regular scale = 1.002501621421292.
 
 
 Package fontspec Info: Font family 'FiraMathRegular(1)' created for font 'Fira
@@ -405,54 +405,54 @@ allCapsFont={},Script=Math,SizeFeatures={{Size=8.6-},{Size=6.5-8.6,Font=Fira
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <8.6->s*[0.9839710923746873]"Fira Math
-(fontspec)             Regular/OT:script=math;language=dflt;"<6.5-8.6>s*[0.9839
-710923746873]"Fira
+(fontspec)             <8.6->s*[1.002501621421292]"Fira Math
+(fontspec)             Regular/OT:script=math;language=dflt;"<6.5-8.6>s*[1.0025
+01621421292]"Fira
 (fontspec)             Math
-(fontspec)             Regular/OT:script=math;language=dflt;+ssty=0;"<-6.5>s*[0
-.9839710923746873]"Fira
+(fontspec)             Regular/OT:script=math;language=dflt;+ssty=0;"<-6.5>s*[1
+.002501621421292]"Fira
 (fontspec)             Math Regular/OT:script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 9.83978pt on input line 23.
+(Font)              scaled to size 10.02502pt on input line 22.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 23.
+(Font)              `operators' in the math version `normal' on input line 22.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/FiraMathRegular(1)/m/n on input line
- 23.
+ 22.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 23.
+(Font)              `operators' in the math version `bold' on input line 22.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/FiraMathRegular(1)/b/n on input lin
-e 23.
+e 22.
 
-Package fontspec Info: Fira Math Regular scale = 0.9839710923746873.
+Package fontspec Info: Fira Math Regular scale = 1.002501621421292.
 
 
-Package fontspec Info: Fira Math Regular scale = 0.9840694894839248.
+Package fontspec Info: Fira Math Regular scale = 1.002601871583434.
 
 
 Package fontspec Info: Could not resolve font "Fira Math Regular/B" (it
 (fontspec)             probably doesn't exist).
 
 
-Package fontspec Info: Fira Math Regular scale = 0.9839710923746873.
+Package fontspec Info: Fira Math Regular scale = 1.002501621421292.
 
 
-Package fontspec Info: Fira Math Regular scale = 0.9840694894839248.
+Package fontspec Info: Fira Math Regular scale = 1.002601871583434.
 
 
-Package fontspec Info: Fira Math Regular scale = 0.9839710923746873.
+Package fontspec Info: Fira Math Regular scale = 1.002501621421292.
 
 
-Package fontspec Info: Fira Math Regular scale = 0.9840694894839248.
+Package fontspec Info: Fira Math Regular scale = 1.002601871583434.
 
 
-Package fontspec Info: Fira Math Regular scale = 0.9839710923746873.
+Package fontspec Info: Fira Math Regular scale = 1.002501621421292.
 
 
-Package fontspec Info: Fira Math Regular scale = 0.9840694894839248.
+Package fontspec Info: Fira Math Regular scale = 1.002601871583434.
 
 
 Package fontspec Info: Font family 'FiraMathRegular(2)' created for font 'Fira
@@ -463,78 +463,78 @@ allCapsFont={},Script=Math,SizeFeatures={{Size=8.6-},{Size=6.5-8.6,Font=Fira
 (fontspec)             Math
 (fontspec)             Regular,Style=MathScriptScript}},ScaleAgain=1.0001,FontA
 djustment={\fontdimen
-(fontspec)             8\font =5.70708pt\relax \fontdimen 9\font
-(fontspec)             =4.4279pt\relax \fontdimen 10\font =4.4279pt\relax
-(fontspec)             \fontdimen 11\font =6.88785pt\relax \fontdimen 12\font
-(fontspec)             =4.7231pt\relax \fontdimen 13\font =3.93591pt\relax
-(fontspec)             \fontdimen 14\font =3.93591pt\relax \fontdimen 15\font
-(fontspec)             =2.65674pt\relax \fontdimen 16\font =3.44392pt\relax
-(fontspec)             \fontdimen 17\font =3.44392pt\relax \fontdimen 18\font
-(fontspec)             =3.54233pt\relax \fontdimen 19\font =2.45995pt\relax
-(fontspec)             \fontdimen 22\font =2.75514pt\relax \fontdimen 20\font
+(fontspec)             8\font =5.81451pt\relax \fontdimen 9\font
+(fontspec)             =4.51126pt\relax \fontdimen 10\font =4.51126pt\relax
+(fontspec)             \fontdimen 11\font =7.01752pt\relax \fontdimen 12\font
+(fontspec)             =4.81201pt\relax \fontdimen 13\font =4.01001pt\relax
+(fontspec)             \fontdimen 14\font =4.01001pt\relax \fontdimen 15\font
+(fontspec)             =2.70676pt\relax \fontdimen 16\font =3.50876pt\relax
+(fontspec)             \fontdimen 17\font =3.50876pt\relax \fontdimen 18\font
+(fontspec)             =3.60901pt\relax \fontdimen 19\font =2.50626pt\relax
+(fontspec)             \fontdimen 22\font =2.807pt\relax \fontdimen 20\font
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax }].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <8.6->s*[0.9840694894839248]"Fira Math
-(fontspec)             Regular/OT:script=math;language=dflt;"<6.5-8.6>s*[0.9840
-694894839248]"Fira
+(fontspec)             <8.6->s*[1.002601871583434]"Fira Math
+(fontspec)             Regular/OT:script=math;language=dflt;"<6.5-8.6>s*[1.0026
+01871583434]"Fira
 (fontspec)             Math
-(fontspec)             Regular/OT:script=math;language=dflt;+ssty=0;"<-6.5>s*[0
-.9840694894839248]"Fira
+(fontspec)             Regular/OT:script=math;language=dflt;+ssty=0;"<-6.5>s*[1
+.002601871583434]"Fira
 (fontspec)             Math Regular/OT:script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 8\font =5.70708pt\relax \fontdimen 9\font
-(fontspec)             =4.4279pt\relax \fontdimen 10\font =4.4279pt\relax
-(fontspec)             \fontdimen 11\font =6.88785pt\relax \fontdimen 12\font
-(fontspec)             =4.7231pt\relax \fontdimen 13\font =3.93591pt\relax
-(fontspec)             \fontdimen 14\font =3.93591pt\relax \fontdimen 15\font
-(fontspec)             =2.65674pt\relax \fontdimen 16\font =3.44392pt\relax
-(fontspec)             \fontdimen 17\font =3.44392pt\relax \fontdimen 18\font
-(fontspec)             =3.54233pt\relax \fontdimen 19\font =2.45995pt\relax
-(fontspec)             \fontdimen 22\font =2.75514pt\relax \fontdimen 20\font
+(fontspec)             \fontdimen 8\font =5.81451pt\relax \fontdimen 9\font
+(fontspec)             =4.51126pt\relax \fontdimen 10\font =4.51126pt\relax
+(fontspec)             \fontdimen 11\font =7.01752pt\relax \fontdimen 12\font
+(fontspec)             =4.81201pt\relax \fontdimen 13\font =4.01001pt\relax
+(fontspec)             \fontdimen 14\font =4.01001pt\relax \fontdimen 15\font
+(fontspec)             =2.70676pt\relax \fontdimen 16\font =3.50876pt\relax
+(fontspec)             \fontdimen 17\font =3.50876pt\relax \fontdimen 18\font
+(fontspec)             =3.60901pt\relax \fontdimen 19\font =2.50626pt\relax
+(fontspec)             \fontdimen 22\font =2.807pt\relax \fontdimen 20\font
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 23.
+(Font)              `symbols' in the math version `normal' on input line 22.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/FiraMathRegular(2)/m/n on input lin
-e 23.
+e 22.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 23.
+(Font)              `symbols' in the math version `bold' on input line 22.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/FiraMathRegular(2)/b/n on input lin
-e 23.
+e 22.
 
-Package fontspec Info: Fira Math Regular scale = 0.9839710923746873.
+Package fontspec Info: Fira Math Regular scale = 1.002501621421292.
 
 
-Package fontspec Info: Fira Math Regular scale = 0.9838726952654498.
+Package fontspec Info: Fira Math Regular scale = 1.00240137125915.
 
 
 Package fontspec Info: Could not resolve font "Fira Math Regular/B" (it
 (fontspec)             probably doesn't exist).
 
 
-Package fontspec Info: Fira Math Regular scale = 0.9839710923746873.
+Package fontspec Info: Fira Math Regular scale = 1.002501621421292.
 
 
-Package fontspec Info: Fira Math Regular scale = 0.9838726952654498.
+Package fontspec Info: Fira Math Regular scale = 1.00240137125915.
 
 
-Package fontspec Info: Fira Math Regular scale = 0.9839710923746873.
+Package fontspec Info: Fira Math Regular scale = 1.002501621421292.
 
 
-Package fontspec Info: Fira Math Regular scale = 0.9838726952654498.
+Package fontspec Info: Fira Math Regular scale = 1.00240137125915.
 
 
-Package fontspec Info: Fira Math Regular scale = 0.9839710923746873.
+Package fontspec Info: Fira Math Regular scale = 1.002501621421292.
 
 
-Package fontspec Info: Fira Math Regular scale = 0.9838726952654498.
+Package fontspec Info: Fira Math Regular scale = 1.00240137125915.
 
 
 Package fontspec Info: Font family 'FiraMathRegular(3)' created for font 'Fira
@@ -545,41 +545,41 @@ allCapsFont={},Script=Math,SizeFeatures={{Size=8.6-},{Size=6.5-8.6,Font=Fira
 (fontspec)             Math
 (fontspec)             Regular,Style=MathScriptScript}},ScaleAgain=0.9999,FontA
 djustment={\fontdimen
-(fontspec)             8\font =0.74782pt\relax \fontdimen 9\font
-(fontspec)             =1.47597pt\relax \fontdimen 10\font =1.47597pt\relax
-(fontspec)             \fontdimen 11\font =1.47597pt\relax \fontdimen 12\font
-(fontspec)             =5.90387pt\relax \fontdimen 13\font =0pt\relax }].
+(fontspec)             8\font =0.7619pt\relax \fontdimen 9\font
+(fontspec)             =1.50375pt\relax \fontdimen 10\font =1.50375pt\relax
+(fontspec)             \fontdimen 11\font =1.50375pt\relax \fontdimen 12\font
+(fontspec)             =6.01501pt\relax \fontdimen 13\font =0pt\relax }].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <8.6->s*[0.9838726952654498]"Fira Math
-(fontspec)             Regular/OT:script=math;language=dflt;"<6.5-8.6>s*[0.9838
-726952654498]"Fira
+(fontspec)             <8.6->s*[1.00240137125915]"Fira Math
+(fontspec)             Regular/OT:script=math;language=dflt;"<6.5-8.6>s*[1.0024
+0137125915]"Fira
 (fontspec)             Math
-(fontspec)             Regular/OT:script=math;language=dflt;+ssty=0;"<-6.5>s*[0
-.9838726952654498]"Fira
+(fontspec)             Regular/OT:script=math;language=dflt;+ssty=0;"<-6.5>s*[1
+.00240137125915]"Fira
 (fontspec)             Math Regular/OT:script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 8\font =0.74782pt\relax \fontdimen 9\font
-(fontspec)             =1.47597pt\relax \fontdimen 10\font =1.47597pt\relax
-(fontspec)             \fontdimen 11\font =1.47597pt\relax \fontdimen 12\font
-(fontspec)             =5.90387pt\relax \fontdimen 13\font =0pt\relax 
+(fontspec)             \fontdimen 8\font =0.7619pt\relax \fontdimen 9\font
+(fontspec)             =1.50375pt\relax \fontdimen 10\font =1.50375pt\relax
+(fontspec)             \fontdimen 11\font =1.50375pt\relax \fontdimen 12\font
+(fontspec)             =6.01501pt\relax \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 2
-3.
+2.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/FiraMathRegular(3)/m/n on input lin
-e 23.
+e 22.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 23.
+(Font)              `largesymbols' in the math version `bold' on input line 22.
 
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/FiraMathRegular(3)/b/n on input lin
-e 23.
+e 22.
 
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -602,17 +602,11 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/bookmark/bookmark
+.sty
+Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 
-(c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/dvipsnam
-.def
-File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-)
-(c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/svgnam.def
-File: svgnam.def 2016/05/11 v2.12 Predefined colors according to SVG 1.1 (UK)
-)
-(c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/x11nam.def
-File: x11nam.def 2016/05/11 v2.12 Predefined colors according to Unix/X11 (UK)
-))
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref
 .sty
 Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
@@ -778,8 +772,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip52
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 51.
-
+(c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/bookmark/bkm-dvip
+dfm.def
+File: bkm-dvipdfm.def 2020-11-06 v1.29 bookmark driver for dvipdfm (HO)
+\BKM@id=\count297
+))
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/geometry/geometry
 .sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -788,9 +785,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 y
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count297
-\Gm@cntv=\count298
-\c@Gm@tempcnt=\count299
+\Gm@cnth=\count298
+\Gm@cntv=\count299
+\c@Gm@tempcnt=\count300
 \Gm@bindingoffset=\dimen155
 \Gm@wd@mp=\dimen156
 \Gm@odd@mp=\dimen157
@@ -804,11 +801,11 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb
 .sty
 Package: fancyvrb 2021/01/20 v3.7 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count300
+\FV@CodeLineNo=\count301
 \FV@InFile=\read2
 \FV@TabBox=\box51
-\c@FancyVerbLine=\count301
-\FV@StepNumber=\count302
+\c@FancyVerbLine=\count302
+\FV@StepNumber=\count303
 \FV@OutFile=\write3
 )
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/framed/framed.sty
@@ -826,16 +823,16 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LTright=\skip55
 \LTpre=\skip56
 \LTpost=\skip57
-\LTchunksize=\count303
+\LTchunksize=\count304
 \LTcapwidth=\dimen167
 \LT@head=\box52
 \LT@firsthead=\box53
 \LT@foot=\box54
 \LT@lastfoot=\box55
-\LT@cols=\count304
-\LT@rows=\count305
-\c@LT@tables=\count306
-\c@LT@chunks=\count307
+\LT@cols=\count305
+\LT@rows=\count306
+\c@LT@tables=\count307
+\c@LT@chunks=\count308
 \LT@p@ftn=\toks22
 )
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs
@@ -851,12 +848,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen175
 \cmidrulekern=\dimen176
 \defaultaddspace=\dimen177
-\@cmidla=\count308
-\@cmidlb=\count309
+\@cmidla=\count309
+\@cmidlb=\count310
 \@aboverulesep=\dimen178
 \@belowrulesep=\dimen179
-\@thisruleclass=\count310
-\@lastruleclass=\count311
+\@thisruleclass=\count311
+\@lastruleclass=\count312
 \@thisrulewidth=\dimen180
 ) (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
 Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
@@ -869,21 +866,21 @@ Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 \ar@cellbox=\box57
 ) (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count312
-\calc@Bcount=\count313
+\calc@Acount=\count313
+\calc@Bcount=\count314
 \calc@Adimen=\dimen183
 \calc@Bdimen=\dimen184
 \calc@Askip=\skip60
 \calc@Bskip=\skip61
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count314
+\calc@Ccount=\count315
 \calc@Cskip=\skip62
 )
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox
 .sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count315
+\etb@tempcnta=\count316
 )
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote
 .sty
@@ -933,8 +930,8 @@ Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \caption@hangindent=\dimen194
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count316
-\c@continuedfloat=\count317
+\c@caption@flags=\count317
+\c@continuedfloat=\count318
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 
@@ -946,7 +943,7 @@ Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 .sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip63
-\multirow@cntb=\count318
+\multirow@cntb=\count319
 \multirow@dima=\skip64
 \bigstrutjot=\dimen195
 )
@@ -954,13 +951,13 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 ty
 \wrapoverhang=\dimen196
 \WF@size=\dimen197
-\c@WF@wrappedlines=\count319
+\c@WF@wrappedlines=\count320
 \WF@box=\box59
 \WF@everypar=\toks24
 Package: wrapfig 2003/01/31  v 3.6
 ) (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count320
+\c@float@type=\count321
 \float@exts=\toks25
 \float@box=\box60
 \@float@everytoks=\toks26
@@ -989,16 +986,16 @@ Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 .sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box62
-\sift@deathcycles=\count321
+\sift@deathcycles=\count322
 \@vwid@loff=\dimen198
 \@vwid@roff=\dimen199
 )
-\c@taburow=\count322
-\tabu@nbcols=\count323
-\tabu@cnt=\count324
-\tabu@Xcol=\count325
-\tabu@alloc=\count326
-\tabu@nested=\count327
+\c@taburow=\count323
+\tabu@nbcols=\count324
+\tabu@cnt=\count325
+\tabu@Xcol=\count326
+\tabu@alloc=\count327
+\tabu@nested=\count328
 \tabu@target=\dimen256
 \tabu@spreadtarget=\dimen257
 \tabu@naturalX=\dimen258
@@ -1040,7 +1037,7 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \UL@skip=\skip68
 \UL@hook=\toks30
 \UL@height=\dimen265
-\UL@pe=\count328
+\UL@pe=\count329
 \UL@pixel=\dimen266
 \ULC@box=\box70
 Package: ulem 2019/11/18
@@ -1050,10 +1047,13 @@ Package: ulem 2019/11/18
 .sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen268
-\c@nlinenum=\count329
+\c@nlinenum=\count330
 \TeXr@lab=\toks31
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 167.
+(c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 176.
 
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr
 .sty
@@ -1078,35 +1078,35 @@ LaTeX Warning: Label `tab:labor-per-area-tab' multiply defined.
 )
 \openout1 = `phd-thesis-proposal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 337.
-LaTeX Font Info:    ... okay on input line 337.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 337.
-LaTeX Font Info:    ... okay on input line 337.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 337.
-LaTeX Font Info:    ... okay on input line 337.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 337.
-LaTeX Font Info:    ... okay on input line 337.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 337.
-LaTeX Font Info:    ... okay on input line 337.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 337.
-LaTeX Font Info:    ... okay on input line 337.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 337.
-LaTeX Font Info:    ... okay on input line 337.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 337.
-LaTeX Font Info:    ... okay on input line 337.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 337.
-LaTeX Font Info:    ... okay on input line 337.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 337.
-LaTeX Font Info:    ... okay on input line 337.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 347.
+LaTeX Font Info:    ... okay on input line 347.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 347.
+LaTeX Font Info:    ... okay on input line 347.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 347.
+LaTeX Font Info:    ... okay on input line 347.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 347.
+LaTeX Font Info:    ... okay on input line 347.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 347.
+LaTeX Font Info:    ... okay on input line 347.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 347.
+LaTeX Font Info:    ... okay on input line 347.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 347.
+LaTeX Font Info:    ... okay on input line 347.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 347.
+LaTeX Font Info:    ... okay on input line 347.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 347.
+LaTeX Font Info:    ... okay on input line 347.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 347.
+LaTeX Font Info:    ... okay on input line 347.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 337.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 347.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 337.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 347.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 337.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 347.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 337.
-Package hyperref Info: Link coloring ON on input line 337.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 347.
+Package hyperref Info: Link coloring ON on input line 347.
 
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.
 sty
@@ -1120,15 +1120,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count330
+\c@section@level=\count331
 )
-LaTeX Info: Redefining \ref on input line 337.
-LaTeX Info: Redefining \pageref on input line 337.
-LaTeX Info: Redefining \nameref on input line 337.
-(./phd-thesis-proposal.out) (./phd-thesis-proposal.out)
-\@outlinefile=\write4
-\openout4 = `phd-thesis-proposal.out'.
-
+LaTeX Info: Redefining \ref on input line 347.
+LaTeX Info: Redefining \pageref on input line 347.
+LaTeX Info: Redefining \nameref on input line 347.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1168,39 +1164,39 @@ Package caption Info: float package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 339.
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 339.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
+(Font)              scaled to size 17.28pt on input line 349.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 349.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 11.80774pt on input line 339.
+(Font)              scaled to size 12.03003pt on input line 349.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 7.87183pt on input line 339.
+(Font)              scaled to size 8.02002pt on input line 349.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 5.90387pt on input line 339.
+(Font)              scaled to size 6.01501pt on input line 349.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-39.
+49.
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 11.80884pt on input line 339.
+(Font)              scaled to size 12.03131pt on input line 349.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 7.87256pt on input line 339.
+(Font)              scaled to size 8.02087pt on input line 349.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 5.90442pt on input line 339.
+(Font)              scaled to size 6.01566pt on input line 349.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 11.80646pt on input line 339.
+(Font)              scaled to size 12.02875pt on input line 349.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 7.87097pt on input line 339.
+(Font)              scaled to size 8.01917pt on input line 349.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 5.90323pt on input line 339.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 339
+(Font)              scaled to size 6.01437pt on input line 349.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 349
 .
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 339
+LaTeX Font Info:    Trying to load font information for U+msb on input line 349
 .
 (c:/Users/ecm200/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1208,114 +1204,109 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ]
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 343.
-LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 343.
-(./phd-thesis-proposal.toc
-LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 1.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 7.08464pt on input line 3.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 5.70706pt on input line 3.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 9.8407pt on input line 3.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 7.0853pt on input line 3.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 5.7076pt on input line 3.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 9.83871pt on input line 3.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 7.08386pt on input line 3.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 5.70645pt on input line 3.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
+(Font)              scaled to size 24.88pt on input line 352.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
+(Font)              scaled to size 24.88pt on input line 352.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
+(Font)              scaled to size 10.0pt on input line 359.
 [2
 
+] (./phd-thesis-proposal.toc
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
+(Font)              scaled to size 7.218pt on input line 3.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
+(Font)              scaled to size 5.81451pt on input line 3.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
+(Font)              scaled to size 10.0261pt on input line 3.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
+(Font)              scaled to size 7.21878pt on input line 3.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
+(Font)              scaled to size 5.81512pt on input line 3.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
+(Font)              scaled to size 10.02396pt on input line 3.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
+(Font)              scaled to size 7.21724pt on input line 3.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
+(Font)              scaled to size 5.81389pt on input line 3.
+[3
+
 ]
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/sl' in size <10> not available
-(Font)              Font shape `TU/Arial(0)/m/it' tried instead on input line 1
-22.
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 122.
-[3]
-Overfull \hbox (1.18454pt too wide) detected at line 125
- []\TU/Arial(0)/m/n/10 103
- []
-
-
-Overfull \hbox (1.18454pt too wide) detected at line 126
- []\TU/Arial(0)/m/n/10 103
- []
-
-
-Overfull \hbox (1.18454pt too wide) detected at line 127
- []\TU/Arial(0)/m/n/10 106
+Overfull \hbox (1.34567pt too wide) detected at line 130
+ []\TU/Roboto(0)/m/n/10 106
  []
 
 )
-\tf@toc=\write5
-\openout5 = `phd-thesis-proposal.toc'.
+\tf@toc=\write4
+\openout4 = `phd-thesis-proposal.toc'.
 
-[4] (./phd-thesis-proposal.lot
-Overfull \hbox (1.18454pt too wide) detected at line 12
- []\TU/Arial(0)/m/n/10 101
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/sl' in size <10> not available
+(Font)              Font shape `TU/Roboto(0)/m/it' tried instead on input line 
+380.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/it' will be
+(Font)              scaled to size 10.0pt on input line 380.
+[4] (./phd-thesis-proposal.lof [5
+
+]
+Overfull \hbox (1.34567pt too wide) detected at line 48
+ []\TU/Roboto(0)/m/n/10 104
  []
 
 
-Overfull \hbox (1.18454pt too wide) detected at line 13
- []\TU/Arial(0)/m/n/10 103
+Overfull \hbox (1.34567pt too wide) detected at line 49
+ []\TU/Roboto(0)/m/n/10 105
  []
 
 )
+\tf@lof=\write5
+\openout5 = `phd-thesis-proposal.lof'.
+
+[6] (./phd-thesis-proposal.lot)
 \tf@lot=\write6
 \openout6 = `phd-thesis-proposal.lot'.
 
-[5
-
-] (./phd-thesis-proposal.lof [6
-
-])
-\tf@lof=\write7
-\openout7 = `phd-thesis-proposal.lof'.
-
-[7] [8
+[7
 
 ]
 Section 1.
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 20.74pt on input line 375.
-LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 20.74pt on input line 375.
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 378.
-LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 378.
-[9
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
+(Font)              scaled to size 20.74pt on input line 385.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
+(Font)              scaled to size 20.74pt on input line 385.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
+(Font)              scaled to size 14.4pt on input line 388.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
+(Font)              scaled to size 14.4pt on input line 388.
+[8
 
 ]
 Section 2.
+
+Underfull \hbox (badness 2351) in paragraph at lines 445--447
+[]\TU/Roboto(0)/m/n/10 Maintaining the infield soil’s water content is a challe
+nging task for grounds
+ []
+
 File: images/illustrations/player-locations/player-locations.ai Graphic file (t
 ype pdf)
 <use images/illustrations/player-locations/player-locations.ai>
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 461.
-LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 461.
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 7.2pt on input line 464.
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 464.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 471.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
+(Font)              scaled to size 9.0pt on input line 471.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
+(Font)              scaled to size 7.2pt on input line 474.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 474.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 4.91989pt on input line 464.
+(Font)              scaled to size 5.01251pt on input line 474.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 4.92035pt on input line 464.
+(Font)              scaled to size 5.01305pt on input line 474.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 4.91936pt on input line 464.
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 464.
-[10
+(Font)              scaled to size 5.01198pt on input line 474.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 474.
+[9
 
 ]
 File: ./figs/pdf/batted-balls-w-boundaries-2020.pdf Graphic file (type pdf)
@@ -1327,21 +1318,34 @@ File: Problem-description_files/figure-latex/mlb-salaries-1.pdf Graphic file (t
 ype pdf)
 <use Problem-description_files/figure-latex/mlb-salaries-1.pdf>
 
-Underfull \hbox (badness 4595) in paragraph at lines 512--512
-[]\TU/Arial(0)/b/n/14.4 The brittle-ductile transition and the “corkboard
+Underfull \hbox (badness 1742) in paragraph at lines 502--502
+[]\TU/Roboto(0)/b/n/9 Figure 2.4: |\TU/Roboto(0)/m/n/9 MLB athletes are valuabl
+e assets. Their safety and performance must not be
  []
 
-[11] [12]
+[10] [11]
 File: images/illustrations/cleatmarks/corkboard_concept.png Graphic file (type 
 bmp)
 <images/illustrations/cleatmarks/corkboard_concept.png>
-[13] [14] [15]
+[12] [13] [14]
 Section 3.
-LaTeX Font Info:    Font shape `TU/Arial(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 618.
-[16
+LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 628.
 
-] [17]
+Underfull \hbox (badness 1163) in paragraph at lines 633--638
+\TU/Roboto(0)/m/n/10 Traction allows the athlete to run, change directions, and
+ perform other maneuvers
+ []
+
+[15
+
+]
+Underfull \hbox (badness 2376) in paragraph at lines 647--649
+\TU/Roboto(0)/m/n/10 subjected to various treatments. Traction was increased by
+ soil compaction and
+ []
+
+[16]
 File: 03-Review-of-Literature_files/figure-latex/lit-review-density-comparison-
 1.pdf Graphic file (type pdf)
 <use 03-Review-of-Literature_files/figure-latex/lit-review-density-comparison-1
@@ -1352,58 +1356,77 @@ le (type pdf)
 File: images/illustrations/ball_indentation/ball_indentation_1_panel.png Graphi
 c file (type bmp)
 <images/illustrations/ball_indentation/ball_indentation_1_panel.png>
-[18] [19]
-Underfull \hbox (badness 4582) in paragraph at lines 730--730
-[]\TU/Arial(0)/b/n/14.4 Laboratory tests for soil behavior and physical
+[17] [18]
+Underfull \hbox (badness 1406) in paragraph at lines 732--736
+\TU/Roboto(0)/m/n/10 and plasticity of the surface. Surface deformation attenua
+tes linear and rotational
  []
 
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 751.
-[20]
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/it' will be
+(Font)              scaled to size 8.0pt on input line 761.
+[19]
 File: 03-Review-of-Literature_files/figure-latex/example-phase-diagram-1.pdf Gr
 aphic file (type pdf)
 <use 03-Review-of-Literature_files/figure-latex/example-phase-diagram-1.pdf>
-[21] [22] [23]
-Underfull \hbox (badness 1796) in paragraph at lines 857--861
-\TU/Arial(0)/m/n/10 There can be wide disparities in the behavior of two soils 
-having similar textural
+[20] [21]
+Underfull \hbox (badness 1199) in paragraph at lines 850--852
+\TU/Roboto(0)/m/n/9 particle sizes…these treatments, however, add significant t
+ime and effort when
+ []
+
+[22]
+Underfull \hbox (badness 1622) in paragraph at lines 861--863
+\TU/Roboto(0)/m/n/10 tested in the same lab, by the same operator. A system whi
+ch relies entirely on
  []
 
 
-Underfull \hbox (badness 1762) in paragraph at lines 868--870
-[] \TU/Arial(0)/m/n/9 “Engineers who have used [the textural triangle] have oft
-en noticed serious
+Underfull \hbox (badness 2393) in paragraph at lines 867--871
+\TU/Roboto(0)/m/n/10 There can be wide disparities in the behavior of two soils
+ having similar textural
  []
 
-[24] [25] [26]
+
+Underfull \hbox (badness 2903) in paragraph at lines 878--880
+[] \TU/Roboto(0)/m/n/9 “Engineers who have used [the textural triangle] have of
+ten noticed serious
+ []
+
+[23] [24] [25]
 File: ./figs/png/example-LL-combined-panels.png Graphic file (type bmp)
 <./figs/png/example-LL-combined-panels.png>
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 8.8558pt on input line 978.
+(Font)              scaled to size 9.02252pt on input line 988.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 8.85663pt on input line 978.
+(Font)              scaled to size 9.02348pt on input line 988.
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 8.85484pt on input line 978.
+(Font)              scaled to size 9.02156pt on input line 988.
 
-Underfull \hbox (badness 1005) in paragraph at lines 996--1000
-\TU/Arial(0)/m/n/10 nations have developed similar methods with different cone 
-masses and angles so
+Underfull \hbox (badness 1418) in paragraph at lines 1003--1004
+[]\TU/Roboto(0)/m/n/10 Ability to determine the liquid limit for some low-plast
+icity soils which cannot
  []
 
-[27]
+
+Underfull \hbox (badness 1221) in paragraph at lines 1006--1010
+\TU/Roboto(0)/m/n/10 nations have developed similar methods with different cone
+ masses and angles so
+ []
+
+[26]
 File: figs/png/example-pl-threads-panels.png Graphic file (type bmp)
 <figs/png/example-pl-threads-panels.png>
-[28]
-Underfull \hbox (badness 2762) in paragraph at lines 1037--1041
-[][][]\TU/Arial(0)/m/n/10 Sherwood[][] ([][]1970[][]) conducted an extensive in
-vestigation on the repeatability and
+[27]
+Underfull \hbox (badness 3907) in paragraph at lines 1047--1051
+[][][]\TU/Roboto(0)/m/n/10 Sherwood[][] ([][]1970[][]) conducted an extensive i
+nvestigation on the repeatability and
  []
 
 File: 03-Review-of-Literature_files/figure-latex/sherwood-overall-comparison-1.
 pdf Graphic file (type pdf)
 <use 03-Review-of-Literature_files/figure-latex/sherwood-overall-comparison-1.p
 df>
-[29] [30]
+[28] [29]
 File: 03-Review-of-Literature_files/figure-latex/sherwood-cov-comparison-1.pdf 
 Graphic file (type pdf)
 <use 03-Review-of-Literature_files/figure-latex/sherwood-cov-comparison-1.pdf>
@@ -1411,29 +1434,29 @@ File: 03-Review-of-Literature_files/figure-latex/sherwood-cone-cup-comparison-1
 .pdf Graphic file (type pdf)
 <use 03-Review-of-Literature_files/figure-latex/sherwood-cone-cup-comparison-1.
 pdf>
-[31] [32] [33]
-Overfull \hbox (432.015pt too wide) in paragraph at lines 1194--1194
+[30] [31] [32]
+Overfull \hbox (432.015pt too wide) in paragraph at lines 1204--1204
 []\TU/lmtt/m/n/10 ## E:/OneDrive - The Pennsylvania State University/PSU2019-pr
 esent/A_inf_soils_PhD/drafts/phd-thesis-proposal/figs/pdf/LL-w-uncertainty-for-
 a-single-point.pdf[] 
  []
 
 
-Overfull \hbox (432.015pt too wide) in paragraph at lines 1194--1194
+Overfull \hbox (432.015pt too wide) in paragraph at lines 1204--1204
 []\TU/lmtt/m/n/10 ## E:/OneDrive - The Pennsylvania State University/PSU2019-pr
 esent/A_inf_soils_PhD/drafts/phd-thesis-proposal/figs/png/LL-w-uncertainty-for-
 a-single-point.png[] 
  []
 
 
-Overfull \hbox (552.765pt too wide) in paragraph at lines 1194--1194
+Overfull \hbox (552.765pt too wide) in paragraph at lines 1204--1204
 []\TU/lmtt/m/n/10 ## E:/OneDrive - The Pennsylvania State University/PSU2019-pr
 esent/A_inf_soils_PhD/drafts/phd-thesis-proposal/presentations/presentation-fig
 s/LL-w-uncertainty-for-a-single-point.png[] 
  []
 
 
-Overfull \hbox (552.765pt too wide) in paragraph at lines 1194--1194
+Overfull \hbox (552.765pt too wide) in paragraph at lines 1204--1204
 []\TU/lmtt/m/n/10 ## E:/OneDrive - The Pennsylvania State University/PSU2019-pr
 esent/A_inf_soils_PhD/drafts/phd-thesis-proposal/presentations/presentation-fig
 s/LL-w-uncertainty-for-a-single-point.svg[] 
@@ -1441,60 +1464,61 @@ s/LL-w-uncertainty-for-a-single-point.svg[]
 
 File: figs/pdf/LL-w-uncertainty-for-a-single-point.pdf Graphic file (type pdf)
 <use figs/pdf/LL-w-uncertainty-for-a-single-point.pdf>
-[34]
-Underfull \hbox (badness 2126) in paragraph at lines 1214--1220
-\TU/Arial(0)/m/n/10 Most attempts to improve the plastic limit test have focuse
-d on mechanizing the
+[33]
+Underfull \hbox (badness 2142) in paragraph at lines 1224--1230
+\TU/Roboto(0)/m/n/10 Most attempts to improve the plastic limit test have focus
+ed on mechanizing the
  []
 
 File: ./images/barnes-apparatus.png Graphic file (type bmp)
 <./images/barnes-apparatus.png>
-[35]
+[34]
 File: ./images/moreno-marato-bending-limit-procedure.png Graphic file (type bmp
 )
 <./images/moreno-marato-bending-limit-procedure.png>
-
-Underfull \hbox (badness 1281) in paragraph at lines 1267--1273
-\TU/Arial(0)/m/n/10 The Atterberg limit tests have changed little since their a
-doption in the early 20th
+[35]
+Underfull \hbox (badness 2027) in paragraph at lines 1284--1286
+[]\TU/Roboto(0)/m/n/10 Many attempts have been made to improve or supplant the 
+canonical Atterberg
  []
 
 [36]
-Underfull \hbox (badness 1448) in paragraph at lines 1274--1276
-[]\TU/Arial(0)/m/n/10 Many attempts have been made to improve or supplant the c
-anonical Atterberg
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
+(Font)              scaled to size 5.8pt on input line 1337.
+[37]
+Underfull \hbox (badness 1281) in paragraph at lines 1367--1368
+[]\TU/Roboto(0)/m/n/10 The language above suggests Casagrande favored the use o
+f a direct toughness
  []
 
-[37]
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 5.8pt on input line 1327.
-[38]
-Underfull \hbox (badness 2103) in paragraph at lines 1379--1380
-\TU/Arial(0)/m/n/10 fine-grained soils based on their toughness equation (Figur
-e [][]3.13[][]) and qualitative
+
+Underfull \hbox (badness 3199) in paragraph at lines 1389--1390
+\TU/Roboto(0)/m/n/10 fine-grained soils based on their toughness equation (Figu
+re [][]3.13[][]) and qualitative
  []
 
 File: 03-Review-of-Literature_files/figure-latex/moreno-maroto-chart-1.pdf Grap
 hic file (type pdf)
 <use 03-Review-of-Literature_files/figure-latex/moreno-maroto-chart-1.pdf>
 
-Underfull \hbox (badness 3219) in paragraph at lines 1387--1387
-\TU/Arial(0)/m/n/9 Toughness data from Barnes (2013) and the empirical equation
- from Moreno-Maroto and
+Underfull \hbox (badness 4024) in paragraph at lines 1397--1397
+\TU/Roboto(0)/m/n/9 Toughness data from Barnes (2013) and the empirical equatio
+n from Moreno-Maroto and
  []
 
-[39] [40] [41]
-Underfull \hbox (badness 2237) in paragraph at lines 1427--1427
-[]\TU/Arial(0)/b/n/12 Summary: laboratory tests of soil behavior and physical
+
+Underfull \hbox (badness 1097) in paragraph at lines 1403--1406
+\TU/Roboto(0)/m/n/10 C-line and M-line closely match the toughness groups given
+ by [][]Barnes[][] ([][]2009[][]). An
  []
 
-[42] [43]
+[38] [39] [40] [41] [42]
 File: figs/pdf/transitional-fines-content-stages.pdf Graphic file (type pdf)
 <use figs/pdf/transitional-fines-content-stages.pdf>
-[44] [45]
-Underfull \hbox (badness 1609) in paragraph at lines 1616--1619
-[]\TU/Arial(0)/m/n/10 Figure [][]3.15[][] illustrates phase volumes for a hypth
-etical sand-clay mixture having
+[43] [44]
+Underfull \hbox (badness 2376) in paragraph at lines 1627--1630
+[]\TU/Roboto(0)/m/n/10 Figure [][]3.15[][] illustrates phase volumes for a hypt
+hetical sand-clay mixture having
  []
 
 File: E:/OneDrive - The Pennsylvania State University/PSU2019-present/A_inf_soi
@@ -1503,453 +1527,532 @@ sand.pdf Graphic file (type pdf)
 <use E:/OneDrive - The Pennsylvania State University/PSU2019-present/A_inf_soil
 s_PhD/drafts/phd-thesis-proposal/figs/pdf/intergranular-void-ratio-75-percent-s
 and.pdf>
-[46]
+[45]
 File: E:/OneDrive - The Pennsylvania State University/PSU2019-present/A_inf_soi
 ls_PhD/drafts/phd-thesis-proposal/images/illustrations/Lade_1998_Figure_7/Lade_
 1998_Figure_7.pdf Graphic file (type pdf)
 <use E:/OneDrive - The Pennsylvania State University/PSU2019-present/A_inf_soil
 s_PhD/drafts/phd-thesis-proposal/images/illustrations/Lade_1998_Figure_7/Lade_1
 998_Figure_7.pdf>
-[47] [48]
-Underfull \hbox (badness 1019) in paragraph at lines 1689--1695
- []\TU/Arial(0)/b/n/10 Effect of compaction/consolidation method on TFC[] \TU/A
-rial(0)/m/n/10 Mixtures subjected to static
+[46] [47]
+Underfull \hbox (badness 4242) in paragraph at lines 1700--1706
+ []\TU/Roboto(0)/b/n/10 Effect of compaction/consolidation method on TFC[] \TU/
+Roboto(0)/m/n/10 Mixtures subjected to static
  []
 
-[49] [50]
-Underfull \hbox (badness 1348) in paragraph at lines 1780--1786
-\TU/Arial(0)/m/n/10 The uniformity of sand included in soil mixtures has not be
-en studied extensively.
+
+Underfull \hbox (badness 1194) in paragraph at lines 1716--1718
+[]\TU/Roboto(0)/m/n/10 Soil mixtures are commonly specified by mass (i.e. 70% s
+and), but behavioral
  []
 
-[51]
-Underfull \hbox (badness 4927) in paragraph at lines 1813--1816
-[][][]\TU/Arial(0)/m/n/10 Dumbleton and West[][] ([][]1966[][]) measured Atterb
-erg limits of mixtures containing
+[48] [49]
+Underfull \hbox (badness 1715) in paragraph at lines 1794--1800
+\TU/Roboto(0)/m/n/10 The uniformity of sand included in soil mixtures has not b
+een studied extensively.
+ []
+
+[50]
+Underfull \hbox (badness 5908) in paragraph at lines 1827--1830
+[][][]\TU/Roboto(0)/m/n/10 Dumbleton and West[][] ([][]1966[][]) measured Atter
+berg limits of mixtures containing
  []
 
 File: figs/pdf/dumbleton-west-1966b-fig8-redraw.pdf Graphic file (type pdf)
 <use figs/pdf/dumbleton-west-1966b-fig8-redraw.pdf>
-[52] [53] [54]
+[51]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[52] [53]
 Section 4.
 File: figs/pdf/phd-gantt-chart.pdf Graphic file (type pdf)
 <use figs/pdf/phd-gantt-chart.pdf>
 
-Underfull \vbox (badness 1466) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[55
+[54
 
 ]
+Underfull \hbox (badness 1237) in paragraph at lines 1972--1974
+[]\TU/Roboto(0)/m/n/10 The means by which the soil specimen is prepared will af
+fect the test result.
+ []
+
+
+Underfull \hbox (badness 2005) in paragraph at lines 1972--1974
+\TU/Roboto(0)/m/n/10 Therefore, a protocol must be developed which adequately e
+mulates the real
+ []
+
+[55]
 File: images/cleatmark_device.png Graphic file (type bmp)
 <images/cleatmark_device.png>
 File: images/nine-spike-pattern.jpg Graphic file (type bmp)
 <images/nine-spike-pattern.jpg>
 
-Overfull \hbox (1.84236pt too wide) in paragraph at lines 1968--1968
+Overfull \hbox (1.64053pt too wide) in paragraph at lines 1987--1987
 [][] [] 
  []
 
-[56] [57] [58] [59] [60]
+[56] [57]
+Underfull \hbox (badness 2573) in paragraph at lines 2098--2099
+[]\TU/Roboto(0)/m/n/10 To make these calculations efficient and reproducible, t
+he above forumlae have
+ []
+
+
+Underfull \hbox (badness 2698) in paragraph at lines 2103--2105
+\TU/Roboto(0)/m/n/10 An important consideration in this test’s development is a
+ccurately simulating the
+ []
+
+[58]
 File: ../../cleatmarkmethod/figs/pdf/proctor-vs-observed-infield-density.pdf Gr
 aphic file (type pdf)
 <use ../../cleatmarkmethod/figs/pdf/proctor-vs-observed-infield-density.pdf>
-[61]
-File: ../../cleatmarkmethod/figs/pdf/deriving-proctor-values.pdf Graphic file (
-type pdf)
-<use ../../cleatmarkmethod/figs/pdf/deriving-proctor-values.pdf>
-
-LaTeX Warning: Reference `fig:proctor-vs-cleat-mark-cyls-photo' on page 62 unde
-fined on input line 2207.
-
-File: ../../cleatmarkmethod/photos-and-screen-recordings/resin-plug.jpg Graphic
- file (type bmp)
-<../../cleatmarkmethod/photos-and-screen-recordings/resin-plug.jpg>
-[62] [63]
+[59]
 File: ../../cleatmarkmethod/figs/pdf/proctor-vs-qc-density-comparison.pdf Graph
 ic file (type pdf)
 <use ../../cleatmarkmethod/figs/pdf/proctor-vs-qc-density-comparison.pdf>
-[64]
-Underfull \vbox (badness 1127) has occurred while \output is active []
-
-[65]
-Underfull \hbox (badness 1038) in paragraph at lines 2347--2350
-[]\TU/Arial(0)/m/n/10 Proper configuration of the drying apparatus was determin
-ed through a series of
+[60]
+Underfull \hbox (badness 1337) in paragraph at lines 2245--2248
+[]\TU/Roboto(0)/m/n/10 Proper configuration of the drying apparatus was determi
+ned through a series of
  []
 
+[61]
 File: ./images/heat-lamps.jpg Graphic file (type bmp)
 <./images/heat-lamps.jpg>
+File: ../../cleatmarkmethod/figs/manually-built/drydown-surface-temp-comparison
+.png Graphic file (type bmp)
+<../../cleatmarkmethod/figs/manually-built/drydown-surface-temp-comparison.png>
+
+[62]
 File: 04-Proposed-experiments_files/figure-latex/water-content-change-by-lamp-h
 eight-1.pdf Graphic file (type pdf)
 <use 04-Proposed-experiments_files/figure-latex/water-content-change-by-lamp-he
 ight-1.pdf>
 File: figs/pdf/w-variation-across-space-and-time.pdf Graphic file (type pdf)
 <use figs/pdf/w-variation-across-space-and-time.pdf>
-File: ../../cleatmarkmethod/figs/manually-built/drydown-surface-temp-comparison
-.png Graphic file (type bmp)
-<../../cleatmarkmethod/figs/manually-built/drydown-surface-temp-comparison.png>
-
-[66] [67] [68]
+[63]
 File: images/sand-replacement-and-scanner-mini-density-composite.png Graphic fi
 le (type bmp)
 <images/sand-replacement-and-scanner-mini-density-composite.png>
-[69]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[64]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2466.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2368.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[65]
 File: ../../cleatmarkmethod/figs/pdf/mini-plug-density-comp.pdf Graphic file (t
 ype pdf)
 <use ../../cleatmarkmethod/figs/pdf/mini-plug-density-comp.pdf>
-[70]
-Underfull \vbox (badness 4108) has occurred while \output is active []
+[66]
 
-[71]
+LaTeX Warning: Reference `fig:scanner-markers' on page 67 undefined on input li
+ne 2443.
 
-LaTeX Warning: Reference `fig:scanner-markers' on page 72 undefined on input li
-ne 2541.
-
-
-Underfull \hbox (badness 1014) in paragraph at lines 2554--2559
-[]\TU/Arial(0)/m/n/10 Penetrometer resistance is measured with a handheld devic
-e having a maximum
+[67]
+Underfull \hbox (badness 1552) in paragraph at lines 2456--2461
+[]\TU/Roboto(0)/m/n/10 Penetrometer resistance is measured with a handheld devi
+ce having a maximum
  []
 
-[72]
-LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 2588.
-LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 7.2pt on input line 2588.
-LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 5.8pt on input line 2588.
-[73]
+[68]
+LaTeX Font Info:    Font shape `TU/Roboto(1)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 2490.
+LaTeX Font Info:    Font shape `TU/Roboto(1)/m/n' will be
+(Font)              scaled to size 7.2pt on input line 2490.
+LaTeX Font Info:    Font shape `TU/Roboto(1)/m/n' will be
+(Font)              scaled to size 5.8pt on input line 2490.
 File: ../../cleatmarkmethod/figs/pdf/z-histogram.pdf Graphic file (type pdf)
 <use ../../cleatmarkmethod/figs/pdf/z-histogram.pdf>
+[69]
 File: ../../cleatmarkmethod/figs/manually-built/processing-pipeline-panel.png G
 raphic file (type bmp)
 <../../cleatmarkmethod/figs/manually-built/processing-pipeline-panel.png>
-LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 2625.
-LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 2625.
-LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 2625.
+LaTeX Font Info:    Font shape `TU/Roboto(1)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 2527.
+LaTeX Font Info:    Font shape `TU/Roboto(1)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 2527.
+LaTeX Font Info:    Font shape `TU/Roboto(1)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 2527.
 
-LaTeX Warning: Reference `fig:decimation-titration-surface-area' on page 74 und
-efined on input line 2632.
+LaTeX Warning: Reference `fig:decimation-titration-surface-area' on page 70 und
+efined on input line 2534.
 
-[74] [75]
+[70]
 File: ./figs/pdf/example-w-crit-curve.pdf Graphic file (type pdf)
 <use ./figs/pdf/example-w-crit-curve.pdf>
-[76] [77]
-LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 2773.
+[71] [72]
+Overfull \hbox (1.00035pt too wide) in paragraph at lines 2660--2661
+[]\TU/Roboto(0)/m/n/10 For a given clay soil, what is the critical sand content
+ above which the cleat-in/cleat-out
+ []
+
+LaTeX Font Info:    Font shape `TU/Roboto(1)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 2675.
 File: 04-Proposed-experiments_files/figure-latex/sand-content-clustering-1.pdf 
 Graphic file (type pdf)
 <use 04-Proposed-experiments_files/figure-latex/sand-content-clustering-1.pdf>
-
-Underfull \hbox (badness 1043) in paragraph at lines 2790--2791
-[]\TU/Arial(0)/b/n/10 Varying silt-to-clay ratio: \TU/Arial(0)/m/n/10 The same 
-fine-grained soils from (1) will each be
- []
-
-[78] [79]
-Underfull \hbox (badness 3919) in paragraph at lines 2824--2825
-\TU/Arial(0)/m/n/10 Paper title: \TU/Arial(0)/b/n/10 Toughness-water content re
-lations of clay soils via unconfined
+[73] [74]
+Underfull \hbox (badness 3098) in paragraph at lines 2731--2732
+\TU/Roboto(0)/m/n/10 Infield soils have two critical water contents that define
+ the range of acceptable
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 2862--2863
-[]\TU/Arial(0)/m/n/10 Clays with higher maximum toughness will require more san
-d to reduce their
+Underfull \hbox (badness 1540) in paragraph at lines 2764--2765
+[]\TU/Roboto(0)/m/n/10 Clays with higher maximum toughness will require more sa
+nd to reduce their
  []
 
-[80]
+[75]
 File: images/gilson_stock_proctor_extruder_photo.jpg Graphic file (type bmp)
 <images/gilson_stock_proctor_extruder_photo.jpg>
 File: ./images/barnes-example-toughness-vs-w-plot.png Graphic file (type bmp)
 <./images/barnes-example-toughness-vs-w-plot.png>
-[81] [82] [83] [84] [85]
+[76] [77] [78] [79] [80]
 Section 5.
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 3058.
-
-[86
+[81
 
 ]
-Underfull \hbox (badness 1189) in paragraph at lines 3103--3105
-\TU/Arial(0)/m/n/10 notebooks, Microsoft Excel, Microsoft Word, Google docs, Ev
-ernote, and Microsoft
+Underfull \hbox (badness 1902) in paragraph at lines 3005--3007
+\TU/Roboto(0)/m/n/10 notebooks, Microsoft Excel, Microsoft Word, Google docs, E
+vernote, and Microsoft
  []
 
-[87] [88]
-Underfull \hbox (badness 1824) in paragraph at lines 3165--3169
-[]\TU/Arial(0)/m/n/10 Writing packages also lets me write documentation which l
-ives right beside the
+[82]
+Underfull \hbox (badness 1009) in paragraph at lines 3032--3035
+\TU/Roboto(0)/m/n/10 is built around the principles outlined in $[]$ ([][]Wilki
+nson, 2005[][]).
  []
 
-[89]
-Underfull \hbox (badness 1755) in paragraph at lines 3200--3201
-[]\TU/Arial(0)/m/n/10 This rule states that the otuput (\TU/lmtt/m/n/10 fig-1.p
-df\TU/Arial(0)/m/n/10 ) should be built using \TU/lmtt/m/n/10 fig-1.R \TU/Arial
-(0)/m/n/10 and
+
+Underfull \hbox (badness 1448) in paragraph at lines 3036--3039
+[]\TU/Roboto(0)/m/n/10 I usually produce tables with \TU/Roboto(0)/b/n/10 kable
+Extra \TU/Roboto(0)/m/n/10 in R ([][]Zhu, 2021[][]). This package allows
  []
 
-[90]
+[83]
+Underfull \hbox (badness 2150) in paragraph at lines 3067--3071
+[]\TU/Roboto(0)/m/n/10 Writing packages also lets me write documentation which 
+lives right beside the
+ []
+
+[84]
+Underfull \hbox (badness 2302) in paragraph at lines 3102--3104
+[]\TU/Roboto(0)/m/n/10 This rule states that the otuput (\TU/lmtt/m/n/10 fig-1.
+pdf\TU/Roboto(0)/m/n/10 ) should be built using \TU/lmtt/m/n/10 fig-1.R \TU/Rob
+oto(0)/m/n/10 and
+ []
+
 File: E:/OneDrive - The Pennsylvania State University/PSU2019-present/A_inf_soi
 ls_PhD/drafts/phd-thesis-proposal/example-mf-project/example-dependency-graph.p
 df Graphic file (type pdf)
 <use E:/OneDrive - The Pennsylvania State University/PSU2019-present/A_inf_soil
 s_PhD/drafts/phd-thesis-proposal/example-mf-project/example-dependency-graph.pd
 f>
-[91]
-File: images/xkcd-files.png Graphic file (type bmp)
-<images/xkcd-files.png>
-[92] [93]
+[85]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[86]
+File: images/final-comic.png Graphic file (type bmp)
+<images/final-comic.png>
+[87] [88]
 Section 6.
 
-Underfull \hbox (badness 1043) in paragraph at lines 3319--3320
-[]\TU/Arial(0)/m/n/10 Value of volumetric water content where an infield soil
+Underfull \hbox (badness 2096) in paragraph at lines 3235--3236
+[]\TU/Roboto(0)/m/n/10 Value of volumetric water content where an infield soil
  []
 
 
-Underfull \hbox (badness 2781) in paragraph at lines 3319--3320
-\TU/Arial(0)/m/n/10 abruptly changes between a ductile, cleat-in/cleat-out cond
-ition and a brittle
+Underfull \hbox (badness 3343) in paragraph at lines 3235--3236
+\TU/Roboto(0)/m/n/10 abruptly changes between a ductile, cleat-in/cleat-out con
+dition and a brittle
  []
 
-[94
+[89
 
-] [95]
+] [90]
 Section 7.
 
-Underfull \hbox (badness 1424) in paragraph at lines 3357--3359
-\TU/Arial(0)/m/n/10 Maintenance of Skinned Areas on Baseball and Softball Field
-s. : 1–8. doi:
+Underfull \hbox (badness 3281) in paragraph at lines 3273--3275
+[][]\TU/Roboto(0)/m/n/10 American Society of Testing Materials. 2015. Standard 
+Guide for Construction
  []
 
 
-Underfull \hbox (badness 1609) in paragraph at lines 3366--3368
-[][]\TU/Arial(0)/m/n/10 ASTM: D 698 - 00a. 2003. Standard Test Methods for Labo
-ratory Compaction
+Underfull \hbox (badness 2626) in paragraph at lines 3282--3284
+[][]\TU/Roboto(0)/m/n/10 ASTM: D 698 - 00a. 2003. Standard Test Methods for Lab
+oratory Compaction
  []
 
 
-Underfull \hbox (badness 1715) in paragraph at lines 3372--3374
-\TU/Arial(0)/m/n/10 Compaction Characteristics of Soil Using Standard Effort (1
-2 400 ft-lbf/ft3 (600
+Underfull \hbox (badness 1048) in paragraph at lines 3288--3290
+[][]\TU/Roboto(0)/m/n/10 ASTM International. 2012. D 698 – 12e2: Standard Test 
+Methods for Laboratory
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 3375--3377
-[][]\TU/Arial(0)/m/n/10 ASTM International. 2015. D1557 - 12e1 Standard Test Me
-thods for Laboratory
+Underfull \hbox (badness 1603) in paragraph at lines 3288--3290
+\TU/Roboto(0)/m/n/10 Compaction Characteristics of Soil Using Standard Effort (
+12 400 ft-lbf/ft3 (600
  []
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 3375--3377
-\TU/Arial(0)/m/n/10 Compaction Characteristics of Soil Using Modified Effort (5
-6,000 ft-lbf/ft3 (2,700
+Underfull \hbox (badness 2027) in paragraph at lines 3291--3293
+[][]\TU/Roboto(0)/m/n/10 ASTM International. 2015. D1557 - 12e1 Standard Test M
+ethods for Laboratory
  []
 
-[96
+
+Underfull \hbox (badness 1173) in paragraph at lines 3291--3293
+\TU/Roboto(0)/m/n/10 Compaction Characteristics of Soil Using Modified Effort (
+56,000 ft-lbf/ft3 (2,700
+ []
+
+[91
 
 ]
-Overfull \hbox (2.11156pt too wide) in paragraph at lines 3381--3383
-\TU/Arial(0)/m/n/10 Compressive Strength of Cohesive Soil. ASTM International i
-: 1–7. doi: [][]10.1520/D2166[][]. 
+Overfull \hbox (0.53828pt too wide) in paragraph at lines 3297--3299
+\TU/Roboto(0)/m/n/10 Compressive Strength of Cohesive Soil. ASTM International 
+i: 1–7. doi: [][]10.1520/D2166[][]. 
  []
 
 
-Underfull \hbox (badness 1286) in paragraph at lines 3396--3398
-[][]\TU/Arial(0)/m/n/10 Barnes, G.E. 2013a. The Plastic Limit and Workability o
-f Soils. : 427. [][]$[][][][][] []
+Underfull \hbox (badness 2269) in paragraph at lines 3315--3317
+[][]\TU/Roboto(0)/m/n/10 Barnes, G.E. 2013a. The Plastic Limit and Workability 
+of Soils. : 427. [][]$[][][][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3396--3398
+Underfull \hbox (badness 10000) in paragraph at lines 3315--3317
 [] [] [][][] [] [][][][][][][][] [] [][][][][][][][][][] [] [][] [] [][] [] [][
 ][] [] [][][][][][][][][][] [] [][][][][][][][][][][][][][] [] [][] [][] [][] [
 ][] [][][] [][] [][][] []
  []
 
+[92]
+Underfull \hbox (badness 1067) in paragraph at lines 3348--3350
+\TU/Roboto(0)/m/n/10 subgrade. International Journal of Pavement Engineering 18
+(8): 714–726. doi:
+ []
 
-Underfull \hbox (badness 3657) in paragraph at lines 3423--3425
-\TU/Arial(0)/m/n/10 quantification for dietary inference, with previous methods
- in isolation and in
+
+Underfull \hbox (badness 4846) in paragraph at lines 3366--3368
+\TU/Roboto(0)/m/n/10 Processing System. ERCIM News. [][]$[][][][][] [] [] [] []
+[][][] [] [][][] [][] [][][][][] [] [][] [] [][] [] [][][][][][][][] [] [][][][
+][] []
+ []
+
+
+Overfull \hbox (22.27739pt too wide) in paragraph at lines 3381--3383
+\TU/Roboto(0)/m/n/10 Soils and Their Plasticity. Clay Minerals 6(3): 179–193. d
+oi: [][]10.1180/claymin.1966.006.3.05[][]. 
+ []
+
+
+Overfull \hbox (29.76274pt too wide) in paragraph at lines 3387--3389
+\TU/Roboto(0)/m/n/10 Density. Industrial and Engineering Chemistry1 23(9): 1052
+–1058. doi: [][]10.1021/ie50261a017[][]. 
+ []
+
+[93]
+Underfull \hbox (badness 10000) in paragraph at lines 3399--3401
+[][]$[][][][][] [] [] [] [][][] [] [][][] [] [][][] [] [][][][][][][][] [] [][]
+[] [][] [][][][][][][] [][] [][][] [][] [][][][][][][][] [][] [][] [][] [][][][
+][][] [][] [][] [][] [][][][][][][] [][] [][][] [][]
+ []
+
+
+Underfull \hbox (badness 1917) in paragraph at lines 3411--3413
+[][]\TU/Roboto(0)/m/n/10 Howell, J.L., C.D. Shackelford, N.H. Amer, and R.T. St
+ern. 1997. Compaction of
+ []
+
+
+Overfull \hbox (54.18413pt too wide) in paragraph at lines 3420--3422
+\TU/Roboto(0)/m/n/10 clay–sand mixture. International Journal of Geo-Engineerin
+g 9(1). doi: [][]10.1186/s40703-018-0087-x[][]. 
+ []
+
+[94]
+Overfull \hbox (13.99126pt too wide) in paragraph at lines 3450--3452
+\TU/Roboto(0)/m/n/10 fines content. Engineering Geology 89(3-4): 195–205. doi: 
+[][]10.1016/j.enggeo.2006.10.001[][]. 
+ []
+
+
+Underfull \hbox (badness 2393) in paragraph at lines 3453--3455
+\TU/Roboto(0)/m/n/10 method to determine the plastic limit and consistency chan
+ges in all types of
+ []
+
+
+Underfull \hbox (badness 1558) in paragraph at lines 3474--3476
+[][]\TU/Roboto(0)/m/n/10 Pampush, J.D., J.M. Winchester, P.E. Morse, A.Q. Vinin
+g, D.M. Boyer, et al. 2016.
+ []
+
+[95]
+Underfull \hbox (badness 2376) in paragraph at lines 3492--3494
+[][]\TU/Roboto(0)/m/n/10 Rossi, A.M., D.R. Hirmas, R.C. Graham, and P.D. Sternb
+erg. 2008. Bulk Density
+ []
+
+
+Underfull \hbox (badness 4168) in paragraph at lines 3492--3494
+\TU/Roboto(0)/m/n/10 Determination by Automated Three-Dimensional Laser Scannin
+g. Soil Science
+ []
+
+
+Underfull \hbox (badness 2478) in paragraph at lines 3516--3518
+[][]\TU/Roboto(0)/m/n/10 Sherwood, P.T., and M.D. Ryley. 1970. An investigation
+ of a cone-penetrometer
+ []
+
+[96]
+Overfull \hbox (4.42714pt too wide) in paragraph at lines 3558--3560
+[][]\TU/Roboto(0)/m/n/10 Ullman, N., and J. Monson. 2009. What are repeatabilit
+y and reproducibility? Standardization
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 3561--3563
+[][]\TU/Roboto(0)/m/n/10 Vallejo, L.E., and R. Mawby. 2000. Porosity influence 
+on the shear strength of
+ []
+
+
+Underfull \hbox (badness 4819) in paragraph at lines 3561--3563
+\TU/Roboto(0)/m/n/10 granular material-clay mixtures. Engineering Geology 58(2)
+: 125–136. doi:
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 3573--3575
+[][]\TU/Roboto(0)/m/n/10 Webb, R.H., K.E. Nussear, S. Carmichael, and T.C. Esqu
+e. 2014. Soil compaction
+ []
+
+
+Underfull \hbox (badness 2181) in paragraph at lines 3573--3575
+\TU/Roboto(0)/m/n/10 vulnerability at Organ Pipe Cactus National Monument, Ariz
+ona. United States
  []
 
 [97]
-Underfull \hbox (badness 3407) in paragraph at lines 3444--3446
-\TU/Arial(0)/m/n/10 Guide to Formulating, Mixing, Applying, and Firing Clay Bod
-ies and Glazes.
- []
-
-
-Overfull \hbox (20.45557pt too wide) in paragraph at lines 3462--3464
-\TU/Arial(0)/m/n/10 Soils and Their Plasticity. Clay Minerals 6(3): 179–193. do
-i: [][]10.1180/claymin.1966.006.3.05[][]. 
- []
-
-
-Underfull \hbox (badness 2818) in paragraph at lines 3468--3470
-[][]\TU/Arial(0)/m/n/10 Furnas, C.C. 1931. I — Mathematical Relations for Beds 
-of Broken Solids of
- []
-
-
-Underfull \hbox (badness 2818) in paragraph at lines 3468--3470
-\TU/Arial(0)/m/n/10 Maximum Density. Industrial and Engineering Chemistry1 23(9
-): 1052–1058.
+Underfull \hbox (badness 1783) in paragraph at lines 3606--3608
+\TU/Roboto(0)/m/n/10 sand-non plastic fines mixtures. Soils and Foundations 55(
+1): 213–219. doi:
  []
 
 [98]
-Underfull \hbox (badness 10000) in paragraph at lines 3480--3482
-[][]$[][][][][] [] [] [] [][][] [] [][][] [] [][][] [] [][][][][][][][] [] [][]
-[] [][] [][][][][][][] [][] [][][] [][] [][][][][][][][] [][] [][] [][] [][][][
-][][] [][] [][] [][] [][][][][][][] [][] [][][] [][] [][][][][][][] [][]
- []
-
-
-Underfull \hbox (badness 1221) in paragraph at lines 3486--3488
-[][]\TU/Arial(0)/m/n/10 Haigh, S.K., P.J. Vardanega, and M.D. Bolton. 2013. The
- plastic limit of clays.
- []
-
-
-Underfull \hbox (badness 1881) in paragraph at lines 3501--3503
-[][]\TU/Arial(0)/m/n/10 Kim, D., B.H. Nam, and H. Youn. 2018. Effect of clay co
-ntent on the shear
- []
-
-
-Underfull \hbox (badness 2744) in paragraph at lines 3501--3503
-\TU/Arial(0)/m/n/10 strength of clay–sand mixture. International Journal of Geo
--Engineering 9(1).
- []
-
-
-Underfull \hbox (badness 1895) in paragraph at lines 3513--3515
-[][]\TU/Arial(0)/m/n/10 Leake, S., and E. Haege. 2014. Soils for Landscape Deve
-lopment- Selection,
- []
-
-[99]
-Underfull \hbox (badness 2626) in paragraph at lines 3531--3533
-[][]\TU/Arial(0)/m/n/10 Monkul, M.M., and G. Ozden. 2007. Compressional behavio
-r of clayey sand
- []
-
-
-Underfull \hbox (badness 3668) in paragraph at lines 3531--3533
-\TU/Arial(0)/m/n/10 and transition fines content. Engineering Geology 89(3-4): 
-195–205. doi:
- []
-
-[100]
-Underfull \hbox (badness 6348) in paragraph at lines 3579--3581
-\TU/Arial(0)/m/n/10 26–31. [][]$[][][][][] [] [] [] [][][][][][][][][][][][][][
-][][] [] [][][] [] [][][][] [] [][] [] [][] [] [][][][][][][] [][] [][][][] [][
-] [][][][][][][][][][][] [][] [][][] [][] [][][][] [][]
- []
-
-
-Underfull \hbox (badness 1132) in paragraph at lines 3597--3599
-[][]\TU/Arial(0)/m/n/10 Sherwood, P.T., and M.D. Ryley. 1970. An investigation 
-of a cone-penetrometer
- []
-
-[101]
-Underfull \hbox (badness 2343) in paragraph at lines 3639--3641
-[][]\TU/Arial(0)/m/n/10 Ullman, N., and J. Monson. 2009. What are repeatability
- and reproducibility?
- []
-
-
-Underfull \hbox (badness 1275) in paragraph at lines 3642--3644
-[][]\TU/Arial(0)/m/n/10 Vallejo, L.E., and R. Mawby. 2000. Porosity influence o
-n the shear strength of
- []
-
-
-Underfull \hbox (badness 2990) in paragraph at lines 3642--3644
-\TU/Arial(0)/m/n/10 granular material-clay mixtures. Engineering Geology 58(2):
- 125–136. doi:
- []
-
-
-Underfull \hbox (badness 1199) in paragraph at lines 3654--3656
-\TU/Arial(0)/m/n/10 vulnerability at Organ Pipe Cactus National Monument, Arizo
-na. United States
- []
-
-[102]
-Underfull \hbox (badness 1286) in paragraph at lines 3684--3686
-\TU/Arial(0)/m/n/10 sand-non plastic fines mixtures. Soils and Foundations 55(1
-): 213–219. doi:
- []
-
-[103]
 Section 8.
 
-Overfull \hbox (23.87923pt too wide) in alignment at lines 3697--3702
+Overfull \hbox (17.36214pt too wide) in alignment at lines 3619--3624
  [] [] [] [] [] 
  []
 
-LaTeX Font Info:    Font shape `TU/Arial(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 3703.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/it' will be
+(Font)              scaled to size 9.0pt on input line 3625.
 
-Overfull \hbox (23.87923pt too wide) in alignment at lines 3702--3707
- [] [] [] [] [] 
- []
-
-
-Overfull \hbox (23.87923pt too wide) in alignment at lines 3707--3709
+Overfull \hbox (17.36214pt too wide) in alignment at lines 3624--3629
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (23.87923pt too wide) in alignment at lines 3709--3711
+Overfull \hbox (17.36214pt too wide) in alignment at lines 3629--3631
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (23.87923pt too wide) in alignment at lines 3711--3751
+Overfull \hbox (17.36214pt too wide) in alignment at lines 3631--3633
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (23.87923pt too wide) in alignment at lines 3751--3791
+Overfull \hbox (17.36214pt too wide) in alignment at lines 3633--3673
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (23.87923pt too wide) in alignment at lines 3791--3807
+Overfull \hbox (17.36214pt too wide) in alignment at lines 3673--3713
  [] [] [] [] [] 
  []
 
-[104
 
-] [105]
-LaTeX Font Info:    Font shape `TU/Arial(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 3847.
+Overfull \hbox (17.36214pt too wide) in alignment at lines 3713--3729
+ [] [] [] [] [] 
+ []
+
+[99
+
+] [100]
+LaTeX Font Info:    Font shape `TU/Roboto(1)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 3772.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[106] [107] [108]
-Overfull \hbox (27.765pt too wide) in paragraph at lines 4039--4039
+[101] [102]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[103]
+Overfull \hbox (5.39977pt too wide) in paragraph at lines 3864--3864
+[]\TU/Roboto(0)/b/n/12 Oven-dry sand solids based on impure “sand” and “clay” c
+omponents
+ []
+
+
+Underfull \hbox (badness 1024) in paragraph at lines 3866--3870
+\TU/Roboto(0)/m/n/10 0% sand-size particles. Therefore, accurate mixture calcul
+ations require a weighted
+ []
+
+
+Overfull \hbox (22.01184pt too wide) in paragraph at lines 3884--3885
+[]\TU/Roboto(0)/m/n/10 Note that because $[][]$ and $[][]$ are referenced to di
+fferent soils, $[][] [] []  [][][] [] []  [][][]$ 
+ []
+
+[104] [105]
+File: ../../cleatmarkmethod/figs/pdf/deriving-proctor-values.pdf Graphic file (
+type pdf)
+<use ../../cleatmarkmethod/figs/pdf/deriving-proctor-values.pdf>
+
+Underfull \hbox (badness 5637) in paragraph at lines 3982--3982
+[]\TU/Roboto(0)/b/n/12 Conversion of Proctor test energy-per-volume to cleat-ma
+rk
+ []
+
+
+LaTeX Warning: Reference `fig:proctor-vs-cleat-mark-cyls-photo' on page 106 und
+efined on input line 3985.
+
+[106]
+File: ../../cleatmarkmethod/photos-and-screen-recordings/resin-plug.jpg Graphic
+ file (type bmp)
+<../../cleatmarkmethod/photos-and-screen-recordings/resin-plug.jpg>
+[107]
+Overfull \hbox (27.765pt too wide) in paragraph at lines 4151--4151
 []\TU/lmtt/m/n/10 ## - Session info -------------------------------------------
 --------------------[] 
  []
 
-
-Overfull \hbox (27.765pt too wide) in paragraph at lines 4039--4039
+[108]
+Overfull \hbox (27.765pt too wide) in paragraph at lines 4151--4151
 []\TU/lmtt/m/n/10 ## - Packages -----------------------------------------------
 --------------------[] 
  []
 
-[109]
-Overfull \hbox (27.765pt too wide) in paragraph at lines 4039--4039
+
+Overfull \hbox (27.765pt too wide) in paragraph at lines 4151--4151
 []\TU/lmtt/m/n/10 ##  kableExtra  * 1.3.4.9000 2021-05-26 [1] Github (haozhu233
 /kableExtra@4c93f1a)[] 
  []
@@ -1957,29 +2060,27 @@ Overfull \hbox (27.765pt too wide) in paragraph at lines 4039--4039
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[110]
-Overfull \hbox (33.015pt too wide) in paragraph at lines 4039--4039
+[109]
+Overfull \hbox (33.015pt too wide) in paragraph at lines 4151--4151
 []\TU/lmtt/m/n/10 ## [1] E:/OneDrive - The Pennsylvania State University/Docume
 nts/R/win-library/4.0[] 
  []
 
-[111] (./phd-thesis-proposal.aux)
+[110] (./phd-thesis-proposal.aux)
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `phd-thesis-proposal.out' has not changed.
-(rerunfilecheck)             Checksum: D52C3F2C137C9405933950DD1FECE138;13484.
  ) 
 Here is how much of TeX's memory you used:
- 20720 strings out of 478682
- 395359 string characters out of 5860878
- 830998 words of memory out of 5000000
- 40370 multiletter control sequences out of 15000+600000
- 412221 words of font info for 124 fonts, out of 8000000 for 9000
+ 20932 strings out of 478682
+ 399412 string characters out of 5860878
+ 817400 words of memory out of 5000000
+ 40571 multiletter control sequences out of 15000+600000
+ 416121 words of font info for 152 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 87i,17n,122p,1177b,532s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,19n,122p,1178b,532s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on phd-thesis-proposal.pdf (111 pages).
+Output written on phd-thesis-proposal.pdf (110 pages).
