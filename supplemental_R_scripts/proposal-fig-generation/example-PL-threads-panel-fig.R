@@ -12,6 +12,7 @@ panels %>%
                  location = '+25+25',
                  color = 'white',
                  strokecolor = 'black',) %>% 
+  image_border(color = 'white', geometry = "20x20") %>% 
   image_append() %>% 
   image_write('./figs/png/example-pl-threads-panels.png')
 

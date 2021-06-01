@@ -37,24 +37,24 @@ nocite: |
 This document outlines the research progress I have made since beginning my PhD in 2019 and describes my plans for completing the project.
 It comprises 4 main sections:
 
-Section \@ref(purpose-and-objectives), [Purpose and objectives](#purpose-objectives)
+Section \@ref(purpose-and-objectives) [Purpose and objectives](#purpose-objectives)
 
 :  High-level overview of project goals.
 
 
 
-Section \@ref(problem-description), [Problem description](#problem-description)
+Section \@ref(problem-description) [Problem description](#problem-description)
 
 :  Outlines the importance of the infield skin.
 
 
 
-Section \@ref(lit-review), [Review of literature](#lit-review)
+Section \@ref(lit-review) [Review of literature](#lit-review)
 
 :  Summary of relevant prior scientific research. 
 <!-- Includes 3 major sub-sections: (1) research on baseball/softball infields, (2) laboratory soil testing methods, and (3) the behavior of artificial soil mixtures. -->
 
-Section \@ref(proposed-experiments), [Proposed experiments](#proposed-experiments)
+Section \@ref(proposed-experiments) [Proposed experiments](#proposed-experiments)
 
 :  Detailed outline of my research plan.
 <!-- Planned course of laboratory research, organized as anticipated publication units. -->
@@ -75,22 +75,27 @@ The proposal concludes with a [glossary](#definition-of-terms), an [Appendix](#a
 <!-- pdf file. Probably same thing would work for figs and tables -->
 <!-- lists but need to take the time to learn what the arguments mean -->
 
+
+<!-- put TOC in document tree and insert it here -->
+\pdfbookmark[chapter]{\contentsname}{toc}
+
 \tableofcontents
 
-\pdfbookmark[chapter]{\contentsname}{toc}
+
+
+<!-- do the same for lof   -->
+<!-- chapter level is 0....see https://latex.org/forum/viewtopic.php?t=7734 -->
+\pdfbookmark[0]{List of Figures}{lof}
 
 \listoffigures
 
+<!-- and the lot -->
+
+\pdfbookmark[0]{List of Tables}{lot}
 
 \listoftables
 
 
-<!-- ```{=latex} -->
-<!-- \newpage  -->
-
-<!-- \tableofcontents -->
-
-
-
-<!-- ``` -->
+<!-- turn line numbering on now  -->
+<!-- \linenumbers  -->
 

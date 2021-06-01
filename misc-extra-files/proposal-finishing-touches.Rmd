@@ -1,3 +1,10 @@
+---
+title: "finishing touches for thesis proposal"
+---
+
 - take photo of Proctor mold next to cleat mark cylinders 
 - take photo of markers up close 
 - figure out duplicated labor-per-area-tab reference 
+
+- ~~make faces vs surf area plot~~ 
+- ~~fix expressions for example w crit curve~~

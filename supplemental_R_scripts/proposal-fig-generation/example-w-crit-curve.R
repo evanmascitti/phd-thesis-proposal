@@ -78,8 +78,8 @@ metrics_plot <- function(all_data_df, derived_vals_df, x, metric){
   # have time to go down right now 
   
   crit_pts_df <- tibble::tibble(
-    letter = c("C", "B", "'A (w'[crit]*')'"),
-    x = c(0.14, 0.17, 0.255),
+    letter = c(expression(C), expression(B), expression('A ('*theta[crit]*')')),
+    x = c(0.14, 0.17, 0.24),
     y = c(31, 68, 20)
   )
   
@@ -145,10 +145,10 @@ metrics_plot <- function(all_data_df, derived_vals_df, x, metric){
               aes(x = x, y= y, label = letter),
               color = 'grey25',
               size = 3,
-              parse = T
+              parse = TRUE
               )+
     expand_limits(y= c(0))+
-    scale_x_continuous(x_label, 
+    scale_x_continuous(# x_label, 
                        limits = x_limits,
                        breaks=scales::breaks_width(0.05),
                        labels = scales::label_number(accuracy = 0.01))+
@@ -185,8 +185,11 @@ volumetric_plots <- pmap(volumetric_plot_args, metrics_plot)%>%
   set_names(volumetric_plot_args$metric)
 
 
-example_w_crit_curve <- volumetric_plots[[1]] +
-  labs(title = 'Example cleat mark test data: 75% sand, Modified effort')
+example_w_crit_curve <- volumetric_plots[["rfi_diff"]] +
+  labs(title = 'Example cleat mark test data: 75% sand, Modified effort',
+       x= expression(theta))
+
+
 print(example_w_crit_curve)
 
 ecmfuns::export_plot(example_w_crit_curve, dirs = 'figs')

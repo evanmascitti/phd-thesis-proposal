@@ -7,7 +7,8 @@ knitr::opts_chunk$set(message=FALSE,
                       echo = FALSE,
                       warning = FALSE,
                       out.width = '90%',
-                      fig.align = 'center')
+                      fig.align = 'center',
+                      dpi = 72)
 ```
 
 ```{r load-packages}
@@ -258,7 +259,12 @@ There is no universally agreed-upon method for performing a PSA. Many samples re
 Authors rarely report the full protocol used to obtain their PSA results. 
 Indeed, the vast array of pre-treatment, dispersion, and measurement techniques mean that comparing PSA results across studies often proves difficult or impossible. 
 
-Even when protocols are clearly reported, we are confronted with a difficult dilemma: if carbonates, iron oxides, and organic matter are all destroyed, what exactly is the physical meaning of the test result? These components surely contribute to the soil's properties in its "natural" state. 
+
+Even when protocols are clearly reported, we are confronted with a difficult dilemma: if carbonates, iron oxides, and organic matter are all destroyed, what exactly is the physical meaning of the test result? 
+These components surely contribute to the soil's properties in its "natural" state. 
+
+Some dispersion methods are even thought to fracture individual particles into smaller grains [@Gee2002].
+Clearly this would further confuse a result's significance. 
 
 <!-- While correct, this sentence is weak and I like the tone that the prior praph ends with, so I'm commenting it out. There is also evidence that some dispersion techniques break individual mineral particles into smaller fragments, further confounding the analysis. -->
 
@@ -555,7 +561,7 @@ The laboratory balance in use must be of sufficient sensitivity and frequently c
 # this generates the value to reference below. 
 # It can also re-generate the relevant figure, but for now I commented that code 
 # out to save time. 
-source('./supplemental_R_scripts/proposal-fig-generation/LL-water-content-measurement-standard-deviation-calibration_2021-01-25-fig.R')
+source('./supplemental_R_scripts/proposal-fig-generation/LL-water-content-measurement-standard-deviation-calibration_2021-01-25-fig.R', echo = FALSE)
 knitr::include_graphics('figs/pdf/LL-w-uncertainty-for-a-single-point.pdf')
 ```
 
@@ -769,7 +775,7 @@ Empirical correlations can estimate soil toughness, but these should be validate
 <!-- In the context of infield mixes, soil testing is used to predict how a material will respond to changes in water content and its interactions with projectiles and athlete's cleated footwear. -->
 This section has reviewed research on the nature and efficacy of various soil tests. 
 
-Particle size analysis is the only soil test method which has been applied to infield soils research. 
+Particle size analysis is the only soil test method which has been applied to infield soils.
 There is reason to believe this concept does not accurately reflect the performance of all infield soils.
 The wide variety of methods employed in PSA also makes comparing results difficult.
 The Atterberg limit tests are well-accepted and despite their known shortcomings may provide an alternative means for assessing infield soils. 
@@ -834,15 +840,17 @@ This stage has been termed the transitional fines content (TFC).
 When $m_{fines} > TFC$, the fines and their water content will dominate the soil's behavior. The coarse grains serve only as inert inclusions.
 Figure \@ref(fig:tfc-stages) depicts the various stages which bracket the TFC.
 
-```{r tfc-stages, fig.cap="As fines are added to a pure sand, the nature of the fines and the water content play a greater role in governing the soil's behavior.", fig.scap="Major stages bracketing the transitional fines content.", out.width="99%"}
-knitr::include_graphics('figs/pdf/transitional-fines-content-stages.pdf')
-```
-
 
 The TFC is a relevant concept to the design of infield mixes.
 Infield soils must exhibit some properties characteristic of fine-grained soils (plasticity, stiffness) and also some more reflective of coarse-grained soils (ease of working with implements).
 
 <!-- this sentence is weak, taking out for now. The following sub-sections review literature on the transitional fines content of soil mixtures. -->
+
+```{r tfc-stages, fig.cap="As fines are added to a pure sand, the nature of the fines and the water content play a greater role in governing the soil's behavior.", fig.scap="Major stages bracketing the transitional fines content.", out.width="99%"}
+knitr::include_graphics('figs/pdf/transitional-fines-content-stages.pdf')
+```
+
+
 
 #### Means to define the TFC
 

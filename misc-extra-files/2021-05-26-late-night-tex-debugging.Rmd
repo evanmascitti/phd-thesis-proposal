@@ -53,26 +53,36 @@ tfc_definition_methods <- readr::read_csv(
   dplyr::rename_with(stringr::str_remove, pattern = "_")
 
   
+# tfc_definition_methods
 tfc_study_column_names <- c(
   'Reference',
   'Type of fines',
   'Tests performed',
-  'Reported TFC (mass \\%)'
+  'Reported TFC (mass pct.)'
 )
+# tfc_def_kable <- tfc_definition_methods %>% 
+#   kbl(format = 'latex',
+#       booktabs = TRUE,
+#       linesep = "",
+#       # align = 'lllc',
+#       col.names = tfc_study_column_names,
+#       caption = 'Selected studies on the transitional fines content (TFC) of coarse-fine mixtures. Methods used to identify the TFC depends on the problem of interest.',
+#       caption.short = 'Relevant studies on transitional fines content (TFC)') %>% 
+#  kableExtra::collapse_rows(columns = c(1, 2, 4),
+#                 latex_hline = 'major')
 
 tfc_def_kable <- tfc_definition_methods %>% 
   kbl(format = 'latex', align = 'lllc',
       booktabs = TRUE,
       col.names = tfc_study_column_names,
-      caption = 'Transitional fines content values vary widely but often lie between 20-30\\% by mass.',
-      caption.short = 'Selected studies on transitional fines content (TFC)',
-      escape = FALSE) %>% 
+      caption = 'Selected studies on the transitional fines content of coarse-fine mixtures. Methods used to identify TFC depends on the problem of interest. Values typically fall between 20-30 % by mass.',
+      caption.short = 'Relevant studies on transitional fines content (TFC)',
+      escape = TRUE) %>% 
   column_spec(column = 4, width = '1in') %>%
   column_spec(column = 1, bold=TRUE) %>% 
   row_spec(row = 0, bold = TRUE) %>% 
  kableExtra::collapse_rows(columns = c(1,2,4),
                            latex_hline = 'major') %>% 
   kableExtra::kable_styling(latex_options = 'scale_down')
-
 tfc_def_kable
 ```

@@ -1,5 +1,7 @@
+library(magrittr)
 
-ggplot2::theme_set(theme_minimal())
+
+ggplot2::theme_set(ggplot2::theme_minimal())
 
 
 sand_pcts <- tibble::tibble(
@@ -41,7 +43,7 @@ sand_pcts <- tibble::tibble(
                      palette = "Dark2")+
     ggplot2::labs(title = "Clustering of mixtures around the transitional fines content")+
   ggplot2::theme(
-    panel.grid = element_line(size - 0.25, color = 'grey90'),
+    panel.grid = ggplot2::element_line(size - 0.25, color = 'grey90'),
     axis.text.y = ggplot2::element_blank(),
     axis.title.y = ggplot2::element_blank(),
     panel.grid.major.y = ggplot2::element_blank(),
@@ -51,3 +53,6 @@ sand_pcts <- tibble::tibble(
    # axis.title.x = ggplot2::element_text(size=28),
     legend.position = "none"
   ))
+
+
+ecmfuns::export_plot(dirs = 'figs', x = sand_pcts_to_choose, formats = c('pdf', 'png'))

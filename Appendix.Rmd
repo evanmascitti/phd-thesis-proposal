@@ -2,7 +2,7 @@
 # Appendix {#appendix} 
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = F, warning = F, message = F, out.width = '80%', fig.align = 'center')
+knitr::opts_chunk$set(echo = F, warning = F, message = F, out.width = '80%', fig.align = 'center', dpi = 72)
 ```
 
 ```{r load-packages, include=F}
@@ -92,15 +92,17 @@ sd_df %>%
 
 \newpage
 
-## Additional proofs and derivations
+## Additional calculations and derivations
 
 This section contains some useful equations and calculations that are best presented as supplemental materials. 
 They are important to include, but their presence in the main text would have cluttered its presentation. 
 
 ### Intergranular porosity generalized for any % sand and $\rho_{bulk}$ {#generalized-intergranular-porosity-equation}
 
-While engineers favor void ratio ($e$), most soil scientists are more familiar with porosity ($n$) to describe the amount of void space in a soil.
-Therefore it is convenient to have a solution for $n_{sa}$ to consider the relative density of the sand grains within a coarse-fine mixture.
+Soils comprise solids and voids. 
+Civil engineers favor void ratio ($e$), but most soil scientists are more familiar with porosity ($n$).
+Therefore it is convenient to have a solution for $n_{sa}$ to compute the configuration of the sand grains within a coarse-fine mixture.
+
 To compute $n_{sa}$, the volume occupied by the fines phase is considered as void space (c.f. Figure \@ref(fig:intergranular-void-ratio-diagram)).
 A derivation for $n_{sa}$ is given below.
 
@@ -109,29 +111,34 @@ The following abbreviations are used:
 
 
 \begin{align*}
-V_v &= \mathrm{total~void~volume} \\
-V_c &= \mathrm{clay~solids~volume} \\
-V_{tot} &= \mathrm{total~bulk~soil~volume} \\
-m_c &= \mathrm{clay~solids~mass} \\
-m_{sa} &= \mathrm{sand~solids~mass} \\
-m_{tot} &= \mathrm{total~soil~solids~mass} \\
-G_{c} &= \mathrm{clay~solids~specific~gravity} \\
-G_{sa} &= \mathrm{sand~solids~specific~gravity} \\
-G_{s} &= \mathrm{overall~soil~solids~specific~gravity} \\
 n_{global} &= \mathrm{overall~soil~porosity} \\
 n_{sa} &= \mathrm{intergranular~porosity} \\
+V_{tot} &= \mathrm{total~bulk~soil~volume} \\
+V_v &= \mathrm{total~void~volume} \\
+V_c &= \mathrm{clay~solids~volume} \\
+m_{tot} &= \mathrm{total~soil~solids~mass} \\
+m_c &= \mathrm{clay~solids~mass} \\
+m_{sa} &= \mathrm{sand~solids~mass} \\
+G_{s} &= \mathrm{overall~soil~solids~specific~gravity} \\
+G_{c} &= \mathrm{clay~solids~specific~gravity} \\
+G_{sa} &= \mathrm{sand~solids~specific~gravity}
 \end{align*}
 
 
 First, the basic definition of porosity is altered to consider the solid fines as part of the voids phase:
   
 \begin{align}
-n &= \frac{V_{v}}{V_{tot}} \nonumber \\
-n_{sa}& = \frac{V_c + V_v}{V_{tot}}  \\
-n_{sa}& = \frac{V_c+n_{global}}{1} \\
-n_{sa}&=\frac{\frac{m_c}{G_c}+\left( 1 - \frac{\rho_{bulk}}{G_s} \right)}{1}
+n &= \frac{V_{v}}{V_{tot}} \\
+n_{sa}& = \frac{V_c + V_v}{V_{tot}} ; \quad V_v = n_{global}; \quad V_{tot = 1} (\#eq:intergranular-porosity-volume-is-1)\\
+n_{sa}& = \frac{V_c+n_{global}}{1} 
 (\#eq:basic-intergranular-porosity-equation)
 \end{align}
+
+Next the volumes are re-written in terms of their masses and specific gravities:
+
+\begin{align}n_{sa} &= \frac{\frac{m_c}{G_c} + \left( 1 - \frac{\rho_{bulk}}{G_s} \right) }{1}
+\end{align}
+
 
 A value of 2.7 is often assumed for $G_s$ of both the sand and clay, but this is usually not the case. For a general solution that accounts for differences between $G_{sa}$ and $G_c$, we may compute $G_s$ as a weighted average between $G_{sa}$ and $G_c$:
 
@@ -150,7 +157,7 @@ n_{sa}&=\frac{\frac{m_c}{G_c}+\left[ 1 - \frac{\rho_{bulk}}{\left(  m_{sa_{mass-
 \end{align}
 
 
-When porosity is used, the total soil _volume_ is equal to 1.
+When porosity is used, the total soil _volume_ is equal to 1 \@ref(eq:intergranular-porosity-volume-is-1).
 This means the mass fractions must be re-normalized. 
 In other words, the first $m_c$ term in Equation \@ref(eq:Gs-weighted-intergranular-porosity-equation) is not equal to 0.4 even though the soil is 40% clay by mass. 
 We must convert the clay mass so it is relative to the soil volume of 1.
@@ -165,9 +172,9 @@ Conveniently, because the total volume is equal to 1 the total mass is equal to 
 
 To find the volume-normalized mass of either the clay or the sand we multiply the usual mass fraction of the component by the total solids mass, which, from \@ref(eq:component-mass-renormalization), is the same as $\rho_{bulk}$:
 
-\begin{align*}
+\begin{align}
 m_{component_{~volume-normalized}} &= m_{component_{mass-based}} \times \rho_{bulk}
-\end{align*}
+\end{align}
 
 Finally, we may substitute a volume-normalized solution for $m_c$ into \@ref(eq:Gs-weighted-intergranular-porosity-equation), yielding a solution for $n_{sa}$:
 
@@ -186,8 +193,8 @@ n_{sa} &= 0.525
 \end{align*}
 
 
-Typical values of $n$ for a pure, uniform sand range from 0.25-0.45. Therefore, $n_{sa}$ will almost surely be < 0.525. 
-The sand in this example is in a configuration looser than it would ever exhibit in its pure state.
+Typical values of $n$ for a pure, uniform sand range from 0.30-0.45. Therefore, $n_{sa}$ will almost cetrainly be < 0.525. 
+The sand in this mixture exists in a configuration looser than it would ever exhibit in its pure state.
 
 A similar solution could be derived using $w$ and $S_e$.
 The complexity of this approach arises from the need to compute the air volume when $S_e<1$. 
@@ -219,7 +226,7 @@ The variables are defined as:
 The total oven-dry mass of the mixture is equal to unity; therefore the clay mass can be solved as a function of the sand mass:
 
 \begin{align}
-m_{final} = m_{sand} + m_{clay} &= 1 \\
+m_{final} &= m_{sand} + m_{clay} = 1 \\
 m_{clay} &= 1 - m_{ sand}
 \end{align}
 
@@ -251,6 +258,7 @@ m_{clay} = 1 - \left( \frac{S_{final} - S_{clay}}{S_{sand} - S_{clay}} \right)
 
 Each oven-dry component mass is then scaled to the desired final mixture mass and corrected for its respective hygroscopic water content and :
 
+
 \begin{align}
   \text{Sand~air-dry~mass~(kg)} &= \frac{S_{final}-S_{clay}}{S_{sand} - S_{clay}}  \cdot m_{total~mixture~(kg)} \cdot (1+w_{sand })
 (\#eq:sand-clay-ratios-air-dry-sand-mass-appendix) \\
@@ -264,18 +272,23 @@ For example, assume 50 kg of final mix having 60% sand-size particles is require
 The gravimetric water content of the sandy component $w_{sand}$ is 0.2%, i.e. 0.002, and $w_{clay}$ is 1.9%, i.e. 0.019.
 
 
-Plugging these values into the equations gives an air-dry "sand" component mass of `r round((0.6-0.08)/(0.96-0.08)*50*1.002, 1)` kg and an air-dry "clay" component mass of `r round((1-((0.6-0.08)/(0.96-0.08)))*50*1.019, 1)` kg.
+Plugging these values into Equations \@ref(eq:sand-clay-ratios-air-dry-sand-mass-appendix) and \@ref(eq:sand-clay-ratios-air-dry-clay-mass-appendix) gives an air-dry "sand" component mass of `r round((0.6-0.08)/(0.96-0.08)*50*1.002, 1)` kg and an air-dry "clay" component mass of `r round((1-((0.6-0.08)/(0.96-0.08)))*50*1.019, 1)` kg.
+
 
 \begin{align}
-\left(\frac{0.60~-~0.08}{0.96~-~0.08}\right)~&\times 50~\text{kg}~=~29.6~\text{kg}~\times~(1+0.002) \\
-\left[ 1 - \left(\frac{0.60~-~0.08}{0.96~-~0.08}\right) \right] ~&\times 50~\text{kg}~=~20.8~\text{kg}~\times~(1+0.019)
+\left(\frac{0.60~-~0.08}{0.96~-~0.08}\right)~&\times 50~\text{kg}~\times~(1+0.002)~=~29.6~\text{kg} \\
+\left[ 1 - \left(\frac{0.60~-~0.08}{0.96~-~0.08}\right) \right] &\times 50~\text{kg}~\times~(1+0.019)~=~20.8~\text{kg}
 \end{align}
 
 
 ### Deriving values for $\rho_{max}$ and $w_{opt}$ using polynomial splines {#deriving-values-from-proctor-curves}
 
 To derive $w_{opt}$, a polynomial spline was fitted to the plot of dry density vs. water content.
-Values for $\rho_{max}$ and $w_{opt}$ were computed by setting the curve's derivative to zero and solving for each value at this point (Figure \@ref(fig:deriving-proctor-values)). 
+A spline function is a function composed of smaller polynomial curves fit to subsets of the data.
+For each subset, the derivatives at each node are forced to match one another.
+This approach often provides a smoother curve for small datasets.
+
+Values for $\rho_{max}$ and $w_{opt}$ were computed by setting the spline's derivative to zero and solving for each value at this point (Figure \@ref(fig:deriving-proctor-values)). 
 <!-- This approach is further documented in **soiltestr**.  -->
 @ASTMD698-12 suggests the operator draw the compaction curve manually, but a computational approach
 removes operator judgement and makes the analysis more reproducible.
@@ -320,7 +333,8 @@ With these dimensions, a fully-loaded cylinder containing moist soil has a mass 
 Unfortunately, it was later discovered that the automatic turntable for the 3D scanner has a maximum capacity of 5 kg. 
 Therefore an adjustment to reduce the specimen mass was required. 
 2.5 cm cylindrical plugs were fabricated from high-strength polymer resin poured into each cylinder (Figure \@ref(fig:resin-plugs)).
-The resin has a bulk density of just ~0.6 Mg m^-3^ so the plugs reduce the total specimen mass to ~ 4.5 kg and maintain a sufficient profile depth of 7.5 cm.
+The resin was Feather-Lite&trade; urethane (Smooth-On, Inc. Macungie, PA).
+Feather-Lite&trade; has a bulk density of just ~0.6 Mg m^-3^, so the plugs occupy enough volme to reduce the total specimen mass to ~ 4.5 kg while maintaining a substantial profile depth of 7.5 cm.
 After inserting the plugs, each cylinder's volume was precisely determined by filling it with de-aired water and recording the filled mass.
 This procedure allows precise density computations despite any differences in the plugs' sizes. 
 
@@ -331,18 +345,11 @@ knitr::include_graphics('../../cleatmarkmethod/photos-and-screen-recordings/resi
 
 A conversion was then developed to equate each Proctor test energy to 
 the larger cleat-mark cylinder. The conversion for the Standard test 
-(25 blows per layer, 3 layers) is straightforward because the new total profile thickness (3 in or 7.5 cm) corresponds exactly to 2/3 of the regular Proctor mold. 
+(3 layers) is straightforward because the new total profile thickness (3 in or 7.5 cm) corresponds exactly to 2/3 of the regular Proctor mold. 
 Therefore the lift thickness was held constant and the number of lifts was simply reduced to 2. 56 blows per layer are used for the 15 cm-diameter mold [@ASTMD698-12].
 The Modified test calls for 5 lifts, which is not evenly divisible into the new total height.
 An additional energy conversion is required to translate the Modified compaction routine to the cleat-mark cylinders.
-This calculation is outlined below.
-
-<!-- \begin{align}  -->
-<!-- \frac{E_{Modified~Proctor_{total}}}{vol_{Modified~Proctor}}&=\frac{E_{cleat-mark_{total}}}{vol_{cleat-mark}} \\ -->
-<!-- \frac{2700~\frac{kJ}{m^3}}{978~cm^3}&=\frac{E_{cleat-mark_{total}}}{1537~cm^3} \\ -->
-<!-- \frac{4243~kJ}{m^3} \times  \frac{1m^3}{1 \times 10^6 cm^3} &=~4243 \frac{kJ}{m^3} \\ -->
-<!-- E_{cleat-mark_{total}}&=~4243 \frac{kJ}{m^3}  -->
-<!-- \end{align} -->
+This calculation is outlined below in Equations \@ref(eq:joules-per-cylinder)-\@ref(eq:modified-energy-per-volume-appendix).
 
 The compaction effort is standardized as energy per unit volume of compacted soil. 
 We must determine the total number of blows to use per cylinder and then per lift. 
@@ -351,11 +358,12 @@ The average volume of the 12 cleat-mark cylinders (determined with the de-aired 
 \begin{align} 
 \frac{1413~\cancel{cm^3}}{1~cleat-mark~cylinder} &\times \frac{1~\cancel{m^3}}{1~\times10^6~\cancel{cm^3}}~\times \frac{2700~kNm}{\cancel{m^3}}  = \frac{3.815~kNm}{1~cleat-mark~cylinder} \\
 \nonumber \\
-\frac{3.815~\cancel{kNm}}{1~cleat-mark~cylinder} &\times \frac{1000~\cancel{Nm}}{1~\cancel{kNm}} \times \frac{1~J}{1~\cancel{Nm}} = \frac{3815~J}{1~cleat-mark~cylinder} \
+\frac{3.815~\cancel{kNm}}{1~cleat-mark~cylinder} &\times \frac{1000~\cancel{Nm}}{1~\cancel{kNm}} \times \frac{1~J}{1~\cancel{Nm}} = \frac{3815~J}{1~cleat-mark~cylinder} 
+(\#eq:joules-per-cylinder)
 \end{align}
 
-From classical mechanics, a single blow of the Modified hammer applies:
 
+From classical mechanics, a single blow of the Modified hammer applies:
 
 \begin{align}
 \begin{split}
@@ -365,11 +373,13 @@ E&=\frac{20.34~kgm^2}{s^2} =20.3~\text{J}
 \end{split}
 \end{align}
 
+
 Therefore a total energy of 3815 J requires:
 \begin{equation}
 \frac{3815~\text{\cancel{J}}}{cylinder}\times\frac{1 blow}{20.34~\text{\cancel{J}}}= \text{187.6 blows per cylinder}
 (\#eq:modified-energy-per-volume-appendix)
 \end{equation}
+
 
 
 Split over 3 layers, $187.6 / 3 \approx 63$ blows per layer are required.

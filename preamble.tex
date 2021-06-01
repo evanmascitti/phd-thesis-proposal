@@ -1,3 +1,8 @@
+% a useful website for knowing what things are called in latex
+% http://www.texfaq.org/FAQ-fixnam
+
+
+
 % packages I had already put in here 
 \usepackage[none]{hyphenat}
 \usepackage[font=small,labelfont=bf]{caption}
@@ -50,7 +55,7 @@
 
 
 % define navy as a link color and use it for internal links
-\usepackage{xcolor}
+% depends on xcolor which is already loaded above 
 \definecolor{dodgerblue4}{HTML}{104E8B}
 \usepackage{hyperref}
 
@@ -60,7 +65,23 @@
   linkcolor=dodgerblue4
 }
 
+
 % \linkcolor{navy}
+
+
+% number the lines with small grey text, see https://tex.stackexchange.com/questions/247165/can-i-change-linenumber-colour
+\usepackage{lineno}
+
+% define R's grey75 color in HTML hex notation
+\definecolor{grey75}{HTML}{BFBFBF}
+
+% set color of line numbers 
+% this was the code I copied from the URL above \renewcommand{\linenumberfont}{\normalfont\bfseries\small\color{grey75}}
+
+% and this is my own version which uses the mono font. % I am turning this off and also commenting out the line right after the table of contents that turns the line numbers on. 
+% \renewcommand{\linenumberfont}{\ttfamily\small\color{grey75}}
+
+
 
 
 % Use the section numbers instead of titles because some of 

@@ -9,7 +9,9 @@ options(tinytex.verbose = TRUE)
 knitr::opts_chunk$set(message=FALSE,
                       echo = FALSE,
                       warning = FALSE,
-                      out.width = '90%')
+                      out.width = '90%',
+                      fig.align = 'center',
+                      dpi = 72)
 ```
 
 ___
