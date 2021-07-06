@@ -1,4 +1,4 @@
-book_filename: "phd-thesis-proposal"
+book_filename: "Mascitti-phd-thesis-proposal"
 
 rmd_files: ["index.Rmd",
 "01-Purpose-and-objectives.Rmd",

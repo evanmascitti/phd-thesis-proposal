@@ -24,7 +24,7 @@ suppressPackageStartupMessages({
 This section details my planned research. 
 
 I have organized this section into the 5 papers I plan to publish and ultimately compile as my dissertation.
-Two are nearly complete. 
+Papers 1 and 4 are nearly complete. 
 Each sub-section describes the paper's focus, my hypotheses, and how I plan to collect and analyze the data.
 
 I spent the bulk of the past 12 months developing and validating the method described in Section \@ref(cleatmark-method-development-chapter).
@@ -45,18 +45,18 @@ Paper title:
 ### Overview 
 
 This paper outlines a new test method to measure the cleat-in/cleat-out effect described in Section \@ref(corkboard-effect-section).
-The goal of the test is to identify a single water content at which a soil transitions abruptly from cleat-in cleat-out behavior to a clod-forming failure mode.
+The goal of the test is to identify a single water content at which a soil transitions abruptly from cleat-in/cleat-out behavior to a clod-forming failure mode.
 
 The level of detail given in this section could be viewed as excessive, but I feel it is the appropriate place to document my efforts in creating the method. 
 It has many steps and each has been validated independently.
 
 Developing a method from scratch is hardly a linear process.
-I have done my best to move in a logical order and in this spirit, I have left many of the ancillary calculations in the Appendix.
-My intent is to avoid disrupting the document's flow while ensuring everything is available should the reader wish to scrutinize the details.
+I have done my best to move in a logical order and in this spirit, I have left many of the ancillary calculations in the [Appendix](#appendix).
+My intent is to avoid cluttering the document's flow while ensuring everything is available should the reader wish to scrutinize the details.
 
 ### Principal research questions
 
-1. Can a laboratory method replicate the interaction between an athlete's footwear and a small soil specimen?
+1. Can a laboratory method identify a single water content corresponding to the cleat-in/cleat-out behavioral threshold?
 2. What measurements best enumerate the cleat-in/cleat-out effect?
 3. How accurate and repeatable is the method?
 
@@ -193,7 +193,7 @@ Recall that all of these values for $\rho$ are somewhat higher than those used i
 (ref:proctor-vs-observed-infield-density-caption) For a popular commercial infield mix, dry density values observed on a professionally managed infield surface lie between those achieved with the Standard and Modified Proctor tests.
 
 
-```{r proctor-vs-observed-infield-density, fig.cap='(ref:proctor-vs-observed-infield-density-caption)', fig.scap='Proctor tests compared with $\rho_{bulk}$ of an actual infield'}
+```{r proctor-vs-observed-infield-density, fig.cap='(ref:proctor-vs-observed-infield-density-caption)', fig.scap='Proctor tests compared with $\\rho_{bulk}$ of an actual infield'}
 knitr::include_graphics('../../cleatmarkmethod/figs/pdf/proctor-vs-observed-infield-density.pdf')
 ```
 
@@ -219,7 +219,7 @@ These were compared with the corresponding values of $\rho_{max}$ derived from t
 ```{r compute-pooled-sd-for-3-cleatmark-replication-densities}
 patton_mocha_metadata <- readr::read_csv('../../cleatmarkmethod/ecmdata/metadata/mixture-descriptions-and-metadata.csv', col_types = 'cccfc')
 
-tin_tares <- do.call(rbind, asi468::tin_tares)
+tin_tares <- asi468::tin_tares
 
 Gs <- 2.7
 
@@ -320,7 +320,7 @@ knitr::include_graphics('../../cleatmarkmethod/figs/pdf/proctor-vs-qc-density-co
 The next step in developing the specimen preparation routine was to determine whether the Standard or Modified routines would ultimately yield differences in the $\theta_{crit}$ value corresponding with the cleat-in/cleat-out behavioral threshold. 
 
 Full trial runs of the cleat mark test were completed using each compaction routine. 
-The full procedure for the will be detailed in Section \@ref(performing-cleat-mark-test).
+The full procedure will be detailed in Section \@ref(performing-cleat-mark-test).
 A single critical water content $\theta_{crit}$ was derived for each soil-by-effort combination using the Normalized RFI as the surface metric of interest. 
 These values are presented in Table \@ref(tab:derived-water-contents-from-cleat-mark-test-effort-comparison-tab).
 These data suggest the compaction effort does not markedly influence the ultimate value determined for $\theta_{crit}$. The tests were not replicated so they cannot be statistically compared.
@@ -435,7 +435,7 @@ The reserved soil clods are carefully replaced at their original locations.
 
 ##### 3D scan {#cleat-mark-specimen-3D-scanning}
 
-Six markers are placed on the rim of the aluminum sample holder (Figure \@ref(fig:scanner-markers)). 
+Six markers are placed on the rim of the aluminum sample holder. <!-- (Figure \@ref(fig:scanner-markers)).  -->
 The markers allow the scanner to register each pointcloud and merge them into a single mesh.
 A series of scans is made using a step size of 20&deg; for a total of 18 captures per specimen. 
 <!-- Surface texture is not recorded as this nearly triples the scan time and does not contribute useful information during later analyses. -->
@@ -454,7 +454,7 @@ Dry specimens tend to reject this device, so in these cases peak resistance cann
 Visual observations on the nature of deformation are noted. 
 Finally, a digital photograph of the sample is taken after the test.
 
-#### Specimen repair
+##### Specimen repair
 
 Several data points are needed to define $\theta_{crit}$.
 The samples are wetted and allowed to cure overnight. 
@@ -539,7 +539,11 @@ knitr::include_graphics('./images/heat-lamps.JPG')
 
 
 
-```{r lamp-height-calibration, fig.cap='Surface temperature for the 30 cm lamp height closely matches conditions observed on a sunny day in Pennsylvania (outdoor photo credit: Andrew Burnette)', fig.scap='Temperature beneath drydown apparatus c.f. outdoor conditions', eval=TRUE}
+```{r lamp-height-calibration, fig.cap='Surface temperature for the 30 cm lamp height closely matches conditions observed on a sunny day in Pennsylvania (outdoor photo credit: Andrew Burnette)', fig.scap='Temperature beneath drydown apparatus c.f. outdoor conditions'}
+
+magick::image_read('../../cleatmarkmethod/figs/manually-built/drydown-surface-temp-comparison.png') %>% 
+  magick::image_trim() %>% 
+  magick::image_write('../../cleatmarkmethod/figs/manually-built/drydown-surface-temp-comparison.png')
 
 knitr::include_graphics('../../cleatmarkmethod/figs/manually-built/drydown-surface-temp-comparison.png')
 
@@ -804,8 +808,8 @@ sd_df <-  sand_backfill_vs_scanner_vol_data %>%
 5 replicate soil plugs were analyzed on each of the 12 prepared cleat-mark specimens.
 Mean values and standard deviations were computed for each method; these data are plotted in Figure \@ref(fig:sand-backfill-vs-3D-scanner-for-volumetric-w-determination-fig) and the values are compiled in the Appendix (Table \@ref(tab:sand-backfill-vs-3D-scanner-for-volumetric-w-determination-table)).
 
-(ref:sand-backfill-vs-3D-scanner-for-volumetric-w-determination-fig-caption) The 3D scanning method for computing the extracted plug's volume 
-```{r sand-backfill-vs-3D-scanner-for-volumetric-w-determination-fig, fig.cap='(ref:sand-backfill-vs-3D-scanner-for-volumetric-w-determination-fig-caption)', eval=TRUE}
+(ref:sand-backfill-vs-3D-scanner-for-volumetric-w-determination-fig-caption) The 3D scanning method for computing the extracted plug's volume was more repeatable than the sand-backfill method. the 3D scanning method also yielded higher mean $\rho_{bulk}$ for 11 of the 12 cylinders.
+```{r sand-backfill-vs-3D-scanner-for-volumetric-w-determination-fig, fig.cap='(ref:sand-backfill-vs-3D-scanner-for-volumetric-w-determination-fig-caption)', fig.scap='$\\rho$ obtained from 3D scanning and sand replacement'}
 knitr::include_graphics('../../cleatmarkmethod/figs/pdf/mini-plug-density-comp.pdf')
 ```
 Figure \@ref(fig:sand-backfill-vs-3D-scanner-for-volumetric-w-determination-fig) shows improved precision with the scanner method.
@@ -1013,16 +1017,16 @@ The goal of the cleat-mark test is to identify a single water content where the 
 <!-- In reality the brittle-ductile transition occurs somewhat more gradually. -->
 
 Each surface metric was plotted against volumetric water content.
-For this discussion NFRI is referenced as the metric of choice, but the general shape of the relationship is similar for other metrics.
-Figure \@ref(fig:example-nfri-vs-water-content-curve) shows an example curve. 
+For this discussion NRFI is referenced as the metric of choice, but the general shape of the relationship is similar for other metrics.
+Figure \@ref(fig:example-nrfi-vs-water-content-curve) shows an example curve. 
 A third-order polynomial regression was fitted to a plot of NFRI against $\theta$.
-The critical water content $\theta_{crit}$ was identified as the first local minimum as the soil moves from wet to dry (right to left on Figure \@ref(fig:example-nfri-vs-water-content-curve)).
+The critical water content $\theta_{crit}$ was identified as the first local minimum as the soil moves from wet to dry (right to left on Figure \@ref(fig:example-nrfi-vs-water-content-curve)).
 
-(ref:example-nfri-vs-water-content-curve) An example of the characteristic water contents used to derive $\theta_{crit}$. Water contents above point A generally yield little additional disturbance. Water content B represents the state in which the soil is most 'vulnerable' to fragmentation. As water content reduces further toward point C, the soil hardens and the cleats are less able to penetrate the surface. 
+(ref:example-nrfi-vs-water-content-curve) An example of the characteristic water contents used to derive $\theta_{crit}$. Water contents above point A generally yield little additional disturbance. Water content B represents the state in which the soil is most 'vulnerable' to fragmentation. As water content reduces further toward point C, the soil hardens and the cleats are less able to penetrate the surface. 
 
 The choice of this point as $\theta_{crit}$ warrants a brief discussion behind the physical meaning of the curve's shape.
 
-```{r example-nfri-vs-water-content-curve, fig.cap='(ref:example-nfri-vs-water-content-curve)', fig.scap='Conceptual stages of infield soil behavior with reducing $\\theta$'}
+```{r example-nrfi-vs-water-content-curve, fig.cap='(ref:example-nrfi-vs-water-content-curve)', fig.scap='Conceptual stages of infield soil behavior with reducing $\\theta$'}
 
 knitr::include_graphics('./figs/pdf/example-w-crit-curve.pdf')
 
@@ -1041,12 +1045,12 @@ This is an ideal state from the perspective of the grounds manager.
 When the soil reaches $\theta_{crit}$ it begins to fragment into discrete pieces as the cleats penetrate the surface. 
 
 As the soil continues to dry, brittleness is maximized and the soil forms larger chips and clods. 
-These may fragment further which produces additonal surface area. 
+These may fragment further which produces additional surface area. 
 
-A possible complication not depicted in Figure \@ref(fig:example-nfri-vs-water-content-curve) is that with further decreases in water content the soil becomes so hard that NFRI falls below its value at $\theta_{crit}$.
+A possible complication not depicted in Figure \@ref(fig:example-nrfi-vs-water-content-curve) is that with further decreases in water content the soil becomes so hard that NFRI falls below its value at $\theta_{crit}$.
 Although NFRI is nominally lower in this state, the soil is in an undesirable condition because of its high strength.
 Ball response will be erratic and players can incur injuries due to extreme surface hardness.
-For this reason, any points drier than the local maximum marked as point (B) in Figure \@ref(fig:example-nfri-vs-water-content-curve) are discarded prior to optimizing the curve to derive $\theta_{crit}$.
+For this reason, any points drier than the local maximum marked as point (B) in Figure \@ref(fig:example-nrfi-vs-water-content-curve) are discarded prior to optimizing the curve to derive $\theta_{crit}$.
 
 
 #### Summary: cleat-mark method 
@@ -1064,6 +1068,7 @@ For this reason, any points drier than the local maximum marked as point (B) in 
 
 The device was designed and fabricated in spring 2020. Calibration and tuning of the 3D scanner began July of 2020. The method described above has been tested on multiple soils. The final step will be to perform an error analysis across replicate soil specimens. 
 
+\newpage 
 
 ## Paper 2: Applying the cleat-in, cleat-out method
 
@@ -1079,10 +1084,9 @@ This paper is the first chance to apply the method described in Section \@ref(cl
 
 1. How does clay type interact with sand content to determine the critical water content corresponding to the cleat-in/cleat-out behavioral threshold?
 
-<!-- 1. Do Atterberg limit tests correlate with the critical water contents? -->
-
 1. For a given clay soil, what is the critical sand content above which the cleat-in/cleat-out surface cannot be achieved?
 
+<!-- 1. Do Atterberg limit tests correlate with the critical water contents? -->
 ### Hypotheses
 
 
@@ -1109,7 +1113,7 @@ These soils will be further mixed with sand to produce mixtures of either 60 or 
 The target SCR values will be 0.25, 0.5, 1, 2, and 4, but some of the clays already contain too much silt to be tested at the lower SCR values. 
 These soils would simply be tested at any ratios they are capable of meeting (Table \@ref(tab:planned-scr-values)).
 
-```{r planned-scr-values, eval=TRUE}
+```{r planned-scr-values}
 
 scr_possible_vals <- tibble::tibble(
   `Clay name` = c('Calcium montmorillonite', 'Mixed-layer/illite-dominated', 'Fine-grained kaolinite', 'Sesquioxide-rich', 'High-silt soil'),
@@ -1148,6 +1152,9 @@ This design allows a comparison of both size and uniformity to be made for a bot
 
 These experiments will be conducted throughout Summer and Fall 2021 (see Figure \@ref(fig:gantt-chart)).
 
+
+\newpage 
+
 ## Paper 3: Toughness of sand-clay mixtures
 
 Paper title: 
@@ -1156,25 +1163,25 @@ Paper title:
 
 ### Overview 
 
-Infield soils have two critical water contents that define the range of acceptable consistency. The lower boundary is defined by the cleat-in,cleat-out effect. Chapters 1 and 2 address the lower boundary. 
+Infield soils have two critical water contents that define the range of acceptable consistency. The lower boundary is defined by the cleat-in/cleat-out behavioral threshold. Chapters 1 and 2 address the lower boundary. 
 
 The upper boundary of water content is governed by toughness and shear strength. 
-Although much emphasis has been given to the cleat-in/cleat-out effect, this upper boundary of water content has weightier implications because above this water content the game simply cannot be played. 
+Although much emphasis has been given to the cleat-in/cleat-out threshold, this upper boundary of water content has more serious implications. Above this water content the game simply cannot be played. 
 Section \@ref(importance-of-the-infield) described the financial and scheduling implications of postponements. 
 
 This paper is the compliment to Section \@ref(cleatmark-method-development-chapter). 
-Its goal is to create a new way to use already-established tests for measuring the toughness of soil mixtures. 
+Its goal is to create a new way to use existing tests for measuring the toughness of soil mixtures. 
 Together, these data can establish both ends of the water content spectrum for a given soil. 
 
 The method development for this paper will not be nearly as intensive as that of Paper 1. 
-For the most part, the techniques already exist and I am simply using them in a new way. 
+For the most part, the techniques already exist and I am simply planning them in a new way. 
 
 
 ### Principal research questions
 
 1. Can soil toughness be measured using unconfined compression tests?
 
-2. How does toughness change as a function of water content for different types of clay soils?
+2. How does toughness vary with water content for different types of clay soils?
 
 3. How does the toughness-water content relationship change as sand is added to the clays?
 
@@ -1194,7 +1201,7 @@ In a hypothetical sense any test which applies a known load and measures a defor
 
 This study will attempt to use an established machine test, the unconfined compression test (UCS).
 This test is often utilized for compacted clay specimens, but in most cases the only parameter of interest is peak strength at failure.
-However the test also allows stress-strain measurements to be recoreded throughout the test, and it is trivial to compute toughness from these data. 
+However the test also allows stress-strain measurements to be recorded throughout the test, and it is trivial to compute toughness from these data. 
 
 The same mixtures tested in Section \@ref(cleatmark-method-development-chapter) will be used for this study. 
 
@@ -1210,23 +1217,23 @@ Each specimen will be dried to progressively lower water contents and sealed in 
 The goal is to evaluate at least 3 water contents where ductile behavior is observed and at least 2 samples where brittle behavior is observed.
 This will allow the maximum toughness value to be bracketed by the tests and a curve to be fit on a plot of toughness vs. water content.
 
-```{r proctor-extruder, fig.cap='Bottle jack specimen extruder for preparing compression test specimens.', out.width='80%'}
+```{r proctor-extruder, fig.cap='Bottle jack specimen extruder for preparing compression test specimens.', fig.scap='Bottle jack specimen extruder',out.width='50%'}
 knitr::include_graphics('images/gilson_stock_proctor_extruder_photo.jpg')
 ```
 
 
 The specimens will be subjected to unconfined compression tests at the Penn State Civil Infrastructure Testing and Evaluation Laboratory. 
-Axial strain and nominal stress will be recorded up to 20% strain or an abrupt failure criterion [@ASTMD2166M-13]. 
-The water content of the specimen will then be determined.  
+Axial strain and nominal stress will be recorded up to 20% strain or abrupt failure [@ASTMD2166M-13]. 
+$w$ will be determined via drying and weighing; $\theta$ will be determined from $w$ and the specimen's mass and dimensions. 
 
-A smooth curve will be fitted to the stress-strain curve using general additive models in the R language for statistical computing [@R-core2021]. 
+A stress-strain curve will be fitted using the R language for statistical computing [@R-core2021]. 
 Toughness will be computed as the definite integral up to failure. An arbitrary failure criterion (i.e. maximum acceptable strain) will be chosen for the ductile specimens; this depends on the degree of acceptable deformation by the groundskeeper and has not yet been calculated. 
 
 Toughness will be plotted against water content. 
 It is anticipated that this relationsip will follow a bi-linear or semi-logarithmic shape, as for the Barnes apparatus [@Barnes2013]. 
 Figure \@ref(fig:barnes-toughness-vs-water-content-example-plot) shows such a plot. 
 
-```{r barnes-toughness-vs-water-content-example-plot, fig.cap='Toughness $T$ of London clay as a function of water content (from Barnes, 2013)', fig.scap='Example toughness vs. $w$ plot from Barnes (2013)'}
+```{r barnes-toughness-vs-water-content-example-plot, fig.cap='Toughness $T$ of London clay as a function of water content (from Barnes, 2013)', fig.scap='Example toughness vs. $w$ plot from Barnes (2013).'}
 knitr::include_graphics('./images/barnes-example-toughness-vs-w-plot.png')
 ```
 
@@ -1239,11 +1246,26 @@ This two-way linear model will permit the toughness slope to be computed for any
 These tests will be completed beginning in Fall 2021 and continue through Summer of 2022 (see Figure \@ref(fig:gantt-chart)). 
 
 
+\newpage 
+
 ## Paper 4: Oversize partcles in Atterberg limit tests {#oversize-particles-atterberg-limits-experiment}
 
 Paper title: 
 
 :  **Effect of oversize particles on Atterberg limits of artificial sand-clay mixtures **
+
+### Overview 
+
+A canonical step in Atterberg limit testing is the removal of particles > 425 &mu;m. 
+This sieve diameter corresponds to the boundary between medium and fine sand in the USCS classification scheme [@ASTMD2487-17].
+Washing of the sample significantly increases the time needed to perform these tests.
+The removal of "oversize" particles also complicates the results' interpretation, because two infield mixes having the same total % sand could have different amounts of sand removed based on their gradations. 
+In such a case it is difficult to know whether the test results differ because of true differences between the nature of their fine fractions, or simply to containing different amounts of sand.  
+
+Infield soils often contain significant amounts of sand between 425 and 2000 &mu;m.
+When testing infield mixes, it would be preferable to leave the "oversize" particles in the mixture, provided their role is understood. 
+However, there is virtually no research on the effect of leaving these particles in the soil before Atterberg limit testing. 
+
 
 ### Principal research questions
 
@@ -1263,7 +1285,7 @@ Paper title:
 
 1. The combined effect of (2) and (3) will yield a smaller plasticity index for coarser sand. 
 
-1.The results of the experiment can be used to apply a correction for the presence of oversize particles without their removal prior to testing. 
+1. The results of the experiment can be used to apply a correction for the presence of oversize particles without their removal prior to testing. 
 
 ### Materials and Methods 
 
@@ -1287,12 +1309,19 @@ I finished collecting the data over the past winter.
 I have begun analyzing the data and writing the manuscript.
 I plan to submit to the Soil Science Society Journal in fall of 2021. 
 
+
+\newpage 
+
 ## Paper 5: Synthesis of concepts
 
 Paper title: 
 
 :  **A rational basis for the design of soil mixtures used on baseball and softball infields**
 
+### Overview 
+
+This paper will compare the data about water content ranges obtained from papers 2-4. 
+It will also compare the utility of particle size, plasticity and toughness tests for infield mixes. 
 
 ### Principal research questions 
 
@@ -1308,20 +1337,22 @@ Paper title:
 
 2. The level of play and maintenance budget will dictate the desired toughness level. 
 
-3. The upper bound of the amount of clay soil component that should be included in the mix is a function of the dry shear strength of the mix because it is this property that governs the workability of the mix (i.e. the ability to groom it with implements and hand tools).
+3. The upper bound of the amount of clay soil component that can be included in the mix is a function of the dry shear strength of the mix. It is this property that governs the workability of the mix (i.e. the ability to groom it with implements and hand tools).
 
 4. If a given toughness level is desired, the % sand needed to achieve this can be computed from empirical equations.
 
-5. Ideally, toughness should be directly measured when designing a new mix; however it can also be estimated from an empirical correlation with the Atterberg limits
+5. Ideally, toughness should be directly measured when designing a new mix; however it can also be estimated from an empirical correlation with the Atterberg limits.
 
-6. Particle size analysis is acceptable for quality control purposes, but not for design. Only once a desired blend of a particular sand with a particular clay is established through toughness testing can a definite ratio of sand-size particles to fines be defined for that mix. 
+6. Particle size analysis is acceptable for quality control purposes, but not for design. Only once a desired blend of a particular sand with a particular clay is established through toughness testing can a definite sand:clay ratio be defined for that mix. 
 
-7. Amending existing soils should be done on the basis of plastictity rather than silt-to-clay ratio. The resulting mixture's properties will not be a linear interpolation between the two; thus a calibration of Atterberg limit results may be required by making several mixtures (for example 0, 20, 40, 60, 80, and 100% of soil A with the implied amount of soil B) to determine the proper amendment ratio.
+7. Amending existing soils should be done on the basis of plastictity rather than silt-to-clay ratio. The resulting mixture's properties may not be a linear interpolation between the two; thus a calibration of Atterberg limit results might be required by making several mixtures (for example 0, 20, 40, 60, 80, and 100% of soil A with the implied amount of soil B) to determine the proper amendment ratio.
 
 
 ### Materials and Methods 
 
-This paper is primarily a synthesis of the methods papers described above. It will combine the methods into a single framework for designing infield mixes. Simple metrics will be defined, and the framework will be tested by using materials which were _not_ tested in the other experiments to validate the theory's merit. 
+This paper is primarily a synthesis of the methods papers described above. 
+It will combine the methods into a single framework for designing infield mixes. 
+Simple metrics will be defined, and the framework will be tested by using materials which were _not_ tested in the other experiments to validate the theory's merit. 
 
 ### Timeline 
 

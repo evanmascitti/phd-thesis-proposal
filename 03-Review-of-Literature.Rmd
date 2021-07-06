@@ -215,7 +215,7 @@ $\theta$ has a more intuitive physical meaning for unsaturated, dimensionally-st
 It is the volume rather than mass of water which governs the contacts among particles. 
 $\theta$ is more useful for irrigation and water flux calculations.
 
-As a broad generalization, $w$ is favored by engineers and $\theta$ is favored by agronomists and soil physicists.
+As a broad generalization, $w$ is favored by geotechnical engineers and $\theta$ is favored by agronomists and soil physicists.
 
 ```{r example-phase-diagram, out.width='40%', fig.cap='Example phase diagram of a sand-clay mixture showing solid, liquid, and gaseous phases.', fig.scap='Example phase diagram for an unsaturated sand-clay mix.', fig.pos='htbp'}
 
@@ -231,7 +231,7 @@ ___
 
 ### Particle size analysis
 
-Soils consist of solid particles of different of sizes. 
+Soils consist of solid particles having different sizes. 
 Particle size analysis (PSA) refers to the large suite of techniques use to measure these particles' dimensions. 
 PSA is inexpensive and relatively fast compared to other analyses.
 It has been used as a surrogate marker for some other soil property in nearly every sub-discipline of soil science. 
@@ -246,7 +246,7 @@ There are two potential problems with using PSA as a specification for infield s
 
 When I began this project, I conducted an an extensive review of PSA literature.
 I chose not to include it in this proposal because PSA is not the focus of my dissertation. 
-This document is already very long and I felt that a long discussion of PSA methods would divert the reader's focus away from more central themes of the project. 
+This document is already very long and I felt that an extensive discussion of PSA methods would divert the reader's focus away from more central themes of the project. 
 
 This section briefly outlines some possible pitfalls of using PSA for characterizing infield soils. 
 Rather than recount the minutiae of particular studies, I focus on the positions held by governing bodies and the views of historically significant soil scientists.  
@@ -264,7 +264,7 @@ Even when protocols are clearly reported, we are confronted with a difficult dil
 These components surely contribute to the soil's properties in its "natural" state. 
 
 Some dispersion methods are even thought to fracture individual particles into smaller grains [@Gee2002].
-Clearly this would further confuse a result's significance. 
+Clearly this would further confuse a result's interpretation. 
 
 <!-- While correct, this sentence is weak and I like the tone that the prior praph ends with, so I'm commenting it out. There is also evidence that some dispersion techniques break individual mineral particles into smaller fragments, further confounding the analysis. -->
 
@@ -310,7 +310,7 @@ This forms the basis for the USDA textural triangle.
 Unfortunately, PSA is difficult to measure consistently across labs. It seems unlikely that a single, universal method will ever be adopted.
 In addition, PSA does not always predict how a soil will respond to changes in water content. 
 This is the most important trait of an infield soil.
-Therefore, there are serious doubts about the validity of PSA as an all-telling means of infield soil analysis.
+Therefore, there are serious doubts about the validity of PSA as a singular means of infield soil analysis.
 Developing an infield soils framework better grounded in actual soil behavior is the primary motivator of this dissertation.
 
 ___
@@ -351,7 +351,7 @@ He pointed out that the tests' value lies in quantifying an otherwise subjective
 
 A variety of other methods have been employed to measure the plasticity of clays.
 These include torque rheometers, extruders, and compression devices [@Andrade2011].
-The remainder of this section focuses on the Atterberg tests and their derivatives because the other methods are scarcely used in soil science. 
+The remainder of this section focuses on the Atterberg tests and their derivatives because the other methods are scarcely used in soil science and bear little relevance to the present research.
 
 #### Modern protocols for Atterberg limits 
 
@@ -415,7 +415,7 @@ The stability of the soil thread is related to the maximum particle diameter and
 Atterberg limit tests can be performed rapidly and require only simple equipment and few consumables. 
 They also correlate reasonably well with other soil properties such as shear strength, compressibility, and permeability. 
 Unfortunately there are multiple sources of error associated with the tests and these are often raised as critiques of their utility.
-Sections \@ref(atterberg-limits-reproducibility-and-repeatability)-\@ref(plastic-limit-test-improvement-attempts) outline research on the tests' error sources and attempts to improve them. 
+Sections \@ref(atterberg-limits-reproducibility-and-repeatability) - \@ref(plastic-limit-test-improvement-attempts) outline research on the tests' error sources and attempts to improve them. 
 
 ##### Repeatability and reproducibility {#atterberg-limits-reproducibility-and-repeatability}
 
@@ -556,12 +556,16 @@ The water content determination may comprise a substantial source of error durin
 Clean workmanship is essential to avoid flakes of dry soil contaminating the fresh specimen [@Barnes2013]. 
 The laboratory balance in use must be of sufficient sensitivity and frequently calibrated. 
 
-
-```{r LL-w-determination-variability, fig.cap='The determination of $w$ is an often-overlooked source of error in Atterberg limit testing.', fig.scap='Variability in $w$ determination during LL test'}
+```{r generate-LL-variability-stuff, include=FALSE}
 # this generates the value to reference below. 
 # It can also re-generate the relevant figure, but for now I commented that code 
 # out to save time. 
 source('./supplemental_R_scripts/proposal-fig-generation/LL-water-content-measurement-standard-deviation-calibration_2021-01-25-fig.R', echo = FALSE)
+```
+
+
+```{r LL-w-determination-variability, fig.cap='The determination of $w$ is an often-overlooked source of error in Atterberg limit testing.', fig.scap='Variability in $w$ determination during LL test'}
+
 knitr::include_graphics('figs/pdf/LL-w-uncertainty-for-a-single-point.pdf')
 ```
 
@@ -793,7 +797,7 @@ ___
 <!-- these first two sections need to be pared down and combined (the ones introducing the section and the one the rationale for producing engineered soils -->
 
 Natural materials do not always meet the requirements for a particular use. 
-Natural soil solids are commonly excavated and blended to benefit their physical or chemical properties [@Brady2007].^[Potters and brick masons in antiquity were likely first to mix soils together.
+Natural soil solids are commonly excavated and blended to beneficiate their physical or chemical properties [@Brady2007].^[Potters and brick masons in antiquity were likely first to mix soils together.
 Un-fired bricks containing clay mixed with organic residues have been dated to over 9,000 years before the present [@Staubach2005].]
 These soils have been termed engineered soils [@Thompson2008a].
 
@@ -835,7 +839,8 @@ Loads applied to a coarse-grained soil are transmitted through a skeleton of gra
 The soil's behavior is relatively independent of water content.
 A minor addition of fine particles will not affect the soil’s behavior so long as the fines fit comfortably within the large voids.
 
-As more fines are added, they begin to participate in the force chain. Eventually the coarse grains lose contact and become completely suspended in a matrix of fines and small inter-fine voids.
+As more fines are added, they begin to participate in the force chain. 
+Eventually the coarse grains lose contact and become completely suspended in a matrix comprising fines and inter-fine voids.
 This stage has been termed the transitional fines content (TFC).
 When $m_{fines} > TFC$, the fines and their water content will dominate the soil's behavior. The coarse grains serve only as inert inclusions.
 Figure \@ref(fig:tfc-stages) depicts the various stages which bracket the TFC.
@@ -904,7 +909,7 @@ tfc_def_kable
 
 The maximum possible density of a coarse-fine mixture occurs when compacted fines just fill the large voids without displacing any of the larger grains (Figure \@ref(fig:tfc-stages), middle panel).
 This state represents a simple approximation of the TFC.
-Both components are assumed to exist at their maximum densities and the fines are considered "infinitely small" so that no lodging occrs.
+Both components are assumed to exist at their maximum densities and the fines are considered "infinitely small" so that no lodging occurs.
 @Lade1998 gave a convenient solution for the global packing fraction $V_s$:
   
 \begin{equation}
@@ -1056,7 +1061,7 @@ Oedometer experiments on artificial soil mixtures probably have less practical s
 
 The influence of clay mineralogy on plasticity is well-known [@Holtz2010].
 In general the plasticity of the major clay minerals is Na-montmorillonite > Ca-montmorillonite > illite > kaolinite. 
-However, the nature of coarse particles added to a clay will also affect the mixture's properties.
+The nature of coarse particles added to a clay will also affect the mixture's properties.
 This section covers research on how various types and quantities of coarse additions affects the behavior of a coarse-fine mixture.
 
 #### Total sand content
@@ -1110,7 +1115,8 @@ Both the liquid and plastic limits were affected by the size of the added sand p
 Mixes containing coarser sand (425 μm – 150 μm) adhered more closely to the linear law of mixtures than finer sand having only particles 150 μm – 75 μm.
 Mixes containing added silt deviated even further from the linear law.
 
-@Barnes2013 tested mixes of London clay with sand (two different size fractions) or silt, in 10% increments of coarse particles from 0 to 100% clay. Finer particles decreased a mixture's toughness at its plastic limit. @Barnes2013 argued that increased the clay's toughness was higher at a given 'matrix water content' (water per unit <2&mu;m fraction). This is a somewhat abstract idea because some amount of water always associates with the other particles.
+@Barnes2013 tested mixes of London clay with sand (two different size fractions) or silt, in 10% increments of coarse particles from 0 to 100% clay. Finer particles decreased a mixture's toughness at its plastic limit. @Barnes2013 argued that the clay's toughness was higher at a given "matrix water content" (water per unit <2&mu;m fraction). 
+THe matrix water content is a purely theoretical concept because some amount of water always associates with the other particles.
 
 @Rehman2020 tested natural soils (not artificial mixtures) sieved to either 2 mm or 425 &mu;m.
 There was little difference in the PL and LL for soils with LL < 35.
@@ -1215,7 +1221,7 @@ This literature review summarized research pertaining to 3 main areas:
 
 1. Surface properties of baseball infields
 1. Laboratory testing for soil behavior and physical properties
-1. Design and function of artificial soil mixtures.
+1. Design and behavior of artificial soil mixtures.
 
 
 The review identified several areas where existing research is lacking. These include the following:

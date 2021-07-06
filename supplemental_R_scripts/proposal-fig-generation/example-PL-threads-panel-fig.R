@@ -1,8 +1,8 @@
 library(magick)
 library(magrittr)
 
-panels <- list.files(path = 'images/', pattern = 'example-pl-thread',
-                     full.names = T)%>% 
+panels <- c("images/example-pl-thread-above-pl.png",
+            "images/example-pl-thread-at-pl.jpg")  %>% 
   image_read() 
 
 panels %>%

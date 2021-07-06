@@ -8,31 +8,31 @@ library(magrittr)
 
 
 
-This section is a brief, non-technical manifesto about what I am learning in graduate school besides soil science.
+This section is an informal review of what I am learning in graduate school besides soil science.
 The majority of this proposal has focused on the specifics of my research project.
-Needless to say, this is the most important part of getting my PhD. 
+Obviously, the soil science is the most important part of getting my PhD. 
 
-I feel that as a group, scientists do not give enough attention to the _actual mechanics of how work is achieved_.
+With that said, I feel that as a group we scientists do not pay enough attention to the _actual mechanics of how work is achieved_.
 Practical "workflow skills" are rarely taught at the undergraduate or graduate level.
-I guess it is assumed that one's workflow is simply an individual preference, or that everybody just _knows_ how to organize large projects. 
-I think these are both mistakes. 
+I guess it's either assumed that one's workflow is not an important choice, or that it would be a poor use of instructional time. 
+I disagree with both these views.  
 
-This section outlines the practices I have adopted in my day-to-day work.
+This section describes the practices I have adopted in my day-to-day research activities.
 They are relevant to this proposal because these habits help ensure the results of my work are correct and reproducible.
-I want my discoveries to be useful both to others and to my future self. 
-This requires some best practices as the data are collected, stored, and analyzed. 
+I want my results to be useful both to others and to my future self. This requires some best practices as the data are collected, stored, and analyzed. 
 
 
 My routines are rather different from a typical Microsoft Office-based workflow, and they might seem extreme or unnecessary to Office loyalists.
 However, I feel strongly about this topic and am proud of how I've leveraged computational tools to improve the quality and efficiency of what I do.
 
 Some "computer-y" people are very condescending toward non-programmers, and that certainly does not reflect my view. 
-Plenty of outstanding science has been achieved using basic programs such as the MS Office suite.
+As far as I know, none of my mentors use the tools described below, and I still greatly admire their work. 
+Plenty of outstanding science has been achieved using very basic software.
 Indeed, most of humankind's greatest discoveries were made before we had computers at all. 
 
-So, although this section could be seen as preachy, it is not intended in such a way. 
-I mostly wish to share my gratitude for those who've built tools for reproducible research and to demonstrate how they have helped me.
-I hope to teach some of these habits to my own future students. 
+So although this section could be seen as preachy, it is not intended in such a way. 
+I only wish to demonstrate how these tools have helped me.
+I am grateful for the people who have built them and I hope to teach some of these habits to my own future students. 
 
 
 <!-- I want to be clear I am _not_ asserting that this is the only "right" way to do things.... -->
@@ -50,7 +50,7 @@ To ensure the data is kept in its original state, I never perform any direct ope
 If I discover an error, I make a new copy and correct it with an R script so there is a record of what was done. 
 I store my data on a local hard drive which is automatically backed up with PSU's subscription to Microsoft OneDrive for Business. 
 I use a number of other principles for organizing my tabular data.
-I learned most of these from an entertaining and useful paper, which I highly recommend:  [Data Organization in Spreadsheets](https://doi.org/10.1080/00031305.2017.1375989) [@Broman2018].
+I learned most of these from an entertaining and thoughtful paper, which I highly recommend:  [Data Organization in Spreadsheets](https://doi.org/10.1080/00031305.2017.1375989) [@Broman2018].
 Hadley Wickham's "tidy" data concept [@Wickham2014] also factors heavily in my data collection and storage routines. 
 
 #### File naming conventions 
@@ -87,10 +87,10 @@ Note the leading zeroes before single digits - since we have 12 cylinders, this 
 cyl1
 cyl10
 cyl11
-cyl1
-cyl
-cyl
-cyl
+cyl12
+cyl2
+cyl3
+cyl4
 ...
 ````
 
@@ -109,18 +109,18 @@ The other tools described below help to track the status and provenance of a pro
 #### Data wrangling and analysis {#data-wrangling-and-analysis}
 
 I perform most data analyses using R, with occasional use of Python.
-I mostly use a group of packages known as the **tidyverse** (<https://www.tidyverse.org/>) [@R-tidyverse].
+I learned R by using a group of packages known as the **tidyverse** (<https://www.tidyverse.org/>) [@R-tidyverse].
 The **tidyverse** makes many common and frustrating data wrangling routines much, much easier.
-This frees up time and cognitive load for higher-order tasks. 
 Tidyverse code is easy to write and it makes for a simple transition from Excel or SAS.
+Recently I have begun using more base R functions, which are less intuitive but more concise.
 
 Many believe that R is just a free statistics program, but this is a misconception.
 R is a fully-functioning programming language, so it can do much more than statistics. 
 However, R _is_ distinct from most other programming languages in that it was designed for flexibility and interactive data analysis.
 This lends it a fluency which is less present in more general-purpose languages such as C++ or Python.
 
-R is open-source and can perform all the routine statistical procedures available in programs such as SAS or SPSS. 
-However, unlike its proprietary alternatives, R can be extended by anybody who wishes to do so.
+R can perform all the routine statistical procedures available in programs such as SAS or SPSS. 
+However, unlike its proprietary alternatives, R is open-source and can be extended by anybody who wishes to do so.
 This means that the menu of available analyses is limited only by the user's imagination and computational skill. 
 
 #### Figures and tables {#figures-and-tables}
@@ -147,12 +147,18 @@ For a quick and amusing take on the value of R Markdown , I recommend watching [
 An R Markdown file is a written as plain text with no formatting - this is rather different than programs such as Microsoft Word which display formatted text as you type it. 
 Markdown instead uses special characters such as `*`, `~` and `#` to provide semantic instructions about the document's structure and formatting. 
 One of the best features of R Markdown is that it can be used to generate many, many types of output. 
-These include pdf files, HTML documents, websites, slide shows, posters, and others. 
+These include PDF files, HTML documents, websites, slide shows, posters, and others. 
+
+R Markdown is not limited to running R code - it can also run SAS, Python, Bash, and many other languages. 
+This means it can be used to generate polished output, regardless of the author's preferred data analysis tool.
+
 
 In one step, R Markdown runs your analysis code, weaves the output into a Markdown file, and then calls a command-line tool called Pandoc (<https://pandoc.org/>) to translate the Markdown document into more complex markup languages such as \LaTeX, HTML, or XML. Finally, Pandoc converts the document to a finished output. 
 The simplicity of Pandoc's Markdown abstracts away the complex sytnax of these other languages. This means the writer can focus on the content instead of minutae like whether an angle bracket or backslash was forgotten. 
 Happily, Pandoc also supports the inclusion of raw \LaTeX{} or HTML sytnax. 
 This means all the advanced features of these languages are available when Markdown alone will not suffice.
+
+
 
 #### Package writing and testing  {#package-writing-and-testing}
 
@@ -196,7 +202,7 @@ fig-1.pdf:  fig-1.R  clean-data.csv
 ```
 
 This rule states that the otuput (`fig-1.pdf`) should be built using `fig-1.R` and `clean-data.csv` by running the R script `fig-1.R`.
-This script will read `clean-data.csv`, generate the plot, and save it as `fig-1.pdf`.^[I prefer to use descriptive names for saving figures rather than numbers. Their order may change later, and a number provides no information about the file's contents. However, a number makes more sense to demonstrate the point in this minimal example.]
+The R script will read `clean-data.csv`, generate the plot, and save it as `fig-1.pdf`.^[I prefer to use descriptive names for saving figures rather than numbers....their order may change later, and a number provides no information about the file's contents. However, a number makes more sense to demonstrate the point in this minimal example.]
 
 The user of GNU `Make` writes plain-text instructions called a `Makefile` which contain a rule for each target. 
 There are a number of syntax shortcuts to reduce typing, but all rules still follow the basic structure above.
@@ -326,12 +332,12 @@ I do not consider myself to be particularly organized, and I used to think that 
 I have probably over-compensated for these innate tendencies and gone a bit further than necessary. 
 However, I feel it's been _more_ than worth the effort and I swear by these routines because they enhance my ability to do high-quality science. 
 If I succeed in becoming a professor I would feel an urge (a duty, even) to teach a course on these topics. 
-They have helped me so much, and surely I'm not unique...many others could benefit from then too. 
+They have helped me so much, and surely I'm not unique...many others could benefit from them too. 
 
 
 Making research reproducible is hard.
-During frustrating moments while debugging \LaTeX or fighting with `Make`, I sometimes wonder if it is worth all the extra effort.
-In these moments I remember a quote often uttered by one of my baseball coaches:
+During frustrating moments while debugging \LaTeX{} or fighting with `Make`, I sometimes wonder if it is worth all the extra effort.
+In these moments I recall a quote from coaching legend John Wooden:
 
 >"If you don't have time to do it right, when will you have time to do it over?"
 

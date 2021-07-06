@@ -2,6 +2,7 @@
 title: "Evan's PhD thesis proposal"
 author: "Evan C Mascitti"
 date: "``last compiled `r ecmfuns::ecm_timestamp()` ``"
+# date: "``last compiled Thu. 2021-06-03, 08:57 PM ``"
 site: bookdown::bookdown_site
 documentclass: book
 always_allow_html: true
@@ -37,7 +38,7 @@ nocite: |
 This document outlines the research progress I have made since beginning my PhD in 2019 and describes my plans for completing the project.
 It comprises 4 main sections:
 
-Section \@ref(purpose-and-objectives) [Purpose and objectives](#purpose-objectives)
+Section \@ref(purpose-and-objectives) [Purpose and objectives](#purpose-and-objectives)
 
 :  High-level overview of project goals.
 
@@ -56,16 +57,16 @@ Section \@ref(lit-review) [Review of literature](#lit-review)
 
 Section \@ref(proposed-experiments) [Proposed experiments](#proposed-experiments)
 
-:  Detailed outline of my research plan.
+:  Details of my research plan.
 <!-- Planned course of laboratory research, organized as anticipated publication units. -->
-
 
 I have also included a description of my workflow and data management practices (Section \@ref(workflow)). 
 This section is written informally. 
-Although it is un-related to the technical/soils aspects of my project, I included it because it comprises an important practical part of completing my degree.
+Although it is un-related to the technical/soils aspects of my project, I included it because it forms an important practical part of completing my degree.
 Regardless of whether the reader finds this section enlightening, writing it has served as a useful "statement of beliefs" for me.
 
-The proposal concludes with a [glossary](#definition-of-terms), an [Appendix](#appendix) housing some additional tables and equations, and my [references](#references).
+I briefly define some terms and symbols in Section \@ref(definition-of-terms).
+The proposal concludes with a list of [references](#references) and an [Appendix](#appendix) housing additional tables and equations. 
 
 
 <!-- I turned off the default TOC and I am inserting the  -->
@@ -97,5 +98,5 @@ The proposal concludes with a [glossary](#definition-of-terms), an [Appendix](#a
 
 
 <!-- turn line numbering on now  -->
-<!-- \linenumbers  -->
+\linenumbers
 

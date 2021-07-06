@@ -93,7 +93,7 @@ This thesis will not study the infield grass, nor will it treat the mound and ho
 Therefore, I use the terms "infield" and "infield skin" interchangeably. 
 
 A full-size baseball field occupies about `r round(sum(pnc_areas$total_area_ha), 0)` ha (Figure \@ref(fig:player-locations)). Roughly `r DescTools::RoundTo(x = turf_area_pct, multiple = 5)`% of this total area is surfaced with natural turfgrass or synthetic turf. 
-An additional `r DescTools::RoundTo(x = wt_area_pct, multiple = 5)`% is occupied by the warning track, which is alerts players that they are nearing the wall by its changing feel underfoot. 
+An additional `r DescTools::RoundTo(x = wt_area_pct, multiple = 5)`% is occupied by the warning track, which alerts players that they are nearing the wall by its changing feel underfoot. 
 Only about `r DescTools::RoundTo(x = skin_area_pct, multiple = 5)`% of the total playing surface is occupied by the infield skin.
 
 
@@ -216,18 +216,20 @@ Some amount of yield must occur for a player’s cleats to penetrate the soil su
 The mode of yield depends on the water content and the packing arrangement of the soil particles. Yield may be one of two types:
 
 1. **brittle yield**: Microcracks propagate through the soil skeleton, eventually coalescing to fracture the soil mass into discrete fragments. These clods adjust their positions to accommodate the cleats and are usually ejected from the depression as the shoe releases. Crumbling or cracking of soil is controlled by the distribution of imperfections or “weakest links” in the soil matrix [@Dexter2004]. 
+ 
 or
+
 2. **ductile yield**: Soil particles are re-arranged to accommodate the cleat, but the soil mass behaves as a continuum. 
 No material is sepratated from the surface. 
 In general, ductile yield attenuates more energy than brittle fracture [@Kuipers1984]. 
 
 A second important consequence of a ductile yield mode is that if a batted baseball _does_ contact a cleat indentation, the surface will deform a second time. Changes to the ball's trajectory will be minimal. 
-This scenario is preferred to a more rigid collision in which the ball is re-directed, possibly leading to a misplay or injury (Figure \@ref(fig:corkboard-concept)B). 
+This scenario is preferred to a more rigid collision in which the ball is re-directed, possibly leading to a misplay or injury (Figure \@ref(fig:corkboard-concept) B). 
 
 Grounds managers have observed that some soils undergo the brittle-ductile transition rapidly, while other soils can withstand a longer drying period before the behavior change occurs. 
-Therefore, it seems plausible that infield soils could be designed to maximize the range of water content over which the corkboard phenomenon will persist.
+Therefore, it seems plausible that infield soils could be designed to maximize the range of water content over which the cleat-in/cleat-out phenomenon will persist.
 
-It is emphasized that no scientific investigations of the corkboard effect have been performed. 
+It is emphasized that no scientific investigations of the cleat-in/cleat-out effect have been performed. 
 It is a solely qualitative description of soil behavior, and at present no measurements exist for its study. 
 
 
@@ -247,9 +249,11 @@ Popularity of engineered infield mixes has grown markedly since 2005. Today the 
 The infield skin is a crucial component of baseball's competitive and business operations. 
 An ideal infield surface exhibits a combination of plasticity and stiffness. 
 The soil must readily deform around the cleats so that they are not rejected, but it must also provide enough resistance to prevent the athlete from losing traction. 
+
 A professional grounds crew expends significant effort to produce such a surface by diligently managing soil water content.
 The grounds manager cannot adjust the infield's water content once the game begins.
 The soil's condition changes throughout the game; it may become wetter during a rain event or drier during hot, sunny conditions. 
+
 An ideal infield soil exhibits moderate stiffness while maintaining its plasticity over a wide range of water contents.
 Such a soil increases the odds of completing a game during a rain event, and it allows the groundskeeper a larger margin for error when hand-watering.
 

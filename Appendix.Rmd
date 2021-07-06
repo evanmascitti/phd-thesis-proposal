@@ -10,7 +10,7 @@ library(tidyverse)
 library(kableExtra)
 ```
 
-```{r labor-per-area-tab}
+```{r labor-per-area-tab, include=T}
 labor_man_hrs <- readr::read_csv('data/lit-review-data/maintenance-man-hrs.csv',
                           col_types = 'cccii') %>% 
   mutate(dplyr::across(
@@ -316,12 +316,15 @@ A more detailed vignette on its usage will be added at a later date.
 ### Conversion of Proctor test energy-per-volume to cleat-mark cylinder equivalent {#cleat-mark-energy-per-vol-conversion}
 
 A direct translation of protocols between the Proctor tests and preparation of the cleat-mark cylinders was not possible. 
-The Proctor mold is 10.2 cm diameter x 11.4 cm deep while the pneumatic test device uses cylinders 15.4 cm diameter x 10.2 cm deep \@ref(fig:proctor-vs-cleat-mark-cyls-photo).
-```{r proctor-vs-cleat-mark-cyls-photo, fig.cap='The cleat-mark cylinders were designed with different dimensions than a typical Proctor mold. A conversion was required to equate the compaction energy between them.', fig.scap='Proctor mold and cleat-mark cylinders'}
-# add this photo when I take it
-# knitr::include_graphics(...)
+The Proctor mold is 10.2 cm diameter x 11.4 cm deep while the pneumatic test device uses cylinders 15.4 cm diameter x 10.2 cm deep. 
+<!-- \@ref(fig:proctor-vs-cleat-mark-cyls-photo). -->
 
-```
+
+<!-- ```{r proctor-vs-cleat-mark-cyls-photo, fig.cap='The cleat-mark cylinders were designed with different dimensions than a typical Proctor mold. A conversion was required to equate the compaction energy between them.', fig.scap='Proctor mold and cleat-mark cylinders'} -->
+<!-- # add this photo when I take it -->
+<!-- # knitr::include_graphics(...) -->
+
+<!-- ``` -->
 
 The cleat-mark cylinder dimensions were initially chosen based on two criteria: 
 
@@ -356,10 +359,11 @@ We must determine the total number of blows to use per cylinder and then per lif
 The average volume of the 12 cleat-mark cylinders (determined with the de-aired water calibration described above) was 1413 cm^-3^, so this was the starting point for the calculation.  
 
 \begin{align} 
-\frac{1413~\cancel{cm^3}}{1~cleat-mark~cylinder} &\times \frac{1~\cancel{m^3}}{1~\times10^6~\cancel{cm^3}}~\times \frac{2700~kNm}{\cancel{m^3}}  = \frac{3.815~kNm}{1~cleat-mark~cylinder} \\
+\frac{1413~\cancel{cm^3}}{1~cleat-mark~cylinder} &\times
+(\#eq:joules-per-cylinder)
+\frac{1~\cancel{m^3}}{1~\times10^6~\cancel{cm^3}}~\times \frac{2700~kNm}{\cancel{m^3}}  = \frac{3.815~kNm}{1~cleat-mark~cylinder} \\
 \nonumber \\
 \frac{3.815~\cancel{kNm}}{1~cleat-mark~cylinder} &\times \frac{1000~\cancel{Nm}}{1~\cancel{kNm}} \times \frac{1~J}{1~\cancel{Nm}} = \frac{3815~J}{1~cleat-mark~cylinder} 
-(\#eq:joules-per-cylinder)
 \end{align}
 
 
@@ -387,7 +391,7 @@ Split over 3 layers, $187.6 / 3 \approx 63$ blows per layer are required.
 
 ## Colophon
 
-This document was rendered `r Sys.time()` using the following R packages:
+This document was rendered `r Sys.time()` using the following computational environment:
 
 ```{r echo=FALSE, include=TRUE, results='markup'}
 devtools::session_info()
