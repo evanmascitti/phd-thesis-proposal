@@ -18,17 +18,27 @@ class: center, middle, inverse, title-slide
 ## Method review and preliminary data
 ### Evan C. Mascitti
 ### Penn State University
-### slides last updated <code>Tue Jul  6 2021, 04:13 PM</code>
+### slides last updated <code>Wed Jul  7 2021, 11:58 AM</code>
 
 ---
 
 
 
+background-image: url('https://drive.google.com/uc?id=1hFX3lZCMW5kAI1y1E577UpdmSvo8wyoF')
+background-size: contain
+
+# Structure 
 
 
 
+- Problem review (~5 min)
+
+- Method development &amp; data (~15 min)
+
+- Upcoming experiments (~10 min)
 
 ---
+
 class: no-h1
 
 # Starting from scratch
@@ -55,17 +65,6 @@ class: no-h1
 ]
 
 ]
-
----
-background-image: url('https://drive.google.com/uc?id=1hFX3lZCMW5kAI1y1E577UpdmSvo8wyoF')
-background-size: contain
-# Structure 
-
-- Problem review (~5 min)
-
-- Method development &amp; data (~15 min)
-
-- Upcoming experiments (~10 min)
 
 ---
 
@@ -100,7 +99,11 @@ class: no-h1
 
 
 ---
-# PSA is king (for now)
+
+background-image: url('committee-meeting-2-presentation-dependencies/scr-concept-w-box.png')
+background-size: cover
+
+# Current ideas
 
 ---
 # Method development 
@@ -110,10 +113,73 @@ class: no-h1
 - what is working 
 
 ---
+
+# Preparing the specimen
+
+- make mixture 
+  - bring to `\(w_{opt}\)` (modified)
+  - compact, soak, dry under lamps
+
+---
+
+background-image: url('committee-meeting-2-presentation-dependencies/daily-specimen-repairs-panels.png')
+background-size: contain
+
+---
+
 background-image: url('committee-meeting-2-presentation-dependencies/cleatmark-device-low-res.png')
 background-size: contain
 
-- add image of iPhone scan
+
+---
+class: no-h1
+background-image: url('committee-meeting-2-presentation-dependencies/iphone-3d-scans.png')
+background-size: contain
+
+# Crude iPhone scans
+
+---
+
+
+---
+background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide1.PNG')
+background-size: contain
+
+---
+background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide2.PNG')
+background-size: contain
+
+---
+background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide3.PNG')
+background-size: contain
+
+---
+background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide4.PNG')
+background-size: contain
+
+---
+background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide5.PNG')
+background-size: contain
+
+---
+background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide6.PNG')
+background-size: contain
+
+---
+background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide7.PNG')
+background-size: contain
+
+---
+background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide8.PNG')
+background-size: contain
+
+---
+
+class: no-h1
+# Actuating the device 
+
+&lt;div style="padding:56.25% 0 0 0;position:relative;"&gt;&lt;iframe src="https://player.vimeo.com/video/572140447?badge=0&amp;amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="cleat-mark-device-actuation"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;script src="https://player.vimeo.com/api/player.js"&gt;&lt;/script&gt;
+
 ---
 
 - image of Drohan scanner samples 
@@ -125,6 +191,83 @@ background-size: contain
 - then the orientation and processing pipeline 
 
 ---
+
+background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/annotated_example_meshes_16x9.png")
+background-size: contain
+
+---
+
+class: full-screen-image
+background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/brittle_surface_16x9.png")
+background-size: contain
+
+# 3D mesh anatomy
+
+---
+
+class: full-screen-image
+background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/point_cloud_16x9.png")
+background-size: contain
+
+# 3D mesh anatomy
+
+---
+
+class: full-screen-image
+background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/wiremesh_16x9.png")
+background-size: contain
+
+# 3D mesh anatomy
+
+
+---
+
+class: full-screen-image
+background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/annotated_zoomed_16x9.png")
+background-size: contain
+
+# 3D mesh anatomy
+
+---
+
+# "Guts" of a `.ply` file
+
+&lt;iframe src="committee-meeting-2-presentation-dependencies/example-mesh-ascii-ply.txt" style="margin-left:auto; margin-right:auto; display:block; width:70%; height:400px" &gt;&lt;/iframe&gt;
+
+---
+
+
+# Mesh processing
+
+- 2 phases: 
+
+1. Alignment to real-world coordinate system* .footnote[*the worst part]
+2. Metric computations 
+
+???
+
+You can find lots of papers with equations describing the mathematics which underpin their measurements, but very little practical guidance about how to calculate them 
+
+---
+
+background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/unprocessed_cylinder_16x9.png") 
+background-size: contain
+# Alignment 
+
+---
+
+background-image: url("committee-meeting-2-presentation-dependencies/scanner-setup.png") 
+background-size: contain
+# Alignment 
+
+---
+
+background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/from_scanner_coodinate_system_16x9.png")
+background-size: contain
+# Alignment
+
+---
+
 class: no-h1
 # Manual processing with MeshLab
 
@@ -150,23 +293,84 @@ background-size: contain
 class: no-h1
 # Completed pipeline
 
-
 ---
 
 all told, about a 90% reduction in time required to obtain a single measurement
 
 ---
 
-background-image: url('committee-meeting-2-presentation-dependencies/daily-specimen-repairs-panels.png')
+# Gravimetric vs. volumetric
+
+.center[
+
+`\(\mathrm{w_g}\)` &amp;rarr; `\(\mathrm{w_{vol}}\)`
+
+]
+
+`$$\mathrm{w_{vol.} = w_{grav.}~\cdot~\rho_{bulk}}$$`
+
+&lt;!-- - approaching `\(S_e\approx~1\)` --&gt;
+
+&lt;!-- -- --&gt;
+
+\- lack of dimensional stability
+
+--
+
+\- density @ test time likely &amp;ne; same as initial preparation
+
+--
+
+\- repairs normally occur _just_ wet-of-optimum
+
+--
+
+## - Therefore:
+Density at initial preparation may not be reflected in subsequent days of testing.
+
+---
+
+
+---
+background-image: url('committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/mini-density/01-sample-probe.JPG')
 background-size: contain
 
-- sample preparation routines (compaction protocols and repairs)
+---
+background-image: url('committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/mini-density/02-sand-cone-fill.JPG')
+background-size: contain
 
+---
+background-image: url('committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/mini-density/03-tack-skewered-plug.JPG')
+background-size: contain
+
+---
+background-image: url('committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/mini-density/04-sample-probe.JPG')
+background-size: contain
+
+---
+background-image: url('committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/mini-density/05-uneven-bottom.JPG')
+background-size: contain
+
+
+---
+background-image: url('presentation-figs/all-methods-density-comparison.svg')
+background-size: contain
 
 
 ---
 
-measuring the water content accurately; `\(w\)` vs `\(\theta\)`
+- finally, some data 
+
+---
+
+background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide7.PNG')
+background-size: contain
+
+---
+
+
+background-image: url('committee-meeting-2-presentation-dependencies/5-clays-curves.png')
+background-size: contain
 
 ---
 
@@ -176,16 +380,7 @@ even with these improvements it is a full day; need several data points to defin
 therefore must choose mixtures very carefully to represent as broad a spectrum of potential clays as possible 
 ---
 
-- finally, some data 
-
-
----
-background-image: url('committee-meeting-2-presentation-dependencies/5-clays-curves.png')
-background-size: contain
-
----
-
-future experiments 
+# future experiments 
 
 ---
 
@@ -258,6 +453,7 @@ collecting the data is a lot of work so choosing the right materials to test is 
 # Toughness hypotheses 
 
 
+---
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
