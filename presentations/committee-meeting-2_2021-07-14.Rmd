@@ -10,58 +10,60 @@ output:
     css: ["committee-meeting-2-presentation-dependencies/ecm-16x9-theme.css", "default"]
     nature:
       ratio: "16:9"
+      countIncrementalSlides: false 
 ---
 
 
 background-image: url('https://drive.google.com/uc?id=1hFX3lZCMW5kAI1y1E577UpdmSvo8wyoF')
 background-size: contain
 
-# Structure 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = F, warning = F, message = F, out.width = "90%", fig.align = 'center')
 library(magrittr)
+library(xaringanExtra)
+xaringanExtra::use_tile_view()
+xaringanExtra::use_scribble()
+xaringanExtra::use_search(show_icon = TRUE, case_sensitive = FALSE, auto_search = TRUE, position = "top-right")
 ```
+
+.pull-left[
+
+# Structure
 
 - Problem review (~5 min)
 
-- Method development & data (~15 min)
+- Method development &   proof-of-concept data (~15 min)
 
-- Upcoming experiments (~10 min)
+- Proposed experiments (~10 min)
 
----
-
-class: no-h1
-
-# Starting from scratch
-
-<br>
-
-.pull-left[
-.middle[
-.dark-grey[
->_"I asked him where he had it made, and he said he made it himself._   
->
->_When I asked him where he got his tools, he said he made them himself, and laughing added 'if I had staid for other people to make my tools & things for me, I had never made anything...'"_
+- Discussion (~30 min)
 
 ]
-]
-]
+
+--
 
 .pull-right[
 
-.middle[
+# Main topics to visit
 
-```{r newton-image, out.width="90%"}
-knitr::include_graphics('./committee-meeting-2-presentation-dependencies/newton-transparent.png')
-```
+- mineral ID & selection of clays
 
-]
+- curve fitting/segmented regression
+
+- "replications" over multiple days 
+
+- maximizing return on data collection 
 
 ]
 
 ---
+class: no-h1
+background-image: url('presentation-figs/player-locations.png')
+background-size: contain
 
+# Concentration of play 
+
+---
 background-image: url('committee-meeting-2-presentation-dependencies/corkboard-concept.png')
 background-size: contain
 
@@ -71,81 +73,91 @@ class: no-h1
 
 
 ---
+class: no-h1, middle, center
+
+# Managing water content 
+
+.pull-left[
+
+```{r post-game-soak, out.width='100%'}
+knitr::include_graphics('committee-meeting-2-presentation-dependencies/post-game-soak.JPG')
+```
+
+]
+
+.pull-right[
+
+```{r in-game-tarp-pull, out.width='100%'}
+knitr::include_graphics('committee-meeting-2-presentation-dependencies/in-game-tarp-pull.PNG')
+```
+
+
+]
+
+---
 
 # Acceptable boundaries 
-
-- brittle & hard vs. soft & unstable 
-
-- changing $w$ or $\theta$ due to weather 
-
---
 
 ```{r}
 knitr::include_graphics('./committee-meeting-2-presentation-dependencies/water-content-ranges.png')
 ```
 
+- changing $w$ or $\theta$ due to weather 
 
-
----
-- same soil, from wet to dry
-
-- across soils? 
+- brittle & hard vs. soft & unstable 
 
 - $\theta_{crit}$ ?
 
 
 ---
 
-background-image: url('committee-meeting-2-presentation-dependencies/scr-concept-w-box.png')
-background-size: cover
-
 # Current ideas
 
----
-# Method development 
-
-- what didn't work
-
-- what is working 
+```{r current-DuraEdge-ideas, out.width="80%"}
+knitr::include_graphics('committee-meeting-2-presentation-dependencies/scr-concept-w-box.png')
+```
 
 ---
 
-# Preparing the specimen
+# Cleat-mark test 
 
-- make mixture 
-  - bring to $w_{opt}$ (modified)
-  - compact, soak, dry under lamps
+.pull-left[
 
+- goal is to derive $\theta_{crit}$ for any soil
+
+- serves as lower boundary of desirable state 
+
+- must replicate outdoor conditions 
+
+]
+
+.pull-right[
+
+```{r}
+knitr::include_graphics('committee-meeting-2-presentation-dependencies/corkboard-concept.png')
+```
+
+
+]
 ---
 
-background-image: url('committee-meeting-2-presentation-dependencies/daily-specimen-repairs-panels.png')
+background-image: url('presentation-figs/specimen-preparation-process-panels.png')
 background-size: contain
+# Preparing the samples 
+
+???
+
+- first mix components 
+
+- perform proctor test; bring to $w_{opt}$; compact 
+
+- soak and dry under lamps 
+
 
 ---
 
 background-image: url('committee-meeting-2-presentation-dependencies/cleatmark-device-low-res.png')
 background-size: contain
-
-
----
-class: no-h1
-background-image: url('committee-meeting-2-presentation-dependencies/iphone-3d-scans.png')
-background-size: contain
-
-# Crude iPhone scans
-
----
-
-```{r, message=FALSE, warning=FALSE, results='asis'}
-hypothetical_deformation_vs_w_slides <- list.files(path = 'committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/', full.names = T, pattern = "\\.PNG$", ignore.case = TRUE)
-
-for (i in hypothetical_deformation_vs_w_slides) {
-  cat("\n\n---\n")
-  cat("background-image: url('", i, "')", "\n", sep = "")
-  cat("background-size: contain")
-}
-
-```
 
 ---
 
@@ -155,6 +167,14 @@ class: no-h1
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/572140447?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="cleat-mark-device-actuation"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 ---
+
+class: no-h1
+background-image: url('committee-meeting-2-presentation-dependencies/iphone-3d-scans.png')
+background-size: contain
+
+# Crude iPhone scans
+
+???
 
 - image of Drohan scanner samples 
 
@@ -166,57 +186,32 @@ class: no-h1
 
 ---
 
-background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/annotated_example_meshes_16x9.png")
-background-size: contain
+```{r, message=FALSE, warning=FALSE, results='asis'}
+hypothetical_deformation_vs_w_slides <- list.files(
+  path = 'committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/', 
+# if including all the incremental slides  pattern = "[^67]\\.png$",
+ pattern = "8\\.png$", # if inlcuding just one 
+  full.names = T, 
+  ignore.case = TRUE)
 
----
+for (i in hypothetical_deformation_vs_w_slides) {
+  cat("\n", "background-image: url('", i, "')", "\n", sep = "")
+  cat("background-size: contain", "\n", sep = " ")
+  cat("\n---\n")
+}
 
-class: full-screen-image
-background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/brittle_surface_16x9.png")
-background-size: contain
-
-# 3D mesh anatomy
-
----
-
-class: full-screen-image
-background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/point_cloud_16x9.png")
-background-size: contain
-
-# 3D mesh anatomy
-
----
-
-class: full-screen-image
-background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/wiremesh_16x9.png")
-background-size: contain
-
-# 3D mesh anatomy
-
-
----
-
-class: full-screen-image
-background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/annotated_zoomed_16x9.png")
-background-size: contain
-
-# 3D mesh anatomy
-
----
-
-# "Guts" of a `.ply` file
-
-<iframe src="committee-meeting-2-presentation-dependencies/example-mesh-ascii-ply.txt" style="margin-left:auto; margin-right:auto; display:block; width:70%; height:400px" ></iframe>
-
----
+```
 
 
 # Mesh processing
 
+- A long battle
+
 - 2 phases: 
 
-1. Alignment to real-world coordinate system* .footnote[*the worst part]
-2. Metric computations 
+  - Pre-processing 
+
+  - Metric computations 
 
 ???
 
@@ -232,7 +227,6 @@ background-size: contain
 
 background-image: url("committee-meeting-2-presentation-dependencies/scanner-setup.png") 
 background-size: contain
-# Alignment 
 
 ---
 
@@ -269,33 +263,116 @@ class: no-h1
 
 ---
 
-all told, about a 90% reduction in time required to obtain a single measurement
+# Summary: pre-processing
+
+- Longer than expected 
+
+- Faster & reproducible 
+
+- ~ 95% reduction in time required to obtain a single measurement
+
+---
+# Surface properties derived from mesh 
+
+- volume 
+
+- surface area
+
+- surface energy 
+
 
 ---
 
-# Gravimetric vs. volumetric
+background-image: url('presentation-figs/top-view-plan-view-combined.png')
+background-size: cover
 
-.center[
+---
 
-$\mathrm{w_g}$ &rarr; $\mathrm{w_{vol}}$
+class: no-h1 
+background-image: url('committee-meeting-2-presentation-dependencies/sand-backfill-process.JPG')
+background-size: contain
+
+# Volume methods: sand backfill
+
+
+---
+
+background-image: url('committee-meeting-2-presentation-dependencies/big-cleat-marks-sand-backfill.JPG')
+background-size: contain
+class: no-h1 
+# Volume methods: sand backfill
+
+
+---
+
+background-image: url('presentation-figs/rasterized-cyl01_2021-04-11.png')
+background-size: contain
+
+---
+
+background-image: url('committee-meeting-2-presentation-dependencies/physical-vs-scanner-volumes.png')
+background-size: contain
+class: no-h1 
+# Volume methods: sand backfill
+
+
+---
+
+# Dirichlet normal energy
+
+.pull-left[
+
+- surface complexity
+
+- higher "energy" means further from horizontal plane
+
+- **molaR** package - primate teeth
 
 ]
 
-$$\mathrm{w_{vol.} = w_{grav.}~\cdot~\rho_{bulk}}$$
 
-<!-- - approaching $S_e\approx~1$ -->
+.pull-right[
 
-<!-- -- -->
+```{r}
+knitr::include_graphics('committee-meeting-2-presentation-dependencies/dne-image-from-pampush-paper.png')
+```
+
+]
+
+---
+
+background-image: url('committee-meeting-2-presentation-dependencies/ductile-dne-3d.png')
+background-size: contain
+
+##  DNE =  4,400
+
+
+---
+
+
+background-image: url('committee-meeting-2-presentation-dependencies/brittle-dne-3d.png')
+background-size: contain
+##  DNE =  5,900
+
+---
+
+# Water content 
+
+$w$ or $\theta$ ??
+
+$\theta = w~\cdot~\rho_{~bulk}$
+
+--
 
 \- lack of dimensional stability
 
 --
 
-\- density @ test time likely &ne; same as initial preparation
+\- repairs normally occur _just_ wet-of-optimum
 
 --
 
-\- repairs normally occur _just_ wet-of-optimum
+\- density @ test time likely &ne; initial preparation
 
 --
 
@@ -305,60 +382,80 @@ Density at initial preparation may not be reflected in subsequent days of testin
 ---
 
 ```{r, message=FALSE, warning=FALSE, results='asis'}
-mini_density_images <- list.files(path = 'committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/mini-density/', full.names = T)
+mini_density_images <- list.files(path = 'committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/mini-density/', full.names = T, recursive = FALSE)
 
 for (i in mini_density_images) {
-  cat("\n\n---\n")
-  cat("background-image: url('", i, "')", "\n", sep = "")
-  cat("background-size: contain")
+  cat("\n---\n")
+  cat("\n", "background-image: url(\"", i, "\")", "\n", sep = "")
+  cat("background-size: contain", "\n", sep = " ")
 }
 
 ```
 
 
----
-background-image: url('presentation-figs/all-methods-density-comparison.svg')
-background-size: contain
-
-
----
-
-- finally, some data 
-
----
-
-background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide7.PNG')
+background-image: url('presentation-figs/mini-plug-density-comp.png')
 background-size: contain
 
 ---
+
+background-image: url('committee-meeting-2-presentation-dependencies/daily-specimen-repairs-panels.png')
+background-size: contain
+
+---
+
+# Finally, some data 
+
+- 5 clay soils; all mixed to 60% sand 
+
+---
+
+```{r include=FALSE}
+old_clays_curves <- "E:/onedrive-psu/PSU2019-present/A_inf_soils_PhD/SelectingClaysJan2021/figs/png/5-clays-curves.png"
+
+new_clays_curves <- here::here('presentations', 'committee-meeting-2-presentation-dependencies', basename(old_clays_curves))
+
+if(file.mtime(old_clays_curves) > file.mtime(new_clays_curves)){file.copy(old_clays_curves, new_clays_curves, overwrite = T)}
+```
 
 
 background-image: url('committee-meeting-2-presentation-dependencies/5-clays-curves.png')
 background-size: contain
 
+--
+
+.center[
+
+```{r hypothetical-curve-thumbnail, out.width='40%', fig.align='right'}
+#knitr::include_graphics('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide7.png')
+
+magick::image_read('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide7.png') %>% 
+  magick::image_border(color = 'black', geometry = '10x10')
+
+```
+
+]
+
+<!-- class: no-h1 -->
+<!-- background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide7.png') -->
+<!-- # Comparing hypothetical curve to real data  -->
+
+
 ---
 
+# Future experiments 
 
-even with these improvements it is a full day; need several data points to define curve 
 
-therefore must choose mixtures very carefully to represent as broad a spectrum of potential clays as possible 
----
+- Even with these improvements it is a long process; need several data points to define curve 
 
-# future experiments 
+- Therefore must choose mixtures very carefully to represent as broad a spectrum of potential clays as possible 
 
----
 
-class: no-h1
-background-image: url('committee-meeting-2-presentation-dependencies/sand-pcts-to-choose.png')
-background-size: contain
-exclude: true
-
-# Sand percents to choose
 ---
 
 # Representative materials
 
 - goal is to have a range of particle sizes, mineralogy, AND plasticity/toughness
+
 - adjust SCR by adding pure Qz silt
 
 .middle[
@@ -366,19 +463,19 @@ exclude: true
 ```{r planned-scr-values}
 
 scr_possible_vals <- tibble::tibble(
-  `Clay name` = c('Calcium montmorillonite', 'Mixed-layer/illite-dominated', 'Fine-grained kaolinite', 'Fe-oxide rich', 'High-silt soil'),
-  # clay_pct = format(c(0.6, 0.5, 0.8, 0.7, 0.15), digits = 2),
-  # silt_pct = format(1- as.numeric(clay_pct), digits = 2),
+  `Clay name` = c('Black cotton soil', 'Ground mudstone', 'Fine-grained kaolinite', 'Low-plastic red clay', 'High-silt soil'),
+  presentation_order  = c(3, 2, 1, 4, 5),
   clay_pct = format(100*c(0.6, 0.5, 0.8, 0.7, 0.15), digits = 0),
   silt_pct = format(100- as.numeric(clay_pct), digits = 0),
   scr = format(as.numeric(silt_pct) / as.numeric(clay_pct), digits = 2)
   ) %>% 
-  dplyr::arrange(scr) %>% 
+  dplyr::arrange(presentation_order) %>% 
   dplyr::rename(
     `% Clay-size` = clay_pct,
     `% Silt-size` = silt_pct,
     `Silt-to-clay ratio` = scr
-  )
+  ) %>% 
+  dplyr::select(-presentation_order)
 
 scr_possible_vals %>% 
   kableExtra::kbl(align = 'lccc',
@@ -401,8 +498,144 @@ collecting the data is a lot of work so choosing the right materials to test is 
 
 ---
 
-# Toughness hypotheses 
+class: no-h1
+background-image: url('committee-meeting-2-presentation-dependencies/sand-pcts-to-choose.png')
+background-size: contain
+
+# Sand percents to choose
+
+---
+
+```{r find-xrd-plots}
+# a no-no to hard-code paths but in this case I think 
+# it's the easiest, to ensure the code stays linked to the updated 
+# versions of the figures 
+all_original_xrd_patterns <- list.files(path = "E:/onedrive-psu/PSU2019-present/A_inf_soils_PhD/SelectingClaysJan2021/figs/summer-2021-xrd-patterns/", full.names = TRUE, pattern = "\\.png$", ignore.case = TRUE)
+
+# copy the files if they are newer 
+
+new_xrd_paths <- here::here(
+  fs::path(
+  'presentations',
+  'presentation-figs',
+  'summer-2021-xrd-patterns',
+  basename(all_original_xrd_patterns))
+)
+
+copying_args <- tibble::tibble(
+  old_path = all_original_xrd_patterns,
+  old_mtime = file.mtime(all_original_xrd_patterns),
+  new_path  = new_xrd_paths,
+  new_mtime  = file.mtime(new_path),
+  copy = old_mtime > new_mtime
+) %>% 
+  dplyr::filter(copy)
+
+fs::file_copy(copying_args$old_path,
+              copying_args$new_path,
+              overwrite = TRUE)
+
+all_xrd_paths <- list.files(
+  path = 'presentation-figs/summer-2021-xrd-patterns/',
+  pattern = "\\.png$",
+  ignore.case = TRUE,
+  full.names = TRUE)
+
+```
+
+```{r coarser-clay-xrd-plots, message=FALSE, warning=FALSE, results='asis'}
+
+coarser_clay_xrd_plots <- all_xrd_paths[!stringr::str_detect(all_xrd_paths, "minus-0\\.2")]
+
+for (i in coarser_clay_xrd_plots) {
+  cat("\n---\n")
+  cat("\n", "background-image: url(\"", i, "\")", "\n", sep = "")
+  cat("background-size: contain", "\n", sep = " ")
+  }
+```
 
 
 ---
 
+# Toughness hypotheses 
+
+- mixes w/ same % sand perform differently
+  - therefore, can't start w/ % sand.....must start with mineralogy/toughness 
+  
+- increase or reduce toughness by altering sand content 
+
+- adding silt will reduce performance for _all_ clays
+
+- interpolate desired toughness based on shape of toughness vs. % sand curve 
+
+---
+
+# Extras 
+
+---
+
+
+# All XRD patterns 
+
+```{r, all-xrd-plots, message=FALSE, warning=FALSE, results='asis'}
+
+for (i in all_xrd_paths) {
+  cat("\n---\n")
+  cat("\n", "background-image: url(\"", i, "\")", "\n", sep = "")
+  cat("background-size: contain", "\n", sep = " ")
+  cat("count: false", "\n", sep = " ")
+  
+}
+
+```
+
+---
+
+# "Guts" of a `.ply` file
+
+<iframe src="committee-meeting-2-presentation-dependencies/example-mesh-ascii-ply.txt" style="margin-left:auto; margin-right:auto; display:block; width:70%; height:400px" ></iframe>
+
+
+---
+
+background-image: url('committee-meeting-2-presentation-dependencies/dodecahedron-w-normals.png')
+background-size: contain
+
+## Vertex normals 
+
+---
+
+class: full-screen-image
+background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/point_cloud_16x9.png")
+background-size: contain
+
+## More 3D mesh anatomy 
+
+---
+
+class: full-screen-image
+background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/wiremesh_16x9.png")
+background-size: contain
+
+---
+
+class: full-screen-image
+background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/brittle_surface_16x9.png")
+background-size: contain
+
+---
+
+class: full-screen-image
+background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/annotated_zoomed_16x9.png")
+background-size: contain
+
+# 3D mesh anatomy
+
+
+---
+
+crudebackground-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/annotated_example_meshes_16x9.png")
+background-size: contain
+class: no-h1
+
+# Annotated example meshes from Drohan scanner 

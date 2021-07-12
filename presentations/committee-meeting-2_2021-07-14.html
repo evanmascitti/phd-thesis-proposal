@@ -6,6 +6,16 @@
     <meta name="author" content="Evan C. Mascitti" />
     <script src="libs/header-attrs-2.8/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
+    <script src="libs/fabric-4.3.1/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="libs/mark.js-8.11.1/mark.min.js"></script>
+    <link href="libs/xaringanExtra-search-0.0.1/search.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-search-0.0.1/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"top-right","caseSensitive":false,"showIcon":true,"autoSearch":true}) })</script>
     <script src="libs/kePrint-0.0.1/kePrint.js"></script>
     <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
     <link rel="stylesheet" href="committee-meeting-2-presentation-dependencies/ecm-16x9-theme.css" type="text/css" />
@@ -18,7 +28,7 @@ class: center, middle, inverse, title-slide
 ## Method review and preliminary data
 ### Evan C. Mascitti
 ### Penn State University
-### slides last updated <code>Wed Jul  7 2021, 11:58 AM</code>
+### slides last updated <code>Mon Jul 12 2021, 04:05 PM</code>
 
 ---
 
@@ -27,47 +37,46 @@ class: center, middle, inverse, title-slide
 background-image: url('https://drive.google.com/uc?id=1hFX3lZCMW5kAI1y1E577UpdmSvo8wyoF')
 background-size: contain
 
-# Structure 
 
 
+.pull-left[
+
+# Structure
 
 - Problem review (~5 min)
 
-- Method development &amp; data (~15 min)
+- Method development &amp;   proof-of-concept data (~15 min)
 
-- Upcoming experiments (~10 min)
+- Proposed experiments (~10 min)
 
----
-
-class: no-h1
-
-# Starting from scratch
-
-&lt;br&gt;
-
-.pull-left[
-.middle[
-.dark-grey[
-&gt;_"I asked him where he had it made, and he said he made it himself._   
-&gt;
-&gt;_When I asked him where he got his tools, he said he made them himself, and laughing added 'if I had staid for other people to make my tools &amp; things for me, I had never made anything...'"_
+- Discussion (~30 min)
 
 ]
-]
-]
+
+--
 
 .pull-right[
 
-.middle[
+# Main topics to visit
 
-&lt;img src="./committee-meeting-2-presentation-dependencies/newton-transparent.png" width="90%" style="display: block; margin: auto;" /&gt;
+- mineral ID &amp; selection of clays
 
-]
+- curve fitting/segmented regression
+
+- "replications" over multiple days 
+
+- maximizing return on data collection 
 
 ]
 
 ---
+class: no-h1
+background-image: url('presentation-figs/player-locations.png')
+background-size: contain
 
+# Concentration of play 
+
+---
 background-image: url('committee-meeting-2-presentation-dependencies/corkboard-concept.png')
 background-size: contain
 
@@ -77,100 +86,80 @@ class: no-h1
 
 
 ---
+class: no-h1, middle, center
+
+# Managing water content 
+
+.pull-left[
+
+&lt;img src="committee-meeting-2-presentation-dependencies/post-game-soak.JPG" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[
+
+&lt;img src="committee-meeting-2-presentation-dependencies/in-game-tarp-pull.PNG" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+]
+
+---
 
 # Acceptable boundaries 
 
-- brittle &amp; hard vs. soft &amp; unstable 
+&lt;img src="./committee-meeting-2-presentation-dependencies/water-content-ranges.png" width="90%" style="display: block; margin: auto;" /&gt;
 
 - changing `\(w\)` or `\(\theta\)` due to weather 
 
---
-
-&lt;img src="./committee-meeting-2-presentation-dependencies/water-content-ranges.png" width="90%" style="display: block; margin: auto;" /&gt;
-
-
-
----
-- same soil, from wet to dry
-
-- across soils? 
+- brittle &amp; hard vs. soft &amp; unstable 
 
 - `\(\theta_{crit}\)` ?
 
 
 ---
 
-background-image: url('committee-meeting-2-presentation-dependencies/scr-concept-w-box.png')
-background-size: cover
-
 # Current ideas
 
----
-# Method development 
-
-- what didn't work
-
-- what is working 
+&lt;img src="committee-meeting-2-presentation-dependencies/scr-concept-w-box.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 ---
 
-# Preparing the specimen
+# Cleat-mark test 
 
-- make mixture 
-  - bring to `\(w_{opt}\)` (modified)
-  - compact, soak, dry under lamps
+.pull-left[
 
+- goal is to derive `\(\theta_{crit}\)` for any soil
+
+- serves as lower boundary of desirable state 
+
+- must replicate outdoor conditions 
+
+]
+
+.pull-right[
+
+&lt;img src="committee-meeting-2-presentation-dependencies/corkboard-concept.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+]
 ---
 
-background-image: url('committee-meeting-2-presentation-dependencies/daily-specimen-repairs-panels.png')
+background-image: url('presentation-figs/specimen-preparation-process-panels.png')
 background-size: contain
+# Preparing the samples 
+
+???
+
+- first mix components 
+
+- perform proctor test; bring to `\(w_{opt}\)`; compact 
+
+- soak and dry under lamps 
+
 
 ---
 
 background-image: url('committee-meeting-2-presentation-dependencies/cleatmark-device-low-res.png')
-background-size: contain
-
-
----
-class: no-h1
-background-image: url('committee-meeting-2-presentation-dependencies/iphone-3d-scans.png')
-background-size: contain
-
-# Crude iPhone scans
-
----
-
-
----
-background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide1.PNG')
-background-size: contain
-
----
-background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide2.PNG')
-background-size: contain
-
----
-background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide3.PNG')
-background-size: contain
-
----
-background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide4.PNG')
-background-size: contain
-
----
-background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide5.PNG')
-background-size: contain
-
----
-background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide6.PNG')
-background-size: contain
-
----
-background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide7.PNG')
-background-size: contain
-
----
-background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide8.PNG')
 background-size: contain
 
 ---
@@ -182,6 +171,14 @@ class: no-h1
 
 ---
 
+class: no-h1
+background-image: url('committee-meeting-2-presentation-dependencies/iphone-3d-scans.png')
+background-size: contain
+
+# Crude iPhone scans
+
+???
+
 - image of Drohan scanner samples 
 
 - and finally our scanner 
@@ -192,57 +189,22 @@ class: no-h1
 
 ---
 
-background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/annotated_example_meshes_16x9.png")
-background-size: contain
 
----
-
-class: full-screen-image
-background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/brittle_surface_16x9.png")
-background-size: contain
-
-# 3D mesh anatomy
-
----
-
-class: full-screen-image
-background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/point_cloud_16x9.png")
-background-size: contain
-
-# 3D mesh anatomy
-
----
-
-class: full-screen-image
-background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/wiremesh_16x9.png")
-background-size: contain
-
-# 3D mesh anatomy
-
-
----
-
-class: full-screen-image
-background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/annotated_zoomed_16x9.png")
-background-size: contain
-
-# 3D mesh anatomy
-
----
-
-# "Guts" of a `.ply` file
-
-&lt;iframe src="committee-meeting-2-presentation-dependencies/example-mesh-ascii-ply.txt" style="margin-left:auto; margin-right:auto; display:block; width:70%; height:400px" &gt;&lt;/iframe&gt;
+background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide8.png')
+background-size: contain 
 
 ---
 
 
 # Mesh processing
 
+- A long battle
+
 - 2 phases: 
 
-1. Alignment to real-world coordinate system* .footnote[*the worst part]
-2. Metric computations 
+  - Pre-processing 
+
+  - Metric computations 
 
 ???
 
@@ -258,7 +220,6 @@ background-size: contain
 
 background-image: url("committee-meeting-2-presentation-dependencies/scanner-setup.png") 
 background-size: contain
-# Alignment 
 
 ---
 
@@ -295,33 +256,114 @@ class: no-h1
 
 ---
 
-all told, about a 90% reduction in time required to obtain a single measurement
+# Summary: pre-processing
+
+- Longer than expected 
+
+- Faster &amp; reproducible 
+
+- ~ 95% reduction in time required to obtain a single measurement
+
+---
+# Surface properties derived from mesh 
+
+- volume 
+
+- surface area
+
+- surface energy 
+
 
 ---
 
-# Gravimetric vs. volumetric
+background-image: url('presentation-figs/top-view-plan-view-combined.png')
+background-size: cover
 
-.center[
+---
 
-`\(\mathrm{w_g}\)` &amp;rarr; `\(\mathrm{w_{vol}}\)`
+class: no-h1 
+background-image: url('committee-meeting-2-presentation-dependencies/sand-backfill-process.JPG')
+background-size: contain
+
+# Volume methods: sand backfill
+
+
+---
+
+background-image: url('committee-meeting-2-presentation-dependencies/big-cleat-marks-sand-backfill.JPG')
+background-size: contain
+class: no-h1 
+# Volume methods: sand backfill
+
+
+---
+
+background-image: url('presentation-figs/rasterized-cyl01_2021-04-11.png')
+background-size: contain
+
+---
+
+background-image: url('committee-meeting-2-presentation-dependencies/physical-vs-scanner-volumes.png')
+background-size: contain
+class: no-h1 
+# Volume methods: sand backfill
+
+
+---
+
+# Dirichlet normal energy
+
+.pull-left[
+
+- surface complexity
+
+- higher "energy" means further from horizontal plane
+
+- **molaR** package - primate teeth
 
 ]
 
-`$$\mathrm{w_{vol.} = w_{grav.}~\cdot~\rho_{bulk}}$$`
 
-&lt;!-- - approaching `\(S_e\approx~1\)` --&gt;
+.pull-right[
 
-&lt;!-- -- --&gt;
+&lt;img src="committee-meeting-2-presentation-dependencies/dne-image-from-pampush-paper.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+background-image: url('committee-meeting-2-presentation-dependencies/ductile-dne-3d.png')
+background-size: contain
+
+##  DNE =  4,400
+
+
+---
+
+
+background-image: url('committee-meeting-2-presentation-dependencies/brittle-dne-3d.png')
+background-size: contain
+##  DNE =  5,900
+
+---
+
+# Water content 
+
+`\(w\)` or `\(\theta\)` ??
+
+`\(\theta = w~\cdot~\rho_{~bulk}\)`
+
+--
 
 \- lack of dimensional stability
 
 --
 
-\- density @ test time likely &amp;ne; same as initial preparation
+\- repairs normally occur _just_ wet-of-optimum
 
 --
 
-\- repairs normally occur _just_ wet-of-optimum
+\- density @ test time likely &amp;ne; initial preparation
 
 --
 
@@ -332,69 +374,77 @@ Density at initial preparation may not be reflected in subsequent days of testin
 
 
 ---
-background-image: url('committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/mini-density/01-sample-probe.JPG')
+
+background-image: url("committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/mini-density/01-sample-probe.JPG")
+background-size: contain 
+
+---
+
+background-image: url("committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/mini-density/02-sand-cone-fill.JPG")
+background-size: contain 
+
+---
+
+background-image: url("committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/mini-density/03-tack-skewered-plug.JPG")
+background-size: contain 
+
+---
+
+background-image: url("committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/mini-density/all-5-images")
+background-size: contain 
+
+
+background-image: url('presentation-figs/mini-plug-density-comp.png')
 background-size: contain
 
 ---
-background-image: url('committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/mini-density/02-sand-cone-fill.JPG')
+
+background-image: url('committee-meeting-2-presentation-dependencies/daily-specimen-repairs-panels.png')
 background-size: contain
 
 ---
-background-image: url('committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/mini-density/03-tack-skewered-plug.JPG')
-background-size: contain
 
----
-background-image: url('committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/mini-density/04-sample-probe.JPG')
-background-size: contain
+# Finally, some data 
 
----
-background-image: url('committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/mini-density/05-uneven-bottom.JPG')
-background-size: contain
-
-
----
-background-image: url('presentation-figs/all-methods-density-comparison.svg')
-background-size: contain
-
+- 5 clay soils; all mixed to 60% sand 
 
 ---
 
-- finally, some data 
 
----
-
-background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide7.PNG')
-background-size: contain
-
----
 
 
 background-image: url('committee-meeting-2-presentation-dependencies/5-clays-curves.png')
 background-size: contain
 
+--
+
+.center[
+
+&lt;img src="committee-meeting-2_2021-07-14_files/figure-html/hypothetical-curve-thumbnail-1.png" width="40%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+]
+
+&lt;!-- class: no-h1 --&gt;
+&lt;!-- background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide7.png') --&gt;
+&lt;!-- # Comparing hypothetical curve to real data  --&gt;
+
+
 ---
 
+# Future experiments 
 
-even with these improvements it is a full day; need several data points to define curve 
 
-therefore must choose mixtures very carefully to represent as broad a spectrum of potential clays as possible 
----
+- Even with these improvements it is a long process; need several data points to define curve 
 
-# future experiments 
+- Therefore must choose mixtures very carefully to represent as broad a spectrum of potential clays as possible 
 
----
 
-class: no-h1
-background-image: url('committee-meeting-2-presentation-dependencies/sand-pcts-to-choose.png')
-background-size: contain
-exclude: true
-
-# Sand percents to choose
 ---
 
 # Representative materials
 
 - goal is to have a range of particle sizes, mineralogy, AND plasticity/toughness
+
 - adjust SCR by adding pure Qz silt
 
 .middle[
@@ -416,22 +466,22 @@ exclude: true
    &lt;td style="text-align:center;"&gt; 0.25 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Fe-oxide rich &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; 70 &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; 30 &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; 0.43 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Ground mudstone &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 50 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 50 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1.00 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Calcium montmorillonite &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Black cotton soil &lt;/td&gt;
    &lt;td style="text-align:center;"&gt; 60 &lt;/td&gt;
    &lt;td style="text-align:center;"&gt; 40 &lt;/td&gt;
    &lt;td style="text-align:center;"&gt; 0.67 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Mixed-layer/illite-dominated &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; 50 &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; 50 &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; 1.00 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Low-plastic red clay &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 70 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 30 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.43 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; High-silt soil &lt;/td&gt;
@@ -450,16 +500,176 @@ collecting the data is a lot of work so choosing the right materials to test is 
 
 ---
 
-# Toughness hypotheses 
+class: no-h1
+background-image: url('committee-meeting-2-presentation-dependencies/sand-pcts-to-choose.png')
+background-size: contain
+
+# Sand percents to choose
+
+---
+
+
 
 
 ---
 
+background-image: url("presentation-figs/summer-2021-xrd-patterns/01_No. 6 tile (minus-2 microns).png")
+background-size: contain 
+
+---
+
+background-image: url("presentation-figs/summer-2021-xrd-patterns/02_Ground mudstone (PA) (2-0.2 microns).png")
+background-size: contain 
+
+---
+
+background-image: url("presentation-figs/summer-2021-xrd-patterns/03_Black cotton soil (2-0.2 microns).png")
+background-size: contain 
+
+---
+
+background-image: url("presentation-figs/summer-2021-xrd-patterns/04_TN red (2-0.2 microns).png")
+background-size: contain 
+
+---
+
+background-image: url("presentation-figs/summer-2021-xrd-patterns/05_Sheffield, MA (2-0.2 microns).png")
+background-size: contain 
+
+
+---
+
+# Toughness hypotheses 
+
+- mixes w/ same % sand perform differently
+  - therefore, can't start w/ % sand.....must start with mineralogy/toughness 
+  
+- increase or reduce toughness by altering sand content 
+
+- adding silt will reduce performance for _all_ clays
+
+- interpolate desired toughness based on shape of toughness vs. % sand curve 
+
+---
+
+# Extras 
+
+---
+
+
+# All XRD patterns 
+
+
+---
+
+background-image: url("presentation-figs/summer-2021-xrd-patterns/01_No. 6 tile (minus-2 microns).png")
+background-size: contain 
+count: false 
+
+---
+
+background-image: url("presentation-figs/summer-2021-xrd-patterns/02_Ground mudstone (PA) (2-0.2 microns).png")
+background-size: contain 
+count: false 
+
+---
+
+background-image: url("presentation-figs/summer-2021-xrd-patterns/02_Ground mudstone (PA) (minus-0.2 microns).png")
+background-size: contain 
+count: false 
+
+---
+
+background-image: url("presentation-figs/summer-2021-xrd-patterns/03_Black cotton soil (2-0.2 microns).png")
+background-size: contain 
+count: false 
+
+---
+
+background-image: url("presentation-figs/summer-2021-xrd-patterns/03_Black cotton soil (minus-0.2 microns).png")
+background-size: contain 
+count: false 
+
+---
+
+background-image: url("presentation-figs/summer-2021-xrd-patterns/04_TN red (2-0.2 microns).png")
+background-size: contain 
+count: false 
+
+---
+
+background-image: url("presentation-figs/summer-2021-xrd-patterns/04_TN red (minus-0.2 microns).png")
+background-size: contain 
+count: false 
+
+---
+
+background-image: url("presentation-figs/summer-2021-xrd-patterns/05_Sheffield, MA (2-0.2 microns).png")
+background-size: contain 
+count: false 
+
+---
+
+background-image: url("presentation-figs/summer-2021-xrd-patterns/05_Sheffield, MA (minus-0.2 microns).png")
+background-size: contain 
+count: false 
+
+---
+
+# "Guts" of a `.ply` file
+
+&lt;iframe src="committee-meeting-2-presentation-dependencies/example-mesh-ascii-ply.txt" style="margin-left:auto; margin-right:auto; display:block; width:70%; height:400px" &gt;&lt;/iframe&gt;
+
+
+---
+
+background-image: url('committee-meeting-2-presentation-dependencies/dodecahedron-w-normals.png')
+background-size: contain
+
+## Vertex normals 
+
+---
+
+class: full-screen-image
+background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/point_cloud_16x9.png")
+background-size: contain
+
+## More 3D mesh anatomy 
+
+---
+
+class: full-screen-image
+background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/wiremesh_16x9.png")
+background-size: contain
+
+---
+
+class: full-screen-image
+background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/brittle_surface_16x9.png")
+background-size: contain
+
+---
+
+class: full-screen-image
+background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/annotated_zoomed_16x9.png")
+background-size: contain
+
+# 3D mesh anatomy
+
+
+---
+
+crudebackground-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/annotated_example_meshes_16x9.png")
+background-size: contain
+class: no-h1
+
+# Annotated example meshes from Drohan scanner 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"ratio": "16:9"
+"ratio": "16:9",
+"countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
