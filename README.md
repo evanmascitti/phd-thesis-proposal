@@ -1,6 +1,14 @@
-This is my PhD proposal, finally being compiled. I am using **bookdown**, R
-Studio, Git, and GitHub to make the process transparent and easier. It will be
-simple to compile the various documents together, auto-format citations, etc.
+phd-thesis-proposal
+================
 
-Thank you Yihui and everyone else for creating these tools. I love Microsoft,
-but NO WAY am I going back to the copy-paste mindset!
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# phd-thesis-proposal
+
+-   this repository holds code and data for my thesis proposal
+
+-   I periodically make it a public repo so I can use GitHub pages for
+    free
+
+-   A link to slides for committee meeting 2: [link via GitHub
+    pages](presentations/committee-meeting-2_2021-07-14.html)
