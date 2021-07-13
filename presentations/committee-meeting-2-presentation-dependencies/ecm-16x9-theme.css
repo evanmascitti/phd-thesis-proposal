@@ -17,6 +17,11 @@ p {
 	font-size: 1.5em;
 } 
 
+
+li::marker { 
+  font-size: 1.5em;
+} 
+
 .dark-grey {
   color: #7F7F7F;
 }

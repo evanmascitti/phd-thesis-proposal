@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.6.21)  28 JUN 2021 09:12
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.6.28)  12 JUL 2021 17:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**phd-thesis-proposal.tex
-(./phd-thesis-proposal.tex
+**Mascitti-phd-thesis-proposal.tex
+(./Mascitti-phd-thesis-proposal.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-06-18> (c:/Users/ecm200/AppData/Roaming/TinyTeX/texm
 f-dist/tex/latex/base/book.cls
@@ -1088,8 +1088,12 @@ rs
 )
 \cslhangindent=\skip78
 \csllabelwidth=\skip79
-No file phd-thesis-proposal.aux.
-\openout1 = `phd-thesis-proposal.aux'.
+(./Mascitti-phd-thesis-proposal.aux
+
+LaTeX Warning: Label `tab:labor-per-area-tab' multiply defined.
+
+)
+\openout1 = `Mascitti-phd-thesis-proposal.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 369.
 LaTeX Font Info:    ... okay on input line 369.
@@ -1138,9 +1142,6 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 369.
 LaTeX Info: Redefining \pageref on input line 369.
 LaTeX Info: Redefining \nameref on input line 369.
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1226,59 +1227,77 @@ LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
 (Font)              scaled to size 24.88pt on input line 374.
 LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
 (Font)              scaled to size 10.0pt on input line 381.
-
-LaTeX Warning: Reference `purpose-and-objectives' on page 2 undefined on input 
-line 381.
-
-
-LaTeX Warning: Reference `problem-description' on page 2 undefined on input lin
-e 383.
-
-
-LaTeX Warning: Reference `lit-review' on page 2 undefined on input line 385.
-
-
-LaTeX Warning: Reference `proposed-experiments' on page 2 undefined on input li
-ne 387.
-
-
-LaTeX Warning: Reference `workflow' on page 2 undefined on input line 391.
-
-
-Underfull \hbox (badness 2285) in paragraph at lines 391--395
-\TU/Roboto(0)/m/n/10 (Section []). This section is written informally. Although
- it is un-related to the
- []
-
-
-Underfull \hbox (badness 2035) in paragraph at lines 391--395
-\TU/Roboto(0)/m/n/10 technical/soils aspects of my project, I included it becau
-se it forms an important
- []
-
-
-LaTeX Warning: Reference `definition-of-terms' on page 2 undefined on input lin
-e 396.
-
 [2
 
-]
-\tf@toc=\write4
-\openout4 = `phd-thesis-proposal.toc'.
-
+] (./Mascitti-phd-thesis-proposal.toc
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
+(Font)              scaled to size 7.218pt on input line 3.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
+(Font)              scaled to size 5.81451pt on input line 3.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
+(Font)              scaled to size 10.0261pt on input line 3.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
+(Font)              scaled to size 7.21878pt on input line 3.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
+(Font)              scaled to size 5.81512pt on input line 3.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
+(Font)              scaled to size 10.02396pt on input line 3.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
+(Font)              scaled to size 7.21724pt on input line 3.
+LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
+(Font)              scaled to size 5.81389pt on input line 3.
 [3
 
 ]
-\tf@lof=\write5
-\openout5 = `phd-thesis-proposal.lof'.
+Overfull \hbox (1.34567pt too wide) detected at line 130
+ []\TU/Roboto(0)/m/n/10 106
+ []
 
-[4
+
+Overfull \hbox (1.34567pt too wide) detected at line 135
+ []\TU/Roboto(0)/m/n/10 113
+ []
+
+)
+\tf@toc=\write4
+\openout4 = `Mascitti-phd-thesis-proposal.toc'.
+
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/sl' in size <10> not available
+(Font)              Font shape `TU/Roboto(0)/m/it' tried instead on input line 
+405.
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/it' will be
+(Font)              scaled to size 10.0pt on input line 405.
+[4] (./Mascitti-phd-thesis-proposal.lof [5
 
 ]
-\tf@lot=\write6
-\openout6 = `phd-thesis-proposal.lot'.
+Overfull \hbox (1.34567pt too wide) detected at line 55
+ []\TU/Roboto(0)/m/n/10 111
+ []
 
-[5
+
+Overfull \hbox (1.34567pt too wide) detected at line 56
+ []\TU/Roboto(0)/m/n/10 112
+ []
+
+)
+\tf@lof=\write5
+\openout5 = `Mascitti-phd-thesis-proposal.lof'.
+
+[6] (./Mascitti-phd-thesis-proposal.lot
+Overfull \hbox (1.34567pt too wide) detected at line 12
+ []\TU/Roboto(0)/m/n/10 104
+ []
+
+
+Overfull \hbox (1.34567pt too wide) detected at line 13
+ []\TU/Roboto(0)/m/n/10 106
+ []
+
+)
+\tf@lot=\write6
+\openout6 = `Mascitti-phd-thesis-proposal.lot'.
+
+[7
 
 ]
 Section 1.
@@ -1298,7 +1317,7 @@ LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
 (Font)              scaled to size 14.4pt on input line 417.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <14.4> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 417.
-[6
+[8
 
 ]
 Section 2.
@@ -1308,10 +1327,6 @@ Underfull \hbox (badness 2351) in paragraph at lines 474--476
 nging task for grounds
  []
 
-
-LaTeX Warning: Reference `fig:player-locations' on page 7 undefined on input li
-ne 490.
-
 File: images/illustrations/player-locations/player-locations.ai Graphic file (t
 ype pdf)
 <use images/illustrations/player-locations/player-locations.ai>
@@ -1319,30 +1334,6 @@ LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
 (Font)              scaled to size 9.0pt on input line 500.
 LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
 (Font)              scaled to size 9.0pt on input line 500.
-
-LaTeX Warning: Reference `fig:player-locations' on page 7 undefined on input li
-ne 503.
-
-
-LaTeX Warning: Reference `fig:labor-per-area-fig' on page 7 undefined on input 
-line 503.
-
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 7.218pt on input line 503.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
-(Font)              scaled to size 5.81451pt on input line 503.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 10.0261pt on input line 503.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 7.21878pt on input line 503.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(2)/m/n' will be
-(Font)              scaled to size 5.81512pt on input line 503.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 10.02396pt on input line 503.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 7.21724pt on input line 503.
-LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
-(Font)              scaled to size 5.81389pt on input line 503.
 LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
 (Font)              scaled to size 7.2pt on input line 503.
 LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
@@ -1355,29 +1346,7 @@ LaTeX Font Info:    Font shape `TU/FiraMathRegular(3)/m/n' will be
 (Font)              scaled to size 5.01198pt on input line 503.
 LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
 (Font)              scaled to size 6.0pt on input line 503.
-LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 503.
-
-LaTeX Warning: Reference `fig:labor-per-area-fig' on page 7 undefined on input 
-line 503.
-
-
-LaTeX Warning: Reference `tab:labor-per-area-tab' on page 7 undefined on input 
-line 503.
-
-
-LaTeX Warning: Reference `fig:player-locations' on page 7 undefined on input li
-ne 504.
-
-
-LaTeX Warning: Reference `fig:batted-ball-density' on page 7 undefined on input
- line 505.
-
-
-LaTeX Warning: Reference `fig:labor-per-area-fig' on page 7 undefined on input 
-line 505.
-
-[7
+[9
 
 ]
 File: ./figs/pdf/batted-balls-w-boundaries-2020.pdf Graphic file (type pdf)
@@ -1394,54 +1363,15 @@ Underfull \hbox (badness 1742) in paragraph at lines 531--531
 e assets. Their safety and performance must not be
  []
 
-
-LaTeX Warning: Reference `fig:mlb-salaries' on page 8 undefined on input line 5
-44.
-
-
-LaTeX Warning: Reference `fig:mlb-salaries' on page 8 undefined on input line 5
-46.
-
-LaTeX Font Info:    Font shape `TU/Roboto(0)/m/sl' in size <10> not available
-(Font)              Font shape `TU/Roboto(0)/m/it' tried instead on input line 
-563.
-LaTeX Font Info:    Font shape `TU/Roboto(0)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 563.
-[8] [9]
-
-LaTeX Warning: Reference `fig:corkboard-concept' on page 10 undefined on input 
-line 564.
-
+[10] [11]
 File: images/illustrations/cleatmarks/corkboard_concept.png Graphic file (type 
 bmp)
 <images/illustrations/cleatmarks/corkboard_concept.png>
+[12]
+Underfull \vbox (badness 7168) has occurred while \output is active []
 
-LaTeX Warning: Reference `plasticity-tests' on page 10 undefined on input line 
-577.
-
-[10]
-
-LaTeX Warning: Reference `fig:corkboard-concept' on page 11 undefined on input 
-line 602.
-
-[11] [12]
+[13] [14]
 Section 3.
-
-LaTeX Warning: Reference `infield-performance' on page 13 undefined on input li
-ne 648.
-
-
-LaTeX Warning: Reference `lab-methods-review' on page 13 undefined on input lin
-e 650.
-
-
-LaTeX Warning: Reference `artificial-soil-mixtures' on page 13 undefined on inp
-ut line 652.
-
-
-LaTeX Warning: Reference `purpose-and-objectives' on page 13 undefined on input
- line 654.
-
 LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 666.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
@@ -1454,7 +1384,7 @@ Underfull \hbox (badness 1163) in paragraph at lines 671--676
  perform other maneuvers
  []
 
-[13
+[15
 
 ]
 Underfull \hbox (badness 2376) in paragraph at lines 685--687
@@ -1462,46 +1392,18 @@ Underfull \hbox (badness 2376) in paragraph at lines 685--687
  soil compaction and
  []
 
-
-LaTeX Warning: Reference `problem-description' on page 14 undefined on input li
-ne 693.
-
-
-LaTeX Warning: Reference `fig:batted-ball-density' on page 14 undefined on inpu
-t line 699.
-
-
-LaTeX Warning: Reference `fig:corkboard-concept' on page 14 undefined on input 
-line 699.
-
-
-LaTeX Warning: Reference `fig:lit-review-density-comparison' on page 14 undefin
-ed on input line 714.
-
-[14]
+[16]
 File: 03-Review-of-Literature_files/figure-latex/lit-review-density-comparison-
 1.pdf Graphic file (type pdf)
 <use 03-Review-of-Literature_files/figure-latex/lit-review-density-comparison-1
 .pdf>
-
-LaTeX Warning: Reference `fig:daish-spin-release-angle' on page 15 undefined on
- input line 731.
-
-
-LaTeX Warning: Reference `fig:ball-indentation-release-angle' on page 15 undefi
-ned on input line 733.
-
-
-LaTeX Warning: Reference `fig:ball-indentation-release-angle' on page 15 undefi
-ned on input line 736.
-
 File: images/illustrations/ball_spin_effect/daish_fig_9.2_redraw.pdf Graphic fi
 le (type pdf)
 <use images/illustrations/ball_spin_effect/daish_fig_9.2_redraw.pdf>
 File: images/illustrations/ball_indentation/ball_indentation_1_panel.png Graphi
 c file (type bmp)
 <images/illustrations/ball_indentation/ball_indentation_1_panel.png>
-[15] [16]
+[17] [18]
 Underfull \hbox (badness 1406) in paragraph at lines 770--774
 \TU/Roboto(0)/m/n/10 and plasticity of the surface. Surface deformation attenua
 tes linear and rotational
@@ -1509,21 +1411,17 @@ tes linear and rotational
 
 LaTeX Font Info:    Font shape `TU/Roboto(0)/m/it' will be
 (Font)              scaled to size 8.0pt on input line 799.
-[17]
-
-LaTeX Warning: Reference `fig:example-phase-diagram' on page 18 undefined on in
-put line 828.
-
+[19]
 File: 03-Review-of-Literature_files/figure-latex/example-phase-diagram-1.pdf Gr
 aphic file (type pdf)
 <use 03-Review-of-Literature_files/figure-latex/example-phase-diagram-1.pdf>
-[18] [19]
+[20]
 Underfull \hbox (badness 1199) in paragraph at lines 892--894
 \TU/Roboto(0)/m/n/9 particle sizes…these treatments, however, add significant t
 ime and effort when
  []
 
-[20]
+[21]
 Underfull \hbox (badness 1622) in paragraph at lines 903--905
 \TU/Roboto(0)/m/n/10 tested in the same lab, by the same operator. A system whi
 ch relies entirely on
@@ -1541,28 +1439,7 @@ Underfull \hbox (badness 2903) in paragraph at lines 920--922
 ten noticed serious
  []
 
-[21] [22]
-
-LaTeX Warning: Reference `soil-toughness' on page 23 undefined on input line 98
-9.
-
-[23]
-
-LaTeX Warning: Reference `atterberg-limits-reproducibility-and-repeatability' o
-n page 24 undefined on input line 1008.
-
-
-LaTeX Warning: Reference `eq:gravimetric-water-content' on page 24 undefined on
- input line 1010.
-
-
-LaTeX Warning: Reference `fig:ll-test-procedure' on page 24 undefined on input 
-line 1019.
-
-
-LaTeX Warning: Reference `fig:ll-test-procedure' on page 24 undefined on input 
-line 1021.
-
+[22] [23] [24]
 File: ./figs/png/example-LL-combined-panels.png Graphic file (type bmp)
 <./figs/png/example-LL-combined-panels.png>
 LaTeX Font Info:    Font shape `TU/FiraMathRegular(1)/m/n' will be
@@ -1583,61 +1460,20 @@ Underfull \hbox (badness 1221) in paragraph at lines 1048--1052
  masses and angles so
  []
 
-[24]
-
-LaTeX Warning: Reference `fig:pl-test-procedure' on page 25 undefined on input 
-line 1058.
-
-
-LaTeX Warning: Reference `fig:pl-test-procedure' on page 25 undefined on input 
-line 1059.
-
+[25]
 File: figs/png/example-pl-threads-panels.png Graphic file (type bmp)
 <figs/png/example-pl-threads-panels.png>
-[25]
-
-LaTeX Warning: Reference `atterberg-limits-reproducibility-and-repeatability' o
-n page 26 undefined on input line 1081.
-
-
-LaTeX Warning: Reference `plastic-limit-test-improvement-attempts' on page 26 u
-ndefined on input line 1081.
-
-
+[26]
 Underfull \hbox (badness 3907) in paragraph at lines 1089--1093
 [][][]\TU/Roboto(0)/m/n/10 Sherwood[][] ([][]1970[][]) conducted an extensive i
 nvestigation on the repeatability and
  []
 
-
-LaTeX Warning: Reference `fig:sherwood-overall-comparison' on page 26 undefined
- on input line 1095.
-
-
-LaTeX Warning: Reference `fig:sherwood-overall-comparison' on page 26 undefined
- on input line 1097.
-
 File: 03-Review-of-Literature_files/figure-latex/sherwood-overall-comparison-1.
 pdf Graphic file (type pdf)
 <use 03-Review-of-Literature_files/figure-latex/sherwood-overall-comparison-1.p
 df>
-
-LaTeX Warning: Reference `fig:sherwood-overall-comparison' on page 26 undefined
- on input line 1110.
-
-
-LaTeX Warning: Reference `fig:sherwood-cov-comparison' on page 26 undefined on 
-input line 1111.
-
-[26] [27]
-
-LaTeX Warning: Reference `fig:sherwood-cov-comparison' on page 28 undefined on 
-input line 1116.
-
-
-LaTeX Warning: Reference `fig:sherwood-cone-cup-comparison' on page 28 undefine
-d on input line 1118.
-
+[27] [28]
 File: 03-Review-of-Literature_files/figure-latex/sherwood-cov-comparison-1.pdf 
 Graphic file (type pdf)
 <use 03-Review-of-Literature_files/figure-latex/sherwood-cov-comparison-1.pdf>
@@ -1645,98 +1481,40 @@ File: 03-Review-of-Literature_files/figure-latex/sherwood-cone-cup-comparison-1
 .pdf Graphic file (type pdf)
 <use 03-Review-of-Literature_files/figure-latex/sherwood-cone-cup-comparison-1.
 pdf>
-
-LaTeX Warning: Reference `atterberg-limits-reproducibility-and-repeatability' o
-n page 28 undefined on input line 1151.
-
-
-Underfull \hbox (badness 4060) in paragraph at lines 1151--1153
- []\TU/Roboto(0)/b/n/10 Sources of error in Atterberg limit methods[] \TU/Robot
-o(0)/m/n/10 Section [] described the expected
- []
-
-[28] [29] [30]
+[29] [30] [31]
 File: figs/pdf/LL-w-uncertainty-for-a-single-point.pdf Graphic file (type pdf)
 <use figs/pdf/LL-w-uncertainty-for-a-single-point.pdf>
-
-LaTeX Warning: Reference `fig:LL-w-determination-variability' on page 31 undefi
-ned on input line 1246.
-
-
-LaTeX Warning: Reference `fig:LL-w-determination-variability' on page 31 undefi
-ned on input line 1250.
-
 
 Underfull \hbox (badness 2142) in paragraph at lines 1255--1261
 \TU/Roboto(0)/m/n/10 Most attempts to improve the plastic limit test have focus
 ed on mechanizing the
  []
 
-
-Underfull \vbox (badness 1917) has occurred while \output is active []
-
-[31]
-
-LaTeX Warning: Reference `fig:barnes-apparatus' on page 32 undefined on input l
-ine 1268.
-
-
-LaTeX Warning: Reference `soil-toughness' on page 32 undefined on input line 12
-73.
-
+[32]
 File: ./images/barnes-apparatus.png Graphic file (type bmp)
 <./images/barnes-apparatus.png>
-
-LaTeX Warning: Reference `fig:moreno-marato-thread-bending-procedure' on page 3
-2 undefined on input line 1284.
-
 File: ./images/moreno-marato-bending-limit-procedure.png Graphic file (type bmp
 )
 <./images/moreno-marato-bending-limit-procedure.png>
-[32] [33]
+[33] [34]
 Underfull \hbox (badness 2027) in paragraph at lines 1315--1317
 []\TU/Roboto(0)/m/n/10 Many attempts have been made to improve or supplant the 
 canonical Atterberg
  []
 
-
-LaTeX Warning: Reference `corkboard-effect-section' on page 34 undefined on inp
-ut line 1321.
-
-
-LaTeX Warning: Reference `corkboard-effect-section' on page 34 undefined on inp
-ut line 1337.
-
-
-LaTeX Warning: Reference `atterberg-limits-origins' on page 34 undefined on inp
-ut line 1341.
-
-[34]
-
-LaTeX Warning: Reference `plastic-limit-test-improvement-attempts' on page 35 u
-ndefined on input line 1356.
-
+[35]
 LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
 (Font)              scaled to size 5.8pt on input line 1368.
-
-LaTeX Warning: Reference `multiple-clay-type-mixtures' on page 35 undefined on 
-input line 1376.
-
-[35]
+[36]
 Underfull \hbox (badness 1281) in paragraph at lines 1398--1399
 []\TU/Roboto(0)/m/n/10 The language above suggests Casagrande favored the use o
 f a direct toughness
  []
 
-[36]
-
-LaTeX Warning: Reference `fig:moreno-maroto-chart' on page 37 undefined on inpu
-t line 1420.
-
-
-Underfull \hbox (badness 6125) in paragraph at lines 1420--1421
+[37]
+Underfull \hbox (badness 3199) in paragraph at lines 1420--1421
 \TU/Roboto(0)/m/n/10 fine-grained soils based on their toughness equation (Figu
-re []) and qualitative
+re [][]3.13[][]) and qualitative
  []
 
 File: 03-Review-of-Literature_files/figure-latex/moreno-maroto-chart-1.pdf Grap
@@ -1749,68 +1527,19 @@ n from Moreno-Maroto and
  []
 
 
-LaTeX Warning: Reference `eq:moreno-maroto-toughness' on page 37 undefined on i
-nput line 1432.
-
-
 Underfull \hbox (badness 1097) in paragraph at lines 1434--1437
 \TU/Roboto(0)/m/n/10 C-line and M-line closely match the toughness groups given
  by [][]Barnes[][] ([][]2009[][]). An
  []
 
-[37] [38] [39]
-
-LaTeX Warning: Reference `transitional-fines-content' on page 40 undefined on i
-nput line 1524.
-
-
-LaTeX Warning: Reference `coarse-fraction-effects-on-soil-mixtures' on page 40 
-undefined on input line 1526.
-
-
-LaTeX Warning: Reference `multiple-clay-type-mixtures' on page 40 undefined on 
-input line 1528.
-
-[40]
-
-LaTeX Warning: Reference `fig:tfc-stages' on page 41 undefined on input line 15
-44.
-
+[38] [39] [40] [41]
 File: figs/pdf/transitional-fines-content-stages.pdf Graphic file (type pdf)
 <use figs/pdf/transitional-fines-content-stages.pdf>
-
-LaTeX Warning: Reference `tab:tfc-definition-methods' on page 41 undefined on i
-nput line 1561.
-
-
-LaTeX Warning: Reference `fig:tfc-stages' on page 41 undefined on input line 16
-13.
-
-[41]
-
-LaTeX Warning: Reference `eq:global-tfc-void-ratio' on page 42 undefined on inp
-ut line 1626.
-
-
-LaTeX Warning: Reference `eq:global-tfc-void-ratio' on page 42 undefined on inp
-ut line 1630.
-
-
-LaTeX Warning: Reference `eq:intergranular-void-ratio-equation' on page 42 unde
-fined on input line 1638.
-
-[42]
-
-LaTeX Warning: Reference `eq:lit-review-intergranular-porosity-equation' on pag
-e 43 undefined on input line 1657.
-
-
-LaTeX Warning: Reference `generalized-intergranular-porosity-equation' on page 
-43 undefined on input line 1657.
-
-
-LaTeX Warning: Reference `fig:intergranular-void-ratio-diagram' on page 43 unde
-fined on input line 1659.
+[42] [43]
+Underfull \hbox (badness 2376) in paragraph at lines 1659--1662
+[]\TU/Roboto(0)/m/n/10 Figure [][]3.15[][] illustrates phase volumes for a hypt
+hetical sand-clay mixture having
+ []
 
 File: E:/OneDrive - The Pennsylvania State University/PSU2019-present/A_inf_soi
 ls_PhD/drafts/phd-thesis-proposal/figs/pdf/intergranular-void-ratio-75-percent-
@@ -1818,18 +1547,14 @@ sand.pdf Graphic file (type pdf)
 <use E:/OneDrive - The Pennsylvania State University/PSU2019-present/A_inf_soil
 s_PhD/drafts/phd-thesis-proposal/figs/pdf/intergranular-void-ratio-75-percent-s
 and.pdf>
-[43]
-
-LaTeX Warning: Reference `fig:lade-1998-figure-7' on page 44 undefined on input
- line 1690.
-
+[44]
 File: E:/OneDrive - The Pennsylvania State University/PSU2019-present/A_inf_soi
 ls_PhD/drafts/phd-thesis-proposal/images/illustrations/Lade_1998_Figure_7/Lade_
 1998_Figure_7.pdf Graphic file (type pdf)
 <use E:/OneDrive - The Pennsylvania State University/PSU2019-present/A_inf_soil
 s_PhD/drafts/phd-thesis-proposal/images/illustrations/Lade_1998_Figure_7/Lade_1
 998_Figure_7.pdf>
-[44] [45]
+[45] [46]
 Underfull \hbox (badness 4242) in paragraph at lines 1732--1738
  []\TU/Roboto(0)/b/n/10 Effect of compaction/consolidation method on TFC[] \TU/
 Roboto(0)/m/n/10 Mixtures subjected to static
@@ -1841,23 +1566,13 @@ Underfull \hbox (badness 1194) in paragraph at lines 1748--1750
 and), but behavioral
  []
 
-[46] [47]
-
-LaTeX Warning: Reference `tfc-size-ratio' on page 48 undefined on input line 18
-32.
-
-
+[47] [48]
 Underfull \hbox (badness 1715) in paragraph at lines 1827--1833
 \TU/Roboto(0)/m/n/10 The uniformity of sand included in soil mixtures has not b
 een studied extensively.
  []
 
-[48]
-
-LaTeX Warning: Reference `fig:dumbleton-west-1666b-fig8-redraw' on page 49 unde
-fined on input line 1862.
-
-
+[49]
 Underfull \hbox (badness 5908) in paragraph at lines 1860--1863
 [][][]\TU/Roboto(0)/m/n/10 Dumbleton and West[][] ([][]1966[][]) measured Atter
 berg limits of mixtures containing
@@ -1865,49 +1580,23 @@ berg limits of mixtures containing
 
 File: figs/pdf/dumbleton-west-1966b-fig8-redraw.pdf Graphic file (type pdf)
 <use figs/pdf/dumbleton-west-1966b-fig8-redraw.pdf>
-[49]
+[50]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[50]
-
-LaTeX Warning: Reference `proposed-experiments' on page 51 undefined on input l
-ine 1941.
-
-[51]
+[51] [52]
 Section 4.
-
-LaTeX Warning: Reference `cleatmark-method-development-chapter' on page 52 unde
-fined on input line 1952.
-
-
-LaTeX Warning: Reference `oversize-particles-atterberg-limits-experiment' on pa
-ge 52 undefined on input line 1953.
-
-
-LaTeX Warning: Reference `fig:gantt-chart' on page 52 undefined on input line 1
-954.
-
 File: figs/pdf/phd-gantt-chart.pdf Graphic file (type pdf)
 <use figs/pdf/phd-gantt-chart.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[52
+[53
 
 ]
-
-LaTeX Warning: Reference `corkboard-effect-section' on page 53 undefined on inp
-ut line 1976.
-
-
 Underfull \hbox (badness 1406) in paragraph at lines 1993--1995
 []\TU/Roboto(0)/m/n/10 Can a laboratory method identify a single water content 
 corresponding to the
  []
-
-
-LaTeX Warning: Reference `corkboard-effect-section' on page 53 undefined on inp
-ut line 2007.
 
 
 Underfull \hbox (badness 1237) in paragraph at lines 2009--2011
@@ -1921,11 +1610,7 @@ Underfull \hbox (badness 2005) in paragraph at lines 2009--2011
 mulates the real
  []
 
-
-LaTeX Warning: Reference `fig:cleat-mark-device' on page 53 undefined on input 
-line 2021.
-
-[53]
+[54]
 File: images/cleatmark_device.png Graphic file (type bmp)
 <images/cleatmark_device.png>
 File: images/nine-spike-pattern.jpg Graphic file (type bmp)
@@ -1935,131 +1620,35 @@ Overfull \hbox (1.64053pt too wide) in paragraph at lines 2024--2024
 [][] [] 
  []
 
-[54]
-
-LaTeX Warning: Reference `sand-clay-mix-calcs' on page 55 undefined on input li
-ne 2124.
-
-
-LaTeX Warning: Reference `eq:sand-clay-ratios-air-dry-sand-mass' on page 55 und
-efined on input line 2125.
-
-
-LaTeX Warning: Reference `eq:sand-clay-ratios-air-dry-clay-mass' on page 55 und
-efined on input line 2125.
-
-[55]
-
-LaTeX Warning: Reference `ball-response-lit-review' on page 56 undefined on inp
-ut line 2140.
-
-
+[55] [56]
 Underfull \hbox (badness 2698) in paragraph at lines 2140--2142
 \TU/Roboto(0)/m/n/10 An important consideration in this test’s development is a
 ccurately simulating the
  []
 
-[56]
-
-LaTeX Warning: Reference `deriving-values-from-proctor-curves' on page 57 undef
-ined on input line 2168.
-
-
-LaTeX Warning: Reference `fig:proctor-vs-observed-infield-density' on page 57 u
-ndefined on input line 2171.
-
-
-LaTeX Warning: Reference `fig:lit-review-density-comparison' on page 57 undefin
-ed on input line 2172.
-
+[57]
 File: ../../cleatmarkmethod/figs/pdf/proctor-vs-observed-infield-density.pdf Gr
 aphic file (type pdf)
 <use ../../cleatmarkmethod/figs/pdf/proctor-vs-observed-infield-density.pdf>
-
-LaTeX Warning: Reference `cleat-mark-energy-per-vol-conversion' on page 57 unde
-fined on input line 2193.
-
-
-LaTeX Warning: Reference `eq:modified-energy-per-volume-appendix' on page 57 un
-defined on input line 2195.
-
-[57]
-
-LaTeX Warning: Reference `fig:proctor-vs-cleat-mark-achieved-density-fig' on pa
-ge 58 undefined on input line 2205.
-
-
-LaTeX Warning: Reference `fig:proctor-vs-cleat-mark-achieved-density-fig' on pa
-ge 58 undefined on input line 2206.
-
+[58]
 File: ../../cleatmarkmethod/figs/pdf/proctor-vs-qc-density-comparison.pdf Graph
 ic file (type pdf)
 <use ../../cleatmarkmethod/figs/pdf/proctor-vs-qc-density-comparison.pdf>
-[58]
-
-LaTeX Warning: Reference `performing-cleat-mark-test' on page 59 undefined on i
-nput line 2235.
-
-
-LaTeX Warning: Reference `tab:derived-water-contents-from-cleat-mark-test-effor
-t-comparison-tab' on page 59 undefined on input line 2237.
-
-
-LaTeX Warning: Reference `tab:derived-water-contents-from-cleat-mark-test-effor
-t-comparison-tab' on page 59 undefined on input line 2265.
-
-
-LaTeX Warning: Reference `fig:proctor-vs-observed-infield-density' on page 59 u
-ndefined on input line 2267.
-
-[59]
-
-LaTeX Warning: Reference `sand-replacement-vs-scanner-for-theta' on page 60 und
-efined on input line 2311.
-
-
+[59] [60]
 Underfull \hbox (badness 1552) in paragraph at lines 2313--2318
 []\TU/Roboto(0)/m/n/10 Penetrometer resistance is measured with a handheld devi
 ce having a maximum
  []
 
-
-LaTeX Warning: Reference `fig:daily-specimen-repair-panels' on page 60 undefine
-d on input line 2327.
-
 File: figs/png/daily-specimen-repairs-panels.png Graphic file (type bmp)
 <figs/png/daily-specimen-repairs-panels.png>
-
-LaTeX Warning: Reference `measuring-and-adjusting-water-content' on page 60 und
-efined on input line 2337.
-
-
-LaTeX Warning: Reference `measuring-and-adjusting-water-content' on page 60 und
-efined on input line 2337.
-
-
-LaTeX Warning: Reference `fig:heat-lamps-photo' on page 60 undefined on input l
-ine 2349.
-
 
 Underfull \hbox (badness 1337) in paragraph at lines 2351--2354
 []\TU/Roboto(0)/m/n/10 Proper configuration of the drying apparatus was determi
 ned through a series of
  []
 
-[60]
-
-LaTeX Warning: Reference `fig:water-content-change-by-lamp-height' on page 61 u
-ndefined on input line 2364.
-
-
-LaTeX Warning: Reference `fig:water-content-change-by-lamp-height' on page 61 u
-ndefined on input line 2366.
-
-
-LaTeX Warning: Reference `fig:lamp-height-calibration' on page 61 undefined on 
-input line 2374.
-
+[61]
 File: ./images/heat-lamps.jpg Graphic file (type bmp)
 <./images/heat-lamps.jpg>
 File: ../../cleatmarkmethod/figs/manually-built/drydown-surface-temp-comparison
@@ -2079,80 +1668,24 @@ Underfull \hbox (badness 1968) in paragraph at lines 2406--2409
 
 Underfull \vbox (badness 7344) has occurred while \output is active []
 
-[61] [62]
-
-LaTeX Warning: Reference `fig:water-content-grid-photo' on page 63 undefined on
- input line 2411.
-
-
-LaTeX Warning: Reference `fig:w-variation-across-space-and-time' on page 63 und
-efined on input line 2414.
-
+[62] [63]
 File: images/w-grid-sampling.png Graphic file (type bmp)
 <images/w-grid-sampling.png>
 File: figs/pdf/w-variation-across-space-and-time.pdf Graphic file (type pdf)
 <use figs/pdf/w-variation-across-space-and-time.pdf>
-
-LaTeX Warning: Reference `soil-water-content' on page 63 undefined on input lin
-e 2440.
-
-[63]
-
-LaTeX Warning: Reference `fig:mini-density-panels' on page 64 undefined on inpu
-t line 2448.
-
+[64] [65]
 File: figs/png/mini-density-combined-panels.png Graphic file (type bmp)
 <figs/png/mini-density-combined-panels.png>
-
-LaTeX Warning: Reference `fig:mini-density-panels' on page 64 undefined on inpu
-t line 2470.
-
-[64]
-
-LaTeX Warning: Reference `fig:mini-density-panels' on page 65 undefined on inpu
-t line 2479.
-
-
-LaTeX Warning: Reference `cleat-mark-specimen-3D-scanning' on page 65 undefined
- on input line 2480.
-
-
-LaTeX Warning: Reference `fig:sand-backfill-vs-3D-scanner-for-volumetric-w-dete
-rmination-fig' on page 65 undefined on input line 2500.
-
-
-LaTeX Warning: Reference `tab:sand-backfill-vs-3D-scanner-for-volumetric-w-dete
-rmination-table' on page 65 undefined on input line 2500.
-
+[66]
 File: ../../cleatmarkmethod/figs/pdf/mini-plug-density-comp.pdf Graphic file (t
 ype pdf)
 <use ../../cleatmarkmethod/figs/pdf/mini-plug-density-comp.pdf>
-
-LaTeX Warning: Reference `fig:sand-backfill-vs-3D-scanner-for-volumetric-w-dete
-rmination-fig' on page 65 undefined on input line 2513.
-
-[65]
-
-LaTeX Warning: Reference `fig:orienting-and-removing-cyl-fig' on page 66 undefi
-ned on input line 2540.
-
-
-Underfull \hbox (badness 1137) in paragraph at lines 2538--2542
-\TU/Roboto(0)/m/n/10 fragments of the aluminum specimen holder. Figure [] A sho
-ws the raw mesh in
- []
-
-
-LaTeX Warning: Reference `fig:orienting-and-removing-cyl-fig' on page 66 undefi
-ned on input line 2549.
-
-
+[67]
 Underfull \hbox (badness 1270) in paragraph at lines 2543--2550
 []\TU/Roboto(0)/m/n/10 Mesh processing may be done interactively with point-and
 -click software such as
  []
 
-[66]
 LaTeX Font Info:    Font shape `TU/Roboto(1)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 2562.
 LaTeX Font Info:    Font shape `TU/Roboto(1)/m/n' will be
@@ -2160,19 +1693,11 @@ LaTeX Font Info:    Font shape `TU/Roboto(1)/m/n' will be
 LaTeX Font Info:    Font shape `TU/Roboto(1)/m/n' will be
 (Font)              scaled to size 5.8pt on input line 2562.
 
-LaTeX Warning: Reference `fig:orienting-and-removing-cyl-fig' on page 67 undefi
-ned on input line 2565.
+Underfull \vbox (badness 1490) has occurred while \output is active []
 
-
-LaTeX Warning: Reference `fig:mesh-z-points-histogram' on page 67 undefined on 
-input line 2575.
-
+[68]
 File: ../../cleatmarkmethod/figs/pdf/z-histogram.pdf Graphic file (type pdf)
 <use ../../cleatmarkmethod/figs/pdf/z-histogram.pdf>
-
-LaTeX Warning: Reference `fig:orienting-and-removing-cyl-fig' on page 67 undefi
-ned on input line 2586.
-
 File: ../../cleatmarkmethod/figs/manually-built/processing-pipeline-panel.png G
 raphic file (type bmp)
 <../../cleatmarkmethod/figs/manually-built/processing-pipeline-panel.png>
@@ -2182,11 +1707,7 @@ LaTeX Font Info:    Font shape `TU/Roboto(1)/m/n' will be
 (Font)              scaled to size 6.0pt on input line 2597.
 LaTeX Font Info:    Font shape `TU/Roboto(1)/m/n' will be
 (Font)              scaled to size 5.0pt on input line 2597.
-
-LaTeX Warning: Reference `fig:decimation-titration-surface-area' on page 67 und
-efined on input line 2608.
-
-[67] [68]
+[69] [70]
 File: ../../cleatmarkmethod/figs/pdf/surface-area-by-faces-titration.pdf Graphi
 c file (type pdf)
 <use ../../cleatmarkmethod/figs/pdf/surface-area-by-faces-titration.pdf>
@@ -2196,50 +1717,402 @@ Underfull \hbox (badness 5050) in paragraph at lines 2623--2625
 the mesh processing
  []
 
-
-LaTeX Warning: Reference `fig:ref-circ-plane-fig' on page 69 undefined on input
- line 2631.
-
 File: figs/png/ref-circ-plane.png Graphic file (type bmp)
 <figs/png/ref-circ-plane.png>
-
-LaTeX Warning: Reference `fig:example-meshes-panels' on page 69 undefined on in
-put line 2642.
-
 File: ../../cleatmarkmethod/figs/png/example-high-medium-low-surface-area-meshe
 s.png Graphic file (type bmp)
 <../../cleatmarkmethod/figs/png/example-high-medium-low-surface-area-meshes.png
 >
+[71]
 File: ../../cleatmarkmethod/figs/png/top-view-plan-view-combined.png Graphic fi
 le (type bmp)
 <../../cleatmarkmethod/figs/png/top-view-plan-view-combined.png>
-[69]
-
-LaTeX Warning: Reference `fig:cleat-mark-sand-backfill-panel' on page 70 undefi
-ned on input line 2675.
-
 File: figs/png/cleat-mark-sand-backfill-panel.png Graphic file (type bmp)
 <figs/png/cleat-mark-sand-backfill-panel.png>
-
-Underfull \vbox (badness 1859) has occurred while \output is active []
-
-[70] [71] [72]
-
-LaTeX Warning: Reference `fig:example-nrfi-vs-water-content-curve' on page 73 u
-ndefined on input line 2716.
-
-
-LaTeX Warning: Reference `fig:example-nrfi-vs-water-content-curve' on page 73 u
-ndefined on input line 2718.
-
+[72] [73] [74]
 File: ./figs/pdf/example-w-crit-curve.pdf Graphic file (type pdf)
 <use ./figs/pdf/example-w-crit-curve.pdf>
+[75] [76]
+Overfull \hbox (1.00035pt too wide) in paragraph at lines 2792--2793
+[]\TU/Roboto(0)/m/n/10 For a given clay soil, what is the critical sand content
+ above which the cleat-in/cleat-out
+ []
 
-LaTeX Warning: Reference `fig:example-nrfi-vs-water-content-curve' on page 73 u
-ndefined on input line 2745.
+File: figs/pdf/sand-pcts-to-choose.pdf Graphic file (type pdf)
+<use figs/pdf/sand-pcts-to-choose.pdf>
+[77] [78] [79]
+Underfull \hbox (badness 3098) in paragraph at lines 2882--2883
+\TU/Roboto(0)/m/n/10 Infield soils have two critical water contents that define
+ the range of acceptable
+ []
 
 
-LaTeX Warning: Reference `fig:example-nrfi-vs-water-content-curve' on page 73 u
-ndefined on input line 2748.
+Underfull \hbox (badness 1540) in paragraph at lines 2918--2919
+[]\TU/Roboto(0)/m/n/10 Clays with higher maximum toughness will require more sa
+nd to reduce their
+ []
 
-[73
+[80]
+File: images/gilson_stock_proctor_extruder_photo.jpg Graphic file (type bmp)
+<images/gilson_stock_proctor_extruder_photo.jpg>
+[81]
+Underfull \hbox (badness 1210) in paragraph at lines 2959--2961
+[]\TU/Roboto(0)/m/n/10 A stress-strain curve will be fitted using the R languag
+e for statistical computing
+ []
+
+File: ./images/barnes-example-toughness-vs-w-plot.png Graphic file (type bmp)
+<./images/barnes-example-toughness-vs-w-plot.png>
+[82] [83] [84] [85] [86]
+Section 5.
+
+Underfull \vbox (badness 1028) has occurred while \output is active []
+
+[87
+
+] [88]
+Underfull \hbox (badness 1902) in paragraph at lines 3203--3205
+\TU/Roboto(0)/m/n/10 notebooks, Microsoft Excel, Microsoft Word, Google docs, E
+vernote, and Microsoft
+ []
+
+
+Underfull \hbox (badness 1009) in paragraph at lines 3231--3234
+\TU/Roboto(0)/m/n/10 is built around the principles outlined in $[]$ ([][]Wilki
+nson, 2005[][]).
+ []
+
+LaTeX Font Info:    Font shape `TU/Roboto(1)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 3238.
+
+Underfull \hbox (badness 1448) in paragraph at lines 3235--3239
+[]\TU/Roboto(0)/m/n/10 I usually produce tables with \TU/Roboto(0)/b/n/10 kable
+Extra \TU/Roboto(0)/m/n/10 in R ([][]Zhu, 2021[][]). This package allows
+ []
+
+[89] [90]
+Underfull \hbox (badness 2302) in paragraph at lines 3306--3308
+[]\TU/Roboto(0)/m/n/10 This rule states that the otuput (\TU/lmtt/m/n/10 fig-1.
+pdf\TU/Roboto(0)/m/n/10 ) should be built using \TU/lmtt/m/n/10 fig-1.R \TU/Rob
+oto(0)/m/n/10 and
+ []
+
+[91]
+Underfull \hbox (badness 1132) in paragraph at lines 3312--3315
+[]\TU/lmtt/m/n/10 Make \TU/Roboto(0)/m/n/10 now knows how to build the target f
+iles and it watches for changes in the
+ []
+
+File: E:/OneDrive - The Pennsylvania State University/PSU2019-present/A_inf_soi
+ls_PhD/drafts/phd-thesis-proposal/example-mf-project/example-dependency-graph.p
+df Graphic file (type pdf)
+<use E:/OneDrive - The Pennsylvania State University/PSU2019-present/A_inf_soil
+s_PhD/drafts/phd-thesis-proposal/example-mf-project/example-dependency-graph.pd
+f>
+[92]
+File: images/final-comic.png Graphic file (type bmp)
+<images/final-comic.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[93] [94] [95]
+Section 6.
+
+Underfull \hbox (badness 2096) in paragraph at lines 3443--3444
+[]\TU/Roboto(0)/m/n/10 Value of volumetric water content where an infield soil
+ []
+
+
+Underfull \hbox (badness 3343) in paragraph at lines 3443--3444
+\TU/Roboto(0)/m/n/10 abruptly changes between a ductile, cleat-in/cleat-out con
+dition and a brittle
+ []
+
+[96
+
+] [97]
+Section 7.
+
+Underfull \hbox (badness 2626) in paragraph at lines 3484--3486
+[][]\TU/Roboto(0)/m/n/10 ASTM: D 698 - 00a. 2003. Standard Test Methods for Lab
+oratory Compaction
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 3487--3489
+[][]\TU/Roboto(0)/m/n/10 ASTM International. 2012. D 698 – 12e2: Standard Test 
+Methods for Laboratory
+ []
+
+
+Underfull \hbox (badness 1603) in paragraph at lines 3487--3489
+\TU/Roboto(0)/m/n/10 Compaction Characteristics of Soil Using Standard Effort (
+12 400 ft-lbf/ft3 (600
+ []
+
+
+Underfull \hbox (badness 1389) in paragraph at lines 3499--3501
+[][]\TU/Roboto(0)/m/n/10 ASTM International. 2015b. D1557 - 12e1 Standard Test 
+Methods for Laboratory
+ []
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 3499--3501
+\TU/Roboto(0)/m/n/10 Compaction Characteristics of Soil Using Modified Effort (
+56,000 ft-lbf/ft3 (2,700
+ []
+
+[98
+
+]
+Overfull \hbox (0.53828pt too wide) in paragraph at lines 3511--3513
+\TU/Roboto(0)/m/n/10 Compressive Strength of Cohesive Soil. ASTM International 
+i: 1–7. doi: [][]10.1520/D2166[][]. 
+ []
+
+
+Underfull \hbox (badness 2269) in paragraph at lines 3526--3528
+[][]\TU/Roboto(0)/m/n/10 Barnes, G.E. 2013a. The Plastic Limit and Workability 
+of Soils. : 427. [][]$[][][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3526--3528
+[] [] [][][] [] [][][][][][][][] [] [][][][][][][][][][] [] [][] [] [][] [] [][
+][] [] [][][][][][][][][][] [] [][][][][][][][][][][][][][] [] [][] [][] [][] [
+][] [][][] [][] [][][] []
+ []
+
+[99]
+Underfull \hbox (badness 1067) in paragraph at lines 3562--3564
+\TU/Roboto(0)/m/n/10 subgrade. International Journal of Pavement Engineering 18
+(8): 714–726. doi:
+ []
+
+
+Underfull \hbox (badness 4846) in paragraph at lines 3580--3582
+\TU/Roboto(0)/m/n/10 Processing System. ERCIM News. [][]$[][][][][] [] [] [] []
+[][][] [] [][][] [][] [][][][][] [] [][] [] [][] [] [][][][][][][][] [] [][][][
+][] []
+ []
+
+
+Overfull \hbox (22.27739pt too wide) in paragraph at lines 3592--3594
+\TU/Roboto(0)/m/n/10 Soils and Their Plasticity. Clay Minerals 6(3): 179–193. d
+oi: [][]10.1180/claymin.1966.006.3.05[][]. 
+ []
+
+
+Overfull \hbox (29.76274pt too wide) in paragraph at lines 3598--3600
+\TU/Roboto(0)/m/n/10 Density. Industrial and Engineering Chemistry1 23(9): 1052
+–1058. doi: [][]10.1021/ie50261a017[][]. 
+ []
+
+[100]
+Underfull \hbox (badness 10000) in paragraph at lines 3610--3612
+[][]$[][][][][] [] [] [] [][][] [] [][][] [] [][][] [] [][][][][][][][] [] [][]
+[] [][] [][][][][][][] [][] [][][] [][] [][][][][][][][] [][] [][] [][] [][][][
+][][] [][] [][] [][] [][][][][][][] [][] [][][] [][]
+ []
+
+
+Underfull \hbox (badness 1917) in paragraph at lines 3622--3624
+[][]\TU/Roboto(0)/m/n/10 Howell, J.L., C.D. Shackelford, N.H. Amer, and R.T. St
+ern. 1997. Compaction of
+ []
+
+
+Overfull \hbox (54.18413pt too wide) in paragraph at lines 3631--3633
+\TU/Roboto(0)/m/n/10 clay–sand mixture. International Journal of Geo-Engineerin
+g 9(1). doi: [][]10.1186/s40703-018-0087-x[][]. 
+ []
+
+[101]
+Overfull \hbox (13.99126pt too wide) in paragraph at lines 3658--3660
+\TU/Roboto(0)/m/n/10 fines content. Engineering Geology 89(3-4): 195–205. doi: 
+[][]10.1016/j.enggeo.2006.10.001[][]. 
+ []
+
+
+Underfull \hbox (badness 2393) in paragraph at lines 3661--3663
+\TU/Roboto(0)/m/n/10 method to determine the plastic limit and consistency chan
+ges in all types of
+ []
+
+
+Underfull \hbox (badness 1558) in paragraph at lines 3682--3684
+[][]\TU/Roboto(0)/m/n/10 Pampush, J.D., J.M. Winchester, P.E. Morse, A.Q. Vinin
+g, D.M. Boyer, et al. 2016.
+ []
+
+
+Underfull \hbox (badness 1735) in paragraph at lines 3691--3693
+[][]\TU/Roboto(0)/m/n/10 Radcliffe, D.E., and J. Simunek. 2010. Soil physics wi
+th HYDRUS: Modeling and
+ []
+
+[102]
+Underfull \hbox (badness 2376) in paragraph at lines 3706--3708
+[][]\TU/Roboto(0)/m/n/10 Rossi, A.M., D.R. Hirmas, R.C. Graham, and P.D. Sternb
+erg. 2008. Bulk Density
+ []
+
+
+Underfull \hbox (badness 4168) in paragraph at lines 3706--3708
+\TU/Roboto(0)/m/n/10 Determination by Automated Three-Dimensional Laser Scannin
+g. Soil Science
+ []
+
+
+Underfull \hbox (badness 2478) in paragraph at lines 3730--3732
+[][]\TU/Roboto(0)/m/n/10 Sherwood, P.T., and M.D. Ryley. 1970. An investigation
+ of a cone-penetrometer
+ []
+
+[103]
+Overfull \hbox (4.42714pt too wide) in paragraph at lines 3772--3774
+[][]\TU/Roboto(0)/m/n/10 Ullman, N., and J. Monson. 2009. What are repeatabilit
+y and reproducibility? Standardization
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 3775--3777
+[][]\TU/Roboto(0)/m/n/10 Vallejo, L.E., and R. Mawby. 2000. Porosity influence 
+on the shear strength of
+ []
+
+
+Underfull \hbox (badness 4819) in paragraph at lines 3775--3777
+\TU/Roboto(0)/m/n/10 granular material-clay mixtures. Engineering Geology 58(2)
+: 125–136. doi:
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 3787--3789
+[][]\TU/Roboto(0)/m/n/10 Webb, R.H., K.E. Nussear, S. Carmichael, and T.C. Esqu
+e. 2014. Soil compaction
+ []
+
+
+Underfull \hbox (badness 2181) in paragraph at lines 3787--3789
+\TU/Roboto(0)/m/n/10 vulnerability at Organ Pipe Cactus National Monument, Ariz
+ona. United States
+ []
+
+[104]
+Underfull \hbox (badness 1783) in paragraph at lines 3817--3819
+\TU/Roboto(0)/m/n/10 sand-non plastic fines mixtures. Soils and Foundations 55(
+1): 213–219. doi:
+ []
+
+[105]
+Section 8.
+
+Overfull \hbox (17.36214pt too wide) in alignment at lines 3830--3835
+ [] [] [] [] [] 
+ []
+
+LaTeX Font Info:    Font shape `TU/Roboto(0)/m/it' will be
+(Font)              scaled to size 9.0pt on input line 3836.
+
+Overfull \hbox (17.36214pt too wide) in alignment at lines 3835--3840
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (17.36214pt too wide) in alignment at lines 3840--3842
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (17.36214pt too wide) in alignment at lines 3842--3844
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (17.36214pt too wide) in alignment at lines 3844--3940
+ [] [] [] [] [] 
+ []
+
+[106
+
+] [107]
+LaTeX Font Info:    Font shape `TU/Roboto(1)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 3983.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[108] [109]
+Underfull \vbox (badness 5217) has occurred while \output is active []
+
+[110]
+Overfull \hbox (5.39977pt too wide) in paragraph at lines 4081--4081
+[]\TU/Roboto(0)/b/n/12 Oven-dry sand solids based on impure “sand” and “clay” c
+omponents
+ []
+
+
+Underfull \hbox (badness 1024) in paragraph at lines 4083--4087
+\TU/Roboto(0)/m/n/10 0% sand-size particles. Therefore, accurate mixture calcul
+ations require a weighted
+ []
+
+
+Overfull \hbox (22.01184pt too wide) in paragraph at lines 4101--4102
+[]\TU/Roboto(0)/m/n/10 Note that because $[][]$ and $[][]$ are referenced to di
+fferent soils, $[][] [] []  [][][] [] []  [][][]$ 
+ []
+
+[111] [112]
+File: ../../cleatmarkmethod/figs/pdf/deriving-proctor-values.pdf Graphic file (
+type pdf)
+<use ../../cleatmarkmethod/figs/pdf/deriving-proctor-values.pdf>
+
+Underfull \hbox (badness 5637) in paragraph at lines 4203--4203
+[]\TU/Roboto(0)/b/n/12 Conversion of Proctor test energy-per-volume to cleat-ma
+rk
+ []
+
+[113]
+File: ../../cleatmarkmethod/photos-and-screen-recordings/resin-plug.jpg Graphic
+ file (type bmp)
+<../../cleatmarkmethod/photos-and-screen-recordings/resin-plug.jpg>
+[114]
+Overfull \hbox (27.765pt too wide) in paragraph at lines 4375--4375
+[]\TU/lmtt/m/n/10 ## - Session info -------------------------------------------
+--------------------[] 
+ []
+
+[115]
+Overfull \hbox (27.765pt too wide) in paragraph at lines 4375--4375
+[]\TU/lmtt/m/n/10 ## - Packages -----------------------------------------------
+--------------------[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[116]
+Overfull \hbox (33.015pt too wide) in paragraph at lines 4375--4375
+[]\TU/lmtt/m/n/10 ## [1] E:/OneDrive - The Pennsylvania State University/Docume
+nts/R/win-library/4.1[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[117] [118] (./Mascitti-phd-thesis-proposal.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 21350 strings out of 478451
+ 409123 string characters out of 5857040
+ 831596 words of memory out of 5000000
+ 41215 multiletter control sequences out of 15000+600000
+ 416169 words of font info for 158 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 87i,19n,122p,639b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on Mascitti-phd-thesis-proposal.pdf (118 pages).

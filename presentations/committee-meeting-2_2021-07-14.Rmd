@@ -119,6 +119,35 @@ knitr::include_graphics('committee-meeting-2-presentation-dependencies/scr-conce
 
 ---
 
+
+# Method development
+
+.pull-left[
+
+.middle[
+
+```{r newton-image, out.width="90%"}
+knitr::include_graphics('./committee-meeting-2-presentation-dependencies/newton-transparent.png')
+```
+
+]
+]
+
+.pull-right[
+.middle[
+.dark-grey[
+>_"I asked him where he had it made, and he said he made it himself._   
+>
+>_When I asked him where he got his tools, he said he made them himself, and laughing added 'if I had staid for other people to make my tools & things for me, I had never made anything...'"_
+
+]
+]
+]
+
+
+
+---
+
 # Cleat-mark test 
 
 .pull-left[
@@ -276,8 +305,6 @@ class: no-h1
 
 - volume 
 
-- surface area
-
 - surface energy 
 
 
@@ -358,54 +385,17 @@ background-size: contain
 
 # Water content 
 
-$w$ or $\theta$ ??
+(skip over for now; return later if time )
 
-$\theta = w~\cdot~\rho_{~bulk}$
-
---
-
-\- lack of dimensional stability
-
---
-
-\- repairs normally occur _just_ wet-of-optimum
-
---
-
-\- density @ test time likely &ne; initial preparation
-
---
-
-## - Therefore:
-Density at initial preparation may not be reflected in subsequent days of testing.
-
----
-
-```{r, message=FALSE, warning=FALSE, results='asis'}
-mini_density_images <- list.files(path = 'committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/mini-density/', full.names = T, recursive = FALSE)
-
-for (i in mini_density_images) {
-  cat("\n---\n")
-  cat("\n", "background-image: url(\"", i, "\")", "\n", sep = "")
-  cat("background-size: contain", "\n", sep = " ")
-}
-
-```
-
-
-background-image: url('presentation-figs/mini-plug-density-comp.png')
-background-size: contain
-
----
-
-background-image: url('committee-meeting-2-presentation-dependencies/daily-specimen-repairs-panels.png')
-background-size: contain
+- $\theta$ computed from 3D scanning & weighing 
 
 ---
 
 # Finally, some data 
 
-- 5 clay soils; all mixed to 60% sand 
+\- 5 clay soils; all mixed to 60% sand 
+
+\- fully compacted, tested over successive days
 
 ---
 
@@ -442,53 +432,61 @@ magick::image_read('committee-meeting-2-presentation-dependencies/hypothetical-d
 
 ---
 
+
+```{r include=FALSE}
+old_clays_dotplot <- "E:/onedrive-psu/PSU2019-present/A_inf_soils_PhD/SelectingClaysJan2021/figs/png/theta-crit-dotplot-5-clays.png"
+
+new_clays_dotplot <- here::here('presentations', 'committee-meeting-2-presentation-dependencies', basename(old_clays_dotplot))
+
+if(!file.exists(new_clays_dotplot) | file.mtime(old_clays_dotplot) > file.mtime(new_clays_dotplot)){file.copy(old_clays_dotplot, new_clays_dotplot, overwrite = T)}
+```
+
+
+background-image: url('committee-meeting-2-presentation-dependencies/theta-crit-dotplot-5-clays.png')
+background-size: contain
+
+---
+
 # Future experiments 
 
 
-- Even with these improvements it is a long process; need several data points to define curve 
+- Several days of testing per mix
 
-- Therefore must choose mixtures very carefully to represent as broad a spectrum of potential clays as possible 
+- Must choose mixtures carefully (represent broad spectrum of possibilities)
 
 
 ---
 
 # Representative materials
 
-- goal is to have a range of particle sizes, mineralogy, AND plasticity/toughness
+- Test range of particle sizes, mineralogy, AND plasticity/toughness
 
-- adjust SCR by adding pure Qz silt
+- Adjust SCR by adding pure Qz silt
 
 .middle[
 
 ```{r planned-scr-values}
 
-scr_possible_vals <- tibble::tibble(
-  `Clay name` = c('Black cotton soil', 'Ground mudstone', 'Fine-grained kaolinite', 'Low-plastic red clay', 'High-silt soil'),
-  presentation_order  = c(3, 2, 1, 4, 5),
-  clay_pct = format(100*c(0.6, 0.5, 0.8, 0.7, 0.15), digits = 0),
-  silt_pct = format(100- as.numeric(clay_pct), digits = 0),
-  scr = format(as.numeric(silt_pct) / as.numeric(clay_pct), digits = 2)
-  ) %>% 
-  dplyr::arrange(presentation_order) %>% 
-  dplyr::rename(
-    `% Clay-size` = clay_pct,
-    `% Silt-size` = silt_pct,
-    `Silt-to-clay ratio` = scr
-  ) %>% 
-  dplyr::select(-presentation_order)
+scr_possible_vals <- readr::read_rds(
+  "E:/onedrive-psu/PSU2019-present/A_inf_soils_PhD/SelectingClaysJan2021/analysis/data/derived-data/5-clays-silt-and-clay-fractions.rds"
+)
 
-scr_possible_vals %>% 
-  kableExtra::kbl(align = 'lccc',
-                  booktabs = TRUE,
-                  digits = 2,
-                #caption = 'The 5 soils from Experiment 1 have different silt-to-clay ratios; silt can be added to produce soils with equivalent SCR values but different clay minerals and clay particle sizes. High-silt soils cannot be tested at an SCR lower than their existing value.',
-                #caption.short = 'Adjusted silt-to-clay ratios of "pure" clays'
-                ) %>% 
+scr_kable <- scr_possible_vals %>% 
+  kableExtra::kbl(align = 'lccc', format = 'html',
+                  col.names = c(
+                    'Sample name',
+                    '% Silt-size',
+                    '% Clay-size',
+                    'SCR')
+                  ) %>% 
   kableExtra::row_spec(0, bold = TRUE) %>% 
-  # kableExtra::add_header_above(header = c(' ' = 1, 'Approximate particle-size parameters' = 3)) %>% 
   kableExtra::kable_styling()
   
+
+scr_kable
+
 ```
+
 
 ]
 
@@ -498,13 +496,6 @@ collecting the data is a lot of work so choosing the right materials to test is 
 
 ---
 
-class: no-h1
-background-image: url('committee-meeting-2-presentation-dependencies/sand-pcts-to-choose.png')
-background-size: contain
-
-# Sand percents to choose
-
----
 
 ```{r find-xrd-plots}
 # a no-no to hard-code paths but in this case I think 
@@ -556,17 +547,43 @@ for (i in coarser_clay_xrd_plots) {
 
 
 ---
+background-image: url('presentation-figs/hypothetical-stress-strain-curves.png')
+background-size: contain
+# Toughness concept 
 
-# Toughness hypotheses 
+```{r}
+# knitr::include_graphics('presentation-figs/hypothetical-stress-strain-curves.png')
+```
 
-- mixes w/ same % sand perform differently
-  - therefore, can't start w/ % sand.....must start with mineralogy/toughness 
+
+---
+
+# Broad hypotheses 
+
+1. Sand % + SCR not sufficient to predict soil behavior
+
+  - soils w/ **same** sand % and SCR can behave differently
   
-- increase or reduce toughness by altering sand content 
+  - soils w/ **different** sand % or SCR can behave similarly
 
-- adding silt will reduce performance for _all_ clays
+2. Desirable $\theta$ range extensible with higher-plasticity clays
 
-- interpolate desired toughness based on shape of toughness vs. % sand curve 
+3. Increases in silt will diminish performance as measured by toughness at $\theta_{crit}$ and by total useful $\theta$ range 
+
+
+<!-- # Toughness hypotheses  -->
+
+<!-- - mixes w/ same % sand and SCR perform differently.... -->
+
+<!-- - mixes w/ different SCR perform similarly... -->
+
+<!-- - therefore, can't start w/ % sand.....must start with mineralogy/toughness  -->
+
+<!-- - increase or reduce toughness by altering sand content  -->
+
+<!-- - adding silt will reduce performance for _all_ clays -->
+
+<!-- - interpolate desired toughness based on shape of toughness vs. % sand curve  -->
 
 ---
 
@@ -583,9 +600,7 @@ for (i in all_xrd_paths) {
   cat("\n---\n")
   cat("\n", "background-image: url(\"", i, "\")", "\n", sep = "")
   cat("background-size: contain", "\n", sep = " ")
-  cat("count: false", "\n", sep = " ")
-  
-}
+  }
 
 ```
 
@@ -634,8 +649,70 @@ background-size: contain
 
 ---
 
-crudebackground-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/annotated_example_meshes_16x9.png")
+background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/annotated_example_meshes_16x9.png")
 background-size: contain
 class: no-h1
 
-# Annotated example meshes from Drohan scanner 
+# Annotated example meshes from Drohan scanner
+
+
+
+---
+
+
+class: no-h1
+background-image: url('committee-meeting-2-presentation-dependencies/sand-pcts-to-choose.png')
+background-size: contain
+
+# Sand percents to choose
+
+---
+
+
+# Water content 
+
+(skip over for now; return later if time )
+$w$ or $\theta$ ??
+
+$\theta = w~\cdot~\rho_{~bulk}$
+
+--
+
+\- lack of dimensional stability
+
+--
+
+\- repairs normally occur _just_ wet-of-optimum
+
+--
+
+\- density @ test time likely &ne; initial preparation
+
+--
+
+## - Therefore:
+Density at initial preparation may not be reflected in subsequent days of testing.
+
+---
+
+```{r, message=FALSE, warning=FALSE, results='asis'}
+mini_density_images <- list.files(path = 'committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/mini-density/', full.names = T, recursive = FALSE)
+
+for (i in mini_density_images) {
+  cat("\n---\n")
+  cat("\n", "background-image: url(\"", i, "\")", "\n", sep = "")
+  cat("background-size: contain", "\n", sep = " ")
+}
+
+```
+
+
+background-image: url('presentation-figs/mini-plug-density-comp.png')
+background-size: contain
+
+---
+
+background-image: url('committee-meeting-2-presentation-dependencies/daily-specimen-repairs-panels.png')
+background-size: contain
+
+---

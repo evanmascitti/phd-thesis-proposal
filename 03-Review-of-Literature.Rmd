@@ -759,9 +759,9 @@ Barnes defined the toughness limit as the water content where a soil changes fro
 @Vinod2017 first correlated the toughness limits of the 59 soils tested by @Barnes2013 with their respective liquidity indexes ($I_L$, defined as $I_L=LL - PL$). 
 They found that the average position of the toughness limit was $PL + 0.42 \cdot I_L$. 
 In other words, the toughness limit was 42% of the way between the plastic and liquid limits. 
-This correlation was then used to develop an empirical equation to predict the optimum water content from the plastic limit, liquid limit, and compaction energy. 
-The authors reported a good correlation, but the spread of their data shows that the $w_{opt}$ measured with an actual compaction test routinely differed by 0.05-0.10 from the value predicted by their equation. 
-This equation may be useful for initial characterization, but it seems unlikely that an empirical equation could completely replace compaction testing.
+The estimated toughness limit was then used to develop _another_ empirical equation for predicting $w_{opt}$ from a constant and the compaction energy of interest. 
+The authors reported a good correlation and their strategy may find use in initial characterization.
+However, it seems unlikely that an empirical equation could completely replace compaction testing.
 
 #### Summary: soil toughness research
 
