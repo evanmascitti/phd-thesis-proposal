@@ -1,6 +1,6 @@
 ---
 title: "PhD Committee Meeting # 2"
-subtitle: "Method review and preliminary data"
+subtitle: "Method review and preliminary datasets"
 author: "Evan C. Mascitti"
 institute: "Penn State University"
 date: "slides last updated ``r format(Sys.time(), format = '%a %b %e %Y, %I%:%M %p')``"
@@ -168,11 +168,23 @@ knitr::include_graphics('committee-meeting-2-presentation-dependencies/corkboard
 
 
 ]
+
+
+---
+background-image: url('presentation-figs/hypothetical-stress-strain-curves.png')
+background-size: contain
+# Toughness concept 
+
+```{r}
+# knitr::include_graphics('presentation-figs/hypothetical-stress-strain-curves.png')
+```
+
+
 ---
 
 background-image: url('presentation-figs/specimen-preparation-process-panels.png')
 background-size: contain
-# Preparing the samples 
+# Cleat-mark test: preparing the samples 
 
 ???
 
@@ -185,7 +197,30 @@ background-size: contain
 
 ---
 
-background-image: url('committee-meeting-2-presentation-dependencies/cleatmark-device-low-res.png')
+
+.pull-left[
+
+```{r}
+knitr::include_graphics('committee-meeting-2-presentation-dependencies/corkboard-concept.png')
+```
+
+
+]
+
+
+
+.pull-right[
+
+```{r}
+knitr::include_graphics('committee-meeting-2-presentation-dependencies/corkboard-concept.png')
+```
+
+
+]
+
+---
+
+background-image: url('presentation-figs/cleat-mark-device-on-lab-bench.png')
 background-size: contain
 
 ---
@@ -300,7 +335,9 @@ class: no-h1
 
 - ~ 95% reduction in time required to obtain a single measurement
 
----
+<hr>
+
+--
 # Surface properties derived from mesh 
 
 - volume 
@@ -413,9 +450,7 @@ background-size: contain
 
 --
 
-.center[
-
-```{r hypothetical-curve-thumbnail, out.width='40%', fig.align='right'}
+```{r hypothetical-curve-thumbnail, out.width='40%', fig.align='center'}
 #knitr::include_graphics('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide7.png')
 
 magick::image_read('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide7.png') %>% 
@@ -424,11 +459,6 @@ magick::image_read('committee-meeting-2-presentation-dependencies/hypothetical-d
 ```
 
 ]
-
-<!-- class: no-h1 -->
-<!-- background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide7.png') -->
-<!-- # Comparing hypothetical curve to real data  -->
-
 
 ---
 
@@ -445,21 +475,14 @@ if(!file.exists(new_clays_dotplot) | file.mtime(old_clays_dotplot) > file.mtime(
 background-image: url('committee-meeting-2-presentation-dependencies/theta-crit-dotplot-5-clays.png')
 background-size: contain
 
----
-
-# Future experiments 
-
-
-- Several days of testing per mix
-
-- Must choose mixtures carefully (represent broad spectrum of possibilities)
-
 
 ---
 
-# Representative materials
+# Future experiments & material selection 
 
-- Test range of particle sizes, mineralogy, AND plasticity/toughness
+- Choose mixtures carefully 
+
+- Range of particle sizes, mineralogy, AND plasticity/toughness
 
 - Adjust SCR by adding pure Qz silt
 
@@ -472,9 +495,10 @@ scr_possible_vals <- readr::read_rds(
 )
 
 scr_kable <- scr_possible_vals %>% 
-  kableExtra::kbl(align = 'lccc', format = 'html',
+  kableExtra::kbl(align = 'lcccc', format = 'html',
                   col.names = c(
                     'Sample name',
+                    '% Sand-size',
                     '% Silt-size',
                     '% Clay-size',
                     'SCR')
@@ -492,7 +516,9 @@ scr_kable
 
 ???
 
-collecting the data is a lot of work so choosing the right materials to test is VERY important 
+- Several days of testing per mix
+
+- collecting the data is a lot of work so choosing the right materials to test is VERY important 
 
 ---
 
@@ -518,7 +544,7 @@ copying_args <- tibble::tibble(
   old_mtime = file.mtime(all_original_xrd_patterns),
   new_path  = new_xrd_paths,
   new_mtime  = file.mtime(new_path),
-  copy = old_mtime > new_mtime
+  copy = !file.exists(new_path) | old_mtime > new_mtime
 ) %>% 
   dplyr::filter(copy)
 
@@ -547,20 +573,10 @@ for (i in coarser_clay_xrd_plots) {
 
 
 ---
-background-image: url('presentation-figs/hypothetical-stress-strain-curves.png')
-background-size: contain
-# Toughness concept 
-
-```{r}
-# knitr::include_graphics('presentation-figs/hypothetical-stress-strain-curves.png')
-```
-
-
----
 
 # Broad hypotheses 
 
-1. Sand % + SCR not sufficient to predict soil behavior
+1. Sand % + SCR not sufficient to fully predict soil behavior
 
   - soils w/ **same** sand % and SCR can behave differently
   
@@ -584,6 +600,21 @@ background-size: contain
 <!-- - adding silt will reduce performance for _all_ clays -->
 
 <!-- - interpolate desired toughness based on shape of toughness vs. % sand curve  -->
+
+---
+
+# Discussion topics
+
+- mineral ID & selection of clays
+
+- curve fitting/segmented regression
+
+- "replications" over multiple days 
+
+- maximizing return on data collection 
+
+- ??
+
 
 ---
 
@@ -632,11 +663,15 @@ class: full-screen-image
 background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/wiremesh_16x9.png")
 background-size: contain
 
+## More 3D mesh anatomy 
+
 ---
 
 class: full-screen-image
 background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/brittle_surface_16x9.png")
 background-size: contain
+
+## More 3D mesh anatomy 
 
 ---
 
@@ -644,8 +679,7 @@ class: full-screen-image
 background-image: url("committee-meeting-2-presentation-dependencies/images_16x9_ratio/annotated_zoomed_16x9.png")
 background-size: contain
 
-# 3D mesh anatomy
-
+## More 3D mesh anatomy 
 
 ---
 
@@ -654,8 +688,6 @@ background-size: contain
 class: no-h1
 
 # Annotated example meshes from Drohan scanner
-
-
 
 ---
 

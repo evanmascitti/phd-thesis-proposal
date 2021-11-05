@@ -1,6 +1,7 @@
 # read data 
 library(magrittr)
 library(gganimate)
+library(ggplot2)
 ggplot2::theme_set(cowplot::theme_cowplot())
 
 
@@ -145,4 +146,15 @@ mlb_revenues_plot <- mlb_revenues %>%
                 x= "")+
   remove_y_lines()+
   ggplot2::theme(plot.margin = ggplot2::margin(rep(15, 4)))
-  
+
+
+mlb_salaries_plots <- cowplot::plot_grid(salary_distribution_2019_plot, mlb_revenues_plot, align = "h")+
+  theme(plot.background = element_rect(fill = 'white', colour = NA))
+
+
+ecmfuns::export_plot(
+  x = mlb_salaries_plots,
+  dirs = "figs",
+  formats = c("png", "pdf"),
+  rds =FALSE
+)

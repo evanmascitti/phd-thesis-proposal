@@ -1,0 +1,3 @@
+- OK to record ??
+- a bit over a year but thanks for taking the time...wished I had been able to spend more time consulting you individually but didn't have much to share...in the coming year you will hear more from me now that experiments are more underway 
+- tenure for Qiu and Drohan; retirement for Watson

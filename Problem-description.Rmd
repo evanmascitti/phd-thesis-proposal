@@ -54,7 +54,8 @@ knitr::opts_chunk$set(message=FALSE,
 
 
 ```{r compute-field-areas }
-pnc_areas <- read_csv('data/lit-review-data/pnc-google-earth-dims.csv') %>% 
+pnc_areas <- read_csv(
+  here::here('data/lit-review-data/pnc-google-earth-dims.csv')) %>% 
   group_by(type) %>% 
   summarise(total_area_ft2= sum(ft2)) %>% 
   mutate(total_area_ha= measurements::conv_unit(total_area_ft2, from = "ft2", to = "hectare"),
@@ -118,46 +119,6 @@ knitr::include_graphics('./figs/pdf/batted-balls-w-boundaries-2020.pdf')
 
 ```{r produce labor per area plot }
 
-area_colors <- readr::read_csv('data/lit-review-data/useful_soil_colors_for_thesis.csv') %>% 
-  dplyr::mutate(type= soil_description)
-
-labor_per_area <- pnc_areas %>% 
-  left_join(labor_man_hrs) %>% 
-  mutate(total_area_m2 = conv_unit(total_area_ha, "hectare", "m2"),
-         man_hr_per_m2= total_man_hr / total_area_m2,
-         man_hr_per_100m2= 100*man_hr_per_m2 ) %>% 
-  select(type, man_hr_per_100m2) %>% 
-  left_join(area_colors) %>% 
-  filter(type %in% c("Turf", "Warning track", "Infield skin")) %>% 
-  mutate(type= as_factor(type),
-         type= fct_reorder(type, 1/man_hr_per_100m2),
-         label= paste0("**", as.character(type), "**") )
-
-labor_per_area_plot <- labor_per_area %>% 
-  ggplot(aes(man_hr_per_100m2, type, fill= hex_color, label= label))+
-  geom_col(alpha = 0.9)+
-  labs(title= "Labor allocation on a typical MLB game day*",
-       caption= "* Values computed by the author from personal experience; see Appendix for details.",
-       y="Field component",
-       x= TeX("Labor intensity, worker-hr $\\m^{-2}$") )+
-  ggtext::geom_richtext(aes(x= man_hr_per_100m2 +0.01), #, color= hex_color),
-                        color= "black",
-                        fill= NA, 
-                        label.color= NA, 
-                        size= 10/.pt, 
-                        hjust= 0) +
-  scale_fill_identity()+
-  scale_color_identity()+
-  scale_x_continuous(limits= c(0, 1.5), n.breaks = 5)+
-  background_grid()+
-  theme_minimal_vgrid()+
-  theme(axis.title.y = element_blank(),
-        axis.text.y = element_blank(),
-        axis.ticks.y = element_blank(),
-        axis.line.y = element_blank(),
-        axis.line.x= element_line(size = 0.5),
-        plot.title = element_text(hjust = 0.5)
-  )
 ```
 
 ```{r labor-per-area-fig, fig.height=2.5, fig.cap= "The infield skin consumes a majority of inputs despite comprising less than 10 percent of the playing surface area.", fig.scap="Labor inputs for a professionally-managed infield skin", fig.pos='pthb'}
@@ -166,8 +127,12 @@ labor_per_area_plot
 
 
 ```{r mlb-salaries, fig.cap='MLB athletes are valuable assets. Their safety and performance must not be compromised by the playing surface.', fig.scap='Financial implications of infield safety', fig.show='hold' }
-source('supplemental_R_scripts/mlb_salaries_and_revenue.R')
-cowplot::plot_grid(salary_distribution_2019_plot, mlb_revenues_plot, align = "h")
+# source('supplemental_R_scripts/mlb_salaries_and_revenue.R')
+# cowplot::plot_grid(salary_distribution_2019_plot, mlb_revenues_plot, align = "h")
+
+knitr::include_graphics(
+  here::here("figs", "png", "mlb-salaries-plots.png")
+)
 
 ```
 

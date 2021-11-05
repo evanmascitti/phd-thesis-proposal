@@ -1,0 +1,419 @@
+---
+title: "A new laboratory method for measuring surface disruption of baseball infield soils"
+subtitle: "C-5 Division, Crop Science Society of America"
+author: "Evan C. Mascitti & Dr. Andrew McNitt"
+institute: "Penn State University"
+date: "2021-11-09"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["ecm-16x9-theme.css", "default"]
+    nature:
+      ratio: "16:9"
+      countIncrementalSlides: false 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, warning = F, message = F, out.width = "90%", fig.align = 'center')
+library(magrittr)
+# library(xaringanExtra)
+# xaringanExtra::use_tile_view()
+# xaringanExtra::use_scribble()
+# xaringanExtra::use_search(show_icon = TRUE, case_sensitive = FALSE, auto_search = TRUE, position = "top-right")
+```
+
+
+
+.pull-left[
+
+Co-author: Dr. Andy McNitt 
+
+
+```{r out.width='50%'}
+knitr::include_graphics("presentation-figs/PTC-logo.png")
+```
+
+<br>
+
+```{r out.width='50%'}
+knitr::include_graphics("presentation-figs/KAFMO-logo.jpg")
+```
+
+<br>
+
+
+```{r out.width='50%'}
+knitr::include_graphics("presentation-figs/SAFE-logo.png")
+```
+
+
+]
+
+
+.pull-right[
+
+Undergraduates: Ian Royer & Hunter Finn
+
+
+
+```{r out.width='50%'}
+
+knitr::include_graphics('presentation-figs/Ian-sample-repair.jpg')
+
+```
+
+<br>
+
+```{r out.width='50%'}
+
+knitr::include_graphics('presentation-figs/Hunter-mixing.jpg')
+
+```
+
+]
+
+---
+
+
+
+
+
+background-image: url('https://drive.google.com/uc?id=1hFX3lZCMW5kAI1y1E577UpdmSvo8wyoF')
+background-size: contain
+
+
+.pull-left[
+
+# Structure
+
+- Problem review (~2 min)
+
+- Method development (~5 min)
+ 
+- Proof-of-concept data (~5 min)
+
+- Future directions (~1 min)
+
+
+]
+
+
+---
+class: no-h1
+background-image: url('presentation-figs/player-locations.png')
+background-size: contain
+
+# Concentration of play 
+
+---
+background-image: url('committee-meeting-2-presentation-dependencies/corkboard-concept.png')
+background-size: contain
+
+
+class: no-h1
+# Cleat-in/cleat-out
+
+
+---
+class: no-h1, middle, center
+
+# Managing water content 
+
+.pull-left[
+
+```{r post-game-soak, out.width='100%'}
+knitr::include_graphics('committee-meeting-2-presentation-dependencies/post-game-soak.JPG')
+```
+
+]
+
+.pull-right[
+
+```{r in-game-tarp-pull, out.width='100%'}
+knitr::include_graphics('presentation-figs/in-game-pull.png')
+# knitr::include_graphics('committee-meeting-2-presentation-dependencies/in-game-tarp-pull.PNG')
+```
+
+
+]
+
+
+---
+
+
+# Acceptable boundaries 
+
+```{r}
+knitr::include_graphics('./committee-meeting-2-presentation-dependencies/water-content-ranges.png')
+```
+
+- changing $w$ or $\theta$ due to weather 
+
+- brittle & hard vs. soft & unstable 
+
+- $\theta_{crit}$ ?
+
+
+---
+
+# Current ideas
+
+```{r current-DuraEdge-ideas, out.width="80%"}
+knitr::include_graphics('committee-meeting-2-presentation-dependencies/scr-concept-w-box.png')
+```
+
+---
+
+# Cleat-mark test 
+
+
+.pull-left[
+
+- critial &Theta;
+
+- lower boundary
+
+- replicate outdoors
+
+]
+
+
+
+.pull-right[
+
+```{r}
+knitr::include_graphics(
+  'committee-meeting-2-presentation-dependencies/corkboard-concept.png'
+  )
+```
+
+]
+
+---
+
+
+background-image: url('presentation-figs/effort-comparison-cf-PNC-density.png')
+background-size: contain
+
+
+---
+
+
+background-image: url('presentation-figs/mod-effort-with-w-opt-annotation.png')
+background-size: contain
+
+
+---
+
+class: middle
+
+.pull-left[
+
+```{r}
+knitr::include_graphics("presentation-figs/water-content-spatial-temporal-variation/heat-lamps/01-dry-under-lamps.JPG")
+```
+
+
+]
+
+.pull-right[
+
+```{r}
+knitr::include_graphics("presentation-figs/drydown-surface-temp-comparison.png")
+```
+
+
+]
+
+
+---
+
+
+background-image: url('presentation-figs/cleat-mark-device-on-lab-bench.png')
+background-size: contain
+
+---
+
+class: no-h1
+background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide8.png')
+background-size: contain
+
+# Hypothetical deformation curve 
+
+---
+
+class: no-h1
+
+background-image: url('committee-meeting-2-presentation-dependencies/R-mesh-processing-pipeline.png')
+background-size: contain
+
+# Automated mesh processing with R 
+
+---
+
+# Dirichlet normal energy
+
+.pull-left[
+
+- surface complexity
+
+- higher "energy" means further from horizontal plane
+
+- **molaR** package - primate teeth
+
+]
+
+
+.pull-right[
+
+```{r}
+knitr::include_graphics('committee-meeting-2-presentation-dependencies/dne-image-from-pampush-paper.png')
+```
+
+]
+
+---
+class: no-h1
+background-image: url('presentation-figs/example-high-medium-low-dne-meshes.png')
+background-size: contain
+# Example meshes 
+
+
+---
+
+# Water content 
+
+- $\theta$ computed from 3D scanning & weighing 
+
+```{r out.width='50%'}
+knitr::include_graphics('presentation-figs/mini-density-scan.jpg')
+```
+
+
+---
+
+# Results 
+
+- 3 clay soils mixed w/ 50-80% sand
+
+--
+
+
+- 4 soils with 60% sand and SCR = 1
+
+
+---
+class: no-h1
+background-image: url('presentation-figs/prelim-dne-facets-by-clay-type-and-sand-pct.png')
+background-size: contain
+# "Pure" clay mixes @ various sand contents
+
+
+
+---
+
+class: no-h1
+background-image: url('presentation-figs/pure-clays-derived-theta-crit-values.png')
+background-size: contain
+# Derived theta crit values for 'pure' clay mixes 
+
+
+
+---
+
+class: no-h1
+background-image: url('presentation-figs/four-60-20-20-dne-vs-vwc-curves.png')
+background-size: contain
+
+# 60-20-20 mixes
+
+---
+
+# Future directions
+
+
+
+- toughness of mixtures at critical $\theta$
+
+--
+
+
+- continue manipulating SCR 
+
+--
+
+
+- effect of sand type
+
+--
+
+
+- clay mixtures
+
+
+---
+
+# Summary 
+
+- $\theta_{crit}$ for any soil
+
+- clay type > sand content to predict $\theta_{crit}$ 
+
+- mixes w/ same % sand and SCR perform differently....
+
+
+---
+
+class: middle, center
+
+
+# Thank you ! 
+
+
+
+
+---
+
+
+# Extras 
+
+---
+background-image: url('presentation-figs/hypothetical-stress-strain-curves.png')
+background-size: contain
+# Toughness concept 
+
+
+---
+
+
+# Toughness hypotheses
+
+- mixes w/ same % sand and SCR perform differently....
+
+- mixes w/ _different_ sand % and different clays perform _similarly_
+
+- therefore, can't start w/ % sand.....must start with mineralogy/toughness
+
+- increase or reduce toughness by altering sand content
+
+- adding silt will reduce performance for _all_ clays
+
+- interpolate desired toughness based on shape of toughness vs. % sand curve
+
+
+
+---
+
+
+background-image: url('committee-meeting-2-presentation-dependencies/daily-specimen-repairs-panels.png')
+background-size: contain
+
+---
+
+
+class: no-h1
+# Actuating the device 
+
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/572140447?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="cleat-mark-device-actuation"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+---

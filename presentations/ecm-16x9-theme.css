@@ -1,4 +1,3 @@
-/*
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
@@ -10,12 +9,32 @@ h1, h2, h3, h4, h5, h6 {
 	color: #041E42;
 }
 
-p, li {
-	font-size: 2em;
+/* p, li {
+	font-size: 1.5em;
+} */
+
+p {
+	font-size: 1.5em;
+} 
+
+
+li::marker { 
+  font-size: 1.5em;
+} 
+
+.dark-grey {
+  color: #7F7F7F;
 }
 
- */
+.no-h1 h1 {
+  display: none;
+}
 
-h1 {
-  color: #041E42;
+table {
+  font-size: 1.35em;
+}
+
+.three-in-a-row {
+  display: flex;
+  justify-content: center;
 }

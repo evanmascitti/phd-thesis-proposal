@@ -1,7 +1,7 @@
 ---
 title: "Evan's PhD thesis proposal"
 author: "Evan C Mascitti"
-date: "``last compiled `r ecmfuns::ecm_timestamp()` ``"
+date: "``last compiled Thu. 2021-11-04,  8:54 PM ``"
 # date: "``last compiled Thu. 2021-06-03, 08:57 PM ``"
 site: bookdown::bookdown_site
 documentclass: book

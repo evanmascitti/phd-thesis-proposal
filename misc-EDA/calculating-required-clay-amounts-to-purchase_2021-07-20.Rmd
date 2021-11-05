@@ -1,0 +1,172 @@
+---
+title: Calculating quantities of raw materials to purchase
+date: "2021-07-20"
+mainfont: Roboto
+  output:
+  pdf_document:
+    latex_engine: xelatex
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, warning = F, message = F)
+
+suppressPackageStartupMessages({
+  library(magrittr)
+})
+```
+
+
+```{r}
+original_psas <- readr::read_rds(
+  "E:/onedrive-psu/PSU2019-present/A_inf_soils_PhD/SelectingClaysJan2021/analysis/data/derived-data/5-clays-silt-and-clay-fractions.rds"
+) %>% 
+  dplyr::mutate(dplyr::across(.cols = c(sand, silt, clay, scr), .fns = as.numeric))
+
+new_clay_names <- c(scr_possible_vals[!scr_possible_vals$sample_name == "TN red", ]$sample_name, 'NJ red')
+
+```
+
+
+```{r}
+# Here I manually input the data from Kelsey's test reports and then get into a better format
+
+# Have to read the data from the cumulative curve as teh "silt" and "clay"
+# percentages are computed differently by the engineering firm that performed 
+# this test....they are apparently using 5 microns as the clay cutoff 
+# and I assume they are also using 75 microns as the sand/silt cutoff as is 
+# customary in USCS.
+
+
+lean_white <- tibble::tibble(sample_name = "NJ lean white",
+  microns = c(2000, 50, 2),
+pct_passing = c(100, 94, 58)
+)
+
+red <- tibble::tibble(
+  sample_name = "NJ red-brown",
+  microns = c(2000, 50, 2),
+  pct_passing = c(100, 83, 42 )
+)
+
+# function is required to convert pct passing to size bins
+convert_psas <- function(x){
+  x %>% 
+    tidyr::pivot_wider(names_from = microns, values_from = pct_passing) %>% 
+    dplyr::transmute(sample_name = sample_name, 
+                     sand = `2000` - `50`,
+                     silt = `50` - `2`, clay = `2`)
+}
+
+all_beam_clays <- list(lean_white, red) %>% 
+  purrr::map(convert_psas) %>% 
+  dplyr::bind_rows() %>% 
+  dplyr::mutate(scr = silt / clay)
+  
+
+
+```
+
+
+
+
+```{r}
+
+new_scrs <- dplyr::bind_rows(original_psas, all_beam_clays) %>% 
+  dplyr::filter(!stringr::str_detect(sample_name, "(TN|NJ)\\sred"))
+
+```
+
+
+```{r}
+
+scr_kable <- new_scrs %>% 
+  kableExtra::kbl(align = 'lccc', format = 'latex',
+                  col.names = c(
+                    'Sample name',
+                    '% Sand-size',
+                    '% Silt-size',
+                    '% Clay-size',
+                    'SCR')
+                  ) %>% 
+  kableExtra::row_spec(0, bold = TRUE) %>% 
+  kableExtra::kable_styling()
+  
+
+scr_kable
+```
+
+
+
+
+```{r experiment-1-calculate-acutal-mixture-masses}
+
+# assumptions for proctor cylinders:
+# - cylinder volume of 1000 mL
+# - max dry density of 2.2 
+# - The 6 multiplier is for 6 cylinders per test, in case one of the cylinders gets messed up and has to be remade. 
+# - The 2 multiplier is assuming I will do both a standard and modified Proctor test
+# These are conservative figures 
+
+proctor_required_vol <- 1000 * 6 * 2
+proctor_cyls_required_dry_mass <- proctor_required_vol * 2.2
+
+# assume I am making 4 cylinders per mixture 
+cleat_mark_cyls_required_vol <- 4 * mean(soilmesh::chunk_cyl_dims$cyl_w_plug_volume)
+
+cleat_mark_cyls_required_dry_mass <- cleat_mark_cyls_required_vol * 2.2
+
+
+required_dry_mass_per_mixture <- sum(cleat_mark_cyls_required_dry_mass) / 1000
+
+# mix_ratios <- tibble::tibble()
+# experiment_1_mixtures <- new_scrs %>% 
+#   dplyr::mutate(
+#     sand_pct = 0.01 * c(50, 60, 65, 70, 75, 80),
+#     clay_component_OD_mass_pct  = 1- sand_pct )
+
+experiment_1_clay_masses <- new_scrs %>% 
+  dplyr::select(-scr) %>% 
+  dplyr::mutate(dplyr::across(c(sand, silt, clay), .fns = ~.*0.01)) %>% 
+  dplyr::mutate(final_sand_pcts = purrr::rerun(.n = nrow(.), 0.01 * c(50, 60, 65, 70, 75, 80))) %>% 
+  tidyr::unnest(final_sand_pcts) %>% 
+  dplyr::rename(
+    clay_name = sample_name,
+    sand_pct_in_clay = sand) %>% 
+  dplyr::select(-c(silt, clay)) %>% 
+  dplyr::mutate(
+    mix_date = Sys.Date(),
+    sand_name = "TBD",
+    expt_mix_nums = "TBD",
+    final_OD_kg = required_dry_mass_per_mixture,
+    sand_pct_in_sand = 0.98
+    ) %>% 
+  purrr::pmap(soiltestr::mix_calcs) %>% 
+  dplyr::bind_rows() %>% 
+  dplyr::rename(clay_name = `Clay name`) %>% 
+  dplyr::group_by(clay_name) %>% 
+  dplyr::summarise(
+    kg_sand_component_needed = sum(`kg sand component`),
+    kg_clay_component_needed = sum(`kg clay component`)) %>% 
+  dplyr::mutate(experiment_name = "sand-clay-A",
+               lb_sand_component = kg_sand_component_needed / 0.4536,
+               lb_clay_component = kg_clay_component_needed / 0.4536) %>% 
+  dplyr::select(experiment_name, clay_name, lb_sand_component, lb_clay_component)
+
+
+```
+
+Now to calculate the required component masses for the SCR mixes....
+First calculate the masses needed just to generate the "new" fine-grained soils 
+
+```{r}
+
+
+
+
+
+
+
+
+```
+
