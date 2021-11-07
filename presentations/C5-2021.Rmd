@@ -16,10 +16,12 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = F, warning = F, message = F, out.width = "90%", fig.align = 'center')
 library(magrittr)
-# library(xaringanExtra)
+library(xaringanExtra)
 # xaringanExtra::use_tile_view()
 # xaringanExtra::use_scribble()
 # xaringanExtra::use_search(show_icon = TRUE, case_sensitive = FALSE, auto_search = TRUE, position = "top-right")
+xaringanExtra::use_logo(image_url = "presentation-figs/psu-college-of-ag-logo.png",
+                        position = css_position(bottom = "1em"))
 ```
 
 
@@ -81,21 +83,13 @@ knitr::include_graphics('presentation-figs/Hunter-mixing.jpg')
 background-image: url('https://drive.google.com/uc?id=1hFX3lZCMW5kAI1y1E577UpdmSvo8wyoF')
 background-size: contain
 
-
-.pull-left[
-
 # Structure
 
-- Problem review (~2 min)
+- Problem review (~3 min)
 
-- Method development (~5 min)
+- Objective + method development (~7 min)
  
-- Proof-of-concept data (~5 min)
-
-- Future directions (~1 min)
-
-
-]
+- Proof-of-concept data (~3 min) + wrap-up
 
 
 ---
@@ -158,22 +152,25 @@ knitr::include_graphics('./committee-meeting-2-presentation-dependencies/water-c
 
 # Current ideas
 
-```{r current-DuraEdge-ideas, out.width="80%"}
+```{r current-DuraEdge-ideas, out.width="70%"}
 knitr::include_graphics('committee-meeting-2-presentation-dependencies/scr-concept-w-box.png')
 ```
 
+.footnote[Credit: DuraEdge Products]
+
+
 ---
 
-# Cleat-mark test 
+# Research objectives
+
 
 
 .pull-left[
 
-- critial &Theta;
+1. Create a laboratory method to identify critial &Theta; for any soil
 
-- lower boundary
+2. Apply the method to compare experimental soil mixtures
 
-- replicate outdoors
 
 ]
 
@@ -242,6 +239,19 @@ background-size: contain
 
 ---
 
+# 3D surface mapping
+
+```{r, out.width='60%'}
+knitr::include_graphics(
+  "presentation-figs/scanner-setup.JPG"
+)
+```
+
+
+---
+
+
+
 class: no-h1
 
 background-image: url('committee-meeting-2-presentation-dependencies/R-mesh-processing-pipeline.png')
@@ -259,7 +269,7 @@ background-size: contain
 
 - higher "energy" means further from horizontal plane
 
-- **molaR** package - primate teeth
+- **molaR** package - primate teeth [(Pampush, 2020)](https://cran.r-project.org/web/packages/molaR/index.html)
 
 ]
 
@@ -283,7 +293,7 @@ background-size: contain
 
 # Water content 
 
-- $\theta$ computed from 3D scanning & weighing 
+- &Theta; computed from 3D scanning & weighing 
 
 ```{r out.width='50%'}
 knitr::include_graphics('presentation-figs/mini-density-scan.jpg')
@@ -294,13 +304,9 @@ knitr::include_graphics('presentation-figs/mini-density-scan.jpg')
 
 # Results 
 
-- 3 clay soils mixed w/ 50-80% sand
+- Three clay soils mixed w/ 50-80% sand
 
---
-
-
-- 4 soils with 60% sand and SCR = 1
-
+- Four 60-20-20 mixes (i.e. 60% sand and SCR = 1)
 
 ---
 class: no-h1
@@ -309,6 +315,34 @@ background-size: contain
 # "Pure" clay mixes @ various sand contents
 
 
+
+
+---
+
+# Clay type &times; sand content interaction 
+
+.center.middle[
+
+
+```{r}
+source(here::here('supplemental_R_scripts/spline-interaction-significance-for-ASA-2021.R'))
+
+options(knitr.kable.NA= "-")
+kableExtra::kbl(
+  x = interaction_anova_kbl,
+  # format = "latex",
+  booktabs = TRUE,
+  # caption = 'Clay type x sand % interaction',
+  escape = T
+) %>% 
+  kableExtra::row_spec(row = 0, bold = TRUE) %>% 
+  kableExtra::row_spec(row = 4, bold = TRUE) %>% 
+  kableExtra::kable_styling()
+
+```
+
+
+]
 
 ---
 
@@ -329,35 +363,14 @@ background-size: contain
 
 ---
 
-# Future directions
-
-
-
-- toughness of mixtures at critical $\theta$
-
---
-
-
-- continue manipulating SCR 
-
---
-
-
-- effect of sand type
-
---
-
-
-- clay mixtures
-
-
----
 
 # Summary 
 
 - $\theta_{crit}$ for any soil
 
-- clay type > sand content to predict $\theta_{crit}$ 
+
+- Both clay type _and_ sand content affect $\theta_{crit}$ 
+
 
 - mixes w/ same % sand and SCR perform differently....
 
@@ -415,5 +428,31 @@ class: no-h1
 # Actuating the device 
 
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/572140447?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="cleat-mark-device-actuation"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+---
+
+
+# Future directions
+
+
+
+- toughness of mixtures at critical $\theta$
+
+
+--
+
+
+- continue manipulating SCR 
+
+--
+
+
+- sand types
+
+--
+
+
+- clay mixtures?
+
 
 ---
