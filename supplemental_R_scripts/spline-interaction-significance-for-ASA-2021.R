@@ -39,11 +39,11 @@ combined_data <- purrr::reduce(list(w_data, metrics_data, meta), .f = dplyr::lef
   dplyr::filter(date > '2021-09-22')
 
 
-names(combined_data)
+# names(combined_data)
 
 interaction_model <- lm(
   data = combined_data,
-  formula = dne ~ volumetric_water_content + clay_name * splines::ns(sand_pct, 3)
+  formula = dne ~ clay_name * splines::ns(sand_pct, 3) +volumetric_water_content
 )
 
 interaction_anova_kbl <- car::Anova(mod = interaction_model, type = 2) %>% 

@@ -9,6 +9,7 @@
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <script src="libs/kePrint-0.0.1/kePrint.js"></script>
     <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="ecm-16x9-theme.css" type="text/css" />
   </head>
   <body>
@@ -66,19 +67,23 @@ Undergraduates: Ian Royer &amp; Hunter Finn
 
 
 
-
+class: white-bg
 
 background-image: url('https://drive.google.com/uc?id=1hFX3lZCMW5kAI1y1E577UpdmSvo8wyoF')
 background-size: contain
 
-# Structure
+.black[# Structure]
 
-- Problem review (~3 min)
 
-- Objective + method development (~7 min)
+.black[- Problem review ]
+&lt;!-- (~3 min) --&gt;
+
+.black[- Objective + method development ]
  
-- Proof-of-concept data (~3 min) + wrap-up
+&lt;!-- (~7 min) --&gt;
 
+.black[- Proof-of-concept data + wrap-up  ]
+&lt;!-- (~3 min) --&gt;
 
 ---
 class: no-h1
@@ -137,6 +142,29 @@ class: no-h1, middle, center
 
 .footnote[Credit: DuraEdge Products]
 
+---
+
+class: center, middle, x3
+
+_What happens to the soil when it gets wet?_
+
+---
+
+
+# Field vs. lab?
+
+
+
+
+.center.middle.x2[
+
+Repeatability   
+&lt;br&gt;
+Speed  
+&lt;br&gt; 
+Cost
+
+]
 
 ---
 
@@ -164,11 +192,31 @@ class: no-h1, middle, center
 ---
 
 
+
+
+# Hypothesized soil response
+
+&lt;img src="committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide8.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+
+# Preparing the samples 
+
+&lt;img src="presentation-figs/infield-construction-01.jpg" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+
+
+
+
 background-image: url('presentation-figs/effort-comparison-cf-PNC-density.png')
 background-size: contain
 
 
 ---
+
 
 
 background-image: url('presentation-figs/mod-effort-with-w-opt-annotation.png')
@@ -178,6 +226,7 @@ background-size: contain
 ---
 
 class: middle
+
 
 .pull-left[
 
@@ -193,59 +242,35 @@ class: middle
 
 ]
 
-
 ---
 
+
+background-image: url('presentation-figs/w-variation-across-space-and-time.png')
+background-size: contain
+
+
+
+---
 
 background-image: url('presentation-figs/cleat-mark-device-on-lab-bench.png')
 background-size: contain
 
 ---
 
-class: no-h1
-background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide8.png')
+background-image: url('presentation-figs/cleat-mark-device-plate-underside.jpg')
 background-size: contain
 
-# Hypothetical deformation curve 
 
 ---
+
+
 
 # 3D surface mapping
 
 &lt;img src="presentation-figs/scanner-setup.JPG" width="60%" style="display: block; margin: auto;" /&gt;
 
 
----
 
-
-
-class: no-h1
-
-background-image: url('committee-meeting-2-presentation-dependencies/R-mesh-processing-pipeline.png')
-background-size: contain
-
-# Automated mesh processing with R 
-
----
-
-# Dirichlet normal energy
-
-.pull-left[
-
-- surface complexity
-
-- higher "energy" means further from horizontal plane
-
-- **molaR** package - primate teeth [(Pampush, 2020)](https://cran.r-project.org/web/packages/molaR/index.html)
-
-]
-
-
-.pull-right[
-
-&lt;img src="committee-meeting-2-presentation-dependencies/dne-image-from-pampush-paper.png" width="90%" style="display: block; margin: auto;" /&gt;
-
-]
 
 ---
 class: no-h1
@@ -256,14 +281,7 @@ background-size: contain
 
 ---
 
-# Water content 
 
-- &amp;Theta; computed from 3D scanning &amp; weighing 
-
-&lt;img src="presentation-figs/mini-density-scan.jpg" width="50%" style="display: block; margin: auto;" /&gt;
-
-
----
 
 # Results 
 
@@ -280,11 +298,24 @@ background-size: contain
 
 
 
+
 ---
+
+class: no-h1
+background-image: url('presentation-figs/pure-clays-derived-theta-crit-values.png')
+background-size: contain
+# Derived theta crit values for 'pure' clay mixes 
+
+
+
+---
+
+
+class: white-bg
 
 # Clay type &amp;times; sand content interaction 
 
-.center.middle[
+.center[
 
 
 &lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
@@ -299,27 +330,27 @@ background-size: contain
 &lt;tbody&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; Volumetric water content &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 36.2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; &amp;lt;0.001 *** &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Clay type &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 9.7 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; &amp;lt;0.001 *** &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Sand % &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Clay type &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 45.2 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; &amp;lt;0.001 *** &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;font-weight: bold;"&gt; Clay type x sand % &lt;/td&gt;
-   &lt;td style="text-align:right;font-weight: bold;"&gt; 6 &lt;/td&gt;
-   &lt;td style="text-align:right;font-weight: bold;"&gt; 2.7 &lt;/td&gt;
-   &lt;td style="text-align:left;font-weight: bold;"&gt; 0.016   * &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Sand % &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 36.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; &amp;lt;0.001 *** &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;background-color: #EEB422 !important;"&gt; Clay type x sand % &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;background-color: #EEB422 !important;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;background-color: #EEB422 !important;"&gt; 2.7 &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;background-color: #EEB422 !important;"&gt; 0.016   * &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; Residual &lt;/td&gt;
@@ -331,15 +362,16 @@ background-size: contain
 &lt;/table&gt;
 
 
+
 ]
 
----
 
-class: no-h1
-background-image: url('presentation-figs/pure-clays-derived-theta-crit-values.png')
-background-size: contain
-# Derived theta crit values for 'pure' clay mixes 
+- Physical meaning?
 
+
+???
+
+Physical meaning: blanket recommendation for sand content re: maintenance not adequate
 
 
 ---
@@ -355,18 +387,34 @@ background-size: contain
 
 # Summary 
 
+--
+
+
 - `\(\theta_{crit}\)` for any soil
+
+--
 
 
 - Both clay type _and_ sand content affect `\(\theta_{crit}\)` 
 
+--
+
 
 - mixes w/ same % sand and SCR perform differently....
+
+--
+
+
+___
+
+
+- Follow along at  [evan-soil.io](https://www.evan-soil.io) and  [@argil_acharya](https://www.twitter.com/argil_acharya)
 
 
 ---
 
 class: middle, center
+
 
 
 # Thank you ! 
@@ -442,6 +490,45 @@ class: no-h1
 
 
 - clay mixtures?
+
+
+---
+
+class: no-h1
+
+background-image: url('committee-meeting-2-presentation-dependencies/R-mesh-processing-pipeline.png')
+background-size: contain
+
+# Automated mesh processing with R 
+
+---
+
+# Dirichlet normal energy
+
+.pull-left[
+
+- surface complexity
+
+- higher "energy" means further from horizontal plane
+
+- **molaR** package - primate teeth [(Pampush, 2020)](https://cran.r-project.org/web/packages/molaR/index.html)
+
+]
+
+
+.pull-right[
+
+&lt;img src="committee-meeting-2-presentation-dependencies/dne-image-from-pampush-paper.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# Water content 
+
+- &amp;Theta; computed from 3D scanning &amp; weighing 
+
+&lt;img src="presentation-figs/mini-density-scan.jpg" width="50%" style="display: block; margin: auto;" /&gt;
 
 
 ---

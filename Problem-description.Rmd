@@ -117,21 +117,20 @@ knitr::include_graphics('./figs/pdf/batted-balls-w-boundaries-2020.pdf')
 
 ```
 
-```{r produce labor per area plot }
-
-```
 
 ```{r labor-per-area-fig, fig.height=2.5, fig.cap= "The infield skin consumes a majority of inputs despite comprising less than 10 percent of the playing surface area.", fig.scap="Labor inputs for a professionally-managed infield skin", fig.pos='pthb'}
-labor_per_area_plot
+knitr::include_graphics(
+  path = here::here('figs', 'pdf', 'labor-per-area-plot.pdf')
+)
 ```
 
 
 ```{r mlb-salaries, fig.cap='MLB athletes are valuable assets. Their safety and performance must not be compromised by the playing surface.', fig.scap='Financial implications of infield safety', fig.show='hold' }
-# source('supplemental_R_scripts/mlb_salaries_and_revenue.R')
+source('supplemental_R_scripts/mlb_salaries_and_revenue.R')
 # cowplot::plot_grid(salary_distribution_2019_plot, mlb_revenues_plot, align = "h")
 
 knitr::include_graphics(
-  here::here("figs", "png", "mlb-salaries-plots.png")
+  here::here("figs", "pdf", "mlb-salaries-plots.pdf")
 )
 
 ```

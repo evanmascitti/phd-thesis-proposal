@@ -4,10 +4,11 @@ subtitle: "C-5 Division, Crop Science Society of America"
 author: "Evan C. Mascitti & Dr. Andrew McNitt"
 institute: "Penn State University"
 date: "2021-11-09"
+self_contained: true
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["ecm-16x9-theme.css", "default"]
+    css: ["xaringan-themer.css", "ecm-16x9-theme.css", "default"]
     nature:
       ratio: "16:9"
       countIncrementalSlides: false 
@@ -78,19 +79,23 @@ knitr::include_graphics('presentation-figs/Hunter-mixing.jpg')
 
 
 
-
+class: white-bg
 
 background-image: url('https://drive.google.com/uc?id=1hFX3lZCMW5kAI1y1E577UpdmSvo8wyoF')
 background-size: contain
 
-# Structure
+.black[# Structure]
 
-- Problem review (~3 min)
 
-- Objective + method development (~7 min)
+.black[- Problem review ]
+<!-- (~3 min) -->
+
+.black[- Objective + method development ]
  
-- Proof-of-concept data (~3 min) + wrap-up
+<!-- (~7 min) -->
 
+.black[- Proof-of-concept data + wrap-up  ]
+<!-- (~3 min) -->
 
 ---
 class: no-h1
@@ -158,6 +163,29 @@ knitr::include_graphics('committee-meeting-2-presentation-dependencies/scr-conce
 
 .footnote[Credit: DuraEdge Products]
 
+---
+
+class: center, middle, x3
+
+_What happens to the soil when it gets wet?_
+
+---
+
+
+# Field vs. lab?
+
+
+
+
+.center.middle.x2[
+
+Repeatability   
+<br>
+Speed  
+<br> 
+Cost
+
+]
 
 ---
 
@@ -189,11 +217,37 @@ knitr::include_graphics(
 ---
 
 
+
+
+# Hypothesized soil response
+
+```{r, out.width='80%'}
+knitr::include_graphics(
+  'committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide8.png'
+  )
+```
+
+
+---
+
+
+# Preparing the samples 
+
+```{r, out.width = '60%'}
+knitr::include_graphics("presentation-figs/infield-construction-01.jpg")
+```
+
+---
+
+
+
+
 background-image: url('presentation-figs/effort-comparison-cf-PNC-density.png')
 background-size: contain
 
 
 ---
+
 
 
 background-image: url('presentation-figs/mod-effort-with-w-opt-annotation.png')
@@ -203,6 +257,7 @@ background-size: contain
 ---
 
 class: middle
+
 
 .pull-left[
 
@@ -222,22 +277,28 @@ knitr::include_graphics("presentation-figs/drydown-surface-temp-comparison.png")
 
 ]
 
-
 ---
 
+
+background-image: url('presentation-figs/w-variation-across-space-and-time.png')
+background-size: contain
+
+
+
+---
 
 background-image: url('presentation-figs/cleat-mark-device-on-lab-bench.png')
 background-size: contain
 
 ---
 
-class: no-h1
-background-image: url('committee-meeting-2-presentation-dependencies/hypothetical-deformation-vs-w-curves/Slide8.png')
+background-image: url('presentation-figs/cleat-mark-device-plate-underside.jpg')
 background-size: contain
 
-# Hypothetical deformation curve 
 
 ---
+
+
 
 # 3D surface mapping
 
@@ -248,39 +309,7 @@ knitr::include_graphics(
 ```
 
 
----
 
-
-
-class: no-h1
-
-background-image: url('committee-meeting-2-presentation-dependencies/R-mesh-processing-pipeline.png')
-background-size: contain
-
-# Automated mesh processing with R 
-
----
-
-# Dirichlet normal energy
-
-.pull-left[
-
-- surface complexity
-
-- higher "energy" means further from horizontal plane
-
-- **molaR** package - primate teeth [(Pampush, 2020)](https://cran.r-project.org/web/packages/molaR/index.html)
-
-]
-
-
-.pull-right[
-
-```{r}
-knitr::include_graphics('committee-meeting-2-presentation-dependencies/dne-image-from-pampush-paper.png')
-```
-
-]
 
 ---
 class: no-h1
@@ -291,16 +320,7 @@ background-size: contain
 
 ---
 
-# Water content 
 
-- &Theta; computed from 3D scanning & weighing 
-
-```{r out.width='50%'}
-knitr::include_graphics('presentation-figs/mini-density-scan.jpg')
-```
-
-
----
 
 # Results 
 
@@ -317,11 +337,24 @@ background-size: contain
 
 
 
+
 ---
+
+class: no-h1
+background-image: url('presentation-figs/pure-clays-derived-theta-crit-values.png')
+background-size: contain
+# Derived theta crit values for 'pure' clay mixes 
+
+
+
+---
+
+
+class: white-bg
 
 # Clay type &times; sand content interaction 
 
-.center.middle[
+.center[
 
 
 ```{r}
@@ -336,21 +369,22 @@ kableExtra::kbl(
   escape = T
 ) %>% 
   kableExtra::row_spec(row = 0, bold = TRUE) %>% 
-  kableExtra::row_spec(row = 4, bold = TRUE) %>% 
+  kableExtra::row_spec(row = 4, bold = TRUE, background = gplots::col2hex('goldenrod2')) %>% 
   kableExtra::kable_styling()
 
 ```
 
 
+
 ]
 
----
 
-class: no-h1
-background-image: url('presentation-figs/pure-clays-derived-theta-crit-values.png')
-background-size: contain
-# Derived theta crit values for 'pure' clay mixes 
+- Physical meaning?
 
+
+???
+
+Physical meaning: blanket recommendation for sand content re: maintenance not adequate
 
 
 ---
@@ -366,18 +400,34 @@ background-size: contain
 
 # Summary 
 
+--
+
+
 - $\theta_{crit}$ for any soil
+
+--
 
 
 - Both clay type _and_ sand content affect $\theta_{crit}$ 
 
+--
+
 
 - mixes w/ same % sand and SCR perform differently....
+
+--
+
+
+___
+
+
+- Follow along at  [evan-soil.io](https://www.evan-soil.io) and  [@argil_acharya](https://www.twitter.com/argil_acharya)
 
 
 ---
 
 class: middle, center
+
 
 
 # Thank you ! 
@@ -453,6 +503,49 @@ class: no-h1
 
 
 - clay mixtures?
+
+
+---
+
+class: no-h1
+
+background-image: url('committee-meeting-2-presentation-dependencies/R-mesh-processing-pipeline.png')
+background-size: contain
+
+# Automated mesh processing with R 
+
+---
+
+# Dirichlet normal energy
+
+.pull-left[
+
+- surface complexity
+
+- higher "energy" means further from horizontal plane
+
+- **molaR** package - primate teeth [(Pampush, 2020)](https://cran.r-project.org/web/packages/molaR/index.html)
+
+]
+
+
+.pull-right[
+
+```{r}
+knitr::include_graphics('committee-meeting-2-presentation-dependencies/dne-image-from-pampush-paper.png')
+```
+
+]
+
+---
+
+# Water content 
+
+- &Theta; computed from 3D scanning & weighing 
+
+```{r out.width='50%'}
+knitr::include_graphics('presentation-figs/mini-density-scan.jpg')
+```
 
 
 ---

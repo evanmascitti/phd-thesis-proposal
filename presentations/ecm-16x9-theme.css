@@ -3,11 +3,19 @@
 
 body {
 	font-family: 'Roboto Condensed', sans-serif;
+	color: white;
 }
 
+
+p{
+  color: white;
+}
+/*
 h1, h2, h3, h4, h5, h6 {
 	color: #041E42;
 }
+*/
+
 
 /* p, li {
 	font-size: 1.5em;
@@ -21,11 +29,13 @@ li p {
 
 li { 
   font-size: 1.5em;
+  color: white;
 } 
 
 
 li::marker { 
   font-size: 1.5em;
+  color: white;
 } 
 
 .dark-grey {
@@ -57,3 +67,52 @@ table {
 .x2 p {
 	font-size: 1.5em;
 } 
+
+.x3{
+  font-size: 3em;
+}
+
+
+/*
+.white-bg h1,table,li,p{
+  background-color: white;
+  color: black;
+} */
+
+
+.white-bg {
+  background-color: white;
+}
+
+.white-bg table {
+  color: black;
+}
+
+.white-bg h1 {
+  color: black;
+}
+
+.white-bg li {
+  color: black;
+}
+.white-bg ul {
+  color: black;
+}
+.white-bg p {
+  color: black;
+}
+
+
+.white-bg li::marker { 
+  color: black;
+} 
+
+
+.black{
+  color: black;
+}
+
+a {
+  color: #BFBFBF;
+  text-decoration: underline;
+}

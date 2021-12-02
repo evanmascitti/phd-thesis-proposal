@@ -17,6 +17,7 @@ suppressPackageStartupMessages({
   library(kableExtra)
   library(magick)
   library(patchwork)
+  library(soiltestr)
   })
 ```
 
@@ -74,7 +75,7 @@ A mechanical apparatus was fabricated to emulate the interaction between a baseb
 
 ```{r cleat-mark-device, fig.cap="Left: The pneumatic apparatus used to simulate foot-to-surface interaction. Right: A typical 9-spike baseball cleat pattern.", fig.scap="Pneumatic cleat-mark testing device", fig.show="hold", fig.align='default', out.width="50%", eval=TRUE}
 
-knitr::include_graphics('images/cleatmark_device.png')
+knitr::include_graphics('images/cleat-mark-device-on-lab-bench.JPG')
 knitr::include_graphics('images/nine-spike-pattern.jpg')
 
 ```
@@ -225,13 +226,19 @@ Gs <- 2.7
 
 cleatmark_qc_data <- readr::read_csv('../../cleatmarkmethod/ecmdata/raw-data/patton-mocha-cleatmark-test-specimen-prep_2021-04-08/cleatmark-cyl-prep-QC_2021-04-08.csv', col_types = 'Dcccddcdddc') %>%
 	left_join(tin_tares, by = c("tin_tare_set", "tin_number")) %>%
-	left_join(soilmesh::chunk_cyl_dims, by = 'cylinder_ID') %>%
+	left_join(soilmesh::chunk_cyl_dims, by = c('mold_ID' = 'cylinder_ID')) %>%
 	soiltestr::add_w() %>%
 	mutate(ambient_temp_c = 22,
-				 Gs = Gs) %>%
-	rename(empty_cylinder_mass_g = cyl_w_plug_mass,
-				 cylinder_vol_cm3 = cyl_w_plug_volume) %>%
-	soiltestr::add_physical_properties() %>%
+				 Gs = Gs,
+				 #mold_ID = cylinder_ID
+				 ) %>%
+	# rename(empty_mold_mass_g = cyl_w_plug_mass,
+	# 			 cylinder_vol_cm3 = cyl_w_plug_volume,
+	# 			 filled_mold_g = filled_cylinder_mass_g,
+	# 			 ) %>%
+  soiltestr::add_physical_properties(mold_dimensions = soilmesh::chunk_cyl_dims, cleat_mark = TRUE) %>% 
+  dplyr::mutate(cylinder_ID = mold_ID) %>% 
+	# soiltestr::add_physical_properties(mold_dimensions = soilmesh::chunk_cyl_dims) %>%
 	left_join(patton_mocha_metadata, by = c("experiment_name", "sample_name", "cylinder_ID")) %>%
 	separate(sample_name, into = c('sample_name', 'effort'), sep = "-") %>%
 	mutate(effort = if_else(
