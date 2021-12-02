@@ -436,18 +436,19 @@ class: middle, center
 
 
 ---
-
+include: false
 
 # Extras 
 
 ---
+include: false
 background-image: url('presentation-figs/hypothetical-stress-strain-curves.png')
 background-size: contain
 # Toughness concept 
 
 
 ---
-
+include: false
 
 # Toughness hypotheses
 
@@ -470,10 +471,10 @@ background-size: contain
 
 background-image: url('committee-meeting-2-presentation-dependencies/daily-specimen-repairs-panels.png')
 background-size: contain
-
+include: false
 ---
 
-
+include: false
 class: no-h1
 # Actuating the device 
 
@@ -481,7 +482,7 @@ class: no-h1
 
 ---
 
-
+include: false
 # Future directions
 
 
@@ -506,7 +507,7 @@ class: no-h1
 
 
 ---
-
+include: false
 class: no-h1
 
 background-image: url('committee-meeting-2-presentation-dependencies/R-mesh-processing-pipeline.png')
@@ -515,7 +516,7 @@ background-size: contain
 # Automated mesh processing with R 
 
 ---
-
+include: false
 # Dirichlet normal energy
 
 .pull-left[
@@ -538,7 +539,7 @@ knitr::include_graphics('committee-meeting-2-presentation-dependencies/dne-image
 ]
 
 ---
-
+include: false
 # Water content 
 
 - &Theta; computed from 3D scanning & weighing 
