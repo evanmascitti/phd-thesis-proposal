@@ -12,8 +12,7 @@ _bookdown_files/
 *.rds
 *.pdf
 *.svg
-figs/*.png
-figs/*.JPG
+figs/png/*.png
 *.mp4
 presentations/old-renditions-of-committee-meeting-2-presentations/
 presentations/committee-meeting-2-presentation-dependencies/photos-and-screen-recordings/
